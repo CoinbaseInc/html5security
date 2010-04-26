@@ -82,6 +82,40 @@
             },
             'tags'       : ['xss', 'dom', 'ff', 'setter'],
             'reporter'   : '.mario'
-        }
+        },
+        { /* ID 7 - Self-executing focus event via autofocus */
+            'id'         : 7, 
+            'category'   : 'html5', 
+            'name'       : 'Self-executing focus event via autofocus',
+            'data'       : '<input onfocus=%js_write% autofocus>',
+            'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
+            'browsers'   : {
+                'opera': [
+                    '10.5'
+                ],
+                'chrome': [
+                    '4.0', '5.0'
+                }
+            },
+            'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
+            'reporter'   : 'gaz'
+        },
+        { /* ID 8 - Self-executing blur event via neighboured */
+            'id'         : 8, 
+            'category'   : 'html5', 
+            'name'       : 'Self-executing blur event via autofocus competition',
+            'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
+            'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
+            'browsers'   : {
+                'opera': [
+                    '10.5'
+                ],
+                'chrome': [
+                    '4.0', '5.0'
+                }
+            },
+            'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'opera'],
+            'reporter'   : '.mario'
+        }        
     ]        
 }
