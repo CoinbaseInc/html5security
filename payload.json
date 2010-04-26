@@ -1,3 +1,4 @@
+/* Payload - the generic payload templates */
 {
     'payload' : {
         'js_uri_alert'      : 'javascript:alert(1)',

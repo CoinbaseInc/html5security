@@ -1,3 +1,4 @@
+/* Categories - the available categories */
 {
     'html5'         : 'Vector making use of HTML5 features',
     'html4'         : 'Classic HTML4 based vector',

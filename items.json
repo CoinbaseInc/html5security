@@ -1,3 +1,4 @@
+/* Items - the set of available items and vectors */
 {
     'items': [
         { /* ID 1 - XSS via formaction - requiring user interaction */
