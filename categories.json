@@ -11,5 +11,6 @@
     'svg'           : 'Vector only working in SVG files',
     'xml'           : 'Only working if the surrounding page is delivered as X(HT)ML',
     'font'          : 'Vector working when delivered in font files',
-    'utf7'          : 'UTF7 based vectors'    
+    'utf7'          : 'UTF7 based vectors',
+    'dos'           : 'Client side denial of service'
 }
