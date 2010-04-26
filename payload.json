@@ -1,0 +1,7 @@
+{
+    'payload' : {
+        'js_uri_alert'  : 'javascript:alert(1)',
+        'js_alert'      : 'alert(1)',
+        'js_write'      : 'write(1)'
+    } 
+}

