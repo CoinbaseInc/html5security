@@ -5,7 +5,7 @@
             'id'         : 1, 
             'category'   : 'html5', 
             'name'       : 'XSS via formaction - requiring user interaction',
-            'data'       : '<form id="test" /><button form="test" formaction="%pos_1%">X',
+            'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
             'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
             'browsers'   : {
                 'opera': ['10.5']
