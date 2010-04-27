@@ -7,7 +7,7 @@
             for (var category in categories) {
                 var ul = $('#category_template');
                 var li = ul.find('li')
-                li.addClass(category).find('h3').html(categories[category]);
+                li.addClass(category).find('h3').html(categories[category]).attr('id', category);
                 $('#categories').append(ul.html());
                 li.removeClass(category);
             }
