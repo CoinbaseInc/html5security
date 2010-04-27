@@ -1,17 +1,17 @@
 /* Categories - the available categories */
 var categories =
 {
-    'html5'         : 'Vector making use of HTML5 features',
-    'html4'         : 'Classic HTML4 based vector',
-    'html'          : 'Vector working on HTML4 and older versions',
-    'css'           : 'Cascading stylesheet injection based vector',
-    'javascript'    : 'Plain JavaScript vector',
-    'e4x'           : 'E4X vector working on gecko based browsers',
-    'dom'           : 'Vector attacking DOM properties and methods',
-    'json'          : 'JSON based vector',
-    'svg'           : 'Vector only working in SVG files',
-    'xml'           : 'Only working if the surrounding page is delivered as X(HT)ML',
-    'font'          : 'Vector working when delivered in font files',
+    'html5'         : 'Vectors making use of HTML5 features',
+    'html4'         : 'Classic HTML4 based vectors',
+    'html'          : 'Vectors working on HTML4 and older versions',
+    'css'           : 'Cascading stylesheet injection based vectors',
+    'javascript'    : 'Plain JavaScript vectors',
+    'e4x'           : 'E4X vectors working on gecko based browsers',
+    'dom'           : 'Vectors attacking DOM properties and methods',
+    'json'          : 'JSON based vectors',
+    'svg'           : 'Vectors only working in SVG files',
+    'xml'           : 'Vectors working if the surrounding page is delivered as X(HT)ML',
+    'font'          : 'Vectors working when delivered in font files',
     'utf7'          : 'UTF7 based vectors',
-    'dos'           : 'Client side denial of service'
+    'dos'           : 'Client side denial of service vectors'
 }
