@@ -1,11 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="../items.json"></script>
-        <script type="text/javascript" src="../categories.json"></script>
-        <script type="text/javascript" src="../payload.json"></script>
+        <meta charset="UTF-8" />
+        <title>HTML5 Security Cheatsheet</title>
+        <!-- major includes -->
+        <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/items.json"></script>
+        <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/categories.json"></script>
+        <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/payload.json"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="scripts/import.js"></script>
     </head>
     <body>
-        <!-- soon to come -->
+        <h1>HTML5 Security Cheatsheet</h1>
+        <div id="categories"><!-- data will go here --></div>
+        <div id="templates" style="display:none">
+            <!-- invisible templates for the JSON data -->
+            <div id="item_template">
+                <div>
+                    <h4 class="name">%name%</h4><p class="description">%desription%</p>
+                    <pre class="data">%data%</pre><p class="howtofix">%howtofix%</p>
+                    <ul class="browsers"></ul><ul class="tags"></ul><ul class="tickets"></ul>
+                    <dfn class="reporter">%reporter%</dfn>
+                 </div>
+            </div>
+            <ul id="category_template">
+                <li><h3></h3></li>
+            </ul>
+        </div>
     </body>
 </html>

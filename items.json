@@ -8,8 +8,8 @@ var items =
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
         'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
         'tickets'    : [],
-		'howtofix'   : 'Don\'t allow users to submit markup containing form and formaction attributes or transform them to bogus attributes',
-		'browsers'   : {
+        'howtofix'   : 'Don\'t allow users to submit markup containing form and formaction attributes or transform them to bogus attributes',
+        'browsers'   : {
             'opera': ['10.5']
         },
         'tags'       : ['xss', 'html5', 'ff', 'gc'],
@@ -39,7 +39,7 @@ var items =
         'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'firefox': [
                 '2.x', '3.5', '3.6', '3.7'
             ]
@@ -55,7 +55,7 @@ var items =
         'description': 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'firefox': [
                 '3.5', '3.6', '3.7'
             ]
@@ -71,7 +71,7 @@ var items =
         'description': 'This vector uncovers a hidden eval() inside the Firefox crypto object',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'firefox': [
                 '2.x', '3.x', '3.5', '3.6', '3.7'
             ]
@@ -87,7 +87,7 @@ var items =
         'description': 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'firefox': [
                 '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
             ]
@@ -103,7 +103,7 @@ var items =
         'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'opera': [
                 '10.5'
             ],
@@ -122,7 +122,7 @@ var items =
         'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'opera': [
                 '10.5'
             ],
@@ -141,12 +141,28 @@ var items =
         'description': 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
         'tickets'    : [],
         'howtofix'   : '',            
-		'browsers'   : {
+        'browsers'   : {
             'opera': [
                 '8.0', '9.0', '10.0', '10.5'
             ]
         },
         'tags'       : ['xss', 'css', 'link-source', 'opera'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 10 - JavaScript execution via VIDEO poster attribute  */
+        'id'         : 10, 
+        'category'   : 'html5', 
+        'name'       : 'JavaScript execution via VIDEO poster attribute',
+        'data'       : '<video poster=%js_uri_alert%//',
+        'description': 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
+        'tickets'    : [],
+        'howtofix'   : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',            
+        'browsers'   : {
+            'opera': [
+                '10.5'
+            ]
+        },
+        'tags'       : ['xss', 'poster', 'video', 'opera', 'html5'],
         'reporter'   : '.mario'
     } 
 ]
