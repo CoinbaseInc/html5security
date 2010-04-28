@@ -4,14 +4,12 @@
 (function(){
     window.onload = function(){
         (function(){
-            for (var category in categories) {
-                var ul = $('#category_template');
-                var li = ul.find('li')
-                li.addClass(category).find('h3').html(categories[category]).attr('id', category);
-                $('#categories').append(ul.html());
-                li.removeClass(category);
-            }
-            $('#categories li').wrapAll('<ul></ul>');
+            for(var category in categories) {
+                $('#categories').append('<li id="'+category+'"><h3>'+categories[category]+'</h3></li>');
+                $('#sidebar').append('<li><a href="#'+category+'">'+categories[category]+'</a></li>');
+			}
+			$('#categories li').wrap('<ul />');
+			$('#sidebar li').wrap('<ul />');
         })();
         (function(){
             for (var item in items) {
@@ -21,7 +19,7 @@
                     items[item].data = items[item].data.replace(/</gm, '&lt;');
                     items[item].data = items[item].data.replace(/>/gm, '&gt;');
                 }
-                var li = $('#categories li.'+items[item].category+' h3');
+                var li = $('#categories li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
                 
                 for(var c in items[item]) {
