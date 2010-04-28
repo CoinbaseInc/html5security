@@ -59,3 +59,6 @@ code {
     -moz-box-shadow: 3px 3px 7px #777;
     -moz-border-radius: 5px
 }
+#sidebar a:active {
+    color: #fff;	
+}
