@@ -18,16 +18,16 @@
                 for (var payload in payloads) {
                     var regex = new RegExp('%' + payload + '%');
                     items[item].data = items[item].data.replace(regex, payloads[payload]);
-                    items[item].data = items[item].data.replace(/</, '&lt;');
-                    items[item].data = items[item].data.replace(/>/, '&gt;');
+                    items[item].data = items[item].data.replace(/</gm, '&lt;');
+                    items[item].data = items[item].data.replace(/>/gm, '&gt;');
                 }
                 var li = $('#categories li.'+items[item].category+' h3');
                 var container = $($('#item_template').html());
                 
                 for(var c in items[item]) {
                     if(typeof items[item][c] === 'string') {
-                        items[item][c] = items[item][c].replace(/</, '&lt;');
-                        items[item][c] = items[item][c].replace(/>/, '&gt;');                        
+                        items[item][c] = items[item][c].replace(/</gm, '&lt;');
+                        items[item][c] = items[item][c].replace(/>/gm, '&gt;');                        
                         container.find('.'+c).html(items[item][c]);        
                     }
                 }
