@@ -361,5 +361,19 @@ var items =
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
         'reporter'   : 'Skyphire, gareth, .mario'
+    },
+    { /* ID 23 - Form surveillance with onformchange, onforminput and form attributes  */
+        'id'         : 23,
+        'category'   : 'html5', 
+        'name'       : 'Form surveillance with onformchange, onforminput and form attributes',
+        'data'       : '<form id=test onforminput=alert(1)><input></form><button form=test onformchange=alert(2)>X',
+        'description': 'Enter a value into the form element to see how onforminput and onformchange attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
+        'tickets'    : [],
+        'howtofix'   : 'Make sure users cannot submit markup including the form, onformchange and onforminput attributes. Do not apply <FORM> elements with an ID attribute.',            
+        'browsers'   : {
+            'opera' : ['10.5'] 
+        },
+        'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
+        'reporter'   : 'Skyphire, .mario'
     }
 ]
