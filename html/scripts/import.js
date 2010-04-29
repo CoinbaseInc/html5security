@@ -33,21 +33,25 @@
                     for(var browser in items[item].browsers) {
                         container.find('.browsers').append('<ul class="'+browser+'" />');
                         for(var version in items[item].browsers[browser]) {
-                            container.find('.browsers .'+browser).append(
+                            var short_browser = browser.replace(/^(\w+)\s\w+/, '$1'); 
+                            container.find('.browsers .'+short_browser).append(
                                 '<li>'+browser+' '+items[item].browsers[browser][version]+'</li>'
                             )
                         }
-						container.find('.browsers .'+browser).after('<span class="clear"></span>');
-                    } 
+                    }
+                    container.find('.browsers').append('<span class="clear"></span>');
                 }   
                 if(items[item].tags) {
                     for(var tag in items[item].tags) {
                         container.find('.tags').append('<li>'+items[item].tags[tag]+'</li>');
                     } 
+					container.find('.tags').append('<span class="clear"></span>');
                 }   
                 if(items[item].tickets) {
                     for(var ticket in items[item].tickets) {
-                        container.find('.tickets').append('<li>'+items[item].tickets[ticket]+'</li>');
+                        container.find('.tickets').append(
+                            '<li><a href="'+items[item].tickets[ticket]+'" target="_blank">'+items[item].tickets[ticket]+'</a></li>'
+                        );
                     } 
                 }                  
                 li.after(container);

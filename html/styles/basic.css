@@ -7,11 +7,15 @@ body {
 h1, h3, h4 {
     background: #505050;
     color: #68c2ff;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
 	box-shadow: 3px 3px 7px #777;
 	-moz-box-shadow: 3px 3px 7px #777;
     -moz-border-radius: 5px
+}
+h1 {
+	padding: 10px;
+    color: #808080;	
 }
 h1, h3 {
     border: 1px solid #606060;	
@@ -40,7 +44,7 @@ ul li ul li {
     list-style: circle
 }
 ul.browsers ul {
-    padding-left: 70px;
+    padding: 0 15px 0 70px;
 	float: left;
 	min-height: 50px;	
 }
@@ -60,6 +64,13 @@ ul.firefox {
 ul.chrome {
     background: url(../images/chrome.png) no-repeat;
 }
+ul.tags li {
+    list-style: none;
+	color: #666;
+	float: left;
+	font-style: italic;
+	margin: 0 5px;
+}
 code {
     background: #fff;
     padding: 25px;
@@ -68,6 +79,9 @@ code {
     border-radius: 10px;
 	display: block;
     -moz-border-radius: 10px
+}
+dfn {
+    display: none;	
 }
 #categories {
 	width: 70%;

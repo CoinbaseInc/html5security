@@ -295,7 +295,9 @@ var items =
         'tickets'    : [],
         'howtofix'   : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',            
         'browsers'   : {
-            'opera': [], 'firefox' : [], 'chrome': []
+            'opera': ['8.x', '9.x', '10.x'], 
+			'firefox' : ['1.x', '2.x', '3.x'], 
+			'chrome': ['3.x', '4.x', '5.x']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
         'reporter'   : '.mario'
