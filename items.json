@@ -360,6 +360,6 @@ var items =
             'firefox' : ['3.5', '3.6', '3.7'] 
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
-        'reporter'   : 'Skyphire', 'gareth', '.mario'
+        'reporter'   : 'Skyphire, gareth, .mario'
     }
 ]
