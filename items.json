@@ -306,7 +306,7 @@ var items =
         'id'         : 19,
         'category'   : 'charset', 
         'name'       : 'XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew',
-        'data'       : '<meta charset="mac-farsi">�script�alert(1)�/script�',
+        'data'       : '<meta charset="mac-farsi">¼script¾alert(1)¼/script¾',
         'description': 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
         'tickets'    : [],
         'howtofix'   : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure ton have your filter be aware that for Firefox &#60; (<) and &#188 are equivalent - as well as other characters too.',            
