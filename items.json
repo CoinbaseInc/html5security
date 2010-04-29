@@ -8,7 +8,7 @@ var items =
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
         'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow users to submit markup containing form and formaction attributes or transform them to bogus attributes',
+        'howtofix'   : 'Don\'t allow users to submit markup containing form and formaction attributes or transform them to bogus attributes. Avoid ID attributes for forms as well as submit buttons.',
         'browsers'   : {
             'opera': ['10.5']
         },
@@ -22,7 +22,7 @@ var items =
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
         'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
         'tickets'    : [],
-        'howtofix'   : '',
+        'howtofix'   : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
         'browsers'   : {
             'firefox': [
                 '2.x', '3.5', '3.6', '3.7'
@@ -38,7 +38,7 @@ var items =
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
         'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',            
         'browsers'   : {
             'firefox': [
                 '2.x', '3.5', '3.6', '3.7'
@@ -102,7 +102,7 @@ var items =
         'data'       : '<input onfocus=%js_write% autofocus>',
         'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : '',            
+        'howtofix'   : 'User submitted markup should not contain autofocus attributes.',            
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -121,7 +121,7 @@ var items =
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
         'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : '',            
+        'howtofix'   : 'User submitted markup should not contain autofocus attributes.',            
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -347,5 +347,19 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__'],
         'reporter'   : 'gareth, .mario'
+    },
+    { /* ID 22 - Input stealing/form DoS with onblur=focus() and autofocus  */
+        'id'         : 22,
+        'category'   : 'dos', 
+        'name'       : 'Input stealing/form DoS with onblur=focus() and autofocus',
+        'data'       : '<input onblur=focus() autofocus><input>',
+        'description': 'This very basic vector demonstrates how the combination of autofocus and onblur can render any other form on the targeted website useless.',
+        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
+        'howtofix'   : 'User submitted markup should not contain autofocus attributes.',            
+        'browsers'   : {
+            'firefox' : ['3.5', '3.6', '3.7'] 
+        },
+        'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
+        'reporter'   : 'Skyphire', 'gareth', '.mario'
     }
 ]
