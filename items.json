@@ -346,7 +346,7 @@ var items =
             'firefox' : ['3.5', '3.6', '3.7'] 
         },
         'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__'],
-        'reporter'   : 'gareth', '.mario'
+        'reporter'   : 'gareth, .mario'
     },
     { /* ID 22 - Input stealing/form DoS with onblur=focus() and autofocus  */
         'id'         : 22,
