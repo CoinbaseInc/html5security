@@ -263,7 +263,7 @@ var items =
         'tickets'    : [],
         'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on black lists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
         'browsers'   : {
-            'ie': [
+            'internet explorer': [
                 '5.5', '6.0', '7.0', '8.0', '9.0'
             ]
         },
