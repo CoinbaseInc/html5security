@@ -37,6 +37,7 @@
                                 '<li>'+browser+' '+items[item].browsers[browser][version]+'</li>'
                             )
                         }
+						container.find('.browsers .'+browser).after('<span class="clear"></span>');
                     } 
                 }   
                 if(items[item].tags) {
