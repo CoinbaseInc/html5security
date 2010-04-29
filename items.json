@@ -253,5 +253,51 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'sharp'],
         'reporter'   : '.mario'
-    },	
+    },
+    { /* ID 16 - Using onbegin and HTML+TIME to execute JavaScript */
+        'id'         : 16,
+        'category'   : 'htmlplustime', 
+        'name'       : 'Using onbegin and HTML+TIME to execute JavaScript',
+        'data'       : 'X<x style=`behavior:url(#default#time2)` onbegin=`%js_write%` >',
+        'description': 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
+        'tickets'    : [],
+        'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on black lists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
+        'browsers'   : {
+            'ie': [
+                '5.5', '6.0', '7.0', '8.0', '9.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'ie', 'sharp'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 17 - Opera XML-stylesheets executing JavaScript */
+        'id'         : 17,
+        'category'   : 'xml', 
+        'name'       : 'Opera XML-stylesheets executing JavaScript',
+        'data'       : '<?xml-stylesheet href="%js_uri_alert%"?>',
+        'description': 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction.',
+        'tickets'    : [],
+        'howtofix'   : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',            
+        'browsers'   : {
+            'opera': [
+                '9.x', '10.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 18 - Entities inside <SCRIPT> and comparable tags */
+        'id'         : 18,
+        'category'   : 'xml', 
+        'name'       : 'Entities inside <SCRIPT> and comparable tags',
+        'data'       : '<script>&#x61;l&#x65;rt&#40;1)</script>',
+        'description': 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+        'tickets'    : [],
+        'howtofix'   : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',            
+        'browsers'   : {
+            'opera': [], 'firefox' : [], 'chrome': []
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'reporter'   : '.mario'
+    },  
 ]

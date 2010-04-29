@@ -9,9 +9,10 @@ var categories =
     'e4x'           : 'E4X vectors working on gecko based browsers',
     'dom'           : 'Vectors attacking DOM properties and methods',
     'json'          : 'JSON based vectors',
-    'svg'           : 'Vectors only working in SVG files',
+    'svg'           : 'Vectors embedded in SVG files',
     'xml'           : 'Vectors working if the delivered as X(HT)ML',
     'font'          : 'Vectors working when delivered in font files',
     'utf7'          : 'UTF7 based vectors',
-    'dos'           : 'Client side denial of service vectors'
+    'dos'           : 'Client side denial of service vectors',
+	'htmlplustime'  : 'HTML+TIME vectors working on Internet Explorer'
 }
