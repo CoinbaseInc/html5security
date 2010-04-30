@@ -12,7 +12,7 @@ var items =
         'browsers'   : {
             'opera': ['10.5']
         },
-        'tags'       : ['xss', 'html5', 'ff', 'gc'],
+        'tags'       : ['xss', 'html5', 'firefox', 'gc'],
         'reporter'   : '.mario'
     },
     { /* ID 2 - XSS via x-imap4-modified-utf7 (1) */
@@ -28,7 +28,7 @@ var items =
                 '2.x', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'utf7', 'ff', 'charset'],
+        'tags'       : ['xss', 'utf7', 'firefox', 'charset'],
         'reporter'   : '.mario'
     },
     { /* ID 3 - XSS via x-imap4-modified-utf7 (2) */
@@ -44,7 +44,7 @@ var items =
                 '2.x', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'utf7', 'ff', 'charset'],
+        'tags'       : ['xss', 'utf7', 'firefox', 'charset'],
         'reporter'   : '.mario'
     },
     { /* ID 4 - Self-including DOM Worker XSS */
@@ -60,7 +60,7 @@ var items =
                 '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'dom', 'ff', 'worker'],
+        'tags'       : ['xss', 'dom', 'firefox', 'worker', 'self-inclusion'],
         'reporter'   : '.mario'
     },
     { /* ID 5 - Firefox crypto object - hidden eval() */
@@ -76,7 +76,7 @@ var items =
                 '2.x', '3.x', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'dom', 'ff', 'crypto', 'eval', 'csp'],
+        'tags'       : ['xss', 'dom', 'firefox', 'crypto', 'eval', 'csp'],
         'reporter'   : '.mario'
     },
     { /* ID 6 - Firefox setter based JavaScript execution */
@@ -92,7 +92,7 @@ var items =
                 '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'dom', 'ff', 'setter'],
+        'tags'       : ['xss', 'dom', 'firefox', 'setter'],
         'reporter'   : '.mario'
     },
     { /* ID 7 - Self-executing focus event via autofocus */
@@ -390,6 +390,22 @@ var items =
             ]
         },
         'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'to'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 25 - Self-including E4X-based JavaScript snippet  */
+        'id'         : 25,
+        'category'   : 'e4x', 
+        'name'       : 'Self-including E4X-based JavaScript snippet',
+        'data'       : '<script src="#">{alert(1)}</script>;1',
+        'description': 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executed the {}-delimited E4X payload. To avoid having Firefox thorw an error during inclusion the ending sequence ;0 is necessary.',
+        'tickets'    : [],
+        'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML onlöy it will work (;1, ,1, ._, etc..)',            
+        'browsers'   : {
+            'internet explorer': [
+                '5.5', '6.0', '7.0', '8.0', '9.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion'],
         'reporter'   : '.mario'
     }
 ]
