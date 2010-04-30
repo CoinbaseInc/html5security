@@ -411,7 +411,7 @@ var items =
         'category'   : 'e4x', 
         'name'       : 'E4X-based UTF7 JavaScript/HTML snippet stealing cross-domain markup',
         'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
-        'description': 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to inclde the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain broders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
+        'description': 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
         'tickets'    : [],
         'howtofix'   : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',            
         'browsers'   : {
