@@ -2,8 +2,8 @@
  * Import script for the HTML5 Security Cheatsheet HTML version
  */
 (function(){
-    window.onload = function(){
-        (function(){
+    window.onload = function() {
+        (function() {
             for(var category in categories) {
                 $('#categories').append('<li id="'+category+'"><h3>'+categories[category]+'</h3></li>');
                 $('#sidebar').append('<li><a href="#'+category+'">'+categories[category]+'</a></li>');
@@ -11,7 +11,7 @@
 			$('#categories li').wrap('<ul />');
 			$('#sidebar li').wrap('<ul />');
         })();
-        (function(){
+        (function() {
             for (var item in items) {
                 for (var payload in payloads) {
                     var regex = new RegExp('%' + payload + '%');
@@ -56,6 +56,9 @@
                 }                  
                 li.after(container);
             }
+		    if(location.hash && location.hash.match(/^#\w+$/)) {
+		        location=location.hash;
+		    }			
         })();
     };
 })();
