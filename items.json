@@ -401,7 +401,7 @@ var items =
         'tickets'    : [],
         'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',            
         'browsers'   : {
-            'firefox' : ['1.5', '2.x', '3.x'], 
+            'firefox' : ['1.5', '2.x', '3.x']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion'],
         'reporter'   : '.mario'
@@ -415,9 +415,23 @@ var items =
         'tickets'    : [],
         'howtofix'   : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',            
         'browsers'   : {
-            'firefox' : ['1.5', '2.x', '3.x'], 
+            'firefox' : ['1.5', '2.x', '3.x']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing', 'utf7'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 27 - Opera whole-page click hijacking via CSS  */
+        'id'         : 27,
+        'category'   : 'css', 
+        'name'       : 'Opera whole-page click hijacking via CSS',
+        'data'       : '<style>p[foo=bar{}*{-o-link:\'javascript:alert(1)\'}{}*{-o-link-source:current}]{color:red};</style>',
+        'description': 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
+        'tickets'    : [],
+        'howtofix'   : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',            
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x']
+        },
+        'tags'       : ['xss', 'javascript', 'css', 'opera', 'attribute selectors', 'proprietary'],
         'reporter'   : '.mario'
     }
 ]
