@@ -76,7 +76,7 @@ var items =
                 '2.x', '3.x', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'dom', 'firefox', 'crypto', 'eval', 'csp'],
+        'tags'       : ['xss', 'dom', 'firefox', 'crypto', 'eval', 'csp', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 6 - Firefox setter based JavaScript execution */
@@ -92,7 +92,7 @@ var items =
                 '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'dom', 'firefox', 'setter'],
+        'tags'       : ['xss', 'dom', 'firefox', 'setter', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 7 - Self-executing focus event via autofocus */
@@ -146,7 +146,7 @@ var items =
                 '8.0', '9.0', '10.0', '10.5'
             ]
         },
-        'tags'       : ['xss', 'css', 'link-source', 'opera'],
+        'tags'       : ['xss', 'css', 'link-source', 'opera', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 10 - JavaScript execution via <VIDEO> poster attribute  */
@@ -219,7 +219,7 @@ var items =
                 '10.0'
             ]
         },
-        'tags'       : ['dos', 'repeat', 'template', 'webforms', 'opera'],
+        'tags'       : ['dos', 'repeat', 'template', 'webforms', 'opera', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 14 - Client-side denial of service via faulty regular expressions */
@@ -235,7 +235,7 @@ var items =
                 '10.0'
             ]
         },
-        'tags'       : ['dos', 'pattern', 'regex', 'html5', 'validation', 'opera'],
+        'tags'       : ['dos', 'pattern', 'regex', 'html5', 'validation', 'opera', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 15 - JavaScript execution via sharp variables */
@@ -251,7 +251,7 @@ var items =
                 '2.x', '3.0', '3.5', '3.6', '3.7'
             ]
         },
-        'tags'       : ['xss', 'javascript', 'firefox', 'sharp'],
+        'tags'       : ['xss', 'javascript', 'firefox', 'sharp', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 16 - Using onbegin and HTML+TIME to execute JavaScript */
@@ -283,7 +283,7 @@ var items =
                 '9.x', '10.0'
             ]
         },
-        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 18 - Entities inside <SCRIPT> and comparable tags */
@@ -345,7 +345,7 @@ var items =
         'browsers'   : {
             'firefox' : ['3.5', '3.6', '3.7'] 
         },
-        'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__'],
+        'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__', 'proprietary'],
         'reporter'   : 'gareth, .mario'
     },
     { /* ID 22 - Input stealing/form DoS with onblur=focus() and autofocus  */
@@ -389,7 +389,7 @@ var items =
                 '5.5', '6.0', '7.0', '8.0', '9.0'
             ]
         },
-        'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'to'],
+        'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'to', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 25 - Self-including E4X-based JavaScript snippet  */
@@ -403,7 +403,7 @@ var items =
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x']
         },
-        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion'],
+        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 26 - E4X-based UTF7 JavaScript snippet stealing cross-domain markup  */
@@ -417,7 +417,7 @@ var items =
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x']
         },
-        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing', 'utf7'],
+        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing', 'utf7', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 27 - Opera whole-page click hijacking via CSS  */
