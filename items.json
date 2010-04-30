@@ -401,9 +401,7 @@ var items =
         'tickets'    : [],
         'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML onlöy it will work (;1, ,1, ._, etc..)',            
         'browsers'   : {
-            'internet explorer': [
-                '5.5', '6.0', '7.0', '8.0', '9.0'
-            ]
+            'firefox' : ['1.5', '2.x', '3.x'], 
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion'],
         'reporter'   : '.mario'
