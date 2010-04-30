@@ -399,7 +399,7 @@ var items =
         'data'       : '<script src="#">{alert(1)}</script>;1',
         'description': 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executed the {}-delimited E4X payload. To avoid having Firefox thorw an error during inclusion the ending sequence ;0 is necessary.',
         'tickets'    : [],
-        'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML onlöy it will work (;1, ,1, ._, etc..)',            
+        'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',            
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x'], 
         },
