@@ -995,5 +995,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
         'reporter'   : '.mario'
+    },
+    { /* ID 33 - Breaking pointer-events:none with nested links  */
+        'id'         : 33,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Breaking pointer-events:none with nested links',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<a style="pointer-events:none;position:absolute;"><a style="position:absolute;" onclick="%js_alert%;">XXX</a></a><a href="%js_uri_alert_2%">XXX</a>',
+        'description': {
+            'en' : 'Firefox 3.6+ allows using CSS "pointer-events"  with value "none" to make sure an element will not react on any mouse/pointer based event. This feature enables for example placing a DIV over another DIV without blocking the click events addressed to the underlying DIV.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'firefox': ['3.6', '3.7'] 
+        },
+        'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox'],
+        'reporter'   : '.mario'
     }
 ]
