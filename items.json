@@ -4,11 +4,26 @@ var items =
     { /* ID 1 - XSS via formaction - requiring user interaction */
         'id'         : 1, 
         'category'   : 'html5', 
-        'name'       : 'XSS via formaction - requiring user interaction',
+        'name'       : {
+            'en' : 'XSS via formaction - requiring user interaction',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
-        'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
+        'description': {
+            'en' : 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
+        'howtofix'   : {
+            'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'browsers'   : {
             'opera': ['10.5']
         },
@@ -18,11 +33,26 @@ var items =
     { /* ID 2 - XSS via x-imap4-modified-utf7 (2) */
         'id'         : 2, 
         'category'   : 'charset', 
-        'name'       : 'XSS via x-imap4-modified-utf7 (2)',
+        'name'       : {
+            'en' : 'XSS via x-imap4-modified-utf7 (2)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
-        'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+        'description': {
+            'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
+        'howtofix'   : {
+            'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'browsers'   : {
             'firefox': [
                 '2.x', '3.5', '3.6', '3.7'
@@ -34,11 +64,26 @@ var items =
     { /* ID 3 - XSS via x-imap4-modified-utf7 (1) */
         'id'         : 3, 
         'category'   : 'charset', 
-        'name'       : 'XSS via x-imap4-modified-utf7 (1)',
+        'name'       : {
+            'en' : 'XSS via x-imap4-modified-utf7 (1)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
-        'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+        'description': {
+            'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',            
+        'howtofix'   : {
+            'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'firefox': [
                 '2.x', '3.5', '3.6', '3.7'
@@ -50,11 +95,26 @@ var items =
     { /* ID 4 - Self-including DOM Worker XSS */
         'id'         : 4, 
         'category'   : 'dom', 
-        'name'       : 'Self-including DOM Worker XSS',
+        'name'       : {
+            'en' : 'Self-including DOM Worker XSS',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
-        'description': 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
+        'description': {
+            'en' : 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'firefox': [
                 '3.5', '3.6', '3.7'
@@ -66,11 +126,26 @@ var items =
     { /* ID 5 - Firefox crypto object - hidden eval() */
         'id'         : 5, 
         'category'   : 'dom', 
-        'name'       : 'Firefox crypto object - hidden eval()',
+        'name'       : {
+            'en' : 'Firefox crypto object - hidden eval()',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : 'crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')',
-        'description': 'This vector uncovers a hidden eval() inside the Firefox crypto object',
+        'description': {
+            'en' : 'This vector uncovers a hidden eval() inside the Firefox crypto object',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'firefox': [
                 '2.x', '3.x', '3.5', '3.6', '3.7'
@@ -82,11 +157,26 @@ var items =
     { /* ID 6 - Firefox setter based JavaScript execution */
         'id'         : 6, 
         'category'   : 'javascript', 
-        'name'       : 'Firefox setter based JavaScript execution',
+        'name'       : {
+            'en' : 'Firefox setter based JavaScript execution',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%',
-        'description': 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
+        'description': {
+            'en' : 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'firefox': [
                 '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
@@ -98,11 +188,26 @@ var items =
     { /* ID 7 - Self-executing focus event via autofocus */
         'id'         : 7, 
         'category'   : 'html5', 
-        'name'       : 'Self-executing focus event via autofocus',
+        'name'       : {
+            'en' : 'Self-executing focus event via autofocus',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<input onfocus=%js_write% autofocus>',
-        'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
+        'description': {
+            'en' : 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : 'User submitted markup should not contain "autofocus" attributes.',            
+        'howtofix'   : {
+            'en' : 'User submitted markup should not contain "autofocus" attributes.', 
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -117,11 +222,26 @@ var items =
     { /* ID 8 - Self-executing blur event via autofocus competition */
         'id'         : 8, 
         'category'   : 'html5', 
-        'name'       : 'Self-executing blur event via autofocus competition',
+        'name'       : {
+            'en' : 'Self-executing blur event via autofocus competition',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
-        'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
+        'description': {
+            'en' : 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : 'User submitted markup should not contain "autofocus" attributes.',            
+        'howtofix'   : {
+            'en' : 'User submitted markup should not contain "autofocus" attributes.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },    
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -136,11 +256,26 @@ var items =
     { /* ID 9 - Opera link-source JavaScript execution via CSS */
         'id'         : 9, 
         'category'   : 'css', 
-        'name'       : 'Opera link-source JavaScript execution via CSS',
+        'name'       : {
+            'en' : 'Opera link-source JavaScript execution via CSS',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
-        'description': 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
+        'description': {
+            'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'opera': [
                 '8.0', '9.0', '10.0', '10.5'
@@ -152,11 +287,26 @@ var items =
     { /* ID 10 - JavaScript execution via <VIDEO> poster attribute  */
         'id'         : 10, 
         'category'   : 'html5', 
-        'name'       : 'JavaScript execution via <VIDEO> poster attribute',
+        'name'       : {
+            'en' : 'JavaScript execution via <VIDEO> poster attribute',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<video poster=%js_uri_alert%//',
-        'description': 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
+        'description': {
+            'en' : 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',            
+        'howtofix'   : {
+            'en' : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -168,11 +318,26 @@ var items =
     { /* ID 11 - SVG executing JavaScript via <G> tag and onload attribute  */
         'id'         : 11, 
         'category'   : 'svg', 
-        'name'       : 'SVG executing JavaScript via <G> tag and onload attribute',
+        'name'       : {
+            'en' : 'SVG executing JavaScript via <G> tag and onload attribute',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><g onload="%js_uri_alert%"></g></svg>',
-        'description': 'SVG files can execute JavaScript via onload events on any element without user interaction',
+        'description': {
+            'en' : 'SVG files can execute JavaScript via onload events on any element without user interaction',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbirary HTML data as well as event handlers in native elements',            
+        'howtofix'   : {
+            'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbirary HTML data as well as event handlers in native elements',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
         'browsers'   : {
             'opera': [
                 '10.0', '10.5'
@@ -190,11 +355,26 @@ var items =
     { /* ID 12 - Self-executing JavaScript via <BODY> onscroll autofocus */
         'id'         : 12,
         'category'   : 'html5', 
-        'name'       : 'Self-executing JavaScript via <BODY> onscroll autofocus',
+        'name'       : {
+            'en' : 'Self-executing JavaScript via <BODY> onscroll autofocus',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<body onscroll=%js_write%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
-        'description': 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
+        'description': {
+            'en' : 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -209,11 +389,26 @@ var items =
     { /* ID 13 - Client-side denial of service via repeat templates */
         'id'         : 13,
         'category'   : 'dos', 
-        'name'       : 'Client-side denial of service via repeat templates',
+        'name'       : {
+            'en' : 'Client-side denial of service via repeat templates',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>',
-        'description': 'This vector uses the repeat template systax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves allover again the client can be forced to deny service or even crash.',
+        'description': {
+            'en' : 'This vector uses the repeat template systax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves allover again the client can be forced to deny service or even crash.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',            
+        'howtofix'   : {
+            'en' : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': [
                 '10.0'
@@ -225,11 +420,26 @@ var items =
     { /* ID 14 - Client-side denial of service via faulty regular expressions */
         'id'         : 14,
         'category'   : 'dos', 
-        'name'       : 'Client-side denial of service via faulty regular expressions',
+        'name'       : {
+            'en' : 'Client-side denial of service via faulty regular expressions',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>',
-        'description': 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
+        'description': {
+            'en' : 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',            
+        'howtofix'   : {
+            'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': [
                 '10.0'
@@ -241,11 +451,26 @@ var items =
     { /* ID 15 - JavaScript execution via sharp variables */
         'id'         : 15,
         'category'   : 'javascript', 
-        'name'       : 'JavaScript execution via sharp variables',
+        'name'       : {
+            'en' : 'JavaScript execution via sharp variables',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '({0:#0=%js_alert_only%/#0#/#0#(0)})',
-        'description': 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
+        'description': {
+            'en' : 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'firefox': [
                 '2.x', '3.0', '3.5', '3.6', '3.7'
@@ -257,11 +482,26 @@ var items =
     { /* ID 16 - Using onbegin and HTML+TIME to execute JavaScript */
         'id'         : 16,
         'category'   : 'htmlplustime', 
-        'name'       : 'Using onbegin and HTML+TIME to execute JavaScript',
+        'name'       : {
+            'en' : 'Using onbegin and HTML+TIME to execute JavaScript',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : 'X<x style=`behavior:url(#default#time2)` onbegin=`%js_write%` >',
-        'description': 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
+        'description': {
+            'en' : 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
+        'howtofix'   : {
+            'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': [
                 '5.5', '6.0', '7.0', '8.0', '9.0'
@@ -273,11 +513,26 @@ var items =
     { /* ID 17 - Opera XML-stylesheets executing JavaScript */
         'id'         : 17,
         'category'   : 'xml', 
-        'name'       : 'Opera XML-stylesheets executing JavaScript',
+        'name'       : {
+            'en' : 'Opera XML-stylesheets executing JavaScript',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<?xml-stylesheet href="%js_uri_alert%"?>',
-        'description': 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction. The vectors even works if the page is delivered as text/html.',
+        'description': {
+            'en' : 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction. The vectors even works if the page is delivered as text/html.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',            
+        'howtofix'   : {
+            'en' : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': [
                 '9.x', '10.0'
@@ -289,11 +544,26 @@ var items =
     { /* ID 18 - Entities inside <SCRIPT> and comparable tags */
         'id'         : 18,
         'category'   : 'xml', 
-        'name'       : 'Entities inside <SCRIPT> and comparable tags',
+        'name'       : {
+            'en' : 'Entities inside <SCRIPT> and comparable tags',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<script>%js_alert_entities%</script>',
-        'description': 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+        'description': {
+            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',            
+        'howtofix'   : {
+            'en' : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
 			'firefox' : ['1.x', '2.x', '3.x'], 
@@ -305,11 +575,26 @@ var items =
     { /* ID 19 - XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew */
         'id'         : 19,
         'category'   : 'charset', 
-        'name'       : 'XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew',
+        'name'       : {
+            'en' : 'XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<meta charset="mac-farsi">¼script¾%js_alert%¼/script¾',
-        'description': 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+        'description': {
+            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure ton have your filter be aware that for Firefox &#60; (<) and &#188 are equivalent - as well as other characters too.',            
+        'howtofix'   : {
+            'en' : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure ton have your filter be aware that for Firefox &#60; (<) and &#188 are equivalent - as well as other characters too.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'firefox' : [
                 '2.x', '3.x', '3.5', '3.6', '3.7'
@@ -321,11 +606,26 @@ var items =
     { /* ID 20 - JavaScript execution via overwritten ReferenceError object */
         'id'         : 20,
         'category'   : 'javascript', 
-        'name'       : 'JavaScript execution via overwritten ReferenceError object',
+        'name'       : {
+            'en' : 'JavaScript execution via overwritten ReferenceError object',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : 'ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x',
-        'description': 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most oher error objects and should ba taken into consideration when implementing JavaScript sandboxes or comparable.',
+        'description': {
+            'en' : 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most oher error objects and should ba taken into consideration when implementing JavaScript sandboxes or comparable.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Do not trust the DOM in case the user can influence it via script injections, includes or other DOM based property access.',            
+        'howtofix'   : {
+            'en' : 'Do not trust the DOM in case the user can influence it via script injections, includes or other DOM based property access.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
@@ -338,11 +638,26 @@ var items =
     { /* ID 21 - JavaScript execution via proprietary __noSuchMethod__  */
         'id'         : 21,
         'category'   : 'javascript', 
-        'name'       : 'JavaScript execution via proprietary __noSuchMethod__',
+        'name'       : {
+            'en' : 'JavaScript execution via proprietary __noSuchMethod__',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : 'Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()',
-        'description': 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
+        'description': {
+            'en' : 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : '',            
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },          
         'browsers'   : {
             'firefox' : ['3.5', '3.6', '3.7'] 
         },
@@ -352,11 +667,26 @@ var items =
     { /* ID 22 - Input stealing/form DoS with onblur=focus() and autofocus  */
         'id'         : 22,
         'category'   : 'dos', 
-        'name'       : 'Input stealing/form DoS with onblur=focus() and autofocus',
+        'name'       : {
+            'en' : 'Input stealing/form DoS with onblur=focus() and autofocus',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<input onblur=%js_focus% autofocus><input>',
-        'description': 'This very basic vector demonstrates how the combination of "autofocus" and "onblur" can render any other form on the targeted website useless.',
+        'description': {
+            'en' : 'This very basic vector demonstrates how the combination of "autofocus" and "onblur" can render any other form on the targeted website useless.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : 'User submitted markup should not contain "autofocus" attributes.',            
+        'howtofix'   : {
+            'en' : 'User submitted markup should not contain "autofocus" attributes.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'firefox' : ['3.5', '3.6', '3.7'] 
         },
@@ -366,11 +696,26 @@ var items =
     { /* ID 23 - Form surveillance with onformchange, onforminput and form attributes  */
         'id'         : 23,
         'category'   : 'html5', 
-        'name'       : 'Form surveillance with onformchange, onforminput and form attributes',
+        'name'       : {
+            'en' : 'Form surveillance with onformchange, onforminput and form attributes',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X',
-        'description': 'Enter a value into the form element to see how "onforminput" and "onformchange" attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
+        'description': {
+            'en' : 'Enter a value into the form element to see how "onforminput" and "onformchange" attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure users cannot submit markup including the form, "onformchange" and "onforminput" attributes. Do not apply <FORM> elements with an "id" attribute.',            
+        'howtofix'   : {
+            'en' : 'Make sure users cannot submit markup including the form, "onformchange" and "onforminput" attributes. Do not apply <FORM> elements with an "id" attribute.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
         'browsers'   : {
             'opera' : ['10.5'] 
         },
@@ -380,11 +725,26 @@ var items =
     { /* ID 24 - JavaScript execution via HTML+TIME without user interaction (2) */
         'id'         : 24,
         'category'   : 'htmlplustime', 
-        'name'       : 'JavaScript execution via HTML+TIME without user interaction (2)',
+        'name'       : {
+            'en' : 'JavaScript execution via HTML+TIME without user interaction (2)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
-        'description': 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just "attributename" and "to" attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
+        'description': {
+            'en' : 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just "attributename" and "to" attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
+        'howtofix'   : {
+            'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': [
                 '5.5', '6.0', '7.0', '8.0', '9.0'
@@ -396,11 +756,26 @@ var items =
     { /* ID 25 - Self-including E4X-based JavaScript snippet  */
         'id'         : 25,
         'category'   : 'e4x', 
-        'name'       : 'Self-including E4X-based JavaScript snippet',
+        'name'       : {
+            'en' : 'Self-including E4X-based JavaScript snippet',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<script src="#">{%js_alert%}</script>;1',
-        'description': 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executes the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
+        'description': {
+            'en' : 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executes the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',            
+        'howtofix'   : {
+            'en' : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x']
         },
@@ -410,11 +785,26 @@ var items =
     { /* ID 26 - E4X-based UTF7 JavaScript snippet stealing cross-domain markup  */
         'id'         : 26,
         'category'   : 'e4x', 
-        'name'       : 'E4X-based UTF7 JavaScript/HTML snippet stealing cross-domain markup',
+        'name'       : {
+            'en' : 'E4X-based UTF7 JavaScript/HTML snippet stealing cross-domain markup',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
-        'description': 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
+        'description': {
+            'en' : 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',            
+        'howtofix'   : {
+            'en' : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x']
         },
@@ -424,11 +814,26 @@ var items =
     { /* ID 27 - Opera whole-page click hijacking via CSS  */
         'id'         : 27,
         'category'   : 'css', 
-        'name'       : 'Opera whole-page click hijacking via CSS',
+        'name'       : {
+            'en' : 'Opera whole-page click hijacking via CSS',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
-        'description': 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
+        'description': {
+            'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',            
+        'howtofix'   : {
+            'en' : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x']
         },
@@ -438,11 +843,26 @@ var items =
     { /* ID 28 - JavaScript execution via HTML+TIME without user interaction (1)  */
         'id'         : 28,
         'category'   : 'htmlplustime', 
-        'name'       : 'JavaScript execution via HTML+TIME without user interaction (1)',
+        'name'       : {
+            'en' : 'JavaScript execution via HTML+TIME without user interaction (1)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=%js_alert%&gt;>',
-        'description': 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map ecoded markup into an attribute to execute JavaScript.',
+        'description': {
+            'en' : 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map ecoded markup into an attribute to execute JavaScript.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',            
+        'howtofix'   : {
+            'en' : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': [
                 '5.5', '6.0', '7.0', '8.0', '9.0'
@@ -454,11 +874,26 @@ var items =
     { /* ID 29 - JavaScript execution via <LINK> href attribute and data URI  */
         'id'         : 29,
         'category'   : 'css', 
-        'name'       : 'JavaScript execution via <LINK> href attribute and data URI',
+        'name'       : {
+            'en' : 'JavaScript execution via <LINK> href attribute and data URI',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(%js_write%)%7d',
-        'description': 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
+        'description': {
+            'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',            
+        'howtofix'   : {
+            'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': [
                 '8.0', '9.0'
@@ -470,11 +905,26 @@ var items =
     { /* ID 30 - JavaScript execution via <STYLE> @import and data URI  */
         'id'         : 30,
         'category'   : 'css', 
-        'name'       : 'JavaScript execution via <STYLE> @import and data URI',
+        'name'       : {
+            'en' : 'JavaScript execution via <STYLE> @import and data URI',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<style>@import "data:,*%7bx:expression(%js_write%)%7D";</style>',
-        'description': 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
+        'description': {
+            'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',            
+        'howtofix'   : {
+            'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': [
                 '8.0', '9.0'
@@ -486,11 +936,26 @@ var items =
     { /* ID 31 - JavaScript execution via <FRAMESET> and onload  */
         'id'         : 31,
         'category'   : 'html', 
-        'name'       : 'JavaScript execution via <FRAMESET> and onload',
+        'name'       : {
+            'en' : 'JavaScript execution via <FRAMESET> and onload',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<frameset onload=%js_alert%>',
-        'description': 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
+        'description': {
+            'en' : 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',            
+        'howtofix'   : {
+            'en' : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x'], 
@@ -504,11 +969,26 @@ var items =
     { /* ID 32 - JavaScript execution via <TABLE> and background  */
         'id'         : 32,
         'category'   : 'html', 
-        'name'       : 'JavaScript execution via <TABLE> and background',
+        'name'       : {
+            'en' : 'JavaScript execution via <TABLE> and background',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'data'       : '<table background="javascript:%js_alert%">',
-        'description': 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
+        'description': {
+            'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
         'tickets'    : [],
-        'howtofix'   : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',            
+        'howtofix'   : {
+            'en' : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
         'browsers'   : {
             'internet explorer': ['6.0'],
             'opera': ['8.x', '9.x', '10.x'] 
