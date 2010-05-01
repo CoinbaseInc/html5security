@@ -8,7 +8,7 @@ var items =
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
         'description': 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow users to submit markup containing form and formaction attributes or transform them to bogus attributes. Avoid ID attributes for forms as well as submit buttons.',
+        'howtofix'   : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
         'browsers'   : {
             'opera': ['10.5']
         },
@@ -18,7 +18,7 @@ var items =
     { /* ID 2 - XSS via x-imap4-modified-utf7 (2) */
         'id'         : 2, 
         'category'   : 'charset', 
-        'name'       : 'XSS via x-imap4-modified-utf7 (1)',
+        'name'       : 'XSS via x-imap4-modified-utf7 (2)',
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
         'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
         'tickets'    : [],
@@ -34,7 +34,7 @@ var items =
     { /* ID 3 - XSS via x-imap4-modified-utf7 (1) */
         'id'         : 3, 
         'category'   : 'charset', 
-        'name'       : 'XSS via x-imap4-modified-utf7 (2)',
+        'name'       : 'XSS via x-imap4-modified-utf7 (1)',
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
         'description': 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
         'tickets'    : [],
@@ -102,7 +102,7 @@ var items =
         'data'       : '<input onfocus=%js_write% autofocus>',
         'description': 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : 'User submitted markup should not contain autofocus attributes.',            
+        'howtofix'   : 'User submitted markup should not contain "autofocus" attributes.',            
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -121,7 +121,7 @@ var items =
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
         'description': 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : 'User submitted markup should not contain autofocus attributes.',            
+        'howtofix'   : 'User submitted markup should not contain "autofocus" attributes.',            
         'browsers'   : {
             'opera': [
                 '10.5'
@@ -213,7 +213,7 @@ var items =
         'data'       : '<x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>',
         'description': 'This vector uses the repeat template systax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves allover again the client can be forced to deny service or even crash.',
         'tickets'    : [],
-        'howtofix'   : 'Avoid allowing users submitting HTML containing repeat or repeat-start/-end attributes. If necessary validate the numerical values used for them to be reasonably small.',            
+        'howtofix'   : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',            
         'browsers'   : {
             'opera': [
                 '10.0'
@@ -229,7 +229,7 @@ var items =
         'data'       : '<input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>',
         'description': 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
         'tickets'    : [],
-        'howtofix'   : 'Don\'t allow users to submit HTML containing pattern attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',            
+        'howtofix'   : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',            
         'browsers'   : {
             'opera': [
                 '10.0'
@@ -353,9 +353,9 @@ var items =
         'category'   : 'dos', 
         'name'       : 'Input stealing/form DoS with onblur=focus() and autofocus',
         'data'       : '<input onblur=%js_focus% autofocus><input>',
-        'description': 'This very basic vector demonstrates how the combination of autofocus and onblur can render any other form on the targeted website useless.',
+        'description': 'This very basic vector demonstrates how the combination of "autofocus" and "onblur" can render any other form on the targeted website useless.',
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
-        'howtofix'   : 'User submitted markup should not contain autofocus attributes.',            
+        'howtofix'   : 'User submitted markup should not contain "autofocus" attributes.',            
         'browsers'   : {
             'firefox' : ['3.5', '3.6', '3.7'] 
         },
@@ -367,9 +367,9 @@ var items =
         'category'   : 'html5', 
         'name'       : 'Form surveillance with onformchange, onforminput and form attributes',
         'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X',
-        'description': 'Enter a value into the form element to see how onforminput and onformchange attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
+        'description': 'Enter a value into the form element to see how "onforminput" and "onformchange" attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
         'tickets'    : [],
-        'howtofix'   : 'Make sure users cannot submit markup including the form, onformchange and onforminput attributes. Do not apply <FORM> elements with an ID attribute.',            
+        'howtofix'   : 'Make sure users cannot submit markup including the form, "onformchange" and "onforminput" attributes. Do not apply <FORM> elements with an "id" attribute.',            
         'browsers'   : {
             'opera' : ['10.5'] 
         },
@@ -381,7 +381,7 @@ var items =
         'category'   : 'htmlplustime', 
         'name'       : 'JavaScript execution via HTML+TIME without user interaction (2)',
         'data'       : '1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
-        'description': 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just attributename and to attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
+        'description': 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just "attributename" and "to" attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
         'tickets'    : [],
         'howtofix'   : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',            
         'browsers'   : {
@@ -439,9 +439,9 @@ var items =
         'category'   : 'htmlplustime', 
         'name'       : 'JavaScript execution via HTML+TIME without user interaction (1)',
         'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=alert(1)&gt;>',
-        'description': 'This HTML+TIME vector utilized the attributes attributename and values to map ecoded markup into an attribute to execute JavaScript.',
+        'description': 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map ecoded markup into an attribute to execute JavaScript.',
         'tickets'    : [],
-        'howtofix'   : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html xmlns attributes should not be allowed - as well as behavior properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',            
+        'howtofix'   : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',            
         'browsers'   : {
             'internet explorer': [
                 '5.5', '6.0', '7.0', '8.0', '9.0'

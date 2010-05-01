@@ -16,10 +16,11 @@
                 for (var payload in payloads) {
                     var regex = new RegExp('%' + payload + '%');
                     items[item].data = items[item].data.replace(regex, payloads[payload]);
-                    items[item].data = items[item].data.replace(/&/gm, '&amp;');
-                    items[item].data = items[item].data.replace(/</gm, '&lt;');
-                    items[item].data = items[item].data.replace(/>/gm, '&gt;');
                 }
+                items[item].data = items[item].data.replace(/&/gm, '&amp;');
+                items[item].data = items[item].data.replace(/</gm, '&lt;');
+                items[item].data = items[item].data.replace(/>/gm, '&gt;');                
+                
                 var li = $('#categories li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
                 
