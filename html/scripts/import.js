@@ -4,18 +4,26 @@
 (function(){
     window.onload = function() {
         (function() {
-            
             // enumerate categories and build initial lists
             for(var category in categories) {
-                $('#categories').append('<li id="'+category+'"><h3>'+categories[category]+'</h3></li>');
-                $('#sidebar').append('<li><a href="#'+category+'">'+categories[category]+'</a></li>');
+                // determine navigator language or set default
+                var lang = navigator.language ? navigator.language : 'en';
+                if(typeof categories[category][lang] === 'undefined' || !categories[category][lang]) {
+                    lang = 'en';
+                }
+                // check if translated items exist
+                if (typeof categories[category][lang] === 'string') {
+                    $('#categories').append('<li id="' + category + '"><h3>' 
+                        + categories[category][lang] + '</h3></li>');
+                    $('#sidebar').append('<li><a href="#' + category + '">' 
+                        + categories[category][lang] + '</a></li>');
+                }
 			}
 			$('#categories li').wrap('<ul />');
 			$('#sidebar li').wrap('<ul />');
         })();
         (function() {
             for (var item in items) {
-                
                 // replace the payload templates
                 for (var payload in payloads) {
                     var regex = new RegExp('%' + payload + '%');
@@ -25,13 +33,10 @@
                 items[item].data = items[item].data.replace(/&/gm, '&amp;');
                 items[item].data = items[item].data.replace(/</gm, '&lt;');
                 items[item].data = items[item].data.replace(/>/gm, '&gt;');                
-                
                 // build markup container for the content
                 var li = $('#categories li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
-                
                 for(var c in items[item]) {
-                    
                     // determine navigator language or set default
                     var lang = navigator.language ? navigator.language : 'en';
                     if(typeof items[item][c][lang] === 'undefined' || !items[item][c][lang]) {
@@ -72,12 +77,14 @@
                 if(items[item].tickets) {
                     for(var ticket in items[item].tickets) {
                         container.find('.tickets').append(
-                            '<li><a href="'+items[item].tickets[ticket]+'" target="_blank">'+items[item].tickets[ticket]+'</a></li>'
+                            '<li><a href="'+items[item].tickets[ticket]+'" target="_blank">'
+                                + items[item].tickets[ticket]+'</a></li>'
                         );
                     } 
                 }                  
                 li.after(container);
             }
+            // enable direct jumps via hash url
 		    if(location.hash && location.hash.match(/^#\w+$/)) {
 		        location=location.hash;
 		    }			

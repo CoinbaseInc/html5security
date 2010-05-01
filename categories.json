@@ -1,18 +1,88 @@
 /* Categories - the available categories */
 var categories =
 {
-    'html5'         : 'Vectors making use of HTML5 features',
-    'html4'         : 'Classic HTML4 based vectors',
-    'html'          : 'Vectors working on HTML4 and older versions',
-    'css'           : 'Cascading stylesheet injection based vectors',
-    'javascript'    : 'Plain JavaScript vectors',
-    'e4x'           : 'E4X vectors working on gecko based browsers',
-    'dom'           : 'Vectors attacking DOM properties and methods',
-    'json'          : 'JSON based vectors',
-    'svg'           : 'Vectors embedded in SVG files',
-    'xml'           : 'Vectors related to X(HT)ML',
-    'font'          : 'Vectors working when delivered in font files',
-    'charset'       : 'UTF7 and other exotic charset based vectors',
-    'dos'           : 'Client side denial of service vectors',
-	'htmlplustime'  : 'HTML+TIME vectors working on Internet Explorer'
+    'html5'         : {
+        'en' : 'Vectors making use of HTML5 features',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'html4'         : {
+        'en' : 'Classic HTML4 based vectors',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'html'          : {
+        'en' : 'Vectors working on HTML4 and older versions',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'css'           : {
+        'en' : 'Cascading stylesheet injection based vectors',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'javascript'    : {
+        'en' : 'Plain JavaScript vectors',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'e4x'           : {
+        'en' : 'E4X vectors working on gecko based browsers',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'dom'           : {
+        'en' : 'Vectors attacking DOM properties and methods',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'json'          : {
+        'en' : 'JSON based vectors',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'svg'           : {
+        'en' : 'Vectors embedded in SVG files',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'xml'           : {
+        'en' : 'Vectors related to X(HT)ML',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'font'          : {
+        'en' : 'Vectors working when delivered in font files',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'charset'       : {
+        'en' : 'UTF7 and other exotic charset based vectors',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'dos'           : {
+        'en' : 'Client side denial of service vectors',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    },
+    'htmlplustime'  : {
+        'en' : 'HTML+TIME vectors working on Internet Explorer',
+        'jp' : '',
+        'ru' : '',
+        'de' : ''
+    }
 }
