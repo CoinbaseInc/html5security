@@ -488,7 +488,7 @@ var items =
         'category'   : 'html', 
         'name'       : 'JavaScript execution via <FRAMESET> and onload',
         'data'       : '<frameset onload=%js_alert%>',
-        'description': 'This classic vectors shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
+        'description': 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
         'tickets'    : [],
         'howtofix'   : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',            
         'browsers'   : {
