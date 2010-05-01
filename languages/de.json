@@ -1,0 +1,18 @@
+/* German translations store */
+var languages = 
+[
+    {'for': 1, 
+        {
+            'name': 'XSS via formaction - benötigt Interaktion des Anwenders', 
+            'description': 'Dieser Vektor demonstriert wie mittels HTML5 form und formaction Attributen Formulare mit Elementen außerhalb des Formulars kontrolliert werden können', 
+            'howtofix': 'In vom Anwender übermittelten Markup sollten "form" und "formaction" nicht vorkommen dürfen. Zudem sollten keine "id" Attribute für Formulare und Submit-Buttons verwendet werden.'
+        }
+    },
+    {'for': 2, 
+        {
+            'name': '', 
+            'description': '', 
+            'howtofix': ''
+        }
+    },
+]

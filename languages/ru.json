@@ -1,0 +1,18 @@
+/* Russian translations store */
+var languages = 
+[
+    {'for': 1, 
+        {
+            'name': '', 
+            'description': '', 
+            'howtofix': ''
+        }
+    },
+    {'for': 2, 
+        {
+            'name': '', 
+            'description': '', 
+            'howtofix': ''
+        }
+    },
+]
