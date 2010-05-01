@@ -26,7 +26,6 @@
                 
                 for(var c in items[item]) {
                     if(typeof items[item][c] === 'string') {
-                        items[item][c] = items[item][c].replace(/&/gm, '&amp;');
                         items[item][c] = items[item][c].replace(/</gm, '&lt;');
                         items[item][c] = items[item][c].replace(/>/gm, '&gt;');                        
                         container.find('.'+c).html(items[item][c]);        
