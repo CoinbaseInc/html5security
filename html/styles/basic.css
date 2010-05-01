@@ -43,8 +43,11 @@ ul li {
 ul li ul li {
     list-style: circle
 }
+ul.browsers {
+    padding: 0;
+}
 ul.browsers ul {
-    padding: 0 15px 0 70px;
+    padding: 0 10px 0 70px;
 	float: left;
 	min-height: 50px;	
 }
