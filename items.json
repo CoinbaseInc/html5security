@@ -500,5 +500,20 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'frames', 'classic', 'html', 'onload'],
         'reporter'   : '.mario'
+    },
+    { /* ID 32 - JavaScript execution via <TABLE> and background  */
+        'id'         : 32,
+        'category'   : 'html', 
+        'name'       : 'JavaScript execution via <TABLE> and background',
+        'data'       : '<table background="javascript:%js_alert%">',
+        'description': 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
+        'tickets'    : [],
+        'howtofix'   : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',            
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'opera': ['8.x', '9.x', '10.x'] 
+        },
+        'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
+        'reporter'   : '.mario'
     }
 ]
