@@ -64,6 +64,9 @@ ul.firefox {
 ul.chrome {
     background: url(../images/chrome.png) no-repeat;
 }
+ul.safari {
+    background: url(../images/safari.png) no-repeat;
+}
 ul.tags li {
     list-style: none;
 	color: #666;
