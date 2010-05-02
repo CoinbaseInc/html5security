@@ -80,7 +80,7 @@ var categories =
         'de' : ''
     },
     'behavior'  : {
-        'en' : 'HTML behavior/binding vectors working on Internet Explorer',
+        'en' : 'HTML behavior and binding vectors',
         'jp' : '',
         'ru' : '',
         'de' : ''
