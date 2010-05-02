@@ -19,8 +19,8 @@
                         + categories[category][lang] + '</a></li>');
                 }
 			}
-			$('#categories li').wrap('<ul />');
-			$('#sidebar li').wrap('<ul />');
+			$('#categories li').wrap('<ul/>');
+			$('#sidebar li').wrap('<ul/>');
         })();
         (function() {
             for (var item in items) {
@@ -107,22 +107,21 @@
                 term = term.replace(/&/g, '&amp;');
                 term = term.replace(/</g, '&lt;');
                 term = term.replace(/>/g, '&gt;');  
-                
                 if(term) {
                     $('div.item').each(function(){
-                        if($(this).html().match(new RegExp(term))) {
+                        if($(this).html().match(new RegExp(term), 'i')) {
                             $(this).show();
                             $('#categories').attr(
-                                {scrollTop: $('div.item:visible').first().attr('scrollHeight')}
+                                {scrollTop: $('div.item:visible')
+                                    .first().attr('scrollHeight')}
                             );                            
-                        } else {
-                            $(this).fadeOut('fast');
-                        }
+                        } else {$(this).fadeOut('fast')}
                     });
-                } else {
-                    $('div.item').show();
-                }
-            });                
+                } else {$('div.item').show()}
+            });
+            $('#search').live('dblclick', function(){
+                $(this).attr('value', '').keyup();
+            }); 
         })();
     };
 })();
