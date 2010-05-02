@@ -25,7 +25,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera': ['10.5']
+            'opera': ['10.5', 'mobile']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -278,7 +278,7 @@ var items =
         },          
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.0', '10.5'
+                '8.0', '9.0', '10.0', '10.5', 'mobile'
             ]
         },
         'tags'       : ['xss', 'css', 'link-source', 'opera', 'proprietary'],
@@ -535,7 +535,7 @@ var items =
         },            
         'browsers'   : {
             'opera': [
-                '9.x', '10.0'
+                '9.x', '10.0', 'mobile'
             ]
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css', 'proprietary'],
@@ -689,9 +689,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['3.x', '4.x', '5.x'],
-            'safari': ['4.x']
+            'chrome': ['3.x', '4.x', '5.x']
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
         'reporter'   : 'Skyphire, gareth, .mario'
@@ -838,7 +836,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x']
+            'opera': ['8.x', '9.x', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'css', 'opera', 'attribute selectors', 'proprietary'],
         'reporter'   : '.mario'
@@ -1293,7 +1291,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x'],
+            'opera': ['8.x', '9.x', '10.x', 'mobile'],
             'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
         },
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
