@@ -111,14 +111,14 @@
             });
             $('#search').live('keyup', function(){
                 var term = $('#search').attr('value');
-                term = term.replace(/([\[\]\(\\)\{\}])/g, '\\$1');
+                term = term.replace(/([\[\]\(\\)\{\}\+\-])/g, '\\$1');
                 term = sanitize(term);
                 if(term) {
                     $('div.item').each(function(){
-                        if($(this).html().match(new RegExp(term), 'i')) {
+                        if($(this).html().match(new RegExp(term, 'gi'))) {
                             $(this).show();
                             $(document).scrollTop(
-                                $('div.item:visible').first().attr('scrollHeight')-100
+                                $('div.item:visible').first().attr('scrollHeight')
                             );                            
                         } else {$(this).hide()}
                     });
