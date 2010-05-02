@@ -8,7 +8,8 @@
             for(var category in categories) {
                 // determine navigator language or set default
                 var lang = navigator.language ? navigator.language : 'en';
-                if(typeof categories[category][lang] === 'undefined' || !categories[category][lang]) {
+                if(typeof categories[category][lang] === 'undefined' 
+                    || !categories[category][lang]) {
                     lang = 'en';
                 }
                 // check if translated items exist
@@ -18,9 +19,9 @@
                     $('#sidebar').append('<li><a href="#' + category + '">' 
                         + categories[category][lang] + '</a></li>');
                 }
-			}
-			$('#categories li').wrap('<ul/>');
-			$('#sidebar li').wrap('<ul/>');
+            }
+            $('#categories li').wrap('<ul/>');
+            $('#sidebar li').wrap('<ul/>');
         })();
         (function() {
             for (var item in items) {
@@ -40,11 +41,11 @@
                 
                 // enable direct vector navi by id
                 container.prepend('<a name="'+items[item].id+'"></a>');
-                
                 for(var c in items[item]) {
                     // determine navigator language or set default
                     var lang = navigator.language ? navigator.language : 'en';
-                    if(typeof items[item][c][lang] === 'undefined' || !items[item][c][lang]) {
+                    if(typeof items[item][c][lang] === 'undefined' 
+                        || !items[item][c][lang]) {
                         lang = 'en';
                     }
                     // check if translated items exist
@@ -78,15 +79,18 @@
                 // fill tag list
                 if(items[item].tags) {
                     for(var tag in items[item].tags) {
-                        container.find('.tags').append('<li>'+items[item].tags[tag]+'</li>');
+                        container.find('.tags')
+                            .append('<li>'+items[item].tags[tag]+'</li>');
                     } 
-					container.find('.tags').append('<span class="clear"></span>');
+                    container.find('.tags')
+                        .append('<span class="clear"></span>');
                 }   
                 // fill ticket list
                 if(items[item].tickets) {
                     for(var ticket in items[item].tickets) {
                         container.find('.tickets').append(
-                            '<li><a href="'+items[item].tickets[ticket]+'" target="_blank">'
+                            '<li><a href="'+items[item].tickets[ticket]
+                                +'" target="_blank">'
                                 + items[item].tickets[ticket]+'</a></li>'
                         );
                     } 
@@ -94,11 +98,10 @@
                 li.parent().append(container);
             }
             // enable direct jumps via hash url
-		    if(location.hash && location.hash.match(/^#\w+$/)) {
-		        location=location.hash;
-		    }
+            if(location.hash && location.hash.match(/^#\w+$/)) {
+                location=location.hash;
+            }
         })();
-        
         // search functionality
         (function(){
             $('#search').live('keyup', function(){
@@ -115,7 +118,7 @@
                                 {scrollTop: $('div.item:visible')
                                     .first().attr('scrollHeight')}
                             );                            
-                        } else {$(this).fadeOut('fast')}
+                        } else {$(this).hide()}
                     });
                 } else {$('div.item').show()}
             });
