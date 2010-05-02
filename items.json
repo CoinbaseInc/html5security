@@ -1052,7 +1052,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox': ['3.6', '3.7'] 
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
         },
         'tags'       : ['xss', 'javascript', 'behavior', 'vml', 'internet explorer'],
         'reporter'   : 'LeverOne'
