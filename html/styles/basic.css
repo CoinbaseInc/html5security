@@ -92,6 +92,7 @@ ul.tags li {
 	font-style: italic;
 	margin: 0 5px;
 }
+ul.browsers li:hover,
 ul.tags li:hover {
     cursor: pointer;
     text-decoration: underline;   

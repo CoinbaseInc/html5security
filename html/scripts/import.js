@@ -106,7 +106,7 @@
         })();
         // search functionality
         (function(){
-            $('ul.tags li').live('click', function(){
+            $('ul.tags li, ul.browsers li').live('click', function(){
                 $('#search').attr('value', $(this).html()).keyup();        
             });
             $('#search').live('keyup', function(){
