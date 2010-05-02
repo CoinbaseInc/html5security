@@ -1239,7 +1239,7 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
-    }},
+    },
     { /* ID 41 - Error handler via empty list-style  */
         'id'         : 41,
         'category'   : 'html', 
@@ -1264,7 +1264,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x'] 
         },
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne, .mario'
