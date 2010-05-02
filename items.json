@@ -993,7 +993,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['6.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x'] 
         },
         'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
