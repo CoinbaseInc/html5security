@@ -3,6 +3,13 @@
  */
 (function(){
     window.onload = function() {
+        // sanitize
+        var sanitize = function(input){
+            output = input.replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;').replace(/>/g, '&gt;');              
+            return output;
+        };
+        // categories
         (function() {
             // enumerate categories and build initial lists
             for(var category in categories) {
@@ -23,6 +30,7 @@
             $('#categories li').wrap('<ul/>');
             $('#sidebar li').wrap('<ul/>');
         })();
+        // content
         (function() {
             for (var item in items) {
                 // replace the payload templates
@@ -31,9 +39,7 @@
                     items[item].data = items[item].data.replace(regex, payloads[payload]);
                 }
                 // sanitize the input
-                items[item].data = items[item].data.replace(/&/gm, '&amp;');
-                items[item].data = items[item].data.replace(/</gm, '&lt;');
-                items[item].data = items[item].data.replace(/>/gm, '&gt;');   
+                //items[item].data = sanitize(items[item].data);
                              
                 // build markup container for the content
                 var li = $('#categories li#'+items[item].category+' h3');
@@ -50,17 +56,13 @@
                     }
                     // check if translated items exist
                     if(typeof items[item][c][lang] === 'string') {
-                        items[item][c][lang] = items[item][c][lang].replace(/</gm, '&lt;');
-                        items[item][c][lang] = items[item][c][lang].replace(/>/gm, '&gt;');                        
-                        container.find('.'+c).html(items[item][c][lang]);
+                        container.find('.'+c).html(sanitize(items[item][c][lang]));
                         if(c === 'name'){
                             container.find('.'+c).append('<a href="#'+items[item]['id']
                                 +'">#'+items[item]['id']+'</a>') 
                         }
                     } else if(typeof items[item][c] === 'string') {
-                        items[item][c] = items[item][c].replace(/</gm, '&lt;');
-                        items[item][c] = items[item][c].replace(/>/gm, '&gt;');                        
-                        container.find('.'+c).html(items[item][c]);   
+                        container.find('.'+c).html(sanitize(items[item][c]));   
                     }
                 }
                 // fill browser list
@@ -104,19 +106,19 @@
         })();
         // search functionality
         (function(){
+            $('ul.tags li').live('click', function(){
+                $('#search').attr('value', $(this).html()).keyup();        
+            });
             $('#search').live('keyup', function(){
                 var term = $('#search').attr('value');
                 term = term.replace(/([\[\]\(\\)\{\}])/g, '\\$1');
-                term = term.replace(/&/g, '&amp;');
-                term = term.replace(/</g, '&lt;');
-                term = term.replace(/>/g, '&gt;');  
+                term = sanitize(term);
                 if(term) {
                     $('div.item').each(function(){
                         if($(this).html().match(new RegExp(term), 'i')) {
                             $(this).show();
-                            $('#categories').attr(
-                                {scrollTop: $('div.item:visible')
-                                    .first().attr('scrollHeight')}
+                            $(document).scrollTop(
+                                $('div.item:visible').first().attr('scrollHeight')-100
                             );                            
                         } else {$(this).hide()}
                     });

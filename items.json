@@ -27,7 +27,7 @@ var items =
         'browsers'   : {
             'opera': ['10.5']
         },
-        'tags'       : ['xss', 'html5', 'firefox', 'gc'],
+        'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
     },
     { /* ID 2 - XSS via x-imap4-modified-utf7 (1) */
