@@ -127,6 +127,9 @@
             $('#search').live('dblclick', function(){
                 $(this).attr('value', '').keyup();
             }); 
+            $('#sidebar a').live('click', function(){
+                $('#search').attr('value', '').keyup();
+            }); 
         })();
     };
 })();
