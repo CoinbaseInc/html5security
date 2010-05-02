@@ -1278,7 +1278,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<base href="javascript://"><a href="/hello/,%js_alert%//#">XXX</a>',
+        'data'       : '<base href="javascript:"><a href="/hello/,%js_alert%//#">XXX</a>',
         'description': {
             'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer and Opera (O8-10.5 in case the link URL starts with #). User interaction is required to execute the JavaScript.',
             'jp' : '',
