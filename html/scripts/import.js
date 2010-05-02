@@ -32,12 +32,15 @@
                 // sanitize the input
                 items[item].data = items[item].data.replace(/&/gm, '&amp;');
                 items[item].data = items[item].data.replace(/</gm, '&lt;');
-                items[item].data = items[item].data.replace(/>/gm, '&gt;');                
+                items[item].data = items[item].data.replace(/>/gm, '&gt;');   
+                             
                 // build markup container for the content
                 var li = $('#categories li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
+                
                 // enable direct vector navi by id
                 container.prepend('<a name="'+items[item].id+'"></a>');
+                
                 for(var c in items[item]) {
                     // determine navigator language or set default
                     var lang = navigator.language ? navigator.language : 'en';
@@ -87,8 +90,8 @@
                                 + items[item].tickets[ticket]+'</a></li>'
                         );
                     } 
-                }                  
-                li.before(container);
+                } 
+                li.parent().append(container);
             }
             // enable direct jumps via hash url
 		    if(location.hash && location.hash.match(/^#\w+$/)) {
