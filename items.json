@@ -1188,14 +1188,14 @@ var items =
         },
         'data'       : '<![><img src="]><img src=x onerror=alert(3)//">',
         'description': {
-            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML. This can cause problems for filter mechnisma since those delimiters can be used for obfuscation.',
+            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
             'jp' : '',
             'ru' : '',
             'de' : ''
         },
         'tickets'    : [],
         'howtofix'   : {
-            'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections have been stripped out or escaped - not before.',
+            'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections nd delimiters have been stripped out or escaped - not before.',
             'jp' : '',
             'ru' : '',
             'de' : ''
