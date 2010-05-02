@@ -79,8 +79,8 @@ var categories =
         'ru' : '',
         'de' : ''
     },
-    'htmlplustime'  : {
-        'en' : 'HTML+TIME vectors working on Internet Explorer',
+    'behavior'  : {
+        'en' : 'HTML behavior/binding vectors working on Internet Explorer',
         'jp' : '',
         'ru' : '',
         'de' : ''
