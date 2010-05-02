@@ -30,11 +30,11 @@ var items =
         'tags'       : ['xss', 'html5', 'firefox', 'gc'],
         'reporter'   : '.mario'
     },
-    { /* ID 2 - XSS via x-imap4-modified-utf7 (2) */
+    { /* ID 2 - XSS via x-imap4-modified-utf7 (1) */
         'id'         : 2, 
         'category'   : 'charset', 
         'name'       : {
-            'en' : 'XSS via x-imap4-modified-utf7 (2)',
+            'en' : 'XSS via x-imap4-modified-utf7 (1)',
             'jp' : '',
             'ru' : '',
             'de' : ''
@@ -61,11 +61,11 @@ var items =
         'tags'       : ['xss', 'utf7', 'firefox', 'charset'],
         'reporter'   : '.mario'
     },
-    { /* ID 3 - XSS via x-imap4-modified-utf7 (1) */
+    { /* ID 3 - XSS via x-imap4-modified-utf7 (2) */
         'id'         : 3, 
         'category'   : 'charset', 
         'name'       : {
-            'en' : 'XSS via x-imap4-modified-utf7 (1)',
+            'en' : 'XSS via x-imap4-modified-utf7 (2)',
             'jp' : '',
             'ru' : '',
             'de' : ''
@@ -725,11 +725,11 @@ var items =
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
     },
-    { /* ID 24 - JavaScript execution via HTML+TIME without user interaction (2) */
+    { /* ID 24 - JavaScript execution via HTML+TIME without user interaction (1) */
         'id'         : 24,
         'category'   : 'behavior', 
         'name'       : {
-            'en' : 'JavaScript execution via HTML+TIME without user interaction (2)',
+            'en' : 'JavaScript execution via HTML+TIME without user interaction (1)',
             'jp' : '',
             'ru' : '',
             'de' : ''
@@ -843,11 +843,11 @@ var items =
         'tags'       : ['xss', 'javascript', 'css', 'opera', 'attribute selectors', 'proprietary'],
         'reporter'   : '.mario'
     },
-    { /* ID 28 - JavaScript execution via HTML+TIME without user interaction (1)  */
+    { /* ID 28 - JavaScript execution via HTML+TIME without user interaction (2)  */
         'id'         : 28,
         'category'   : 'behavior', 
         'name'       : {
-            'en' : 'JavaScript execution via HTML+TIME without user interaction (1)',
+            'en' : 'JavaScript execution via HTML+TIME without user interaction (2)',
             'jp' : '',
             'ru' : '',
             'de' : ''

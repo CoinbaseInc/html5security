@@ -88,7 +88,7 @@
                         );
                     } 
                 }                  
-                li.after(container);
+                li.before(container);
             }
             // enable direct jumps via hash url
 		    if(location.hash && location.hash.match(/^#\w+$/)) {
