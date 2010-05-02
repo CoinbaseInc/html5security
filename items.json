@@ -688,7 +688,10 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox' : ['3.5', '3.6', '3.7'] 
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['3.x', '4.x', '5.x'],
+            'safari': ['4.x']
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
         'reporter'   : 'Skyphire, gareth, .mario'

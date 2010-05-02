@@ -36,6 +36,8 @@
                 // build markup container for the content
                 var li = $('#categories li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
+                // enable direct vector navi by id
+                container.prepend('<a name="'+items[item].id+'"></a>');
                 for(var c in items[item]) {
                     // determine navigator language or set default
                     var lang = navigator.language ? navigator.language : 'en';
