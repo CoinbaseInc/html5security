@@ -96,7 +96,33 @@
             // enable direct jumps via hash url
 		    if(location.hash && location.hash.match(/^#\w+$/)) {
 		        location=location.hash;
-		    }			
+		    }
+        })();
+        
+        // search functionality
+        (function(){
+            $('#search').live('keyup', function(){
+                var term = $('#search').attr('value');
+                term = term.replace(/([\[\]\(\\)\{\}])/g, '\\$1');
+                term = term.replace(/&/g, '&amp;');
+                term = term.replace(/</g, '&lt;');
+                term = term.replace(/>/g, '&gt;');  
+                
+                if(term) {
+                    $('div.item').each(function(){
+                        if($(this).html().match(new RegExp(term))) {
+                            $(this).show();
+                            $('#categories').attr(
+                                {scrollTop: $('div.item:visible').first().attr('scrollHeight')}
+                            );                            
+                        } else {
+                            $(this).fadeOut('fast');
+                        }
+                    });
+                } else {
+                    $('div.item').show();
+                }
+            });                
         })();
     };
 })();

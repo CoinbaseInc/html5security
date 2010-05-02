@@ -8,18 +8,22 @@
         <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/categories.json"></script>
         <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/payload.json"></script>
         <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/html/scripts/jquery.js"></script>
-        <script type="text/javascript" src="http://html5security.googlecode.com/svn/trunk/html/scripts/import.js"></script>
+        <script type="text/javascript" src="scripts/import.js"></script>
         <link rel="stylesheet" type="text/css" href="styles/basic.css" />
     </head>
     <body>
         <h1>HTML5 Security Cheatsheet<small>What your browser does when you look away...</small></h1>
         <span style="color:red">This is just a small part and pre-alpha of the HTML5 Security Cheatsheet project. <br />Click <a href="http://code.google.com/p/html5security/" target="_blank">here</a> for more info and drop us a line if you wish to participate!</span>
         <div id="categories"><!-- data will go here --></div>
-		<div id="sidebar"><!-- navi will go here --></div>
+		<div id="sidebar">
+		    <input type="text" id="search" placeholder="Search" />
+            <span class="clear"></span>
+            <!-- navi will go here -->
+        </div>
         <div id="templates" style="display:none">
             <!-- invisible templates for the JSON data -->
             <div id="item_template">
-                <div>
+                <div class="item">
                     <h4 class="name">%name%</h4><p class="description">%desription%</p>
                     <code class="data">%data%</code><p class="howtofix">%howtofix%</p>
                     <ul class="browsers"></ul><ul class="tags"></ul><ul class="tickets"></ul>
