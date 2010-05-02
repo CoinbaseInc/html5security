@@ -1030,7 +1030,7 @@ var items =
     },
     { /* ID 34 - VML frame with embedded VML object plus onmouseover  */
         'id'         : 34,
-        'category'   : 'css', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'VML frame with embedded VML object plus onmouseover',
             'jp' : '',
@@ -1059,7 +1059,7 @@ var items =
     },
     { /* ID 35 - VML Line object utilizing href attribute with JavaScript URI   */
         'id'         : 35,
-        'category'   : 'css', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'VML Line object utilizing href attribute with JavaScript URI',
             'jp' : '',
