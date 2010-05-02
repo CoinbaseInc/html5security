@@ -1114,5 +1114,67 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'style', 'behavior', 'anchorclick', 'internet explorer', 'proprietary'],
         'reporter'   : '.mario'
+    },
+    { /* ID 37 - HTML comment parsing issues (1)  */
+        'id'         : 37,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'HTML comment parsing issues (1)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<!--<img src="--><img src=x onerror=alert(3)//">',
+        'description': {
+            'en' : 'This vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Make sure comments are not allowed in user submitted html. The markup should be checked for security issues after comments have been stripped out - not before.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['2.x', '3.x', '4.x', '5.x'],
+            'safari': ['3.x', '4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
+        'reporter'   : 'sdc, .mario'
+    },
+    { /* ID 38 - HTML comment parsing issues (2)  */
+        'id'         : 38,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'HTML comment parsing issues (2)',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<comment><img src="</comment><img src=x onerror=alert(1)//">',
+        'description': {
+            'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Make sure <COMMENT> tags are not allowed in user submitted html. The markup should be checked for security issues after <COMMENT> tags have been stripped out or escaped - not before.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
+        'reporter'   : '.mario'
     }
 ]
