@@ -718,7 +718,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.5'] 
+            'opera' : ['10.5', 'mobile'] 
         },
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
@@ -959,7 +959,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
             'chrome': ['2.x', '3.x', '4.x', '5.x'],
             'safari': ['3.x', '4.x']
@@ -992,7 +992,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x'] 
+            'opera': ['8.x', '9.x', '10.x', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
         'reporter'   : '.mario'
@@ -1138,7 +1138,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
             'chrome': ['2.x', '3.x', '4.x', '5.x'],
             'safari': ['3.x', '4.x']
@@ -1199,7 +1199,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
         },
         'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes'],
@@ -1230,7 +1230,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
             'chrome': ['2.x', '3.x', '4.x', '5.x'],
             'safari': ['3.x', '4.x']
@@ -1262,7 +1262,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x'] 
+            'opera': ['8.x', '9.x', '10.x', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'css', 'background', 'opera', 'onerror'],
         'reporter'   : 'LeverOne, .mario'
