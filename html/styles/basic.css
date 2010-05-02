@@ -34,6 +34,12 @@ h4 {
     background: #e1e1e1;
     color: #101010;
 }
+h4 a {
+    color: #101010;
+    font-size: 10px;
+    float: right;
+    font-weight: normal;
+}
 p {
     width: 90%;	
 }

@@ -48,7 +48,11 @@
                     if(typeof items[item][c][lang] === 'string') {
                         items[item][c][lang] = items[item][c][lang].replace(/</gm, '&lt;');
                         items[item][c][lang] = items[item][c][lang].replace(/>/gm, '&gt;');                        
-                        container.find('.'+c).html(items[item][c][lang]);        
+                        container.find('.'+c).html(items[item][c][lang]);
+                        if(c === 'name'){
+                            container.find('.'+c).append('<a href="#'+items[item]['id']
+                                +'">#'+items[item]['id']+'</a>') 
+                        }
                     } else if(typeof items[item][c] === 'string') {
                         items[item][c] = items[item][c].replace(/</gm, '&lt;');
                         items[item][c] = items[item][c].replace(/>/gm, '&gt;');                        
