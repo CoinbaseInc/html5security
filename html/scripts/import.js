@@ -71,14 +71,12 @@
                 // check for attachment data
                 if(items[item].attachment) {
                     container.find('.attachment').show().append(sanitize(items[item].attachment.raw));
-                    if(items[item].attachment.mime) {
-                        container.find('.attachment').append('<span class="mime">MIME: '+items[item].attachment.mime+'</span>');
-                    }
-                    if(items[item].attachment.name) {
-                        container.find('.attachment').append('<span class="name">Name: '+items[item].attachment.name+'</span>');
-                    }
-                    if(items[item].attachment.path) {
-                        container.find('.attachment').append('<span class="path">Path: '+items[item].attachment.path+'</span>');
+                    for(var meta in items[item].attachment) {
+                        if(meta !== 'raw' && items[item].attachment[meta]) {
+                            container.find('.attachment').append(
+                                '<span class="mime">'+meta+': '+sanitize(items[item].attachment[meta])+'</span>'
+                            );
+                        }
                     }
                 }
                 // fill browser list
