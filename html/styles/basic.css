@@ -102,6 +102,7 @@ code.attachment {
 }
 code.attachment span {
     display: block;
+    margin-top: 10px;
     font-family: sans-serif;
     color: #666;
     font-size: 11px;
