@@ -97,6 +97,15 @@ ul.tags li:hover {
     cursor: pointer;
     text-decoration: underline;   
 }
+code.attachment {
+    margin-bottom: 10px;
+}
+code.attachment span {
+    display: block;
+    font-family: sans-serif;
+    color: #666;
+    font-size: 11px;
+}
 code {
     display: block;
     background: #fff;

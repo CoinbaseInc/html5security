@@ -37,6 +37,9 @@
                 for (var payload in payloads) {
                     var regex = new RegExp('%' + payload + '%');
                     items[item].data = items[item].data.replace(regex, payloads[payload]);
+                    if(items[item].attachment && items[item].attachment.raw) {
+                        items[item].attachment.raw = items[item].attachment.raw.replace(regex, payloads[payload]);                        
+                    }
                 }
                 // sanitize the input
                 //items[item].data = sanitize(items[item].data);
@@ -63,6 +66,19 @@
                         }
                     } else if(typeof items[item][c] === 'string') {
                         container.find('.'+c).html(sanitize(items[item][c]));   
+                    }
+                }
+                // check for attachment data
+                if(items[item].attachment) {
+                    container.find('.attachment').append(sanitize(items[item].attachment.raw));
+                    if(items[item].attachment.mime) {
+                        container.find('.attachment').append('<span class="mime">MIME: '+items[item].attachment.mime+'</span>');
+                    }
+                    if(items[item].attachment.name) {
+                        container.find('.attachment').append('<span class="name">Name: '+items[item].attachment.name+'</span>');
+                    }
+                    if(items[item].attachment.path) {
+                        container.find('.attachment').append('<span class="path">Path: '+items[item].attachment.path+'</span>');
                     }
                 }
                 // fill browser list
