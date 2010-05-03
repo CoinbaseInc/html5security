@@ -70,7 +70,7 @@
                 }
                 // check for attachment data
                 if(items[item].attachment) {
-                    container.find('.attachment').append(sanitize(items[item].attachment.raw));
+                    container.find('.attachment').show().append(sanitize(items[item].attachment.raw));
                     if(items[item].attachment.mime) {
                         container.find('.attachment').append('<span class="mime">MIME: '+items[item].attachment.mime+'</span>');
                     }
