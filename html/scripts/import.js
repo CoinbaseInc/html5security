@@ -132,7 +132,7 @@
             }); 
             // enable direct jumps via hash url
             if(location.search) {
-                var search = location.search.replace(/^\?/, null);
+                var search = unescape(location.search.replace(/^\?/, ''));
                 $('#search').attr('value', search).keyup();
             }
         })();
