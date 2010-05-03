@@ -130,6 +130,11 @@
             $('#sidebar a').live('click', function(){
                 $('#search').attr('value', '').keyup();
             }); 
+            // enable direct jumps via hash url
+            if(location.search) {
+                var search = location.search.replace(/^\?/, null);
+                $('#search').attr('value', search).keyup();
+            }
         })();
     };
 })();
