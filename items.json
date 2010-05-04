@@ -1365,7 +1365,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.0', '10.5']
+            'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'css', 'hijacking', 'proprietary'],
         'reporter'   : '.mario'
