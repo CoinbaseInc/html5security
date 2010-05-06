@@ -204,7 +204,7 @@ var items =
         'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.', 
-            'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u8981\u7d20\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
+			'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
             'ru' : '',
             'de' : ''
         },          
