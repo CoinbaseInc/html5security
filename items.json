@@ -6,21 +6,21 @@ var items =
         'category'   : 'html5', 
         'name'       : {
             'en' : 'XSS via formaction - requiring user interaction',
-            'jp' : '',
+            'jp' : 'formaction経由でのXSS - ユーザの介在が必要',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
         'description': {
             'en' : 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
-            'jp' : '',
+            'jp' : 'HTML5のformとformaction機能を使って既存のformを外側から乗っ取る手法',
             'ru' : '',
             'de' : ''
         },
         'tickets'    : [],
         'howtofix'   : {
             'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
-            'jp' : '',
+            'jp' : '"form"と"formaction"属性を持つ要素をユーザに入力させない。あるいはそれらの属性を無効な値に変更する。"id"属性はformだけでなくsubmitボタンについても対応すること。',
             'ru' : '',
             'de' : ''
         },
