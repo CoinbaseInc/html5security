@@ -1425,7 +1425,7 @@ var items =
         },
         'data'       : '<div style="font-family:foo}x=expression(%js_write%);">XXX</div>',
         'description': {
-            'en' : 'Internet Explorer allow to use right curly brace (}) as groups separator. A css-declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
+            'en' : 'Internet Explorer allows to use right curly brace (}) as a group separator. A CSS declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
             'jp' : '',
             'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
             'de' : ''
@@ -1438,7 +1438,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '9.0']
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'quirks mode', 'proprietary', 'expression'],
         'reporter'   : 'Gareth, LeverOne, sdc'
