@@ -333,7 +333,7 @@ var items =
         },
         'tickets'    : [],
         'howtofix'   : {
-            'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbirary HTML data as well as event handlers in native elements',
+            'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
             'ru' : '',
             'de' : ''
@@ -1442,5 +1442,43 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'quirks mode', 'proprietary', 'expression'],
         'reporter'   : 'Gareth, LeverOne, sdc'
+    },
+    { /* ID 47 - Alternative css-syntax in Internet Explorer  */
+        'id'         : 47,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : '',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
+        'description': {
+            'en' : 'SVG files can force the user agent to execute JavaScript via plain <SCRIPT> tags inside any SVG element without user interaction',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': [
+                '10.0', '10.5'
+            ],
+            'chrome': [
+                '4.0', '5.5'
+            ],
+            'firefox': [
+                '3.0', '3.5', '3.7', '3.7'
+            ],
+            'internet explorer': ['9.0']
+        },
+        'tags'       : ['xss', 'svg', 'script', 'opera', 'firefox', 'chrome', 'internet explorer'],
+        'reporter'   : 'Romain'
     }
 ]
