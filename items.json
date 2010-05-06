@@ -1443,11 +1443,11 @@ var items =
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'quirks mode', 'proprietary', 'expression'],
         'reporter'   : 'Gareth, LeverOne, sdc'
     },
-    { /* ID 47 - Alternative css-syntax in Internet Explorer  */
+    { /* ID 47 - SVG file executing JavaScript via <SCRIPT> tag */
         'id'         : 47,
         'category'   : 'svg', 
         'name'       : {
-            'en' : '',
+            'en' : 'SVG file executing JavaScript via <SCRIPT> tag',
             'jp' : '',
             'ru' : '',
             'de' : ''
