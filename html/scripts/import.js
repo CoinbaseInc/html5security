@@ -102,12 +102,12 @@
                         .append('<span class="clear"></span>');
                 }   
                 // fill ticket list
-                if(items[item].tickets) {
-                    for(var ticket in items[item].tickets) {
-                        container.find('.tickets').append(
-                            '<li><a href="'+items[item].tickets[ticket]
+                if(items[item].urls) {
+                    for(var url in items[item].urls) {
+                        container.find('.urls').append(
+                            '<li><a href="'+items[item].urls[url]
                                 +'" target="_blank">'
-                                + items[item].tickets[ticket]+'</a></li>'
+                                + items[item].urls[url]+'</a></li>'
                         );
                     } 
                 } 

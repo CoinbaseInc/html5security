@@ -17,7 +17,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
 			'ja' : '\u0022form\u0022\u3068\u0022formaction\u0022\u5c5e\u6027\u3092\u542b\u3080\u8981\u7d20\u3092\u30e6\u30fc\u30b6\u306b\u5165\u529b\u3055\u305b\u306a\u3044\u3001\u3042\u308b\u3044\u306f\u305d\u308c\u3089\u306e\u5c5e\u6027\u3092\u7121\u52b9\u306a\u5024\u306b\u5909\u63db\u3059\u308b\u3053\u3068\u3002\u0022id\u0022\u5c5e\u6027\u306fform\u3060\u3051\u3067\u306a\u304fsubmit\u30dc\u30bf\u30f3\u306b\u3064\u3044\u3066\u3082\u5bfe\u5fdc\u3059\u308b\u3053\u3068\u3002',
@@ -46,7 +46,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
@@ -77,7 +77,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
@@ -108,7 +108,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['https://developer.mozilla.org/En/Using_web_workers'],
+        'urls'    : ['https://developer.mozilla.org/En/Using_web_workers'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -139,7 +139,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['https://developer.mozilla.org/en/JavaScript_crypto'],
+        'urls'    : ['https://developer.mozilla.org/en/JavaScript_crypto'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -170,7 +170,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
+        'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -201,7 +201,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
+        'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.', 
 			'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
@@ -235,7 +235,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
+        'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
@@ -269,7 +269,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -300,7 +300,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',
             'ja' : '',
@@ -331,7 +331,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
@@ -368,7 +368,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
+        'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -402,7 +402,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',
             'ja' : '',
@@ -433,7 +433,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',
             'ja' : '',
@@ -464,7 +464,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['https://developer.mozilla.org/en/Sharp_variables_in_JavaScript'],
+        'urls'    : ['https://developer.mozilla.org/en/Sharp_variables_in_JavaScript'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -495,7 +495,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
@@ -526,7 +526,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',
             'ja' : '',
@@ -557,7 +557,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',
             'ja' : '',
@@ -588,7 +588,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure ton have your filter be aware that for Firefox &#60; (<) and &#188 are equivalent - as well as other characters too.',
             'ja' : '',
@@ -619,7 +619,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Functions/ReferenceError'],
         'howtofix'   : {
             'en' : 'Do not trust the DOM in case the user can influence it via script injections, includes or other DOM based property access.',
             'ja' : '',
@@ -651,7 +651,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/noSuchMethod'],
+        'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/noSuchMethod'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -680,7 +680,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
+        'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '',
@@ -710,7 +710,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure users cannot submit markup including the form, "onformchange" and "onforminput" attributes. Do not apply <FORM> elements with an "id" attribute.',
             'ja' : '',
@@ -739,7 +739,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
@@ -770,7 +770,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['https://developer.mozilla.org/en/E4X'],
         'howtofix'   : {
             'en' : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',
             'ja' : '',
@@ -799,7 +799,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['https://developer.mozilla.org/en/E4X'],
         'howtofix'   : {
             'en' : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',
             'ja' : '',
@@ -828,7 +828,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
         'howtofix'   : {
             'en' : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',
             'ja' : '',
@@ -857,7 +857,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',
             'ja' : '',
@@ -888,7 +888,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',
             'ja' : '',
@@ -919,7 +919,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms530768%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',
             'ja' : '',
@@ -950,7 +950,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',
             'ja' : '',
@@ -983,7 +983,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',
             'ja' : '',
@@ -1013,7 +1013,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://hacks.mozilla.org/2009/12/pointer-events-for-html-in-firefox-3-6/'],
+        'urls'    : ['http://hacks.mozilla.org/2009/12/pointer-events-for-html-in-firefox-3-6/'],
         'howtofix'   : {
             'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
             'ja' : '',
@@ -1049,7 +1049,7 @@ var items =
             'ru' : 'Объект VML фрейма ссылается в атрибуте "src" на другой VML объект, который реагирует на событие движения мышью. В режиме совместимости VML фрейм может непосредственно заключать в себе VML rect объект или обычный HTML.', 
             'de' : ''
         },
-        'tickets'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'jp' : '',
@@ -1078,7 +1078,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
@@ -1107,7 +1107,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531414%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
@@ -1136,7 +1136,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure comments are not allowed in user submitted html. The markup should be checked for security issues after comments have been stripped out - not before.',
             'ja' : '',
@@ -1169,7 +1169,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure <COMMENT> tags are not allowed in user submitted html. The markup should be checked for security issues after <COMMENT> tags have been stripped out or escaped - not before.',
             'ja' : '',
@@ -1198,7 +1198,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections nd delimiters have been stripped out or escaped - not before.',
             'ja' : '',
@@ -1228,7 +1228,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Don\'t rely on weak regular express for markup filtering. Use whitelists for allowed tags and rely on a filter solution based on a heavily tested tokenizer/parser.',
             'ja' : '',
@@ -1261,7 +1261,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -1290,7 +1290,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'User submitted HTML should not allow usage of <BASE> tags. In case they are necessary no non-HTTP/non-relative URL schemes should be allowed.',
             'ja' : '',
@@ -1328,7 +1328,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -1364,7 +1364,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure in user submitted CSS the contents of attribute selectors are properly escaped with backslashes. Also make sure to use a CSS property:value whitelist to forbid properties like -o-link and -o-link-source.',
             'ja' : '',
@@ -1400,7 +1400,7 @@ var items =
             'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей.',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : '',
             'jp' : '',
@@ -1430,7 +1430,7 @@ var items =
             'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : '',
             'jp' : '',
@@ -1459,7 +1459,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
@@ -1497,7 +1497,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'urls'    : [],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -1529,7 +1529,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms531356%28v=VS.85%29.aspx#Understanding_the_TDC_Object_Model'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531356%28v=VS.85%29.aspx#Understanding_the_TDC_Object_Model'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
