@@ -108,7 +108,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['https://developer.mozilla.org/En/Using_web_workers'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -123,7 +123,7 @@ var items =
         'tags'       : ['xss', 'dom', 'firefox', 'worker', 'self-inclusion'],
         'reporter'   : '.mario'
     },
-    { /* ID 5 - Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8 - \u96a0\u308c\u305f eval() */
+    { /* ID 5 - Firefox crypto object - hidden eval() */
         'id'         : 5, 
         'category'   : 'dom', 
         'name'       : {
@@ -139,7 +139,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['https://developer.mozilla.org/en/JavaScript_crypto'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -170,7 +170,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -464,7 +464,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['https://developer.mozilla.org/en/Sharp_variables_in_JavaScript'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -495,7 +495,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
@@ -651,7 +651,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/noSuchMethod'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -739,7 +739,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
@@ -857,7 +857,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',
             'ja' : '',
@@ -1013,7 +1013,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['http://hacks.mozilla.org/2009/12/pointer-events-for-html-in-firefox-3-6/'],
         'howtofix'   : {
             'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
             'ja' : '',
@@ -1049,7 +1049,7 @@ var items =
             'ru' : 'Объект VML фрейма ссылается в атрибуте "src" на другой VML объект, который реагирует на событие движения мышью. В режиме совместимости VML фрейм может непосредственно заключать в себе VML rect объект или обычный HTML.', 
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'jp' : '',
@@ -1078,7 +1078,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'tickets'    : [],
+        'tickets'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
@@ -1480,5 +1480,66 @@ var items =
         },
         'tags'       : ['xss', 'svg', 'script', 'opera', 'firefox', 'chrome', 'internet explorer'],
         'reporter'   : 'Romain'
+    },
+    { /* ID 48 - JavaScript execution via <SCRIPT> for and event attributes */
+        'id'         : 48,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via <SCRIPT> for and event attributes',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<SCRIPT FOR=document EVENT=onreadystatechange>%js_alert%</SCRIPT>',
+        'description': {
+            'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction though.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': [
+                '10.0', '10.5'
+            ],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 49 - JavaScript execution via <OBJECT> DataURL attribute */
+        'id'         : 49,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via <SCRIPT> for and event attributes',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="%js_uri_alert%"></OBJECT>',
+        'description': {
+            'en' : 'Internet Explorer 9 preview 2 supports the use of JavaScript URIs for the "dataurl" attribute of a TBD Object. The JavaScript will be executed without user any interaction.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'tickets'    : ['http://msdn.microsoft.com/en-us/library/ms531356%28v=VS.85%29.aspx#Understanding_the_TDC_Object_Model'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
+        'reporter'   : '.mario'
     }
 ]
