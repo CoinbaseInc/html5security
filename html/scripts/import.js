@@ -101,7 +101,7 @@
                     container.find('.tags')
                         .append('<span class="clear"></span>');
                 }   
-                // fill ticket list
+                // fill url list
                 if(items[item].urls) {
                     for(var url in items[item].urls) {
                         container.find('.urls').append(
