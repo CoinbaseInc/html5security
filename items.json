@@ -1639,7 +1639,7 @@ var items =
     },
     { /* ID 52 - Internet Explorer Scriptlets executing JavaScript */
         'id'         : 52,
-        'category'   : 'binding', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'Internet Explorer Scriptlets executing JavaScript',
             'jp' : '',
