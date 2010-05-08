@@ -1492,7 +1492,7 @@ var items =
         },
         'data'       : '<SCRIPT FOR=document EVENT=onreadystatechange>%js_alert%</SCRIPT>',
         'description': {
-            'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction though.',
+            'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction.',
             'jp' : '',
             'ru' : '',
             'de' : ''
@@ -1517,14 +1517,14 @@ var items =
         'id'         : 49,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'JavaScript execution via <SCRIPT> for and event attributes',
+            'en' : 'JavaScript execution via <OBJECT> DataURL attribute',
             'jp' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="%js_uri_alert%"></OBJECT>',
         'description': {
-            'en' : 'Internet Explorer 9 preview 2 supports the use of JavaScript URIs for the "dataurl" attribute of a TBD Object. The JavaScript will be executed without user any interaction.',
+            'en' : 'Internet Explorer 9 and - in some situations - earlier versions support the use of JavaScript URIs for the "dataurl" attribute of a TDC Object. The JavaScript will be executed without user any interaction.',
             'jp' : '',
             'ru' : '',
             'de' : ''
