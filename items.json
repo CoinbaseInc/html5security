@@ -433,9 +433,9 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/#the-pattern-attribute'],
+        'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/#the-pattern-attribute', 'http://en.wikipedia.org/wiki/Regular_expression_Denial_of_Service_-_ReDoS'],
         'howtofix'   : {
-            'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy Redos attacks.',
+            'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy ReDoS attacks.',
             'ja' : '',
             'ru' : '',
             'de' : ''
