@@ -1350,7 +1350,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<style>*[{}@import\'http://heideri.ch/jso/test.css?]</style>X',
+        'data'       : '<style>*[{}@import\'%css_path%?]</style>X',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '0',            
