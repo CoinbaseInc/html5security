@@ -1505,9 +1505,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': [
-                '10.0', '10.5'
-            ],
+            'opera': ['10.0', '10.5', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
