@@ -1541,5 +1541,100 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
         'reporter'   : '.mario'
+    },
+    { /* ID 50 - JavaScript execution via <OBJECT> data */
+        'id'         : 50,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via <OBJECT> data',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=">',
+        'description': {
+            'en' : 'Internet Explorer 9 and - in some situations - earlier versions support the use of JavaScript URIs for the "dataurl" attribute of a TDC Object. The JavaScript will be executed without user any interaction.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531356%28v=VS.85%29.aspx#Understanding_the_TDC_Object_Model'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['3.x', '4.x', '5.x'],
+            'safari': ['4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 50 - JavaScript execution via <OBJECT> data */
+        'id'         : 50,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via <OBJECT> data',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<object data="data:text/html;base64,%js_base64_alert%">',
+        'description': {
+            'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <OBJECT> "data" attribute value - even if base64 dencoded.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : 'Make sure user submitted HTML cannot contain <OBJECT> tags or only whitelisted <OBJECT> "data" values.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x'], 
+            'firefox' : ['1.x', '2.x', '3.x'], 
+            'chrome': ['3.x', '4.x', '5.x'],
+            'safari': ['4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'firefox', 'base64'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 51 - JavaScript execution via <EMBED> src */
+        'id'         : 51,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via <EMBED> src',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<embed src="data:text/html;base64,%js_base64_alert%">',
+        'description': {
+            'en' : 'Almost all browsers supoorting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : 'Make sure user submitted HTML cannot contain <EMBED> tags or only whitelisted <EMBED> "src" values.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x'], 
+            'chrome': ['3.x', '4.x', '5.x'],
+            'safari': ['4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'base64'],
+        'reporter'   : '.mario'
     }
 ]
