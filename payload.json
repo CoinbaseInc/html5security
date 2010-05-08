@@ -21,4 +21,5 @@ var payloads =
     'css_path'          : 'test.css',
     'vml_path'          : 'test.vml',
     'sct_path'          : 'test.sct',
+    'htc_path'          : 'test.htc'
 }

