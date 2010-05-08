@@ -1645,7 +1645,7 @@ var items =
         'id'         : 53,
         'category'   : 'behavior', 
         'name'       : {
-            'en' : 'Internet Explorer Scriptlets executing JavaScript',
+            'en' : 'Internet Explorer Data Islands executing JavaScript',
             'jp' : '',
             'ru' : '',
             'de' : ''
