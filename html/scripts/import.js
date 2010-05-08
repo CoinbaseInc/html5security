@@ -9,6 +9,25 @@
                 .replace(/</g, '&lt;').replace(/>/g, '&gt;');              
             return output;
         };
+        // rudimentary off-line support
+        (function(){
+            var offline = function(){
+                var store = JSON.parse(localStorage[location.hostname]);
+                items = store.items; 
+                categories = store.categories;
+                payloads = store.payloads;
+                $('#offline').show();
+            }; 
+            if(navigator.onLine) {
+                localStorage[location.hostname]=JSON.stringify(
+                    {'items':items,'payloads':payloads,'categories':categories}
+                );
+                $(window).bind('offline', offline)
+                $('#offline').hide();
+            } else {
+                offline();
+            }   
+        })();        
         // categories
         (function() {
             // enumerate categories and build initial lists
@@ -38,7 +57,8 @@
                     var regex = new RegExp('%' + payload + '%');
                     items[item].data = items[item].data.replace(regex, payloads[payload]);
                     if(items[item].attachment && items[item].attachment.raw) {
-                        items[item].attachment.raw = items[item].attachment.raw.replace(regex, payloads[payload]);                        
+                        items[item].attachment.raw = items[item].attachment
+                            .raw.replace(regex, payloads[payload]);                        
                     }
                 }
                 // sanitize the input
@@ -70,11 +90,13 @@
                 }
                 // check for attachment data
                 if(items[item].attachment) {
-                    container.find('.attachment').show().append(sanitize(items[item].attachment.raw));
+                    container.find('.attachment').show()
+                        .append(sanitize(items[item].attachment.raw));
                     for(var meta in items[item].attachment) {
                         if(meta !== 'raw' && items[item].attachment[meta]) {
                             container.find('.attachment').append(
-                                '<span class="mime">'+meta+': '+sanitize(items[item].attachment[meta])+'</span>'
+                                '<span class="mime">'+meta+': '+sanitize(items[item]
+                                    .attachment[meta])+'</span>'
                             );
                         }
                     }
@@ -86,7 +108,8 @@
                         for(var version in items[item].browsers[browser]) {
                             var short_browser = browser.replace(/^(\w+)\s\w+/, '$1'); 
                             container.find('.browsers .'+short_browser).append(
-                                '<li>'+browser+' '+items[item].browsers[browser][version]+'</li>'
+                                '<li>'+browser+' '+items[item]
+                                    .browsers[browser][version]+'</li>'
                             )
                         }
                     }
@@ -125,8 +148,7 @@
             });
             $('#search').live('keyup', function(){
                 var term = $('#search').attr('value');
-                term = term.replace(/([\[\]\(\\)\{\}\+\-])/g, '\\$1');
-                term = sanitize(term);
+                term = sanitize(term.replace(/([\[\]\(\\)\{\}\+\-])/g, '\\$1'));
                 if(term) {
                     $('div.item').each(function(){
                         if($(this).html().match(new RegExp(term, 'gi'))) {

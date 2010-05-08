@@ -164,6 +164,19 @@ dfn {
     -moz-box-shadow: 3px 3px 7px #777;
     -moz-border-radius: 5px
 }
+#offline {
+    position: fixed;
+    display: none;
+    color: #fff;
+    background: #68c2ff;
+    border-radius: 3px;
+    padding: 0 5px;
+    top: 2px;
+    right: 17px;
+    box-shadow: 3px 3px 7px #777;
+    -moz-box-shadow: 3px 3px 7px #777;
+    -moz-border-radius: 5px    
+}
 .clear {
     clear: both;
 	display: block;	
