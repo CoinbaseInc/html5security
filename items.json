@@ -1655,7 +1655,7 @@ var items =
             'raw'           : '<SCRIPTLET><IMPLEMENTS Type="Behavior"></IMPLEMENTS><SCRIPT Language="javascript">alert(1)</SCRIPT></SCRIPTLET>'
         },        
         'description': {
-            'en' : 'Almost all browsers supoorting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
+            'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
             'jp' : '',
             'ru' : '',
             'de' : ''
