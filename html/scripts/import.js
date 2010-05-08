@@ -22,7 +22,8 @@
                 localStorage[location.hostname]=JSON.stringify(
                     {'items':items,'payloads':payloads,'categories':categories}
                 );
-                $(window).bind('offline', offline)
+                $(window).bind('offline', offline);
+                $(window).bind('online', function(){$('#offline').hide()})
                 $('#offline').hide();
             } else {
                 offline();

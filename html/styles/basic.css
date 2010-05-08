@@ -177,6 +177,10 @@ dfn {
     -moz-box-shadow: 3px 3px 7px #777;
     -moz-border-radius: 5px    
 }
+noscript {
+    font-size: 72px;
+    color: #68c2ff;
+}
 .clear {
     clear: both;
 	display: block;	
