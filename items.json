@@ -1712,38 +1712,6 @@ var items =
         'tags'       : ['xss', 'javascript', 'json', '__definesetter__', 'object', 'prototype'],
         'reporter'   : '.mario'
     },
-    { /* ID 55 - JavaScript execution via <VIDEO> and <SOURCE> tag */
-        'id'         : 55,
-        'category'   : 'html5', 
-        'name'       : {
-            'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag',
-            'jp' : '',
-            'ru' : '',
-            'de' : ''
-        },
-        'data'       : '<video><source onerror="javascript:alert(2)">',
-        'description': {
-            'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by <VIDEO> tag.',
-            'jp' : '',
-            'ru' : '',
-            'de' : ''
-        },
-        'urls'    : [],
-        'howtofix'   : {
-            'en' : '',
-            'ja' : '',
-            'ru' : '',
-            'de' : ''
-        },                        
-        'browsers'   : {
-            'opera': ['10.5'],
-            'chrome': [
-                '4.0', '5.0'
-            ]
-        },
-        'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome'],
-        'reporter'   : '.mario'
-    },
     { /* ID 55 - JavaScript execution via <VIDEO> and <SOURCE> tag (1) */
         'id'         : 55,
         'category'   : 'html5', 
@@ -1755,14 +1723,14 @@ var items =
         },
         'data'       : '<video><source onerror="%js_uri_alert%">',
         'description': {
-            'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by <VIDEO> tag. The same works for <AUDIO> tags',
+            'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by a <VIDEO> tag. The same works for <AUDIO> tags',
             'jp' : '',
             'ru' : '',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
-            'en' : 'Make sure user submitted <AUDIO> and <VIDEO> tags cannot contain event handlers or whitelist event handlers necessary for UI controls.',
+            'en' : 'Make sure user submitted <SOURCE> tags cannot contain event handlers or whitelist event handlers necessary for UI controls.',
             'ja' : '',
             'ru' : '',
             'de' : ''
