@@ -33,8 +33,13 @@
         (function() {
             // enumerate categories and build initial lists
             for(var category in categories) {
-                // determine navigator language or set default
-                var lang = navigator.language ? navigator.language : 'en';
+                // determine cookie or navigator language or set default
+                if (/lang=\w{2}/.test(document.cookie)) {
+                    var lang = document.cookie.match(/lang=(\w{2})/)[1];
+                }
+                else {
+                    var lang = navigator.language ? navigator.language : 'en';
+                }
                 if(typeof categories[category][lang] === 'undefined' 
                     || !categories[category][lang]) {
                     lang = 'en';
@@ -62,9 +67,6 @@
                             .raw.replace(regex, payloads[payload]);                        
                     }
                 }
-                // sanitize the input
-                //items[item].data = sanitize(items[item].data);
-                             
                 // build markup container for the content
                 var li = $('#content li#'+items[item].category+' h3');
                 var container = $($('#item_template').html());
@@ -72,8 +74,13 @@
                 // enable direct vector navi by id
                 container.prepend('<a name="'+items[item].id+'"></a>');
                 for(var c in items[item]) {
-                    // determine navigator language or set default
-                    var lang = navigator.language ? navigator.language : 'en';
+                    // determine cookie or navigator language or set default
+                    if (/lang=\w{2}/.test(document.cookie)) {
+                        var lang = document.cookie.match(/lang=(\w{2})/)[1];
+                    }
+                    else {
+                        var lang = navigator.language ? navigator.language : 'en';
+                    }
                     if(typeof items[item][c][lang] === 'undefined' 
                         || !items[item][c][lang]) {
                         lang = 'en';
@@ -172,6 +179,12 @@
                 var search = unescape(location.search.replace(/^\?/, ''));
                 $('#search').attr('value', search).keyup();
             }
+        })();
+        // language switch
+        (function(){
+            $('#languages a').live('click', function(){
+                document.cookie='lang='+$(this).attr('rel');
+            });
         })();
     };
 })();
