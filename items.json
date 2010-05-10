@@ -601,7 +601,7 @@ var items =
             ]
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
-        'reporter'   : 'yosuke.hasegawa'
+        'reporter'   : 'hasegawayosuke'
     },
     { /* ID 20 - JavaScript execution via overwritten ReferenceError object */
         'id'         : 20,
@@ -1859,7 +1859,7 @@ var items =
                 '6.0', '7.0', '8.0'
             ]
         },
-        'tags'       : ['xss', 'javascript', 'ie', 'script', 'dom'],
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'hasegawayosuke'
     }
 ]
