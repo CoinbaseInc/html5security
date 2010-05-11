@@ -1944,7 +1944,7 @@ var items =
         'name'       : {
             'en' : 'Simulating attribute in IE',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Симуляция атрибута в IE',
             'de' : ''
         },
         'data'       : '<x \'="foo"><x foo=\'><img src=x onerror=alert(1)//\'>',
