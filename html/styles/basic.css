@@ -118,7 +118,9 @@ code {
     -moz-border-radius: 10px
 }
 dfn {
-    display: none;	
+	color: #e1e1e1;
+	display: block;
+	text-align: right;	
 }
 #content {
 	width: 70%;
