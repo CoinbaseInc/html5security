@@ -112,6 +112,7 @@ code {
     display: block;
     background: #fff;
     padding: 25px;
+	white-space: pre;
     border: 3px dashed #e1e1e1;
     border-radius: 10px;
     -moz-border-radius: 10px
