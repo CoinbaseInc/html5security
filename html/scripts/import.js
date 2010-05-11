@@ -5,8 +5,8 @@
     window.onload = function() {
         // sanitize
         var sanitize = function(input){
-            output = input.replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;').replace(/>/g, '&gt;');              
+            output = input.replace(/&/gm, '&amp;')
+                .replace(/</gm, '&lt;').replace(/>/gm, '&gt;');              
             return output;
         };
         // rudimentary off-line support
@@ -60,7 +60,7 @@
             for (var item in items) {
                 // replace the payload templates
                 for (var payload in payloads) {
-                    var regex = new RegExp('%' + payload + '%');
+                    var regex = new RegExp('%' + payload + '%', 'gm');
                     items[item].data = items[item].data.replace(regex, payloads[payload]);
                     if(items[item].attachment && items[item].attachment.raw) {
                         items[item].attachment.raw = items[item].attachment
@@ -156,10 +156,10 @@
             });
             $('#search').live('keyup', function(){
                 var term = $('#search').attr('value');
-                term = sanitize(term.replace(/([\[\]\(\\)\{\}\+\-])/g, '\\$1'));
+                term = sanitize(term.replace(/([\[\]\(\\)\{\}\+\-])/gm, '\\$1'));
                 if(term) {
                     $('div.item').each(function(){
-                        if($(this).html().match(new RegExp(term, 'gi'))) {
+                        if($(this).html().match(new RegExp(term, 'gim'))) {
                             $(this).show();
                             $(document).scrollTop(
                                 $('div.item:visible').first().attr('scrollHeight')
