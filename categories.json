@@ -4,79 +4,79 @@ var categories =
     'html5'         : {
         'en' : 'Vectors making use of HTML5 features',
         'ja' : 'HTML5\u306e\u6a5f\u80fd\u3092\u4f7f\u3063\u305f\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, использующие возможности HTML5',
         'de' : ''
     },
     'html'          : {
         'en' : 'Vectors working on HTML4 and older versions',
         'ja' : 'HTML4\u4ee5\u524d\u3067\u6a5f\u80fd\u3059\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, работающие на HTML4 и ниже',
         'de' : ''
     },
     'css'           : {
         'en' : 'Cascading stylesheet injection based vectors',
         'ja' : '\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u306e\u30a4\u30f3\u30b8\u30a7\u30af\u30b7\u30e7\u30f3\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, основанные на сss-инъекциях',
         'de' : ''
     },
     'javascript'    : {
         'en' : 'Plain JavaScript vectors',
         'ja' : '\u30d7\u30ec\u30fc\u30f3\u306aJavaScript\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы на чистом javascript',
         'de' : ''
     },
     'e4x'           : {
         'en' : 'E4X vectors working on gecko based browsers',
         'ja' : 'Gecko\u30d9\u30fc\u30b9\u306e\u30d6\u30e9\u30a6\u30b6\u306b\u5bfe\u3059\u308bE4X\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'E4x векторы, работающие в gecko-браузерах',
         'de' : ''
     },
     'dom'           : {
         'en' : 'Vectors attacking DOM properties and methods',
         'ja' : 'DOM\u30d7\u30ed\u30d1\u30c6\u30a3\u3001\u30e1\u30bd\u30c3\u30c9\u3092\u5229\u7528\u3057\u305f\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, нацеленные на свойства и методы DOM',
         'de' : ''
     },
     'json'          : {
         'en' : 'JSON based vectors',
         'ja' : 'JSON\u30d9\u30fc\u30b9\u306e\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы на основе JSON',
         'de' : ''
     },
     'svg'           : {
         'en' : 'Vectors embedded in SVG files',
         'ja' : 'SVG\u30d5\u30a1\u30a4\u30eb\u3078\u306e\u57cb\u3081\u8fbc\u307f\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, встроенные в файлы SVG',
         'de' : ''
     },
     'xml'           : {
         'en' : 'Vectors related to X(HT)ML',
         'ja' : 'X\u0028HT\u0029ML\u306b\u95a2\u9023\u3059\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, связанные с X(HT)ML',
         'de' : ''
     },
     'font'          : {
         'en' : 'Vectors working when delivered in font files',
         'ja' : '\u30d5\u30a9\u30f3\u30c8\u30d5\u30a1\u30a4\u30eb\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, работающие из файлов шрифтов',
         'de' : ''
     },
     'charset'       : {
         'en' : 'UTF7 and other exotic charset based vectors',
         'ja' : 'UTF-7\u306a\u3069\u306e\u7279\u6b8a\u306a\u6587\u5b57\u30a8\u30f3\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, на основе UTF-7 и других экзотических кодировок',
         'de' : ''
     },
     'dos'           : {
         'en' : 'Client side denial of service vectors',
         'ja' : '\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u30b5\u30a4\u30c9\u3067\u306e\u30b5\u30fc\u30d3\u30b9\u4e0d\u80fd(DoS)',
-        'ru' : '',
+        'ru' : 'Векторы на отказ в обслуживании с клиентской стороны',
         'de' : ''
     },
     'behavior'  : {
         'en' : 'HTML behavior and binding vectors',
         'ja' : 'HTML behavior \u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : '',
+        'ru' : 'Векторы, основанные на HTML поведениях и связывании данных',
         'de' : ''
     }
 }
