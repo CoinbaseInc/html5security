@@ -2173,12 +2173,12 @@ var items =
         },
         'data'       : '<card><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
         'description': {
-            'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML file and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
+            'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
             'ru' : '',
             'de' : ''
         },
-        'urls'    : ['http://www.w3schools.com/wmlscript/default.asp'],
+        'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
