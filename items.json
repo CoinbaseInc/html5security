@@ -2072,7 +2072,7 @@ var items =
     },
     { /* ID 66 - Opera XML-stylesheets executing JavaScript (2) */
         'id'         : 66,
-        'category'   : '', 
+        'category'   : 'xml', 
         'name'       : {
             'en' : 'Opera XML-stylesheets executing JavaScript (2)',
             'ja' : '',
