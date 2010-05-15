@@ -2229,7 +2229,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '</ style=?=-=expression\28%js_write%\29>',
+        'data'       : '</ style=?=-=expression\\28%js_write%\\29>',
         'description': {
             'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes.', 
             'ja' : '',
