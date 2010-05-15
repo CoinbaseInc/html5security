@@ -40,6 +40,7 @@ h4 a {
     color: #68c2ff;
     text-decoration: none;
     padding: 3px;
+    margin-left: 3px;
     border-radius: 5px;
     -moz-border-radius: 5px;
 }
