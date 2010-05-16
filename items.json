@@ -5,7 +5,7 @@ var items =
         'id'         : 1, 
         'category'   : 'html5', 
         'name'       : {
-            'en' : 'XSS via formaction - requiring user interaction (2)',
+            'en' : 'XSS via formaction - requiring user interaction (1)',
             'ja' : 'formaction\u7d4c\u7531\u3067\u306eXSS - \u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u304c\u5fc5\u8981',
             'ru' : '',
             'de' : ''
