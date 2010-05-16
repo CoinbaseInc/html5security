@@ -99,7 +99,6 @@ ul.tags li:hover {
     text-decoration: underline;   
 }
 code.attachment {
-    display: none;
     margin-bottom: 10px;
 }
 code.attachment span {
