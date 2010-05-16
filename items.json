@@ -2511,5 +2511,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
         'reporter'   : '.mario'
+    },
+    { /* ID 80 - IE6 and halfwidth/fullwidth Unicode characters */
+        'id'         : 80,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'IE6 and halfwidth/fullwidth Unicode characters',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<style>*{x:ｅｘｐｒｅｓｓｉｏｎ(write(1))}</style>',
+        'description': {
+            'en' : 'This example shows how halfwidth/fullwidth Unicode characters can be used on IE6 to substitute characters from the ASCII range. Note that those characters have been used in the example to create the term "expression".',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_Unicode_block'],
+        'howtofix'   : {
+            'en' : 'In case your website still has a lot of IE6 users make sure that the range of halfwidth and fullwidth form characters (U+FF00-FFEF) cannot be used in user submitted markup and styles.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0']
+        },
+        'tags'       : ['xss', 'javascript', 'css', 'expression', 'unicode', 'halfwidth', 'fullwidth', 'internet explorer'],
+        'reporter'   : '.mario'
     }
 ]
