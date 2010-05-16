@@ -22,5 +22,6 @@ var payloads =
     'vml_path'          : 'test.vml',
     'sct_path'          : 'test.sct',
     'htc_path'          : 'test.htc',
-	'xxe_path'          : 'test.xxe'
+	'xxe_path'          : 'test.xxe',
+    'event_path'        : 'event.php'
 }

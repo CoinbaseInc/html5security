@@ -2280,7 +2280,7 @@ var items =
     },
     { /* ID 73 - Server-sent events - Opera and <EVENT-SOURCE> tags */
         'id'         : 73,
-        'category'   : 'binding', 
+        'category'   : 'behavior', 
         'name'       : {
             'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags',
             'ja' : '',
