@@ -2278,11 +2278,11 @@ var items =
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
     },
-    { /* ID 73 - Server-sent events - Opera and <EVENT-SOURCE> tags */
+    { /* ID 73 - Server-sent events - Opera and <EVENT-SOURCE> tags (1) */
         'id'         : 73,
         'category'   : 'behavior', 
         'name'       : {
-            'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags',
+            'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags (1)',
             'ja' : '',
             'ru' : '',
             'de' : ''
@@ -2297,6 +2297,35 @@ var items =
         },
         'description': {
             'en' : 'Opera allows using <EVENT-SOURCE> elements. In case the "src" attribute points to a valid cross domain source it\'s possible to have the element listen for events and the containing data.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
+        'howtofix'   : {
+            'en' : 'Make sure users cannot influence the source of <EVENT-SOURCE> elements and don\'t whitelist the tag itself inside user submitted markup.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 74 - Server-sent events - Opera and <EVENT-SOURCE> tags (2) */
+        'id'         : 74,
+        'category'   : 'behavior', 
+        'name'       : {
+            'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags (2)',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<a href="javascript:alert(1)"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">',
+        'description': {
+            'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
             'ru' : '',
             'de' : ''
