@@ -110,6 +110,8 @@
                             );
                         }
                     }
+                } else {
+                    container.find('.attachment').remove();
                 }
                 // fill browser list
                 if(items[item].browsers) {
