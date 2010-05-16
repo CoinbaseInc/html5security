@@ -26,5 +26,7 @@ var payloads =
 	'xbl_path'          : 'test.xbl',
     'xdr_path'          : 'test.xdr',
     'xxe_path'          : 'test.xxe',
+    'swf_path'          : 'test.swf',
+    'jar_path'          : 'test.jar',
     'event_path'        : 'event.php'
 }

