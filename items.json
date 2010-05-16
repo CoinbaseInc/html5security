@@ -2506,7 +2506,8 @@ var items =
         'browsers'   : {
             'safari': ['3.4', '4.x'],
             'firefox': ['1.5', '2.x', '3.x'],        
-            'opera': ['10.0', '10.5', 'mobile']
+            'opera': ['10.0', '10.5', 'mobile'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
         'reporter'   : '.mario'
