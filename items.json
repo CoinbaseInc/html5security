@@ -2475,7 +2475,7 @@ var items =
     },
     { /* ID 79 - <OBJECT> tag and Flash files executing JavaScript */
         'id'         : 79,
-        'category'   : 'html4', 
+        'category'   : 'html', 
         'name'       : {
             'en' : '<OBJECT> tag and Flash files executing JavaScript',
             'ja' : '',
