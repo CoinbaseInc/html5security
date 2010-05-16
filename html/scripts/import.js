@@ -103,11 +103,19 @@
                     container.find('.attachment').show()
                         .append(sanitize(items[item].attachment.raw));
                     for(var meta in items[item].attachment) {
-                        if(meta !== 'raw' && items[item].attachment[meta]) {
+                        if(meta !== 'raw' && meta !== 'path' && items[item].attachment[meta]) {
                             container.find('.attachment').append(
                                 '<span class="mime">'+meta+': '+sanitize(items[item]
                                     .attachment[meta])+'</span>'
                             );
+                        } else if(meta === 'path' && items[item].attachment[meta]) {
+                            container.find('.attachment').append(
+                                '<span class="mime">'+meta+': <a href="'
+                                    + sanitize(items[item].attachment[meta])
+                                    + '" target="_blank">'
+                                    + sanitize(items[item].attachment[meta])
+                                + '</a></span>'
+                            );                            
                         }
                     }
                 } else {
