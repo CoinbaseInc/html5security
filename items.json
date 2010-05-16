@@ -2494,7 +2494,7 @@ var items =
             'samedomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/test.swf',
             'name'          : 'test.swf',
-            'raw'           : 'class XSS {\r\npublic static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest("javascript:alert(1);"),"_top");\r\n}\r\n}'
+            'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest("javascript:alert(1);"),"_top");\r\n}}'
         },        
         'urls'    : ['http://www.w3.org/TR/REC-html40/struct/objects.html'],
         'howtofix'   : {
