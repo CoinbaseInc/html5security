@@ -1314,7 +1314,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
+        'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_front_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'samedomain'    : '1',            
