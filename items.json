@@ -2323,7 +2323,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<a href="javascript:alert(1)"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">',
+        'data'       : '<a href="%js_uri_alert%"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">',
         'description': {
             'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
