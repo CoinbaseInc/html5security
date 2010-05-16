@@ -2421,7 +2421,7 @@ var items =
         'description': {
             'en' : 'IE supports the style attribute to the xml-pages. So JavaScript can be executed in any tag.',
             'ja' : '',
-            'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом, яваскипт может быть выполнен в любом теге.',
+            'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом javascript может быть выполнен в любом теге.',
             'de' : ''
         },
         'urls'    : [],
