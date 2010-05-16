@@ -2354,7 +2354,7 @@ var items =
         },
         'data'       : '<script<{alert(1)}/></script </>',
         'description': {
-            'en' : 'In this example an E4X object is being used to close a half-open <SCRIPT> tag and evaluate code in the global scope afterwards via the E4X curly bracket delimiters.',
+            'en' : 'In this example an E4X object is being used to close a half-open <SCRIPT> tag and evaluate code in the global scope afterwards via the E4X curly bracket delimiters. This technique will not work as soon Firefox uses the already integrated HTML5 parser (html5.enable=true)',
             'ja' : '',
             'ru' : '',
             'de' : ''
