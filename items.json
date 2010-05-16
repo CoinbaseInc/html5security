@@ -2293,7 +2293,7 @@ var items =
             'samedomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/event.php',
             'name'          : 'event.php',
-            'raw'           : '<?php\r\nheader("Content-Type: application/x-dom-event-stream");\r\ndie("Event: load\ndata: \n\n");\r\n?>'
+            'raw'           : '<?php\r\nheader("Content-Type: application/x-dom-event-stream");\r\ndie("Event: load\\ndata: \\n\\n");\r\n?>'
         },
         'description': {
             'en' : 'Opera allows using <EVENT-SOURCE> elements. In case the "src" attribute points to a valid cross domain source it\'s possible to have the element listen for events and the containing data.',
