@@ -63,9 +63,9 @@ ul.browsers {
     padding: 0;
 }
 ul.browsers ul {
-    padding: 0 10px 0 70px;
+    padding: 0 10px 0 50px;
 	float: left;
-	min-height: 50px;	
+	min-height: 30px;	
 }
 ul.browsers li {
     text-transform: capitalize;
