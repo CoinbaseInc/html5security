@@ -1,11 +1,11 @@
 /* Items - the set of available items and vectors */
 var items = 
 [
-    { /* ID 1 - XSS via formaction - requiring user interaction */
+    { /* ID 1 - XSS via formaction - requiring user interaction (1) */
         'id'         : 1, 
         'category'   : 'html5', 
         'name'       : {
-            'en' : 'XSS via formaction - requiring user interaction',
+            'en' : 'XSS via formaction - requiring user interaction (2)',
             'ja' : 'formaction\u7d4c\u7531\u3067\u306eXSS - \u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u304c\u5fc5\u8981',
             'ru' : '',
             'de' : ''
@@ -2248,5 +2248,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'closing tag', 'css', 'style', 'expression', 'internet explorer'],
         'reporter'   : 'Gareth, .mario'
-    }
+    },
+    { /* ID 72 - XSS via formaction - requiring user interaction (2) */
+        'id'         : 72, 
+        'category'   : 'html5', 
+        'name'       : {
+            'en' : 'XSS via formaction - requiring user interaction (2)',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<form><button formaction="%js_uri_alert%">X',
+        'description': {
+            'en' : 'A vector displaying the HTML5 "formaction" capabilities for form hijacking. Note that this variation does not use the "id" and "form" attributes to connect button and form.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-formaction'],
+        'howtofix'   : {
+            'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'browsers'   : {
+            'opera': ['10.5', 'mobile']
+        },
+        'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
+        'reporter'   : '.mario'
+    }    
 ]
