@@ -2309,7 +2309,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile']
+            'opera': ['8.x', '9.x', '10.0', '10.5', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
@@ -2338,7 +2338,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile']
+            'opera': ['8.x', '9.x', '10.0', '10.5', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
