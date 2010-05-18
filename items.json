@@ -2550,14 +2550,14 @@ var items =
             'ru' : 'Активный скриптинг с помощью XLinks',
             'de' : ''
         },
-        'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="javascript:alert(1)" xlink:type="simple">XXX</x> ',
+        'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="%js_uri_alert%" xlink:type="simple">XXX</x> ',
         'description': {
             'en' : 'FF support the attribute "xlink:actuate" and can display xlink without additional styles and namespaces "html".',
             'ja' : '',
             'ru' : 'FF поддерживает атрибут "xlink:actuate" и может отобразить xml-ссылку без дополнительных стилей и пространства имен "html".',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/'],
+        'urls'    : ['http://www.w3.org/TR/xlink/#actuate-att', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
