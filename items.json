@@ -2657,7 +2657,7 @@ var items =
         'tags'       : ['xss', 'javascript', 'opera', 'event', 'handler'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 85 - Opera JavaScript execution via XML-events handler */
+    { /* ID 85 - Arbitrary payload injection in Opera via XML-events handler */
         'id'         : 85,
         'category'   : 'xml', 
         'name'       : {
