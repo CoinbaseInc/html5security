@@ -2675,9 +2675,9 @@ var items =
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml" id="x">%js_alert%</script>'
         },
         'description': {
-            'en' : 'The browser loads an external xml-event handler, which contains the javascript-code.', 
+            'en' : 'The browser loads an external xml-event handler, which contains the javascript-code. This example also works with data URI.', 
             'ja' : '',
-            'ru' : 'Браузер загружает внешний обработчик XML-события, который содержит javascript код.',
+            'ru' : 'Браузер загружает внешний обработчик XML-события, который содержит javascript код. Этот пример также будет работать с data-схемой.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-events/'],
