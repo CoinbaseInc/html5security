@@ -214,7 +214,7 @@ var items =
             ],
             'safari' : ['4.0'],
             'chrome': [
-                '4.0', '5.0'
+                '4.0', '5.0', '6.0'
             ]
         },
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
@@ -249,7 +249,7 @@ var items =
             ],
             'safari' : ['4.0'],
             'chrome': [
-                '4.0', '5.0'
+                '4.0', '5.0', '6.0'
             ]
         },
         'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'opera'],
@@ -345,7 +345,7 @@ var items =
                 '10.0', '10.5'
             ],
             'chrome': [
-                '4.0', '5.0'
+                '4.0', '5.0', '6.0'
             ],
             'firefox': [
                 '3.0', '3.5', '3.6', '3.7'
@@ -383,7 +383,7 @@ var items =
             ],
             'safari' : ['4.0'],
             'chrome': [
-                '4.0', '5.0'
+                '4.0', '5.0', '6.0'
             ]
         },
         'tags'       : ['xss', 'autofocus', 'scroll', 'chrome', 'opera'],
@@ -570,7 +570,7 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['3.x', '4.x', '5.x']
+            'chrome': ['3.0', '4.0', '5.0', '6.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
         'reporter'   : '.mario'
@@ -632,7 +632,7 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['3.x', '4.x', '5.x'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['4.x']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
@@ -692,7 +692,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
-            'chrome': ['3.x', '4.x', '5.x']
+            'chrome': ['3.0', '4.0', '5.0', '6.0']
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
         'reporter'   : 'Skyphire, Gareth, .mario'
@@ -964,8 +964,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['2.x', '3.x', '4.x', '5.x'],
-            'safari': ['3.x', '4.x']
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'frames', 'classic', 'html', 'onload'],
         'reporter'   : '.mario'
@@ -1150,8 +1150,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['2.x', '3.x', '4.x', '5.x'],
-            'safari': ['3.x', '4.x']
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
         'reporter'   : 'sdc, .mario'
@@ -1242,8 +1242,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['2.x', '3.x', '4.x', '5.x'],
-            'safari': ['3.x', '4.x']
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
@@ -1302,7 +1302,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'],
-            'safari': ['3.x', '4.x'],
+            'safari': ['3.0', '4.0'],
             'internet explorer': ['5.5', '6.0', '7.0', '9.0'] 
         },
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
@@ -1474,7 +1474,7 @@ var items =
                 '10.0', '10.5'
             ],
             'chrome': [
-                '4.0', '5.0'
+                '4.0', '5.0', '6.0'
             ],
             'firefox': [
                 '3.0', '3.5', '3.6', '3.7'
@@ -1569,7 +1569,7 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x'], 
-            'chrome': ['3.x', '4.x', '5.x'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['4.x']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'firefox', 'base64'],
@@ -1600,7 +1600,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'chrome': ['3.x', '4.x', '5.x'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['4.x']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'base64'],
@@ -1706,7 +1706,7 @@ var items =
                 '10.0', 'mobile'
             ],
             'chrome': [
-                '4.0', '5.0'
+                '4.0', '5.0', '6.0'
             ],
             'firefox': [
                 '1.x', '2.x', '3.0'
@@ -1740,7 +1740,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.5'],
-            'chrome': ['4.0', '5.0']
+            'chrome': ['4.0', '5.0', '6.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome', 'audio'],
         'reporter'   : '.mario'
@@ -1799,8 +1799,8 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['3.5', '3.6', '3.7'],
-            'chrome': ['4.0', '5.0'],
-            'safari': ['3.x', '4.x']                        
+            'chrome': ['4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0']                        
         },
         'tags'       : ['xss', 'javascript', 'nesting', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Kyo, sdc'
@@ -1997,10 +1997,10 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['1.5', '2.x', '3.x'],
-			'chrome': ['4.x', '5.x'],
+			'chrome': ['4.0', '5.0', '6.0'],
             'opera': ['8.x', '9.x', '10.0', 'mobile'],
             'internet explorer': ['6.0', '7.0'],
-			'safari': ['3.x', '4.x']
+			'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'src', 'safari', 'chrome', 'opera', 'firefox', 'internet explorer'],
         'reporter'   : '.mario'
@@ -2036,8 +2036,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['3.x', '4.x', '5.x'],
-            'safari': ['3.x', '4.x']
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'xxe', 'safari', 'chrome', 'xml', 'entities', 'doctype'],
         'reporter'   : '.mario'
@@ -2065,7 +2065,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.x', '5.x'],
+            'chrome': ['4.0', '5.0', '6.0'],
             'safari': ['3.4', '4.x'],
 			'firefox': ['3.0', '3.5', '3.6', '3.7'],
 			'opera': ['9.x', '10.x']
@@ -2128,8 +2128,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.x', '5.x'],
-            'safari': ['3.4', '4.x'],
+            'chrome': ['4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.7'],        
             'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile']
         },
@@ -2712,7 +2712,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/xml-events/'],
+        'urls'    : [],
         'howtofix'   : {
             'en' : 'Do not whitelist "oninput" attributes in user submitted markup.',
             'ja' : '',
