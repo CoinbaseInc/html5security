@@ -212,6 +212,7 @@ var items =
             'opera': [
                 '10.5'
             ],
+            'safari' : ['4.0'],
             'chrome': [
                 '4.0', '5.0'
             ]
@@ -246,6 +247,7 @@ var items =
             'opera': [
                 '10.5'
             ],
+            'safari' : ['4.0'],
             'chrome': [
                 '4.0', '5.0'
             ]
@@ -379,6 +381,7 @@ var items =
             'opera': [
                 '10.5'
             ],
+            'safari' : ['4.0'],
             'chrome': [
                 '4.0', '5.0'
             ]
@@ -2692,5 +2695,37 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'opera', 'event', 'handler', 'arbitrary'],
         'reporter'   : 'LeverOne'
+    },    
+    { /* ID 86 - Passive JavaScript execution via <BODY> and oninput attribute */
+        'id'         : 86,
+        'category'   : 'html5', 
+        'name'       : {
+            'en' : 'Passive JavaScript execution via <BODY> and oninput attribute',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<body oninput=alert(1)><input autofocus>',
+        'description': {
+            'en' : 'All browsers besides Internet Explorer support the "oninput" event handler around form elements like the given <INPUT>. The event works for the form elements itself, the surrounding form and <BODY> as well as <HTML> tags.', 
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/xml-events/'],
+        'howtofix'   : {
+            'en' : 'Do not whitelist "oninput" attributes in user submitted markup.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox' : ['3.6', '3.7'], 
+            'safari' : ['4.0'], 
+            'chrome' : ['4.0', '5.0', '6.0'],
+            'opera': ['9.x', '10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
+        'reporter'   : 'Skyphire'
     }
 ]
