@@ -2837,9 +2837,9 @@ var items =
             'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%"><input value="XXX" type="submit"/></form>'
         },
         'description': {
-            'en' : 'Opera supports CSS-property "content" inside style attribute. As its value can be specified image object, which replace the html-tag.',
+            'en' : 'Opera supports CSS-property "content" inside style attribute. As its value can be specified image object, which replace the html-tag. The same effect occurs when you insert SVG-image through the tag "img".',
             'ja' : '',
-            'ru' : 'Opera поддерживает CSS-свойство "content" в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег.',
+            'ru' : 'Opera поддерживает CSS-свойство "content" в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег. Такой же эффект (а именно вставка ифрейма на страницу) происходит при вставке SVG-изображения через тег "img".',
             'de' : ''
         },
         'urls'    : [],
