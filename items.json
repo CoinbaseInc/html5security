@@ -7,21 +7,21 @@ var items =
         'name'       : {
             'en' : 'XSS via formaction - requiring user interaction (1)',
             'ja' : 'formaction\u7d4c\u7531\u3067\u306eXSS - \u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u304c\u5fc5\u8981',
-            'ru' : '',
+            'ru' : 'Пассивный скриптинг через formaction (1)',
             'de' : ''
         },
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
         'description': {
             'en' : 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
             'ja' : 'HTML5\u306eform\u3068formaction\u6a5f\u80fd\u3092\u4f7f\u3063\u3066\u65e2\u5b58\u306eform\u3092\u5916\u5074\u304b\u3089\u4e57\u3063\u53d6\u308b\u624b\u6cd5',
-            'ru' : '',
+            'ru' : 'Вектор демонстрирует возможности HTML 5 атрибутов "form" и "formaction" по захвату внешней формы.',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-formaction'],
         'howtofix'   : {
             'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
-			'ja' : '\u0022form\u0022\u3068\u0022formaction\u0022\u5c5e\u6027\u3092\u542b\u3080\u8981\u7d20\u3092\u30e6\u30fc\u30b6\u306b\u5165\u529b\u3055\u305b\u306a\u3044\u3001\u3042\u308b\u3044\u306f\u305d\u308c\u3089\u306e\u5c5e\u6027\u3092\u7121\u52b9\u306a\u5024\u306b\u5909\u63db\u3059\u308b\u3053\u3068\u3002\u0022id\u0022\u5c5e\u6027\u306fform\u3060\u3051\u3067\u306a\u304fsubmit\u30dc\u30bf\u30f3\u306b\u3064\u3044\u3066\u3082\u5bfe\u5fdc\u3059\u308b\u3053\u3068\u3002',
-            'ru' : '',
+	    'ja' : '\u0022form\u0022\u3068\u0022formaction\u0022\u5c5e\u6027\u3092\u542b\u3080\u8981\u7d20\u3092\u30e6\u30fc\u30b6\u306b\u5165\u529b\u3055\u305b\u306a\u3044\u3001\u3042\u308b\u3044\u306f\u305d\u308c\u3089\u306e\u5c5e\u6027\u3092\u7121\u52b9\u306a\u5024\u306b\u5909\u63db\u3059\u308b\u3053\u3068\u3002\u0022id\u0022\u5c5e\u6027\u306fform\u3060\u3051\u3067\u306a\u304fsubmit\u30dc\u30bf\u30f3\u306b\u3064\u3044\u3066\u3082\u5bfe\u5fdc\u3059\u308b\u3053\u3068\u3002',
+            'ru' : 'Не разрешайте пользовательскую разметку, содержащую атрибуты "form" и "formaction" или неправильные значения этих атрибутов. Избегайте атрибут "id" в формах, как и элементы ввода submit типа.',
             'de' : ''
         },
         'browsers'   : {
@@ -36,21 +36,21 @@ var items =
         'name'       : {
             'en' : 'XSS via x-imap4-modified-utf7 (1)',
             'ja' : 'x-imap4-modified-utf7\u3092\u5229\u7528\u3057\u305fXSS (1)',
-            'ru' : '',
+            'ru' : 'XSS с использованием x-imap4-modified-utf7 (1)',
             'de' : ''
         },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
         'description': {
             'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
             'ja' : '\u3053\u306e\u653b\u6483\u624b\u6cd5\u306f\u3001\u691c\u51fa\u304c\u975e\u5e38\u306b\u56f0\u96e3\u306a\u3001\u98a8\u5909\u308f\u308a\u306acharset\u306b\u3088\u308bXSS\u306e\u624b\u6bb5\u3068\u306a\u308a\u5f97\u308b\u3053\u3068\u3092\u793a\u3057\u3066\u3044\u307e\u3059\u3002',
-            'ru' : '',
+            'ru' : 'Этот вектор показывает, как ответвление кодировки UTF7 может быть использовано для создания очень труднообнаружимых XSS векторов.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
-            'ru' : '',
+            'ru' : 'Убедитесь, что тег <META> не может быть внедрен и страницы сайта отправляются с указанием кодировки.',
             'de' : ''
         },
         'browsers'   : {
@@ -67,21 +67,21 @@ var items =
         'name'       : {
             'en' : 'XSS via x-imap4-modified-utf7 (2)',
             'ja' : 'x-imap4-modified-utf7\u3092\u5229\u7528\u3057\u305fXSS (2)',
-            'ru' : '',
+            'ru' : 'XSS с использованием x-imap4-modified-utf7 (2)',
             'de' : ''
         },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
         'description': {
             'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
             'ja' : '\u3053\u306e\u653b\u6483\u624b\u6cd5\u306f\u3001\u691c\u51fa\u304c\u975e\u5e38\u306b\u56f0\u96e3\u306a\u3001\u98a8\u5909\u308f\u308a\u306acharset\u306b\u3088\u308bXSS\u306e\u624b\u6bb5\u3068\u306a\u308a\u5f97\u308b\u3053\u3068\u3092\u793a\u3057\u3066\u3044\u307e\u3059\u3002',
-            'ru' : '',
+            'ru' : 'Этот вектор показывает, как ответвление кодировки UTF7 может быть использовано для создания очень труднообнаружимых XSS векторов.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
-            'ru' : '',
+            'ru' : 'Убедитесь, что тег <META> не может быть внедрен и страницы сайта отправляются с указанием кодировки.',
             'de' : ''
         },          
         'browsers'   : {
@@ -98,14 +98,14 @@ var items =
         'name'       : {
             'en' : 'Self-including DOM Worker XSS',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Скриптинг в DOM с помощью объекта Worker.',
             'de' : ''
         },
         'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
         'description': {
             'en' : 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
             'ja' : '\u30b9\u30af\u30ea\u30d7\u30c8\u306e\u5b9f\u884c\u306b DOM workers \u3068 message \u30a4\u30d9\u30f3\u30c8\u3092\u5229\u7528\u3057\u305f\u3001\u81ea\u8eab\u3092 include \u3059\u308b\u30b3\u30fc\u30c9',
-            'ru' : '',
+            'ru' : 'Исполнение кода происходит благодаря отсылке javascript-сообщения методом postMessage и приёму его на той же странице объектом Worker, к обработчику события onmessage которого привязана функция, запускающая метод eval.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/En/Using_web_workers'],
@@ -129,14 +129,14 @@ var items =
         'name'       : {
             'en' : 'Firefox crypto object - hidden eval()',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8 - \u96a0\u308c\u305f eval()',
-            'ru' : '',
+            'ru' : 'Объект crypto в Firefox - скрытый eval()',
             'de' : ''
         },
         'data'       : '<script>crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')</script>',
         'description': {
             'en' : 'This vector uncovers a hidden eval() inside the Firefox crypto object',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u5185\u306b\u96a0\u3055\u308c\u305f eval\u0028\u0029 \u6a5f\u80fd\u3067\u3059\u3002',
-            'ru' : '',
+            'ru' : 'Этот вектор срывает покровы с объекта crypto в Firefox, выявляя внутри него скрытый eval().',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/JavaScript_crypto'],
@@ -160,14 +160,14 @@ var items =
         'name'       : {
             'en' : 'Firefox setter based JavaScript execution',
             'ja' : 'Firefox\u306esetter\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
-            'ru' : '',
+            'ru' : 'Исполнение кода в Firefox с использованием setter',
             'de' : ''
         },
         'data'       : '<script>({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%</script>',
         'description': {
             'en' : 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
             'ja' : 'Gecko\u002fFirefox\u306esetter\u306b\u3088\u308b\u62ec\u5f27\u3092\u4f7f\u308f\u306a\u3044JavaScript\u306e\u5b9f\u884c',
-            'ru' : '',
+            'ru' : 'Применение setter`ов в Gecko/Firefox для выполнения JavaScript без использования круглых скобок.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
@@ -191,21 +191,21 @@ var items =
         'name'       : {
             'en' : 'Self-executing focus event via autofocus',
             'ja' : 'autofocus\u306b\u3088\u308bfocus\u30a4\u30d9\u30f3\u30c8\u3092\u5229\u7528\u3057\u305f\u81ea\u5df1\u5b9f\u884c',
-            'ru' : '',
+            'ru' : 'Автофокусировка как способ автоматического исполнения кода',
             'de' : ''
         },
         'data'       : '<input onfocus=%js_write% autofocus>',
         'description': {
             'en' : 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
             'ja' : 'autofocus \u5c5e\u6027\u3092\u6301\u3064 input \u8981\u7d20\u3092\u4f7f\u3063\u3066\u81ea\u8eab\u306efocus\u30a4\u30d9\u30f3\u30c8\u306e\u30cf\u30f3\u30c9\u30e9\u3092\u547c\u3073\u51fa\u3059\u624b\u6cd5\u3002\u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u306f\u4e0d\u8981\u3002',
-            'ru' : '',
+            'ru' : 'Этот вектор использует элемент input с атрибутом autofocus, чтобы вызвать свой собственный обработчик события фокусировки без взаимодействия с пользователем.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602','http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#autofocusing-a-form-control'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.', 
-			'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
-            'ru' : '',
+	    'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
+            'ru' : 'Пользовательская разметка не должна содержать атрибут "autofocus".',
             'de' : ''
         },          
         'browsers'   : {
@@ -226,21 +226,21 @@ var items =
         'name'       : {
             'en' : 'Self-executing blur event via autofocus competition',
             'ja' : 'blur\u30a4\u30d9\u30f3\u30c8\u306b\u3088\u308bautofocus\u306e\u596a\u3044\u5408\u3044\u306b\u3088\u308b\u81ea\u5df1\u5b9f\u884c',
-            'ru' : '',
+            'ru' : 'Потеря фокуса, инициированная фокусировкой на другом элементе, как способ автоматического исполнения кода.',
             'de' : ''
         },
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
         'description': {
             'en' : 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
             'ja' : '\u30d5\u30a9\u30fc\u30ab\u30b9\u3092\u596a\u3044\u5408\u30462\u3064\u306einput\u8981\u7d20\u304c\u3042\u308a\u3001\u4e00\u65b9\u304c\u30d5\u30a9\u30fc\u30ab\u30b9\u3092\u5931\u3063\u305f\u5834\u5408\u306bJavaScript\u304c\u5b9f\u884c\u3055\u308c\u308b\u3002',
-            'ru' : '',
+            'ru' : 'В этом примере мы видим два элемента input, конкурирующих за фокус, и один из них исполняет JavaScript при потере им фокуса.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602','http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#autofocusing-a-form-control'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
-            'ru' : '',
+            'ru' : 'Пользовательская разметка не должна содержать атрибут "autofocus".',
             'de' : ''
         },    
         'browsers'   : {
@@ -261,14 +261,14 @@ var items =
         'name'       : {
             'en' : 'Opera link-source JavaScript execution via CSS',
             'ja' : 'CSS\u7d4c\u7531\u306eOpera link\u30bd\u30fc\u30b9\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
-            'ru' : '',
+            'ru' : 'Исполнение Javascript в Opera с помощью CSS-свойства link-source',
             'de' : ''
         },
         'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
         'description': {
             'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
             'ja' : 'Opera\u306f\u4efb\u610f\u306eHTML\u8981\u7d20\u306b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u5b9f\u884c\u3067\u304d\u308bJavaScript\u3092\u542b\u3081\u308b\u3053\u3068\u306e\u3067\u304d\u308blink\u30bd\u30fc\u30b9\u306e\u8a2d\u5b9a\u3092\u8a31\u3057\u3066\u3044\u308b\u3002',
-            'ru' : '',
+            'ru' : 'Opera позволяет устанавливать ссылки для любых HTML-элементов, делать их интерактивными и пригодными для внедрения JavaScript.',
             'de' : ''
         },
         'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
@@ -292,21 +292,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <VIDEO> poster attribute',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью атрибута poster тега <VIDEO>',
             'de' : ''
         },
         'data'       : '<video poster=%js_uri_alert%//',
         'description': {
             'en' : 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 10.5+ поддерживает атрибут poster в сочетании с псевдоскриптом.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что для атрибута poster допускаются только относительные URI, http URI и правильные MIME типы для data:URI .',
             'de' : ''
         },            
         'browsers'   : {
