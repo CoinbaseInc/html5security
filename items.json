@@ -2874,7 +2874,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['9.x', '10.x']
+            'opera' : ['9.x', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'css', 'opera', 'trick', 'attr'],
         'reporter'   : 'LeverOne, .mario'
@@ -2961,7 +2961,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-	    'opera'  : ['10.x', '10.5', '10.6']
+	    'opera'  : ['10.x', '10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
@@ -2990,7 +2990,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-        'opera'  : ['10.x', '10.5', '10.6']
+        'opera'  : ['10.x', '10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'filter effects', 'feimage'],
         'reporter'   : '.mario'
