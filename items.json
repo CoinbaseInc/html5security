@@ -323,21 +323,21 @@ var items =
         'name'       : {
             'en' : 'SVG executing JavaScript via <G> tag and onload attribute',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение Javascript в SVG с помощью элемента <G> и атрибута onload',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><g onload="%js_uri_alert%"></g></svg>',
         'description': {
             'en' : 'SVG files can execute JavaScript via onload events on any element without user interaction',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'SVG файлы могут исполнять JavaScript с помощью обработчиков onload в любых элементах без взаимодействия с пользователем.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/SVG'],
         'howtofix'   : {
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'SVG файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -360,14 +360,14 @@ var items =
         'name'       : {
             'en' : 'Self-executing JavaScript via <BODY> onscroll autofocus',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Самовыполнение JavaScript с помощью обрабочкика onscroll тега <BODY> и autofocus',
             'de' : ''
         },
         'data'       : '<body onscroll=%js_alert%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
         'description': {
             'en' : 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В этом векторе исполнение JavaScript достигается путем искусственного вызова события scroll (прокрутка страницы) тега <BODY>, происходящем из-за автофокусировки на теге <INPUT> в конце страницы.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
@@ -395,21 +395,21 @@ var items =
         'name'       : {
             'en' : 'Client-side denial of service via repeat templates',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Отказ в обслуживании со стороны клиента с помощью повторяющихся шаблонов',
             'de' : ''
         },
         'data'       : '<x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>',
         'description': {
-            'en' : 'This vector uses the repeat template systax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves allover again the client can be forced to deny service or even crash.',
+            'en' : 'This vector uses the repeat template syntax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves all over again the client can be forced to deny service or even crash.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот вектор использует синтаксис повторящихся шаблонов, определенный в черновике WebForms 2.0. При использовании вложенных тегов повторения могут провоцировать отказ в обслуживании или даже аварийное завершение работы клиента.',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-forms/current-work/#repeatingFormControls'],
         'howtofix'   : {
             'en' : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не позволяйте пользовательскую HTML разметку , содержащую атрибуты repeat или repeat-start/repeat-end. При необходимости проверяйте, чтобы используемые в них численные значения были относительно невелики.',
             'de' : ''
         },            
         'browsers'   : {
@@ -426,21 +426,21 @@ var items =
         'name'       : {
             'en' : 'Client-side denial of service via faulty regular expressions',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Отказ в обслуживании со стороны клиента с помощью неправильного регулярного выражения',
             'de' : ''
         },
         'data'       : '<input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>',
         'description': {
             'en' : 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 10 поддерживает проверку правильности пользовательского ввода с помощью атрибута pattern. В случае, если параметр pattern является ошибочно написанным регулярным выражением, это может вызвать отказ в обслуживании с клиентской стороны.',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/#the-pattern-attribute', 'http://en.wikipedia.org/wiki/Regular_expression_Denial_of_Service_-_ReDoS'],
         'howtofix'   : {
             'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy ReDoS attacks.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не позволяйте пользовательскую HTML разметку , содержащую атрибут pattern и убедитесь, что ваши собственные клиентские регулярные выражения коректно написаны и неуязвимы для ReDoS атак.',
             'de' : ''
         },            
         'browsers'   : {
@@ -457,14 +457,14 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via sharp variables',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Выполнение JavaScript с помощью диез-переменных',
             'de' : ''
         },
         'data'       : '<script>({0:#0=%js_alert_only%/#0#/#0#(0)})</script>',
         'description': {
             'en' : 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот вектор демонстриует использование диез-переменных (sharp variables) и циклических ссылок для обфускации фактического вызова метода.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Sharp_variables_in_JavaScript'],
@@ -488,21 +488,21 @@ var items =
         'name'       : {
             'en' : 'Using onbegin and HTML+TIME to execute JavaScript',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Использование onbegin и HTML+TIME для вызова JavaScript',
             'de' : ''
         },
         'data'       : 'X<x style=`behavior:url(#default#time2)` onbegin=`%js_write%` >',
         'description': {
             'en' : 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Поведение HTML+TIME позволяет достичь исполнения JavaScript в произвольном теге с помощью обработчика события onbegin.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не позволяйте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки в отношении опасных HTML-тегов. Достаточно нераспространенные HTML+TIME API предоставляют слишком много экзотических способов исполнения JavaScript без взаимодействия с пользователем. Избегайте черных списков, если это возможно.',
             'de' : ''
         },            
         'browsers'   : {
@@ -519,21 +519,21 @@ var items =
         'name'       : {
             'en' : 'Opera XML-stylesheets executing JavaScript',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью XML-таблицы стилей в Opera ',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet href="%js_uri_alert%"?>',
         'description': {
             'en' : 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction. The vectors even works if the page is delivered as text/html.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 9.x и 10,0 позволяет применять XML-таблицы стилей с псевдоскриптом, который в дальнейшем выполняется без взаимодействия с пользователем. Вектор работает, даже если страница отправляется как text/html.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательская разметка не может содержать XML-таблицы и теги, не состоящие из <\\w+ - потому что этот вектор будет соответствовать только <\\?\\w+ . Избегайте черных списков, если это возможно.',
             'de' : ''
         },            
         'browsers'   : {
@@ -550,21 +550,21 @@ var items =
         'name'       : {
             'en' : 'Entities inside <SCRIPT> and comparable tags',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'HTML-эквиваленты внутри <SCRIPT> и аналогичных тегов',
             'de' : ''
         },
         'data'       : '<script>%js_alert_entities%</script>',
         'description': {
-            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and rendered as X(HT)ML.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Согласно спецификации пользовательским агентам разрешено распознавать HTML-эквиваленты внутри тегов <SCRIPT> и <STYLE> в случае, если документ отдается и обрабатывается как X(HT)ML.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что фильтры и системы обнаружения учитывают возможность наличия HTML-эквивалентов внутри тегов <SCRIPT>, <STYLE> и других, а не только в атрибутах.',
             'de' : ''
         },            
         'browsers'   : {
@@ -581,21 +581,21 @@ var items =
         'name'       : {
             'en' : 'XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'XSS c использованием &#188 and &#190 в кодировках MacFarsi, MacArabic and MacHebrew',
             'de' : ''
         },
         'data'       : '<meta charset="mac-farsi">\xBCscript\xBE%js_alert%\xBC/script\xBE',
         'description': {
-            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+            'en' : 'Согласно спецификации пользовательским агентам разрешено распознавать HTML-эквиваленты внутри тегов <SCRIPT> и <STYLE> в случае, если документ отдается и обрабатывается как X(HT)ML.',
             'ja' : '',
             'ru' : '',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
-            'en' : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure ton have your filter be aware that for Firefox &#60; (<) and &#188 are equivalent - as well as other characters too.',
+            'en' : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure to have your filter be aware that for Firefox &#60; (<) and &#188; are equivalent - as well as other characters too.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Пользовательскому вводу никогда не должен быть разрешен тег <МЕТА> во избежание переопределения кодировки. В случае, если веб-сайт кодируется в одной из указанных кодировок, убедитесь, что вашему фильтру известно, что для Firefox символы &#60; (<) и &#188; эквивалентны, аналогично и в отношении других сиволов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -612,21 +612,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via overwritten ReferenceError object',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript через переопределение объекта ReferenceError',
             'de' : ''
         },
         'data'       : '<script>ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x</script>',
         'description': {
-            'en' : 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most oher error objects and should ba taken into consideration when implementing JavaScript sandboxes or comparable.',
+            'en' : 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most other error objects and should be taken into consideration when implementing JavaScript sandboxes or comparable.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот JavaScript-вектор показывает, как переопределяя объект ReferenceError и вызывая такого же рода ошибку впоследствии, можно вызвать выполнение JavaScript. Это, разумеется, действительно для большинства других объектов ошибкок и должнo приниматься во внимание при разработке JavaScript-песочниц и т.п.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Functions/ReferenceError'],
         'howtofix'   : {
             'en' : 'Do not trust the DOM in case the user can influence it via script injections, includes or other DOM based property access.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не доверяйте DOM в случае, если пользователь может повлиять на неё через инъекции, включения JavaScript или другой доступ к свойствам, основанный на DOM.',
             'de' : ''
         },            
         'browsers'   : {
