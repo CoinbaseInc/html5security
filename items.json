@@ -644,14 +644,14 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via proprietary __noSuchMethod__',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Выполнение JavaScript с помощью нестандарного свойства __noSuchMethod__',
             'de' : ''
         },
         'data'       : '<script>Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()</script>',
         'description': {
             'en' : 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Firefox поддерживает нестандартное свойство __noSuchMethod__ , которое может использоваться в качестве перехватчика, когда вызывается несуществующий объект. В качестве такового может быть назначен объект Function, чтобы инициировать исполнение JavaScript без использовавания function(){...} .',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/noSuchMethod'],
@@ -673,21 +673,21 @@ var items =
         'name'       : {
             'en' : 'Input stealing/form DoS with onblur=focus() and autofocus',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Перехват ввода/DoS формы посредством onblur=focus() и autofocus',
             'de' : ''
         },
         'data'       : '<input onblur=%js_focus% autofocus><input>',
         'description': {
             'en' : 'This very basic vector demonstrates how the combination of "autofocus" and "onblur" can render any other form on the targeted website useless.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот очень простой вектор показывает, как сочетание autofocus и onblur может сделать любую другую форму на целевом сайте бесполезной.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
             'de' : ''
         },            
         'browsers'   : {
@@ -703,21 +703,21 @@ var items =
         'name'       : {
             'en' : 'Form surveillance with onformchange, onforminput and form attributes',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Наблюдение за формой с помощью атрибутов onformchange, onforminput и form',
             'de' : ''
         },
         'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X',
         'description': {
             'en' : 'Enter a value into the form element to see how "onforminput" and "onformchange" attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Введите значение в элемент формы, чтобы увидеть, как атрибуты onforminput и onformchange могут контролировать активность в теге <FORM> даже за пределами этого тега с помощью атрибута form тега <button> .',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#broadcast-formchange-events'],
         'howtofix'   : {
             'en' : 'Make sure users cannot submit markup including the form, "onformchange" and "onforminput" attributes. Do not apply <FORM> elements with an "id" attribute.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательский ввод не может содержать атрибуты onformchange, onforminput и form. Избегайте атрибут id в теге <FORM>.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -732,21 +732,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via HTML+TIME without user interaction (1)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Активный скриптинг с применением технологии HTML+TIME (1)',
             'de' : ''
         },
         'data'       : '1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
         'description': {
-            'en' : 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just "attributename" and "to" attributes. Also a fake namespace is being used to have the tag look like a harmless <B>. This only works on Internet Explorer.',
+            'en' : 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just "attributename" and "to" attributes.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот слегка обфусцированный вектор использует HTML+TIME для исполнения JavaScript без взаимодействия с пользователем и без подозрительных обработчиков событий исключительно с помощью атрибутов attributename и to. ',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки в отношении опасных HTML-тегов. Малоизвестные HTML+TIME API предоставляют довольно много экзотических способов исполнения JavaScript, в т.ч. без взаимодействия с пользователем. Избегайте черных списков, если это возможно.',
             'de' : ''
         },            
         'browsers'   : {
@@ -763,21 +763,21 @@ var items =
         'name'       : {
             'en' : 'Self-including E4X-based JavaScript snippet',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Самовключаемый JavaScript фрагмент, основанный на E4X',
             'de' : ''
         },
         'data'       : '<script src="#">{%js_alert%}</script>;1',
         'description': {
             'en' : 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executes the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот тег <SCRIPT> пытается использовать ту же самую страницу в качестве своего содержимого. Если содержимое страницы правильно с точки зрения XML-синтаксиса, она будет разобрана в JavaScript в качестве E4X-строки. При этом произойдет выполнение полезной нагрузки, содержащейся внутри E4X-разделителя - {}. Чтобы избежать возможную ошибку во время включения, необходимо окончание в виде ;0 и т.п.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
         'howtofix'   : {
             'en' : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'E4X является чрезвычайно опасным, если исходный код страницы является правильным с т.зр. XML и содержит разделители в виде точек с запятой. Для эффективной защиты сайты должны применять DOCTYPE или содержать неправильную разметку. Существует много вариантов для оканчивающего разделителя: если это правильный JavaScript, и страница не является исключительно XML, то будут работать ";1", ",1", "._" и т.д.',
             'de' : ''
         },            
         'browsers'   : {
@@ -799,14 +799,14 @@ var items =
         'description': {
             'en' : 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В случае, если атакующий может внедрить последовательность символов, оканчивающихся на .toXMLString(), существует возможность включения уязвимого сайта в качестве содержимого тега <SCRIPT>, запускаемого с удаленной страницы, с последующим присвоением разметки включенной страницы независимо от протокола и домена. Обратите внимание, что весь вектор кодируется в UTF7. Это возможно, поскольку в теге <SCRIPT> можно указать кодировку с помощью атрибута charset.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
         'howtofix'   : {
             'en' : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что ко всем страницам применяется определенная UTF-8 кодировка. Кроме того, входящие данные должны быть преобразованы из UTF-7, прежде чем будут обработаны с помощью htmlentities() или похожих методов. Все страницы, содержащие конфиденциальные данные, должны использовать DOCTYPE.',
             'de' : ''
         },            
         'browsers'   : {
@@ -821,21 +821,21 @@ var items =
         'name'       : {
             'en' : 'Opera whole-page click hijacking via CSS',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Перехват нажатия на любом элементе страницы с помощью CSS для Opera',
             'de' : ''
         },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
         'description': {
             'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera, как и другие браузеры, допускают выход за пределы селектора и других CSS-конструкций с помощью {...}, что открывает возможность для декларирования новых свойств и их значений, создавая видимость продолжения селектора.',
             'de' : ''
         },
         'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
         'howtofix'   : {
             'en' : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В случае, если пользователи имеют возможность изменять CSS, убедитесь, что свойства занесены в "белый список", а селекторы не содержат сочетание {...} .',
             'de' : ''
         },            
         'browsers'   : {
@@ -850,21 +850,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via HTML+TIME without user interaction (2)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Активный скриптинг с применением технологии HTML+TIME (2)  ',
             'de' : ''
         },
         'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=%js_alert%&gt;>',
         'description': {
             'en' : 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map ecoded markup into an attribute to execute JavaScript.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот HTML+TIME вектор использует атрибуты attributename и values для изменения значения свойства innerHTML у анимируемого объекта. Нужно иметь в виду, что посредством тегов set и animate можно менять и другие свойства объектов (например, src или href). Отличие animate от set состоит в том, что анимировать возможно только то свойство, которое уже имеет начальное значение. Если свойство не имеет начальное значение, то можно прибегнуть к использованию сочетания атрибутов from и to в теге animate. Также не стоит упускать возможность указать целевой тег для анимирования в атрибуте targetElement.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Как только пространство имен и поведение HTML+TIME привязаны к HTML-элементу, становятся доступными целый ряд новых атрибутов, с помощью которых возможно выполнение JavaScript. В пользовательской разметке не должно быть разрешено использование атрибута xmlns, а также свойств поведений в стилях. Избегайте черных списков при работе с пользовательской разметкой.',
             'de' : ''
         },            
         'browsers'   : {
@@ -881,21 +881,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <LINK> href attribute and data URI',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Выполнение JavaScript с помощью атрибута href и data URI в теге <LINK>',
             'de' : ''
         },
         'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(%js_write%)%7d',
         'description': {
             'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова Javascript в теге <LINK>.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что стилевые URI не могут быть в полной мере подконтрольны пользователю, а пользовательские теги LINK не выводятся неотфильтрованными.',
             'de' : ''
         },            
         'browsers'   : {
@@ -911,7 +911,7 @@ var items =
         'category'   : 'css', 
         'name'       : {
             'en' : 'JavaScript execution via <STYLE> @import and data URI',
-            'ja' : '',
+            'ja' : 'Выполнение JavaScript с помощью @import и data URI в теге <STYLE>',
             'ru' : '',
             'de' : ''
         },
@@ -919,14 +919,14 @@ var items =
         'description': {
             'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова Javascript c помощью директивы @import тега <STYLE>.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms530768%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что стилевые URI не могут быть в полной мере подконтрольны пользователю, а пользовательские стили не содержат директиву @import.',
             'de' : ''
         },            
         'browsers'   : {
