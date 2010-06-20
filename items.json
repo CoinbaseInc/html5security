@@ -2198,9 +2198,9 @@ var items =
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<div style=width:0;filter:glow onfilterchange=%js_alert%>x',
+        'data'       : '<div style=width:1px;filter:glow onfilterchange=%js_alert%>x',
         'description': {
-            'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation.', 
+            'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation. In compatibility mode to IE8+ you can use the property "-ms-filter".', 
             'ja' : '',
             'ru' : '',
             'de' : ''
@@ -2215,7 +2215,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
-        'tags'       : ['xss', 'javascript', 'filter', 'css', 'style', 'onfilterchange', 'internet explorer', 'quirks mode'],
+        'tags'       : ['xss', 'javascript', 'filter', 'css', 'style', 'onfilterchange', 'internet explorer'],
         'reporter'   : '.mario, LeverOne'
     },
     { /* ID 71 - Closing tags accepting style attributes */
