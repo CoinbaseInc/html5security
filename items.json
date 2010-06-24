@@ -2997,7 +2997,7 @@ var items =
     },
     { /* ID 96 - JavaScript execution via MHTML-scheme */
         'id'         : 96,
-        'category'   : 'css', 
+        'category'   : 'html', 
         'name'       : {
             'en' : 'JavaScript execution via MHTML-scheme',
             'ja' : '',
