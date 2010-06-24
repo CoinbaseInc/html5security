@@ -3004,7 +3004,7 @@ var items =
             'ru' : 'Исполнение Javascript с использованием MHTML-схемы.',
             'de' : ''
         },
-        'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html',
+        'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html\nmhtml:http://heideri.ch/jso/test.gif!xss.html',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '0',            
