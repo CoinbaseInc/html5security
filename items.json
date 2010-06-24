@@ -3030,7 +3030,7 @@ var items =
                 '5.0','6.0', '7.0', '8.0'
             ]
         },
-        'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
+        'tags'       : ['xss', 'internet explorer', 'archive', 'mhtml'],
         'reporter'   : 'bolk, LeverOne'
     },
     { /* ID 97 - XSS using "xmlns" attribute in custom tag when copying innerHTML (2) */
