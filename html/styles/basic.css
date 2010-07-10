@@ -52,6 +52,7 @@ h4 a:active {
 }
 p {
     width: 90%;	
+    white-space: pre-line;
 }
 ul li {
     list-style: none;
