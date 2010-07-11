@@ -3187,6 +3187,6 @@ var items =
             'safari' : ['4.x', '5.x'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'chrome', 'safari'],
-        'reporter'   : 'LeverOne'
+        'reporter'   : '.mario'
     }
 ]
