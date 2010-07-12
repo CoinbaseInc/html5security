@@ -3170,7 +3170,7 @@ var items =
         },
         'data'       : '<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%js_alert%>XXX</a>',
         'description': {
-	    'en' : 'This exsample shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character.',
+	    'en' : 'This example shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character.',
             'ja' : '',
             'ru' : 'Пример как бы намекает, что Google Chrome и Safari помимо символов с десятичным кодом 9,10,13, игнорируемых в URI всеми браузерами, также игнорирует символы 1-8,11,12. Кроме того, Safari игнорирует в URI незакодированный нулевой символ.',
             'de' : ''
@@ -3187,6 +3187,35 @@ var items =
             'safari' : ['4.x', '5.x'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'chrome', 'safari'],
+        'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 102 - Forced plaintext via double-backticks in Internet Explorer */
+        'id'         : 102,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Forced plaintext via double-backticks in Internet Explorer',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<img src="x` `<script>%js_alert%</script>"` `>',
+        'description': {
+            'en' : 'Internet Explorer treats any tag as plaintext in case the character sequence ` ` appears inside or outside an attribute - preceded by an arbitrary character but the equals sign. This allows the usage of HTML inside attributes which will then be rendered as regular HTML - like the script tag in this example. The problem has been reported and will be taken care of in later versions of the Internet Explorer.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer' : ['6.0', '7.0', '8.0'],
+        },
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'parser', 'backtick', 'plaintext'],
         'reporter'   : '.mario'
     }
 ]
