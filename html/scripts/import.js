@@ -170,14 +170,20 @@
                 var term = $('#search').attr('value');
                 term = sanitize(term.replace(/([\[\]\(\\)\{\}\+\-])/gm, '\\$1'));
                 if(term) {
-                    $('div.item').each(function(){
-                        if($(this).html().match(new RegExp(term, 'gim'))) {
-                            $(this).show();
-                            $(document).scrollTop(
-                                $('div.item:visible').first().attr('scrollHeight')
-                            );                            
-                        } else {$(this).hide()}
-                    });
+                    if(typeof to !== 'undefined') {
+                        clearTimeout(to);
+                    }
+                    to = setTimeout(function(){
+                        $('div.item').each(function(){
+                            if($(this).html().match(new RegExp(term, 'gim'))) {
+                                $(this).show();
+                                $(document).scrollTop(
+                                    $('div.item:visible').first().attr('scrollHeight')
+                                );                            
+                            } else {$(this).hide()}
+                        });                        
+                    }, 500);
+                    
                 } else {$('div.item').show()}
             });
             $('#search').live('dblclick', function(){
