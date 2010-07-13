@@ -1794,8 +1794,8 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['3.5', '3.6', '3.7'],
-            'chrome': ['4.0', '5.0', '6.0'],
-            'safari': ['3.0', '4.0']                        
+            'chrome': ['4.0', '5.0'],
+            'safari': ['3.0', '4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'nesting', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Kyo, sdc'
