@@ -1210,7 +1210,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox' : ['1.x', '2.x', '3.x']
         },
         'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
@@ -1339,7 +1339,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['10.0'],
+            'opera': ['10.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'svg', 'font', 'svgfont'],
         'reporter'   : '.mario'
@@ -1705,7 +1705,7 @@ var items =
             ],
             'firefox': [
                 '1.x', '2.x', '3.0'
-            ],
+            ]
         },
         'tags'       : ['xss', 'javascript', 'json', '__definesetter__', 'object', 'prototype'],
         'reporter'   : '.mario'
@@ -1824,7 +1824,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x'],
+            'firefox': ['1.5', '2.x', '3.x']
         },
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario'
@@ -3217,5 +3217,35 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'parser', 'backtick', 'plaintext'],
         'reporter'   : '.mario, hasegawayosuke'
+    },
+    { /* ID 103 - Spoofing the address bar information with history.pushState() */
+        'id'         : 103,
+        'category'   : 'javascript', 
+        'name'       : {
+            'en' : 'Spoofing the address bar information with history.pushState()',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<script>history.pushState(0,0,\'/i/am/somewhere_else\');</script>',
+        'description': {
+            'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the users history. An attacker can use this feature to change the information displayed in the address bar as well as the location objct and thus initiate phishing attacks or obfuscate bad intentions. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox' : ['3.6', '4.0'],
+            'chrome' : ['6.0'],
+        },
+        'tags'       : ['xss', 'javascript', 'spoofing', 'history', 'phishing'],
+        'reporter'   : '.mario'
     }
 ]
