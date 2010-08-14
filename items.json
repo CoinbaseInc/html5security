@@ -3229,7 +3229,7 @@ var items =
         },
         'data'       : '<script>history.pushState(0,0,\'/i/am/somewhere_else\');</script>',
         'description': {
-            'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the users history. An attacker can use this feature to change the information displayed in the address bar as well as the location objct and thus initiate phishing attacks or obfuscate bad intentions. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
+            'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the user\'s history. An attacker can use this feature to change the information displayed in the address bar as well as the location DOM object and thus initiate phishing attacks or obfuscate bad intentions. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
             'ja' : '',
             'ru' : '',
             'de' : ''
