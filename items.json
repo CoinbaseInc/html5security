@@ -25,7 +25,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera': ['10.5', 'mobile']
+            'opera': ['10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -209,13 +209,9 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
-            'opera': [
-                '10.5'
-            ],
+            'opera': ['10.5', '10.6'],
             'safari' : ['4.0'],
-            'chrome': [
-                '4.0', '5.0', '6.0'
-            ]
+            'chrome': ['4.0', '5.0', '6.0']
         },
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
         'reporter'   : 'Gareth'
@@ -244,9 +240,6 @@ var items =
             'de' : ''
         },    
         'browsers'   : {
-            'opera': [
-                '10.5'
-            ],
             'safari' : ['4.0'],
             'chrome': [
                 '4.0', '5.0', '6.0'
@@ -280,7 +273,7 @@ var items =
         },          
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.0', '10.5', 'mobile'
+                '8.0', '9.0', '10.x', 'mobile'
             ]
         },
         'tags'       : ['xss', 'css', 'link-source', 'opera', 'proprietary'],
@@ -310,9 +303,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': [
-                '10.5'
-            ]
+            'opera': ['10.5', '10.6']
         },
         'tags'       : ['xss', 'poster', 'video', 'opera', 'html5'],
         'reporter'   : '.mario'
@@ -341,9 +332,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': [
-                '10.0', '10.5'
-            ],
+            'opera': ['10.0', '10.5', '10.6'],
             'chrome': [
                 '4.0', '5.0', '6.0'
             ],
@@ -378,9 +367,7 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
-            'opera': [
-                '10.5'
-            ],
+            'opera': ['10.5', '10.6'],
             'safari' : ['4.0'],
             'chrome': [
                 '4.0', '5.0', '6.0'
@@ -413,9 +400,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': [
-                '10.0'
-            ]
+            'opera': ['10.0']
         },
         'tags'       : ['dos', 'repeat', 'template', 'webforms', 'opera', 'proprietary'],
         'reporter'   : '.mario'
@@ -444,9 +429,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': [
-                '10.0'
-            ]
+            'opera': ['10.0']
         },
         'tags'       : ['dos', 'pattern', 'regex', 'html5', 'validation', 'opera', 'proprietary'],
         'reporter'   : '.mario'
@@ -475,9 +458,7 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
-            'firefox': [
-                '2.x', '3.0', '3.5', '3.6', '3.7'
-            ]
+            'firefox': ['2.x', '3.0', '3.5', '3.6', '3.7']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'sharp', 'proprietary'],
         'reporter'   : '.mario'
@@ -506,9 +487,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': [
-                '5.5', '6.0', '7.0', '8.0', '9.0'
-            ]
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'onbegin'],
         'reporter'   : '.mario'
@@ -537,9 +516,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': [
-                '9.x', '10.0', 'mobile'
-            ]
+            'opera': ['9.x', '10.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css', 'proprietary'],
         'reporter'   : '.mario'
@@ -599,9 +576,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox' : [
-                '2.x', '3.x', '3.5', '3.6', '3.7'
-            ]
+            'firefox' : ['2.x', '3.x', '3.5', '3.6', '3.7']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
         'reporter'   : 'hasegawayosuke'
@@ -721,7 +696,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.5', 'mobile'] 
+            'opera' : ['10.5', '10.6', 'mobile'] 
         },
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
@@ -750,9 +725,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': [
-                '5.5', '6.0', '7.0', '8.0', '9.0'
-            ]
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'to', 'proprietary'],
         'reporter'   : '.mario'
@@ -868,9 +841,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': [
-                '5.5', '6.0', '7.0', '8.0', '9.0'
-            ]
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'behavior', 'style', 'html+time', 'attributename', 'values', 'proprietary'],
         'reporter'   : 'LeverOne'
@@ -899,9 +870,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': [
-                '8.0', '9.0'
-            ]
+            'internet explorer': ['8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'style', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
@@ -930,9 +899,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': [
-                '8.0', '9.0'
-            ]
+            'internet explorer': ['8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'css', 'style', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
@@ -1375,7 +1342,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile']
+            'opera': ['8.0', '9.0', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'css', 'hijacking', 'proprietary'],
         'reporter'   : '.mario'
@@ -1404,7 +1371,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile'],
+            'opera': ['8.0', '9.0', '10.x', 'mobile'],
             'firefox' : ['1.x', '2.x', '3.x'],
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0']
@@ -1466,7 +1433,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': [
-                '10.0', '10.5'
+                '10.x'
             ],
             'chrome': [
                 '4.0', '5.0', '6.0'
@@ -1503,7 +1470,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.0', '10.5', 'mobile'],
+            'opera': ['10.x', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
@@ -1734,7 +1701,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.5'],
+            'opera': ['10.5', '10.6'],
             'chrome': ['4.0', '5.0', '6.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome', 'audio'],
@@ -2088,7 +2055,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.0', '10.5', 'mobile'
+                '8.0', '9.0', '10.x', 'mobile'
             ]
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xslt', 'xsl', 'stylesheet', 'xml'],
@@ -2121,7 +2088,7 @@ var items =
             'chrome': ['4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.7'],        
-            'opera': ['8.0', '9.0', '10.0', '10.5', 'mobile']
+            'opera': ['8.0', '9.0', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'attlist', 'doctype', 'chrome', 'firefox', 'safari'],
         'reporter'   : '.mario'
@@ -2266,7 +2233,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera': ['10.5', 'mobile']
+            'opera': ['10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -2302,7 +2269,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.0', '10.5', 'mobile']
+            'opera': ['8.x', '9.x', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
@@ -2331,7 +2298,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.0', '10.5', 'mobile']
+            'opera': ['8.x', '9.x', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
@@ -2499,7 +2466,7 @@ var items =
         'browsers'   : {
             'safari': ['3.4', '4.x'],
             'firefox': ['1.5', '2.x', '3.x'],        
-            'opera': ['10.0', '10.5', 'mobile'],
+            'opera': ['10.x', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
@@ -2818,7 +2785,7 @@ var items =
             'ru' : 'SVG-изображение это такой же XML-документ, но с выключенным javascript',
             'de' : ''
         },
-        'data'       : '<div style=content:url(test2.svg)></div>',
+        'data'       : '<div style=content:url(%svg_path_2%)></div>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'samedomain'    : '1',            
@@ -2840,7 +2807,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	    'opera'  : ['10.x', '10.5', '10.6']
+	    'opera'  : ['10.x']
         },
         'tags'       : ['xss', 'svg', 'css', 'opera', 'content', 'form'],
         'reporter'   : 'LeverOne'

@@ -18,6 +18,7 @@ var payloads =
     'js_utf7_alert_2'   : '&<script&S1&TS&1>alert&A7&(1)&R&UA;&&<&A9&11/script&X&>',
     'js_base64_alert'   : 'PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==',
     'svg_path'          : 'test.svg',
+    'svg_path_2'        : 'test2.svg',
     'svg_font_path'     : 'font.svg',
     'css_path'          : 'test.css',
     'vml_path'          : 'test.vml',
