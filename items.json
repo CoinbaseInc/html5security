@@ -917,7 +917,7 @@ var items =
         'description': {
             'en' : 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
             'ja' : '',
-            'ru' : 'Этот классический вектор демонстрирует, что некоторые теги (такие как <IFRAME>, <BODY> и <FRAMESET>) не требуют атрибута src для наступления события onload.',
+            'ru' : 'Этот классический вектор демонстрирует, что некоторые теги (такие как <IFRAME>, <BODY> и <FRAMESET>) не требуют атрибута src для запуска обработчика onload.',
             'de' : ''
         },
         'urls'    : [],
@@ -950,14 +950,14 @@ var items =
         'description': {
             'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
             'ja' : '',
-            'ru' : 'Opera 8-10.5+ , а также Internet Explorer 6 поддерживает псевдоскрипт в <TABLE> и некоторых других тегов в атрибуте background. Это порождает возможность выполнения JavaScript без участия пользователей.',
+            'ru' : 'Opera 8-10.5+ , а также Internet Explorer 6 поддерживает псевдоскрипт в теге <TABLE> и некоторых других тегах в атрибуте background. Это порождает возможность выполнения JavaScript без участия пользователя.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',
             'ja' : '',
-            'ru' : 'Убедитесь, что при фильтрации пользовательской разметки среди прочих не забыт атрибут background.',
+            'ru' : 'Убедитесь, что при фильтрации пользовательской разметки среди прочих не забыт и атрибут background.',
             'de' : ''
         },            
         'browsers'   : {
@@ -987,7 +987,7 @@ var items =
         'howtofix'   : {
             'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
             'ja' : '',
-            'ru' : 'Свойство прерывается как только элемент <A>, используемый в сочетании с pointer-events:none, содержит другой элемент <A>. Элементы <A> не должны использоваться в логике pointer-event в целом, и в особенности тогда, когда они могут содержать контролируемую пользователем разметку.',
+            'ru' : 'Свойство прерывается, как только элемент <A>, используемый в сочетании с pointer-events:none, содержит другой элемент <A>. Элементы <A> не должны использоваться в логике pointer-events в целом, и в особенности тогда, когда они могут содержать контролируемую пользователем разметку.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1158,21 +1158,21 @@ var items =
         'name'       : {
             'en' : 'CDATA section parsing issues',
             'ja' : '',
-            'ru' : 'Разбор CDATA секций',
+            'ru' : 'Разбор CDATA-секций',
             'de' : ''
         },
         'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
             'ja' : '',
-            'ru' : 'Firefox и Opera разрешают использовать разделители CDATA секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
+            'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections nd delimiters have been stripped out or escaped - not before.',
             'ja' : '',
-            'ru' : 'Убедитесь, что CDATA разделители не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления CDATA секций.',
+            'ru' : 'Убедитесь, что CDATA-разделители не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления CDATA-секций.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1188,7 +1188,7 @@ var items =
         'name'       : {
             'en' : 'Plaintext tags used for markup obfuscation',
             'ja' : '',
-            'ru' : 'Текстовые теги используемые для обфускации разметки',
+            'ru' : 'Текстовые теги, используемые для обфускации разметки',
             'de' : ''
         },
         'data'       : '<style><img src="</style><img src=x onerror=%js_alert%//">',
@@ -1221,14 +1221,14 @@ var items =
         'name'       : {
             'en' : 'Error handler via empty list-style and load handler via empty content',
             'ja' : '',
-            'ru' : 'Свойства content, list-style как способ автоматического исполнения кода в произвольном теге',
+            'ru' : 'Свойства content, list-style как способ автоматического исполнения кода',
             'de' : ''
         },
         'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg/%3E);visibility:hidden onload=%js_alert%></div>',
         'description': {
             'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg).',
             'ja' : '',
-            'ru' : 'Opera 10.5 и ниже генерируют событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload.',
+            'ru' : 'Opera 10.5 и ниже генерирует событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload.',
             'de' : ''
         },
         'urls'    : [],
