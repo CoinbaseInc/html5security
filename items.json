@@ -765,14 +765,14 @@ var items =
         'name'       : {
             'en' : 'E4X-based UTF7 JavaScript/HTML snippet stealing cross-domain markup',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Кодированный UTF7 JavaScript/HTML фрагмент на основе E4X для междоменного доступа к разметке',
             'de' : ''
         },
         'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
         'description': {
             'en' : 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
             'ja' : '',
-            'ru' : 'В случае, если атакующий может внедрить последовательность символов, оканчивающихся на .toXMLString(), существует возможность включения уязвимого сайта в качестве содержимого тега <SCRIPT>, запускаемого с удаленной страницы, с последующим присвоением разметки включенной страницы независимо от протокола и домена. Обратите внимание, что весь вектор кодируется в UTF7. Это возможно, поскольку в теге <SCRIPT> можно указать кодировку с помощью атрибута charset.',
+            'ru' : 'В случае, если атакующий может внедрить последовательность символов, начинающихся с .toXMLString(), существует возможность включения уязвимого сайта в качестве содержимого тега <SCRIPT>, запускаемого с удаленной страницы, с последующим присвоением разметки включенной страницы независимо от протокола и домена. Обратите внимание, что весь вектор кодируется в UTF7. Это возможно, поскольку в теге <SCRIPT> можно указать кодировку с помощью атрибута charset.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
@@ -910,21 +910,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <FRAMESET> and onload',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Выполнение JavaScript с помощью <FRAMESET> и onload',
             'de' : ''
         },
         'data'       : '<frameset onload=%js_alert%>',
         'description': {
             'en' : 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот классический вектор демонстрирует, что некоторые теги (такие как <IFRAME>, <BODY> и <FRAMESET>) не требуют атрибута src для наступления события onload.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что работаете с белым списком, когда принимаете пользовательскую разметку, в ином случае такие устаревшие теги как <FRAMESET> могут быть упущены из внимания при фильтрации.',
             'de' : ''
         },            
         'browsers'   : {
@@ -943,21 +943,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <TABLE> and background',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Выполнение JavaScript с помощью <TABLE> и background',
             'de' : ''
         },
         'data'       : '<table background="javascript:%js_alert%">',
         'description': {
             'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 8-10.5+ , а также Internet Explorer 6 поддерживает псевдоскрипт в <TABLE> и некоторых других тегов в атрибуте background. Это порождает возможность выполнения JavaScript без участия пользователей.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что при фильтрации пользовательской разметки среди прочих не забыт атрибут background.',
             'de' : ''
         },            
         'browsers'   : {
@@ -973,21 +973,21 @@ var items =
         'name'       : {
             'en' : 'Breaking pointer-events:none with nested links',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Прерывание pointer-events:none вложенной ссылкой',
             'de' : ''
         },
         'data'       : '<a style="pointer-events:none;position:absolute;"><a style="position:absolute;" onclick="%js_alert%;">XXX</a></a><a href="%js_uri_alert_2%">XXX</a>',
         'description': {
             'en' : 'Firefox 3.6+ allows using CSS "pointer-events"  with value "none" to make sure an element will not react on any mouse/pointer based event. This feature enables for example placing a DIV over another DIV without blocking the click events addressed to the underlying DIV.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Firefox 3.6+ позволяет использовать CSS-свойство pointer-events со значением none, чтобы элемент не реагировал на какие-либо события указателей. Это свойство позволяет, например, позиционировать элемент DIV поверх другого DIV без блокировки событий нажатия, адресованных первому.',
             'de' : ''
         },
         'urls'    : ['http://hacks.mozilla.org/2009/12/pointer-events-for-html-in-firefox-3-6/'],
         'howtofix'   : {
             'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Свойство прерывается как только элемент <A>, используемый в сочетании с pointer-events:none, содержит другой элемент <A>. Элементы <A> не должны использоваться в логике pointer-event в целом, и в особенности тогда, когда они могут содержать контролируемую пользователем разметку.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1016,7 +1016,7 @@ var items =
         'description': {
             'en' : 'A VML frame object works by giving the VML frame a "src" attribute and have it point to another VML object. A VML frame object in quirks mode can enclose a VML rect object or regular HTML which is responding to mouseover events.',
             'ja' : '',
-            'ru' : 'Объект VML фрейма ссылается в атрибуте "src" на другой VML объект, который реагирует на событие движения мышью. В режиме совместимости VML фрейм может непосредственно заключать в себе VML rect объект или обычный HTML.', 
+            'ru' : 'Объект VML фрейма ссылается в атрибуте src на другой VML объект, который реагирует на событие движения мышью. В режиме совместимости VML фрейм может непосредственно заключать в себе VML rect объект или обычный HTML.', 
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
@@ -1038,21 +1038,21 @@ var items =
         'name'       : {
             'en' : 'VML line object utilizing href attribute with JavaScript URI',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'VML объект line использует атрибут href c псевдоскриптом.',
             'de' : ''
         },
         'data'       : '1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=%js_uri_alert% strokecolor=white strokeweight=1000px from=0 to=1000 /></a>',
         'description': {
             'en' : 'The vector paints a very thick and wide line responding to clicks with JavaScript execution via JavaScript URI. Note that the actual URI is being masked in the status bar. During an overlay attack the victim will not know about the payload via status bar.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Данный вектор рисует очень длинную и широкую линию, нажатие на которую приведет к исполнению JavaScript. Обратите внимание, что псевдоскрипт маскируется в статусной строке, поэтому потерпевший не будет знать об истинной полезной нагрузке. Такой же эффект имеет место и в остальных графических VML тегах.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb229513%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1067,21 +1067,21 @@ var items =
         'name'       : {
             'en' : 'AnchorClick behavior enabling folder attribute as href replacement',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Поведение AnchorClick',
             'de' : ''
         },
         'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="%js_uri_alert%">XXX</a>',
         'description': {
             'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Использование поведения AnchorClick позволяет заменить в теге <A> атрибут href атрибутом folder, содержащим полезную нагрузку.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531414%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1096,21 +1096,21 @@ var items =
         'name'       : {
             'en' : 'HTML comment parsing issues (1)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Разбор комментариев в HTML (1)',
             'de' : ''
         },
         'data'       : '<!--<img src="--><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'This vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот пример показывает, как в настоящее время разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может содержать комментарии.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure comments are not allowed in user submitted html. The markup should be checked for security issues after comments have been stripped out - not before.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что комментарии не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления комментариев, но не до того.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1129,21 +1129,21 @@ var items =
         'name'       : {
             'en' : 'HTML comment parsing issues (2)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Разбор комментариев в HTML (2)',
             'de' : ''
         },
         'data'       : '<comment><img src="</comment><img src=x onerror=%js_alert%)//">',
         'description': {
             'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Вместо <!---> Internet Explorer разрешает использовать тег <COMMENT>. Этот пример также показывает, как разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может их содержать.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
-            'en' : 'Make sure <COMMENT> tags are not allowed in user submitted html. The markup should be checked for security issues after <COMMENT> tags have been stripped out or escaped - not before.',
+            'en' : 'Make sure <COMMENT> tags are not allowed in user submitted html. The markup should be checked for security issues after <COMMENT> tags have been stripped out or escaped - not before. ',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что тег <COMMENT> не разрешен в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления тегов <COMMENT>.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1158,21 +1158,21 @@ var items =
         'name'       : {
             'en' : 'CDATA section parsing issues',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Разбор CDATA секций',
             'de' : ''
         },
         'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Firefox и Opera разрешают использовать разделители CDATA секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections nd delimiters have been stripped out or escaped - not before.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что CDATA разделители не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления CDATA секций.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1188,21 +1188,21 @@ var items =
         'name'       : {
             'en' : 'Plaintext tags used for markup obfuscation',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Текстовые теги используемые для обфускации разметки',
             'de' : ''
         },
         'data'       : '<style><img src="</style><img src=x onerror=%js_alert%//">',
         'description': {
             'en' : 'This vector works on all tested user agents and shows how several filtering solutions can be tricked into accepting malicious HTML. A badly written filter will assume the error handler is part of the first image\'s "src" attribute and accept the incoming data.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот вектор работает на всех протестированных пользовательких агентах и показывает, как могут быть преодолены некотрые правила фильтрации, запрещающие обработчики событий в качестве атрибутов.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Don\'t rely on weak regular express for markup filtering. Use whitelists for allowed tags and rely on a filter solution based on a heavily tested tokenizer/parser.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Не полагайтесь исключительно на регулярные выражения для фильтрации разметки. Используйте белые списки разрешенных тегов и полагайтесь на фильтры, основанные на хорошо тестированных сигнатурах и анализаторах.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1215,20 +1215,20 @@ var items =
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 41 - Error handler via empty list-style  */
+    { /* ID 41 - Error handler via empty list-style and load handler via empty content */
         'id'         : 41,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'Error handler via empty list-style',
+            'en' : 'Error handler via empty list-style and load handler via empty content',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Свойства content, list-style как способ автоматического исполнения кода в произвольном теге',
             'de' : ''
         },
         'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg/%3E);visibility:hidden onload=%js_alert%></div>',
         'description': {
             'en' : 'Opera 10.5 and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg).',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 10.5 и ниже генерируют событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload.',
             'de' : ''
         },
         'urls'    : [],
@@ -1250,21 +1250,21 @@ var items =
         'name'       : {
             'en' : 'Link hijacking via <BASE> and JavaScript URI',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Перехват ссылки с помощью тега <BASE> и псевдоскипта',
             'de' : ''
         },
         'data'       : '<head><base href="javascript://"></head><body><a href="/./,%js_alert%//#">XXX</a></body>',
         'description': {
-            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer and Opera (O8-10.5 in case the link URL starts with #). User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents.',
+            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'User submitted HTML should not allow usage of <BASE> tags. In case they are necessary no non-HTTP/non-relative URL schemes should be allowed.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Пользовательская разметка не должна содержать тег <BASE>. Если это возможно, должны быть запрещены все URL, не являющиеся относительными или не начинающиеся с "http://".',
             'de' : ''
         },            
         'browsers'   : {
