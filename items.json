@@ -917,14 +917,14 @@ var items =
         'description': {
             'en' : 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
             'ja' : '',
-            'ru' : 'Этот классический вектор демонстрирует, что некоторые теги (такие как <IFRAME>, <BODY> и <FRAMESET>) не требуют атрибута src для запуска обработчика onload.',
+            'ru' : 'Этот классический вектор демонстрирует, что некоторые теги (такие, как <IFRAME>, <BODY> и <FRAMESET>) не требуют атрибута src для запуска обработчика onload.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',
             'ja' : '',
-            'ru' : 'Убедитесь, что работаете с белым списком, когда принимаете пользовательскую разметку, в ином случае такие устаревшие теги как <FRAMESET> могут быть упущены из внимания при фильтрации.',
+            'ru' : 'Убедитесь, что работаете с белым списком, когда принимаете пользовательскую разметку, в ином случае такие устаревшие теги, как <FRAMESET>, могут быть упущены из внимания при фильтрации.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1281,7 +1281,7 @@ var items =
         'name'       : {
             'en' : 'Opera 10 SVG font XSS',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'XSS через SVG-шрифт в Opera 10',
             'de' : ''
         },
         'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_front_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
@@ -1295,7 +1295,7 @@ var items =
         'description': {
             'en' : 'Opera 10.00 and later minor versions allow using SVG fonts and will - as soon as the font file has loaded even execute embedded JavaScript. The current example utilizes a load event handler to execute the JavaScript without user interaction as soon as the font file has been fully loaded.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 10.00 и меньшие версии вплоть до 9-й разрешают использовать SVG-шрифты. При этом, как только будет загружен файл шрифта, автоматически выполнится внедренный в него JavaScript, что и показано в данном примере.',
             'de' : ''
         },
         'urls'    : [],
@@ -1317,7 +1317,7 @@ var items =
         'name'       : {
             'en' : 'Opera @import based XSS inside attribute selectors',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'XSS с помощью @import внутри атрибута селектора',
             'de' : ''
         },
         'data'       : '<style>*[{}@import\'%css_path%?]</style>X',
@@ -1331,14 +1331,14 @@ var items =
         'description': {
             'en' : 'Opera 10 and later version including latest Opera 10.5 allow breaking out an attribute selector with {} and use @import declarations afterwards. The MIME type for the imported file does not matter - also it can be loaded from arbitrary domains. The imported file contains CSS code to apply a JavaScript URI to all elements on the page to hijack any incoming click.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera 10 и более поздние версии, включая Opera 10.5, позволяют прервать атрибут селектора с помощью конструции {} и использовать затем правило @import. MIME-тип и домен импортируемого файла значения не имеют. Данный файл содержит CSS код, перехватывающий нажатие на любом элементе для выполнения JavaScript. Смысл закрывающей квадратной скобки состоит в создании видимости целостности атрибута селектора.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure in user submitted CSS the contents of attribute selectors are properly escaped with backslashes. Also make sure to use a CSS property:value whitelist to forbid properties like -o-link and -o-link-source.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что в пользовательских стилях содержание атрибута селектора надлежащим образом эскейпируется обратными слешами. Также убедитесь, что используете белый список при работе с CSS, чтобы не допустить такие свойства, как -o-link и -o-link-source.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1414,21 +1414,21 @@ var items =
         'name'       : {
             'en' : 'SVG file executing JavaScript via <SCRIPT> tag',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение Javascript в SVG в теге <SCRIPT>',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
         'description': {
             'en' : 'SVG files can force the user agent to execute JavaScript via plain <SCRIPT> tags inside any SVG element without user interaction',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'SVG-файлы могут заключать в себе обычные теги <SCRIPT>.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'SVG файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1452,14 +1452,14 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <SCRIPT> for and event attributes',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Использование атрибутов for и event в теге <SCRIPT>',
             'de' : ''
         },
         'data'       : '<SCRIPT FOR=document EVENT=onreadystatechange>%js_alert%</SCRIPT>',
         'description': {
             'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera и Internet Explorer поддерживают атрибуты for и event, с помощью которых можно привязать JavaScript-код к событию в конкретном HTML-элементе. В приведенном примере эти два атрибута приводят к автоматическому исполнению кода.',
             'de' : ''
         },
         'urls'    : [],
@@ -1482,14 +1482,14 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <OBJECT> DataURL attribute',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью параметра DataURL тега <OBJECT>',
             'de' : ''
         },
         'data'       : '<OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="%js_uri_alert%"></OBJECT>',
         'description': {
             'en' : 'Internet Explorer 9 and - in some situations - earlier versions support the use of JavaScript URIs for the "dataurl" attribute of a TDC Object. The JavaScript will be executed without user any interaction.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Internet Explorer 9 и в некоторых случаях меньшие версии поддерживают псевдоскрипт для параметра DataURL тега <OBJECT>, что повлечет исполнение JavaScript без участия пользователя.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531356%28v=VS.85%29.aspx#Understanding_the_TDC_Object_Model'],
@@ -1511,21 +1511,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <OBJECT> data',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью атрибута data тега <OBJECT>',
             'de' : ''
         },
         'data'       : '<object data="data:text/html;base64,%js_base64_alert%">',
         'description': {
-            'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <OBJECT> "data" attribute value - even if base64 dencoded.',
+            'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <OBJECT> "data" attribute value - even if base64 encoded.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Почти все браузеры, поддерживающие протокол data, исполняют JavaScript с помощью атрибута data тега <OBJECT>, который в приведенном примере кодирован в base64.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure user submitted HTML cannot contain <OBJECT> tags or only whitelisted <OBJECT> "data" values.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательская разметка не содержит тег <OBJECT> , или допускаются только такие параметры атрибута data, которые занесены в белый список.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1543,21 +1543,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via <EMBED> src',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью атрибута src тега <EMBED>',
             'de' : ''
         },
         'data'       : '<embed src="data:text/html;base64,%js_base64_alert%">',
         'description': {
-            'en' : 'Almost all browsers supoorting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
+            'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Почти все браузеры, поддерживающие протокол data, исполняют JavaScript с помощью атрибута src тега <EMBED>, который в приведенном примере кодирован в base64. Только Firefox безуспешно попытается найти плагин-обрабочкик.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure user submitted HTML cannot contain <EMBED> tags or only whitelisted <EMBED> "src" values.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательская разметка не содержит тег <EMBED> , или допускаются только такие параметры атрибута src, которые занесены в белый список.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1574,7 +1574,7 @@ var items =
         'name'       : {
             'en' : 'Internet Explorer Scriptlets executing JavaScript',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript через скриптлеты в Internet Explorer',
             'de' : ''
         },
         'data'       : '<x style="behavior:url(%sct_path%)">',
@@ -1588,14 +1588,14 @@ var items =
         'description': {
             'en' : 'Internet Explorer supports Scriptlets as an alternative binding method for Data Islands. By using the shown examples JavaScript will execute without user interaction.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Помимо htc-файлов Internet Explorer поддерживает скриптлеты в качестве альтернативного метода связи с островками XML-данных. При использовании приведенного примера JavaScript будет исполнен без взаимодействия с пользователем.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/aa189871%28office.10%29.aspx', 'http://msdn.microsoft.com/en-us/library/ms766512%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Users should not be able to either submit CSS or HTML containing style attributes. If necessary make sure the "behavior" property is not whitelisted.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Пользователи не должны иметь возможность добавлять стили или HTML, содержащиий атрибут style. Если такие возможности необходимы, убедитесь, что свойство behavior не занесено в белый список.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2005,16 +2005,17 @@ var items =
         'name'       : {
             'en' : 'SVG element allows automatic execution of onload attribute without other SVG elements.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'SVG элементы и обработчик onload',
             'de' : ''
         },
         'data'       : '<svg onload="%js_uri_alert%" xmlns="http://www.w3.org/2000/svg"></svg>',        
         'description': {
             'en' : 'SVG tags allow code to be executed with onload without any other elements.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'SVG элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список обратитесь к приведенной документации.',
             'de' : ''
         },
+        'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
         'howtofix'   : {
             'en' : 'Not really a bug to fix, this is desired behaviour and only increases XSS scope.',
             'ja' : '',
