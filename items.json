@@ -3300,7 +3300,7 @@ var items =
             'browsers'   : {
                 'safari' : ['4.x', '5.x']
             },
-            'tags'       : ['xss', 'javascript', 'safari', 'attributes', 'gzip', 'delimiter', 'parser'],
+            'tags'       : ['xss', 'javascript', 'safari', 'attributes', 'delimiter', 'parser'],
             'reporter'   : 'Superhei, .mario'
         }
 ]
