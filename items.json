@@ -2944,12 +2944,12 @@ var items =
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<feImage>\n<set attributeName="xlink:href" to="data:image/svg+xml;charset=utf-8;base64,\nPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D"/>\n</feImage>\n</svg>',        
         'description': {
-            'en' : 'SVG allows using filter effects to be applied on arbitrary visible SVG elements. The feImage filter allows inclusion of other files - as well as data URIs. With a maliciuosly crafted data URI it\'s possible to execute JavaScript without user interaction.',
+            'en' : 'SVG allows using filter effects to be applied on arbitrary visible SVG elements. The feImage filter allows inclusion of other files - as well as data URIs. With a maliciuosly crafted data URI it\'s possible to execute JavaScript without user interaction. List all of the elements which can be animated can be found in the specified documentation.',
             'ja' : '',
             'ru' : '',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVG/filters.html'],
+        'urls'    : ['http://www.w3.org/TR/SVG/filters.html', 'http://www.w3.org/TR/SVG11/animate.html#Animatable', 'http://www.w3.org/TR/SVGMobile12/animate.html#Animatable'],
         'howtofix'   : {
             'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
             'ja' : '',
