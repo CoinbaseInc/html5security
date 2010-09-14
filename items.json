@@ -1935,21 +1935,21 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via src attribute',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью атрибута src',
             'de' : ''
         },
         'data'       : '<embed src="%js_uri_alert%">\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%">',
         'description': {
             'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Большинство браузеров поддерживают псевдоскипт в атрибуте src тега <IFRAME> - и это ожидаемое поведение. Кроме того, некоторые их них могут исполнять JavaScript в атрибуте SRC также других тегов - однако такие возможности имеют тенденцию к снижению. В Opera 10.5+ уже не поддерживается псевдоскрипт в тегах <IMG> и <EMBED>.  ',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure "src" attributes can never contain non-HTTP-URLs to prevent XSS or worse.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что атрибут src пользовательской разметки не может содержать URL, не начинающийся "http://".',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1968,7 +1968,7 @@ var items =
         'name'       : {
             'en' : 'Arbitrary payload injection via XML External Entities (XXE)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Инъекция удаленного кода через внешний XML-эквивалент.',
             'de' : ''
         },
         'data'       : '<!DOCTYPE x[<!ENTITY x SYSTEM "%xxe_path%">]><y>&x;</y>',
@@ -1982,14 +1982,14 @@ var items =
         'description': {
             'en' : 'Chrome and Safari allow using external XML entities to reference payload for an entity. The example shows that the entity &x; is now being filled with the content of the given file. The document must be delivered as XML or XHTML.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Chrome и Safari разрешают использовать внешние ссылки на источники, которые определяют XML-эквиваленты. Это приводит к тому, что в данном примере эквивалент &x; заполняется содержимым внешнего файла. Документ должен быть отдан в качестве XML или XHTML.',
             'de' : ''
         },
         'urls'    : ['http://xmlwriter.net/xml_guide/entity_declaration.shtml', 'http://www.w3.org/TR/REC-xml/'],
         'howtofix'   : {
             'en' : 'In case an attacker can inject data into the DOCTYPE area of the targeted website it\'s easy to fool filtering mechanisms since the actual payload is hidden in a harmless looking entity. Make sure no injections in that area are possible.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В случае, если атакующий может внедрять данные в область DOCTYPE целевого сайта, создается возможность простейшего обхода механизма фильтрации, поскольку полезная нагрузка скрывается за безопасным на первый взгляд эквивалентом. Убедитесь, что инъекции невозможны в данной области.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2068,21 +2068,21 @@ var items =
         'name'       : {
             'en' : 'XML ATTLIST declaration causing JavaScript execution',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'XML ATTLIST декларация влечет исполнение JavaScript',
             'de' : ''
         },
         'data'       : '<!DOCTYPE x [\r\n\t<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%js_alert%">\r\n]><img />',
         'description': {
             'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for matching tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
             'ja' : '',
-            'ru' : '',
+            'ru' : 'XML-декларация списка атрибутов (ATTLIST declaration) - еще один вариант использования возможности влиять на DOCTYPE в xml-документе. Такие инъекции имеют практическое значение в тех случаях, когда пользователям предоставлена возможность загружать определенные файлы на сервер, подвергающиеся фильтрации. В данном примере мы видим, определение атрибутов, которые появляются у тега по умолчанию при его дальнейшем использовании.',
             'de' : ''
         },
         'urls'    : ['http://xmlwriter.net/xml_guide/attlist_declaration.shtml'],
         'howtofix'   : {
             'en' : 'In case a website is being delivered as XML or XHTML make sure an attacker has no possibility to inject data into the DOCTYPE or create new ATTLIST directives.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В случае, если страница отдается сервером как XML или XHTML, убедитесь, что атакующий не может внедрять данные в область DOCTYPE.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2100,14 +2100,14 @@ var items =
         'name'       : {
             'en' : 'Passive JavaScript execution via XLinks',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Пассивный скриптинг с помощью XLinks',
             'de' : ''
         },
         'data'       : '<doc xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:html="http://www.w3.org/1999/xhtml">\r\n\t<html:style /><x xlink:href="%js_uri_alert%" xlink:type="simple">XXX</x>\r\n</doc>',
         'description': {
             'en' : 'Gecko based browsers like Firefox allow using XLinks. Those can be equipped with a JavaScript URI to execute JavaScript in case the user clicks on one of those XLinks.', 
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В Gecko-браузерах, таких как Firefox, реализована частичная поддержка XLinks. При этом XLink разрешает использовать псевдоскрипт в качестве URL.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/'],
@@ -2129,14 +2129,14 @@ var items =
         'name'       : {
             'en' : 'Opera WML JavaScript execution via timer event',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript в WML с помощью события timer',
             'de' : ''
         },
         'data'       : '<card xmlns="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
         'description': {
             'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Opera реализовала поддержку WML (языка беспроводной разметки) и специальных файлов с разширением .wml, разметка в которых по умолчанию будет рассатриваться как принадлежащая к пространству имен wml. Событие timer в соединении с перенаправлением позволяет достичь исполнение JavaScript без взаимодействия с пользователем.',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp'],
@@ -2158,14 +2158,14 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via IE filters and onfilterchange',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'исполнение JavaScript с использованием IE-фильров и onfilterchange',
             'de' : ''
         },
         'data'       : '<div style=width:1px;filter:glow onfilterchange=%js_alert%>x',
         'description': {
             'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation. In compatibility mode to IE8+ you can use the property "-ms-filter".', 
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Данный вектор из числа тех, которые позволяют наиболее эффективно использовать возможность изменять разметку внутри уязвимого тега без возможности выйти за его пределы. Вызов события инициирован однократным изменением фильтра. Обратите внимание, что синтаксис фильров может принимать такую сокращенную форму, несмотря на отсутствие упоминания об этом в документации. Универсальность данного способа ограничена только тем, что уязвимый тег должен иметь отображаемое содержимое, к которому применим фильтр. В режиме совместимости с IE8+ вы можете использовать свойство -ms-filter.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms532847%28VS.85%29.aspx'],
