@@ -1610,7 +1610,7 @@ var items =
         'name'       : {
             'en' : 'Internet Explorer Data Islands executing JavaScript',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript, используя островки XML-данных в Internet Explorer.',
             'de' : ''
         },
         'data'       : '<xml id="xss" src="%htc_path%"></xml>\r\n<label dataformatas="html" datasrc="#xss" datafld="payload"></label>',
@@ -1624,14 +1624,14 @@ var items =
         'description': {
             'en' : 'Internet Explorer supports Data Islands as an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В данном примере тег <XML> используется для вынесения опасного кода во внешний источник. В теге <LABEL> часть этого кода, ограниченная тегом <payload>, связывается с HTML и затем автоматически выполняется.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms766512%28VS.85%29.aspx'],
         'howtofix'   : {
             'en' : 'Users should not be able to submit HTML containing <XML> tags. If necessary make sure the "dataformatas" and "datasrc" attributes are not whitelisted.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Пользователи не должны иметь возможность внедрять разметку, содержащую тег <XML>. Дополнительно убедитесь, что атрибуты dataformatas и datasrc не занесены в белый список.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1646,14 +1646,14 @@ var items =
         'name'       : {
             'en' : 'Self-hijacking JSON literals',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Самозахватывающий JSON-литерал',
             'de' : ''
         },
         'data'       : '<script>[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]</script>',
         'description': {
             'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Даже в случае, если часть JSON литерала будет подконтрольна пользовательскому вводу, существует риск автоматического получения значений в т.ч. последующих членов объекта.',
             'de' : ''
         },
         'urls'    : [],
@@ -1681,23 +1681,23 @@ var items =
         'id'         : 55,
         'category'   : 'html5', 
         'name'       : {
-            'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag',
+            'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag (1)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью тегов <VIDEO> и <SOURCE> (1)',
             'de' : ''
         },
         'data'       : '<video><source onerror="%js_uri_alert%">',
         'description': {
             'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by a <VIDEO> tag. The same works for <AUDIO> tags',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Вектор демонстрирует возможность вызова события error в теге <SOURCE>, инкапсулируемом тегом <VIDEO> в браузерах Opera 10.5+ и Chrome. Сказанное действительно и для тега <AUDIO>.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure user submitted <SOURCE> tags cannot contain event handlers or whitelist event handlers necessary for UI controls.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательский тег <SOURCE> не может содержать обработчики событий.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1711,23 +1711,23 @@ var items =
         'id'         : 56,
         'category'   : 'html5', 
         'name'       : {
-            'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag',
+            'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag (2)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Исполнение JavaScript с помощью тегов <VIDEO> и <SOURCE> (2)',
             'de' : ''
         },
         'data'       : '<video onerror="%js_uri_alert%"><source>',
         'description': {
             'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Firefox 3.5+ запускает обработчик события в теге <VIDEO>, используемом совместно с тегом <SOURCE>. То же самое для тега <AUDIO>.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure user submitted <AUDIO> and <VIDEO> tags cannot contain event handlers or whitelist event handlers necessary for UI controls.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательские теги <AUDIO> и <VIDEO> не могут содержать обработчики событий.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1742,21 +1742,21 @@ var items =
         'name'       : {
             'en' : 'Tags nested in other tags to trick filters',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Вложенные теги как способ обхода фильтров',
             'de' : ''
         },
         'data'       : '<b <script>%js_alert%</script>0',
         'description': {
             'en' : 'Chrome, Firefox and Safari will execute JavaScript with this example nesting - while Opera and IE wouldn\'t.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Использование вложенных тегов (тегов, которые закрываются открытием других тегов, при этом оставаясь взаимо функционирующими) разрешено в Chrome, Firefox и Safari указанных версий. При этом в каждом из браузеров вложенные теги имеют/имели свои особенности. Так, например, только Safari позволяет зактыть пустой закрывающий тег вложенным (</ <script>...).',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'This vector is ideal to trick regular expression based HTML filters and sanitizers. Make sure your filters are aware of the fact that some user agents evaluate <b <script> while others will prefer <b><script>.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Данный вектор идеален при обходе регулярных выражений HTML-фильтров. Убедитесь, что ваши фильтры учитывают тот факт, что некоторые пользовательские агенты рассматривают вложенные теги в качестве самосоятельных тегов.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1773,14 +1773,14 @@ var items =
         'name'       : {
             'en' : 'E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Использование E4X для одновременного закрытия дескрипторов и создания объекта.',
             'de' : ''
         },
         'data'       : '<b><script<b></b><alert(1)</script </b>',
         'description': {
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В данном примере показано, что Firefox позволяет закрывать дескриптор, создавая при этом новый E4X-объект (<b></b>). В дальнейшем этот объект дополнительно сравнивается оператором < с результатом вызова функции alert - таким образом обеспечивается выполнение JavaScript.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
@@ -1802,21 +1802,21 @@ var items =
         'name'       : {
             'en' : 'XSS using accent grave when copying innerHTML (1)',
             'ja' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
-            'ru' : '',
+            'ru' : 'XSS, используя обратные апострофы при копировании с помощью innerHTML (1)',
             'de' : ''
         },
         'data'       : '<div id="div1"><input value="``onmouseover=%js_alert%"></div> <div id="div2"></div><script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;</script>',
         'description': {
 			'en' : 'Internet Explorer treats the accent grave (`) as an attribute delimiter like \" and \'. The quotation mark (") will be stripped from the attribute value when using the innerHTML property in case it doesn\'t contain space.',
             'ja' : 'IE\u306f\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u0028\u0060\u0029\u3092 \" \u3084 \' \u306e\u3088\u3046\u306b\u5f15\u7528\u7b26\u3068\u3057\u3066\u6271\u3046\u3002\u307e\u305f\u3001innerHTML\u3092\u53c2\u7167\u3057\u305f\u3068\u304d\u306b\u5c5e\u6027\u5024\u306b\u30b9\u30da\u30fc\u30b9\u304c\u306a\u3051\u308c\u3070\u5f15\u7528\u7b26\u0028\u0022\u0029\u304c\u524a\u9664\u3055\u308c\u308b\u3002',
-            'ru' : '',
+            'ru' : 'Пример наглядно показывает, как при копировании разметки с помощью innerHTML браузер Internet Explorer убирает ограничитель параметра value (в приведенном примере - "), если он не содержит пробельных символов. При этом происходит выход за пределы первоначального параметра, приводящий к исполнению JavaScript при последующей вставке кода.',
             'de' : ''
         },
         'urls'    : [],
         'howtofix'   : {
             'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja).',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что HTML-фильтр, который вы используете, рассматривает обратные апострофы в качестве ограничителя атрибута для IE и исходит из этого особенно тогда, когда пользователю разрешено использовать безопасный JavaScript (JSReg, Google Caja).',
             'de' : ''
         },                        
         'browsers'   : {
