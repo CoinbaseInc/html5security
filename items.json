@@ -254,7 +254,7 @@ var items =
         'name'       : {
             'en' : 'Opera link-source JavaScript execution via CSS',
             'ja' : 'CSS\u7d4c\u7531\u306eOpera link\u30bd\u30fc\u30b9\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
-            'ru' : 'Исполнение Javascript в Opera с помощью CSS-свойства link-source',
+            'ru' : 'Исполнение JavaScript в Opera с помощью CSS-свойства link-source',
             'de' : ''
         },
         'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
@@ -314,7 +314,7 @@ var items =
         'name'       : {
             'en' : 'SVG executing JavaScript via <G> tag and onload attribute',
             'ja' : '',
-            'ru' : 'Исполнение Javascript в SVG с помощью элемента <G> и атрибута onload',
+            'ru' : 'Исполнение JavaScript в SVG с помощью элемента <G> и атрибута onload',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><g onload="%js_uri_alert%"></g></svg>',
@@ -859,7 +859,7 @@ var items =
         'description': {
             'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
             'ja' : '',
-            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова Javascript в теге <LINK>.',
+            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript в теге <LINK>.',
             'de' : ''
         },
         'urls'    : [],
@@ -888,7 +888,7 @@ var items =
         'description': {
             'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
             'ja' : '',
-            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова Javascript c помощью директивы @import тега <STYLE>.',
+            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript c помощью директивы @import тега <STYLE>.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms530768%28VS.85%29.aspx'],
@@ -1414,7 +1414,7 @@ var items =
         'name'       : {
             'en' : 'SVG file executing JavaScript via <SCRIPT> tag',
             'ja' : '',
-            'ru' : 'Исполнение Javascript в SVG в теге <SCRIPT>',
+            'ru' : 'Исполнение JavaScript в SVG в теге <SCRIPT>',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
@@ -2288,7 +2288,7 @@ var items =
         'description': {
             'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
-            'ru' : 'В примере показан способ послать в тег ссылки событие click с помощью тега <EVENT-SOURCE> и таким образом выполнить Javascript без взаимодействия с пользователем. В случае необходимости послать событие в какой-либо внешний элемент на странице, событие с сервера должно содержать поле Target со значением идентификатора элемента (см. приведенную документацию).',
+            'ru' : 'В примере показан способ послать в тег ссылки событие click с помощью тега <EVENT-SOURCE> и таким образом выполнить JavaScript без взаимодействия с пользователем. В случае необходимости послать событие в какой-либо внешний элемент на странице, событие с сервера должно содержать поле Target со значением идентификатора элемента (см. приведенную документацию).',
             'de' : ''
         },
         'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
@@ -2953,7 +2953,7 @@ var items =
         'howtofix'   : {
             'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что пользовательские SVG-данные и SVG-файлы проверяются также, как и обычныt XML-документы, а не как изображения. Природа SVG позволяет включать почти произвольные XML-данные, включая JavaScript, ведущий к возможности XSS, и т.д.',
             'de' : ''
         },
         'browsers'   : {
@@ -2968,7 +2968,7 @@ var items =
         'name'       : {
             'en' : 'JavaScript execution via MHTML-scheme',
             'ja' : '',
-            'ru' : 'Исполнение Javascript с использованием MHTML-схемы.',
+            'ru' : 'Исполнение JavaScript с использованием MHTML-схемы.',
             'de' : ''
         },
         'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html\nmhtml:http://heideri.ch/jso/test.gif!xss.html',
