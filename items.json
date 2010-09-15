@@ -2953,7 +2953,7 @@ var items =
         'howtofix'   : {
             'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
             'ja' : '',
-            'ru' : 'Убедитесь, что пользовательские SVG-данные и SVG-файлы проверяются также, как и обычныt XML-документы, а не как изображения. Природа SVG позволяет включать почти произвольные XML-данные, включая JavaScript, ведущий к возможности XSS, и т.д.',
+            'ru' : 'Убедитесь, что пользовательские SVG-данные и SVG-файлы проверяются также, как и обычные XML-документы, а не как изображения. Природа SVG позволяет включать почти произвольные XML-данные, в т.ч. JavaScript, открывающий перспективу XSS и т.д.',
             'de' : ''
         },
         'browsers'   : {
