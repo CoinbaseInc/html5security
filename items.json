@@ -794,7 +794,7 @@ var items =
         'name'       : {
             'en' : 'Opera whole-page click hijacking via CSS',
             'ja' : '',
-            'ru' : 'Перехват нажатия на любом элементе страницы с помощью CSS для Opera',
+            'ru' : 'Перехват нажатия на любом теге страницы с помощью CSS для Opera',
             'de' : ''
         },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
@@ -837,7 +837,7 @@ var items =
         'howtofix'   : {
             'en' : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',
             'ja' : '',
-            'ru' : 'Как только пространство имен и поведение HTML+TIME привязаны к HTML-элементу, становятся доступными целый ряд новых атрибутов, с помощью которых возможно выполнение JavaScript. В пользовательской разметке не должно быть разрешено использование атрибута xmlns, а также свойств поведений в стилях. Избегайте черных списков при работе с пользовательской разметкой.',
+            'ru' : 'Как только пространство имен и поведение HTML+TIME привязаны к тегу, становятся доступными целый ряд новых атрибутов, с помощью которых возможно выполнение JavaScript. В пользовательской разметке не должно быть разрешено использование атрибута xmlns, а также свойств поведений в стилях. Избегайте черных списков при работе с пользовательской разметкой.',
             'de' : ''
         },            
         'browsers'   : {
@@ -987,7 +987,7 @@ var items =
         'howtofix'   : {
             'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
             'ja' : '',
-            'ru' : 'Свойство прерывается, как только элемент <A>, используемый в сочетании с pointer-events:none, содержит другой элемент <A>. Элементы <A> не должны использоваться в логике pointer-events в целом, и в особенности тогда, когда они могут содержать контролируемую пользователем разметку.',
+            'ru' : 'Свойство прерывается, как только тег <A>, используемый в сочетании с pointer-events:none, содержит другой тег <A>. Теги <A> не должны использоваться в логике pointer-events в целом, и в особенности тогда, когда они могут содержать контролируемую пользователем разметку.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1023,7 +1023,7 @@ var items =
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
-            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1052,7 +1052,7 @@ var items =
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
-            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1081,7 +1081,7 @@ var items =
         'howtofix'   : {
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
-            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML тегов.',
+            'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1331,7 +1331,7 @@ var items =
         'description': {
             'en' : 'Opera 10 and later version including latest Opera 10.5 allow breaking out an attribute selector with {} and use @import declarations afterwards. The MIME type for the imported file does not matter - also it can be loaded from arbitrary domains. The imported file contains CSS code to apply a JavaScript URI to all elements on the page to hijack any incoming click.',
             'ja' : '',
-            'ru' : 'Opera 10 и более поздние версии, включая Opera 10.5, позволяют прервать атрибут селектора с помощью конструции {} и использовать затем правило @import. MIME-тип и домен импортируемого файла значения не имеют. Данный файл содержит CSS код, перехватывающий нажатие на любом элементе для выполнения JavaScript. Смысл закрывающей квадратной скобки состоит в создании видимости целостности атрибута селектора.',
+            'ru' : 'Opera 10 и более поздние версии, включая Opera 10.5, позволяют прервать атрибут селектора с помощью конструции {} и использовать затем правило @import. MIME-тип и домен импортируемого файла значения не имеют. Данный файл содержит CSS код, перехватывающий нажатие на любом теге для выполнения JavaScript. Смысл закрывающей квадратной скобки состоит в создании видимости целостности атрибута селектора.',
             'de' : ''
         },
         'urls'    : [],
@@ -1459,7 +1459,7 @@ var items =
         'description': {
             'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction.',
             'ja' : '',
-            'ru' : 'Opera и Internet Explorer поддерживают атрибуты for и event, с помощью которых можно привязать JavaScript-код к событию в конкретном HTML-элементе. В приведенном примере эти два атрибута приводят к автоматическому исполнению кода.',
+            'ru' : 'Opera и Internet Explorer поддерживают атрибуты for и event, с помощью которых можно привязать JavaScript-код к событию в конкретном объекте. В приведенном примере эти два атрибута приводят к автоматическому исполнению кода.',
             'de' : ''
         },
         'urls'    : [],
@@ -1653,7 +1653,7 @@ var items =
         'description': {
             'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
             'ja' : '',
-            'ru' : 'Даже в случае, если часть JSON литерала будет подконтрольна пользовательскому вводу, существует риск автоматического получения значений в т.ч. последующих членов объекта.',
+            'ru' : 'Даже в случае, если часть JSON-литерала будет подконтрольна пользовательскому вводу, существует риск автоматического получения значений в т.ч. последующих членов объекта.',
             'de' : ''
         },
         'urls'    : [],
@@ -2194,7 +2194,7 @@ var items =
         'description': {
             'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes.', 
             'ja' : '',
-            'ru' : 'В данном примере показано, как тег, имеющий синтаксис закрывающего, принимает стилевой атрибут, в котором дополнительно обфусцировано значение свойства с помощью уже объясненных выше приёмов. JavaScript будет выполнен в Internet Explorer в режиме совместимости только по причине начия этой обфускации. Сам по себе режим стандартов никак не влияет на возможность распознавания стилевого атрибута в таких тегах. В строгом смысле данные теги нельзя рассматривать в качестве закрывающих. Это особый вид тегов для Internet Explorer, которые данный браузер по тем или иным причинам считает пользовательскими (custom).',
+            'ru' : 'В данном примере показано, как тег, имеющий синтаксис закрывающего, принимает стилевой атрибут, в котором дополнительно обфусцировано значение свойства с помощью уже объясненных выше приёмов. JavaScript будет выполнен в Internet Explorer в режиме совместимости только по причине наличия этой обфускации. Сам по себе режим стандартов никак не влияет на возможность распознавания стилевого атрибута в таких тегах. В строгом смысле данные теги нельзя рассматривать в качестве закрывающих. Это особый вид тегов для Internet Explorer, которые данный браузер по тем или иным причинам считает пользовательскими (custom).',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537634%28VS.85%29.aspx', 'http://www.w3.org/TR/CSS2/syndata.html'],
@@ -2288,7 +2288,7 @@ var items =
         'description': {
             'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
-            'ru' : 'В примере показан способ послать в тег ссылки событие click с помощью тега <EVENT-SOURCE> и таким образом выполнить JavaScript без взаимодействия с пользователем. В случае необходимости послать событие в какой-либо внешний элемент на странице, событие с сервера должно содержать поле Target со значением идентификатора элемента (см. приведенную документацию).',
+            'ru' : 'В примере показан способ послать в тег ссылки событие click с помощью тега <EVENT-SOURCE> и таким образом выполнить JavaScript без взаимодействия с пользователем. В случае необходимости послать событие в какой-либо внешний тег на странице, событие с сервера должно содержать поле Target со значением идентификатора тега (см. приведенную документацию).',
             'de' : ''
         },
         'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
@@ -2486,7 +2486,7 @@ var items =
         'description': {
             'en' : 'This example shows how halfwidth/fullwidth Unicode characters can be used on IE6 to substitute characters from the ASCII range. Note that those characters have been used in the example to create the term "expression".',
             'ja' : '',
-            'ru' : 'Пример демонстрирует возможность подмены ASCII символов юникодовыми символами половинной и полной ширины при формировании последовательности "expression" в Internet Explorer 6. Разуеется это не единственное место, где можно использовать такие символы.',
+            'ru' : 'Пример демонстрирует возможность подмены ASCII символов юникодовыми символами половинной и полной ширины при формировании последовательности "expression" в Internet Explorer 6. Естественно, это не единственное место, где можно использовать такие символы.',
             'de' : ''
         },
         'urls'    : ['http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_Unicode_block'],
