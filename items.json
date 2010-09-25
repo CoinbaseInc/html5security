@@ -331,7 +331,7 @@ var items =
         'howtofix'   : {
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
-            'ru' : 'SVG файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
+            'ru' : 'SVG-файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG-файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -561,7 +561,7 @@ var items =
         },
         'data'       : '<meta charset="mac-farsi">\xBCscript\xBE%js_alert%\xBC/script\xBE',
         'description': {
-            'en' : 'Согласно спецификации пользовательским агентам разрешено распознавать HTML-эквиваленты внутри тегов <SCRIPT> и <STYLE> в случае, если документ отдается и обрабатывается как X(HT)ML.',
+            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
             'ja' : '',
             'ru' : '',
             'de' : ''
@@ -1427,7 +1427,7 @@ var items =
         'howtofix'   : {
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
-            'ru' : 'SVG файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
+            'ru' : 'SVG-файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG-файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1989,14 +1989,14 @@ var items =
         'name'       : {
             'en' : 'SVG element allows automatic execution of onload attribute without other SVG elements.',
             'ja' : '',
-            'ru' : 'SVG элементы и обработчик onload',
+            'ru' : 'SVG-элементы и обработчик onload',
             'de' : ''
         },
         'data'       : '<svg onload="%js_uri_alert%" xmlns="http://www.w3.org/2000/svg"></svg>',        
         'description': {
             'en' : 'SVG tags allow code to be executed with onload without any other elements.',
             'ja' : '',
-            'ru' : 'SVG элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список обратитесь к приведенной документации.',
+            'ru' : 'SVG-элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список обратитесь к приведенной документации.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
@@ -2120,7 +2120,7 @@ var items =
         'description': {
             'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
-            'ru' : 'Opera реализовала поддержку WML (языка беспроводной разметки) и специальных файлов с расширением .wml, разметка в которых по умолчанию будет рассатриваться как принадлежащая к пространству имен wml. Событие timer в соединении с перенаправлением позволяет достичь исполнения JavaScript без взаимодействия с пользователем.',
+            'ru' : 'Opera реализовала поддержку WML (языка беспроводной разметки) и специальных файлов с расширением .wml, разметка в которых по умолчанию будет рассматриваться как принадлежащая к пространству имен wml. Событие timer в соединении с перенаправлением позволяет достичь исполнения JavaScript без взаимодействия с пользователем.',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp'],
@@ -2556,9 +2556,9 @@ var items =
         },
         'data'       : '<x:template xmlns:x="http://www.wapforum.org/2001/wml"  x:ontimer="$(x:unesc)j$(y:escape)a$(z:noecs)v$(x)a$(y)s$(z)cript$x:%js_alert%"><x:timer value="1"/></x:template>',
         'description': {
-            'en' : 'The example demonstrates the use in WML undeclared variables (are ignored). These variables can be declared in the tags "setvar", "input", "select". Namespace indicated for use inside the XML-file. Also inside WML-files can you use a lot of regular HTML-tags.', 
+            'en' : 'The example demonstrates the use in WML undeclared variables (are ignored). These variables can be declared in the tags <setvar>, <input>, <select>. Namespace indicated for use inside the XML-file. Also inside WML-files can you use a lot of regular HTML-tags.', 
             'ja' : '',
-            'ru' : 'Пример демонстрирует использование в WML необъявленных переменных, которые будут игнорироваться. Эти переменные можно объявить в тегах "setvar", "input", "select". Пространство имен указано для использования в XML-файле. Не забывайте, что внутри WML-файлов вы можете использовать множество обычных HTML-тегов. ',
+            'ru' : 'Пример демонстрирует использование в WML необъявленных переменных, которые будут игнорироваться. Эти переменные можно объявить в тегах <setvar>, <input>, <select>. Пространство имен указано для использования в XML-файле. Не забывайте, что внутри WML-файлов вы можете использовать множество обычных HTML-тегов. ',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/wml_variables.asp'],
@@ -2714,9 +2714,9 @@ var items =
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns=\'http://www.w3.org/1999/xhtml\'%3E%js_alert%%3C/script%3E"/>\n</svg>',        
         'description': {
-            'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-tags.',
+            'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-elements.',
             'ja' : '',
-            'ru' : 'Содержимое xml-ссылки автоматически включается в текущий документ. Сочетание предустановленных параметров onLoad атрибута xlink:actuate и embed атрибута xlink:show образует потенциально небезопасные SVG-теги.',
+            'ru' : 'Содержимое xml-ссылки автоматически включается в текущий документ. Сочетание предустановленных параметров onLoad атрибута xlink:actuate и embed атрибута xlink:show образует потенциально небезопасные SVG-элементы.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
