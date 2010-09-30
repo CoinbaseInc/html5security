@@ -3389,7 +3389,7 @@ var items =
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" marker-start="url(test4.svg#a)"/>\n\n</svg>',
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" style="marker-start:url(test4.svg#a)"/>\n\n</svg>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'samedomain'    : '0',            
