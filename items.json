@@ -1029,7 +1029,7 @@ var items =
             'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
         },
         'tags'       : ['xss', 'javascript', 'style', 'behavior', 'vml', 'internet explorer', 'proprietary'],
-        'reporter'   : 'LeverOne'
+        'reporter'   : 'http://www.malware.com'
     },
     { /* ID 35 - VML line object utilizing href attribute with JavaScript URI   */
         'id'         : 35,
@@ -1800,7 +1800,7 @@ var items =
             'ru' : 'Пример наглядно показывает, как при копировании разметки с помощью innerHTML браузер Internet Explorer убирает ограничитель параметра value (в приведенном примере - "), если он не содержит пробельных символов. При этом происходит выход за пределы первоначального параметра, приводящий к исполнению JavaScript при последующей вставке кода.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['#97','#98'],
         'howtofix'   : {
             'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja).',
             'ja' : '',
@@ -2999,7 +2999,7 @@ var items =
             'ru' : 'Internet Explorer неправильно анализирует атибут xmlns в пользовательских тегах при копировании с помощью innerHTML: параметр этого атрибута добавляется в тег <?XML:NAMESPACE> без оганичителей.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['#59','#98'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3030,7 +3030,7 @@ var items =
             'ru' : 'Пример показывает, как Internet Explorer and Mozilla Firefox автоматически декодируют CSS-кодировку в случае, если на первый взгляд безопасная разметка копируется с помощью innerHTML.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['#59','#97'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3039,7 +3039,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0'],
-            'firefox': ['2.x', '3.x'] 
+            'firefox': ['2.x', '3.x', '4.0'] 
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
         'reporter'   : 'sirdarckcat'

@@ -149,7 +149,10 @@
                     for(var url in items[item].urls) {
                         container.find('.urls').append(
                             '<li><a href="'+items[item].urls[url]
-                                +'" target="_blank">'
+                                // internal url in same tab
+                                + (items[item].urls[url].charAt(0)=='#'
+                                      ?'">'
+                                      :'" target="_blank">')
                                 + items[item].urls[url]+'</a></li>'
                         );
                     } 
