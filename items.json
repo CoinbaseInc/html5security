@@ -1969,7 +1969,7 @@ var items =
             'ru' : 'Chrome и Safari разрешают использовать внешние ссылки на источники, которые определяют XML-эквиваленты. Это приводит к тому, что в данном примере эквивалент &x; заполняется содержимым внешнего файла. Документ должен быть отдан в качестве XML или XHTML.',
             'de' : ''
         },
-        'urls'    : ['http://xmlwriter.net/xml_guide/entity_declaration.shtml', 'http://www.w3.org/TR/REC-xml/'],
+        'urls'    : ['http://xmlwriter.net/xml_guide/entity_declaration.shtml', 'http://www.w3.org/TR/REC-xml/', '#67', '#76'],
         'howtofix'   : {
             'en' : 'In case an attacker can inject data into the DOCTYPE area of the targeted website it\'s easy to fool filtering mechanisms since the actual payload is hidden in a harmless looking entity. Make sure no injections in that area are possible.',
             'ja' : '',
@@ -2062,7 +2062,7 @@ var items =
             'ru' : 'XML-декларация списка атрибутов (ATTLIST declaration) - еще один вариант использования возможности влиять на DOCTYPE в xml-документе. Такие инъекции имеют практическое значение в тех случаях, когда пользователям предоставлена возможность загружать определенные файлы на сервер, подвергающиеся фильтрации. В данном примере мы видим, определение атрибутов, которые появляются у тега по умолчанию при его дальнейшем использовании.',
             'de' : ''
         },
-        'urls'    : ['http://xmlwriter.net/xml_guide/attlist_declaration.shtml'],
+        'urls'    : ['http://xmlwriter.net/xml_guide/attlist_declaration.shtml', '#64', '#76'],
         'howtofix'   : {
             'en' : 'In case a website is being delivered as XML or XHTML make sure an attacker has no possibility to inject data into the DOCTYPE or create new ATTLIST directives.',
             'ja' : '',
@@ -2094,7 +2094,7 @@ var items =
             'ru' : 'В Gecko-браузерах, таких как Firefox, реализована частичная поддержка XLinks. При этом XLink разрешает использовать псевдоскрипт в качестве URL.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/'],
+        'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/', '#81', '#87'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2123,7 +2123,7 @@ var items =
             'ru' : 'Opera реализовала поддержку WML (языка беспроводной разметки) и специальных файлов с расширением .wml, разметка в которых по умолчанию будет рассматриваться как принадлежащая к пространству имен wml. Событие timer в соединении с перенаправлением позволяет достичь исполнения JavaScript без взаимодействия с пользователем.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp'],
+        'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp','#83'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2341,7 +2341,7 @@ var items =
             'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['#64', '#67'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2503,7 +2503,7 @@ var items =
             'ru' : 'FF поддерживает атрибут xlink:actuate и может отобразить xml-ссылку без дополнительных стилей и пространства имен html.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/xlink/#actuate-att', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/'],
+        'urls'    : ['http://www.w3.org/TR/xlink/#actuate-att', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/', '#68', '#87'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2561,7 +2561,7 @@ var items =
             'ru' : 'Пример демонстрирует использование в WML необъявленных переменных, которые будут игнорироваться. Эти переменные можно объявить в тегах <setvar>, <input>, <select>. Пространство имен указано для использования в XML-файле. Не забывайте, что внутри WML-файлов вы можете использовать множество обычных HTML-тегов. ',
             'de' : ''
         },
-        'urls'    : ['http://www.w3schools.com/wap/wml_variables.asp'],
+        'urls'    : ['http://www.w3schools.com/wap/wml_variables.asp','#69'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2700,7 +2700,7 @@ var items =
 	       'firefox': ['3.x', '4.0'],
 	       'opera'  : ['9.x', '10.x']
         },
-        'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
+        'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera', '#68', '#81'],
         'reporter'   : 'LeverOne'
     },
     { /* ID 88 - SVG active JavaScript execution via XLink in Opera */
