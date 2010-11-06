@@ -41,7 +41,7 @@ var items =
             'en' : 'XSS via x-imap4-modified-utf7 (1)',
             'ja' : 'x-imap4-modified-utf7\u3092\u5229\u7528\u3057\u305fXSS (1)',
             'ru' : 'XSS с использованием x-imap4-modified-utf7 (1)',
-            'cs' : '',
+            'cs' : 'XSS via x-imap4-modified-utf7 (1)',
             'de' : ''
         },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_1%',
@@ -49,7 +49,7 @@ var items =
             'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
             'ja' : '\u3053\u306e\u653b\u6483\u624b\u6cd5\u306f\u3001\u691c\u51fa\u304c\u975e\u5e38\u306b\u56f0\u96e3\u306a\u3001\u98a8\u5909\u308f\u308a\u306acharset\u306b\u3088\u308bXSS\u306e\u624b\u6bb5\u3068\u306a\u308a\u5f97\u308b\u3053\u3068\u3092\u793a\u3057\u3066\u3044\u307e\u3059\u3002',
             'ru' : 'Этот вектор показывает, как ответвление кодировки UTF7 может быть использовано для создания очень труднообнаружимых XSS векторов.',
-            'cs' : '',
+            'cs' : 'Tento kód ukazuje, jak použít UTF7 k vytvoření velmi obtížně dešifrovatelného XSS útoku',
             'de' : ''
         },
         'urls'    : [],
@@ -57,7 +57,7 @@ var items =
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Убедитесь, что тег <META> не может быть внедрен и страницы сайта отправляются с указанием кодировки.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že do stránky nemůže být vložen žádný <META> tag a že webová stránka má definovanou znakovou sadu.',
             'de' : ''
         },
         'browsers'   : {
@@ -75,7 +75,7 @@ var items =
             'en' : 'XSS via x-imap4-modified-utf7 (2)',
             'ja' : 'x-imap4-modified-utf7\u3092\u5229\u7528\u3057\u305fXSS (2)',
             'ru' : 'XSS с использованием x-imap4-modified-utf7 (2)',
-            'cs' : '',
+            'cs' : 'XSS via x-imap4-modified-utf7 (2)',
             'de' : ''
         },
         'data'       : '<meta charset="x-imap4-modified-utf7">%js_utf7_alert_2%',
@@ -83,7 +83,7 @@ var items =
             'en' : 'This vector shows how UTF7 derivations can be used to generate very hard to detect XSS vectors in exotic charsets',
             'ja' : '\u3053\u306e\u653b\u6483\u624b\u6cd5\u306f\u3001\u691c\u51fa\u304c\u975e\u5e38\u306b\u56f0\u96e3\u306a\u3001\u98a8\u5909\u308f\u308a\u306acharset\u306b\u3088\u308bXSS\u306e\u624b\u6bb5\u3068\u306a\u308a\u5f97\u308b\u3053\u3068\u3092\u793a\u3057\u3066\u3044\u307e\u3059\u3002',
             'ru' : 'Этот вектор показывает, как ответвление кодировки UTF7 может быть использовано для создания очень труднообнаружимых XSS векторов.',
-            'cs' : '',
+            'cs' : 'Tento kód ukazuje, jak použít UTF7 k vytvoření velmi obtížně dešifrovatelného XSS útoku',
             'de' : ''
         },
         'urls'    : [],
@@ -91,7 +91,7 @@ var items =
             'en' : 'Make sure no <META> tags can be injected and the website is delivered with a charset.',
             'ja' : '\u653b\u6483\u8005\u306b\u3088\u308b\u003cmeta\u003e\u8981\u7d20\u306e\u633f\u5165\u304c\u4e0d\u53ef\u80fd\u306a\u3053\u3068\u3001web\u30b5\u30a4\u30c8\u304ccharset\u3092\u6b63\u3057\u304f\u9001\u51fa\u3057\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Убедитесь, что тег <META> не может быть внедрен и страницы сайта отправляются с указанием кодировки.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že do stránky nemůže být vložen žádný <META> tag a že webová stránka má definovanou znakovou sadu.',
             'de' : ''
         },          
         'browsers'   : {
@@ -109,7 +109,7 @@ var items =
             'en' : 'Self-including DOM Worker XSS',
             'ja' : '',
             'ru' : 'Скриптинг в DOM с помощью объекта Worker.',
-            'cs' : '',
+            'cs' : 'XSS pomocí objektu Worker',
             'de' : ''
         },
         'data'       : '0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts(\'data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk\'))',
@@ -117,7 +117,7 @@ var items =
             'en' : 'A self-including code snippet utilizing a DOM worker and firing a message event to itself causing script execution',
             'ja' : '\u30b9\u30af\u30ea\u30d7\u30c8\u306e\u5b9f\u884c\u306b DOM workers \u3068 message \u30a4\u30d9\u30f3\u30c8\u3092\u5229\u7528\u3057\u305f\u3001\u81ea\u8eab\u3092 include \u3059\u308b\u30b3\u30fc\u30c9',
             'ru' : 'Исполнение кода происходит благодаря отсылке javascript-сообщения методом postMessage и приёму его на той же странице объектом Worker, к обработчику события onmessage которого привязана функция, запускающая метод eval.',
-            'cs' : '',
+            'cs' : 'Samovkládací kód používá DOM worker a poslání zprávy, která spustí vykonání skriptu',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/En/Using_web_workers'],
@@ -143,7 +143,7 @@ var items =
             'en' : 'Firefox crypto object - hidden eval()',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8 - \u96a0\u308c\u305f eval()',
             'ru' : 'Объект crypto в Firefox - скрытый eval()',
-            'cs' : '',
+            'cs' : 'Firefox crypto object - skrytý eval()',
             'de' : ''
         },
         'data'       : '<script>crypto.generateCRMFRequest(\'CN=0\',0,0,null,\'%js_alert%\',384,null,\'rsa-dual-use\')</script>',
@@ -151,7 +151,7 @@ var items =
             'en' : 'This vector uncovers a hidden eval() inside the Firefox crypto object',
             'ja' : 'Firefox crypto \u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u5185\u306b\u96a0\u3055\u308c\u305f eval\u0028\u0029 \u6a5f\u80fd\u3067\u3059\u3002',
             'ru' : 'Этот вектор срывает покровы с объекта crypto в Firefox, выявляя внутри него скрытый eval().',
-            'cs' : '',
+            'cs' : 'Ukázka volání eval(), skrytého v objektu crypto ve Firefoxu',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/JavaScript_crypto'],
@@ -177,7 +177,7 @@ var items =
             'en' : 'Firefox setter based JavaScript execution',
             'ja' : 'Firefox\u306esetter\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
             'ru' : 'Исполнение кода в Firefox с использованием setter',
-            'cs' : '',
+            'cs' : 'Spuštění kódu pomocí setterů ve Firefoxu',
             'de' : ''
         },
         'data'       : '<script>({set/**/$($){_/**/setter=$,_=1}}).$=%js_alert_only%</script>',
@@ -185,7 +185,7 @@ var items =
             'en' : 'Using setters on Gecko/Firefox to execute JavaScript without parenthesis',
             'ja' : 'Gecko\u002fFirefox\u306esetter\u306b\u3088\u308b\u62ec\u5f27\u3092\u4f7f\u308f\u306a\u3044JavaScript\u306e\u5b9f\u884c',
             'ru' : 'Применение setter`ов в Gecko/Firefox для выполнения JavaScript без использования круглых скобок.',
-            'cs' : '',
+            'cs' : 'Použití setterů v Gecko/Firefoxu k vykonání JavaScriptu',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
@@ -211,7 +211,7 @@ var items =
             'en' : 'Self-executing focus event via autofocus',
             'ja' : 'autofocus\u306b\u3088\u308bfocus\u30a4\u30d9\u30f3\u30c8\u3092\u5229\u7528\u3057\u305f\u81ea\u5df1\u5b9f\u884c',
             'ru' : 'Автофокусировка как способ автоматического исполнения кода',
-            'cs' : '',
+            'cs' : 'Automatické vyvolání obsluhy fokusu pomocí autofocus',
             'de' : ''
         },
         'data'       : '<input onfocus=%js_write% autofocus>',
@@ -219,7 +219,7 @@ var items =
             'en' : 'This vector uses an input element with autofocus to call its own focus event handler - no user interaction required',
             'ja' : 'autofocus \u5c5e\u6027\u3092\u6301\u3064 input \u8981\u7d20\u3092\u4f7f\u3063\u3066\u81ea\u8eab\u306efocus\u30a4\u30d9\u30f3\u30c8\u306e\u30cf\u30f3\u30c9\u30e9\u3092\u547c\u3073\u51fa\u3059\u624b\u6cd5\u3002\u30e6\u30fc\u30b6\u306e\u4ecb\u5728\u306f\u4e0d\u8981\u3002',
             'ru' : 'Этот вектор использует тег input с атрибутом autofocus, чтобы вызвать свой собственный обработчик события фокусировки без взаимодействия с пользователем.',
-            'cs' : '',
+            'cs' : 'Tento útok používá elementu autofocus k vyvolání obslužné rutiny pro událost focus - bez zásahu uživatele',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602','http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#autofocusing-a-form-control'],
@@ -227,7 +227,7 @@ var items =
             'en' : 'User submitted markup should not contain "autofocus" attributes.', 
 	    'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
-            'cs' : '',
+            'cs' : 'Uživatelsky vkládaný kód by neměl obsahovat atribut "autofocus".',
             'de' : ''
         },          
         'browsers'   : {
@@ -246,7 +246,7 @@ var items =
             'en' : 'Self-executing blur event via autofocus competition',
             'ja' : 'blur\u30a4\u30d9\u30f3\u30c8\u306b\u3088\u308bautofocus\u306e\u596a\u3044\u5408\u3044\u306b\u3088\u308b\u81ea\u5df1\u5b9f\u884c',
             'ru' : 'Потеря фокуса, инициированная фокусировкой на другом теге, как способ автоматического исполнения кода.',
-            'cs' : '',
+            'cs' : 'Automatické vyvolání obsluhy události blur pomocí soupeřících autofocusů',
             'de' : ''
         },
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
@@ -254,7 +254,7 @@ var items =
             'en' : 'Here we have two HTML input elements competing for the focus - and one executing JavaScript on losing its focus',
             'ja' : '\u30d5\u30a9\u30fc\u30ab\u30b9\u3092\u596a\u3044\u5408\u30462\u3064\u306einput\u8981\u7d20\u304c\u3042\u308a\u3001\u4e00\u65b9\u304c\u30d5\u30a9\u30fc\u30ab\u30b9\u3092\u5931\u3063\u305f\u5834\u5408\u306bJavaScript\u304c\u5b9f\u884c\u3055\u308c\u308b\u3002',
             'ru' : 'В этом примере мы видим два тега input, конкурирующих за фокус, и один из них исполняет JavaScript при потере им фокуса.',
-            'cs' : '',
+            'cs' : 'V tomto případě máme dva HTML elementy, které soupeří o focus - a jeden z nich vyvolá událost blur, jakmile druhý získá focus',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602','http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#autofocusing-a-form-control'],
@@ -262,7 +262,7 @@ var items =
             'en' : 'User submitted markup should not contain "autofocus" attributes.',
             'ja' : '\u30e6\u30fc\u30b6\u306e\u5165\u529b\u3057\u305fHTML\u65ad\u7247\u306b \u0022autofocus\u0022 \u5c5e\u6027\u304c\u542b\u307e\u308c\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u3053\u3068\u3002',
             'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
-            'cs' : '',
+            'cs' : 'Uživatelsky vkládaný kód by neměl obsahovat atribut "autofocus".',
             'de' : ''
         },    
         'browsers'   : {
@@ -282,7 +282,7 @@ var items =
             'en' : 'Opera link-source JavaScript execution via CSS',
             'ja' : 'CSS\u7d4c\u7531\u306eOpera link\u30bd\u30fc\u30b9\u306b\u3088\u308bJavaScript\u306e\u5b9f\u884c',
             'ru' : 'Исполнение JavaScript в Opera с помощью CSS-свойства link-source',
-            'cs' : '',
+            'cs' : 'Vykonání skriptu z CSS pomocí link-source v Opeře',
             'de' : ''
         },
         'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
@@ -290,7 +290,7 @@ var items =
             'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
             'ja' : 'Opera\u306f\u4efb\u610f\u306eHTML\u8981\u7d20\u306b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u5b9f\u884c\u3067\u304d\u308bJavaScript\u3092\u542b\u3081\u308b\u3053\u3068\u306e\u3067\u304d\u308blink\u30bd\u30fc\u30b9\u306e\u8a2d\u5b9a\u3092\u8a31\u3057\u3066\u3044\u308b\u3002',
             'ru' : 'Opera позволяет устанавливать ссылки для любых HTML-тегов, делать их интерактивными и пригодными для внедрения JavaScript.',
-            'cs' : '',
+            'cs' : 'Opera umožňuje nastavit link source pro některé HTML elementy. Můžou tak vyvpolat potřebnou akci po kliknutí',
             'de' : ''
         },
         'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
@@ -316,7 +316,7 @@ var items =
             'en' : 'JavaScript execution via <VIDEO> poster attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью атрибута poster тега <VIDEO>',
-            'cs' : '',
+            'cs' : 'Vykonání JavaScriptu pomocí atributu poster v elementu <VIDEO>',
             'de' : ''
         },
         'data'       : '<video poster=%js_uri_alert%//',
@@ -324,7 +324,7 @@ var items =
             'en' : 'Opera 10.5+ allows using poster attrubtes in combination with javascript: URIs',
             'ja' : '',
             'ru' : 'Opera 10.5+ поддерживает атрибут poster в сочетании с псевдоскриптом.',
-            'cs' : '',
+            'cs' : 'Opera 10.5+ umožňuje vložit do atributu poster URL se schématem javascript:',
             'de' : ''
         },
         'urls'    : [],
@@ -332,7 +332,7 @@ var items =
             'en' : 'Make sure only relative URIs, http URIs and correctly MIME-typed data URIs can be used for VIDEO poster attribuites',
             'ja' : '',
             'ru' : 'Убедитесь, что для атрибута poster допускаются только относительные URI, http URI и правильные MIME типы для data:URI .',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že v atributu poster jsou vloženy pouze relativní URI, URI s http:// a datová URI se správným MIME typem.',
             'de' : ''
         },            
         'browsers'   : {
@@ -348,7 +348,7 @@ var items =
             'en' : 'SVG executing JavaScript via <G> tag and onload attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG с помощью элемента <G> и атрибута onload',
-            'cs' : '',
+            'cs' : 'Vykonání JavaScriptu v SVG pomocí elementu <G> a atributu onload',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><g onload="%js_uri_alert%"></g></svg>',
@@ -356,7 +356,7 @@ var items =
             'en' : 'SVG files can execute JavaScript via onload events on any element without user interaction',
             'ja' : '',
             'ru' : 'SVG-файлы могут исполнять JavaScript с помощью обработчиков onload в любых элементах без взаимодействия с пользователем.',
-            'cs' : '',
+            'cs' : 'SVG soubory mohou vykonat JavaScript pomocí události onload u libovolného elementu i bez uživatelské interakce',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/SVG'],
@@ -364,7 +364,7 @@ var items =
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
             'ru' : 'SVG-файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG-файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
-            'cs' : '',
+            'cs' : 'SVG soubory nejsou důvěryhodné jako třeba obrázky - obzvlášť při uploadu. Soubor SVG může obsahovat HTML data stejně jako obsluhu událostí.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -382,7 +382,7 @@ var items =
             'en' : 'Self-executing JavaScript via <BODY> onscroll autofocus',
             'ja' : '',
             'ru' : 'Самовыполнение JavaScript с помощью обрабочкика onscroll тега <BODY> и autofocus',
-            'cs' : '',
+            'cs' : 'Automaticky vykonaný JavaScript pomocí onscroll a autofocus',
             'de' : ''
         },
         'data'       : '<body onscroll=%js_alert%><br><br><br><br><br><br>...<br><br><br><br><input autofocus>',
@@ -390,7 +390,7 @@ var items =
             'en' : 'This vector triggers an onscroll event executing JavaScript on <BODY> due to an autofocus on an <INPUT> way further down the page.',
             'ja' : '',
             'ru' : 'В этом векторе исполнение JavaScript достигается путем искусственного вызова события scroll (прокрутка страницы) тега <BODY>, происходящем из-за автофокусировки на теге <INPUT> в конце страницы.',
-            'cs' : '',
+            'cs' : 'V tomto případě je spuštěn kód pro událost onscroll, protože po načtení je přesunut focus na input, který je na stránce hodně dole',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
@@ -417,7 +417,7 @@ var items =
             'en' : 'Client-side denial of service via repeat templates',
             'ja' : '',
             'ru' : 'Отказ в обслуживании со стороны клиента с помощью повторяющихся шаблонов',
-            'cs' : '',
+            'cs' : 'DoS u klienta pomocí repeat templates',
             'de' : ''
         },
         'data'       : '<x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>',
@@ -425,7 +425,7 @@ var items =
             'en' : 'This vector uses the repeat template syntax specifies in the WebForms 2.0 draft. By using nested tags repeating themselves all over again the client can be forced to deny service or even crash.',
             'ja' : '',
             'ru' : 'Этот вектор использует синтаксис повторящихся шаблонов, определенный в черновике WebForms 2.0. При использовании вложенных тегов повторения могут провоцировать отказ в обслуживании или даже аварийное завершение работы клиента.',
-            'cs' : '',
+            'cs' : 'Tento útok využívá syntaxi opakovacích šablon, definovaných v draftu WebForms 2.0. Použitím vnořených tagů bude šablona generovat obsah znovu a znovu, dokud prohlížeč nezastaví běh nebo nespadne.',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-forms/current-work/#repeatingFormControls'],
@@ -433,7 +433,7 @@ var items =
             'en' : 'Avoid allowing users submitting HTML containing repeat or "repeat-start"/"repeat-end" attributes. If necessary validate the numerical values used for them to be reasonably small.',
             'ja' : '',
             'ru' : 'Не разрешайте пользовательскую HTML-разметку , содержащую атрибуты repeat или repeat-start/repeat-end. При необходимости проверяйте, чтобы используемые в них численные значения были относительно невелики.',
-            'cs' : '',
+            'cs' : 'Nedovolte uživatelům vkládat HTML s atributy repeat-start nebo repeat-end. Pokud je to nutné, zkontrolujte, zda jsou použitá čísla rozumně malá.',
             'de' : ''
         },            
         'browsers'   : {
@@ -449,7 +449,7 @@ var items =
             'en' : 'Client-side denial of service via faulty regular expressions',
             'ja' : '',
             'ru' : 'Отказ в обслуживании со стороны клиента с помощью неправильного регулярного выражения',
-            'cs' : '',
+            'cs' : 'DoS v prohlížeči pomocí chybného regulárního výrazu',
             'de' : ''
         },
         'data'       : '<input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>',
@@ -457,7 +457,7 @@ var items =
             'en' : 'Opera 10 allows client side validation via the pattern attribute. In case the pattern value is a badly written regex the client can be "dossed" with short customized character sequences.',
             'ja' : '',
             'ru' : 'Opera 10 поддерживает проверку правильности пользовательского ввода с помощью атрибута pattern. В случае, если параметр pattern является ошибочно написанным регулярным выражением, это может вызвать отказ в обслуживании с клиентской стороны.',
-            'cs' : '',
+            'cs' : 'Opera 10 dovoluje ověření na straně klienta pomocí regulárních výrazů v atributu pattern. Pokud je v tomto atributu zadán zákeřně zapsaný regulární výraz, lze tím klienta pomocí krátké znakové sekvence zatížit',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/#the-pattern-attribute', 'http://en.wikipedia.org/wiki/Regular_expression_Denial_of_Service_-_ReDoS'],
@@ -465,7 +465,7 @@ var items =
             'en' : 'Don\'t allow users to submit HTML containing "pattern" attributes and make sure your own client side regular expressions used for validation are well written and not vulnerable against easy ReDoS attacks.',
             'ja' : '',
             'ru' : 'Не разрешайте пользовательскую HTML-разметку , содержащую атрибут pattern и убедитесь, что ваши собственные клиентские регулярные выражения корректно написаны и неуязвимы для ReDoS атак.',
-            'cs' : '',
+            'cs' : 'Nedovolte uživatelům vložit HTML s atributem "pattern" a ujistěte se, že vaše vlastní regulární výrazy použité pro validaci jsou robustní a nejsou náchylné k podobným DoS útokům.',
             'de' : ''
         },            
         'browsers'   : {
@@ -481,7 +481,7 @@ var items =
             'en' : 'JavaScript execution via sharp variables',
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью диез-переменных',
-            'cs' : '',
+            'cs' : 'Vykonání JavaScriptu přes #proměnné',
             'de' : ''
         },
         'data'       : '<script>({0:#0=%js_alert_only%/#0#/#0#(0)})</script>',
@@ -489,7 +489,7 @@ var items =
             'en' : 'This vector demonstrates how sharp variables and cyclic references can be used for obfuscation to hide the actual method execution.',
             'ja' : '',
             'ru' : 'Этот вектор демонстрирует использование диез-переменных (sharp variables) и циклических ссылок для обфускации фактического вызова метода.',
-            'cs' : '',
+            'cs' : 'V ukázce jsou použity #proměnné a kruhové reference k zamaskování vykonávaného skriptu',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/Sharp_variables_in_JavaScript'],
@@ -513,7 +513,7 @@ var items =
             'en' : 'Using onbegin and HTML+TIME to execute JavaScript',
             'ja' : '',
             'ru' : 'Использование onbegin и HTML+TIME для вызова JavaScript',
-            'cs' : '',
+            'cs' : 'Použití onbegin a HTML+TIME k vykonání JavaScriptu',
             'de' : ''
         },
         'data'       : 'X<x style=`behavior:url(#default#time2)` onbegin=`%js_write%` >',
@@ -521,7 +521,7 @@ var items =
             'en' : 'The HTML+TIME behavior allows to use arbitrary tags to execute JavaScript via onbegin event handlers.',
             'ja' : '',
             'ru' : 'Поведение HTML+TIME позволяет достичь исполнения JavaScript в произвольном теге с помощью обработчика события onbegin.',
-            'cs' : '',
+            'cs' : 'HTML+TIME umožňuje běžnému tagu vyvolat JavaScript pomocí obsluhy události begin',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
@@ -529,7 +529,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags. The rather unknown HTML+TIME API provides too many ways to execute JavaScript with and without user interaction on exotic ways. Avoid blacklists if possible.',
             'ja' : '',
             'ru' : 'Не позволяйте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки в отношении опасных HTML-тегов. Достаточно нераспространенные HTML+TIME API предоставляют слишком много экзотических способов исполнения JavaScript без взаимодействия с пользователем. Избегайте черных списков, если это возможно.',
-            'cs' : '',
+            'cs' : 'Nedovolte vlastnost "behavior" v uživatelském CSS či HTML. Poměrně neznámé API HTML+TIME nabízí velmi mnoho způsobů, jak vykonat skript, ať už s uživatelskou interakcí či bez ní.',
             'de' : ''
         },            
         'browsers'   : {
@@ -545,7 +545,7 @@ var items =
             'en' : 'Opera XML-stylesheets executing JavaScript',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью XML-таблицы стилей в Opera ',
-            'cs' : '',
+            'cs' : 'XML stylesheet vykoná JavaScript v Opeře',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet href="%js_uri_alert%"?>',
@@ -553,7 +553,7 @@ var items =
             'en' : 'Opera 9.x and 10.0 allow to apply XML-stylesheets with JavaScript URIs and executes the JavaScript afterwards without user interaction. The vectors even works if the page is delivered as text/html.',
             'ja' : '',
             'ru' : 'Opera 9.x и 10,0 позволяет применять XML-таблицы стилей с псевдоскриптом, который в дальнейшем выполняется без взаимодействия с пользователем. Вектор работает, даже если страница отправляется как text/html.',
-            'cs' : '',
+            'cs' : 'Opera 9.x a 10.0 umožňuje použít XML stylesheets s JavaScriptovými URI a vykonat tak JavaScript bez uživatelské interakce. Útok funguje i pokud je stránka poslána jako text/html.',
             'de' : ''
         },
         'urls'    : [],
@@ -561,7 +561,7 @@ var items =
             'en' : 'Make sure that user input cannot contain XML stylesheets or tags not consisting of <\\w+ - because this vector would only be matched via <\\?\\w+ but still executes JavaScript without user interaction. Avoid blacklists is possible.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательская разметка не может содержать XML-таблицы и теги, не состоящие из <\\w+ - потому что этот вектор будет соответствовать только <\\?\\w+ . Избегайте черных списков, если это возможно.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že uživatel nesmí vložít XML stylesheet nebo tagy, které neodpovídají <\\w+. Tento druh útoku může být identifikován jen podle <\\?\\w+',
             'de' : ''
         },            
         'browsers'   : {
@@ -577,7 +577,7 @@ var items =
             'en' : 'Entities inside <SCRIPT> and comparable tags',
             'ja' : '',
             'ru' : 'HTML-эквиваленты внутри <SCRIPT> и аналогичных тегов',
-            'cs' : '',
+            'cs' : 'Entity v tagu SCRIPT a podobných',
             'de' : ''
         },
         'data'       : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert_entities%</script>',

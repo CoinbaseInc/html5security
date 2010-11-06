@@ -89,7 +89,7 @@ var categories =
         'en' : 'HTML behavior and binding vectors',
         'ja' : 'HTML behavior \u306b\u3088\u308b\u624b\u6cd5',
         'ru' : 'Векторы, основанные на HTML поведениях и связывании данных',
-        'cs' : 'Útoky využívající chování HTML',
+        'cs' : 'Útoky využívající HTML behavior a binding',
         'de' : ''
     }
 }
