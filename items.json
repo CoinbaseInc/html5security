@@ -2739,7 +2739,7 @@ var items =
         },
         'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="%js_uri_alert%" xlink:type="simple"/>',
         'description': {
-            'en' : 'FF support the attribute "xlink:actuate" and can display xlink without additional styles and namespaces "html".',
+            'en' : 'FF supports the "xlink:actuate" attribute and allows displaying xlinks without additional styles. The default namespace here is "html".',
             'ja' : '',
             'ru' : 'FF поддерживает атрибут xlink:actuate и может отобразить xml-ссылку без дополнительных стилей и пространства имен html.',
             'cs' : '',
