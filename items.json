@@ -1978,7 +1978,7 @@ var items =
         },
         'urls'    : ['#97','#98'],
         'howtofix'   : {
-            'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja).',
+            'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja). Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
             'ru' : 'Убедитесь, что HTML-фильтр, который вы используете, рассматривает обратные апострофы в качестве ограничителя атрибута для IE и исходит из этого особенно тогда, когда пользователю разрешено использовать безопасный JavaScript (JSReg, Google Caja).',
             'cs' : '',
@@ -3283,7 +3283,7 @@ var items =
         },
         'data'       : '<div id=d><x xmlns="><iframe onload=%js_alert%"></div>\n<script>d.innerHTML=d.innerHTML</script>',
         'description': {
-	    'en' : 'Internet Explorer incorrectly analyzes the attribute "xmlns" in custom tags when copying innerHTML - its parameter is added to the tag <?XML:NAMESPACE> without delimiters.',
+	    'en' : 'Internet Explorer incorrectly analyzes the attribute "xmlns" in custom tags when copying innerHTML - its value is being added to the tag <?XML:NAMESPACE> without any delimiters.',
             'ja' : '',
             'ru' : 'Internet Explorer неправильно анализирует атибут xmlns в пользовательских тегах при копировании с помощью innerHTML: параметр этого атрибута добавляется в тег <?XML:NAMESPACE> без оганичителей.',
             'cs' : '',
@@ -3291,7 +3291,7 @@ var items =
         },
         'urls'    : ['#59','#98'],
         'howtofix'   : {
-            'en' : '',
+            'en' : 'Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -3325,7 +3325,7 @@ var items =
         },
         'urls'    : ['#59','#97'],
         'howtofix'   : {
-            'en' : '',
+            'en' : 'Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
