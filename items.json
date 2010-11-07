@@ -619,7 +619,7 @@ var items =
             'en' : 'Buggy charset implementations in Firefox allow to craft HTML structures without using the usual characters such as < and >. Most affected charsets are from the Mac charset family - such as mac-farsi, mac-arabic and mac-hebrew.',
             'ja' : '',
             'ru' : '',
-            'cs' : 'Podle specifikace smí být v případě, že dokument je poslán jako X(HT)ML, vloženy do elementů SCRIPT a STYLE HTML entity.',
+            'cs' : 'Chybná implementace znaků ve Firefoxu umožňuje vutvářet HTML struktury bez obvyklých znaků < a >. Většina ovlivněných znakových sad je z rodiny Mac - jako mac-farsi, mac-arabic a mac-hebrew.',
             'de' : ''
         },
         'urls'    : ['https://twitter.com/#!/hasegawayosuke/status/25984750035'],
@@ -643,7 +643,7 @@ var items =
             'en' : 'JavaScript execution via overwritten ReferenceError object',
             'ja' : '',
             'ru' : 'Исполнение JavaScript через переопределение объекта ReferenceError',
-            'cs' : 'Vykonání JavaScriptu pomocí přepsaního objektu ReferenceError',
+            'cs' : 'Vykonání JavaScriptu pomocí přepsaného objektu ReferenceError',
             'de' : ''
         },
         'data'       : '<script>ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x</script>',
@@ -816,7 +816,7 @@ var items =
             'en' : 'This <SCRIPT> tag tries to include the very same page it is being executed from - and then executes the {}-delimited E4X payload. To avoid having Firefox throw an error during inclusion the ending sequence ;0 is necessary.',
             'ja' : '',
             'ru' : 'Этот тег <SCRIPT> пытается использовать ту же самую страницу в качестве своего содержимого. Если содержимое страницы правильно с точки зрения XML-синтаксиса, она будет разобрана в JavaScript в качестве E4X-строки. При этом произойдет выполнение полезной нагрузки, содержащейся внутри E4X-разделителя - {}. Чтобы избежать возможную ошибку во время включения, необходимо окончание в виде ;0 и т.п.',
-            'cs' : 'Tento tag SCRIPT se pokouší vložit tutéž stránku, v níž je obsažen, a vykonat skript uzavřený do E4X {}. Koncová sekvence ;0 je použita proto, aby Firefox nevyhodil při vkládání chybu.',
+            'cs' : 'Tento tag SCRIPT se pokouší vložit tutéž stránku, v níž je obsažen, a vykonat skript uzavřený do E4X {}. Koncová sekvence ;1 je použita proto, aby Firefox nevyhodil při vkládání chybu.',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
@@ -1116,7 +1116,7 @@ var items =
             'en' : 'A VML frame object works by giving the VML frame a "src" attribute and have it point to another VML object. A VML frame object in quirks mode can enclose a VML rect object or regular HTML which is responding to mouseover events.',
             'ja' : '',
             'ru' : 'Объект VML-фрейма ссылается в атрибуте src на другой VML-объект, который реагирует на событие движения мышью. В режиме совместимости VML-фрейм может непосредственно заключать в себе VML-rect объект или обычный HTML.', 
-            'cs' : '',
+            'cs' : 'VML rámec pracuje s objektem vloženým pomocí "src", který odkazuje na jiný VML objekt. V quirks mode může obsahovat VML rámec objekt nebo regulerní HTML, které odpoví na mouseover událost.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb263900%28VS.85%29.aspx'],
@@ -1124,7 +1124,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
-            'cs' : '',
+            'cs' : 'Nedovolte vlastnost behavior v uživatelských stylech či HTML a nespoléhejte se na blacklisty, které filtrují "podezřelé tagy".',
             'de' : ''
         },            
         'browsers'   : {
@@ -1140,7 +1140,7 @@ var items =
             'en' : 'VML line object utilizing href attribute with JavaScript URI',
             'ja' : '',
             'ru' : 'VML объект line использует атрибут href c псевдоскриптом.',
-            'cs' : '',
+            'cs' : 'VML objekt Line používá atribut href s JS URI',
             'de' : ''
         },
         'data'       : '1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=%js_uri_alert% strokecolor=white strokeweight=1000px from=0 to=1000 /></a>',
@@ -1148,7 +1148,7 @@ var items =
             'en' : 'The vector paints a very thick and wide line responding to clicks with JavaScript execution via JavaScript URI. Note that the actual URI is being masked in the status bar. During an overlay attack the victim will not know about the payload via status bar.',
             'ja' : '',
             'ru' : 'Данный вектор рисует очень длинную и широкую линию, нажатие на которую приведет к исполнению JavaScript. Обратите внимание, что псевдоскрипт маскируется в статусной строке, поэтому потерпевший не будет знать об истинной полезной нагрузке. Такой же эффект имеет место и в остальных графических VML-тегах.',
-            'cs' : '',
+            'cs' : 'Ukázka nakreslí velmi širokou čáru, která odpoví na kliknutí vyvoláním JS URI. Všimněte si, že aktuální URI je maskováno.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/bb229513%28VS.85%29.aspx'],
@@ -1156,7 +1156,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
-            'cs' : '',
+            'cs' : 'Nedovolte vlastnost behavior v uživatelských stylech či HTML a nespoléhejte se na blacklisty, které filtrují "podezřelé tagy".',
             'de' : ''
         },            
         'browsers'   : {
@@ -1172,7 +1172,7 @@ var items =
             'en' : 'AnchorClick behavior enabling folder attribute as href replacement',
             'ja' : '',
             'ru' : 'Поведение AnchorClick',
-            'cs' : '',
+            'cs' : 'AnchorClick behavior dovoluje použít atribut folder místo href',
             'de' : ''
         },
         'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="%js_uri_alert%">XXX</a>',
@@ -1180,7 +1180,7 @@ var items =
             'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements.',
             'ja' : '',
             'ru' : 'Использование поведения AnchorClick позволяет заменить в теге <A> атрибут href атрибутом folder, содержащим полезную нагрузку.',
-            'cs' : '',
+            'cs' : 'AnchorClick behavior dovoluje použít atribut folder místo href v tagu A',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms531414%28VS.85%29.aspx'],
@@ -1188,7 +1188,7 @@ var items =
             'en' : 'Don\'t allow behavior properties in user submitted CSS and markup and don\'t rely on blacklists regarding dangerous HTML tags.',
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки опасных HTML-тегов.',
-            'cs' : '',
+            'cs' : 'Nedovolte vlastnost behavior v uživatelských stylech či HTML a nespoléhejte se na blacklisty, které filtrují "podezřelé tagy".',
             'de' : ''
         },            
         'browsers'   : {
@@ -1204,7 +1204,7 @@ var items =
             'en' : 'HTML comment parsing issues (1)',
             'ja' : '',
             'ru' : 'Разбор комментариев в HTML (1)',
-            'cs' : '',
+            'cs' : 'Problém s parsováním HTML komentářů (1)',
             'de' : ''
         },
         'data'       : '<!--<img src="--><img src=x onerror=%js_alert%//">',
@@ -1212,7 +1212,7 @@ var items =
             'en' : 'This vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'ja' : '',
             'ru' : 'Этот пример показывает, как в настоящее время разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может содержать комментарии.',
-            'cs' : '',
+            'cs' : 'Tento příklad ukazuje, jak jsou parsovány komentáře a jaké problémy mohou nastat, když uživatel smí vložit HTML, které obsahuje komentáře',
             'de' : ''
         },
         'urls'    : [],
@@ -1220,7 +1220,7 @@ var items =
             'en' : 'Make sure comments are not allowed in user submitted html. The markup should be checked for security issues after comments have been stripped out - not before.',
             'ja' : '',
             'ru' : 'Убедитесь, что комментарии не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления комментариев, но не до того.',
-            'cs' : '',
+            'cs' : 'Vyhoďte komentáře z vloženého kódu a kontrolujte nebezpečnost vždy až po tomto vyhození, ne před ním.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1240,7 +1240,7 @@ var items =
             'en' : 'HTML comment parsing issues (2)',
             'ja' : '',
             'ru' : 'Разбор комментариев в HTML (2)',
-            'cs' : '',
+            'cs' : 'Problém s parsováním HTML komentářů (2)',
             'de' : ''
         },
         'data'       : '<comment><img src="</comment><img src=x onerror=%js_alert%)//">',
@@ -1248,7 +1248,7 @@ var items =
             'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
             'ja' : '',
             'ru' : 'Вместо <!---> Internet Explorer разрешает использовать тег <COMMENT>. Этот пример также показывает, как разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может их содержать.',
-            'cs' : '',
+            'cs' : 'Kromě <!---> umožňuje IE zapsat komentáře i do tagu <comment>. Výše zmíněný příklad dělá totéž do příklad 1',
             'de' : ''
         },
         'urls'    : [],
@@ -1256,7 +1256,7 @@ var items =
             'en' : 'Make sure <COMMENT> tags are not allowed in user submitted html. The markup should be checked for security issues after <COMMENT> tags have been stripped out or escaped - not before. ',
             'ja' : '',
             'ru' : 'Убедитесь, что тег <COMMENT> не разрешен в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления тегов <COMMENT>.',
-            'cs' : '',
+            'cs' : 'Vyhoďte <COMMENT> z vloženého kódu a kontrolujte nebezpečnost vždy až po tomto vyhození, ne před ním.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1272,7 +1272,7 @@ var items =
             'en' : 'CDATA section parsing issues',
             'ja' : '',
             'ru' : 'Разбор CDATA-секций',
-            'cs' : '',
+            'cs' : 'Problém s parsováním CDATA',
             'de' : ''
         },
         'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
@@ -1280,7 +1280,7 @@ var items =
             'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
             'ja' : '',
             'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
-            'cs' : '',
+            'cs' : 'Firefox a Opera umožňují oddělovače sekce CDATA v HTML - ve zkrácené formě "<![" stejně jako v té plné "<![CDATA[" Může to způsobit řadu problémů u filtrů, pokud budou použityt jako masivní obfuskace.',
             'de' : ''
         },
         'urls'    : [],
@@ -1288,7 +1288,7 @@ var items =
             'en' : 'Make sure CDATA delimiters are not allowed in user submitted html. The markup should be checked for security issues after CDATA sections nd delimiters have been stripped out or escaped - not before.',
             'ja' : '',
             'ru' : 'Убедитесь, что CDATA-разделители не разрешены в пользовательской разметке. Разметка должна проверяться для целей безопасности только после удаления CDATA-секций.',
-            'cs' : '',
+            'cs' : 'Zakažte CDATA delimitery a kontrolujte vstup až po odstranění těchto delimiterů',
             'de' : ''
         },            
         'browsers'   : {
@@ -1305,7 +1305,7 @@ var items =
             'en' : 'Plaintext tags used for markup obfuscation',
             'ja' : '',
             'ru' : 'Текстовые теги, используемые для обфускации разметки',
-            'cs' : '',
+            'cs' : 'Zmatení zápisu pomocí tagů v prostých znacích',
             'de' : ''
         },
         'data'       : '<style><img src="</style><img src=x onerror=%js_alert%//">',
@@ -1313,7 +1313,7 @@ var items =
             'en' : 'This vector works on all tested user agents and shows how several filtering solutions can be tricked into accepting malicious HTML. A badly written filter will assume the error handler is part of the first image\'s "src" attribute and accept the incoming data.',
             'ja' : '',
             'ru' : 'Этот вектор работает на всех протестированных пользовательких агентах и показывает, как могут быть преодолены некотрые правила фильтрации, запрещающие обработчики событий в качестве атрибутов. Вместо тега <STYLE> может быть использован любой plaintext-тег.',
-            'cs' : '',
+            'cs' : 'Funguje ve všech prohlížečíc a ukazují, jak snadno lze oklamat špatně napsaný filtr, který považuje obsluhu chyby za regulerní část atributu "src" u prvního img',
             'de' : ''
         },
         'urls'    : [],
@@ -1321,7 +1321,7 @@ var items =
             'en' : 'Don\'t rely on weak regular express for markup filtering. Use whitelists for allowed tags and rely on a filter solution based on a heavily tested tokenizer/parser.',
             'ja' : '',
             'ru' : 'Не полагайтесь исключительно на регулярные выражения для фильтрации разметки. Используйте белые списки разрешенных тегов и полагайтесь на фильтры, основанные на хорошо тестированных сигнатурах и анализаторах.',
-            'cs' : '',
+            'cs' : 'Nespoléhejte se při psaní filrtu na prosté regulární výrazy. Použijte whitelist pro dovolené tagy  zkuste filtry, založené na dobře testovaném tokenizeru/parseru',
             'de' : ''
         },            
         'browsers'   : {
