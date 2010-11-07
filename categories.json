@@ -103,6 +103,6 @@ var categories =
         'ru' : 'Векторы, основанные на HTML поведениях и связывании данных',
         'cs' : 'Útoky využívající HTML behavior a binding',
         'de' : '',
-        'tr' : 'HTML davranış ve durum vektörleri'
+        'tr' : 'HTML behavior ve binding vektörleri'
     }
 }
