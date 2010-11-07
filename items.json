@@ -872,8 +872,8 @@ var items =
             'en' : 'Opera whole-page click hijacking via CSS',
             'ja' : '',
             'ru' : 'Перехват нажатия на любом теге страницы с помощью CSS для Opera',
-            'cs' : '',
-            'de' : 'Click hijack celé stránky v Opeře pomocí CSS'
+            'cs' : 'Click hijack celé stránky v Opeře pomocí CSS',
+            'de' : ''
         },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
         'description': {
@@ -888,7 +888,7 @@ var items =
             'en' : 'In case users are allowed to submit CSS make sure the properties allowed are whitelisted and attribute selector content does not allow the combination {...} because it breaks out the attribute selector and allows declaration of new properties.',
             'ja' : '',
             'ru' : 'В случае, если пользователи имеют возможность изменять CSS, убедитесь, что свойства занесены в "белый список", а селекторы не содержат сочетание {...} .',
-            'cs' : 'V případě, že mají uživatelé povoleno vkládat CSS, použijte whitelist povolebých vlastností. Rovněž se ujistěte, že selektor nedovoluje zapsání {...}, protože tím je možno přerušit zápis selektoru a vytvořit deklaraci nové vlastnosti.',
+            'cs' : 'V případě, že mají uživatelé povoleno vkládat CSS, použijte whitelist povolených vlastností. Rovněž se ujistěte, že selektor nedovoluje zapsání {...}, protože tím je možno přerušit zápis selektoru a vytvořit deklaraci nové vlastnosti.',
             'de' : ''
         },            
         'browsers'   : {
