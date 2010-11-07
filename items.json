@@ -616,13 +616,13 @@ var items =
         },
         'data'       : '<meta charset="mac-farsi">\xBCscript\xBE%js_alert%\xBC/script\xBE',
         'description': {
-            'en' : 'By specification user agents allow using HTML entities between <SCRIPT> and <STYLE> tags in case the document is being delivered and redered as X(HT)ML',
+            'en' : 'Buggy charset implementations in Firefox allow to craft HTML structures without using the usual characters such as < and >. Most affected charsets are from the Mac charset family - such as mac-farsi and mac-hebrew.',
             'ja' : '',
             'ru' : '',
             'cs' : 'Podle specifikace smí být v případě, že dokument je poslán jako X(HT)ML, vloženy do elementů SCRIPT a STYLE HTML entity.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['https://twitter.com/#!/hasegawayosuke/status/25984750035'],
         'howtofix'   : {
             'en' : 'User input should never allow <META> tags to avoid re-setting the charset. In case the website is encoded in one of the affected charsets make sure to have your filter be aware that for Firefox &#60; (<) and &#188; are equivalent - as well as other characters too.',
             'ja' : '',
