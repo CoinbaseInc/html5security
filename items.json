@@ -1539,9 +1539,9 @@ var items =
         },
         'data'       : '<div style="background:url(\'/foo/&#10);color:red;\');">XXX',
         'description': {
-            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1,2,3,4,5,6,7,8,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,127\nOpera: 0\n\n* These are given in decimal codes.',
+            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* These are given in decimal codes.',
             'ja' : '',
-            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей. Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим совместимости с IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1,2,3,4,5,6,7,8,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,127\nOpera: 0\n\n* В десятичных кодах.',
+            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей. Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим совместимости с IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* В десятичных кодах.',
             'cs' : '',
             'de' : ''
         },
@@ -3166,9 +3166,9 @@ var items =
         },
         'data'       : '<!DOCTYPE>\n<div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X',        
         'description': {
-            'en' : 'To break the functional notation on IE "url()" can be used combined with a following whitespace - then followed by any non-whitespace character.',
+            'en' : 'To break the functional notation on IE "url()" can be used combined with a following whitespace - then followed by any non-whitespace character.\n\nThe following characters* are whitespaces:\n\nInternet Explorer 6,7,8,9 (standart mode), Internet Explorer 8 (compatibility mode with IE7): 9-13,32,160,8192-8203,12288,65279\nInternet Explorer 8,9 (compatibility mode with IE8): 1-32,127\n\n* These are given in decimal codes.',
             'ja' : '',
-            'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использована комбинация из любого пробельного символа, за которым следует любой непробельный символ.',
+            'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использована комбинация из любого пробельного символа, за которым следует любой непробельный символ.\n\nВ качестве пробельных здесь понимаются следующие символы*:\n\nInternet Explorer 6,7,8,9 (режим стандартов), Internet Explorer 8 (режим совместимости с IE7): 9-13,32,160,8192-8203,12288,65279\nInternet Explorer 8,9 (режим совместимости с IE8): 1-32,127\n\n* В десятичных кодах.',
             'cs' : '',
             'de' : ''
         },
@@ -3181,7 +3181,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'css', 'internet explorer', 'trick', 'notation'],
         'reporter'   : 'LeverOne'
