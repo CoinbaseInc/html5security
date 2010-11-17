@@ -2052,9 +2052,9 @@ var items =
         },
         'data'       : '<div style="[a]color[b]:[c]red">XXX</div>',
         'description': {
-            'en' : '[a] Extra characters* ignored before property names (excluding backslash (92))\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer, Opera: 123**\nFirefox 3.x, Internet Explorer: 8\nInternet Explorer: 0-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Ignored only before first property names.',
+            'en' : '[a] Extra characters* ignored before property names (excluding backslash (92) and null character (0))\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Except compatibility mode with IE8+.\n*** Ignored only before first property names.',
             'ja' : '',
-            'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92))\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer, Opera: 123**\nFirefox 3.x, Internet Explorer: 8\nInternet Explorer: 0-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11\nInternet Explorer (режим совместимости): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n*Приведены десятичные коды соответствующих символов.\n**Игнорируется только перед первым именем свойства.',
+            'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92) и нулевого символа (0))\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (режим совместимости (quirks)): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости (quirks)): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11,160,8192-8203,12288,65279\n\n* Приведены десятичные коды соответствующих символов.\n** За исключением режима совместимости с IE8+.\n*** Игнорируется только перед первым именем свойства.',
             'cs' : '',
             'de' : ''
         },
@@ -2069,11 +2069,11 @@ var items =
         'browsers'   : {
             'firefox': ['2.x', '3.x', '4.0'],
             'opera': ['9.x', '10.x', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'chrome' : ['5.0', '6.0'],
             'safari' : ['4.x', '5.x']
         },
-        'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing'],
+        'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing', 'quirks mode'],
         'reporter'   : 'Gareth, hasegawayosuke, LeverOne, .mario, RSnake, sirdarckcat'
     },
     { /* ID 61 - CSS-encoding and escaping */
@@ -2997,7 +2997,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html'],
+        'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html', '#68', '#81'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3011,7 +3011,7 @@ var items =
 	       'firefox': ['3.x', '4.0'],
 	       'opera'  : ['9.x', '10.x']
         },
-        'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera', '#68', '#81'],
+        'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
         'reporter'   : 'LeverOne'
     },
     { /* ID 88 - SVG active JavaScript execution via XLink in Opera */
