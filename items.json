@@ -202,7 +202,7 @@ var items =
             'ru' : 'Применение setter`ов в Gecko/Firefox для выполнения JavaScript без использования круглых скобок.',
             'cs' : 'Použití setterů v Gecko/Firefoxu k vykonání JavaScriptu',
             'de' : '',
-            'tr' : 'Gecko/Firefox üzerinde setter\'ları ile parantezler kullanmadan JavaScript çalıştırmak için kullanılır.'
+            'tr' : 'Gecko/Firefox üzerinde setter\'lar ile parantezler kullanmadan JavaScript çalıştırmak için kullanılır.'
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Objects#Defining_Getters_and_Setters'],
         'howtofix'   : {
@@ -268,7 +268,7 @@ var items =
             'ru' : 'Потеря фокуса, инициированная фокусировкой на другом теге, как способ автоматического исполнения кода.',
             'cs' : 'Automatické vyvolání obsluhy události blur pomocí soupeřících autofocusů',
             'de' : '',
-            'tr' : 'autofocus ile kendiliğinden çalışabilir blue olayı'
+            'tr' : 'autofocus ile kendiliğinden çalışabilir blur olayı'
         },
         'data'       : '<input onblur=%js_write% autofocus><input autofocus>',
         'description': {
@@ -603,7 +603,7 @@ var items =
             'ru' : 'Opera 9.x и 10,0 позволяет применять XML-таблицы стилей с псевдоскриптом, который в дальнейшем выполняется без взаимодействия с пользователем. Вектор работает, даже если страница отправляется как text/html.',
             'cs' : 'Opera 9.x a 10.0 umožňuje použít XML stylesheets s JavaScriptovými URI a vykonat tak JavaScript bez uživatelské interakce. Útok funguje i pokud je stránka poslána jako text/html.',
             'de' : '',
-            'tr' : ''
+            'tr' : 'Opera 9.x ve 10.0 JavaScript URI\'leri ile XML stylesheets uygulanmasına izin vermektedir ve kullanıcı etkileşimi gerektirmeden JavaScript çalıştırmaktadır. Bu vektör sadece sayfa text/html olarak sunulmuşsa çalışır.'
         },
         'urls'    : [],
         'howtofix'   : {
@@ -611,7 +611,8 @@ var items =
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательская разметка не может содержать XML-таблицы и теги, не состоящие из <\\w+ - потому что этот вектор будет соответствовать только <\\?\\w+ . Избегайте черных списков, если это возможно.',
             'cs' : 'Ujistěte se, že uživatel nesmí vložít XML stylesheet nebo tagy, které neodpovídají <\\w+. Tento druh útoku může být identifikován jen podle <\\?\\w+',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcı girdisinin XML stylesheets içermediğinden veya tagların <\\w+ şeklinde oluşmadığından emin olun - çünkü bu vektör sadece <\\?\\w+ ile eşleşir ama yine kullanıcı etkiletişimi olmadan JavaScript çalıştırır. Kara listelerden kaçının.'
         },            
         'browsers'   : {
             'opera': ['9.x', '10.0', 'mobile']
@@ -627,7 +628,8 @@ var items =
             'ja' : '',
             'ru' : 'HTML-эквиваленты внутри <SCRIPT> и аналогичных тегов',
             'cs' : 'Entity v tagu SCRIPT a podobných',
-            'de' : ''
+            'de' : '',
+            'tr' : ''
         },
         'data'       : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert_entities%</script>',
         'description': {
@@ -635,7 +637,8 @@ var items =
             'ja' : '',
             'ru' : 'Согласно спецификации пользовательским агентам разрешено распознавать HTML-эквиваленты внутри тегов <SCRIPT> и <STYLE> в случае, если документ отдается и обрабатывается как X(HT)ML.',
             'cs' : 'Podle specifikace smí být v případě, že dokument je poslán jako X(HT)ML, vloženy do elementů SCRIPT a STYLE HTML entity.',
-            'de' : ''
+            'de' : '',
+            'tr' : ''
         },
         'urls'    : [],
         'howtofix'   : {
@@ -643,7 +646,8 @@ var items =
             'ja' : '',
             'ru' : 'Убедитесь, что фильтры и системы обнаружения учитывают возможность наличия HTML-эквивалентов внутри тегов <SCRIPT>, <STYLE> и других, а не только в атрибутах.',
             'cs' : 'Ujistěte se, že vaše filtry a detektory průniku respektují fakt, že SCRIPT, STYLE a další tagy mohou obsahovat entity.',
-            'de' : ''
+            'de' : '',
+            'tr' : ''
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
@@ -661,7 +665,8 @@ var items =
             'ja' : '',
             'ru' : 'XSS c использованием &#188 and &#190 в кодировках MacFarsi, MacArabic and MacHebrew',
             'cs' : 'XSS via &#188 a &#190 v MacFarsi, MacArabic a MacHebrew',
-            'de' : ''
+            'de' : '',
+            'tr' : 'MacFarsi, MacArabic ve MacHebrew karakter kodlamalarında, &#188 ve &#190 ile XSS'
         },
         'data'       : '<meta charset="mac-farsi">\xBCscript\xBE%js_alert%\xBC/script\xBE',
         'description': {
@@ -669,7 +674,8 @@ var items =
             'ja' : '',
             'ru' : '',
             'cs' : 'Chybná implementace znaků ve Firefoxu umožňuje vutvářet HTML struktury bez obvyklých znaků < a >. Většina ovlivněných znakových sad je z rodiny Mac - jako mac-farsi, mac-arabic a mac-hebrew.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Hatalı karakter seti uyarlamaları Firefox\'ta HTML yapısını < ve > karakterlerini kullanmadan bozmaya yaramaktadır. Mac karakter seti ailesindeki birçok karakter seti etkilenmektedir - mac-farsi, mac-arabic ve mac-hebrew gibi. '
         },
         'urls'    : ['https://twitter.com/#!/hasegawayosuke/status/25984750035'],
         'howtofix'   : {
@@ -677,7 +683,8 @@ var items =
             'ja' : '',
             'ru' : 'Пользовательскому вводу никогда не должен быть разрешен тег <МЕТА> во избежание переопределения кодировки. В случае, если веб-сайт кодируется в одной из указанных кодировок, убедитесь, что вашему фильтру известно, что для Firefox символы &#60; (<) и &#188; эквивалентны, аналогично и в отношении других сиволов.',
             'cs' : 'Data od uživatele nesmí nikdy obsahovat META tag, kterým by mohl přenastavit kódování. Pokud je web nakódován v jedné z výše uvedených znakových sad, tak se ujistěte, že je vašemu filtru známo, že Firefox bere znaky &#60; (<) a &#188; jako totožné',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcı girdisinde asla <META> taglarına karakter setlerinin tekrar ayarlarlanmalarını sağlaması için izin verilmemelidir. Bu durumda etkilenen karakter setleri ile çözümleme yapan web sitelerinin filtreleri Firefox için geçerli olan bu durumdan haberdar olmalıdır - &#60; (<) ve &#188; denktir. - aynı zamanda diğer karakterlerde.'
         },            
         'browsers'   : {
             'firefox' : ['2.x', '3.x', '3.5', '3.6', '3.7']
@@ -693,7 +700,8 @@ var items =
             'ja' : '',
             'ru' : 'Исполнение JavaScript через переопределение объекта ReferenceError',
             'cs' : 'Vykonání JavaScriptu pomocí přepsaného objektu ReferenceError',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Üstüne yazılmış ReferenceError objesi ile JavaScript çalıştırma'
         },
         'data'       : '<script>ReferenceError.prototype.__defineGetter__(\'name\', function(){%js_alert%}),x</script>',
         'description': {
@@ -701,7 +709,8 @@ var items =
             'ja' : '',
             'ru' : 'Этот JavaScript-вектор показывает, как переопределяя объект ReferenceError и вызывая такого же рода ошибку впоследствии, можно вызвать выполнение JavaScript. Это, разумеется, действительно для большинства других объектов ошибкок и должнo приниматься во внимание при разработке JavaScript-песочниц и т.п.',
             'cs' : 'Tento JavaScriptový útok ukazuje, jak lze vyvolat vykonání JavaScriptu pomocí přepsání objektu ReferenceError a vyvolání takové chyby. Totéž platí analogicky pro většinu ostatních chybových objektů a je třeba na to dát pozor, pokud implementujete JS sandboxy či podobné techniky.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Bu JavaScript vektörü ReferenceError objesinin nasıl üstüne yazılacağını ve benzer şekilde ki bir hata ile JavaScript çalıştırılabileceğini göstermektedir. Diğer hata objeleri içinde geçerli olmakla beraber JavaScript sandbox\'ları uygulanırken göz önüne alınmalıdır.'
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Functions/ReferenceError'],
         'howtofix'   : {
@@ -709,7 +718,8 @@ var items =
             'ja' : '',
             'ru' : 'Не доверяйте DOM в случае, если пользователь может повлиять на неё через инъекции, включения JavaScript или другой доступ к свойствам, основанный на DOM.',
             'cs' : 'Nedůvěřujte DOMu v případě, že jej uživatel může ovlivnit vložením skriptu nebo jiným způsobem přístupu skrz DOM',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcı betik enjekte ederek, dahil ederek veya diğer DOM tabanlı özelliklere erişerek DOM\'u etkilendiğinde sakın DOM\'a güvenmeyin.'
         },            
         'browsers'   : {
             'opera': ['8.x', '9.x', '10.x'], 
@@ -728,7 +738,8 @@ var items =
             'ja' : '',
             'ru' : 'Выполнение JavaScript с помощью нестандарного свойства __noSuchMethod__',
             'cs' : 'Vykonání JavaScriptu proprietární metodou __noSuchMethod__',
-            'de' : ''
+            'de' : '',
+            'tr' : '__noSuchMethod__ özelliği ile JavaScript çalıştırma'
         },
         'data'       : '<script>Object.__noSuchMethod__ = Function,[{}][0].constructor._(\'%js_alert%\')()</script>',
         'description': {
@@ -736,7 +747,8 @@ var items =
             'ja' : '',
             'ru' : 'Firefox поддерживает нестандартное свойство __noSuchMethod__ , которое может использоваться в качестве перехватчика, когда вызывается несуществующий объект. В качестве такового может быть назначен объект Function, чтобы инициировать исполнение JavaScript без использовавания function(){...} .',
             'cs' : 'Firefox podporuje nestandardní metodu __noSuchMethod__, která může být využita jako spouštěcí ve chvíli, kdy je zavolána neexistující metoda objektu. Může jí být přiřazen objekt Function, čímž se útočník vyhne použití function(){...}.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Firefox standart dışı __noSuchMethod__ özelliğini desteklemektedir ki bu özellik mevcut olmayan obje methodu çağırıldığında engellemek için kullanılır. Function objesiyle ilişkilendirilerek function(){...} kullanmadan JavaScript çalıştırılmasını sağlar.'
         },
         'urls'    : ['https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object/noSuchMethod'],
         'howtofix'   : {
@@ -744,7 +756,8 @@ var items =
             'ja' : '',
             'ru' : '',
             'cs' : '',
-            'de' : ''
+            'de' : '',
+            'tr' : ''
         },          
         'browsers'   : {
             'firefox' : ['3.5', '3.6', '3.7', '4.0'] 
@@ -760,7 +773,8 @@ var items =
             'ja' : '',
             'ru' : 'Перехват ввода/DoS формы посредством onblur=focus() и autofocus',
             'cs' : 'DoS útok proti formuláři pomocí onblur=focus() a autofocus',
-            'de' : ''
+            'de' : '',
+            'tr' : 'onblue=focus() ve autofocus ile girdi çalma/form DoS'
         },
         'data'       : '<input onblur=%js_focus% autofocus><input>',
         'description': {
@@ -768,7 +782,8 @@ var items =
             'ja' : '',
             'ru' : 'Этот очень простой вектор показывает, как сочетание autofocus и onblur может сделать любую другую форму на целевом сайте бесполезной.',
             'cs' : 'Tento jednoduchý útok ukazuje, jak kombinace "autofocus" a "onblur" může snadno udělat formulář nepoužitelným.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Bu çok basit vektör "autofocus" ve "onblur"\'un kombinasyonunun nasıl hedef site üzerindeki diğer formları kullanışsız hale getirebileceğini göstermektedir.'
         },
         'urls'    : ['http://www.w3.org/Bugs/Public/show_bug.cgi?id=9602'],
         'howtofix'   : {
@@ -776,7 +791,8 @@ var items =
             'ja' : '',
             'ru' : 'Пользовательская разметка не должна содержать атрибут autofocus.',
             'cs' : 'Uživatelem zadávaný HTML kód by neměl obsahovat atribut "autofocus".',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcı tanımlı markup\'lar "autofocus" özelliğini içermemelidir.'
         },            
         'browsers'   : {
 		    'firefox' : ['4.0'],
@@ -794,7 +810,8 @@ var items =
             'ja' : '',
             'ru' : 'Наблюдение за формой с помощью атрибутов onformchange, onforminput и form',
             'cs' : 'Sledování formuláře pomocí atributů onformchange, onforminput a form',
-            'de' : ''
+            'de' : '',
+            'tr' : 'onformchange, onforminput ve form özellikleri ile form gözetimi'
         },
         'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X',
         'description': {
@@ -802,7 +819,8 @@ var items =
             'ja' : '',
             'ru' : 'Введите значение в поле ввода, чтобы увидеть, как атрибуты onforminput и onformchange могут контролировать активность в теге <FORM> даже за пределами этого тега с помощью атрибута form тега <button> .',
             'cs' : 'Pomocí atributů "onforminput" a "onformchange" lze monitorovat aktivitu ve formuláři - a to i dokonce mimo formulář, pomocí svázání atributem "form" u elementu BUTTON.',
-            'de' : ''
+            'de' : '',
+            'tr' : '"onforminput" ve "onformchange" özelliklerinin <FORM> hareketlerini nasıl gözlediklerini görebilmek için form elemanına bir değer giriniz - hatta <FORM> dışında <BUTTON> elemanının form özelliği ile.'
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#broadcast-formchange-events'],
         'howtofix'   : {
@@ -810,7 +828,8 @@ var items =
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский ввод не может содержать атрибуты onformchange, onforminput и form. Избегайте атрибут id в теге <FORM>.',
             'cs' : 'Ujistěte se, že uživatel nevloží HTML kód s atributy form, onformchange a onforminput. Nedávejte elementu FORM atribut "id".',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcıların form, "onformchange" ve "onforminput" dahil herhangi bir markup sağlamadığından emin olun. <FORM> elemanlarına "id" özelliği uygulamayın.'
         },                        
         'browsers'   : {
             'opera' : ['10.5', '10.6', 'mobile'] 
@@ -826,7 +845,8 @@ var items =
             'ja' : '',
             'ru' : 'Активный скриптинг с применением технологии HTML+TIME (1)',
             'cs' : 'Vykonání JavaScriptu via HTML+TIME bez uživatelské interakce (1)',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcı etkileşimi gerektirmeden HTML+TIME ile JavaScript çalıştırma (1)'
         },
         'data'       : '1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=%js_alert%&gt;`>',
         'description': {
@@ -834,7 +854,8 @@ var items =
             'ja' : '',
             'ru' : 'Этот слегка обфусцированный вектор использует HTML+TIME для исполнения JavaScript без взаимодействия с пользователем и без подозрительных обработчиков событий исключительно с помощью атрибутов attributename и to. ',
             'cs' : 'Tento lehce zamaskovaný útok používá HTML+TIME k vyvolání JavaScriptu bez zásahu uživatele - a také bez podezřelých obsluh událostí, pouze s atributy "attributename" a "to"',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Yakalanmayacak şekilde oluşturulmuş bu vektör kullanıcı etkileşimi gerektirmeden HTML+TIME kullanarak JavaScript çalıştırmaktadır - ve şüpheli olmayan olay yakalayıcıları olmadan "attributename" ve "to" hariç'
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533102%28VS.85%29.aspx'],
         'howtofix'   : {
