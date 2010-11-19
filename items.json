@@ -1558,7 +1558,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<div style="background:url(\'/foo/&#10);color:red;\');">XXX',
+        'data'       : '<div style="font-family:\'foo&#10;color:red;\';">XXX',
         'description': {
             'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* These are given in decimal codes.',
             'ja' : '',
