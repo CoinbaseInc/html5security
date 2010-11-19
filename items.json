@@ -3175,13 +3175,13 @@ var items =
         'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfscation', 'closing tag'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 92 - Breaking the functional notation on IE */
+    { /* ID 92 - Breaking the functional notation on IE (1) */
         'id'         : 92,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Breaking the functional notation on IE ',
+            'en' : 'Breaking the functional notation on IE (1) ',
             'ja' : '',
-            'ru' : 'Способ разорвать функциональную нотацию в IE',
+            'ru' : 'Способ разорвать функциональную нотацию в IE (1)',
             'cs' : '',
             'de' : ''
         },
@@ -3193,7 +3193,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['#111'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3816,6 +3816,39 @@ var items =
         },
         'tags'       : ['xss', 'javascript', 'svg', 'css', 'xml', 'style'],
         'reporter'   : 'LeverOne'
+    },
+    { /* ID 111 - Breaking the functional notation on GC and Safari (2) */
+        'id'         : 111,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Breaking the functional notation on GC and Safari (2)',
+            'ja' : '',
+            'ru' : 'Способ разорвать функциональную нотацию в GC и Safari (2)',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<div style="background:url(/f#&#127;oo/;color:red/*/foo.jpg);">X',        
+        'description': {
+            'en' : 'To break the functional notation "url()" can be used the following characters*: 1-8,10-31,127,9,32,40\n\nPay attention, for the simultaneous breaking of the functional notation and string you can use characters listed in #45.\n\n* These are given in decimal codes.',
+            'ja' : '',
+            'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использованы следующие символы*: 1-8,10-31,127,9,32,40\n\nОбратите внимание, что для одновременного прерывания функциональной нотации и строки вы можете использовать символы, перечисленные в #45.\n\n* В десятичных кодах.',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['#92', '#45'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome' : ['5.0', '6.0', '7.0'],
+            'safari' : ['4.x', '5.x']
+        },
+        'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
+        'reporter'   : 'LeverOne, .mario'
     }
 
 ]
