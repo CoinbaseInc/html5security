@@ -3927,7 +3927,7 @@ var items =
         },
         'data'       : '<x style="background:url(\'x&#1;;color:red;/*\')">XXX</x>',        
         'description': {
-            'en' : 'The functional notation breaker shown in #111 also works with quoted strings for several CSS properties. The following characters can be used to break the string and create a new property-value pair: 1-8,10-31 (decimal ASCII table index)',
+            'en' : 'The functional notation breaker shown in #111 also works with quoted strings for several CSS properties. The following characters can be used to break the string and create a new property-value pair: 1-8,10-31 and 127 (decimal ASCII table index)',
             'ja' : '',
             'ru' : '',
             'cs' : '',
