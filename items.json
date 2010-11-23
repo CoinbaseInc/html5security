@@ -3797,7 +3797,7 @@ var items =
             'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<marker id="a"  markerWidth="1000" markerHeight="1000" refX="0" refY="0">\n<a xlink:href="http://google.com">\n<set attributeName="xlink:href" to="javascript:alert(1)" begin="1s" />\n<rect width="1000" height="1000" fill="white"/>\n</a>\n</marker>\n</svg>'
         },
         'description': {
-            'en' : 'This example shows how the property "marker" allows to insert into the current document is an external link with JavaScript: URL.',
+            'en' : 'This example shows how SVG markers allows insertion of external links with JavaScript URI into the current document.',
             'ja' : '',
             'ru' : 'Показано, как свойство marker позволяет вставлять в текущий документ внешнюю ссылку с псевдоскриптом в качестве URL.',
             'cs' : '',
@@ -3862,7 +3862,7 @@ var items =
         },
         'data'       : '<div style="font-family:foo{bar;background:url(http://foo.f/oo};color:red/*/foo.jpg);">X',        
         'description': {
-            'en' : 'If any* part of the CSS-declaration (property or value) contains an left curly brace ({) which is not part of the string, this CSS-declaration will not be closed without using a right curly brace (}). In most browsers this feature can not be used to bypass filters, as they require to close the strings, functions and attributes inside blocks. On the contrary, IE does not require to close function inside such blocks. It is important to take into account especially when are filtered styles inside the tags attribute.\n\n*This rule has an exception for IE (see the letters [a] and [b] of #60).',
+            'en' : 'If any* part of the CSS-declaration (property or value) contains a left curly brace ({) which is not part of the string, the CSS-declaration will not be closed without using a matching right curly brace (}). In most browsers this feature can not be used to bypass filters, as they require to close the strings, functions and attributes inside blocks. On the contrary, IE does not require to close function inside such blocks. It is important to take into account especially when are filtered styles inside the tags attribute.\n\n*This rule has an exception for IE (see the letters [a] and [b] of #60).',
             'ja' : '',
             'ru' : 'Если какая-либо* часть CSS-декларации содержит левую фигурную скобку, не являющуюся частью строки, в этом случае CSS-декларация не может быть завершена без использования правой фигурной скобки (}). В большинстве браузеров данная особенность не может быть использована для обхода фильтрации, поскольку они требуют завершения всех строк, функций и атрибутов, открытых внутри блока. Напротив, IE не требует закрывать функцию внутри такого блока. Это нужно принимать во внимание при фильтрации стилей внутри атрибута тега, где с первого взгляда СSS-атрибуты не могли бы встретиться в принципе.\n\n*Это правило имеет исключение для IE (смотрите литеры [a] и [b] в #60).',
             'cs' : '',
@@ -3894,7 +3894,7 @@ var items =
         },
         'data'       : '<div id="x">XXX</div>\n<style>\n\n#x{font-family:foo[bar;color:green;}\n\n#y];color:red;{}\n\n</style>',        
         'description': {
-            'en' : 'According to established practice, selector is part of the CSS, which is filtered less than others. This example shows how to leave open the CSS-block, get to the selector and inject the code in the light-filtered area.',
+            'en' : 'According to established practice selectors are usually filtered less thoroughly by filtering software than other parts of the language. This example shows how to leave a CSS-block open to get to the selector and inject the code in the light-filtered area.',
             'ja' : '',
             'ru' : 'Согласно устоявшейся практике, самой слабофильтруемой областью в фильтрах, основанных на различной фильтрации различных синтаксических групп таблиц стилей, является селектор. В примере показан способ не дать закрыть CSS-блок, добраться до селектора и внедрить код в недостаточно защищенной зоне.',
             'cs' : '',
@@ -3915,7 +3915,4 @@ var items =
         'tags'       : ['xss', 'css', 'firefox', 'opera', 'trick', 'selector', 'attribute'],
         'reporter'   : 'LeverOne'
     }
-
-
-
 ]
