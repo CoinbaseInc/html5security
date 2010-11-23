@@ -3829,7 +3829,7 @@ var items =
         },
         'data'       : '<div style="background:url(/f#&#127;oo/;color:red/*/foo.jpg);">X',        
         'description': {
-            'en' : 'To break the functional notation "url()" can be used in combination with the following characters*: 1-8,10-31,127,9,32,40\n\nNote that simultaneous breaking of functional notation and strings can be accomplished by the characters listed in #45.\n\n* Characters are given as decimal ASCII table index.',
+            'en' : 'To break the functional notation "url()" can be used in combination with the following characters*: 1-8,10-31,127,9,32,40\r\nNote that simultaneous breaking of functional notation and strings can be accomplished by the characters listed in #45.\r\n* Characters are given as decimal ASCII table index.',
             'ja' : '',
             'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использованы следующие символы*: 1-8,10-31,127,9,32,40\n\nОбратите внимание, что для одновременного прерывания функциональной нотации и строки вы можете использовать символы, перечисленные в #45.\n\n* В десятичных кодах.',
             'cs' : '',
