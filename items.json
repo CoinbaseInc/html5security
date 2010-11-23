@@ -1411,7 +1411,7 @@ var items =
             'en' : 'Error handler via empty list-style and load handler via empty content',
             'ja' : '',
             'ru' : 'Свойства content, list-style как способ автоматического исполнения кода',
-            'cs' : '',
+            'cs' : 'Událost error při prázdném list-style a událost load při prázdném content',
             'de' : ''
         },
         'data'       : '<li style=list-style:url() onerror=%js_alert%>\n<div style=content:url(data:image/svg+xml,%3Csvg/%3E);visibility:hidden onload=%js_alert%></div>',
@@ -1419,7 +1419,7 @@ var items =
             'en' : 'Opera 10.5+ and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg).',
             'ja' : '',
             'ru' : 'Opera 10.5+ и ниже генерирует событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload.',
-            'cs' : '',
+            'cs' : 'Opera 10.5+ a starší verze spustí událost error pro tag <LI> v případě, že není možné pomocí atrinutu stylu načíst background URL. Stejně se chová i "list-style-image". V Opeře 10.10 a starších verzích fungují stejně dobře i jiné kombinace stylů jako například background:url() nebo background-image:url(). Funguje také kompinace jako content:url(svg).',
             'de' : ''
         },
         'urls'    : [],
@@ -1443,7 +1443,7 @@ var items =
             'en' : 'Link hijacking via <BASE> and JavaScript URI',
             'ja' : '',
             'ru' : 'Перехват ссылки с помощью тега <BASE> и псевдоскипта',
-            'cs' : '',
+            'cs' : 'Hijacking odkazu skrz tag <BASE> a JavaScript URI',
             'de' : ''
         },
         'data'       : '<head><base href="javascript://"></head><body><a href="/./,%js_alert%//#">XXX</a></body>',
@@ -1451,7 +1451,7 @@ var items =
             'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents.',
             'ja' : '',
             'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах.',
-            'cs' : '',
+            'cs' : 'Hijacking odkazu v tagu <BASE> s JavaScriptovými URI pracuje v Internet Exploreru, Opeře (O8-10.5 v případě, že URL odkazu začíná na #) a v Safari. Ke spuštění kódu je vyžadována spoluúčast uživatele. Navíc je pro správnou funkci v jednotlivých prohlížečích potřeba použít mírně upravený zápis.',
             'de' : ''
         },
         'urls'    : [],
@@ -1459,7 +1459,7 @@ var items =
             'en' : 'User submitted HTML should not allow usage of <BASE> tags. In case they are necessary no non-HTTP/non-relative URL schemes should be allowed.',
             'ja' : '',
             'ru' : 'Пользовательская разметка не должна содержать тег <BASE>. Если это возможно, должны быть запрещены все URL, не являющиеся относительными или не начинающиеся с "http://".',
-            'cs' : '',
+            'cs' : 'HTML vkládané uživatelem by nemělo mít povoleno použití tagu <BASE>. V případě, že je jeho použití nezbytně nutné, měla by se zkontrolovat hodnota odkazu, která by měla být buďto relativní nebo by měla začínat na http://',
             'de' : ''
         },            
         'browsers'   : {
@@ -1477,7 +1477,7 @@ var items =
             'en' : 'Opera 10 SVG font XSS',
             'ja' : '',
             'ru' : 'XSS через SVG-шрифт в Opera 10',
-            'cs' : '',
+            'cs' : 'XSS užitím SVF fontů v Opera 10',
             'de' : ''
         },
         'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_front_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
@@ -1492,7 +1492,7 @@ var items =
             'en' : 'Opera 10.00 and later minor versions allow using SVG fonts and will - as soon as the font file has loaded even execute embedded JavaScript. The current example utilizes a load event handler to execute the JavaScript without user interaction as soon as the font file has been fully loaded.',
             'ja' : '',
             'ru' : 'Opera 10.00 и меньшие версии вплоть до 9-й разрешают использовать SVG-шрифты с активным содержимым. При этом, как только будет загружен файл шрифта, автоматически выполнится внедренный в него JavaScript, что и показано в данном примере.',
-            'cs' : '',
+            'cs' : 'Opera 10.X podporuje použití SVG fontů a umožňuje spustit kód JavaScriptu ve chvíli načtení souboru s fontem. Uvedený příklad spouští vložený kód při zpracování události load po načtení souboru s fontem. ke spuštění kódu není vyžadována uživatelská interakce.',
             'de' : ''
         },
         'urls'    : [],
@@ -1516,7 +1516,7 @@ var items =
             'en' : 'Opera @import based XSS inside attribute selectors',
             'ja' : '',
             'ru' : 'XSS с помощью @import внутри атрибута селектора',
-            'cs' : '',
+            'cs' : 'Opera - XSS založené na @import uvnitř selektorů atributu',
             'de' : ''
         },
         'data'       : '<style>*[{}@import\'%css_path%?]</style>X',
@@ -1531,7 +1531,7 @@ var items =
             'en' : 'Opera 10 and later version including latest Opera 10.5 allow breaking out an attribute selector with {} and use @import declarations afterwards. The MIME type for the imported file does not matter - also it can be loaded from arbitrary domains. The imported file contains CSS code to apply a JavaScript URI to all elements on the page to hijack any incoming click.',
             'ja' : '',
             'ru' : 'Opera 10 и более поздние версии, включая Opera 10.5, позволяют прервать атрибут селектора с помощью конструции {} и использовать затем правило @import. MIME-тип и домен импортируемого файла значения не имеют. Данный файл содержит CSS код, перехватывающий нажатие на любом теге для выполнения JavaScript. Смысл закрывающей квадратной скобки состоит в создании видимости целостности атрибута селектора.',
-            'cs' : '',
+            'cs' : 'Opera 10 a novější verze včetně nejnovější 10.5 umožňují vyskočit ze sektoru atributu použitím {} a následné použití deklarace @import. MIME typ importovaného souboru není rozhodující, stejně jako jeho umístění v libovolné doméně. Importovaný soubor může obsahovat CSS kód, který připojí odkaz na javascript: ke všem prvku na stránce. To může vést ke spuštění skritpu po kliknutí na tyto prvky.',
             'de' : ''
         },
         'urls'    : [],
@@ -1539,7 +1539,7 @@ var items =
             'en' : 'Make sure in user submitted CSS the contents of attribute selectors are properly escaped with backslashes. Also make sure to use a CSS property:value whitelist to forbid properties like -o-link and -o-link-source.',
             'ja' : '',
             'ru' : 'Убедитесь, что в пользовательских стилях содержание атрибута селектора надлежащим образом эскейпируется обратными слешами. Также убедитесь, что используете белый список при работе с CSS, чтобы не допустить такие свойства, как -o-link и -o-link-source.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že v uživatelském CSS je obsah atributů vhodně escapován použitím zpětného lomítka. Také překontrolujte použití konstrukcí vlastnost:hodnota vrámci whitelistu a zabraňte použití nebezpečných vlastností, jako jsou -o-link a -o-link-source.',
             'de' : ''
         },            
         'browsers'   : {
@@ -1555,7 +1555,7 @@ var items =
             'en' : 'CSS-string breaking',
             'ja' : '',
             'ru' : 'Разрыв CSS-строки',
-            'cs' : '',
+            'cs' : 'Přerušení textového řetězce v CSS',
             'de' : ''
         },
         'data'       : '<div style="font-family:\'foo&#10;color:red;\';">XXX',
@@ -1563,7 +1563,7 @@ var items =
             'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* These are given in decimal codes.',
             'ja' : '',
             'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей. Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим совместимости с IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* В десятичных кодах.',
-            'cs' : '',
+            'cs' : 'Opera, Firefox a ostatní webové prohlížeče umožní přerušení textového řetězce v css použitím symbolu pro nový řádek. V CSS2+ nemohou řetězce obsahovat přímo vložený přechod na nový řádek.\n\nZnaky* akceptované pro přerušení řetězců v css:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n*Uvedeno v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : [],
@@ -1591,7 +1591,7 @@ var items =
             'en' : 'Alternative css-syntax in Internet Explorer',
             'ja' : '',
             'ru' : 'Альтернативный css-синтаксис в Internet Explorer',
-            'cs' : '',
+            'cs' : 'Alternativní syntaxe CSS v Internet Eploreru',
             'de' : ''
         },
         'data'       : '<div style="font-family:foo}color=red;">XXX',
@@ -1599,7 +1599,7 @@ var items =
             'en' : 'Internet Explorer allows to use right curly brace (}) as a group separator. A CSS declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
             'ja' : '',
             'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
-            'cs' : '',
+            'cs' : 'Internet Explorer umožňuje použít pravou složenou závorku (}) jako oddělovače skupin. Deklarace CSS se může v quirk režimu skládat z názvu vlastnosti, která je následována znakem rovná se (=).',
             'de' : ''
         },
         'urls'    : [],
@@ -1623,7 +1623,7 @@ var items =
             'en' : 'SVG file executing JavaScript via <SCRIPT> tag',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG в теге <SCRIPT>',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu v SVG užitím tagu <SCRIPT>',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
@@ -1631,7 +1631,7 @@ var items =
             'en' : 'SVG files can force the user agent to execute JavaScript via plain <SCRIPT> tags inside any SVG element without user interaction',
             'ja' : '',
             'ru' : 'SVG-файлы могут заключать в себе обычные теги <SCRIPT>.',
-            'cs' : '',
+            'cs' : 'SVG soubory mohou spustit kód JavaScriptu obsažený v tagu <SCRIPT> bez interakce uživatele.',
             'de' : ''
         },
         'urls'    : [],
@@ -1639,7 +1639,7 @@ var items =
             'en' : 'SVG files should not be treated as images - especially when coming to uploads. An SVG file can contain arbitrary HTML data as well as event handlers in native elements',
             'ja' : '',
             'ru' : 'SVG-файлы не должны рассматриваться в качестве изображений - особенно, когда дело касается загрузки. SVG-файл может содержать произвольные данные HTML, а также обработчики событий в собственных элементах.',
-            'cs' : '',
+            'cs' : 'SVG soubory by neměly být považovány za obrázky - zvláště v případech kdy přichází přes upload. SVG soubor může obsahovat jakýkoliv HTML kód včetně zracování událostí u nativních prvků.',
             'de' : ''
         },                        
         'browsers'   : {
