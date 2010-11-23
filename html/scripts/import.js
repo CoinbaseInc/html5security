@@ -91,8 +91,8 @@
                         if(c === 'name'){
                             container.find('.'+c).append('<a href="#'+items[item]['id']
                                 +'">#'+items[item]['id']+'</a>');
-                            container.find('.'+c).append('<a target="_blank" href="edit/#'+items[item]['id']
-                                +'">edit</a>')                                
+                            container.find('.'+c).append('<a target="_blank" href="test/#'+items[item]['id']
+                                +'">test</a>')                                
                         }
                     } else if(typeof items[item][c] === 'string') {
                         container.find('.'+c).html(sanitize(items[item][c]));   
