@@ -3193,7 +3193,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'urls'    : ['#111'],
+        'urls'    : ['#111', '#112'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3849,6 +3849,107 @@ var items =
         },
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
         'reporter'   : 'LeverOne, .mario'
+    },
+    { /* ID 112 - Breaking the functional notation on IE (3) */
+        'id'         : 112,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Breaking the functional notation on IE (3)',
+            'ja' : '',
+            'ru' : 'Способ разорвать функциональную нотацию в IE (3)',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<div style="font-family:foo{bar;background:url(http://foo.f/oo};color:red/*/foo.jpg);">X',        
+        'description': {
+            'en' : 'If any* part of the CSS-declaration (property or value) contains an left curly brace ({) which is not part of the string, this CSS-declaration will not be closed without using a right curly brace (}). In most browsers this feature can not be used to bypass filters, as they require to close the strings, functions and attributes inside blocks. On the contrary, IE does not require to close function within such blocks. It is important to take into account especially when are filtered styles inside the attribute.\n\n*This rule has an exception for IE (see the letters [a] and [b] of #60).',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['#92', '#46'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome' : ['5.0', '6.0', '7.0'],
+            'safari' : ['4.x', '5.x']
+        },
+        'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 112 - Breaking the functional notation on IE (3) */
+        'id'         : 112,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Breaking the functional notation on IE (3)',
+            'ja' : '',
+            'ru' : 'Способ разорвать функциональную нотацию в IE (3)',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<div style="font-family:foo{bar;background:url(http://foo.f/oo};color:red/*/foo.jpg);">X',        
+        'description': {
+            'en' : 'If any* part of the CSS-declaration (property or value) contains an left curly brace ({) which is not part of the string, this CSS-declaration will not be closed without using a right curly brace (}). In most browsers this feature can not be used to bypass filters, as they require to close the strings, functions and attributes inside blocks. On the contrary, IE does not require to close function within such blocks. It is important to take into account especially when are filtered styles inside the tags attribute.\n\n*This rule has an exception for IE (see the letters [a] and [b] of #60).',
+            'ja' : '',
+            'ru' : 'Если какая-либо* часть CSS-декларации содержит левую фигурную скобку, не являющуюся частью строки, в этом случае CSS-декларация не может быть завершена без использования правой фигурной скобки (}). В большинстве браузеров данная особенность не может быть использована для обхода фильтрации, поскольку они требуют завершения всех строк, функций и атрибутов, открытых внутри блока. Напротив, IE не требует закрывать функцию внутри такого блока. Это нужно принимать во внимание при фильтрации стилей внутри атрибута тега, где с первого взгляда СSS-атрибуты не могли бы встретиться в принципе.\n\n*Это правило имеет исключение для IE (смотрите литеры [a] и [b] в #60).',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['#46', '#60'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome' : ['5.0', '6.0', '7.0'],
+            'safari' : ['4.x', '5.x']
+        },
+        'tags'       : ['xss', 'css', 'internet explorer', 'trick', 'notation'],
+        'reporter'   : 'LeverOne'
+    },
+    { /* ID 113 - Jump into the selector via attribute delimiters  */
+        'id'         : 113,
+        'category'   : 'css', 
+        'name'       : {
+            'en' : 'Jump into the selector via attribute delimiters',
+            'ja' : '',
+            'ru' : 'Прыжок в селектор с использованием ограничителей CSS-атрибутов.',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<div id="x">XXX</div>\n<style>\n\n#x{font-family:foo[bar;color:green;}\n\n#y];color:red;{}\n\n</style>',        
+        'description': {
+            'en' : 'According to established practice, selector is part of the CSS, which is filtered less than others. This example shows how to leave open the CSS-block, get to the selector and inject the code in the light-filtered area.',
+            'ja' : '',
+            'ru' : 'Согласно устоявшейся практике, самой слабофильтруемой областью в фильтрах, основанных на различной фильтрации различных синтаксических групп таблиц стилей, является селектор. В примере показан способ не дать закрыть CSS-блок, добраться до селектора и внедрить код в недостаточно защищенной зоне.',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['#27'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox' : ['2.x', '3.x', '4.0'],
+            'opera'   : ['9.x','10.x', 'mobile']
+        },
+        'tags'       : ['xss', 'css', 'firefox', 'opera', 'trick', 'selector', 'attribute'],
+        'reporter'   : 'LeverOne'
     }
+
+
 
 ]
