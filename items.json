@@ -2288,7 +2288,7 @@ var items =
             'en' : 'Opera XML-stylesheets executing JavaScript (2)',
             'ja' : '',
             'ru' : 'Вызов javascript из тега xml-stylesheet в Opera',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz XML-stylesheet (2)',
             'de' : ''
         },
         'data'       : '<?xml version="1.0"?>\n<?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version=\'1.0\' xmlns:xsl=\'http://www.w3.org/1999/XSL/Transform\' id=\'xss\'%3E%3Cxsl:output method=\'html\'/%3E%3Cxsl:template match=\'/\'%3E%3Cscript%3E%js_alert%%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?>\n<root/>',
@@ -2296,7 +2296,7 @@ var items =
             'en' : 'Opera supports xml-stylesheet via data URIs. There are many ways to execute javascript using the XSL (XSLT). If you put this code in an external file on the same domain, then it will work in all browsers. It is also possible appeal to the code of the stylesheet by id (href = "# xss"), when the stylesheet implemented in the current document.',
             'ja' : '',
             'ru' : 'Opera поддерживает загрузку xml-таблицы стилей с помощью data-схемы. Существует очень много способов выполнить javascript, используя XSL (XSLT). Если вы разместите приведенный код таблицы стилей во внешнем файле, расположенном на том же домене, то он cработает во всех браузерах. Допустимо также обращение к коду таблицы стилей посредством идентификатора (href="#xss"), если таблица стилей внедрена в текущий документ.',
-            'cs' : '',
+            'cs' : 'Opera podporuje xml-stylesheet s direktivou data:. To nabízí mnoho cest pro spuštění JavaScriptu užitím XSL (XSLT). Pokud uložíš tento kód do externího souboru ve stejné doméně, pak bude fungovat ve všech webových prohlížečích. Také je možné se odvolat na id stylu, který je vložen v aktuálním dokumentu (href="#xss".',
             'de' : ''
         },
         'urls'    : [],
@@ -2322,7 +2322,7 @@ var items =
             'en' : 'XML ATTLIST declaration causing JavaScript execution',
             'ja' : '',
             'ru' : 'XML ATTLIST декларация влечет исполнение JavaScript',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu deklarací XML ATTLIST',
             'de' : ''
         },
         'data'       : '<!DOCTYPE x [\r\n\t<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%js_alert%">\r\n]><img />',
@@ -2330,7 +2330,7 @@ var items =
             'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for matching tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
             'ja' : '',
             'ru' : 'XML-декларация списка атрибутов (ATTLIST declaration) - еще один вариант использования возможности влиять на DOCTYPE в xml-документе. Такие инъекции имеют практическое значение в тех случаях, когда пользователям предоставлена возможность загружать определенные файлы на сервер, подвергающиеся фильтрации. В данном примере мы видим, определение атрибутов, которые появляются у тега по умолчанию при его дальнейшем использовании.',
-            'cs' : '',
+            'cs' : 'Deklarace XML ATTLIST může být použita k vytvoření atributů a přiřazení hodnot u odpovídajících tagů uvnitř deklarace DOCTYPE. Volbou správné kombinace názvu a atributu umožní ATTLIST deklarace spustit kód JavaScriptu bez spoluúčasti uživatele.',
             'de' : ''
         },
         'urls'    : ['http://xmlwriter.net/xml_guide/attlist_declaration.shtml', '#64', '#76'],
@@ -2338,7 +2338,7 @@ var items =
             'en' : 'In case a website is being delivered as XML or XHTML make sure an attacker has no possibility to inject data into the DOCTYPE or create new ATTLIST directives.',
             'ja' : '',
             'ru' : 'В случае, если страница отдается сервером как XML или XHTML, убедитесь, что атакующий не может внедрять данные в область DOCTYPE.',
-            'cs' : '',
+            'cs' : 'V případě, že jsou webové stránky definovány jako XML nebo XHTML se ujistěte, že útočník nemá možnost vložit data do DOCTYPE, nebo vytvořit nové ATTLIST direktivy.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2357,7 +2357,7 @@ var items =
             'en' : 'Passive JavaScript execution via XLinks',
             'ja' : '',
             'ru' : 'Пассивный скриптинг с помощью XLinks',
-            'cs' : '',
+            'cs' : 'Spuštění pasivního JavaScriptu skrz XLinks',
             'de' : ''
         },
         'data'       : '<doc xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:html="http://www.w3.org/1999/xhtml">\r\n\t<html:style /><x xlink:href="%js_uri_alert%" xlink:type="simple">XXX</x>\r\n</doc>',
@@ -2365,7 +2365,7 @@ var items =
             'en' : 'Gecko based browsers like Firefox allow using XLinks. Those can be equipped with a JavaScript URI to execute JavaScript in case the user clicks on one of those XLinks.', 
             'ja' : '',
             'ru' : 'В Gecko-браузерах, таких как Firefox, реализована частичная поддержка XLinks. При этом XLink разрешает использовать псевдоскрипт в качестве URL.',
-            'cs' : '',
+            'cs' : 'Prohlížeče založené na G-čku, jako je třeba Firefox, mohou používat XLink. Ty mohou obsahovat URI v podobě direktivy javascript:, jejichž kód se spustí po kliknutí na některý z těchto XLinků.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xlink/', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/', '#81', '#87'],
@@ -2389,7 +2389,7 @@ var items =
             'en' : 'Opera WML JavaScript execution via timer event',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в WML с помощью события timer',
-            'cs' : '',
+            'cs' : 'Opera WML - Spuštění JavaScriptu skrz událost timer',
             'de' : ''
         },
         'data'       : '<card xmlns="http://www.wapforum.org/2001/wml"><onevent type="ontimer"><go href="%js_uri_alert%"/></onevent><timer value="1"/></card>',
@@ -2397,7 +2397,7 @@ var items =
             'en' : 'Opera supports WML files - Wireless Markup Language. As soon as a file has the extension .wml Opera assumes it\'s a WML and renders it accordingly. With a timer event and a connected redirect it\'s possible to execute JavaScript without user interaction.', 
             'ja' : '',
             'ru' : 'Opera реализовала поддержку WML (языка беспроводной разметки) и специальных файлов с расширением .wml, разметка в которых по умолчанию будет рассматриваться как принадлежащая к пространству имен wml. Событие timer в соединении с перенаправлением позволяет достичь исполнения JavaScript без взаимодействия с пользователем.',
-            'cs' : '',
+            'cs' : 'Opera podporuje WML soubory (Wireless Markup Language). Ve chvíli, kdy má soubor příponu wml, předpokládá Opera, že jde o wml a odpovídajícím způsobem jej zpracovává. Pomocí časovače a využitím následného přesměrování je možné spustit kód JavaScriptu bez zásahu uživatele.',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/default.asp', 'http://www.w3schools.com/wmlscript/default.asp','#83'],
@@ -2421,7 +2421,7 @@ var items =
             'en' : 'JavaScript execution via IE filters and onfilterchange',
             'ja' : '',
             'ru' : 'исполнение JavaScript с использованием IE-фильров и onfilterchange',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz IE filtr a onfilterchange',
             'de' : ''
         },
         'data'       : '<div style=width:1px;filter:glow onfilterchange=%js_alert%>x',
@@ -2429,7 +2429,7 @@ var items =
             'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation. In compatibility mode to IE8+ you can use the property "-ms-filter".', 
             'ja' : '',
             'ru' : 'Данный вектор из числа тех, которые позволяют наиболее эффективно использовать возможность изменять разметку внутри уязвимого тега без возможности выйти за его пределы. Вызов события происходит даже при однократном назначении фильтра. Обратите внимание, что синтаксис фильтров может принимать такую сокращенную форму, несмотря на отсутствие упоминания об этом в документации. Универсальность данного способа ограничена только тем, что уязвимый тег должен иметь отображаемое содержимое, к которому применим фильтр. В режиме совместимости с IE8+ вы можете использовать свойство -ms-filter.',
-            'cs' : '',
+            'cs' : 'Jak ukazuje příklad, je někdy možné spustit událost filterchange pomocí pouze jednoho filtru. také je použit krátký zápis filtru, který je podporován všemi verzemi IE. V režimu kompatibility pro IE8 + můžete použít vlastnost "-ms-filter".',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms532847%28VS.85%29.aspx'],
