@@ -2104,7 +2104,7 @@ var items =
             'en' : 'CSS-encoding and escaping',
             'ja' : '',
             'ru' : 'CSS-кодирование и добавление обратного слеша',
-            'cs' : '',
+            'cs' : 'Kódování a escapování znaků v CSS',
             'de' : ''
         },
         'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX',
@@ -2119,7 +2119,7 @@ var items =
             'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nProperties in IE may contain encoded null-character (\\0).\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character. Note: in CSS-strings \\x == x, but \\n != n\nIn FF You can put a backslash before the newline-characters: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \nOption of writing a null-character in Internet Explorer is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
             'ja' : '',
             'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\n Свойства в IE могут содержать закодированный нулевой символ (\\0).\nВажно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши. Внимание: в CSS-строках \\x == x, но \\n != n \n В FF вы можете эскейпировать символы перевода строки и/или возврата каретки: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для IE : col\\&#160or:red \n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
-            'cs' : '',
+            'cs' : '[a] Kódování.\n\nJsou pouze tři triky pro kódování znaků.\n[1] Je možné měnit počet nul: \\0A -> \\00000A \n[2] Je možné měnit velikost písmen: \\0A -> \\0a \n[3] Je možné změnit bílý znak* akceptovaný jako oddělovač po zakódovaném znaku.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nVlastnosti v IE mohou obsahovat zakódovaný nulový znak (\\0).\nMnožství použitelných kódování se liší od použitého prohlížeče. Například, FF nemůže kódovat závorky, které jsou součástí zápisu funkce.\n\n[b] Escapování.\n\nKromě toho můžete dát zpětné lomítko i před písmeno. Poznámka: v CSS řetězcích \\x == x, ale \\n != n\nVe FF můžete vložit zpětné lomítko před znak nového řádku: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \nMožnost zápisu nulového znaku v Internet Exploreru je escapování nějakého jiného bílého znaku, který je akceptován jako oddělovač: col\\&#160or:red \n\nSamozřejmě je možné tyto metody kombinovat i s jinými způsoby kódování (například změnou velikosti originálních znaků).\n\n* Hodnoty jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
@@ -2145,7 +2145,7 @@ var items =
             'en' : 'Simulating attribute in IE',
             'ja' : '',
             'ru' : 'Симуляция атрибута в IE',
-            'cs' : '',
+            'cs' : 'Simulace atributů v IE',
             'de' : ''
         },
         'data'       : '<x \'="foo"><x foo=\'><img src=x onerror=alert(1)//\'>',
@@ -2153,7 +2153,7 @@ var items =
             'en' : 'This vector is simulated using in IE a single quote as an attribute to trick filters',
             'ja' : '',
             'ru' : 'Этот вектор симулирует использование в IE одиночной кавычки в качестве атрибута, чтобы обмануть фильтры.',
-            'cs' : '',
+            'cs' : 'Tento vektor předstírá v IE vložení atributu užitím apostrofů. Používá se pro oklamaní bezpečnostních filtrů.',
             'de' : ''
         },
         'urls'    : ['#102', '#108'],
@@ -2177,7 +2177,7 @@ var items =
             'en' : 'JavaScript execution via src attribute',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью атрибута src',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu prostřednictvím atributu src',
             'de' : ''
         },
         'data'       : '<embed src="%js_uri_alert%">\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%">',
@@ -2185,7 +2185,7 @@ var items =
             'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
             'ja' : '',
             'ru' : 'Большинство браузеров поддерживают псевдоскипт в атрибуте src тега <IFRAME> - и это ожидаемое поведение. Кроме того, некоторые их них могут исполнять JavaScript в атрибуте SRC также других тегов - однако такие возможности имеют тенденцию к снижению. В Opera 10.5+ уже не поддерживается псевдоскрипт в тегах <IMG> и <EMBED>.  ',
-            'cs' : '',
+            'cs' : 'Mnoho webových prohlížečů umožňuje spuštění JavaScriptu prostřednictvím atributu "src" u tagu <IFRAME>, což je očeknáné chování. Zajímavé ovšem je, že může být tohoto způsobu použito také u jiných tagů. Opera 10, Chrome a Firefox spustí JavaScript v tagu <EMBED>. Opera 10 a Opera Mobile spustí JavaScript v atributu "src" také u tagů <SCRIPT>, <IMG> a <IMAGE> stejně jako starší verze Internet Exploreru.',
             'de' : ''
         },
         'urls'    : [],
@@ -2193,7 +2193,7 @@ var items =
             'en' : 'Make sure "src" attributes can never contain non-HTTP-URLs to prevent XSS or worse.',
             'ja' : '',
             'ru' : 'Убедитесь, что атрибут src пользовательской разметки не может содержать URL, не начинающийся "http://".',
-            'cs' : '',
+            'cs' : 'V rámci prevence před XSS se ujistěte, že není možné u atributů "src" vložit URL používající jiný protokol než HTTP://',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2213,7 +2213,7 @@ var items =
             'en' : 'Arbitrary payload injection via XML External Entities (XXE)',
             'ja' : '',
             'ru' : 'Инъекция удаленного кода через внешний XML-эквивалент.',
-            'cs' : '',
+            'cs' : 'Vložení libovolného payloadu skrz XML Externí Entity (XXE)',
             'de' : ''
         },
         'data'       : '<!DOCTYPE x[<!ENTITY x SYSTEM "%xxe_path%">]><y>&x;</y>',
@@ -2228,7 +2228,7 @@ var items =
             'en' : 'Chrome and Safari allow using external XML entities to reference payload for an entity. The example shows that the entity &x; is now being filled with the content of the given file. The document must be delivered as XML or XHTML.',
             'ja' : '',
             'ru' : 'Chrome и Safari разрешают использовать внешние ссылки на источники, которые определяют XML-эквиваленты. Это приводит к тому, что в данном примере эквивалент &x; заполняется содержимым внешнего файла. Документ должен быть отдан в качестве XML или XHTML.',
-            'cs' : '',
+            'cs' : 'Chrome a Safari umožňují použití externích XML entit k referenci payloadu pro entitu. Příklad ukazuje entitu &x;, která je naplněna obsahem souboru. Dokument musí být dodán jako XML nemo XHTML.',
             'de' : ''
         },
         'urls'    : ['http://xmlwriter.net/xml_guide/entity_declaration.shtml', 'http://www.w3.org/TR/REC-xml/', '#67', '#76'],
@@ -2236,7 +2236,7 @@ var items =
             'en' : 'In case an attacker can inject data into the DOCTYPE area of the targeted website it\'s easy to fool filtering mechanisms since the actual payload is hidden in a harmless looking entity. Make sure no injections in that area are possible.',
             'ja' : '',
             'ru' : 'В случае, если атакующий может внедрять данные в область DOCTYPE целевого сайта, создается возможность простейшего обхода механизма фильтрации, поскольку полезная нагрузка скрывается за безопасным на первый взгляд эквивалентом. Убедитесь, что инъекции невозможны в данной области.',
-            'cs' : '',
+            'cs' : 'V případě, že útočník může aplikovat data do oblasti DOCTYPE cílové webové stránky, je snadné oklamat filtrovací mechanismy, protože skutečný payload je skryt v neškodně vyhlížející entitě. Ujistěte se, že nejsou možné žádné injekce v této oblasti.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2253,7 +2253,7 @@ var items =
             'en' : 'SVG element allows automatic execution of onload attribute without other SVG elements.',
             'ja' : '',
             'ru' : 'SVG-элементы и обработчик onload',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu událostí load v elementu SVG',
             'de' : ''
         },
         'data'       : '<svg onload="%js_uri_alert%" xmlns="http://www.w3.org/2000/svg"></svg>',        
@@ -2261,7 +2261,7 @@ var items =
             'en' : 'SVG tags allow code to be executed with onload without any other elements.',
             'ja' : '',
             'ru' : 'SVG-элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список обратитесь к приведенной документации.',
-            'cs' : '',
+            'cs' : 'Element SVG umožňuje automatické spuštění skriptu událostí load bez vložení dalších SVG dat.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
@@ -2269,7 +2269,7 @@ var items =
             'en' : 'Not really a bug to fix, this is desired behaviour and only increases XSS scope.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Toto není tak docela chyba k opravě. Jde o žádoucí chování, které ovšem rozšiřuje možnosti XSS.',
             'de' : ''
         },                        
         'browsers'   : {
