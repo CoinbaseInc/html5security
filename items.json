@@ -1870,7 +1870,7 @@ var items =
             'en' : 'Self-hijacking JSON literals',
             'ja' : '',
             'ru' : 'Самозахватывающий JSON-литерал',
-            'cs' : 'Self-hijacking JSON znaky',
+            'cs' : 'Self-hijacking textového řetězce JSON',
             'de' : ''
         },
         'data'       : '<script>[{\'a\':Object.prototype.__defineSetter__(\'b\',function(){alert(arguments[0])}),\'b\':[\'secret\']}]</script>',
@@ -1878,7 +1878,7 @@ var items =
             'en' : 'In case parts of a JSON literal are controlled by user input there\'s a risk to allow auto-harvesting values from later object members.',
             'ja' : '',
             'ru' : 'Даже в случае, если часть JSON-литерала будет подконтрольна пользовательскому вводу, существует риск автоматического получения значений в т.ч. последующих членов объекта.',
-            'cs' : 'Pokud jsou textové řetězce vložené uživatelem součástí JSON řetězců, představuje sekvence znaků \' bezpečnostní riziko.',
+            'cs' : 'Pokud jsou textové řetězce vložené uživatelem součástí JSON řetězců, představuje znak apostrofu \' bezpečnostní riziko.',
             'de' : ''
         },
         'urls'    : [],
@@ -1970,7 +1970,7 @@ var items =
             'en' : 'Tags nested in other tags to trick filters',
             'ja' : '',
             'ru' : 'Вложенные теги как способ обхода фильтров',
-            'cs' : '',
+            'cs' : 'Tagy vložené do jiných tagů pro oklamání bezpečnostních filtrů',
             'de' : ''
         },
         'data'       : '<b <script>%js_alert%</script>0',
@@ -1978,7 +1978,7 @@ var items =
             'en' : 'Chrome, Firefox and Safari will execute JavaScript with this example nesting - while Opera and IE wouldn\'t.',
             'ja' : '',
             'ru' : 'Использование вложенных тегов (тегов, которые закрываются открытием других тегов, при этом оставаясь взаимо функционирующими) разрешено в Chrome, Firefox и Safari указанных версий. При этом в каждом из браузеров вложенные теги имеют/имели свои особенности. Так, например, только Safari позволяет зактыть пустой закрывающий тег вложенным (</ <script>...).',
-            'cs' : '',
+            'cs' : 'Chrome, Firefox a Safari spustí JavaScript z příkladu, zatímco IE a Opera ne.',
             'de' : ''
         },
         'urls'    : [],
@@ -1986,7 +1986,7 @@ var items =
             'en' : 'This vector is ideal to trick regular expression based HTML filters and sanitizers. Make sure your filters are aware of the fact that some user agents evaluate <b <script> while others will prefer <b><script>.',
             'ja' : '',
             'ru' : 'Данный вектор идеален при обходе регулярных выражений HTML-фильтров. Убедитесь, что ваши фильтры учитывают тот факт, что некоторые пользовательские агенты рассматривают вложенные теги в качестве самосоятельных тегов.',
-            'cs' : '',
+            'cs' : 'Tento vektor je ideální k oklamání HTML filtrů založených na regulárních výrazech. Ujistěte se, že vaše bezpečnostní filtry počítají se skutečností, že některé webové prohlížeče vyhodnotí kód <b <script> jako <b> <script>.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2004,7 +2004,7 @@ var items =
             'en' : 'E4X used to close an opening <SCRIPT> tag and create an E4X object at the same time',
             'ja' : '',
             'ru' : 'Использование E4X для одновременного закрытия дескрипторов и создания объекта.',
-            'cs' : '',
+            'cs' : 'E4X použitý k uzavření otevřeného tagu <SCRIPT> vytvořením nového E4X objektu.',
             'de' : ''
         },
         'data'       : '<b><script<b></b><alert(1)</script </b>',
@@ -2012,7 +2012,7 @@ var items =
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
             'ja' : '',
             'ru' : 'В данном примере показано, что Firefox позволяет закрывать дескриптор, создавая при этом новый E4X-объект (<b></b>). В дальнейшем этот объект дополнительно сравнивается оператором < с результатом вызова функции alert - таким образом обеспечивается выполнение JavaScript.',
-            'cs' : '',
+            'cs' : 'Toto je ošidné. Firefox umožňuje dokonce použít otevírací tag <SCRIPT> s novým objektem E4X (<b/>) vytvořeným současně v rámci JavaScriptu. Alert může být spuštěn proto, že dodatečná otevírací lomená závorka (<) je chápána jako znak porovnání velikosti (<b/> <varování (1)).',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
@@ -2036,7 +2036,7 @@ var items =
             'en' : 'XSS using accent grave when copying innerHTML (1)',
             'ja' : 'innerHTML\u3092\u30b3\u30d4\u30fc\u3059\u308b\u969b\u306e\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u3092\u4f7f\u3063\u305fXSS',
             'ru' : 'XSS, используя обратные апострофы при копировании с помощью innerHTML (1)',
-            'cs' : '',
+            'cs' : 'XSS užitím znaku accent grave během kopírování innerHTML (1)',
             'de' : ''
         },
         'data'       : '<div id="div1"><input value="``onmouseover=%js_alert%"></div> <div id="div2"></div><script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;</script>',
@@ -2044,7 +2044,7 @@ var items =
 			'en' : 'Internet Explorer treats the accent grave (`) as an attribute delimiter like \" and \'. The quotation mark (") will be stripped from the attribute value when using the innerHTML property in case it doesn\'t contain space.',
             'ja' : 'IE\u306f\u30d0\u30c3\u30af\u30af\u30a9\u30fc\u30c8\u0028\u0060\u0029\u3092 \" \u3084 \' \u306e\u3088\u3046\u306b\u5f15\u7528\u7b26\u3068\u3057\u3066\u6271\u3046\u3002\u307e\u305f\u3001innerHTML\u3092\u53c2\u7167\u3057\u305f\u3068\u304d\u306b\u5c5e\u6027\u5024\u306b\u30b9\u30da\u30fc\u30b9\u304c\u306a\u3051\u308c\u3070\u5f15\u7528\u7b26\u0028\u0022\u0029\u304c\u524a\u9664\u3055\u308c\u308b\u3002',
             'ru' : 'Пример наглядно показывает, как при копировании разметки с помощью innerHTML браузер Internet Explorer убирает ограничитель параметра value (в приведенном примере - "), если он не содержит пробельных символов. При этом происходит выход за пределы первоначального параметра, приводящий к исполнению JavaScript при последующей вставке кода.',
-            'cs' : '',
+            'cs' : 'Internet Explorer vnímá znak accent grave (`) stejně jako apostrof \' nebo uvozovky \", čili jako oddělovač. V případě, že neobsahují vloženou hodnotu, budou při použití vlastnosti innerHTML vypuštěny.',
             'de' : ''
         },
         'urls'    : ['#97','#98'],
@@ -2052,7 +2052,7 @@ var items =
             'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja). Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
             'ru' : 'Убедитесь, что HTML-фильтр, который вы используете, рассматривает обратные апострофы в качестве ограничителя атрибута для IE и исходит из этого особенно тогда, когда пользователю разрешено использовать безопасный JavaScript (JSReg, Google Caja).',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že váš HTML filter si je vědom skutečnosti, že IE vnímá znak accent grave (`) jako oddělovač - zvláště pokud mají uživatelé povoleno psát neškodné JavaScripty (JSReg, Google Caja). Buďte také velmi opatrní při manipulaci s objekty DOM, jejichž HTML kód je generovaný ze strany uživatelů. Vlastnost innerHTML nemusí vždy obsahovat původní kód.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2068,7 +2068,7 @@ var items =
             'en' : 'Obfuscation css-properties and values via ignored extra characters',
             'ja' : '',
             'ru' : 'Обфускация css-свойств и значений с помощью игнорируемых дополнительных символов',
-            'cs' : '',
+            'cs' : 'Oklamání CSS vlastností a hodnot ignorováním speciálních znaků',
             'de' : ''
         },
         'data'       : '<div style="[a]color[b]:[c]red">XXX</div>',
@@ -2076,7 +2076,7 @@ var items =
             'en' : '[a] Extra characters* ignored before property names (excluding backslash (92) and null character (0))\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Except compatibility mode with IE8+.\n*** Ignored only before first property names.',
             'ja' : '',
             'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92) и нулевого символа (0))\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (режим совместимости (quirks)): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости (quirks)): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11,160,8192-8203,12288,65279\n\n* Приведены десятичные коды соответствующих символов.\n** За исключением режима совместимости с IE8+.\n*** Игнорируется только перед первым именем свойства.',
-            'cs' : '',
+            'cs' : '[a] Speciální znaky* ignorované před názvem vlastnosti (s výjimkou zpětného lomítka (92) a nulového znaku (0))\n\nFirefox, Internet Explorer (některé verze), Safari, Google Chrome, Opera: 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-řetězce\n\n[b] Speciální znaky ignorované mezi názvem vlastnosti a dvojtečkou.\n\nFirefox, Internet Explorer (některé verze), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-řetězce, alfanumerické znaky po nealfanumerických znacích (color,foo:red)\n\n[c] Speciální znaky ignorovné před hodnotou\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* Uvedeno v desítkové soustavě.\n** S vyjímkou režimu kompatibility s IE8+.\n*** Ignorovány pouze před prvním výskytem názvu vlastnosti.',
             'de' : ''
         },
         'urls'    : [],
