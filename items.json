@@ -2461,7 +2461,7 @@ var items =
             'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes.', 
             'ja' : '',
             'ru' : 'В данном примере показано, как тег, имеющий синтаксис закрывающего, принимает стилевой атрибут, в котором дополнительно обфусцировано значение свойства с помощью уже объясненных выше приёмов. JavaScript будет выполнен в Internet Explorer в режиме совместимости только по причине наличия этой обфускации. Сам по себе режим стандартов никак не влияет на возможность распознавания стилевого атрибута в таких тегах. В строгом смысле данные теги нельзя рассматривать в качестве закрывающих. Это особый вид тегов для Internet Explorer, которые данный браузер по тем или иным причинам считает пользовательскими (custom).',
-            'cs' : '',
+            'cs' : 'Uzavírací tag bez uvedeného názvu tagu může v IE obsahovat atributy stylu, tak jak můžete vidět v uvedeném příkladu. Pro další zamlžení útoku je použíta falešná vlastnost CSS a metoda expression() kombinovaná s escapováním znaků.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537634%28VS.85%29.aspx', 'http://www.w3.org/TR/CSS2/syndata.html'],
@@ -2469,7 +2469,7 @@ var items =
             'en' : 'Make sure the HTML filter you use deals with unnamed closing tags and doesn\'t consider them to be plain text. Also be aware of CSS escapes and how they can completely obfuscate any style info inside <STYLE> tags and "style" attributes.',
             'ja' : '',
             'ru' : 'Убедитесь, что ваш HTML-фильтр, анализирует в том числе закрывающие теги.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že HTML filtr počítá i s použitím nepojmenovaného uzavíracího tagu a nepovažuje jej za prostý text. Také počítat s CSS escapováním a vědět, jak může zamlžit jakýkoliv styl uvnitř tagu <STYLE> a atributu "style".',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2485,7 +2485,7 @@ var items =
             'en' : 'XSS via formaction - requiring user interaction (2)',
             'ja' : '',
             'ru' : 'XSS через formaction - требуется взаимодействие с пользователем (2)',
-            'cs' : '',
+            'cs' : 'XSS použitím formaction - vyžaduje uživatelskou interakci (2)',
             'de' : ''
         },
         'data'       : '<form><button formaction="%js_uri_alert%">X',
@@ -2493,7 +2493,7 @@ var items =
             'en' : 'A vector displaying the HTML5 "formaction" capabilities for form hijacking. Note that this variation does not use the "id" and "form" attributes to connect button and form.',
             'ja' : '',
             'ru' : 'Вектор ещё раз демонстрирует возможности HTML5-атрибута formaction по захвату формы. Поскольку тег <INPUT> находится внутри формы, атрибуты id и form не требуются.',
-            'cs' : '',
+            'cs' : 'Vektor ukazuje možnost použití HTML5 "formaction" pro form hijacking. Všimněte si, že tato varianta nepoužívá atributy "id" a "form" pro spojení tlačítka a formuláře.',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-formaction'],
@@ -2501,7 +2501,7 @@ var items =
             'en' : 'Don\'t allow users to submit markup containing "form" and "formaction" attributes or transform them to bogus attributes.',
             'ja' : '',
             'ru' : 'Не разрешайте пользовательскую разметку, содержащую атрибуты form и formaction или неправильные значения этих атрибутов.',
-            'cs' : '',
+            'cs' : 'Nedovolte, aby uživatelé odeslali tagy obsahující "form" a atribut "formaction" nebo je transformujte je na falešné atributy.',
             'de' : ''
         },
         'browsers'   : {
@@ -2518,7 +2518,7 @@ var items =
             'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags (1)',
             'ja' : '',
             'ru' : 'События с сервера в Opera и тег <EVENT-SOURCE> (1)',
-            'cs' : '',
+            'cs' : 'Server-sent událost - Opera a tag <EVENT-SOURCE> (1)',
             'de' : ''
         },
         'data'       : '<event-source src="%event_path%" onload="%js_alert%">',
@@ -2533,7 +2533,7 @@ var items =
             'en' : 'Opera allows using <EVENT-SOURCE> elements. In case the "src" attribute points to a valid cross domain source it\'s possible to have the element listen for events and the containing data.',
             'ja' : '',
             'ru' : 'Opera поддерживает тег <EVENT-SOURCE>. Если src атрибут указывает на правильный междоменный источник, становится возможным послать в тег событие и содержащиеся в ответе сервера данные.',
-            'cs' : '',
+            'cs' : 'Opera umožňuje použití tagů <EVENT-SOURCE>. V případě, že atribut "src" odkazuje na platný zdroj napříč doménami, je možné zachytit události a obsahující data.',
             'de' : ''
         },
         'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
@@ -2541,7 +2541,7 @@ var items =
             'en' : 'Make sure users cannot influence the source of <EVENT-SOURCE> elements and don\'t whitelist the tag itself inside user submitted markup.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский ввод не может содержать тег <EVENT-SOURCE>.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že uživatelé nemohou ovlivnit zdroj tagů <EVENT-SOURCE> a tagy samotné nejsou uvedeny ve whitelistu.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2557,7 +2557,7 @@ var items =
             'en' : 'Server-sent events - Opera and <EVENT-SOURCE> tags (2)',
             'ja' : '',
             'ru' : 'События с сервера в Opera и тег <EVENT-SOURCE> (2)',
-            'cs' : '',
+            'cs' : 'Server-sent událost - Opera a tag <EVENT-SOURCE> (2)',
             'de' : ''
         },
         'data'       : '<a href="%js_uri_alert%"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">',
@@ -2565,7 +2565,7 @@ var items =
             'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
             'ru' : 'В примере показан способ послать в тег ссылки событие click с помощью тега <EVENT-SOURCE> и таким образом выполнить JavaScript без взаимодействия с пользователем. В случае необходимости послать событие в какой-либо внешний тег на странице, событие с сервера должно содержать поле Target со значением идентификатора тега (см. приведенную документацию).',
-            'cs' : '',
+            'cs' : 'Opera umožňuje použití tagů <EVENT-SOURCE> pro přijímání server-sent událostí. V tomto příkladu je datové URI, které se použije po výskytu události. Pro spuštění je potřeba kliknout na některý HTML prvek. Během XSS útoků, které vyžadují interakci s uživatelem, může být tento způsob použit pro spuštění aktivního skriptu.',
             'de' : ''
         },
         'urls'    : ['http://hixie.ch/specs/html/server-sent-events/server-sent-events'],
@@ -2573,7 +2573,7 @@ var items =
             'en' : 'Make sure users cannot influence the source of <EVENT-SOURCE> elements and don\'t whitelist the tag itself inside user submitted markup.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательский ввод не может содержать тег <EVENT-SOURCE>.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že uživatelé nemohou ovlivnit zdroj tagů <EVENT-SOURCE> a tagy samotné nejsou uvedeny ve whitelistu.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2589,7 +2589,7 @@ var items =
             'en' : 'E4X used to close an opening <SCRIPT> tag and {} evaluation',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'E4X užito k zavření otevřeného tagu <SCRIPT> a použití {}',
             'de' : ''
         },
         'data'       : '<script<{alert(1)}/></script </>',
@@ -2597,7 +2597,7 @@ var items =
             'en' : 'In this example an E4X object is being used to close a half-open <SCRIPT> tag and evaluate code in the global scope afterwards via the E4X curly bracket delimiters. This technique will not work anymore as soon Firefox uses the already integrated HTML5 parser (html5.enable=true)',
             'ja' : '',
             'ru' : 'В данном примере E4X-объект использован для закрытия дескриптора и в то же время для выполнения кода, содержащегося внутри специфических E4X-ограничителей {}. Такая техника не сработает, как только Firefox будет использовать уже интегрированный в него HTML5-парсер (html5.enable=true).',
-            'cs' : '',
+            'cs' : 'V tomto příkladu je objekt E4X použit k uzavření pootevřeného tagu <SCRIPT> a k následnému spuštění kódu v globálním rozsahu přes E4X oddělovače, kterými jsou složené závorky. Tato technika nebude fungovat, pokud již Firefox používá integrovaný HTML5 parser (html5.enable = true).',
             'de' : ''
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X', 'https://bugzilla.mozilla.org/show_bug.cgi?id=564706'],
@@ -2621,7 +2621,7 @@ var items =
             'en' : 'Arbitrary payload injection via XML external DTD in IE',
             'ja' : '',
             'ru' : 'Инъекция удаленного javascript-кода через внешнее определение типа документа (DTD)',
-            'cs' : '',
+            'cs' : 'Libovolná injekce kódu skrz XML externí DTD v IE',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><!DOCTYPE x SYSTEM "test.dtd"><x>&x;</x>',
@@ -2636,7 +2636,7 @@ var items =
             'en' : 'IE will render doctype-provided entities in the "html" namespace as soon as a user defined XML stylesheet tag is present.',
             'ja' : '',
             'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
-            'cs' : '',
+            'cs' : 'Internet Explorer bude renderovat doctype entity ve jmeném prostoru "html" ve chvíli, kdy je zobrazen uživatelem definovaný tag XML stysheet.',
             'de' : ''
         },
         'urls'    : ['#64', '#67'],
@@ -2660,7 +2660,7 @@ var items =
             'en' : 'XML JavaScript execution via style attribute in IE',
             'ja' : '',
             'ru' : 'Выполнение javascript c помощью стилевого атрибута в IE на XML-странице',
-            'cs' : '',
+            'cs' : 'XML spuštění JavaScriptu přes atribut style v IE',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
@@ -2668,7 +2668,7 @@ var items =
             'en' : 'IE supports the style attribute in xml-pages too. Thus JavaScript can be executed via expression() with any given tag.',
             'ja' : '',
             'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом javascript может быть выполнен в любом теге.',
-            'cs' : '',
+            'cs' : 'IE podporuje atribut styl na xml stránkách. JavaScript tak může být proveden pomocí metody expression() u daného tagu.',
             'de' : ''
         },
         'urls'    : [],
@@ -2692,7 +2692,7 @@ var items =
             'en' : 'Arbitrary payload injection via XSL + XDR-schema in IE',
             'ja' : '',
             'ru' : 'Инъекция удаленного javascript-кода в IE с помощью XSL и XDR-схемы',
-            'cs' : '',
+            'cs' : 'Libovolná injekce kódu skrz XSL + XDR-schema v IE',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:%xdr_path%"/>',
@@ -2707,7 +2707,7 @@ var items =
             'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the <img> tag such as "onerror" are obtained from the XDR-schema - and will then execute JavaScript.',
             'ja' : '',
             'ru' : 'Пространство имен html автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега <img> заимствуются из XDR-схемы.',
-            'cs' : '',
+            'cs' : 'Užitím XSL je automaticky určen jmenný prostor "html". Chybějící atributy v tagu <img> jako "onerror" jsou získány z XDR-schama a následně spustí kód JavaScriptu.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms256208(v=VS.100).aspx'],
@@ -2731,7 +2731,7 @@ var items =
             'en' : '<OBJECT> tag and Flash files executing JavaScript',
             'ja' : '',
             'ru' : 'Использование тега <OBJECT> и Flash для исполнения JavaScript',
-            'cs' : '',
+            'cs' : 'JavaScript s využitím tagu <OBJECT> a Flashového souboru',
             'de' : ''
         },
         'data'       : '<object data="%swf_path%"></object>',
@@ -2739,7 +2739,7 @@ var items =
             'en' : '<OBJECT> tags directly including Flash files via the "data" attribute - allowing execution of JavaScript and more without user interaction.',
             'ja' : '',
             'ru' : 'Тег <OBJECT> с помощью атрибута data вставляет на страницу флеш-файл, который вызывает JavaScript, делая запрос с псевдоскриптом в качестве URL.',
-            'cs' : '',
+            'cs' : 'Tagy <OBJECT> načítající přímo Flashové soubory v atributu "data" umožňují spuštění JavaScriptu bez uživatelské interakce.',
             'de' : ''
         },
         'attachment' : {
@@ -2754,7 +2754,7 @@ var items =
             'en' : 'Make sure users cannot control the "src" and "data" attribute values of <OBJECT> tags - or better don\'t whitelist <OBJECT> tags in user submitted markup at all.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользователи не могут контролировать атрибуты src и data тега <OBJECT>, или лучше - не заносите тег <OBJECT> в белый лист пользовательской разметки.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že uživatelé nemohou ovlivňovat hodnoty atributů "src" a "data" tagů <OBJECT>, nebo ještě lépe, že nejsou tagy <OBJECT> vůbec povoleny whitelistem.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -2773,7 +2773,7 @@ var items =
             'en' : 'IE6 and halfwidth/fullwidth Unicode characters',
             'ja' : '',
             'ru' : 'IE6 и юникодовые символы половинной и полной ширины',
-            'cs' : '',
+            'cs' : 'IE6 a poloviční/plná šířka Unicode znaků',
             'de' : ''
         },
         'data'       : '<style>*{x:ｅｘｐｒｅｓｓｉｏｎ(write(1))}</style>',
@@ -2781,7 +2781,7 @@ var items =
             'en' : 'This example shows how halfwidth/fullwidth Unicode characters can be used on IE6 to substitute characters from the ASCII range. Note that those characters have been used in the example to create the term "expression".',
             'ja' : '',
             'ru' : 'Пример демонстрирует возможность подмены ASCII символов юникодовыми символами половинной и полной ширины при формировании последовательности "expression" в Internet Explorer 6. Естественно, это не единственное место, где можно использовать такие символы.',
-            'cs' : '',
+            'cs' : 'Tento příklad ukazuje, jak mohou být Unicode znaky poloviční a plné šíře použity k nahrazení znaků z ASCII rozsahu. V příkladu byly tyto znaku použity u výrazu "expression".',
             'de' : ''
         },
         'urls'    : ['http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_Unicode_block'],
@@ -2789,7 +2789,7 @@ var items =
             'en' : 'In case your website still has a lot of IE6 users make sure that the range of halfwidth and fullwidth form characters (U+FF00-FFEF) cannot be used in user submitted markup and styles.',
             'ja' : '',
             'ru' : 'В случае, если ваш сайт посещают счастливые обладатели IE6, убедитесь, что символы половинной и полной ширины (U+FF00-FFEF) не допускаются в пользовательской разметке и стилях.',
-            'cs' : '',
+            'cs' : 'V případě, že návštěvníci vašich webových stránek stále používají IE6 ujistěte se, že rozsah Unicode znaků halfwidth a fullwidth (U + FF00-FFEF) nelze použít u tagů a stylů, které jsou vkládány uživatelem.',
             'de' : ''
         },                        
         'browsers'   : {
