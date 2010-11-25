@@ -2805,7 +2805,7 @@ var items =
             'en' : 'Active JavaScript execution via XLinks',
             'ja' : '',
             'ru' : 'Активный скриптинг с помощью XLinks',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz XLink',
             'de' : ''
         },
         'data'       : '<x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="%js_uri_alert%" xlink:type="simple"/>',
@@ -2813,7 +2813,7 @@ var items =
             'en' : 'FF supports the "xlink:actuate" attribute and allows displaying xlinks without additional styles. The default namespace here is "html".',
             'ja' : '',
             'ru' : 'FF поддерживает атрибут xlink:actuate и может отобразить xml-ссылку без дополнительных стилей и пространства имен html.',
-            'cs' : '',
+            'cs' : 'FF podporuje atribut "xlink:actuate" a povoluje zobrazení xlinků bez přidaných stylů. Defaultním jmenným prostorem je "html".',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xlink/#actuate-att', 'http://www.w3.org/TR/2010/REC-xlink11-20100506/', '#68', '#87'],
@@ -2837,7 +2837,7 @@ var items =
             'en' : 'JavaScript execution via XML stylesheet, data URI and expression()',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с помощью stylesheet, data URI и expression()',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz XML stylesheet, data URI a expression()',
             'de' : ''
         },
         'data'       : '<?xml-stylesheet type="text/css" href="data:,*%7bx:expression(write(2));%7d"?>',
@@ -2845,7 +2845,7 @@ var items =
             'en' : 'Internet Explorer 8 and 9 support data URIs and thus are capable of including stylesheets this way. By using a xml stylesheet tag and a data URI containing an expression() it\'s possible to execute JavaScript without user interaction.',
             'ja' : '',
             'ru' : 'В примере еще раз показана возможность Internet Explorer 8 и 9 использовать data-схему для хранения небезопасной стилевой информации в XML.',
-            'cs' : '',
+            'cs' : 'Internet Explorer 8 a 9 podporuje data URI a tak jsou schopny vložit touto cestou stylesheet. Použitím tagu xml-stylesheet a data URI obsahující expression() je možné spustit kód JavaScriptu bez uživatelské interakce.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-stylesheet/'],
@@ -2869,7 +2869,7 @@ var items =
             'en' : 'Obfuscation unsafe parameter via wml-variables.',
             'ja' : '',
             'ru' : 'Обфускация опасного параметра с использованием wml-переменных',
-            'cs' : '',
+            'cs' : 'Zamaskování nebezpečných parametrů proměnnými wml',
             'de' : ''
         },
         'data'       : '<x:template xmlns:x="http://www.wapforum.org/2001/wml"  x:ontimer="$(x:unesc)j$(y:escape)a$(z:noecs)v$(x)a$(y)s$(z)cript$x:%js_alert%"><x:timer value="1"/></x:template>',
@@ -2877,7 +2877,7 @@ var items =
             'en' : 'The example demonstrates the use in WML undeclared variables (are ignored). These variables can be declared in the tags <setvar>, <input>, <select>. Namespace indicated for use inside the XML-file. Also inside WML-files can you use a lot of regular HTML-tags.', 
             'ja' : '',
             'ru' : 'Пример демонстрирует использование в WML необъявленных переменных, которые будут игнорироваться. Эти переменные можно объявить в тегах <setvar>, <input>, <select>. Пространство имен указано для использования в XML-файле. Не забывайте, что внутри WML-файлов вы можете использовать множество обычных HTML-тегов. ',
-            'cs' : '',
+            'cs' : 'Příklad demonstruje použití nedeklarované WML proměnných (jsou ignorovány). Tyto rpoměnné mohou být deklarovány tagy <setvar>, <input> a <select>. Jmenný prostor náleží použití v souboru XML. V souborech WML můžete také používat množství HTML tagů.',
             'de' : ''
         },
         'urls'    : ['http://www.w3schools.com/wap/wml_variables.asp','#69'],
@@ -2901,7 +2901,7 @@ var items =
             'en' : 'Opera JavaScript execution via XML-events handler',
             'ja' : '',
             'ru' : 'Выполнение javascript в Opera c помощью обработчика XML-события',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz XML zachytávání událostí v Opeře',
             'de' : ''
         },
         'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="%js_uri_alert%//#x"/>',
@@ -2909,7 +2909,7 @@ var items =
             'en' : 'The browser tries to load an external XML-event handler and executed javascript without user interaction.', 
             'ja' : '',
             'ru' : 'Браузер пытается загрузить внешний обработчик XML-события и выполняет javascript.',
-            'cs' : '',
+            'cs' : 'Webový prohlížeč používá externí XML-event handler pro událost "load" pro spuštění JavaScriptu bez uživatelské interakce.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104'],
@@ -2933,7 +2933,7 @@ var items =
             'en' : 'Arbitrary payload injection in Opera via XML-events handler',
             'ja' : '',
             'ru' : 'Инъекция удаленного javascript-кода в Opera c помощью обработчика XML-события',
-            'cs' : '',
+            'cs' : 'Libovolná injekce kódu přes XML události v Opeře',
             'de' : ''
         },
         'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="test.evt#x"/>',
@@ -2948,7 +2948,7 @@ var items =
             'en' : 'The browser loads an external xml-event handler, which contains the javascript-code. This example also works with data URI.', 
             'ja' : '',
             'ru' : 'Браузер загружает внешний обработчик XML-события, который содержит javascript код. Этот пример также будет работать с data-схемой.',
-            'cs' : '',
+            'cs' : 'Browser načítá externí xml-event handler, který obsahuje kód JavaScriptu. Tento příklad pracuje také s data URI.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104'],
@@ -2972,7 +2972,7 @@ var items =
             'en' : 'Passive JavaScript execution via <BODY> and oninput attribute',
             'ja' : '',
             'ru' : 'Пассивный скриптинг с помощью <BODY> и атрибута oninput',
-            'cs' : '',
+            'cs' : 'Pasivní JavaScript spuštěný skrz <BODY> a atribut oninput',
             'de' : ''
         },
         'data'       : '<body oninput=%js_alert%><input autofocus>',
@@ -2980,7 +2980,7 @@ var items =
             'en' : 'All browsers besides Internet Explorer support the "oninput" event handler around form elements like the given <INPUT>. The event works for the form elements itself, the surrounding form and <BODY> as well as <HTML> tags.', 
             'ja' : '',
             'ru' : 'Все браузеры за исключением Internet Explorer поддерживают обработчик oninput, который может быть внедрен в любой тег, обрамляющий любую область пользовательского ввода (не только в тегах форм, но и в тегах с атрибутом contenteditable).',
-            'cs' : '',
+            'cs' : 'Všechny prohlížeče kromě Internet Exploreru podporují zpracování událostí "oninput" u formulářových prvků, jako například uvedený <input>. Událost pracuje se samotnými prvky formuláře, mimo formulář, ale také v tagu <BODY> nebo <HTML>',
             'de' : ''
         },
         'urls'    : [],
@@ -2988,7 +2988,7 @@ var items =
             'en' : 'Do not whitelist "oninput" attributes in user submitted markup.',
             'ja' : '',
             'ru' : 'Убедитесь, что правила вашего фильтра учитывают появление в HTML5 новых обработчиков событий.',
-            'cs' : '',
+            'cs' : 'Zajistěte aby atribut "oninput" nebyl uveden ve whitelistu pro uživatelské vstupy.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3007,7 +3007,7 @@ var items =
             'en' : 'SVG simple passive JavaScript execution via XLink',
             'ja' : '',
             'ru' : 'Пассивный скриптинг в SVG c помощью XLink',
-            'cs' : '',
+            'cs' : 'Spuštění jednoduchého pasivního JavaScriptu skrz XLink ',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="%js_uri_alert%"><rect width="1000" height="1000" fill="white"/></a>\n</svg>',        
@@ -3015,7 +3015,7 @@ var items =
             'en' : 'Browsers that support SVG, forced to support XLink. The parameter of the attribute "xlink:actuate" for <a> tag is fixed - "onRequest".',
             'ja' : '',
             'ru' : 'Браузеры, которые поддерживают SVG, вынуждены поддерживать и XLink, поскольку таким образом реализуются почти все связи. Параметр атрибута xlink:actuate тега <a> является фиксированным - onRequest.',
-            'cs' : '',
+            'cs' : 'Prohlížeče, které podporují SVG, vynucují podporu XLink. Parametr atributu "xlink:actuate" u tagu <A> je pevný "onRequest".',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html', '#68', '#81'],
@@ -3042,7 +3042,7 @@ var items =
             'en' : 'SVG active JavaScript execution via XLink in Opera',
             'ja' : '',
             'ru' : 'Активный скриптинг в SVG с помощью XLink для Opera',
-            'cs' : '',
+            'cs' : 'SVG spuštění aktivního JavaScriptu skrz XLink v Opeře',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns=\'http://www.w3.org/1999/xhtml\'%3E%js_alert%%3C/script%3E"/>\n</svg>',        
@@ -3050,7 +3050,7 @@ var items =
             'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-elements.',
             'ja' : '',
             'ru' : 'Содержимое xml-ссылки автоматически включается в текущий документ. Сочетание предустановленных параметров onLoad атрибута xlink:actuate и embed атрибута xlink:show образует потенциально небезопасные SVG-элементы.',
-            'cs' : '',
+            'cs' : 'Obsah XML-odkazů bude automaticky vložen do aktuálního dokumentu. Kombinace "onLoad" (hodnota atributu xlink:actuate) a "embed" (hodnota atributu xlink:show) s potenciálně nebezpečnými SVG prvky.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
@@ -3074,7 +3074,7 @@ var items =
             'en' : 'SVG event handler injection via "set" and "animate"',
             'ja' : '',
             'ru' : 'Инъекция обработчика события в SVG с помощью анимирования',
-            'cs' : '',
+            'cs' : 'SVG zpracování události - vložení kódu skrz "set" a "animate"',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<set attributeName="onmouseover" to="%js_alert%"/>\n<animate attributeName="onunload" to="%js_alert%"/>\n</svg>',        
@@ -3082,7 +3082,7 @@ var items =
             'en' : 'Google Chrome and Safari support binding an event handler using the elements <set> or <animate>. The attribute value is the actually bound event while the "to" attribute value holds the payload.',
             'ja' : '',
             'ru' : 'Google Chrome и Safari поддерживают привязку обработчика события с использованием элементов <set> или <animate>.',
-            'cs' : '',
+            'cs' : 'Google Chrome a Safari podporují zpracování událostí u prvků <set> nebo <animate>. Hodnota atributu "attributeName" určuje spouštěcí událost, zatímco atribut "to" obsahuje samotný kód JavaScriptu.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG11/animate.html', 'http://www.w3.org/TR/SVGMobile12/animate.html', '#24', '#28'],
@@ -3107,7 +3107,7 @@ var items =
             'en' : 'SVG images containing XML data - with disabled JavaScript',
             'ja' : '',
             'ru' : 'SVG-изображение это такой же XML-документ, но с выключенным javascript',
-            'cs' : '',
+            'cs' : 'SVG obrázky obsahující XML data - s vypnutým JavaScriptem',
             'de' : ''
         },
         'data'       : '<div style=content:url(%svg_path_2%)></div>',
@@ -3122,7 +3122,7 @@ var items =
             'en' : 'Opera supports the CSS property "content" for style attributes. The SVG image can contain SVG as well as HTML code. The example shows how a <FORM> tag can be used to trick the user into clicking a button and thus executing JavaScript. The same works for SVG files embedded via <IMG> tags.',
             'ja' : '',
             'ru' : 'Opera поддерживает CSS-свойство content в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег. Такой же эффект (а именно вставка ифрейма на страницу) происходит при вставке SVG-изображения через тег <IMG>.',
-            'cs' : '',
+            'cs' : 'Opera podporuje CSS vlastnost "content" pro atributy stylu. Obrázek ve formátu SVG může obsahovat SVG stejně dobře jako HTML kód. Příklad ukazuje jak může být tag <FORM> použit pro nalákání uživatele ke kliknutí na tlačítko a tím k provedení JavaScriptu. Stejné pracuje také pro SVG soubory vložené pomocí tagu <IMG>.',
             'de' : ''
         },
         'urls'    : [],
