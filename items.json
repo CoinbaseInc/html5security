@@ -3146,7 +3146,7 @@ var items =
             'en' : 'Special tags parsing issues',
             'ja' : '',
             'ru' : 'Особенности разбора спецтегов',
-            'cs' : '',
+            'cs' : 'Problémy při parsování speciálních tagů',
             'de' : ''
         },
         'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[Inception]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
@@ -3154,7 +3154,7 @@ var items =
             'en' : 'The HTML tagnames start with a-zA-Z (abstracting from fuzzing). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera: Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
             'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от возможного напыления). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera: Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
-            'cs' : '',
+            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari: Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera: Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari: Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
             'de' : ''
         },
         'urls'    : [],
@@ -3179,7 +3179,7 @@ var items =
         'id'         : 92,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Breaking the functional notation on IE (1) ',
+            'en' : 'Přerušení funkčního zápisu v IE (1) ',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в IE (1)',
             'cs' : '',
@@ -3190,7 +3190,7 @@ var items =
             'en' : 'To break the functional notation on IE "url()" can be used combined with a following whitespace - then followed by any non-whitespace character.\n\nThe following characters* are whitespaces:\n\nInternet Explorer 6,7,8,9 (standart mode), Internet Explorer 8 (compatibility mode with IE7): 9-13,32,160,8192-8203,12288,65279\nInternet Explorer 8,9 (compatibility mode with IE8): 1-32,127\n\n* These are given in decimal codes.',
             'ja' : '',
             'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использована комбинация из любого пробельного символа, за которым следует любой непробельный символ.\n\nВ качестве пробельных здесь понимаются следующие символы*:\n\nInternet Explorer 6,7,8,9 (режим стандартов), Internet Explorer 8 (режим совместимости с IE7): 9-13,32,160,8192-8203,12288,65279\nInternet Explorer 8,9 (режим совместимости с IE8): 1-32,127\n\n* В десятичных кодах.',
-            'cs' : '',
+            'cs' : 'Přerušení funkčního zápisu "url()" v IE může být vyvoláno kombinací bílého znaku, který je následován nebílým znakem.\n\nNásledující znaky* jsou bílými znaky:\n\nInternet Explorer 6,7,8,9 (standart mode), Internet Explorer 8 (kompatibilní mód s IE7): 9-13,32,160,8192-8203,12288,65279\nInternet Explorer 8,9 (kompatibilní mód s IE8): 1-32,127\n\n* Kódy znaků jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : ['#111', '#112'],
@@ -3214,7 +3214,7 @@ var items =
             'en' : 'Multiple CSS "url()" values in IE 6',
             'ja' : '',
             'ru' : 'Множественный "url()" в IE 6',
-            'cs' : '',
+            'cs' : 'Více CSS "url" hodnot v IE 6',
             'de' : ''
         },
         'data'       : '<div style="list-style:url(http://foo.f)\\20url(%js_uri_alert%);">X',        
@@ -3222,7 +3222,7 @@ var items =
             'en' : 'Internet Explorer supports multiple "url()" values all of which can contain payload. The delimiter between the "url()" values should be a whitespace character ("\\x20" in the given example).',
             'ja' : '',
             'ru' : 'IE поддерживает множественный "url()", который может содержать "полезную нагрузку". Разделителем "url()" должен быть любой пробельный символ (\\x20 в приведенном примере).',
-            'cs' : '',
+            'cs' : 'Internet Explorer podporuje více "url()" hodnot. Z nichž každá může obsahovat útocný kód. Oddělovač mezi hodnotami "url()" by měl být bílý znak (v tomto případě "\\x20").',
             'de' : ''
         },
         'urls'    : [],
@@ -3230,7 +3230,7 @@ var items =
             'en' : 'Make sure in case the user is allowed to submit CSS it is being filtered and whitelisted correctly to avoid attacks via multiple backgrounds.',
             'ja' : '',
             'ru' : 'В случае предоставления пользователю возможности добавлять стили, убедитесь, что правила белого списка сформированы корректно, чтобы избежать аттак через множественный "url()".',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že uživatel nemá povoleno vložení CSS, maximálně ty vlastnosti, které jsou uvedeny ve whitelistu.',
             'de' : ''
         },
         'browsers'   : {
@@ -3246,7 +3246,7 @@ var items =
             'en' : 'Using SVG element <handler>',
             'ja' : '',
             'ru' : 'Использование SVG-элемента <handler>',
-            'cs' : '',
+            'cs' : 'Použití SVG elementu <handler>',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<handler xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load">%js_alert%</handler>\n</svg>',        
@@ -3254,7 +3254,7 @@ var items =
             'en' : 'Specification SVG Tiny 1.2 provides an element <handler>, which is a "bridge" between SVG and XML-events. This element can contain regular JavaScript.',
             'ja' : '',
             'ru' : 'Спецификацией SVG Tiny 1.2 предусмотрен элемент <handler>, который является связующим звеном между SVG и XML-events. Этот элемент может заключать в себе обычный JavaScript код.',
-            'cs' : '',
+            'cs' : 'Specifikace SVG Tiny 1.2 poskytuje prvek <handler>, který je "mostem" mezi SVG a XML událostmi. Tento element může obsahovat kód JavaScriptu.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html#HandlerElement', 'http://www.w3.org/TR/xml-events/', '#84', '#85'],
@@ -3278,7 +3278,7 @@ var items =
             'en' : 'Using SVG element <feImage> and animated data URIs',
             'ja' : '',
             'ru' : 'Использование SVG-элемента <feImage> и анимируемого data URIs',
-            'cs' : '',
+            'cs' : 'Použití SVG elementu <feImage> a data URI',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<feImage>\n<set attributeName="xlink:href" to="data:image/svg+xml;charset=utf-8;base64,\nPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzY3JpcHQ%2BYWxlcnQoMSk8L3NjcmlwdD48L3N2Zz4NCg%3D%3D"/>\n</feImage>\n</svg>',        
@@ -3286,7 +3286,7 @@ var items =
             'en' : 'SVG allows using filter effects to be applied on arbitrary visible SVG elements. The feImage filter allows inclusion of other files - as well as data URIs. With a maliciuosly crafted data URI it\'s possible to execute JavaScript without user interaction. List all of the elements which can be animated can be found in the specified documentation.',
             'ja' : '',
             'ru' : 'SVG поддерживает фильтры, определяемые в отдельном SVG-элементе - <feImage>. Содержание этого элемента может быть загружено из других файлов, а также из data URI. С помощью специально сформированного data URI возможно выполнить JavaScript без взаимодействия с пользователем. Список всех элементов, которые могут быть анимированы, можно найти по приведенным ссылкам.',
-            'cs' : '',
+            'cs' : 'SVG umožňuje použití efektu filtrů na libovolný z viditelných prvků. Filtr feImage umožňuje začlenění dalších souborů, stejně tak jako data URI. Se zákeřně vytvořeným data URI je mořné spustit kód JavaScriptu bez spoluúčasti uživatele. Seznam všech prvků, které mohou být animovány, naleznete v dokumentaci.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVG/filters.html', 'http://www.w3.org/TR/SVG11/animate.html#Animatable', 'http://www.w3.org/TR/SVGMobile12/animate.html#Animatable'],
@@ -3294,7 +3294,7 @@ var items =
             'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
             'ja' : '',
             'ru' : 'Убедитесь, что пользовательские SVG-данные и SVG-файлы проверяются также, как и обычные XML-документы, а не как изображения. Природа SVG позволяет включать почти произвольные XML-данные, в т.ч. JavaScript, открывающий перспективу XSS и т.д.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že uživateli vložená SVG data a SVG soubory jsou skutečně obrázky a ne XML dokumenty. Povaha SVG totiž umožňuje zahrnout do obsahu téměř jakákoliv data ve formátu XML, včetně JavaScriptu, který může vést XSS.',
             'de' : ''
         },
         'browsers'   : {
