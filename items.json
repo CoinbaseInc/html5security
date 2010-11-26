@@ -1,4 +1,4 @@
-/* Items - the set of available items and vectors */
+﻿/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -3179,10 +3179,10 @@ var items =
         'id'         : 92,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Přerušení funkčního zápisu v IE (1) ',
+            'en' : 'Breaking the functional notation on IE (1)',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в IE (1)',
-            'cs' : '',
+            'cs' : 'Přerušení funkčního zápisu v IE (1)',
             'de' : ''
         },
         'data'       : '<!DOCTYPE>\n<div style="background:url(http://foo.f/f oo/;color:red/*/foo.jpg);">X',        
@@ -3310,7 +3310,7 @@ var items =
             'en' : 'JavaScript execution via MHTML-scheme',
             'ja' : '',
             'ru' : 'Исполнение JavaScript с использованием MHTML-схемы.',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz MHTML schema',
             'de' : ''
         },
         'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html\nmhtml:http://heideri.ch/jso/test.gif!xss.html',
@@ -3349,7 +3349,7 @@ var items =
             'en' : 'XSS using "xmlns" attribute in custom tag when copying innerHTML (2)',
             'ja' : '',
             'ru' : 'XSS с использованием атрибута xmlns в сочетании с пользовательским (custom) тегом при копировании с помощью innerHTML (2)',
-            'cs' : '',
+            'cs' : 'XSS použitím atributu "xmlns" ve vlastním tagu při kopírování innerHTML (2)',
             'de' : ''
         },
         'data'       : '<div id=d><x xmlns="><iframe onload=%js_alert%"></div>\n<script>d.innerHTML=d.innerHTML</script>',
@@ -3357,7 +3357,7 @@ var items =
 	    'en' : 'Internet Explorer incorrectly analyzes the attribute "xmlns" in custom tags when copying innerHTML - its value is being added to the tag <?XML:NAMESPACE> without any delimiters.',
             'ja' : '',
             'ru' : 'Internet Explorer неправильно анализирует атибут xmlns в пользовательских тегах при копировании с помощью innerHTML: параметр этого атрибута добавляется в тег <?XML:NAMESPACE> без оганичителей.',
-            'cs' : '',
+            'cs' : 'Internet Explorer nesprávně analyzuje atribut "xmlns" ve vlastních tagách během kopírování innerHTML. Jeho hodnota je bez oddělovače přidána k tagu <?XML:NAMESPACE>.',
             'de' : ''
         },
         'urls'    : ['#59','#98'],
@@ -3365,7 +3365,7 @@ var items =
             'en' : 'Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Buďte velmi opatrní při pozdější manipulaci v DOM s uživatelskémi vstupy. Vlastnost innerHTML nemusí vždy obsahovat původní data.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3383,7 +3383,7 @@ var items =
             'en' : 'Style injection when copying innerHTML (3)',
             'ja' : '',
             'ru' : 'Стилевая инъекция при копировании с помощью innerHTML (3)',
-            'cs' : '',
+            'cs' : 'Injekce stylu při kopírování innerHTML (3)',
             'de' : ''
         },
         'data'       : '<div id=d><div style="font-family:\'sans\\27\\3B color\\3Ared\\3B\'">X</div></div>\n<script>with(document.getElementById("d"))innerHTML=innerHTML</script>',
@@ -3391,7 +3391,7 @@ var items =
 	    'en' : 'The example shows that Internet Explorer and Mozilla Firefox automaticaly decode CSS-encoding if the harmless markup is copied using innerHTML.',
             'ja' : '',
             'ru' : 'Пример показывает, как Internet Explorer and Mozilla Firefox автоматически декодируют CSS-кодировку в случае, если на первый взгляд безопасная разметка копируется с помощью innerHTML.',
-            'cs' : '',
+            'cs' : 'Tento příklad ukazuje, že Internet Explorer a Firefox automaticky dekódují CSS kódování během kopírování innerHTML.',
             'de' : ''
         },
         'urls'    : ['#59','#97'],
@@ -3399,7 +3399,7 @@ var items =
             'en' : 'Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Buďte velmi opatrní při pozdější manipulaci v DOM s uživatelskémi vstupy. Vlastnost innerHTML nemusí vždy obsahovat původní data.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -3416,7 +3416,7 @@ var items =
             'en' : 'Using comments to obfuscate styles',
             'ja' : '',
             'ru' : 'Использование комментариев для обфускации стилей',
-            'cs' : '',
+            'cs' : 'použití komentářů z zamlžení stylů',
             'de' : ''
         },
         'data'       : 'XXX<style>*{/*all*/color/*all*/:/*all*/red/*all*/;/[0]*IE,Safari*[0]/color:green;color:bl/*IE*/ue;}</style>',
@@ -3424,7 +3424,7 @@ var items =
 	    'en' : 'All browsers allow to use CSS-comments before and after the properties and values. In addition, Internet Explorer allows to use comments in values. Also it\'s possible for Internet Explorer and Safari to obfuscate comment inside the tag <STYLE> via unencoded null character.',
             'ja' : '',
             'ru' : 'Все браузеры позволяют использовать CSS-комментарии до и после свойств и их значений. Кроме того, Internet Explorer позволяет использовать комментарии в значениях свойств. Также в Internet Explorer и Safari в теге <STYLE> воспринимается комментарий, обфусцированный с помощью незакодированного нулевого символа.',
-            'cs' : '',
+            'cs' : 'Všechny webové prohlížeče umožňují použít CSS komentáře před a po uvedené vlastnosti nebo hodnotě. Kromě toho umožňuje Internet Explorer i použití komentářů uvnitř samotné hodnoty.V Internet Exploreru a Safari je také možné použitím nekódovaného nulového znaku vložit komentáře uvnitř tagu <STYLE>.',
             'de' : ''
         },
         'urls'    : [],
@@ -3452,7 +3452,7 @@ var items =
             'en' : 'HTML separators and ignored characters',
             'ja' : '',
             'ru' : 'Разделители и игнорируемые символы в HTML',
-            'cs' : '',
+            'cs' : 'Oddělovače v HTML a ignorované znaky',
             'de' : ''
         },
         'data'       : '<img[a][b][c]src[d]=x[e]onerror=[f]"%js_alert%">',
@@ -3460,7 +3460,7 @@ var items =
 	    'en' : '[a] Characters* ignored after tag names (and not accepted as tag name/attribute separators).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* These are given in decimal codes.\n** Null character in Safari is a divider (only the left part of the tag name or attribute name still valid).',
             'ja' : '',
             'ru' : '[a] Символы*, игнорируемые после имени тега (и не являющиеся при этом разделителями имени тега и атрибута).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Симолы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* Приведены в десятичных кодах.\n** Нулевой символ в Safari - это символ-отсекатель (остаётся действительной только левая часть имени тега или параметра).',
-            'cs' : '',
+            'cs' : '[a] Znaky* ignorované za názvam tagu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Znaky akceptované jako oddělovače mezi názvem tagu a atributu.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Znaky ignorované před názvem atributu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Znaky ignorované mezi názvem atributu a rovnítkem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Znaky akceptované jako oddělovače atributu a parametru.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Znaky ignorované mezi rovnítkem a parametrem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* Kódy jsou uvedeny v desítkové soustavě.\n** V Safari je nulový znak považován za oddělovač (Za validní se považuje pouze levá část názvu tagu nebo atributu uvedená před tímto znakem).',
             'de' : ''
         },
         'urls'    : ['http://docs.google.com/Doc?docid=0ASCeV1AnDNdWZGQ3eDVzbXdfMTZoZGQzNGdneg', '#106'],
@@ -3488,7 +3488,7 @@ var items =
             'en' : 'Characters ignored in the URI (Safari and Google Chrome)',
             'ja' : '',
             'ru' : 'Символы, игнорируемые в URI (Safari and Google Chrome)',
-            'cs' : '',
+            'cs' : 'Znaky ignorované v URI (Safari a Google Chrome)',
             'de' : ''
         },
         'data'       : '<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%js_alert%>XXX</a>',
@@ -3496,7 +3496,7 @@ var items =
 	    'en' : 'This example shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character.',
             'ja' : '',
             'ru' : 'Пример как бы намекает, что Google Chrome и Safari помимо символов с десятичным кодом 9,10,13, игнорируемых в URI всеми браузерами, также игнорирует символы 1-8,11,12. Кроме того, Safari игнорирует в URI незакодированный нулевой символ.',
-            'cs' : '',
+            'cs' : 'Tento příklad ukazuje že Google Chrome a Safari ignorují následující znaky v URI (mimo 9,10,13) : 1-8,11,12. Safari ignoruje v URI nekódovaný nulový znak.',
             'de' : ''
         },
         'urls'    : [],
