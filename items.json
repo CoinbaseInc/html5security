@@ -3521,7 +3521,7 @@ var items =
             'en' : 'Forced plaintext via unbalanced quotes in Internet Explorer',
             'ja' : '',
             'ru' : 'Провоцирование текста посредством несбалансированной кавычки в Internet Explorer',
-            'cs' : '',
+            'cs' : 'Vynucení prostého textu nevyváženými uvozovacími znaky v Internet Exploreru',
             'de' : ''
         },
         'data'       : '<img src="x` `<script>%js_alert%</script>"` `>',
@@ -3529,7 +3529,7 @@ var items =
             'en' : 'Internet Explorer treats any tag as plaintext in case the attribute delimiters are unbalanced - in this example caused by the ` `. In unbalanced quotes appear inside or outside an attributes - preceded by an arbitrary character but the equals sign - the usage of HTML inside attributes is possible and the content will be rendered as regular HTML. The problem has been reported and will be taken care of in later versions of the Internet Explorer.',
             'ja' : '',
             'ru' : 'Internet Explorer рассматривает любой тег в качестве текстового содержимого в случае, если ограничители атрибута несбалансированы. В данном случае это достигается с помощью двух обратных апострофов вне формального атрибута, один из которых (добавлен с целью соблюдения чётности ограничителей) нейтрализован рядом стоящим символом, а другой выполняет функцию разбалансировки формального тега <IMG>. В результате этого тег <IMG> разбирается браузером как текст, а содержимое атрибута src, наоборот, как HTML.',
-            'cs' : '',
+            'cs' : 'Internet explorer zachází s tagy, u nichž nejsou vyváženy oddělovače atributů, jako s prostým textem. V tomto případě je nevyvážení způsobeno pomocí ` `. U nevyvážených uvozovacích znaků uvnitř nebo vně atributů, je možné použít uvnitř atributu i HTML. Jeho obsah bude po té vykonán jako pravé HTML. Problém byl nahlášen a v novějších verzích Internet Exploreru by se měla objevit oprava.',
             'de' : ''
         },
         'urls'    : ['#62', '#108'],
@@ -3553,7 +3553,7 @@ var items =
             'en' : 'Spoofing the address bar information with history.pushState()',
             'ja' : '',
             'ru' : 'Спуфинг информации в адрессной строке с помощью history.pushState()',
-            'cs' : '',
+            'cs' : 'Zfalšování informací v address baru pomocí history.pushState()',
             'de' : ''
         },
         'data'       : '<script>history.pushState(0,0,\'/i/am/somewhere_else\');</script>',
@@ -3561,7 +3561,7 @@ var items =
             'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the user\'s history. An attacker can use this feature to change the information displayed in the address bar as well as the location DOM object and thus initiate phishing attacks or obfuscate bad intentions. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
             'ja' : '',
             'ru' : 'Методы history.pushState() и history.replaceState() позволяют создавать и модифицировать историю посещений пользователя. Атакующий может использовать эти возможности для изменения информации, отображаемой в адресной строке, а также DOM-объекта location. Это может быть использовано в частности в фишинг-атаках. Информация, отраженная в адресной строке, больше не сможет рассматриваться в качестве верной, как только атакующий получит возможность исполнить JavaScript.',
-            'cs' : '',
+            'cs' : 'API funkce history.pushState() a history.replaceState() umožňují vytvořit a změnit uživatelovu historii. Útočník může použít tuto funkci ke změně informací zobrazených v address baru, ale také i umístění DOM objektu. Toho může být zneužito k phishingovému útoku nebo ke zmatení uživatele. Ve chvíli kdy útočník spustí na napadených webových stránkách JavaScript, není již možné informacím v adress baru věřit.',
             'de' : ''
         },
         'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html'],
@@ -3586,7 +3586,7 @@ var items =
             'en' : ' Executing JavaScript in SVG Tiny 1.2 without user interaction',
             'ja' : '',
             'ru' : 'Активный скриптинг в SVG Tiny 1.2',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu v SVG Tiny 1.2 bez uživatelovi interakce',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" id="foo">\r\n<x xmlns="http://www.w3.org/2001/xml-events" event="load" observer="foo" handler="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Chandler%20xml%3Aid%3D%22bar%22%20type%3D%22application%2Fecmascript%22%3E %js_alert% %3C%2Fhandler%3E%0A%3C%2Fsvg%3E%0A#bar"/>\r\n</svg>',
@@ -3594,7 +3594,7 @@ var items =
             'en' : 'Opera - providing advanced support for SVG Tiny 1.2 targeting mobile devices - allows to execute JavaScript without user interaction via arbitrary tags. The tag is being applied with a handler pointing to a data URI containing the actual handler. Important is the hash at the end of the data URI to identify the corrrect handler. It is also possible to refer to an element contained in the SVG by its ID or an external resource.',
             'ja' : '',
             'ru' : 'Пример демонстрирует применение XML-events в SVG. Собственно всё, кроме полезной нагрузки атрибута handler, прямого отношения к SVG не имеет и может быть использовано в любом XML-контексте. В атрибуте handler можно сослаться как на внешний источник, так и на элемент, содержащийся в текущем документе по его ID.',
-            'cs' : '',
+            'cs' : 'Opera poskytuje podporu pro SVG Tiny 1.2 cílenou na mobilní zařízení, která umožňuje pomocí libovolného tagu spustit JavaScript bez uživatelské interakce. Tag je aplikován s ukazatelem události na data URI obsahující její obsluhu. Důležitý je hash na konci data URI sloužící k identifikaci osluhy. Je možné se odkazovat také na prvky v SVG skrz jejich ID nebo externí zdroje.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html', 'http://www.w3.org/TR/2003/REC-xml-events-20031014/', '#84', '#85'],
@@ -3618,7 +3618,7 @@ var items =
             'en' : ' SVG payload obfuscation with gzipped HTML and MIME type image/svg-xml',
             'ja' : '',
             'ru' : 'Обфускация полезной SVG-нагрузки с помощью HTML-разметки, сжатой gzip, и MIME-типа image/svg-xml',
-            'cs' : '',
+            'cs' : 'SVG payload obfuscation s gzipped HTML a MIME typ image/svg-xml',
             'de' : ''
         },
         'data'       : '<iframe src="data:image/svg-xml,%1F%8B%08%00%00%00%00%00%02%03%B3)N.%CA%2C(Q%A8%C8%CD%C9%2B%B6U%CA())%B0%D2%D7%2F%2F%2F%D7%2B7%D6%CB%2FJ%D77%B4%B4%B4%D4%AF%C8(%C9%CDQ%B2K%CCI-*%D10%D4%B4%D1%87%E8%B2%03"></iframe>',
@@ -3626,7 +3626,7 @@ var items =
             'en' : 'Opera allows displaying compressed SVG images without the usually necessary encoding header. This works for almost arbitrary data as long as the content type image/svg+xml is set - or image/svg-xml like in this example.\r\n\r\nNotice that the compressed data can be truncated. Opera will still accept it and render the <script> tag and execute the alert(1) - most other Gzip parsers will break though - rendering any WAF or similar tool trying to analyze the payload useless (gzip 1.3.12 states the payload contains 50+ MB of binary gibberish).\r\n\r\nThe example contains no actual SVG code - just a regular <script> tag with a XHTML namespace attribute.',
             'ja' : '',
             'ru' : 'Opera отображает сжатое SVG-изображение без обычно необходимого заголовка encoding. Этот приём работает в отношении практически любых удаленных данных, если установлен тип содержимого image/svg+xml или, как в данном случае, image/svg-xml.\r\n\r\nОбратите внимание, что удаленные данные могут быть искажены. Opera все равно примет их, распознает тег <script> и исполнит его содержимое (хотя большинство других Gzip-парсеров сломается). Попытки любых WAF и тому подобных программ проанализировать полезную нагрузку на данный момент потерпят неудачу (gzip 1.3.12 устанавливает размер возможной полезной нагрузки в 50+ МВ).\r\n\r\nПример не содержит ожидаемого SVG-кода: только обычный тег <script> с пространством имен XHTML.',
-            'cs' : '',
+            'cs' : 'Opera umožňuje zobrazení komprimovaných SVG obrázků bez uvedení obvykle nutných kódovacích hlaviček. Funguje pro libovolná data v oblasti, pro kterou platí content type image/svg+xml. Všimněte si, že komprimovaná data mouhou být zkrácena. Opera je bude stále akceptovat a vyrenderuje <srcipt> čímž spustí alert(1). Většina ostatních parserů ztroskotá. Zkrácení však může být značné. Například gzip 1.3.12 vkládá asi 50+ MB binárního balastu. Uvedený příklad neobsahuje žádný skutečný SVG kód, pouze tag <SCRIPT> s atributem XHTML udavajícím jmenný prostor.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/2002/CR-SVG11-20020430/minimize.html'],
@@ -3650,7 +3650,7 @@ var items =
             'en' : 'Safari attribute ofuscation with slashes and quotes',
             'ja' : '',
             'ru' : 'Обфускация атрибута в Safari с использованием слешей и кавычек',
-            'cs' : '',
+            'cs' : 'Safary a zamlžené atributy pomocí lomítek a uvozovacích znaků',
             'de' : ''
         },
         'data'       : '<img src onerror /" \'"= alt=%js_alert%//">',
@@ -3658,7 +3658,7 @@ var items =
             'en' : 'Safari accepts slashes and quotes (if preceded by whitespace, slashes or other quotes) between attribute names and the equals character (name/"\'=value). This enables interesting possibilities to obfuscate HTML strings, bypass filters and mimick attributes like in the given example.',
             'ja' : '',
             'ru' : 'Safari игнорирует слеши и кавычки (если им предшествует пробельный символ, слеш или другая кавычка) между именем атрибута и знаком равенства. Это открывает интересные возможности обфусцировать HTML, обойти фильтр, внешне замаскировав атрибут, как в приведенном примере.',
-            'cs' : '',
+            'cs' : 'Safari akceptuje lomítka a uvozovací znaky (pokud jsou předcházeny bílými znaky nebo jinými uvozujícími znaky) mezi názvem atributu a rovnítkem (name/"\'=value). To přidává zajímavé možnosti, kterými lze zkreslit řetězce HTML, zmást bezpečnostní filtry a předstírat atributy jako v uvedeném příkladu.',
             'de' : ''
         },
         'urls'    : [],
@@ -3682,7 +3682,7 @@ var items =
             'en' : 'JavaScript execution via title tag on Inernet Explorer 9',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu skrz tag <TITLE> v Internet Exploreru 9',
             'de' : ''
         },
         'data'       : '<title onpropertychange=alert(1)></title><title title=>',
@@ -3690,7 +3690,7 @@ var items =
             'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Internet Explorer 9 umožňuje spustit kód JavaScriptu skrz obsluhu události onpropertychange v tagu <TITLE>, pokud je následován jiným tagem <TITLE> s alespoň jedním platným atributem.',
             'de' : ''
         },
         'urls'    : [],
@@ -3714,7 +3714,7 @@ var items =
             'en' : 'Internet Explorer parameter parsing issue',
             'ja' : '',
             'ru' : 'Парсинг параметров в Internet Explorer',
-            'cs' : '',
+            'cs' : 'Problémy s parsováním parametrů v Internet Exploreru',
             'de' : ''
         },
         'data'       : '<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=%js_alert%></a>">',
@@ -3722,7 +3722,7 @@ var items =
             'en' : 'Internet Explorer treats the sequence of any quotes that follows the equal sign in a parameter without delimiters as the beginning of a new parameter.',
             'ja' : '',
             'ru' : 'Internet Explorer рассматривает последовательность из любой кавычки, следующей за знаком равенства, внутри параметра без явно указанных ограничителей как начало нового параметра.',
-            'cs' : '',
+            'cs' : 'Internet Explorer zpracovává sekvence uvozujících znaků v parametru bez oddělovačů následujících za rovnítkem jako začátek nového parametru.',
             'de' : ''
         },
         'urls'    : ['#62','#102'],
@@ -3746,7 +3746,7 @@ var items =
             'en' : ' SVG JavaScript execution via style injection (1) ',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (1)',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu injektováním stylu v SVG (1)',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<a id="x"><rect fill="white" width="1000" height="1000"/></a>\n<rect  fill="white" style="clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);"/>\n</svg>',
@@ -3761,7 +3761,7 @@ var items =
             'en' : 'SVG supports several new CSS properties (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), which can refer to external SVG-resources. These properties can also act as separate attributes. Within the external SVG can contain information to animate the current SVG-document. Example shows an animation links, but the possibilities of animation and other elements. Note that Opera does not show the user the change of links address, if the cursor does not go beyond it.',
             'ja' : '',
             'ru' : 'SVG поддерживает несколько новых CSS-свойств (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), которые могут ссылаться на внешние SVG-ресурсы. Эти свойства также могут выступать в качестве самостоятельных атрибутов. Внутри внешнего SVG может содержаться информация для анимирования действующего SVG-документа. Пример демонстрирует анимацию ссылки, но возможна также и анимация других элементов. Обратите внимание, что Opera не покажет изменение адреса ссылки, если курсор не выйдет за пределы её действия.',
-            'cs' : '',
+            'cs' : 'SVG podporuje několik nových CSS vlastností (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), které mohou odkazovat na externí SVG zdroje. Tyto vlastnosti mohou vystupovat také jako samostetné atributy. V rámci externího SVG mohou obsahovat informace oživující stávající SVG dokument. Příklad ukazuje animační odkazy, ale může zahrnovat i animace a jiné prvky. Upozorňujeme, že Opera neukazuje změnu adresy odkazu, pokud nad ním nestojí kurzor.',
             'de' : ''
         },
         'urls'    : [''],
@@ -3785,7 +3785,7 @@ var items =
             'en' : ' SVG JavaScript execution via style injection (2) ',
             'ja' : '',
             'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
-            'cs' : '',
+            'cs' : 'Spuštění JavaScriptu injektováním stylu v SVG (2)',
             'de' : ''
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\r\n<path d="M0,0" style="marker-start:url(test4.svg#a)"/>\r\n</svg>',
@@ -3800,7 +3800,7 @@ var items =
             'en' : 'This example shows how SVG markers allow insertion of external links with JavaScript URI into the current document.',
             'ja' : '',
             'ru' : 'Показано, как свойство marker позволяет вставлять в текущий документ внешнюю ссылку с псевдоскриптом в качестве URL.',
-            'cs' : '',
+            'cs' : 'Tento příklad ukazuje, jak mohou SVG markery umožnit vkládání externích odkazů s javascript: URI do aktuálního dokumentu.',
             'de' : ''
         },
         'urls'    : [],
@@ -3824,7 +3824,7 @@ var items =
             'en' : 'Breaking the functional notation on Chrome and Safari (2)',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в Chrome и Safari (2)',
-            'cs' : '',
+            'cs' : 'Přerušení funkčního zápisu v Chrome a Safari (2)',
             'de' : ''
         },
         'data'       : '<div style="background:url(/f#&#127;oo/;color:red/*/foo.jpg);">X',        
@@ -3832,7 +3832,7 @@ var items =
             'en' : 'To break the functional notation "url()" can be used in combination with the following characters*: 1-8,10-31,127,9,32,40\r\nNote that simultaneous breaking of functional notation and strings can be accomplished by the characters listed in #45.\r\n* Characters are given as decimal ASCII table index.',
             'ja' : '',
             'ru' : 'В качестве прерывателя функциональной нотации "url()" может быть использованы следующие символы*: 1-8,10-31,127,9,32,40\n\nОбратите внимание, что для одновременного прерывания функциональной нотации и строки вы можете использовать символы, перечисленные в #45.\n\n* В десятичных кодах.',
-            'cs' : '',
+            'cs' : 'K přerušení funkčního zápisu "url()" mohou být použity tyto znaky*: 1-8,10-31,127,9,32,40\r\nUpozorňuji, že simultánní přerušení zápisu řetězce lze provést znaky uvedenými v #45.\r\n* ASCII kódy uvedené v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : ['#92', '#45'],
@@ -3857,7 +3857,7 @@ var items =
             'en' : 'Breaking the functional notation on IE (3)',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в IE (3)',
-            'cs' : '',
+            'cs' : 'Přerušení funkčního zápisu v IE (3)',
             'de' : ''
         },
         'data'       : '<div style="font-family:foo{bar;background:url(http://foo.f/oo};color:red/*/foo.jpg);">X',        
@@ -3865,7 +3865,7 @@ var items =
             'en' : 'If any* part of the CSS-declaration (property or value) contains a left curly brace ({ - not as part of a string), the CSS declaration cannot be closed without using a matching right curly brace (}). In most browsers this feature can not be used to bypass filters - as they require to close the strings, functions and attributes inside blocks. IE nevertheless does not require to close function inside such blocks. It is important to take into account especially when filtered styles are inside the targeted tag\'s attribute.\n\n*There\'s another exception for IE (see the letters [a] and [b] of #60).',
             'ja' : '',
             'ru' : 'Если какая-либо* часть CSS-декларации содержит левую фигурную скобку, не являющуюся частью строки, в этом случае CSS-декларация не может быть завершена без использования правой фигурной скобки (}). В большинстве браузеров данная особенность не может быть использована для обхода фильтрации, поскольку они требуют завершения всех строк, функций и атрибутов, открытых внутри блока. Напротив, IE не требует закрывать функцию внутри такого блока. Это нужно принимать во внимание при фильтрации стилей внутри атрибута тега, где с первого взгляда СSS-блоки не могли бы встретиться в принципе.\n\n*Это правило имеет исключение для IE (смотрите литеры [a] и [b] в #60).',
-            'cs' : '',
+            'cs' : 'Pokud některá část* deklarace CSS (vlastnost nebo hodnota) obsahuje levou složenou závorku ({ - není součástí řetězce), není možné deklaraci uzavřít bez odpovídající prvé složené závorky (}). Ve většině prohlížečů nemůže být tato funkce použita k obcházení filtrů, protože vyžadují uzavření řetězců, funkcí a atributů uvnitř bloku. Ovšem IE nevyžaduje uzavření funkce uvnitř těchto bloků. Během filtrování je důležité brát ohled na to, zda jsou celé zápisy stylu uvedeny uvnitř atributu cílového tagu.\n\n* Pro IE existují další vyjímky (viz. body [a] a [b] oddílu #60)',
             'de' : ''
         },
         'urls'    : ['#46', '#60'],
@@ -3889,7 +3889,7 @@ var items =
             'en' : 'Jump into the selector via attribute delimiters',
             'ja' : '',
             'ru' : 'Прыжок в селектор с использованием ограничителей CSS-атрибутов.',
-            'cs' : '',
+            'cs' : 'Skok na selector skrz oddělovač atributů',
             'de' : ''
         },
         'data'       : '<div id="x">XXX</div>\n<style>\n\n#x{font-family:foo[bar;color:green;}\n\n#y];color:red;{}\n\n</style>',        
@@ -3897,7 +3897,7 @@ var items =
             'en' : 'According to established practice selectors are usually filtered less thoroughly by filtering software than other parts of CSS language constructs. This example shows how to leave a CSS-block open to get hands on a selector and inject code into a possibly less thoroughly filtered area.',
             'ja' : '',
             'ru' : 'Согласно устоявшейся практике, самой слабофильтруемой областью в фильтрах, основанных на различной фильтрации различных синтаксических групп таблиц стилей, является селектор. В примере показан способ не дать закрыть CSS-блок, добраться до селектора и внедрить код в недостаточно защищенной зоне.',
-            'cs' : '',
+            'cs' : 'Podle zavedené praxe jsou selektory obvykle filtrovány méně důkladně filtrovacím softwarem než jiné části CSS kódu. Tento příklad ukazuje, jak je možné opustit CSS blok k uvolnění rukou a vložit kód do možná méně důkladně filtrované části.',
             'de' : ''
         },
         'urls'    : ['#27'],
@@ -3922,7 +3922,7 @@ var items =
             'en' : 'Breaking the functional notation on Chrome and Safari (3)',
             'ja' : '',
             'ru' : 'Способ разорвать функциональную нотацию в Chrome и Safari (3)',
-            'cs' : '',
+            'cs' : 'Přerušení funkčního zápisu v Chrome a Safari (3)',
             'de' : ''
         },
         'data'       : '<x style="background:url(\'x&#1;;color:red;/*\')">XXX</x>',        
@@ -3930,7 +3930,7 @@ var items =
             'en' : 'The functional notation breaker shown in #111 also works with quoted strings for several CSS properties. The following characters can be used to break the string and create a new property-value pair: 1-8,10-31 and 127 (decimal ASCII table index)',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Přerušení funkčního zápisu ukázané v #111 pracuje také s uvozenými řetězci několika CSS vlastností. Následující znaky mohou být použity k přerušení řetězce a vytvoření nového páru vlastnosti a hodnoty: 1-8,10-31 a 127 (uvedeno v desítkové soustavě)',
             'de' : ''
         },
         'urls'    : ['#92', '#45', '#111'],
