@@ -73,14 +73,6 @@ var categories =
         'de' : '',
         'tr' : 'X(HT)ML ile ilgili vektörler'
     },
-    'font'          : {
-        'en' : 'Vectors working when delivered in font files',
-        'ja' : '\u30d5\u30a9\u30f3\u30c8\u30d5\u30a1\u30a4\u30eb\u306b\u3088\u308b\u624b\u6cd5',
-        'ru' : 'Векторы, работающие из файлов шрифтов',
-        'cs' : 'Útoky ze souborů s fonty',
-        'de' : '',
-        'tr' : 'Font dosyaları ile erişildiğinde çalışan vektörler'
-    },
     'charset'       : {
         'en' : 'UTF7 and other exotic charset based vectors',
         'ja' : 'UTF-7\u306a\u3069\u306e\u7279\u6b8a\u306a\u6587\u5b57\u30a8\u30f3\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u306b\u3088\u308b\u624b\u6cd5',

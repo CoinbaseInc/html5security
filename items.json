@@ -1472,7 +1472,7 @@ var items =
     },
     { /* ID 43 - Opera 10 SVG font XSS  */
         'id'         : 43,
-        'category'   : 'font', 
+        'category'   : 'svg', 
         'name'       : {
             'en' : 'Opera 10 SVG font XSS',
             'ja' : '',
