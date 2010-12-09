@@ -1558,7 +1558,7 @@ var items =
             'cs' : 'Přerušení textového řetězce v CSS',
             'de' : ''
         },
-        'data'       : '<div style="font-family:\'foo&#10;color:red;\';">XXX',
+        'data'       : '<div style="font-family:\'foo&#10;;color:red;\';">XXX',
         'description': {
             'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* These are given in decimal codes.',
             'ja' : '',
@@ -3193,7 +3193,7 @@ var items =
             'cs' : 'Přerušení funkčního zápisu "url()" v IE může být vyvoláno kombinací bílého znaku, který je následován nebílým znakem.\n\nNásledující znaky* jsou bílými znaky:\n\nInternet Explorer 6,7,8,9 (standart mode), Internet Explorer 8 (kompatibilní mód s IE7): 9-13,32,160,8192-8203,12288,65279\nInternet Explorer 8,9 (kompatibilní mód s IE8): 1-32,127\n\n* Kódy znaků jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
-        'urls'    : ['#111', '#112'],
+        'urls'    : ['#111', '#112' , '#114'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3835,7 +3835,7 @@ var items =
             'cs' : 'K přerušení funkčního zápisu "url()" mohou být použity tyto znaky*: 1-8,10-31,127,9,32,40\r\nUpozorňuji, že simultánní přerušení zápisu řetězce lze provést znaky uvedenými v #45.\r\n* ASCII kódy uvedené v desítkové soustavě.',
             'de' : ''
         },
-        'urls'    : ['#92', '#45'],
+        'urls'    : ['#45', '#92', '#112', '#114'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3868,7 +3868,7 @@ var items =
             'cs' : 'Pokud některá část* deklarace CSS (vlastnost nebo hodnota) obsahuje levou složenou závorku ({ - není součástí řetězce), není možné deklaraci uzavřít bez odpovídající prvé složené závorky (}). Ve většině prohlížečů nemůže být tato funkce použita k obcházení filtrů, protože vyžadují uzavření řetězců, funkcí a atributů uvnitř bloku. Ovšem IE nevyžaduje uzavření funkce uvnitř těchto bloků. Během filtrování je důležité brát ohled na to, zda jsou celé zápisy stylu uvedeny uvnitř atributu cílového tagu.\n\n* Pro IE existují další vyjímky (viz. body [a] a [b] oddílu #60)',
             'de' : ''
         },
-        'urls'    : ['#46', '#60'],
+        'urls'    : ['#46', '#60', '#92', '#111', '#114'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3915,14 +3915,14 @@ var items =
         'tags'       : ['xss', 'css', 'firefox', 'opera', 'trick', 'selector', 'attribute'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 114 - Breaking the functional notation on Chrome and Safari (3) */
+    { /* ID 114 - Breaking the functional notation on Chrome and Safari (4) */
         'id'         : 114,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'Breaking the functional notation on Chrome and Safari (3)',
+            'en' : 'Breaking the functional notation on Chrome and Safari (4)',
             'ja' : '',
-            'ru' : 'Способ разорвать функциональную нотацию в Chrome и Safari (3)',
-            'cs' : 'Přerušení funkčního zápisu v Chrome a Safari (3)',
+            'ru' : 'Способ разорвать функциональную нотацию в Chrome и Safari (4)',
+            'cs' : 'Přerušení funkčního zápisu v Chrome a Safari (4)',
             'de' : ''
         },
         'data'       : '<x style="background:url(\'x&#1;;color:red;/*\')">XXX</x>',        
@@ -3933,7 +3933,7 @@ var items =
             'cs' : 'Přerušení funkčního zápisu ukázané v #111 pracuje také s uvozenými řetězci několika CSS vlastností. Následující znaky mohou být použity k přerušení řetězce a vytvoření nového páru vlastnosti a hodnoty: 1-8,10-31 a 127 (uvedeno v desítkové soustavě)',
             'de' : ''
         },
-        'urls'    : ['#92', '#45', '#111'],
+        'urls'    : ['#45', '#92', '#111', '#112'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
