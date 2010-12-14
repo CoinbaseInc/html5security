@@ -3947,5 +3947,37 @@ var items =
         },
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
         'reporter'   : '.mario, LeverOne'
-    }	
+    },
+    { /* ID 115 - Internet Explorer conditional comments - XSS via [if]> */
+        'id'         : 115,
+        'category'   : 'html', 
+        'name'       : {
+            'en' : 'Internet Explorer conditional comments - XSS via [if]>',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<!--[if]><script>%js_alert%</script -->',        
+        'description': {
+            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attcker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537512%28v=vs.85%29.aspx', '#37', '#38'],
+        'howtofix'   : {
+            'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by injecting rectangular brackets such as shown in the example.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'       : ['xss', 'conditional', 'comments', 'internet explorer', 'rectangular'],
+        'reporter'   : '.mario'
+    }   
 ]
