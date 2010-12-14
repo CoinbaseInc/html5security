@@ -3958,9 +3958,9 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<!--[if]><script>%js_alert%</script -->',        
+        'data'       : '<!--[if]><script>%js_alert%</script -->\r\n<!--[if<img src=x onerror=%js_alert%//]> -->',        
         'description': {
-            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attcker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions.',
+            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attcker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The tested example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -3968,7 +3968,7 @@ var items =
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537512%28v=vs.85%29.aspx', '#37', '#38'],
         'howtofix'   : {
-            'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by injecting rectangular brackets such as shown in the example.',
+            'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by injecting rectangular brackets such as shown in the example. Comment content should be escaped like regular markup - the delimiting sequence --> is not sufficient to successfully close a comment.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -3978,6 +3978,6 @@ var items =
             'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'conditional', 'comments', 'internet explorer', 'rectangular'],
-        'reporter'   : '.mario'
+        'reporter'   : 'LeverOne, .mario'
     }   
 ]
