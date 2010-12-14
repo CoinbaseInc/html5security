@@ -3968,7 +3968,7 @@ var items =
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537512%28v=vs.85%29.aspx', '#37', '#38'],
         'howtofix'   : {
-            'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by injecting rectangular brackets such as shown in the example. Comment content should be escaped like regular markup - the delimiting sequence --> is not sufficient to successfully close a comment.',
+            'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by using rectangular brackets such as shown in the example. Comment content should be escaped like regular markup - the delimiting sequence --> is neither sufficient nor necessary to successfully close a comment.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
