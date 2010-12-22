@@ -3978,7 +3978,7 @@ var items =
             'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'conditional', 'comments', 'internet explorer', 'rectangular'],
-        'reporter'   : 'LeverOne, .mario'
+        'reporter'   : '.mario'
     },
     { /* ID 116 - Internet Explorer applying behavior via <import namespace>  */
         'id'         : 116,
