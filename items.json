@@ -672,7 +672,7 @@ var items =
         'description': {
             'en' : 'Buggy charset implementations in Firefox allow to craft HTML structures without using the usual characters such as < and >. Most affected charsets are from the Mac charset family - such as mac-farsi, mac-arabic and mac-hebrew.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Ошибочная реализация кодировок в Firefox позволяет создавать HTML-структуры без использования привычных символов, таких как "<" и ">". Несколько подверженных кодировок из семейства Mac - mac-farsi, mac-arabic и mac-hebrew.',
             'cs' : 'Chybná implementace znaků ve Firefoxu umožňuje vutvářet HTML struktury bez obvyklých znaků < a >. Většina ovlivněných znakových sad je z rodiny Mac - jako mac-farsi, mac-arabic a mac-hebrew.',
             'de' : '',
             'tr' : 'Hatalı karakter seti uyarlamaları Firefox\'ta HTML yapısını < ve > karakterlerini kullanmadan bozmaya yaramaktadır. Mac karakter seti ailesindeki birçok karakter seti etkilenmektedir - mac-farsi, mac-arabic ve mac-hebrew gibi. '
@@ -981,7 +981,7 @@ var items =
         'description': {
             'en' : 'This HTML+TIME vector utilized the attributes "attributename" and "values" to map encoded markup into an attribute to execute JavaScript.',
             'ja' : '',
-            'ru' : 'Этот HTML+TIME вектор использует атрибуты attributename и values для изменения значения свойства innerHTML у анимируемого объекта. Нужно иметь в виду, что посредством тегов set и animate можно менять и другие свойства объектов (например, src или href). Отличие animate от set состоит в том, что анимировать возможно только то свойство, которое уже имеет начальное значение. Если свойство не имеет начальное значение, то можно прибегнуть к использованию сочетания атрибутов from и to в теге animate. Также не стоит упускать возможность указать целевой тег для анимирования в атрибуте targetElement.',
+            'ru' : 'Этот HTML+TIME вектор использует атрибуты attributename и values для изменения значения свойства innerHTML у анимируемого объекта. Нужно иметь в виду, что посредством тегов set и animate можно менять и другие свойства объектов (например, src или href). Отличие animate от set состоит в том, что анимировать возможно только то свойство, которое уже имеет начальное значение. Если свойство не имеет начальное значение, то можно прибегнуть к использованию сочетания атрибутов from и to в теге animate.',
             'cs' : 'Tento útok používá atributy "attributename" a "values" k namapování kódovaného HTML do atributu.',
             'de' : ''
         },
@@ -2428,7 +2428,7 @@ var items =
         'description': {
             'en' : 'In some situations it\'s possible to trigger a filterchange event by using just one filter as the example shows. Also the short filter notation is being used which is supported by all IE versions despite the information in the documentation. In compatibility mode to IE8+ you can use the property "-ms-filter".', 
             'ja' : '',
-            'ru' : 'Данный вектор из числа тех, которые позволяют наиболее эффективно использовать возможность изменять разметку внутри уязвимого тега без возможности выйти за его пределы. Вызов события происходит даже при однократном назначении фильтра. Обратите внимание, что синтаксис фильтров может принимать такую сокращенную форму, несмотря на отсутствие упоминания об этом в документации. Универсальность данного способа ограничена только тем, что уязвимый тег должен иметь отображаемое содержимое, к которому применим фильтр. В режиме совместимости с IE8+ вы можете использовать свойство -ms-filter.',
+            'ru' : 'Данный вектор из числа тех, которые позволяют наиболее эффективно использовать возможность изменять разметку внутри уязвимого тега без возможности выйти за его пределы. Вызов события происходит даже при однократном назначении фильтра перехода (а точнее событие происходит по окончании перехода, что ожидаемо).  Обратите внимание, что синтаксис фильтров может принимать такую сокращенную форму, несмотря на отсутствие упоминания об этом в документации. Универсальность данного способа ограничена только тем, что уязвимый тег должен иметь отображаемое содержимое, к которому применим фильтр. В режиме совместимости с IE8+ вы можете использовать свойство -ms-filter.',
             'cs' : 'Jak ukazuje příklad, je někdy možné spustit událost filterchange pomocí pouze jednoho filtru. také je použit krátký zápis filtru, který je podporován všemi verzemi IE. V režimu kompatibility pro IE8 + můžete použít vlastnost "-ms-filter".',
             'de' : ''
         },
@@ -3173,7 +3173,7 @@ var items =
             'safari': ['3.0', '4.0','5.0']
         },
         'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfscation', 'closing tag'],
-        'reporter'   : 'LeverOne'
+        'reporter'   : 'LeverOne, wpulog'
     },
     { /* ID 92 - Breaking the functional notation on IE (1) */
         'id'         : 92,
@@ -3679,9 +3679,9 @@ var items =
         'id'         : 107,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'JavaScript execution via title tag on Inernet Explorer 9',
+            'en' : 'JavaScript execution via <TITLE> tag on Inernet Explorer 9',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Вызов события в теге <TITLE> в Internet Explorer 9',
             'cs' : 'Spuštění JavaScriptu skrz tag <TITLE> v Internet Exploreru 9',
             'de' : ''
         },
@@ -3689,7 +3689,7 @@ var items =
         'description': {
             'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Internet Explorer 9 позволяет вызвать событие изменения свойства (обработчик onpropertychange) в теге <TITLE>, если другой тег <TITLE>, следующий далее, имеет по меньшей мере один действительный атрибут. Вектор из числа эксцентрических.',
             'cs' : 'Internet Explorer 9 umožňuje spustit kód JavaScriptu skrz obsluhu události onpropertychange v tagu <TITLE>, pokud je následován jiným tagem <TITLE> s alespoň jedním platným atributem.',
             'de' : ''
         },
@@ -3719,9 +3719,9 @@ var items =
         },
         'data'       : '<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=%js_alert%></a>">',
         'description': {
-            'en' : 'Internet Explorer treats the sequence of any quotes that follows the equal sign in a parameter without delimiters as the beginning of a new parameter.',
+            'en' : 'Internet Explorer treats the sequence of any quotes that follows the equal sign in a parameter without delimiters as the beginning of some semblance of new parameter.',
             'ja' : '',
-            'ru' : 'Internet Explorer рассматривает последовательность из любой кавычки, следующей за знаком равенства, внутри параметра без явно указанных ограничителей как начало нового параметра.',
+            'ru' : 'Internet Explorer рассматривает последовательность из любой кавычки, следующей за знаком равенства, внутри параметра без явно указанных ограничителей как начало некого подобия нового параметра.',
             'cs' : 'Internet Explorer zpracovává sekvence uvozujících znaků v parametru bez oddělovačů následujících za rovnítkem jako začátek nového parametru.',
             'de' : ''
         },
@@ -3929,7 +3929,7 @@ var items =
         'description': {
             'en' : 'The functional notation breaker shown in #111 also works with quoted strings for several CSS properties. The following characters can be used to break the string and create a new property-value pair: 1-8,10-31 and 127 (decimal ASCII table index)',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Как бы иллюстрация к сказанному в #111: разрыв строки, который в указанных браузерах влечет разрыв функции. Как следствие, использование закрывающей круглой скобки ")" необязательно. Символы, рвущие строку и функцию: 1-8, 10-31 и 127 (в десятичных кодах).',
             'cs' : 'Přerušení funkčního zápisu ukázané v #111 pracuje také s uvozenými řetězci několika CSS vlastností. Následující znaky mohou být použity k přerušení řetězce a vytvoření nového páru vlastnosti a hodnoty: 1-8,10-31 a 127 (uvedeno v desítkové soustavě)',
             'de' : ''
         },
@@ -3954,7 +3954,7 @@ var items =
         'name'       : {
             'en' : 'Internet Explorer conditional comments - XSS via [if]> and <img> injection',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Разрушение условных комментариев в Internet Explorer',
             'cs' : '',
             'de' : ''
         },
@@ -3962,7 +3962,7 @@ var items =
         'description': {
             'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attacker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Условные комментарии могут стать проблемой, если атакующий может внедрять секции [...], содержащие условия if или endif с произвольными суффиксами. Как правило нарушение синтаксиса внутри прямоугольных скобок (условной секции) приводит к тому, что браузер начинает рассматривать такие структуры как простой текст и интерпретировать содержащуюся внутри разметку. Различные способы вызвать ошибку в условной секции показаны в этих двух примерах. Отметим, что символ закрытия тега ">" внутри условной секции повлечет парсинг такой конструкции как простого HTML-комментария, и превращения в простой текст не произойдет.',
             'cs' : '',
             'de' : ''
         },
@@ -3970,7 +3970,7 @@ var items =
         'howtofix'   : {
             'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by using rectangular brackets such as shown in the example. Comment content should be escaped like regular markup - the delimiting sequence --> is neither sufficient nor necessary to successfully close a comment.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Убедитесь, что атакующий не сможет внедрить внутрь комментария условную секцию с нарушенным синтаксисом, как показано в примере. Содержание комментариев, если они допускаются политикой фильтра должно быть анализированно подобно обычной разметке. Помните, что традиционный закрывающий ограничитель комментария, как показывает практика, не является единственным для успешного закрытия комментария.',
             'cs' : '',
             'de' : ''
         },                        
@@ -3986,7 +3986,7 @@ var items =
         'name'       : {
             'en' : 'Internet Explorer applying behavior via <import namespace>',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Назначение поведения с помощью тега <import> в Internet Explorer',
             'cs' : '',
             'de' : ''
         },
@@ -3994,7 +3994,7 @@ var items =
         'description': {
             'en' : 'Internet Explorer allows to apply namespaces and attach behaviors not only by using CSS but <import> or <?import> tags. The example shows how to work with HTML+TIME behaviors without using style attributes or tags and cause script execution via the to attribute. If there is no attribute "targetElement",  will be overridden "innerHTML" property of the <body> tag. To limit the area that be changed, you can use the attribute "targetElement".',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Internet Explorer позволяет указывать пространство имен и назначать поведение для тега не только с помощью стилей, но также и с помощью тегов <import> или <?import> и <xml:namespace> или <?xml:namespace>.  Также не стоит упускать возможность указать целевой тег для анимирования в атрибуте targetElement. Если он не указан будет перезаписано соответствующее свойство у тега <BODY>.',
             'cs' : '',
             'de' : ''
         },
