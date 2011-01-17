@@ -96,5 +96,13 @@ var categories =
         'cs' : 'Útoky využívající HTML behavior a binding',
         'de' : '',
         'tr' : 'HTML behavior ve binding vektörleri'
+    },
+    'clickjacking'  : {
+        'en' : 'Clickjacking and UI Redressing vectors',
+        'ja' : '',
+        'ru' : '',
+        'cs' : '',
+        'de' : '',
+        'tr' : ''
     }
 }
