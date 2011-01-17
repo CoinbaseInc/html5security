@@ -4051,4 +4051,38 @@ var items =
         'tags'       : ['clickjacking', 'internet explorer', 'iframe'],
         'reporter'   : 'mniemietz'
     } 
+	,
+	{ /* ID 118 - Text injection by drag-and-drop  */
+        'id'         : 118,
+        'category'   : 'clickjacking', 
+        'name'       : {
+            'en' : 'Text injection by drag-and-drop',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<div draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\'malicious code\');">\n\t<h1>Drop me</h1>\n</div>\n\n<iframe src="http://www.example.org/dragHere.html">\n</iframe>',        
+        'description': {
+            'en' : 'The method "setData" allows, with the event handler "ondragstart" and the attribute "draggable" with the value "true", to drag the text "malicious code" and not "Drop me" into the IFRAME. This IFRAME can consist of a web page with an input field to drop in data.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3.org/TR/html5/dnd.html#dnd'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox' : ['3.x'],
+			'safari' : ['5.0']
+        },
+        'tags'       : ['clickjacking', 'firefox', 'drag-and-drop', 'setData', 'ondragstart', 'draggable'],
+        'reporter'   : 'mniemietz'
+    } 
 ]
