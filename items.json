@@ -4062,7 +4062,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<div draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\'malicious code\');">\n\t<h1>Drop me</h1>\n</div>\n\n<iframe src="http://www.example.org/dragHere.html">\n</iframe>',        
+        'data'       : '<div draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\'malicious code\');">\n\t<h1>Drop me</h1>\n</div>\n\n<iframe src="http://www.example.org/dropHere.html">\n</iframe>',        
         'description': {
             'en' : 'The method "setData" allows, with the event handler "ondragstart" and the attribute "draggable" with the value "true", to drag the text "malicious code" and not "Drop me" into the IFRAME. This IFRAME can consist of a web page with an input field to drop in data.',
             'ja' : '',
