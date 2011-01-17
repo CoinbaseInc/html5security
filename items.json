@@ -4019,9 +4019,9 @@ var items =
         'tags'       : ['xss', 'behavior', 'import', 'xml', 'namespace', 'time', 'entities'],
         'reporter'   : 'LeverOne, GreyMagic'
     },
-	    { /* ID 117 - Reverse clickjacking  */
+	{ /* ID 117 - Reverse clickjacking  */
         'id'         : 117,
-        'category'   : 'clickjacking', 
+        'category'   : 'html', 
         'name'       : {
             'en' : 'Reverse clickjacking via <IFRAME>',
             'ja' : '',
