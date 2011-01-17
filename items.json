@@ -4020,7 +4020,7 @@ var items =
         'reporter'   : 'LeverOne, GreyMagic'
     },
 	    { /* ID 117 - Reverse clickjacking  */
-        'id'         : 111,
+        'id'         : 117,
         'category'   : 'clickjacking', 
         'name'       : {
             'en' : 'Reverse clickjacking via <IFRAME>',
