@@ -4021,7 +4021,7 @@ var items =
     },
 	{ /* ID 117 - Reverse clickjacking  */
         'id'         : 117,
-        'category'   : 'html', 
+        'category'   : 'clickjacking', 
         'name'       : {
             'en' : 'Reverse clickjacking via <IFRAME>',
             'ja' : '',
@@ -4029,7 +4029,8 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<a href="http://attacker.org">\n\t<iframe src="http://example.org"></iframe>\n</a>': {
+        'data'       : '<a href="http://attacker.org">\n\t<iframe src="http://example.org"></iframe>\n</a>',        
+        'description': {
             'en' : 'Internet Explorer allows to place <IFRAME> tags inside <A> tags. By clicking on a not clickable element inside the IFRAME there will be executed the URL defined in the "href" attribute of the <A> tag.',
             'ja' : '',
             'ru' : '',
