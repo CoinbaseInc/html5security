@@ -4018,5 +4018,36 @@ var items =
         },
         'tags'       : ['xss', 'behavior', 'import', 'xml', 'namespace', 'time', 'entities'],
         'reporter'   : 'LeverOne, GreyMagic'
+    },
+	    { /* ID 117 - Reverse clickjacking  */
+        'id'         : 111,
+        'category'   : 'clickjacking', 
+        'name'       : {
+            'en' : 'Reverse clickjacking via <IFRAME>',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<a href="http://attacker.org">\n\t<iframe src="http://example.org"></iframe>\n</a>': {
+            'en' : 'Internet Explorer allows to place <IFRAME> tags inside <A> tags. By clicking on a not clickable element inside the IFRAME there will be executed the URL defined in the "href" attribute of the <A> tag.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://iseclab.org/papers/asiaccs122-balduzzi.pdf'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer' : ['8.0']
+        },
+        'tags'       : ['clickjacking', 'internet explorer', 'iframe'],
+        'reporter'   : 'mniemietz'
     } 
 ]
