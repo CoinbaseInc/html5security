@@ -4086,7 +4086,7 @@ var items =
         'reporter'   : 'mniemietz'
     }
 	,
-	{ /* ID 119 - Content extraction: view-source */
+	{ /* ID 119 - Content extraction via view-source */
         'id'         : 119,
         'category'   : 'clickjacking', 
         'name'       : {
@@ -4118,4 +4118,42 @@ var items =
         'tags'       : ['clickjacking', 'firefox', 'content extraction', 'view-source'],
         'reporter'   : 'mniemietz'
     }	
+		,
+	{ /* ID 120 - Pop-up blocker bypass */
+        'id'         : 120,
+        'category'   : 'clickjacking', 
+        'name'       : {
+            'en' : 'Pop-up blocker bypass',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<script>\nfunction makePopups(){\n\tfor (i=1;i<6;i++) {\n\t\twindow.open(\'popup.html',\'spam'+i,\'width=50,height=50\');\n\t}\n}\n</script>\n\n<body>\n<a href="#" onclick="makePopups()">Spam</a>',        
+        'description': {
+            'en' : 'A web browser like Firefox distinguishes between trusted and not trusted events, depending on the situation. User interactions like a click will be trusted for the reason that they are made explicitly by the user. If a web page initiates an event like opening a pop-up window automatically, the event is not trusted and therefore blocked. Tests have shown that other browsers like Google Chrome or Opera behave similarly. With the use of clickjacking techniques, an attacker can get its victim to create a trusted event by clicking on a link that opens one or more pop-up windows.\n\n			
+			Thus, an attacker can get the victim to unknowingly trigger a trusted event by doing a click. This event can be recycled by an attacker for later usage or directly used to e.g. generate pop-up windows that the user does not desire.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://help.dottoro.com/ljoljvsn.php', 'http://ui-redressing.mniemietz.de/uiRedressing.pdf'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0'],
+            'opera': ['8.x', '9.x', '10.x', '11.x'], 
+            'firefox' : ['2.x', '3.x', '4.0'], 
+            'chrome': ['6.0', '7.0', '8.0', '9.0', '10.0'],
+            'safari': ['5.0']
+        },
+        'tags'       : ['clickjacking', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'pop-up'],
+        'reporter'   : 'mniemietz'
+    }
 ]
