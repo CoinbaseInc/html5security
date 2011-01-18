@@ -4098,8 +4098,7 @@ var items =
         },
         'data'       : '<iframe src="view-source:http://www.example.org" frameborder="0" style="width:400px;height:180px">\n</iframe>\n\n<textarea type="text" cols="50" rows="10">\n</textarea>',        
         'description': {
-            'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, there can be used "view-source:" as a prefix in the web page address. A decisive factor is that only Firefox allows the source code in an iframe to be displayed. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case
-of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. The element is, in the case of "view-source:", the source code of the web page.',
+            'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, there can be used "view-source:" as a prefix in the web page address. A decisive factor is that only Firefox allows the source code in an iframe to be displayed. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. The element is, in the case of "view-source:", the source code of the web page.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
