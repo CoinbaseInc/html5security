@@ -4090,7 +4090,7 @@ var items =
         'id'         : 119,
         'category'   : 'clickjacking', 
         'name'       : {
-            'en' : 'Content extraction: view-source',
+            'en' : 'Content extraction via view-source',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -4173,7 +4173,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/Graphics/SVG/', 'http://www.w3.org/TR/SVG/masking.html', 'http://ui-redressing.mniemietz.de/uiRedressing.pdf', 'http://www.gnucitizen.org/blog/even-more-advanced-clickjacking/'],
+        'urls'    : ['http://www.w3.org/Graphics/SVG/', 'http://www.w3.org/TR/SVG/masking.html', 'http://www.gnucitizen.org/blog/even-more-advanced-clickjacking/'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -4218,5 +4218,41 @@ var items =
         },
         'tags'       : ['clickjacking', 'chrome', 'iframe', 'sandbox'],
         'reporter'   : 'kkotowicz'
+    },
+	{ /* ID 123 - Classjacking with jQuery */
+        'id'         : 123,
+        'category'   : 'clickjacking', 
+        'name'       : {
+            'en' : 'Classjacking with jQuery',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<span class=foo>Some text</span>\n<a class=bar href="http://www.example.org">www.example.org</a>\n\n<script src="http://code.jquery.com/jquery-1.4.4.js"></script>\n<script>\n$("span.foo").click(function() {\nalert(\'foo\');\n$("a.bar").click();\n});\n$("a.bar").click(function() {\nalert(\'bar\');\nlocation="http://www.attackers.org";\n});\n</script>', 
+        'description': {
+            'en' : 'CSS offers the attribute "class" as a selector to style a group of HTML elements. Consequently, it is feasible to style e.g. "span" and "a". Here, the "span" tag has the value "foo" and the "a" tag the value "bar" inside the "class" attribute. This values can be used to define the font size or other CSS-specific properties.\n\nThe first "script" tag holds an "src" attribute with the value "http://code.jquery.com/jquery-1.4.4.js". It is a reference to a file of the "jQuery JavaScript Library v1.4.4". The name "jQuery" stands for a JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions. So it is ideally suited to deal with user interactions and to manipulate them, as required for complex UI redressing attacks. Thus, "jQuery" is given in the second "script". At first, the "span" tag is selected, which holds the value "foo" in the "class" attribute. After that, ".click" is implemented. It can be used to bind an event handler to the "click" JavaScript event, or to trigger that event on an element.\n\nIn this case, an alert window will be executed with the text "foo" after clicking on the "Some text" value of the "span" tag. After closing the alert window, a click event is triggered on the "a" tag with the value "bar" inside the "class" attribute. Analogue to the first event, an alert window appears with the text "bar". After closing the alert window, the web browser will redirect the web page to "http://www.example.org". If there is a click on the link "www.example.org" and not on the text "Some text", an alert window is displayed with the text "bar" followed by a redirection to "http://example.org" and not "http://www.attackers.org". This behaviour follows from the "href" attribute.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.w3schools.com/Css/css_id_class.asp', 'http://jquery.com/', 'http://api.jquery.com/click/', 'http://ui-redressing.mniemietz.de/uiRedressing.pdf'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+		    'internet explorer': ['8.0'],
+            'opera': ['10.x', '11.x'], 
+            'firefox' : ['2.x', '3.x'], 
+            'chrome': ['8.x', '9.x', '10.x'],
+            'safari': ['5.0']
+        },
+        'tags'       : ['clickjacking', 'classjacking', 'jQuery', 'class'],
+        'reporter'   : 'mniemietz'
     }
 ]
