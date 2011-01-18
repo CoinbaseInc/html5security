@@ -4019,7 +4019,7 @@ var items =
         'tags'       : ['xss', 'behavior', 'import', 'xml', 'namespace', 'time', 'entities'],
         'reporter'   : 'LeverOne, GreyMagic'
     },
-	{ /* ID 117 - Reverse clickjacking  */
+	{ /* ID 117 - Reverse clickjacking */
         'id'         : 117,
         'category'   : 'clickjacking', 
         'name'       : {
@@ -4052,7 +4052,7 @@ var items =
         'reporter'   : 'mniemietz'
     } 
 	,
-	{ /* ID 118 - Text injection by drag-and-drop  */
+	{ /* ID 118 - Text injection by drag-and-drop */
         'id'         : 118,
         'category'   : 'clickjacking', 
         'name'       : {
@@ -4084,5 +4084,39 @@ var items =
         },
         'tags'       : ['clickjacking', 'firefox', 'drag-and-drop', 'setData', 'ondragstart', 'draggable'],
         'reporter'   : 'mniemietz'
-    } 
+    }
+	,
+	{ /* ID 119 - Content extraction: view-source */
+        'id'         : 119,
+        'category'   : 'clickjacking', 
+        'name'       : {
+            'en' : 'Content extraction: view-source',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<iframe src="view-source:http://www.example.org" frameborder="0" style="width:400px;height:180px">\n</iframe>\n\n<textarea type="text" cols="50" rows="10">\n</textarea>',        
+        'description': {
+            'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, there can be used "view-source:" as a preﬁx in the web page address. A decisive factor is that only Firefox allows the source code in an iframe to be displayed. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case
+of elements like images. The ﬁrst drag is to select an element and the second to drag an element out of the iframe into the text area. The element is, in the case of "view-source:", the source code of the web page.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.contextis.co.uk/resources/white-papers/clickjacking/Context-Clickjacking_white_paper.pdf'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'firefox' : ['2.x'], ['3.x']
+        },
+        'tags'       : ['clickjacking', 'firefox', 'content extraction', 'view-source'],
+        'reporter'   : 'mniemietz'
+    }	
 ]
