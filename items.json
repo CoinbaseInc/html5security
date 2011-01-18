@@ -4199,7 +4199,7 @@ var items =
         },
         'data'       : '<iframe sandbox="allow-same-origin allow-forms allow-scripts" src="http://example.org/"></iframe>', 
         'description': {
-            'en' : 'Google Chrome implements sandboxed iframes. This particular example shows on how to use this feature against websites only using JavaScript based frame-busters. Note that the framed website can still execute JavaScript - but has no privileges to modify the top franme\'s location. This would only be possible if the sandbox attribute also came with the "allow-top-navigation" parameter.',
+            'en' : 'Google Chrome implements the HTML5 "sandboxed iframes". This particular example shows on how to turn this feature against websites only using JavaScript based frame-busters. Note that the framed website can still execute JavaScript - but has no privileges to modify the top frame\'s location. This would only be possible if the sandbox attribute also came with the "allow-top-navigation" parameter.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
