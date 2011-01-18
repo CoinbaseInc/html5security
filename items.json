@@ -4113,7 +4113,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['2.x'], ['3.x']
+			'firefox': ['2.x', '3.x']
         },
         'tags'       : ['clickjacking', 'firefox', 'content extraction', 'view-source'],
         'reporter'   : 'mniemietz'
