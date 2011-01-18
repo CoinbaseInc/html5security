@@ -4029,7 +4029,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<a href="http://attacker.org">\n\t<iframe src="http://example.org"></iframe>\n</a>',        
+        'data'       : '<a href="http://attacker.org">\n\t<iframe src="http://example.org/"></iframe>\n</a>',        
         'description': {
             'en' : 'Internet Explorer allows to place <IFRAME> tags inside <A> tags. By clicking on a not clickable element inside the IFRAME there will be executed the URL defined in the "href" attribute of the <A> tag.',
             'ja' : '',
@@ -4096,7 +4096,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<iframe src="view-source:http://www.example.org" frameborder="0" style="width:400px;height:180px">\n</iframe>\n\n<textarea type="text" cols="50" rows="10">\n</textarea>',        
+        'data'       : '<iframe src="view-source:http://www.example.org/" frameborder="0" style="width:400px;height:180px">\n</iframe>\n\n<textarea type="text" cols="50" rows="10">\n</textarea>',        
         'description': {
             'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, there can be used "view-source:" as a prefix in the web page address. A decisive factor is that only Firefox allows the source code in an iframe to be displayed. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. The element is, in the case of "view-source:", the source code of the web page.',
             'ja' : '',
@@ -4154,8 +4154,7 @@ var items =
         },
         'tags'       : ['clickjacking', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'pop-up'],
         'reporter'   : 'mniemietz'
-    }
-	,
+    },
 	{ /* ID 121 - SVG masking */
         'id'         : 121,
         'category'   : 'clickjacking', 
@@ -4166,7 +4165,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<html xmlns="http://www.w3.org/1999/xhtml"\nxmlns:svg="http://www.w3.org/2000/svg">\n<body style="background:gray">\n<iframe src="http://www.ruhr-uni-bochum.de/suche/index_en.htm" style="width:800px; height:350px; border:none; mask: url(#maskForClickjacking);"/>\n<svg:svg>\n<svg:mask id="maskForClickjacking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">\n\t<svg:rect x="0.0" y="0.0" width="0.373" height="0.3" fill="white"/>\n\t<svg:circle cx="0.45" cy="0.7" r="0.075" fill="white"/>\n</svg:mask>\n</svg:svg>\n</body>\n</html>', 
+        'data'       : '<html xmlns="http://www.w3.org/1999/xhtml"\nxmlns:svg="http://www.w3.org/2000/svg">\n<body style="background:gray">\n<iframe src="http://example.com/" style="width:800px; height:350px; border:none; mask: url(#maskForClickjacking);"/>\n<svg:svg>\n<svg:mask id="maskForClickjacking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">\n\t<svg:rect x="0.0" y="0.0" width="0.373" height="0.3" fill="white"/>\n\t<svg:circle cx="0.45" cy="0.7" r="0.075" fill="white"/>\n</svg:mask>\n</svg:svg>\n</body>\n</html>', 
         'description': {
             'en' : 'Masking elements can greatly simplify a clickjacking attack. Here, a "body" tag with the "style" attribute "background:gray" is given. As the name suggests, the background of the web page will have the color gray. The "iframe" tag holds the attributes "src" and "style". The URL of the target web page is the value of the "src" attribute. Inside the "style" attribute there is information to the width, the height, and the border of the web page. Finally, there is the property "mask" with "url(#maskForClickjacking)". This "url" points to an SVG with the "id" value "maskForClickjacking".\n\nOn the next line, an "svg" tag with the namespace "svg" is deﬁned. After that, a "mask" tag with the attributes "id", "maskUnits" and "maskContentUnits" is inside the "svg" tag. The attribute "id" holds the value "maskForClickjacking", which is exactly the value inside the "url". The attribute "maskUnits" deﬁnes the coordinate system for the data of "x", "y", "width" and "height". The second attribute "maskContentUnits" deﬁnes the coordinate system for the contents of the "mask" with "objectBoundingBox". Inside the "mask" tag, there are two tags called "rect" and "circle". Each tag holds information to the position and is determined by the geometric shape the width and height or radius. The attribute "fill", with the value "white", ensures that the viewing whole in the mask is visible.',
             'ja' : '',
@@ -4187,5 +4186,37 @@ var items =
         },
         'tags'       : ['clickjacking', 'firefox', 'svg', 'masking'],
         'reporter'   : 'mniemietz'
+    },
+    { /* ID 122 - Sandboxed Iframes */
+        'id'         : 122,
+        'category'   : 'clickjacking', 
+        'name'       : {
+            'en' : 'Sandboxed Iframes',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'data'       : '<iframe sandbox="allow-same-origin allow-forms allow-scripts" src="http://example.org/"></iframe>', 
+        'description': {
+            'en' : 'Google Chrome implements sandboxed iframes. This particular example shows on how to use this feature against websites only using JavaScript based frame-busters. Note that the framed website can still execute JavaScript - but has no privileges to modify the top franme\'s location. This would only be possible if the sandbox attribute also came with the "allow-top-navigation" parameter.',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },
+        'urls'    : ['http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#attr-iframe-sandbox', 'http://blog.kotowicz.net/2010/11/xss-track-how-to-quietly-track-whole.html'],
+        'howtofix'   : {
+            'en' : '',
+            'ja' : '',
+            'ru' : '',
+            'cs' : '',
+            'de' : ''
+        },                        
+        'browsers'   : {
+            'chrome' : ['8.x']
+        },
+        'tags'       : ['clickjacking', 'chrome', 'iframe', 'sandbox'],
+        'reporter'   : 'kkotowicz'
     }
 ]
