@@ -24,7 +24,7 @@ var payloads =
     'vml_path'          : 'test.vml',
     'sct_path'          : 'test.sct',
     'htc_path'          : 'test.htc',
-	'xbl_path'          : 'test.xbl',
+    'xbl_path'          : 'test.xbl',
     'xdr_path'          : 'test.xdr',
     'xxe_path'          : 'test.xxe',
     'swf_path'          : 'test.swf',
