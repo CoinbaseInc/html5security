@@ -866,7 +866,8 @@ var items =
             'ja' : '',
             'ru' : 'Не разрешайте свойства поведений в пользовательских стилях и разметке и не полагайтесь на черные списки в отношении опасных HTML-тегов. Малоизвестные HTML+TIME API предоставляют довольно много экзотических способов исполнения JavaScript, в т.ч. без взаимодействия с пользователем. Избегайте черных списков, если это возможно.',
             'cs' : 'Nepovolte vlastnost "behavior" v uživatelsky vkládaném CSS a HTML a nespoléhejte na blacklisty nebezpečných HTML tagů. Poměrně neznámé API HTML+TIME nabízí velmi mnoho způsobů, jak vykonat skript, ať už s uživatelskou interakcí či bez ní. Použití blacklistů se vyhněte, jak jen to je možné.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kullanıcı destekli CSS ve "markup"larda "behavior" özelliklerine izin vermeyin ve söz konusu tehlikeli HTML etiketleri için "blacklist"lere güvenmeyin. Çok bilinmeyen HTML+TIME API\'si Javascript çalıştırmak için kullanıcı etkileşimi gerektiren veya gerektirmeyen birçok egzotik yöntem sağlamaktadır. Mümkün olduğunca blacklist kullanımından kaçının.'
         },            
         'browsers'   : {
             'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
@@ -882,7 +883,8 @@ var items =
             'ja' : '',
             'ru' : 'Самовключаемый JavaScript фрагмент, основанный на E4X',
             'cs' : 'Automaticky vykonaný kód založený na E4X',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Kendiliğinden varolan E4X tabanlı Javascript kod parçaları'
         },
         'data'       : '<script src="#">{%js_alert%}</script>;1',
         'description': {
@@ -890,7 +892,8 @@ var items =
             'ja' : '',
             'ru' : 'Этот тег <SCRIPT> пытается использовать ту же самую страницу в качестве своего содержимого. Если содержимое страницы правильно с точки зрения XML-синтаксиса, она будет разобрана в JavaScript в качестве E4X-строки. При этом произойдет выполнение полезной нагрузки, содержащейся внутри E4X-разделителя - {}. Чтобы избежать возможную ошибку во время включения, необходимо окончание в виде ;0 и т.п.',
             'cs' : 'Tento tag SCRIPT se pokouší vložit tutéž stránku, v níž je obsažen, a vykonat skript uzavřený do E4X {}. Koncová sekvence ;1 je použita proto, aby Firefox nevyhodil při vkládání chybu.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Bu <SCRIPT> tagı çalıştırılacağı aynı sayfayı yüklemeye çalışıyor ve başarılı olursa {} arasında E4X payload\'unu çalıştırıyor. Firefox\'un dahil etme sırasında hata yakalamasından kaçınmak için ;0 gereklidir.'
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
         'howtofix'   : {
@@ -898,7 +901,8 @@ var items =
             'ja' : '',
             'ru' : 'E4X является чрезвычайно опасным, если исходный код страницы является правильным с т.зр. XML и содержит разделители в виде точек с запятой. Для эффективной защиты сайты должны применять DOCTYPE или содержать неправильную разметку. Существует много вариантов для оканчивающего разделителя: если это правильный JavaScript, и страница не является исключительно XML, то будут работать ";1", ",1", "._" и т.д.',
             'cs' : 'E4X je extrémně nebezpečný, pokud může libovolná stránka vložit libovolné validní XML a zmíněný středník jako omezovač. Efektivní ochrana spočívá ve správném DOCTYPE - nebo v nevalidním zápisu. Existuje mnohjo variant koncového omezovače - dokud to bude platný JavaScript a stránka nebude naznačovat, že je XML-only, bude to fungovat (;1, ,1, ._, atd.)',
-            'de' : ''
+            'de' : '',
+            'tr' : 'E4X geçerli XML ve sözü edilen noktalı vigül ayraçı içeren herhangi bir sayfa dahil edildiğinde tamamen tehlikeli olabilmekte. İşe yarar bir korunma için websiteleri mutlaka DOCTYPE ile uygulanmalıdır. Bitirici ayraçların birçok varyasyonları var - ki herbiri geçerli birer JavaScript olup belirtilen XML sayfa sayfası değil belirteç çalışacaktır (;1, ,1, ._, etc..)'
         },            
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x', '4.0']
@@ -914,7 +918,8 @@ var items =
             'ja' : '',
             'ru' : 'Кодированный UTF-7 JavaScript/HTML фрагмент на основе E4X для междоменного доступа к разметке',
             'cs' : 'Kód v JS/HTML, využívající UTF-7 a E4X ke cross-domain přístupu k HTML',
-            'de' : ''
+            'de' : '',
+            'tr' : 'E4X tabanlı UTF-7 JavaScript/HTML kod parçası ile "cross-domain" etiket çalma'
         },
         'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
         'description': {
@@ -922,7 +927,8 @@ var items =
             'ja' : '',
             'ru' : 'В случае, если атакующий может внедрить последовательность символов, начинающихся с .toXMLString(), существует возможность включения уязвимого сайта в качестве содержимого тега <SCRIPT>, запускаемого с удаленной страницы, с последующим присвоением разметки включенной страницы независимо от протокола и домена. Обратите внимание, что весь вектор кодируется в UTF-7. Это возможно, поскольку в теге <SCRIPT> можно указать кодировку с помощью атрибута charset.',
             'cs' : 'Pokud může útočník vložit sekvenci znaků začínající .toXMLString(), může tak vložit stránku do tagu SCRIPT v běžné stránce a získat tak plný přístup k DOM vložené stránky - napříč doménami a protokoly. Všimněte si, že celý škodlivý skript je zapsán v UTF-7. To je možné proto, že tag SCRIPT může pomocí atributu charset určit znakovou sadu, která bude použita.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Bu durumda saldırgan .toXMLString() ile başlayan bir kelime enjekte edebilir, hedef alınılan siteyi harici bir sayfadan yüklenen <SCRIPT> tagı ile dahil etmeyi ve aynı sayfadaki markup\'ı çalmak mümkün olabilmektedir - domain ve protokol sınırları içerisinde. Not olarak, atak vektörü UTF-7 ile kodlanmıştır. Hangi karakter setinin kullanılacağına <SCRIPT> tagının karar verebiliyor olması UTF-7 ile kodlanmış atak vektörünü mümkün kılmakta.'
         },
         'urls'    : ['https://developer.mozilla.org/en/E4X'],
         'howtofix'   : {
@@ -930,7 +936,8 @@ var items =
             'ja' : '',
             'ru' : 'Убедитесь, что ко всем страницам применяется определенная UTF-8 кодировка. Кроме того, входящие данные должны быть преобразованы из UTF-7, прежде чем будут обработаны с помощью htmlentities() или похожих методов. Все страницы, содержащие конфиденциальные данные, должны использовать DOCTYPE.',
             'cs' : 'Ujistěte se, že všechny stránky mají definovanou znakovou sadu, např. UTF-8. Stejně tak převeďte vstupní data z UTF-7 před jejich ošetřením pomocí metod jako htmlentities(). Všechny webové stránky, obsahující citlivá data, by měly mít uvedený DOCTYPE.',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Tüm sitelere tanımlanmış karakter setlerinin (UTF-8 gibi mesela) uygulandığından emin olun. Ayrıca gelen veri htmlentities() veya benzeri metotlar ile denetlenmeden önce UTF-7\'den mevcut karakter setine dönüştürülmelidir. Ayrıca önemli veriler içeren tüm web sitelerine DOCTYPE uygulanmalıdır.'
         },            
         'browsers'   : {
             'firefox' : ['1.5', '2.x', '3.x', '4.0']
@@ -946,7 +953,8 @@ var items =
             'ja' : '',
             'ru' : 'Перехват нажатия на любом теге страницы с помощью CSS для Opera',
             'cs' : 'Click hijack celé stránky v Opeře pomocí CSS',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Opera\'da CSS ile click hijacking'
         },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
         'description': {
@@ -954,7 +962,8 @@ var items =
             'ja' : '',
             'ru' : 'Opera, как и другие браузеры, допускают выход за пределы селектора и других CSS-конструкций с помощью {...}, что открывает возможность для декларирования новых свойств и их значений, создавая видимость продолжения селектора.',
             'cs' : 'Opera, podobně jako další prohlížeče, umožňuje vložit do selektorů a dalších míst složené konstrukce s {...}, což umožňuje deklarovat nové vlastnosti a přiřadit jim hodnoty, jako -o-link a -o-link-source. V tomto případě tyto proprietární vlastnosti mohou přiřadit libovolnému HTML elementu odkaz, který obsahuje JavaScript URI',
-            'de' : ''
+            'de' : '',
+            'tr' : 'Diğer browserlar gibi Opera\'da özellik seçicilerini ve {...} ile başlayan diğer CSS constructer\'larını kötü amaçta kullanmaya izin veriyor - yeni özellikler tanımlanması ve değer atanmasının olasılığınıda arttırıyor - ayrıca -o-link -o-link-source gibi özellik seçicilerinede. Bu atak vektöründe bu özellikler JavaScript URI link href\'i ile seçilen herhangi bir elementin üstüne yazmaya izin veriyor. '
         },
         'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
         'howtofix'   : {
