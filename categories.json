@@ -103,6 +103,6 @@ var categories =
         'ru' : '',
         'cs' : '',
         'de' : '',
-        'tr' : ''
+        'tr' : 'Clickjacking ve Kullanıcı Arabirimi değiştirme vektörleri'
     }
 }
