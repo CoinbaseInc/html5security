@@ -4274,9 +4274,9 @@ var items =
 			'cs'	: '',
 			'de'	: ''
 		},
-		'data'		: '<script src="/\example.com\foo.js"></script> // Safari 5.0, Chrome 9\n<script src="\\example.com\foo.js"></script> // Safari 5.0',
+		'data'		: '<script src="/\\example.com\\foo.js"></script> \/\/ Safari 5.0, Chrome 9\n<script src="\\\\example.com\\foo.js"></script> \/\/ Safari 5.0',
 		'description' : {
-			'en'	: 'Safari treats backslashes the same way as slash inside URL attributes. Chrome treats prefix "/\" of URL the same way as "//".',
+			'en'	: 'Safari treats backslashes the same way as slash inside URL attributes. Chrome treats prefix "/\\" of URL the same way as "\/\/".',
 			'ja'	: 'Safari\u306fURL\u5c5e\u6027\u5024\u5185\u306e\u30d0\u30c3\u30af\u30b9\u30e9\u30c3\u30b7\u30e5\u0028\u5186\u8a18\u53f7\u0029\u3092\u30b9\u30e9\u30c3\u30b7\u30e5\u3068\u540c\u69d8\u306b\u6271\u3044\u307e\u3059\u3002Chrome\u306fURL\u5148\u982d\u306e\u0022\u002f\u005c\u0022\u3092\u0022\u002f\u002f\u0022\u3068\u540c\u69d8\u306b\u6271\u3044\u307e\u3059\u3002',
 			'ru'	: '',
 			'cs'	: '',
