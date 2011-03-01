@@ -4268,7 +4268,7 @@ var items =
 		'id'		: 124,
 		'category'  : 'html',
 		'name'		: {
-			'en'	: 'backslashes alternative to slash */,
+			'en'	: 'backslashes alternative to slash ',
 			'ja'	: '\u30b9\u30e9\u30c3\u30b7\u30e5\u306e\u304b\u308f\u308a\u306e\u5186\u8a18\u53f7\u0028\u30d0\u30c3\u30af\u30b9\u30e9\u30c3\u30b7\u30e5\u0029',
 			'ru'	: '',
 			'cs'	: '',
