@@ -4105,7 +4105,7 @@ var items =
         },
         'data'       : '<iframe src="view-source:http://www.example.org/" frameborder="0" style="width:400px;height:180px">\n</iframe>\n\n<textarea type="text" cols="50" rows="10">\n</textarea>',        
         'description': {
-            'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, there can be used "view-source:" as a prefix in the web page address. A decisive factor is that only Firefox allows the source code in an iframe to be displayed. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. The element is, in the case of "view-source:", the source code of the web page.',
+            'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or early Google Chrome versions, "view-source:" can be used as a prefix for the URL. Firefox - and that is essential for this vector - allows iframes to show view-source: URLs. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. This method also bypasses CSS and JS based clickjacking protection.',
             'ja' : '',
             'ru' : '',
             'cs' : '',
@@ -4120,7 +4120,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-			'firefox': ['2.x', '3.x']
+			'firefox': ['2.x', '3.x', '4.0']
         },
         'tags'       : ['clickjacking', 'firefox', 'content extraction', 'view-source'],
         'reporter'   : 'mniemietz'
