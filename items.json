@@ -4371,7 +4371,7 @@ var items =
         },
         'data'      : '<svg xmlns="http://www.w3.org/2000/svg" id="x">\r\n<listener event="load" handler="#y" xmlns="http://www.w3.org/2001/xml-events" observer="x"/>\r\n<handler id="y">alert(1)</handler>\r\n</svg>',
         'description' : {
-            'en'    : 'The example vector - relating to #94 - shows how a combination of listener and hander tags can be used to delegate a load event from the SVG element to actual JavaScripe execution. So far only Opera supports the usage of XML events and related elements. No user interaction is required to execute the JavaScript.',
+            'en'    : 'The example vector - relating to #94 - shows how a combination of listener and hander tags can be used to delegate a load event from the SVG element to trigger actual JavaScript execution. So far only Opera supports the usage of XML events and related elements in this context. No user interaction is required to execute the JavaScript.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
