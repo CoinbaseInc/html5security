@@ -4401,9 +4401,9 @@ var items =
             'cs'    : '',
             'de'    : ''
         },
-        'data'      : '<svg><style>&ltimg/scr=x onerror=%js_alert%// </b>',
+        'data'      : '<svg><style>&ltimg/src=x onerror=%js_alert%// </b>',
         'description' : {
-            'en'    : 'Firefox 4 allows HTML entities used in plain-text tags such as style, nostyle, noframes and others to represent their canonical form. This leads to possibilities bypassing filters despite of proper HTML encoding as the example demonstrates - especially when inline SVG is being used. This bug has been fixed in most recent Firefox versions.',
+            'en'    : 'Firefox 4 allows HTML entities used in plain-text tags such as style, nostyle, noframes and others to represent their canonical form. This leads to possibilities bypassing filters despite of proper HTML encoding as the example demonstrates - especially when inline SVG and innerHTML copy access are being used. This bug has been fixed in most recent Firefox versions.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
@@ -4420,7 +4420,7 @@ var items =
         'browsers'  : {
 			'firefox': ['4.0']
         },
-        'tags'      : [ 'svg', 'xss', 'inline', 'entities', 'firefox', 'css', 'xml'],
+        'tags'      : [ 'svg', 'xss', 'inline', 'entities', 'firefox', 'css', 'xml', 'innerhtml'],
         'reporter'  : '.mario'
     }	
 ]
