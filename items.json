@@ -4386,9 +4386,9 @@ var items =
             'de'    : ''
         },
         'browsers'  : {
-			'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+			'opera': ['9.0', '10.0', '11.0']
         },
-        'tags'      : [ 'quicktime', 'html', 'event', 'object', 'classid', 'xss'],
+        'tags'      : [ 'svg', 'opera', 'xml', 'events', 'listener', 'handler', 'xss'],
         'reporter'  : '.mario'
     },
     { /* ID 128 - Firefox parsing entity encoded HTML in SVG */
