@@ -3969,7 +3969,7 @@ var items =
             'en' : 'Internet Explorer conditional comments - XSS via [if]> and <img> injection',
             'ja' : '',
             'ru' : 'Разрушение условных комментариев в Internet Explorer',
-            'cs' : 'Podmíněné komentáře v Internet Exploreru - XSS injekcí [if]> a <img>,
+            'cs' : 'Podmíněné komentáře v Internet Exploreru - XSS injekcí [if]> a <img>',
             'de' : ''
         },
         'data'       : '<!--[if]><script>%js_alert%</script -->\r\n<!--[if<img src=x onerror=%js_alert%//]> -->',        
