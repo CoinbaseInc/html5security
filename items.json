@@ -1,4 +1,4 @@
-﻿/* Items - the set of available items and vectors */
+/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -3969,7 +3969,7 @@ var items =
             'en' : 'Internet Explorer conditional comments - XSS via [if]> and <img> injection',
             'ja' : '',
             'ru' : 'Разрушение условных комментариев в Internet Explorer',
-            'cs' : '',
+            'cs' : 'Podmíněné komentáře v Internet Exploreru - XSS injekcí [if]> a <img>,
             'de' : ''
         },
         'data'       : '<!--[if]><script>%js_alert%</script -->\r\n<!--[if<img src=x onerror=%js_alert%//]> -->',        
@@ -3977,7 +3977,7 @@ var items =
             'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attacker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
             'ja' : '',
             'ru' : 'Условные комментарии могут стать проблемой, если атакующий может внедрять секции [...], содержащие условия if или endif с произвольными суффиксами. Как правило нарушение синтаксиса внутри прямоугольных скобок (условной секции) приводит к тому, что браузер начинает рассматривать такие структуры как простой текст и интерпретировать содержащуюся внутри разметку. Различные способы вызвать ошибку в условной секции показаны в этих двух примерах. Отметим, что символ закрытия тега ">" внутри условной секции повлечет парсинг такой конструкции как простого HTML-комментария, и превращения в простой текст не произойдет.',
-            'cs' : '',
+            'cs' : 'Komentáře v Internet Exploreru mohou způsobit problémy, pokud v nich může uživatel použít hranatých závorek. Tyto komentáře mohou být vyhodnoceny jako podmíněné a v případě splnění podmínky vedou ke spuštění vloženého skriptu. První uvedený příklad ve ve všech verzích IE vždy vyhodnocen pozitivně a dojde tak k okamžitému spuštění kódu. Druhý příklad ukazuje injektáž tagu <img> přímo mezi hranaté závorky a stejně jako v prvním příkladu vede k automatickému spuštění skriptu.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms537512%28v=vs.85%29.aspx', '#37', '#38'],
@@ -3985,7 +3985,7 @@ var items =
             'en' : 'Make sure an attacker cannot turn a comment injection into a conditional comment by using rectangular brackets such as shown in the example. Comment content should be escaped like regular markup - the delimiting sequence --> is neither sufficient nor necessary to successfully close a comment.',
             'ja' : '',
             'ru' : 'Убедитесь, что атакующий не сможет внедрить внутрь комментария условную секцию с нарушенным синтаксисом, как показано в примере. Содержание комментариев, если они допускаются политикой фильтра должно быть анализированно подобно обычной разметке. Помните, что традиционный закрывающий ограничитель комментария, как показывает практика, не является единственным для успешного закрытия комментария.',
-            'cs' : '',
+            'cs' : 'Ujistěte se, že útočník nemůže uvnitř komentáře používat hranaté závorky a tím změnit komentář na podmíněný.',
             'de' : ''
         },                        
         'browsers'   : {
@@ -4001,7 +4001,7 @@ var items =
             'en' : 'Internet Explorer applying behavior via <import namespace>',
             'ja' : '',
             'ru' : 'Назначение поведения с помощью тега <import> в Internet Explorer',
-            'cs' : '',
+            'cs' : 'Nastavení akcí objektů v Internet Exploreru přes <import namespace>',
             'de' : ''
         },
         'data'       : '<div id="x">x</div>\n<xml:namespace prefix="t">\n<import namespace="t" implementation="#default#time2">\n<t:set attributeName="innerHTML" targetElement="x" to="&lt;img&#11;src=x:x&#11;onerror&#11;=%js_alert%&gt;">',        
@@ -4009,7 +4009,7 @@ var items =
             'en' : 'Internet Explorer allows to apply namespaces and attach behaviors not only by using CSS but <import> or <?import> tags. The example shows how to work with HTML+TIME behaviors without using style attributes or tags and cause script execution via the to attribute. If there is no attribute "targetElement",  will be overridden "innerHTML" property of the <body> tag. To limit the area that be changed, you can use the attribute "targetElement".',
             'ja' : '',
             'ru' : 'Internet Explorer позволяет указывать пространство имен и назначать поведение для тега не только с помощью стилей, но также и с помощью тегов <import> или <?import> и <xml:namespace> или <?xml:namespace>.  Также не стоит упускать возможность указать целевой тег для анимирования в атрибуте targetElement. Если он не указан будет перезаписано соответствующее свойство у тега <BODY>.',
-            'cs' : '',
+            'cs' : 'Internet Explorer umožňuje použití jmenných prostorů a připojení akcí k objektům nejen pomocí CSS, ale i HTML tagy <import> nebo <?import>. Uvedený příklad ukazuje jak pracovat s HTML + TIME bez použití stylu nebo tagu a jak spustit kód prostřednictvím atributu "to". Pokud neexistuje prvek určený atributem "targetElement", bude pomocí "innerHTML" přepsán obsah prvku <body>. Atributem "targetElement" můžete tedy omezit oblast, která bude změněna.',
             'de' : ''
         },
         'urls'    : ['http://msdn.microsoft.com/en-us/library/ms533793%28v=vs.85%29.aspx', '#16', '#24', '#28'],
@@ -4033,7 +4033,7 @@ var items =
             'en' : 'Reverse clickjacking via <IFRAME>',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Reverzní clickjacking přeš <IFRAME>',
             'de' : ''
         },
         'data'       : '<a href="http://attacker.org">\n\t<iframe src="http://example.org/"></iframe>\n</a>',        
@@ -4041,7 +4041,7 @@ var items =
             'en' : 'Internet Explorer allows to place <IFRAME> tags inside <A> tags. By clicking on a not clickable element inside the IFRAME there will be executed the URL defined in the "href" attribute of the <A> tag.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Internet Explorer umožňuje umístit prvek <IFRAME> do obsahu párového tagu <A>. Kliknutím na neklikatelný prvek v rámu, bude proveden přechod na URL definované v tagu <A>.',
             'de' : ''
         },
         'urls'    : ['http://iseclab.org/papers/asiaccs122-balduzzi.pdf'],
@@ -4066,7 +4066,7 @@ var items =
             'en' : 'Text injection by drag-and-drop',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Injekce textu využitím grag-and-drop',
             'de' : ''
         },
         'data'       : '<div draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\'malicious code\');">\n\t<h1>Drop me</h1>\n</div>\n\n<iframe src="http://www.example.org/dropHere.html"></iframe>',        
@@ -4074,7 +4074,7 @@ var items =
             'en' : 'The method "setData" allows, with the event handler "ondragstart" and the attribute "draggable" with the value "true", to drag the text "malicious code" and not "Drop me" into the IFRAME. This IFRAME can consist of a web page with an input field to drop in data.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Metoda "setData" umožňuje, s využitím ovladače události "ondragstart" a při nastaveném atributu "draggable" na "true", přetáhnout během drag-end-drop do rámu text "malicious code" namísto textu "Drop me". Rám může obsahovat vstupní pole pro převzetí těchto dat.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/html5/dnd.html#dnd'],
@@ -4100,7 +4100,7 @@ var items =
             'en' : 'Content extraction via view-source',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Získání zdrojového kódu protokolem view-source',
             'de' : ''
         },
         'data'       : '<iframe src="view-source:http://www.example.org/" frameborder="0" style="width:400px;height:180px"></iframe>\n\n<textarea type="text" cols="50" rows="10"></textarea>',        
@@ -4108,7 +4108,7 @@ var items =
             'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, "view-source:" can be used as a prefix for the URL. Firefox - and that is essential for this vector - allows iframes to show view-source: URLs. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. This method also bypasses CSS and JS based clickjacking protection.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Chcete-li zobrazit zdrojový kód webové stránky v prohlížeči Mozilla Firefox nebo v Google Chrome, můžete použít protokolu "view-source". Firefox umožňuje zobrazit zdrojový kód použitím "view-source" v atributu "src" u prvku <IFRAME>. Pokud pak na stjnou stránku umístíme také prvek <TEXTAREA>, můžeme po přetažení získat zdrojový kód cílové stránky. Tato technika obchází také CSS a JS ochranu proti clickajckingu.',
             'de' : ''
         },
         'urls'    : ['http://www.contextis.co.uk/resources/white-papers/clickjacking/Context-Clickjacking_white_paper.pdf'],
@@ -4133,7 +4133,7 @@ var items =
             'en' : 'Pop-up blocker bypass',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Bypass pop-up blokeru',
             'de' : ''
         },
         'data'       : '<script>\nfunction makePopups(){\n\tfor (i=1;i<6;i++) {\n\t\twindow.open(\'popup.html\',\'spam\'+i,\'width=50,height=50\');\n\t}\n}\n</script>\n\n<body>\n<a href="#" onclick="makePopups()">Spam</a>',        
@@ -4141,7 +4141,7 @@ var items =
             'en' : 'A web browser like Firefox distinguishes between trusted and not trusted events, depending on the situation. User interactions like a click will be trusted for the reason that they are made explicitly by the user. If a web page initiates an event like opening a pop-up window automatically, the event is not trusted and therefore blocked. Tests have shown that other browsers like Google Chrome or Opera behave similarly. With the use of clickjacking techniques, an attacker can get its victim to create a trusted event by clicking on a link that opens one or more pop-up windows.\n\nThus, an attacker can get the victim to unknowingly trigger a trusted event by doing a click. This event can be recycled by an attacker for later usage or directly used to e.g. generate pop-up windows that the user does not desire.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Webové prohlížeče, jako je například Firefox, rozlišují mezi důvěryhodnými a nedůvěryhodnými událostmi v závislosti na situaci. Například kliknutí na tlačítko se dá věřit, protože ji jednoznačně musel vyvolat uživatel. Pokud webová stránka zahájí otevírání pop-up okna automaticky, dojde k zablokování této akce. Testy prokázaly, že i jiné prohlížeče, jako jsou Google Chrome nebo Opera, se chovají podobně. Využitím technik clickjackingu může útočník donutit uživatele k vyvolání důvěryhodných akcí, které povedou k otevření jednoho nebo více pop-up oken.',
             'de' : ''
         },
         'urls'    : ['http://help.dottoro.com/ljoljvsn.php', 'http://ui-redressing.mniemietz.de/uiRedressing.pdf'],
@@ -4168,7 +4168,7 @@ var items =
             'en' : 'SVG masking',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'SVF maskování',
             'de' : ''
         },
         'data'       : '<html xmlns="http://www.w3.org/1999/xhtml"\nxmlns:svg="http://www.w3.org/2000/svg">\n<body style="background:gray">\n<iframe src="http://example.com/" style="width:800px; height:350px; border:none; mask: url(#maskForClickjacking);"/>\n<svg:svg>\n<svg:mask id="maskForClickjacking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">\n\t<svg:rect x="0.0" y="0.0" width="0.373" height="0.3" fill="white"/>\n\t<svg:circle cx="0.45" cy="0.7" r="0.075" fill="white"/>\n</svg:mask>\n</svg:svg>\n</body>\n</html>', 
@@ -4176,7 +4176,7 @@ var items =
             'en' : 'Masking elements can greatly simplify a clickjacking attack. Here, a "body" tag with the "style" attribute "background:gray" is given. As the name suggests, the background of the web page will have the color gray. The "iframe" tag holds the attributes "src" and "style". The URL of the target web page is the value of the "src" attribute. Inside the "style" attribute there is information to the width, the height, and the border of the web page. Finally, there is the property "mask" with "url(#maskForClickjacking)". This "url" points to an SVG with the "id" value "maskForClickjacking".\n\nOn the next line, an "svg" tag with the namespace "svg" is deﬁned. After that, a "mask" tag with the attributes "id", "maskUnits" and "maskContentUnits" is inside the "svg" tag. The attribute "id" holds the value "maskForClickjacking", which is exactly the value inside the "url". The attribute "maskUnits" deﬁnes the coordinate system for the data of "x", "y", "width" and "height". The second attribute "maskContentUnits" deﬁnes the coordinate system for the contents of the "mask" with "objectBoundingBox". Inside the "mask" tag, there are two tags called "rect" and "circle". Each tag holds information to the position and is determined by the geometric shape the width and height or radius. The attribute "fill", with the value "white", ensures that the viewing whole in the mask is visible.',
             'ja' : '',
             'ru' : '',
-            'cs' : '',
+            'cs' : 'Maskování prvků může značně zjednodušit útoky typu clickjacking. V tomto příkladu je uveden prvek <body> s atributem "background:grey". Jak je napovězeno, bude pozadí stránky zobrazeno šedou barvou. Tag <iframe> má uvedeny atributy "src" a "style". Uvnitř atributu "style" jsou uvedeny informace o šířce a výšce rámu a o jeho okrajích. Dále je v tomto atributu uvedena vlastnost "mask" s hodnotou "url(#maskForClickjacking)". Toto "url" ukazuje na SVG s "id" hodnotou "maskForClickjacking".\n\nNa dalším řádku je uveden tag "SVG" s namespace "SVG". Po něm následuje tag "mask" s atributy "id", "maskUnits" a "maskContentUnits" uvnitř "SVG" tagu. Atribut "id" má hodnotu "maskForClickjacking", což je hodnota uvedená uvnitř "URL". Atribut "maskUnits" definuje souřadnicový systém "x", "y", "width" a "height". Druhý atribut "maskContentUnits" definuje souřadnicový systém pro obsah "mask" s "objectBoundingBox". Uvnitř tagu "mask" jsou dva tagy pojmenované "rect" a "circle". Každý tag má informace o poloze a geometrický tvar má svou šířku, výšku a poloměr. Atribut "fill" s hodnotou "white", zajišťuje, že zobrazování v celé masce je viditelné.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/Graphics/SVG/', 'http://www.w3.org/TR/SVG/masking.html', 'http://www.gnucitizen.org/blog/even-more-advanced-clickjacking/'],
