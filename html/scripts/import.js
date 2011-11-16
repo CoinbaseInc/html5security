@@ -38,7 +38,8 @@
                     var lang = document.cookie.match(/lang=(\w{2})/)[1];
                 }
                 else {
-                    var lang = navigator.language ? navigator.language : 'en';
+					var userLang = navigator.language||navigator.browserLanguage;
+                    var lang = userLang ? userLang.match(/(\w{2})/)[1] : 'en';
                 }
                 if(typeof categories[category][lang] === 'undefined' 
                     || !categories[category][lang]) {
@@ -79,7 +80,8 @@
                         var lang = document.cookie.match(/lang=(\w{2})/)[1];
                     }
                     else {
-                        var lang = navigator.language ? navigator.language : 'en';
+                        var userLang = navigator.language||navigator.browserLanguage;
+                        var lang = userLang ? userLang.match(/(\w{2})/)[1] : 'en';
                     }
                     if(typeof items[item][c][lang] === 'undefined' 
                         || !items[item][c][lang]) {
