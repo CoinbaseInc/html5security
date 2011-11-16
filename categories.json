@@ -8,7 +8,7 @@ var categories =
         'cs' : 'Útoky využívající možností HTML5',
         'de' : '',
         'tr' : 'HTML5 özelliklerinden yararlanan vektörler',
-		'zh-CN' : '使用HTML5特性的向量'
+		'zh' : '使用HTML5特性的向量'
     },
     'html'          : {
         'en' : 'Vectors working on HTML4 and older versions',
@@ -17,7 +17,7 @@ var categories =
         'cs' : 'Útoky fungující v HTML4 a starších',
         'de' : '',
         'tr' : 'HTML4 ve eski versiyonlarında çalışan vektörler',
-		'zh-CN' : 'HTML4和一些老的向量'
+		'zh' : 'HTML4和一些老的向量'
     },
     'css'           : {
         'en' : 'Cascading stylesheet injection based vectors',
@@ -26,7 +26,7 @@ var categories =
         'cs' : 'Útoky založené na injektáži CSS',
         'de' : '',
         'tr' : 'CSS enjeksiyonu tabanlı vektörler',
-		'zh-CN' : '基于CSS注入的向量'
+		'zh' : '基于CSS注入的向量'
     },
     'javascript'    : {
         'en' : 'Plain JavaScript vectors',
@@ -35,7 +35,7 @@ var categories =
         'cs' : 'Útoky obyčejným JavaScriptem',
         'de' : '',
         'tr' : 'Düz JavaScript Vektörleri',
-		'zh-CN' : '纯javascript的向量'
+		'zh' : '纯javascript的向量'
     },
     'e4x'           : {
         'en' : 'E4X vectors working on gecko based browsers',
@@ -44,7 +44,7 @@ var categories =
         'cs' : 'Útoky založené na E4X v prohlížečích s jádrem Gecko',
         'de' : '',
         'tr' : 'Gecko tabanlı tarayıcılarda çalışan E4X vektörleri',
-		'zh-CN' : '基于E4X的向量(仅支持Gecko内核的浏览器)'
+		'zh' : '基于E4X的向量(仅支持Gecko内核的浏览器)'
     },
     'dom'           : {
         'en' : 'Vectors attacking DOM properties and methods',
@@ -53,7 +53,7 @@ var categories =
         'cs' : 'Útoky na vlastnosti a metody DOM',
         'de' : '',
         'tr' : 'DOM özelliklerine ve metotlarına saldıran vektörler',
-        'zh-CN' : '攻击DOM的属性和方法的向量'
+        'zh' : '攻击DOM的属性和方法的向量'
     },
     'json'          : {
         'en' : 'JSON based vectors',
@@ -62,7 +62,7 @@ var categories =
         'cs' : 'Útoky založené na JSON',
         'de' : '',
         'tr' : 'JSON tabanlı vektörler',
-		'zh-CN' : '基于JSON的向量'
+		'zh' : '基于JSON的向量'
     },
     'svg'           : {
         'en' : 'Vectors embedded in SVG files',
@@ -71,7 +71,7 @@ var categories =
         'cs' : 'Útoky ukryté v SVG',
         'de' : '',
         'tr' : 'SVG dosyalarına gömülü vektörler',
-		'zh-CN' : '嵌入在SVG文件中的向量'
+		'zh' : '嵌入在SVG文件中的向量'
     },
     'xml'           : {
         'en' : 'Vectors related to X(HT)ML',
@@ -80,7 +80,7 @@ var categories =
         'cs' : 'Útoky svázané s X(HT)ML',
         'de' : '',
         'tr' : 'X(HT)ML ile ilgili vektörler',
-        'zh-CN' : 'X(HT)ML相关的向量'
+        'zh' : 'X(HT)ML相关的向量'
     },
     'charset'       : {
         'en' : 'UTF7 and other exotic charset based vectors',
@@ -89,7 +89,7 @@ var categories =
         'cs' : 'Útoky založené na UTF-7 a dalších exotických znakových sadách',
         'de' : '',
         'tr' : 'UTF-7 ve diğer egzotik karakter kodlamaları tabanlı vektörler',
-		'zh-CN' : '基于UTF-7和其它诡异的编码集的向量'
+		'zh' : '基于UTF-7和其它诡异的编码集的向量'
     },
     'dos'           : {
         'en' : 'Client side denial of service vectors',
@@ -98,7 +98,7 @@ var categories =
         'cs' : 'Útoky DoS zaměřené na klienta',
         'de' : '',
         'tr' : 'İstemci taraflı servis durdurdma (DoS) vektörleri',
-        'zh-CN' : '客户端DOS向量'
+        'zh' : '客户端DOS向量'
     },
     'behavior'  : {
         'en' : 'HTML behavior and binding vectors',
@@ -107,7 +107,7 @@ var categories =
         'cs' : 'Útoky využívající HTML behavior a binding',
         'de' : '',
         'tr' : 'HTML behavior ve binding vektörleri',
-		'zh-CN' : 'HTML behavior和binding相关的向量'
+		'zh' : 'HTML behavior和binding相关的向量'
     },
     'clickjacking'  : {
         'en' : 'Clickjacking and UI Redressing vectors',
@@ -116,6 +116,6 @@ var categories =
         'cs' : '',
         'de' : '',
         'tr' : 'Clickjacking ve Kullanıcı Arabirimi değiştirme vektörleri',
-		'zh-CN' : 'Clickjacking和UI Redressing的向量'
+		'zh' : 'Clickjacking和UI Redressing的向量'
     }
 }
