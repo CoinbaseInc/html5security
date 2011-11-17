@@ -53,7 +53,7 @@ var categories =
         'cs' : 'Útoky na vlastnosti a metody DOM',
         'de' : '',
         'tr' : 'DOM özelliklerine ve metotlarına saldıran vektörler',
-        'zh' : '攻击DOM的属性和方法的向量'
+        'zh' : 'DOM相关攻击向量'
     },
     'json'          : {
         'en' : 'JSON based vectors',
