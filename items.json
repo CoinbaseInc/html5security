@@ -1,4 +1,4 @@
-/* Items - the set of available items and vectors */
+﻿/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -3122,7 +3122,7 @@ var items =
             'cs' : 'Obsah XML-odkazů bude automaticky vložen do aktuálního dokumentu. Kombinace "onLoad" (hodnota atributu xlink:actuate) a "embed" (hodnota atributu xlink:show) s potenciálně nebezpečnými SVG prvky.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html'],
+        'urls'    : ['http://www.w3.org/TR/SVG11/attindex.html', 'http://www.w3.org/TR/SVGTiny12/attributeTable.html','#95','#129'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3220,9 +3220,9 @@ var items =
         },
         'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[Inception]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
         'description': {
-            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from fuzzing). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera: Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
+            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera: Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
-            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от возможного напыления). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera: Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
+            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera: Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
             'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari: Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera: Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari: Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
             'de' : ''
         },
@@ -3358,7 +3358,7 @@ var items =
             'cs' : 'SVG umožňuje použití efektu filtrů na libovolný z viditelných prvků. Filtr feImage umožňuje začlenění dalších souborů, stejně tak jako data URI. Se zákeřně vytvořeným data URI je mořné spustit kód JavaScriptu bez spoluúčasti uživatele. Seznam všech prvků, které mohou být animovány, naleznete v dokumentaci.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVG/filters.html', 'http://www.w3.org/TR/SVG11/animate.html#Animatable', 'http://www.w3.org/TR/SVGMobile12/animate.html#Animatable'],
+        'urls'    : ['http://www.w3.org/TR/SVG/filters.html', 'http://www.w3.org/TR/SVG11/animate.html#Animatable', 'http://www.w3.org/TR/SVGMobile12/animate.html#Animatable','#88'],
         'howtofix'   : {
             'en' : 'Make sure that user submitted SVG data and SVG files are treated as XML documents - not as images. The nature of SVG allows to include almost arbitrary XML data including JavaScript leading to XSS or worse.',
             'ja' : '',
@@ -3807,13 +3807,13 @@ var items =
         'tags'       : ['xss', 'javascript', 'parameter', 'parsing', 'internet explorer'],
         'reporter'   : 'Algol, sirdarckcat'
     },
-    { /* ID 109 - SVG JavaScript execution via style injection (1) */
+    { /* ID 109 - Passive SVG JavaScript execution via style injection (1) */
         'id'         : 109,
         'category'   : 'svg', 
         'name'       : {
-            'en' : ' SVG JavaScript execution via style injection (1) ',
+            'en' : 'Passive SVG JavaScript execution via style injection (1) ',
             'ja' : '',
-            'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (1)',
+            'ru' : 'Пассивное исполнение JavaScript в SVG c помощью стилевой инъекции (1)',
             'cs' : 'Spuštění JavaScriptu injektováním stylu v SVG (1)',
             'de' : ''
         },
@@ -3832,7 +3832,7 @@ var items =
             'cs' : 'SVG podporuje několik nových CSS vlastností (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), které mohou odkazovat na externí SVG zdroje. Tyto vlastnosti mohou vystupovat také jako samostetné atributy. V rámci externího SVG mohou obsahovat informace oživující stávající SVG dokument. Příklad ukazuje animační odkazy, ale může zahrnovat i animace a jiné prvky. Upozorňujeme, že Opera neukazuje změnu adresy odkazu, pokud nad ním nestojí kurzor.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['#129'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3841,18 +3841,18 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', 'mobile']
+            'opera' : ['10.x', '11.60', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'css', 'xml', 'style'],
         'reporter'   : 'LeverOne'
     },
-    { /* ID 110 - SVG JavaScript execution via style injection (2) */
+    { /* ID 110 - Passive SVG JavaScript execution via style injection (2) */
         'id'         : 110,
         'category'   : 'svg', 
         'name'       : {
-            'en' : ' SVG JavaScript execution via style injection (2) ',
+            'en' : 'Passive SVG JavaScript execution via style injection (2)',
             'ja' : '',
-            'ru' : 'Исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
+            'ru' : 'Пассивное исполнение JavaScript в SVG c помощью стилевой инъекции (2)',
             'cs' : 'Spuštění JavaScriptu injektováním stylu v SVG (2)',
             'de' : ''
         },
@@ -4490,5 +4490,43 @@ var items =
         },
         'tags'      : [ 'svg', 'xss', 'inline', 'entities', 'firefox', 'css', 'xml', 'innerhtml'],
         'reporter'  : '.mario'
-    }    
+    },
+    { /* ID 129 - Opera active JavaScript execution via STYLE in SVG  */
+        'id'        : 129,
+        'category'  : 'svg',
+        'name'      : {
+            'en'    : 'Opera active JavaScript execution via STYLE in SVG',
+            'ja'    : '',
+            'ru'    : 'Активный скриптинг через SVG-стили в Опере',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<svg>\n<image style=\'filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.%js_alert%</script></svg>")\'>\n<!--\nor\n<image filter=\'...\'>\n-->\n</svg>',
+        'description' : {
+            'en'    : 'To the script execution instead of an attribute "xlink:href" in the SVG-elements <image>, <animation>, <foreignObject> can be used style properties listed in #109.',
+            'ja'    : '',
+            'ru'    : 'Вместо атрибута "xlink:href" для запуска скриптов в SVG-тегах <Image>, <animation>, <foreignObject> могут быть использованы стилевые свойства, перечисленные в #109.',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : ['#88', '#109'],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'opera': ['11.60']
+        },
+        'tags'      : [ 'svg', 'xss', 'inline', 'opera', 'css', 'style'],
+        'reporter'  : 'LeverOne'
+    }
+
+
+    
 ]
