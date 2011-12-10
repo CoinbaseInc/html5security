@@ -4502,9 +4502,9 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'data'      : '<svg>\n<image style=\'filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.%js_alert%</script></svg>")\'>\n<!--\nor\n<image filter=\'...\'>\n-->\n</svg>',
+        'data'      : '<svg>\n<image style=\'filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.%js_alert%</script></svg>")\'>\n<!--\nSame effect with\n<image filter=\'...\'>\n-->\n</svg>',
         'description' : {
-            'en'    : 'To the script execution instead of an attribute "xlink:href" in the SVG-elements <image>, <animation>, <foreignObject> can be used style properties listed in #109.',
+            'en'    : 'Additonal to script execution via "xlink:href" in SVG elements such as <image>, <animation>, <foreignObject> listed in #109, Opera 11 allows to utilize filters to accomplish the same. Note that either the <em>filter</em> attribute, as well as the CSS property <code>filter</code> can be used in this case. Both <em>style</em> and <em>filter</em> attributes in inline SVG should be considered unsafe.',
             'ja'    : '',
             'ru'    : 'Вместо атрибута "xlink:href" для запуска скриптов в SVG-тегах <image>, <animation>, <foreignObject> могут быть использованы стилевые свойства, перечисленные в #109.',
             'cs'    : '',
@@ -4513,7 +4513,7 @@ var items =
         },
         'urls'      : ['#88', '#109'],
         'howtofix'  : {
-            'en'    : '',
+            'en'    : 'Do not allow style and filter attributes inside user generated SVG data. It\'s considerably the best to generally avoid user generated SVG data - if possible.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
