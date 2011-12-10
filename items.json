@@ -4504,7 +4504,7 @@ var items =
         },
         'data'      : '<svg>\n<image style=\'filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.%js_alert%</script></svg>")\'>\n<!--\nSame effect with\n<image filter=\'...\'>\n-->\n</svg>',
         'description' : {
-            'en'    : 'Additional to script execution via "xlink:href" in SVG elements such as <image>, <animation>, <foreignObject> listed in #109, Opera 11 allows to utilize filters to accomplish the same. Note that either the filter attribute, as well as the CSS property filter can be used in this case. Both style and filter attributes in inline SVG should be considered unsafe.',
+            'en'    : 'Additional to script execution via "xlink:href" in SVG elements such as <image>, <animation>, <foreignObject>, Opera 11 allows to utilize filters (as well as other CSS-properties listed in #109) to accomplish the same. Note that either these CSS properties, as well as the analogous attributes (the filter attribute in particular) can be used in this case. Both style and analogous attributes in inline SVG should be considered unsafe.',
             'ja'    : '',
             'ru'    : 'Вместо атрибута "xlink:href" для запуска скриптов в SVG-тегах <image>, <animation>, <foreignObject> могут быть использованы стилевые свойства, перечисленные в #109.',
             'cs'    : '',
