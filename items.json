@@ -2931,11 +2931,11 @@ var items =
         'tags'       : ['xss', 'javascript', 'xml stylesheet', 'css', 'internet explorer', 'expression',  'xml'],
         'reporter'   : '.mario'
     },
-    { /* ID 83 - Obfuscation unsafe parameter via wml-variables. */
+    { /* ID 83 - Obfuscated WML injection via undeclared WAP-ML Variables */
         'id'         : 83,
         'category'   : 'xml', 
         'name'       : {
-            'en' : 'Obfuscation unsafe parameter via wml-variables.',
+            'en' : 'Obfuscated WML injection via undeclared WAP-ML Variables',
             'ja' : '',
             'ru' : 'Обфускация опасного параметра с использованием wml-переменных',
             'cs' : 'Zamaskování nebezpečných parametrů proměnnými wml',
