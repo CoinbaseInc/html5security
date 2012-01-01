@@ -4581,7 +4581,7 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'urls'      : ['https://bugzilla.mozilla.org/show_bug.cgi?id=704354', 'http://soroush.secproject.com/blog/2011/12/drag-and-drop-xss-in-firefox-by-html5-cross-domain-in-frames/', ''],
+        'urls'      : ['https://bugzilla.mozilla.org/show_bug.cgi?id=704354', 'http://soroush.secproject.com/blog/2011/12/drag-and-drop-xss-in-firefox-by-html5-cross-domain-in-frames/'],
         'howtofix'  : {
             'en'    : '',
             'ja'    : '',
