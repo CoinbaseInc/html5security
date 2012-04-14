@@ -44,7 +44,7 @@ var categories =
         'cs' : 'Útoky založené na E4X v prohlížečích s jádrem Gecko',
         'de' : '',
         'tr' : 'Gecko tabanlı tarayıcılarda çalışan E4X vektörleri',
-		'zh' : '基于E4X的向量(仅支持Gecko内核的浏览器)'
+		'zh' : '基于Gecko浏览器上E4X的向量'
     },
     'dom'           : {
         'en' : 'Vectors attacking DOM properties and methods',
@@ -53,7 +53,7 @@ var categories =
         'cs' : 'Útoky na vlastnosti a metody DOM',
         'de' : '',
         'tr' : 'DOM özelliklerine ve metotlarına saldıran vektörler',
-        'zh' : 'DOM相关攻击向量'
+        'zh' : 'DOM属性与方法的攻击向量'
     },
     'json'          : {
         'en' : 'JSON based vectors',
@@ -71,7 +71,7 @@ var categories =
         'cs' : 'Útoky ukryté v SVG',
         'de' : '',
         'tr' : 'SVG dosyalarına gömülü vektörler',
-		'zh' : '嵌入在SVG文件中的向量'
+		'zh' : 'SVG中的向量'
     },
     'xml'           : {
         'en' : 'Vectors related to X(HT)ML',
@@ -80,7 +80,7 @@ var categories =
         'cs' : 'Útoky svázané s X(HT)ML',
         'de' : '',
         'tr' : 'X(HT)ML ile ilgili vektörler',
-        'zh' : 'X(HT)ML相关的向量'
+        'zh' : 'X(HT)ML相关向量'
     },
     'charset'       : {
         'en' : 'UTF7 and other exotic charset based vectors',
@@ -89,7 +89,7 @@ var categories =
         'cs' : 'Útoky založené na UTF-7 a dalších exotických znakových sadách',
         'de' : '',
         'tr' : 'UTF-7 ve diğer egzotik karakter kodlamaları tabanlı vektörler',
-		'zh' : '基于UTF-7和其它诡异的编码集的向量'
+		'zh' : 'UTF-7和其它诡异的编码集'
     },
     'dos'           : {
         'en' : 'Client side denial of service vectors',
@@ -107,7 +107,7 @@ var categories =
         'cs' : 'Útoky využívající HTML behavior a binding',
         'de' : '',
         'tr' : 'HTML behavior ve binding vektörleri',
-		'zh' : 'HTML behavior和binding相关的向量'
+		'zh' : 'HTML behavior和binding相关'
     },
     'clickjacking'  : {
         'en' : 'Clickjacking and UI Redressing vectors',
