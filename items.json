@@ -4642,14 +4642,14 @@ var items =
             'de'    : '',
             'zh'    : '使用属性界定符打破IE注释元素'
         },
-        'data'      : '',
+        'data'      : '<!-- `<img/src=xx:xx onerror=alert(1)//--!>',
         'description' : {
             'en'    : 'It is possible to achieve an injection capable to exfiltrate keyboard events without any JavaScript execution via SVG and set/animate timing attributes. In essence, an access key can be specified to trigger events inside an SVG. In case an inline SVG is being used, the listener for these keys observes the whole document - and not just the SVG itself. This means that even keystrokes into a form input trigger the SVG access key handler.\r\n\r\nOnce this access key handler is being combined with adding a new keystroke-depending image source to an existing image, the form input will be filled, and the SVG will reset a hidden image source according to the key being pressed and thereby silently exfiltrate the data.\r\n\r\nSince all this works without using any JavaScript, it was also possible to execute this attack in latest Thunderbird versions - with the vector invisibly wrapped inside the mail-body.\r\n\r\nThe problem has been reported and fixed, CVE-2011-3663 has been assigned. Current stable versions of Firefox still allow to observe the problem - using a network traffic monitor/Firebug is recommended.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
             'de'    : '',
-            'zh'    : '<!-- `<img/src=xx:xx onerror=alert(1)//--!>'
+            'zh'    : '在IE9以下的版本中中可以使用`打破注释元素'
         },
         'urls'      : ['http://www.mozilla.org/security/announce/2011/mfsa2011-56.html', 'https://bugzilla.mozilla.org/show_bug.cgi?id=704482', 'http://www.w3.org/TR/SVG/animate.html#TimingAttributes'],
         'howtofix'  : {
