@@ -4635,7 +4635,7 @@ var items =
         'id'        : 133,
         'category'  : 'html',
         'name'      : {
-            'en'    : '',
+            'en'    : 'Ending HTML comments with a backtick character',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
@@ -4644,7 +4644,7 @@ var items =
         },
         'data'      : '<!-- `<img/src=xx:xx onerror=%js_alert%//--!>',
         'description' : {
-            'en'    : '',
+            'en'    : 'On older versions of the Internet Explorer, a backtick charcater can be utilized to end a HTML comment and inject otherwise commented markup. A HTML filter allowing comments can be bypassed with this trick and allow an attacker to inject arbitrary HTML.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
@@ -4653,7 +4653,7 @@ var items =
         },
         'urls'      : [],
         'howtofix'  : {
-            'en'    : '',
+            'en'    : 'Make sure, an attacker cannot inject into HTML comments and consider the string "-->" by far not the only way to end a HTML comment.',
             'ja'    : '',
             'ru'    : '',
             'cs'    : '',
