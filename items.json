@@ -3753,7 +3753,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu skrz tag <TITLE> v Internet Exploreru 9',
             'de' : ''
         },
-        'data'       : '<title onpropertychange=alert(1)></title><title title=>',
+        'data'       : '<title onpropertychange=alert(1)></title><title title=></title>',
         'description': {
             'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.',
             'ja' : '',
