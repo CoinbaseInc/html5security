@@ -2008,7 +2008,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu prostřednictvím tagů <VIDEO> a <SOURCE> (2)',
             'de' : ''
         },
-        'data'       : '<video onerror="%js_uri_alert%"><source>',
+        'data'       : '<video onerror="%js_uri_alert%"><source></source></video>',
         'description': {
             'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags',
             'ja' : '',
