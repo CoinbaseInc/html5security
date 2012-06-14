@@ -1174,7 +1174,7 @@ var items =
             'cs' : 'Vykonání JavaScriptu pomocí TABLE a background',
             'de' : ''
         },
-        'data'       : '<table background="javascript:%js_alert%">',
+        'data'       : '<table background="javascript:%js_alert%"></table>',
         'description': {
             'en' : 'Opera 8-10.5+ as well as Internet Explorer 6 support JavaScript URIs for <TABLE> and some other tags\' "background" attributes. This causes JavaScript execution without user interaction. The problem has been fixed in Opera 11.',
             'ja' : '',

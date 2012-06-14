@@ -217,7 +217,7 @@
     	for(i in items){
     		var vector = items[i].data;
     		vector = vector.replace(/(?:alert|write)\(1\)/gim, 'alert('+i+')');
-			console.log('<div>'+vector+'//["\'`-->]]>]</div>');
+			console.log('<div id="'+i+'">'+vector+'//["\'`-->]]>]</div>');
     	}
     }
 })();
