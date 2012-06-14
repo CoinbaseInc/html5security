@@ -215,10 +215,9 @@
      */
     window.vectors = function(){
     	for(i in items){
-    		var j = i+1;
     		var vector = items[i].data;
-    		vector = vector.replace(/(?:alert|write)\(1\)/gim, 'alert('+j+')');
-			console.log('<div id="'+j+'">'+vector+'//["\'`-->]]>]</div>');
+    		vector = vector.replace(/(?:alert|write)\(1\)/gim, 'alert('+(i+1)+')');
+			console.log('<div id="'+(i+1)+'">'+vector+'//["\'`-->]]>]</div>');
     	}
     }
 })();
