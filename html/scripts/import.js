@@ -215,6 +215,7 @@
      */
     window.vectors = function(){
     	for(i in items){
+    		i = parseInt(i, 10);
     		var vector = items[i].data;
     		vector = vector.replace(/(?:alert|write)\(1\)/gim, 'alert('+(i+1)+')');
 			console.log('<div id="'+(i+1)+'">'+vector+'//["\'`-->]]>]</div>');

