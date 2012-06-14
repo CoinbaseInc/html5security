@@ -369,7 +369,7 @@ var items =
             'tr' : '<VIDEO> etiketinin poster özelliği ile JavaScript çalıştırma',
             'zh' : '通过<VIDEO>的poster属性执行Javascript',
         },
-        'data'       : '<video poster=%js_uri_alert%//',
+        'data'       : '<video poster=%js_uri_alert%//></video>',
         'description': {
             'en' : 'Opera 10.5+ allows using poster attributes in combination with javascript: URIs. This bug has been fixed in Opera 11.',
             'ja' : '',
