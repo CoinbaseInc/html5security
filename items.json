@@ -1794,7 +1794,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu použitím atributu DATA tagu <OBJECT>',
             'de' : ''
         },
-        'data'       : '<object data="data:text/html;base64,%js_base64_alert%">',
+        'data'       : '<object data="data:text/html;base64,%js_base64_alert%"></object>',
         'description': {
             'en' : 'Almost all browsers supporting data URIs allow executing JavaScript via crafted <OBJECT> "data" attribute value - even if base64 encoded.',
             'ja' : '',

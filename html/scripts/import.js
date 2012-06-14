@@ -214,12 +214,10 @@
      * Export all vectors for brute-force XSS Tests
      */
     window.vectors = function(){
-    	var vectors = '';
     	for(i in items){
     		var vector = items[i].data;
     		vector = vector.replace(/(?:alert|write)\(1\)/gim, 'alert('+i+')');
-    		vectors += '<div>'+vector+'//[""\'\'``]</div>\r\n\r\n';
+			console.log('<div>'+vector+'//[""\'\'``]</div>');
     	}
-    	console.log(vectors);
     }
 })();
