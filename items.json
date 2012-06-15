@@ -4439,7 +4439,7 @@ var items =
             'ru'    : '',
             'cs'    : '',
             'de'    : '',
-            'zh'    : '示例向量，与#94相关，展示了liatener标签和hander标签的组合是如何被利用，从SVG元素中加载事件去触发JavaScript，使其执行。到目前为止，只有Opera支持XML事件和相关元素。不需要用户交互即可执行JavaScript语句。'
+            'zh'    : '示例向量，与#94相关，展示了listener标签和handler标签的组合是如何被利用，从SVG元素中加载事件去触发JavaScript，使其执行。到目前为止，只有Opera支持XML事件和相关元素。不需要用户交互即可执行JavaScript语句。'
         },
         'urls'      : ['http://www.opera.com/docs/specs/presto29/svg/elements/', 'http://www.w3.org/TR/SVGMobile12/script.html#ListenerElement', 'http://www.w3.org/TR/2010/NOTE-xml-events2-20101216/Overview.html#section-eventhandlers', '#94'],
         'howtofix'  : {
@@ -4532,7 +4532,7 @@ var items =
         'name'      : {
             'en'    : 'Passive JavaScript execution via MathML on Firefox',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Пассивный скриптинг в Firefox с использованием MathML',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4541,7 +4541,7 @@ var items =
         'description' : {
             'en'    : 'Modern Firefox versions allow usage of inline MathML. While other user agents don\'t support the href attribute for MathML elements (yet), Firefox does and thereby enables passive JavaScript execution. Note that supporting href for MathML elements is a feature - introduced with MathML 3. The same effect can be observed by using xlink:href. The statusline action further enables obfuscation of the actual link target - and in this example hides the JavaScript URI.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Современные версии Firefox наряду с SVG имеют встроенную поддержку MathML на HTML-страницах. Данный браузер первым реализовал атрибут href, который является частью стандарта MathML3, что открывает возможность типичного способа запуска JavaScript. Обратите внимание на поведение, создаваемое атрибутом actiontype в данном примере, который позволяет скрывать полезную нагрузку в статусной панели.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4567,7 +4567,7 @@ var items =
         'name'      : {
             'en'    : 'Passive XSS via Drag&Drop of specially crafted URIs',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Пассивный скриптинг с использованием специально сформированного идентификатора ресурса',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4576,7 +4576,7 @@ var items =
         'description' : {
             'en'    : 'It is possible to bypass Mozilla Firefox (tested on version 8.x and 9.x) internal protection and execute Javascript Drag and Drop by using capitalization and Feed protocol, and to run that JavaScript on the top page if you can include the malicious page in an IFrame. The "event.preventDefault()" method in "ondragover" event of the element is to block the natural function of the browser. Usually the malicious IFrame should deceive the user to drag and drop a JS to the drop box which can be concealed in a hidden "Textarea" element.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'В примере продемонстрированы способы обхода внутренней защиты Firefox от выполнения Javascript кода при перетаскивании выделенной строки в целевую область. Как видно из примера, способы сводились к использованию верхнего регистра и протокола feed. Опасность данного примера состояла, в частности, к тому, что он позволял выполнить javascript-код в контексте главной страницы, если в неё удавалось внедрить опасный iframe элемент и тем или иным образом спровоцировать пользователя выполнить перетаскивание замаскированной полезной нагрузки. Назначение метода event.preventDefault() события ondragover в блокировке изначального поведения браузера. Хотя эти способы были закрыты в последующем, однако примеры с протоколом feed до сих пор работают при классическом использовании в URI тега.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4602,7 +4602,7 @@ var items =
         'name'      : {
             'en'    : 'SVG <set> and <animate> elements allow key-logging w/o JavaScript',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Перехват нажатий клавиш с использованием SVG-элементов <set> и <animate>',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4611,7 +4611,7 @@ var items =
         'description' : {
             'en'    : 'It is possible to achieve an injection capable to exfiltrate keyboard events without any JavaScript execution via SVG and set/animate timing attributes. In essence, an access key can be specified to trigger events inside an SVG. In case an inline SVG is being used, the listener for these keys observes the whole document - and not just the SVG itself. This means that even keystrokes into a form input trigger the SVG access key handler.\r\n\r\nOnce this access key handler is being combined with adding a new keystroke-depending image source to an existing image, the form input will be filled, and the SVG will reset a hidden image source according to the key being pressed and thereby silently exfiltrate the data.\r\n\r\nSince all this works without using any JavaScript, it was also possible to execute this attack in latest Thunderbird versions - with the vector invisibly wrapped inside the mail-body.\r\n\r\nThe problem has been reported and fixed, CVE-2011-3663 has been assigned. Current stable versions of Firefox still allow to observe the problem - using a network traffic monitor/Firebug is recommended.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'С помощью атрибута условий begin SVG-элементов <set> и <animate> можно осуществить инъекцию, позволяющую отследить клавиатурные (и не только) события без использования JavaScript. Язык SVG позволяет обусловить срабатывание события нажатием определенных клавиш. В случае с встроенным SVG слушатель этих нажатий наблюдает за всем документом, а не только за SVG-частью. Это означает, что каждое нажатие клавиши, например, в форме ввода вызовет соответствующий SVG-обработчик.\r\n\r\nПосле того как обработчик нажатия отдельной клавиши будет связан с переопределением характерного для него адреса изображения, заполнение формы приведет к изменению адреса скрытой картинки в соотвествии с нажатой клавишей и тем самым к утечке данных.\r\n\r\nПоскольку все это работало без использования JavaScript, было возможно провести данную атаку в Thunderbird через вектор, незаметно внедренный в тело сообщения.\r\n\r\nПроблема была обозначена в CVE-2011-3663 и исправлена.\r\n\r\nМожно также отметить, что ранее известные способы обрабатывать нажатия клавиш (атрибут accesskey или CSS-свойство -wap-accesskey, реализованное в Opera) позволяют это сделать только при дополнительном нажатии некой управляющей клавиши, чего не было в SVG от Firefox.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4637,7 +4637,7 @@ var items =
         'name'      : {
             'en'    : 'Ending HTML comments with a backtick character',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Окончание HTML-псевдокомментария незавершенным параметром.',
             'cs'    : '',
             'de'    : '',
             'zh'    : '使用属性界定符打破IE注释元素'
@@ -4646,12 +4646,12 @@ var items =
         'description' : {
             'en'    : 'On older versions of the Internet Explorer, a backtick charcater can be utilized to end a HTML comment and inject otherwise commented markup. A HTML filter allowing comments can be bypassed with this trick and allow an attacker to inject arbitrary HTML.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'В указанных ниже версиях Internet Explorer\'а существует следующая особенность в обработке HTML-комментариев, неприсущая другим популярным браузерам. Она состоит в том, что необходимым условием существования комментария наряду с прочими считается его правильное окончание ("-->" для обычного HTML-комментария). В других браузерах условие существования комментария это только правильное его начало. Если IE встречает начало комментария (в данном случае это "<!--"), но не находит конец (в данном случае конца нет, так как "--!>" - это неправильное завершение комментария для IE), то парсит эту конструкцию по правилам спецтегов, которые указаны в #91. А именно IE будет воспринимать такую конструкцию как обычный (пользовательский) тег, допускающий параметры. Второй приём, использованный в данном примере, это незаконченный псевдопараметр (обратный апостроф). Данная техника уже описывалась в #62 и #102.',
             'cs'    : '',
             'de'    : '',
             'zh'    : '在IE9以下的版本中中可以使用`打破注释元素'
         },
-        'urls'      : [],
+        'urls'      : ['#62','#102', '#115'],
         'howtofix'  : {
             'en'    : 'Make sure, an attacker cannot inject into HTML comments and consider the string "-->" by far not the only way to end a HTML comment.',
             'ja'    : '',
