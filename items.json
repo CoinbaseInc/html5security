@@ -2115,7 +2115,7 @@ var items =
             'cs' : 'Internet Explorer vnímá znak accent grave (`) stejně jako apostrof \' nebo uvozovky \", čili jako oddělovač. V případě, že neobsahují vloženou hodnotu, budou při použití vlastnosti innerHTML vypuštěny.',
             'de' : ''
         },
-        'urls'    : ['#97','#98'],
+        'urls'    : ['#97','#98', '#128'],
         'howtofix'   : {
             'en' : 'Make sure the HTML filter you use is aware of the fact that the accent grave is a valid attribute delimiter for IE too - especially if users are allowed to post harmless JavaScript (JSReg, Google Caja). Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
@@ -3429,7 +3429,7 @@ var items =
             'cs' : 'Internet Explorer nesprávně analyzuje atribut "xmlns" ve vlastních tagách během kopírování innerHTML. Jeho hodnota je bez oddělovače přidána k tagu <?XML:NAMESPACE>.',
             'de' : ''
         },
-        'urls'    : ['#59','#98'],
+        'urls'    : ['#59','#98','#128'],
         'howtofix'   : {
             'en' : 'Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
@@ -3461,7 +3461,7 @@ var items =
             'cs' : 'Tento příklad ukazuje, že Internet Explorer a Firefox automaticky dekódují CSS kódování během kopírování innerHTML.',
             'de' : ''
         },
-        'urls'    : ['#59','#97'],
+        'urls'    : ['#59', '#97', '#128'],
         'howtofix'   : {
             'en' : 'Be very careful when handling user generated HTMl in the DOM later on. The innerHTML property does not always contain what it\'s supposed to.',
             'ja' : '',
@@ -4357,7 +4357,7 @@ var items =
         'name'      : {
             'en'    : 'SVG chameleon behavior via embedded XSLT',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Хамелеонное поведение SVG с помощью XSLT',
             'cs'    : '',
             'de'    : ''
         },
@@ -4365,7 +4365,7 @@ var items =
         'description' : {
             'en'    : 'This SVG chameleon file can be embedded via <embed> on most, and via <img> on most modern browsers. Thanks to the embedded XSLT stylesheet, it will change it\'s appearance, depending on how it is embedded or displayed. In an <img> tag it just shows a red dot. But opened directly or via an <iframe> or <embed>, the XSLT turns all SVG into (X)HTML and an alert will show. While most modern browsers show this behavior, Opera will completely mess it up, and show an alert when used via <embed> and an <iframe> when used via <img> (!). Chrome will show a broken image and an alert.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Этот хамелеонный SVG-документ может быть использован в теге <embed> в большинстве и в теге <img> в большинстве современных браузеров. Благодаря внедренному XSLT-стилю документ может изменять свой вид в зависимости от того, каким образом он показывается. Подключенный через тег <img> он покажет красный круг, но открытый напрямую или через <iframe> или <embed> (и аналогичные им) теги произойдет XSL-трансформация, и документ превратится ... превратится документ в (X)HTML c подключаемым <iframe>. Opera провалит тест показав ифрейм даже в теге <img>, а Safari и Google Chrome покажут испорченную картинку.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4392,7 +4392,7 @@ var items =
         'name'      : {
             'en'    : 'QuickTime events causing JavaScript execution',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'События QuickTime',
             'cs'    : '',
             'de'    : '',
             'zh'    : 'QuickTime 事件导致JavaScript代码执行'
@@ -4401,7 +4401,7 @@ var items =
         'description' : {
             'en'    : 'The below displayed construct enables usage of the more or less unknown QuickTime DOM events. Those contain an underscore - which is rather uncommon for event handlers and thus bypasses many blacklist based filters. The attack only works if both <object> tags are in place - and <object> tag 1 supplys the necessary behavior for object tag two.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Нижеприведенная конструкция демонстрирует использование более или менее неизвестных QuickTime DOM-событий. Поскольку они содержат нехарактерные для обработчиков подчеркивания, это может быть использовано для обхода многих фильтров, основанных на черных списках. Вектор работает, только если присутствуют оба объекта, где первый поставляет необходимое поведение для второго.',
             'cs'    : '',
             'de'    : '',
             'zh'    :'在上方展示的经过构造的用法或多或少会触发QuickTime的未知DOM事件。那些包含下划线”_”的事件句柄很罕见，使它可以绕过大多数黑名单过滤。这一攻击只有满足以下条件才能生效：两个<object>标签；前一个<object>标签为后一个<object>标签提供了必要的behavior'
@@ -4427,7 +4427,7 @@ var items =
         'name'      : {
             'en'    : 'JavaScript execution on Opera via listener delegation',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Делегация слушателя события в Opera',
             'cs'    : '',
             'de'    : '',
             'zh'    : 'Opera中通过listener执行JavaScript代码'
@@ -4436,7 +4436,7 @@ var items =
         'description' : {
             'en'    : 'The example vector - relating to #94 - shows how a combination of listener and hander tags can be used to delegate a load event from the SVG element to trigger actual JavaScript execution. So far only Opera supports the usage of XML events and related elements in this context. No user interaction is required to execute the JavaScript.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Данный пример, тесно связанный с #94, показывает, как комбинация элементов <listener> и <handler> позволяет назначить обработчик для события, происходящего в другом SVG-элементе.',
             'cs'    : '',
             'de'    : '',
             'zh'    : '示例向量，与#94相关，展示了listener标签和handler标签的组合是如何被利用，从SVG元素中加载事件去触发JavaScript，使其执行。到目前为止，只有Opera支持XML事件和相关元素。不需要用户交互即可执行JavaScript语句。'
@@ -4462,7 +4462,7 @@ var items =
         'name'      : {
             'en'    : 'Firefox parsing entity encoded HTML in SVG',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Декодирование HTML-эквивалентов при копировании с помощью innerHTML в Firefox (4)',
             'cs'    : '',
             'de'    : '',
             'zh'    : 'Firefox 解析SVG中被编码的HTML实体'
@@ -4471,12 +4471,12 @@ var items =
         'description' : {
             'en'    : 'Firefox 4 allows HTML entities used in plain-text tags such as style, nostyle, noframes and others to represent their canonical form. This leads to possibilities bypassing filters despite of proper HTML encoding as the example demonstrates - especially when inline SVG and innerHTML copy access are being used. This bug has been fixed in most recent Firefox versions.',
             'ja'    : '',
-            'ru'    : '',
+            'ru'    : 'Firefox 4 при копировании с помощью innerHTML декодировал HTML-эквиваленты внутри тегов с тестовым содержимым таких, как style, nostyle, noframes и других, в их первообраз, что могло приводить к обходу фильтров, которые допускают SVG и кодируют опасные символы, и результат которых в последствии неправильно использовался в логике innerHTML. Эта ошибка была исправлена в Firefox 5.',
             'cs'    : '',
             'de'    : '',
             'zh'    : 'Firefox 4允许HTML实体被用在纯文本标签中去表示他们原有的含义，例如style，nostyle，noframes和其他标签。尽管HTML已经被编码，但是这一特性仍有可能导致绕过过滤，特别是在内联SVG和innerHTML的拷贝被使用时。这一bug已在最新的Firefox中修复。'
         },
-        'urls'      : ['http://www.mozilla.org/security/announce/2011/mfsa2011-27.html', 'https://developer.mozilla.org/en/svg_in_html_introduction'],
+        'urls'      : ['http://www.mozilla.org/security/announce/2011/mfsa2011-27.html', 'https://developer.mozilla.org/en/svg_in_html_introduction','#59','#97','#98'],
         'howtofix'  : {
             'en'    : '',
             'ja'    : '',
@@ -4611,7 +4611,7 @@ var items =
         'description' : {
             'en'    : 'It is possible to achieve an injection capable to exfiltrate keyboard events without any JavaScript execution via SVG and set/animate timing attributes. In essence, an access key can be specified to trigger events inside an SVG. In case an inline SVG is being used, the listener for these keys observes the whole document - and not just the SVG itself. This means that even keystrokes into a form input trigger the SVG access key handler.\r\n\r\nOnce this access key handler is being combined with adding a new keystroke-depending image source to an existing image, the form input will be filled, and the SVG will reset a hidden image source according to the key being pressed and thereby silently exfiltrate the data.\r\n\r\nSince all this works without using any JavaScript, it was also possible to execute this attack in latest Thunderbird versions - with the vector invisibly wrapped inside the mail-body.\r\n\r\nThe problem has been reported and fixed, CVE-2011-3663 has been assigned. Current stable versions of Firefox still allow to observe the problem - using a network traffic monitor/Firebug is recommended.',
             'ja'    : '',
-            'ru'    : 'С помощью атрибута условий begin SVG-элементов <set> и <animate> можно осуществить инъекцию, позволяющую отследить клавиатурные (и не только) события без использования JavaScript. Язык SVG позволяет обусловить срабатывание события нажатием определенных клавиш. В случае с встроенным SVG слушатель этих нажатий наблюдает за всем документом, а не только за SVG-частью. Это означает, что каждое нажатие клавиши, например, в форме ввода вызовет соответствующий SVG-обработчик.\r\n\r\nПосле того как обработчик нажатия отдельной клавиши будет связан с переопределением характерного для него адреса изображения, заполнение формы приведет к изменению адреса скрытой картинки в соотвествии с нажатой клавишей и тем самым к утечке данных.\r\n\r\nПоскольку все это работало без использования JavaScript, было возможно провести данную атаку в Thunderbird через вектор, незаметно внедренный в тело сообщения.\r\n\r\nПроблема была обозначена в CVE-2011-3663 и исправлена.\r\n\r\nМожно также отметить, что ранее известные способы обрабатывать нажатия клавиш (атрибут accesskey или CSS-свойство -wap-accesskey, реализованное в Opera) позволяют это сделать только при дополнительном нажатии некой управляющей клавиши, чего не было в SVG от Firefox.',
+            'ru'    : 'С помощью атрибута условий begin SVG-элементов <set> и <animate> можно осуществить инъекцию, позволяющую отследить клавиатурные (и не только) события без использования JavaScript. Язык SVG позволяет обусловить срабатывание события нажатием определенных клавиш. В случае со встроенным SVG слушатель этих нажатий наблюдает за всем документом, а не только за SVG-частью. Это означает, что каждое нажатие клавиши, например, в форме ввода вызовет соответствующий SVG-обработчик.\r\n\r\nПосле того как обработчик нажатия отдельной клавиши будет связан с переопределением характерного для него адреса изображения, заполнение формы приведет к изменению адреса скрытой картинки в соотвествии с нажатой клавишей и тем самым к утечке данных.\r\n\r\nПоскольку все это работало без использования JavaScript, было возможно провести данную атаку в Thunderbird через вектор, незаметно внедренный в тело сообщения.\r\n\r\nПроблема была обозначена в CVE-2011-3663 и исправлена.\r\n\r\nМожно также отметить, что ранее известные способы обрабатывать нажатия клавиш (атрибут accesskey или CSS-свойство -wap-accesskey, реализованное в Opera) позволяют это сделать только при дополнительном нажатии некой управляющей клавиши, чего не было в SVG от Firefox.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
