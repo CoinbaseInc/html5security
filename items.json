@@ -1544,7 +1544,7 @@ var items =
             'en' : 'Opera 10 SVG font XSS',
             'ja' : '',
             'ru' : 'XSS через SVG-шрифт в Opera 10',
-            'cs' : 'XSS užitím SVF fontů v Opera 10',
+            'cs' : 'XSS užitím SVG fontů v Opera 10',
             'de' : ''
         },
         'data'       : '<?xml version="1.0" standalone="no"?>\r\n<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<style type="text/css">\r\n@font-face {font-family: y; src: url("%svg_font_path%#x") format("svg");} body {font: 100px "y";}\r\n</style>\r\n</head>\r\n<body>Hello</body>\r\n</html>',
@@ -2328,7 +2328,7 @@ var items =
         'description': {
             'en' : 'SVG tags allow code to be executed with onload without any other elements.',
             'ja' : '',
-            'ru' : 'SVG-элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список обратитесь к приведенной документации.',
+            'ru' : 'SVG-элемент поддерживает атрибут onload, позволяющий автоматически выполнить JavaScript в отсутствие любых других элементов. Данный обработчик поддерживается большинством SVG-элементов. Чтобы увидеть их полный список, обратитесь к приведенной документации.',
             'cs' : 'Element SVG umožňuje automatické spuštění skriptu událostí load bez vložení dalších SVG dat.',
             'de' : ''
         },
@@ -4215,21 +4215,21 @@ var items =
         'tags'       : ['clickjacking', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'pop-up'],
         'reporter'   : 'mniemietz'
     },
-	{ /* ID 121 - SVG masking */
+	{ /* ID  - SVG masking */
         'id'         : 121,
         'category'   : 'clickjacking', 
         'name'       : {
             'en' : 'SVG masking',
             'ja' : '',
-            'ru' : '',
-            'cs' : 'SVF maskování',
+            'ru' : 'SVG-маскировка',
+            'cs' : 'SVG maskování',
             'de' : ''
         },
         'data'       : '<html xmlns="http://www.w3.org/1999/xhtml"\nxmlns:svg="http://www.w3.org/2000/svg">\n<body style="background:gray">\n<iframe src="http://example.com/" style="width:800px; height:350px; border:none; mask: url(#maskForClickjacking);"/>\n<svg:svg>\n<svg:mask id="maskForClickjacking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">\n\t<svg:rect x="0.0" y="0.0" width="0.373" height="0.3" fill="white"/>\n\t<svg:circle cx="0.45" cy="0.7" r="0.075" fill="white"/>\n</svg:mask>\n</svg:svg>\n</body>\n</html>', 
         'description': {
             'en' : 'Masking elements can greatly simplify a clickjacking attack. Here, a "body" tag with the "style" attribute "background:gray" is given. As the name suggests, the background of the web page will have the color gray. The "iframe" tag holds the attributes "src" and "style". The URL of the target web page is the value of the "src" attribute. Inside the "style" attribute there is information to the width, the height, and the border of the web page. Finally, there is the property "mask" with "url(#maskForClickjacking)". This "url" points to an SVG with the "id" value "maskForClickjacking".\n\nOn the next line, an "svg" tag with the namespace "svg" is deﬁned. After that, a "mask" tag with the attributes "id", "maskUnits" and "maskContentUnits" is inside the "svg" tag. The attribute "id" holds the value "maskForClickjacking", which is exactly the value inside the "url". The attribute "maskUnits" deﬁnes the coordinate system for the data of "x", "y", "width" and "height". The second attribute "maskContentUnits" deﬁnes the coordinate system for the contents of the "mask" with "objectBoundingBox". Inside the "mask" tag, there are two tags called "rect" and "circle". Each tag holds information to the position and is determined by the geometric shape the width and height or radius. The attribute "fill", with the value "white", ensures that the viewing whole in the mask is visible.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Маскировка элементов может сильно упрощать атаки по перехвату нажатий. В данном примере тело документа закрашивается в серый цвет, после чего подгружается ифрейм, к которому применяется стиль, содержащий ссылку на SVG-маску. Сама SVG-маска имеет атрибут maskUnits, определяющий систему координат для значений x, y, width и height, а также атрибут maskContentUnits, определяющий систему координат для содержимого маски. Обоим этим атрибутам установлено значение objectBoundingBox, что означает, что точкой отсчета будет являться условная рамка маскируемого объекта (ифрейма - в примере). Маска содержит два объекта - прямоугольник и круг, которые имеют атрибут fill (заполнение) со значением white, что делает их полностью прозрачными на сером фоне. Применение маски позволяет избирательно скрыть или показать отдельные элементы интерфейса подгружаемого ифрейма и опосредовать обращение к ним. SVG в данном случае выступает как чрезвычайно гибкий инструмент для таких действий, поскольку маска может "вырезать" из целевого интерфейса области любой формы.',
             'cs' : 'Maskování prvků může značně zjednodušit útoky typu clickjacking. V tomto příkladu je uveden prvek <body> s atributem "background:grey". Jak je napovězeno, bude pozadí stránky zobrazeno šedou barvou. Tag <iframe> má uvedeny atributy "src" a "style". Uvnitř atributu "style" jsou uvedeny informace o šířce a výšce rámu a o jeho okrajích. Dále je v tomto atributu uvedena vlastnost "mask" s hodnotou "url(#maskForClickjacking)". Toto "url" ukazuje na SVG s "id" hodnotou "maskForClickjacking".\n\nNa dalším řádku je uveden tag "SVG" s namespace "SVG". Po něm následuje tag "mask" s atributy "id", "maskUnits" a "maskContentUnits" uvnitř "SVG" tagu. Atribut "id" má hodnotu "maskForClickjacking", což je hodnota uvedená uvnitř "URL". Atribut "maskUnits" definuje souřadnicový systém "x", "y", "width" a "height". Druhý atribut "maskContentUnits" definuje souřadnicový systém pro obsah "mask" s "objectBoundingBox". Uvnitř tagu "mask" jsou dva tagy pojmenované "rect" a "circle". Každý tag má informace o poloze a geometrický tvar má svou šířku, výšku a poloměr. Atribut "fill" s hodnotou "white", zajišťuje, že zobrazování v celé masce je viditelné.',
             'de' : ''
         },
@@ -4253,7 +4253,7 @@ var items =
         'name'       : {
             'en' : 'Sandboxed Iframes',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Ифрейм в песочнице',
             'cs' : '',
             'de' : ''
         },
@@ -4261,7 +4261,7 @@ var items =
         'description': {
             'en' : 'Google Chrome implements the HTML5 "sandboxed iframes". This particular example shows on how to turn this feature against websites only using JavaScript based frame-busters. Note that the framed website can still execute JavaScript - but has no privileges to modify the top frame\'s location. This would only be possible if the sandbox attribute also came with the "allow-top-navigation" parameter.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Google Chrome имплементировал "ифреймы в песочнице" - часть стандарта HTML5. Этот конкретный пример показывает, как повернуть эту возможность против сайтов, которые используют разрушители фреймов на основе JavaScript. Обратите внимание, что сайт в ифрейме остается способным выполнять JavaScript, но не имеет привилегий загружать себя в область top. Это может быть разрешено, только если атрибут sandbox ифрейма имеет также параметр allow-top-navigation .',
             'cs' : '',
             'de' : ''
         },
@@ -4285,7 +4285,7 @@ var items =
         'name'       : {
             'en' : 'Classjacking with jQuery',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Манипуляция с классом при помощи jQuery',
             'cs' : '',
             'de' : ''
         },
@@ -4293,7 +4293,7 @@ var items =
         'description': {
             'en' : 'CSS offers the attribute "class" as a selector to style a group of HTML elements. Consequently, it is feasible to style e.g. "span" and "a" tags. Here, the "span" tag has the value "foo" and the "a" tag the value "bar" inside the "class" attribute. This values can be used to define the font size or other CSS-specific properties.\n\nThe first "script" tag holds an "src" attribute with the value "http://code.jquery.com/jquery-1.4.4.js". It is a reference to a file of the "jQuery JavaScript Library v1.4.4". The name "jQuery" stands for a JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions. So it is ideally suited to deal with user interactions and to manipulate them, as required for complex UI redressing attacks. Thus, "jQuery" is given in the second "script" tag. At first, the "span" tag is selected, which holds the value "foo" in the "class" attribute. After that, ".click" is implemented. It can be used to bind an event handler to the "click" JavaScript event, or to trigger that event on an element.\n\nIn this case, an alert window will be executed with the text "foo" after clicking on the "Some text" value of the "span" tag. After closing the alert window, a click event is triggered on the "a" tag with the value "bar" inside the "class" attribute. Analogue to the first event, an alert window appears with the text "bar". After closing the alert window, the web browser will redirect the web page to "http://html5sec.org". If there is a click on the link "http://www.example.org" and not on the text "Some text", an alert window is displayed with the text "bar" followed by a redirection to "http://example.org" and not "http://html5sec.org". This behaviour follows from the "href" attribute.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Перед Вами две области, сформированные тегами <span>, <a> и идентифицируемые по значению атрибута class. К документу подключается библиотека jQuery, с помощью которой осуществляется переназначение обработчика события click и запуск этого события для тега <a> в тот момент, когда пользователь нажимает в область "Some text". В этом случае пользователь будет отправлен на сайт http://html5sec.org. Напротив, в случае клика непосредственно по тегу ссылки, пользователь перейдет на сайт http://www.example.org несмотря на то, что будет запущен обработчик события, который должен был бы изменить location на http://html5sec.org .',
             'cs' : '',
             'de' : ''
         },
@@ -4321,7 +4321,7 @@ var items =
         'name'      : {
             'en'    : 'Backslashes as alternative to slashes on Webkit',
             'ja'    : '\u30b9\u30e9\u30c3\u30b7\u30e5\u306e\u304b\u308f\u308a\u306e\u5186\u8a18\u53f7\u0028\u30d0\u30c3\u30af\u30b9\u30e9\u30c3\u30b7\u30e5\u0029',
-            'ru'    : '',
+            'ru'    : 'Обратные слеши в Webkit',
             'cs'    : '',
             'de'    : '',
             'zh'    : 'Webkit 浏览器中反斜线替代斜线'
@@ -4330,7 +4330,7 @@ var items =
         'description' : {
             'en'    : 'Safari treats backslashes the same way as slash inside URL attributes. Chrome treats prefix "/\\" of URL the same way as "\/\/".',
             'ja'    : 'Safari\u306fURL\u5c5e\u6027\u5024\u5185\u306e\u30d0\u30c3\u30af\u30b9\u30e9\u30c3\u30b7\u30e5\u0028\u5186\u8a18\u53f7\u0029\u3092\u30b9\u30e9\u30c3\u30b7\u30e5\u3068\u540c\u69d8\u306b\u6271\u3044\u307e\u3059\u3002Chrome\u306fURL\u5148\u982d\u306e\u0022\u002f\u005c\u0022\u3092\u0022\u002f\u002f\u0022\u3068\u540c\u69d8\u306b\u6271\u3044\u307e\u3059\u3002',
-            'ru'    : '',
+            'ru'    : 'Сафари и Хром придают обратным слешам в URL-параметрах то же значение, что и обычным.',
             'cs'    : '',
             'de'    : '',
             'zh'    : 'Safari 将内部URL属性中的反斜线当作斜线处理。chrome将URL头的”/\\”当作”\/\/”处理'
@@ -4574,9 +4574,9 @@ var items =
         },
         'data'      : '<b>drag and drop one of the following strings to the drop box:</b>\r\n<br/><hr/>\r\njAvascript:alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie);//\r\n<br/><hr/>\r\nfeed:javascript:alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie);//\r\n<br/><hr/>\r\nfeed:data:text/html,&#x3c;script>alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie)&#x3c;/script>&#x3c;b>\r\n<br/><hr/>\r\nfeed:feed:javAscript:javAscript:feed:alert(\'Top Page Location: \'+document.location+\' Host Page Cookies: \'+document.cookie);//\r\n<br/><hr/>\r\n<div id="dropbox" style="height: 360px;width: 500px;border: 5px solid #000;position: relative;" ondragover="event.preventDefault()">+ Drop Box +</div>',
         'description' : {
-            'en'    : 'It is possible to bypass Mozilla Firefox (tested on version 8.x and 9.x) internal protection and execute Javascript Drag and Drop by using capitalization and Feed protocol, and to run that JavaScript on the top page if you can include the malicious page in an IFrame. The "event.preventDefault()" method in "ondragover" event of the element is to block the natural function of the browser. Usually the malicious IFrame should deceive the user to drag and drop a JS to the drop box which can be concealed in a hidden "Textarea" element.',
+            'en'    : 'It is possible to bypass Mozilla Firefox (tested on version 8.x and 9.x) internal protection and execute JavaScript Drag and Drop by using capitalization and Feed protocol, and to run that JavaScript on the top page if you can include the malicious page in an IFrame. The "event.preventDefault()" method in "ondragover" event of the element is to block the natural function of the browser. Usually the malicious IFrame should deceive the user to drag and drop a JS to the drop box which can be concealed in a hidden "Textarea" element.',
             'ja'    : '',
-            'ru'    : 'В примере продемонстрированы способы обхода внутренней защиты Firefox от выполнения Javascript кода при перетаскивании выделенной строки в целевую область. Как видно из примера, способы сводились к использованию верхнего регистра и протокола feed. Опасность данного примера состояла, в частности, в том, что он позволял выполнить javascript-код в контексте главной страницы, если в неё удавалось внедрить опасный iframe элемент и тем или иным образом спровоцировать пользователя выполнить перетаскивание замаскированной полезной нагрузки. Назначение метода event.preventDefault() события ondragover в блокировке изначального поведения браузера. Хотя эти способы были закрыты в дальнейшем, однако примеры с протоколом feed до сих пор работают при классическом использовании в URI тега.',
+            'ru'    : 'В примере продемонстрированы способы обхода внутренней защиты Firefox от выполнения JavaScript кода при перетаскивании выделенной строки в целевую область. Как видно из примера, способы сводились к использованию верхнего регистра и протокола feed. Опасность данного примера состояла, в частности, в том, что он позволял выполнить JavaScript-код в контексте главной страницы, если в неё удавалось внедрить опасный iframe элемент и тем или иным образом спровоцировать пользователя выполнить перетаскивание замаскированной полезной нагрузки. Назначение метода event.preventDefault() события ondragover в блокировке изначального поведения браузера. Хотя эти способы были закрыты в дальнейшем, однако примеры с протоколом feed до сих пор работают при классическом использовании в URI тега.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
