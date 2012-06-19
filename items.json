@@ -4086,7 +4086,7 @@ var items =
         'name'       : {
             'en' : 'Reverse clickjacking via <IFRAME>',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Обратный перехват нажатий с помощью <iframe>',
             'cs' : 'Reverzní clickjacking přeš <IFRAME>',
             'de' : ''
         },
@@ -4094,7 +4094,7 @@ var items =
         'description': {
             'en' : 'Internet Explorer allows to place <IFRAME> tags inside <A> tags. By clicking on a not clickable element inside the IFRAME there will be executed the URL defined in the "href" attribute of the <A> tag.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Internet Explorer допускает помещать тег <iframe> внутрь тега <a>. При нажатии на некликабельный элемент внутри ифрейма пользователь будет отправлен по адресу, содержащемуся в атрибуте href тега <a>.',
             'cs' : 'Internet Explorer umožňuje umístit prvek <IFRAME> do obsahu párového tagu <A>. Kliknutím na neklikatelný prvek v rámu, bude proveden přechod na URL definované v tagu <A>.',
             'de' : ''
         },
@@ -4119,7 +4119,7 @@ var items =
         'name'       : {
             'en' : 'Text injection by drag-and-drop',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Текстовая инъекция при перетаскивании',
             'cs' : 'Injekce textu využitím grag-and-drop',
             'de' : ''
         },
@@ -4127,7 +4127,7 @@ var items =
         'description': {
             'en' : 'The method "setData" allows, with the event handler "ondragstart" and the attribute "draggable" with the value "true", to drag the text "malicious code" and not "Drop me" into the IFRAME. This IFRAME can consist of a web page with an input field to drop in data.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'В примере показано, как с помощью метода setData осуществить подмену перетаскиваемого текста, т.к. в данном случае в целевой ифрейм будет передан не текст "Drop me", а содержимое строки "malicious code". Сам ифрейм может содержать, например, некое поле ввода, критически зависимое от вводимых данных. ',
             'cs' : 'Metoda "setData" umožňuje, s využitím ovladače události "ondragstart" a při nastaveném atributu "draggable" na "true", přetáhnout během drag-end-drop do rámu text "malicious code" namísto textu "Drop me". Rám může obsahovat vstupní pole pro převzetí těchto dat.',
             'de' : ''
         },
@@ -4153,7 +4153,7 @@ var items =
         'name'       : {
             'en' : 'Content extraction via view-source',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Извлечение содержания через протокол view-source',
             'cs' : 'Získání zdrojového kódu protokolem view-source',
             'de' : ''
         },
@@ -4161,7 +4161,7 @@ var items =
         'description': {
             'en' : 'To show the source code of a web page inside the web browser Mozilla Firefox or Google Chrome, "view-source:" can be used as a prefix for the URL. Firefox - and that is essential for this vector - allows iframes to show view-source: URLs. With the combination of a "textarea" tag, just two drags to perform this attack are needed, as in the case of elements like images. The first drag is to select an element and the second to drag an element out of the iframe into the text area. This method also bypasses CSS and JS based clickjacking protection.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Чтобы показать исходный код, такие браузеры, как Mozilla Firefox и Google Chrome, перед URL используют префикс view-source. Firefox указанных версий, что важно для данного вектора, разрешает показывать URL с этим префиксом в теге <iframe>. В сочетании с тегом <textarea> для осуществления атаки необходимо два движения (two drags), как и в случае с изображениями. Первое движение в выделении элемента и второе движение в перетаскивании выделенного в <textarea>. Этот метод также обходит защиту от перехвата нажатий, основанную на CSS и JS.',
             'cs' : 'Chcete-li zobrazit zdrojový kód webové stránky v prohlížeči Mozilla Firefox nebo v Google Chrome, můžete použít protokolu "view-source". Firefox umožňuje zobrazit zdrojový kód použitím "view-source" v atributu "src" u prvku <IFRAME>. Pokud pak na stjnou stránku umístíme také prvek <TEXTAREA>, můžeme po přetažení získat zdrojový kód cílové stránky. Tato technika obchází také CSS a JS ochranu proti clickajckingu.',
             'de' : ''
         },
@@ -4186,7 +4186,7 @@ var items =
         'name'       : {
             'en' : 'Pop-up blocker bypass',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'Обход блокировки всплывающих окон',
             'cs' : 'Bypass pop-up blokeru',
             'de' : ''
         },
@@ -4194,7 +4194,7 @@ var items =
         'description': {
             'en' : 'A web browser like Firefox distinguishes between trusted and not trusted events, depending on the situation. User interactions like a click will be trusted for the reason that they are made explicitly by the user. If a web page initiates an event like opening a pop-up window automatically, the event is not trusted and therefore blocked. Tests have shown that other browsers like Google Chrome or Opera behave similarly. With the use of clickjacking techniques, an attacker can get its victim to create a trusted event by clicking on a link that opens one or more pop-up windows.\n\nThus, an attacker can get the victim to unknowingly trigger a trusted event by doing a click. This event can be recycled by an attacker for later usage or directly used to e.g. generate pop-up windows that the user does not desire.',
             'ja' : '',
-            'ru' : '',
+            'ru' : 'С целью блокировки незапрошенного пользователем открытия окон браузеры различают доверенные и недоверенные события в зависимости от ситуации. Взаимодействие с пользователем, такое как нажатие, является доверенным событием, т.к. исходит непосредственно от него. Если страница инициирует такое событие, как открытие всплывающего окна, автоматически, такое событие не является доверенным и поэтому блокируется. С использованием техники перехвата нажатий атакующий может побудить создать доверенное событие, которое будет переработано в создание одного или нескольких всплывающих окон.',
             'cs' : 'Webové prohlížeče, jako je například Firefox, rozlišují mezi důvěryhodnými a nedůvěryhodnými událostmi v závislosti na situaci. Například kliknutí na tlačítko se dá věřit, protože ji jednoznačně musel vyvolat uživatel. Pokud webová stránka zahájí otevírání pop-up okna automaticky, dojde k zablokování této akce. Testy prokázaly, že i jiné prohlížeče, jako jsou Google Chrome nebo Opera, se chovají podobně. Využitím technik clickjackingu může útočník donutit uživatele k vyvolání důvěryhodných akcí, které povedou k otevření jednoho nebo více pop-up oken.',
             'de' : ''
         },
