@@ -58,7 +58,7 @@ ul li {
     list-style: none;
 }
 ul li ul li {
-    list-style: circle
+    list-style: circle;
 }
 ul.browsers {
     padding: 0;
@@ -71,6 +71,10 @@ ul.browsers ul {
 ul.browsers li {
     text-transform: capitalize;
 	list-style: square;
+}
+ul.browsers li.end {
+    border: 1px solid #666;
+    border-radius: 4px; 
 }
 ul.opera {
     background: url(../images/opera.png) no-repeat;
@@ -116,7 +120,7 @@ code {
 	white-space: pre-line;
     border: 3px dashed #e1e1e1;
     border-radius: 10px;
-    -moz-border-radius: 10px
+    -moz-border-radius: 10px;
 }
 dfn {
 	color: #e1e1e1;

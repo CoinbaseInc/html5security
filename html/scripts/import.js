@@ -126,13 +126,16 @@
                 // fill browser list
                 if(items[item].browsers) {
                     for(var browser in items[item].browsers) {
-                        container.find('.browsers').append('<ul class="'+browser+'" />');
-                        for(var version in items[item].browsers[browser]) {
-                            var short_browser = browser.replace(/^(\w+)\s\w+/, '$1'); 
-                            container.find('.browsers .'+short_browser).append(
-                                '<li>'+browser+' '+items[item]
-                                    .browsers[browser][version]+'</li>'
-                            )
+                         container.find('.browsers').append('<ul class="'+browser+'" />');
+                         var versions = items[item].browsers[browser];
+                         for(var i in versions) {
+                             if(versions[i] == 'end') continue;
+                             var short_browser = browser.replace(/^(\w+)\s\w+/, '$1'); 
+                             container.find('.browsers .'+short_browser).append(
+                                 (versions[+i + 1] == 'end' ? '<li class="end">' : '<li>') 
+                                 + browser + ' ' + versions[i] + '</li>'    
+                             )
+                            
                         }
                     }
                     container.find('.browsers').append('<span class="clear"></span>');
