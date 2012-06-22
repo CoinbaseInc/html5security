@@ -2231,7 +2231,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['6.0', '7.0', '8.0']
         },
         'tags'       : ['xss', 'javascript', 'attribute', 'simulating', 'parser', 'regex'],
         'reporter'   : 'Algol, LeverOne, White Jordan'
@@ -3606,7 +3606,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer' : ['6.0', '7.0', '8.0', '9.0'],
+            'internet explorer' : ['6.0', '7.0', '8.0'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'parser', 'backtick', 'plaintext'],
         'reporter'   : '.mario, hasegawayosuke'
@@ -3800,7 +3800,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer' : ['6.0', '7.0', '8.0']
         },
         'tags'       : ['xss', 'javascript', 'parameter', 'parsing', 'internet explorer'],
         'reporter'   : 'Algol, sirdarckcat'
