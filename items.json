@@ -1734,10 +1734,10 @@ var items =
         },
         'data'       : '<SCRIPT FOR=document EVENT=onreadystatechange>%js_alert%</SCRIPT>',
         'description': {
-            'en' : 'Opera and Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction.',
+            'en' : 'Internet Explorer allow using <SCRIPT> tags with "for" and "event" attributes to bind event data to specific html elements. The two shown attribute values cause script execution without user interaction. Opera simply ignores these attributes.',
             'ja' : '',
-            'ru' : 'Opera и Internet Explorer поддерживают атрибуты for и event, с помощью которых можно привязать JavaScript-код к событию в конкретном объекте. В приведенном примере эти два атрибута приводят к автоматическому исполнению кода.',
-            'cs' : 'Opera a Internet Explorer umožňují použití tagu <SCRIPT> společně s atributy "for" a "event", které naváží obsluhu událostí na specifické HTML elementy. Tyto dva atributy mohou spustit kód bez zásahu uživatele.',
+            'ru' : 'Internet Explorer поддерживает атрибуты for и event, с помощью которых можно привязать JavaScript-код к событию в конкретном объекте. В приведенном примере эти два атрибута приводят к автоматическому исполнению кода. Опера, в отличии от других браузеров, будет игнорировать эти атрибуты.',
+            'cs' : 'Internet Explorer umožňuje použití tagu <SCRIPT> společně s atributy "for" a "event", které naváží obsluhu událostí na specifické HTML elementy. Tyto dva atributy mohou spustit kód bez zásahu uživatele.',
             'de' : ''
         },
         'urls'    : [],
@@ -1784,7 +1784,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
-        'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'object', 'dataurl', 'TDS'],
         'reporter'   : '.mario'
     },
     { /* ID 50 - JavaScript execution via <OBJECT> data */
@@ -1814,7 +1814,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox': ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['4.0', '5.0']
@@ -1849,7 +1849,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['4.0', '5.0']
         },
@@ -1961,7 +1961,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.0', 'mobile'],
+            'opera': ['10.0', '10.10', 'end', 'mobile'],
             'chrome': ['4.0', '5.0', '6.0'],
             'firefox': ['1.x', '2.x', '3.0']
         },
@@ -1995,7 +1995,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.5', '10.6', '11.0'],
+            'opera': ['10.5', '11.0', '12.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome', 'audio'],
@@ -2172,25 +2172,18 @@ var items =
         'id'         : 61,
         'category'   : 'css', 
         'name'       : {
-            'en' : 'CSS-encoding and escaping',
+            'en' : 'CSS encoding and escaping',
             'ja' : '',
             'ru' : 'CSS-кодирование и добавление обратного слеша',
             'cs' : 'Kódování a escapování znaků v CSS',
             'de' : ''
         },
-        'data'       : '<a x="javasc&#x0Aript:%js_alert%" style="\\000062\\00065\\68\\0\\00	\\&#xA0\\000061 vio\\r:url\\28#default#time2);\\-\\\n\\\n\\00006D\\0006f\\7A\\2d \\62	\\000069 \\06E din\\g:url(%xbl_path%#xss);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B:attr(x);\\-\\00006F\\0002d\\6C\n\\69 \\6e	\\00006B-s\\ource:current" end=0 onend=%js_alert%>XXX</a>',
-        'attachment' : {
-            'required_mime' : '',
-            'crossdomain'    : '0',            
-            'path'          : 'http://html5sec.org/test.xbl',
-            'name'          : 'test.xbl',
-            'raw'           : '<?xml version="1.0" ?><bindings xmlns="http://www.mozilla.org/xbl"><binding id="xss"><implementation><constructor><![CDATA[%js_alert%]]></constructor></implementation></binding></bindings>'
-        },
+        'data'       : '<div  style="\\63&#9\\06f&#10\\0006c&#12\\00006F&#13\\R:\000072 Ed;color\\0\\bla:yellow\\0\\bla;col\\0\\00 \\&#xA0or:blue;">XXX</div>',
         'description': {
-            'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nProperties in IE may contain encoded null-character (\\0).\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character. Note: in CSS-strings \\x == x, but \\n != n\nIn FF You can put a backslash before the newline-characters: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \nOption of writing a null-character in Internet Explorer is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
+            'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (IE7-): 11,160,8192-8203,12288,65279\n\nProperties in IE7- may contain encoded null-character (\\0).\nOn Opera encoded null-character cuts off the right side of a CSS structure.\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character.\nOption of writing a null-character in Internet Explorer 7- is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \nIn IE quirks mode inside the url() function a backslash can be treated as equivalent of a slash and thus will not have the escape role.\n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
             'ja' : '',
-            'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\n Свойства в IE могут содержать закодированный нулевой символ (\\0).\nВажно также помнить, что объем возможного css-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши. Внимание: в CSS-строках \\x == x, но \\n != n \n В FF вы можете эскейпировать символы перевода строки и/или возврата каретки: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для IE : col\\&#160or:red \n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
-            'cs' : '[a] Kódování.\n\nJsou pouze tři triky pro kódování znaků.\n[1] Je možné měnit počet nul: \\0A -> \\00000A \n[2] Je možné měnit velikost písmen: \\0A -> \\0a \n[3] Je možné změnit bílý znak* akceptovaný jako oddělovač po zakódovaném znaku.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,32\nFirefox, Google Chrome, Internet Explorer, Safari: 13\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nVlastnosti v IE mohou obsahovat zakódovaný nulový znak (\\0).\nMnožství použitelných kódování se liší od použitého prohlížeče. Například, FF nemůže kódovat závorky, které jsou součástí zápisu funkce.\n\n[b] Escapování.\n\nKromě toho můžete dát zpětné lomítko i před písmeno. Poznámka: v CSS řetězcích \\x == x, ale \\n != n\nVe FF můžete vložit zpětné lomítko před znak nového řádku: co\\&#x0Dl\\&#x0Aor:r\\&#xD&#xA;ed \nMožnost zápisu nulového znaku v Internet Exploreru je escapování nějakého jiného bílého znaku, který je akceptován jako oddělovač: col\\&#160or:red \n\nSamozřejmě je možné tyto metody kombinovat i s jinými způsoby kódování (například změnou velikosti originálních znaků).\n\n* Hodnoty jsou uvedeny v desítkové soustavě.',
+            'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (IE7-): 11,160,8192-8203,12288,65279\n\n Свойства в IE 7- могут содержать закодированный нулевой символ (\\0).\nТакой же нулевой символ, поставленный в Opera в конце CSS-структуры (напр., свойства или значения) отсекает её правую часть.\nВажно также помнить, что объем возможного CSS-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши.\n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для IE : col\\&#160or:red \nВ IE, который находится в quirks mode, обратные слеши в функции url() могут рассматриваться в качестве обычных слешей (т.е. являться как бы частью пути), и поэтому не будут выполнять роль эскейпа.\n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
+            'cs' : '[a] Kódování.\n\nJsou pouze tři triky pro kódování znaků.\n[1] Je možné měnit počet nul: \\0A -> \\00000A \n[2] Je možné měnit velikost písmen: \\0A -> \\0a \n[3] Je možné změnit bílý znak* akceptovaný jako oddělovač po zakódovaném znaku.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer: 11,160,8192-8203,12288,65279\n\nVlastnosti v IE mohou obsahovat zakódovaný nulový znak (\\0).\nMnožství použitelných kódování se liší od použitého prohlížeče. Například, FF nemůže kódovat závorky, které jsou součástí zápisu funkce.\n\n[b] Escapování.\n\nKromě toho můžete dát zpětné lomítko i před písmeno.\nMožnost zápisu nulového znaku v Internet Exploreru je escapování nějakého jiného bílého znaku, který je akceptován jako oddělovač: col\\&#160or:red \n\nSamozřejmě je možné tyto metody kombinovat i s jinými způsoby kódování (například změnou velikosti originálních znaků).\n\n* Hodnoty jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : ['http://www.w3.org/TR/css3-syntax/#characters', 'http://www.w3.org/TR/CSS2/syndata.html#escaped-characters'],
@@ -2202,9 +2195,11 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x', '4.0'],
-            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'firefox': ['1.5', '2.0', '3.0', '4.0', '13.0'],
+            'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'chrome': ['21.0'],
+            'safari': ['5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
         'reporter'   : 'Gareth, LeverOne, Renaud Lifchitz, .mario'
