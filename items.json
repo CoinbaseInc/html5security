@@ -2159,8 +2159,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['2.x', '3.x', '4.0'],
-            'opera': ['9.x', '10.x', '11.0', 'mobile'],
+            'firefox': ['2.x', '3.0', '4.0'],
+            'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari' : ['4.0', '5.0']
@@ -2265,7 +2265,7 @@ var items =
         'browsers'   : {
             'firefox': ['1.5', '2.x', '3.x', '4.0'],
 			'chrome': ['4.0', '5.0', '6.0'],
-            'opera': ['8.x', '9.x', '10.0', 'mobile'],
+            'opera': ['8.x', '9.0', '10.0', '11.01', 'end', 'mobile 10.00', 'mobile 10.10', 'end'],
             'internet explorer': ['6.0', '7.0'],
 			'safari': ['3.0', '4.0']
         },
@@ -2342,7 +2342,7 @@ var items =
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.4', '4.0', '5.0'],
 			'firefox': ['3.x', '4.0'],
-			'opera': ['9.x', '10.x', '11.0']
+			'opera': ['9.x', '10.0', '11.0', '12.0']
         },
         'tags'       : ['xss', 'svg', 'onload','chrome','firefox','safari','opera'],
         'reporter'   : 'gareth'
@@ -2375,7 +2375,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.x', '11.0', 'mobile'
+                '8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'
             ]
         },
         'tags'       : ['xss', 'javascript', 'opera', 'xslt', 'xsl', 'stylesheet', 'xml'],
@@ -2391,7 +2391,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu deklarací XML ATTLIST',
             'de' : ''
         },
-        'data'       : '<!DOCTYPE x [\r\n\t<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x" onerror CDATA "%js_alert%">\r\n]><img />',
+        'data'       : '<!DOCTYPE x [\r\n\t<!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "x:x"\r\n onerror CDATA "%js_alert%"\r\n onload CDATA "%js_alert_2%">\r\n]><img />',
         'description': {
             'en' : 'XML ATTLIST declarations can be used to create attributes and assign values for matching tags inside the DOCTYPE declaration. By chosing the right namespace and attribute combinations it\'s possible to create an ATTLIST declaration causing JavaScript execution without user interaction.', 
             'ja' : '',
@@ -2408,10 +2408,10 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.0', '4.0', '5.0'],
-            'firefox': ['3.0', '3.5', '3.6', '3.7', '4.0'],        
-            'opera': ['8.0', '9.0', '10.x', '11.0', 'mobile']
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7'],
+            'firefox': ['3.0', '4.0', '13.0'],        
+            'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'attlist', 'doctype', 'chrome', 'firefox', 'safari'],
         'reporter'   : '.mario'
@@ -2475,7 +2475,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['9.x', '10.x', '11.0', 'mobile']
+            'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'wmlscript', 'wml', 'opera', 'mobile', 'timer'],
         'reporter'   : '.mario'
@@ -2572,7 +2572,7 @@ var items =
         },
         'browsers'   : {
 		    'firefox': ['4.0'],
-            'opera': ['10.5', '10.6', '11.0', 'mobile'], 
+            'opera': ['10.5', '11.0', '12.0', 'mobile'], 
 			'chrome': ['10.0']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
@@ -2612,7 +2612,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile']
+            'opera': ['8.x', '9.0', '10.0', '10.63', 'end', 'mobile 10.00', 'mobile 10.10', 'end']
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
@@ -2644,7 +2644,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', 'mobile']
+            'opera': ['8.x', '9.0', '10.0', '10.63', 'end', 'mobile 10.00', 'mobile 10.10', 'end']
         },
         'tags'       : ['xss', 'javascript', 'event-source', 'opera', 'sse'],
         'reporter'   : '.mario'
