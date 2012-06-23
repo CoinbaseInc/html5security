@@ -1,4 +1,4 @@
-/* Items - the set of available items and vectors */
+﻿/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -35,7 +35,7 @@ var items =
         },
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6', '11.0', '12.0', 'mobile'], 
+            'opera': ['10.5', '11.0', '12.0', 'mobile'], 
 			'chrome': ['10.0']
         },
         'tags'       : ['xss', 'html5', 'opera', 'chrome', 'firefox', 'formaction', 'javascript', 'button'],
@@ -271,7 +271,7 @@ var items =
         },          
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6', '11.0', '12.0'],
+            'opera': ['10.5', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
@@ -351,7 +351,7 @@ var items =
         },          
         'browsers'   : {
             'opera': [
-                '8.0', '9.0', '10.x', '11.0', '12.0', 'mobile'
+                '8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'
             ]
         },
         'tags'       : ['xss', 'css', 'link-source', 'opera', 'proprietary'],
@@ -390,7 +390,7 @@ var items =
             'zh' : '确保VIDEO的poster属性是相对URI、http URI和MIME-typed正确的data URI'
         },            
         'browsers'   : {
-            'opera': ['10.5', '10.6', '11.01', 'end']
+            'opera': ['10.5', '11.00', '11.01', 'end']
         },
         'tags'       : ['xss', 'poster', 'video', 'opera', 'html5'],
         'reporter'   : '.mario'
@@ -428,7 +428,7 @@ var items =
             'zh' : '在上传时不能把SVG当图片处理,因为它可以包含任意HTML,且能被浏览器解析'
         },                        
         'browsers'   : {
-            'opera': ['10.0', '10.5', '10.6', '11.0', '12.0'],
+            'opera': ['10.0', '11.0', '12.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.7'],
 			'safari' : ['5.0']          
@@ -469,7 +469,7 @@ var items =
         },          
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['10.5', '10.6', '11.0', '12.0'],
+            'opera': ['10.5', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
@@ -698,7 +698,7 @@ var items =
             'zh' : '确保过滤器或其它检测系统考虑了<script>或<style>和其它标签之间允许有Entities的事实.而不仅仅是属性.'
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', '11.0', '12.0'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
 			'safari' : ['5.0']
@@ -775,7 +775,7 @@ var items =
             'zh' : '在用户可以注入脚本的情况下不要相信DOM,即便是DOM属性的访问.'
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', '11.0'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0'],
             'safari': ['4.0', '5.0']
@@ -851,7 +851,7 @@ var items =
         },            
         'browsers'   : {
 		    'firefox' : ['4.0'],
-            'opera': ['8.x', '9.x', '10.x', '11.0', '12.0'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
 			'safari' : ['5.0']
         },
@@ -888,7 +888,7 @@ var items =
             'tr' : 'Kullanıcıların form, "onformchange" ve "onforminput" dahil herhangi bir markup sağlamadığından emin olun. <FORM> elemanlarına "id" özelliği uygulamayın.'
         },                        
         'browsers'   : {
-            'opera' : ['10.5', '10.6', '11.0', '12.0', 'mobile'] 
+            'opera' : ['10.5', '11.0', '12.0', 'mobile'] 
         },
         'tags'       : ['surveillance', 'javascript', 'opera', 'html5', 'onforminput', 'onformchange'],
         'reporter'   : 'Skyphire, .mario'
@@ -1027,7 +1027,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.x', '10.x', '11.0', '11.64', 'end', 'mobile'],
+            'opera': ['8.x', '9.0', '10.0', '11.0', '11.64', 'end', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'chrome': ['21.0'],
             'safari': ['5.1.7']  
@@ -1159,7 +1159,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', '11.0', '12.0', 'mobile'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
@@ -1195,7 +1195,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['6.0'],
-            'opera': ['8.x', '9.x', '10.0', '11.01', 'end', 'mobile'] 
+            'opera': ['8.x', '9.0', '10.0', '11.01', 'end', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
         'reporter'   : '.mario'
@@ -1466,7 +1466,7 @@ var items =
         },            
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', '11.0', '12.0', 'mobile'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
@@ -1645,7 +1645,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.x', '11.0', '12.0', 'mobile'],
+            'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'],
             'firefox' : ['1.x', '2.x', '3.x', '4.0'],
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0'],
@@ -1749,7 +1749,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['10.x', '11.0', 'mobile'],
+            'opera': ['10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
