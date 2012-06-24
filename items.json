@@ -1,4 +1,4 @@
-﻿/* Items - the set of available items and vectors */
+/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -2827,7 +2827,7 @@ var items =
         'browsers'   : {
             'safari': ['3.0', '4.0', '5.0'],
             'firefox': ['1.5', '2.x', '3.x', '4.0'],        
-            'opera': ['10.x', '11.0', 'mobile'],
+            'opera': ['10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
@@ -2956,7 +2956,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['9.x', '10.x', '11.0', 'mobile']
+            'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'wml', 'opera', 'mobile', 'timer', 'variable'],
         'reporter'   : 'LeverOne, .mario'
@@ -2979,7 +2979,7 @@ var items =
             'cs' : 'Webový prohlížeč používá externí XML-event handler pro událost "load" pro spuštění JavaScriptu bez uživatelské interakce.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104'],
+        'urls'    : ['http://www.w3.org/TR/xml-events/', '#85'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2988,7 +2988,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['9.x', '10.x', 'mobile']
+            'opera': ['9.x', '10.0', '11.0', '11.01', 'end', 'mobile', 'end']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'event', 'handler'],
         'reporter'   : 'LeverOne'
@@ -3018,7 +3018,7 @@ var items =
             'cs' : 'Browser načítá externí xml-event handler, který obsahuje kód JavaScriptu. Tento příklad pracuje také s data URI.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104'],
+        'urls'    : ['http://www.w3.org/TR/xml-events/', '#94', '#104', '#127'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3027,7 +3027,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera': ['9.x', '10.x', 'mobile']
+            'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'event', 'handler', 'arbitrary'],
         'reporter'   : 'LeverOne'
@@ -3324,7 +3324,7 @@ var items =
             'cs' : 'Specifikace SVG Tiny 1.2 poskytuje prvek <handler>, který je "mostem" mezi SVG a XML událostmi. Tento element může obsahovat kód JavaScriptu.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html#HandlerElement', 'http://www.w3.org/TR/xml-events/', '#84', '#85'],
+        'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html#HandlerElement', 'http://www.w3.org/TR/xml-events/', '#85', '#104', '#127'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3663,7 +3663,7 @@ var items =
             'cs' : 'Opera poskytuje podporu pro SVG Tiny 1.2 cílenou na mobilní zařízení, která umožňuje pomocí libovolného tagu spustit JavaScript bez uživatelské interakce. Tag je aplikován s ukazatelem události na data URI obsahující její obsluhu. Důležitý je hash na konci data URI sloužící k identifikaci osluhy. Je možné se odkazovat také na prvky v SVG skrz jejich ID nebo externí zdroje.',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html', 'http://www.w3.org/TR/2003/REC-xml-events-20031014/', '#84', '#85'],
+        'urls'    : ['http://www.w3.org/TR/SVGMobile12/script.html', 'http://www.w3.org/TR/2003/REC-xml-events-20031014/', '#85', '#94', '#127'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -4439,7 +4439,7 @@ var items =
             'de'    : '',
             'zh'    : '示例向量，与#94相关，展示了listener标签和handler标签的组合是如何被利用，从SVG元素中加载事件去触发JavaScript，使其执行。到目前为止，只有Opera支持XML事件和相关元素。不需要用户交互即可执行JavaScript语句。'
         },
-        'urls'      : ['http://www.opera.com/docs/specs/presto29/svg/elements/', 'http://www.w3.org/TR/SVGMobile12/script.html#ListenerElement', 'http://www.w3.org/TR/2010/NOTE-xml-events2-20101216/Overview.html#section-eventhandlers', '#94'],
+        'urls'      : ['http://www.opera.com/docs/specs/presto29/svg/elements/', 'http://www.w3.org/TR/SVGMobile12/script.html#ListenerElement', 'http://www.w3.org/TR/2010/NOTE-xml-events2-20101216/Overview.html#section-eventhandlers', '#85', '#94', '#104'],
         'howtofix'  : {
             'en'    : '',
             'ja'    : '',
