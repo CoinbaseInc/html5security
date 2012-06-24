@@ -1518,9 +1518,9 @@ var items =
         },
         'data'       : '<head><base href="javascript://"/></head><body><a href="/. /,%js_alert%//#">XXX</a>\r\n<!-- if Opera\r\n<base href="data:javascript://"><a href="?%0D%js_alert%">XXX</a>\r\n-->\r\n</body>',
         'description': {
-            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents. Opera 11 ships a more or less working fix.',
+            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents. Opera 11 ships a more or less working fix. Note that the last Opera example will only work if the same script via the protocol "javascript" was executed regardless of domain before.',
             'ja' : '',
-            'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах.',
+            'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах. В O11 условно исправлена первая проблема. Последний приведенный пример для Opera работает, только если идентичный скрипт был раньше выполнен через псевдопротокол "javascript", причем вне зависимости от домена.',
             'cs' : 'Hijacking odkazu v tagu <BASE> s JavaScriptovými URI pracuje v Internet Exploreru, Opeře (O8-10.5 v případě, že URL odkazu začíná na #) a v Safari. Ke spuštění kódu je vyžadována spoluúčast uživatele. Navíc je pro správnou funkci v jednotlivých prohlížečích potřeba použít mírně upravený zápis.',
             'de' : ''
         },
@@ -3062,7 +3062,7 @@ var items =
             'firefox' : ['3.6', '3.7', '4.0'], 
             'safari' : ['4.0', '5.0'], 
             'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'opera': ['9.x', '10.x', '11.0', 'mobile']
+            'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
         'reporter'   : 'Skyphire'
@@ -3085,7 +3085,7 @@ var items =
             'cs' : 'Prohlížeče, které podporují SVG, vynucují podporu XLink. Parametr atributu "xlink:actuate" u tagu <A> je pevný "onRequest".',
             'de' : ''
         },
-        'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html', '#68', '#81'],
+        'urls'    : ['http://www.w3.org/TR/SVG11/linking.html', 'http://www.w3.org/TR/SVGTiny12/linking.html', '#68', '#81', '#130'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3097,7 +3097,7 @@ var items =
            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
            'safari' : ['3.4', '4.0', '5.0'],
 	       'firefox': ['3.x', '4.0'],
-	       'opera'  : ['9.x', '10.x', '11.0']
+	       'opera'  : ['9.x', '10.0', '11.0', '12.0']
         },
         'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
         'reporter'   : 'LeverOne'
@@ -3114,7 +3114,7 @@ var items =
         },
         'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns=\'http://www.w3.org/1999/xhtml\'%3E%js_alert%%3C/script%3E"/>\n</svg>',        
         'description': {
-            'en' : 'The content of the xml-links will automatically be included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-elements.',
+            'en' : 'The content of the xml-links will be automatically included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-elements.',
             'ja' : '',
             'ru' : 'Содержимое xml-ссылки автоматически включается в текущий документ. Сочетание предустановленных параметров onLoad атрибута xlink:actuate и embed атрибута xlink:show образует потенциально небезопасные SVG-элементы.',
             'cs' : 'Obsah XML-odkazů bude automaticky vložen do aktuálního dokumentu. Kombinace "onLoad" (hodnota atributu xlink:actuate) a "embed" (hodnota atributu xlink:show) s potenciálně nebezpečnými SVG prvky.',
@@ -3129,7 +3129,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	       'opera'  : ['9.x', '10.x', '11.0']
+	       'opera'  : ['9.x', '10.0', '11.0', '12.0']
         },
         'tags'       : ['xss', 'svg', 'active', 'xlink', 'opera'],
         'reporter'   : 'LeverOne'
@@ -3218,10 +3218,10 @@ var items =
         },
         'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[Inception]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
         'description': {
-            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera: Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
+            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera (up to 11.52): Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
-            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera: Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
-            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari: Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera: Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari: Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
+            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera (вплоть до 11.52): Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
+            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari: Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera (až do 11.52): Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari: Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
             'de' : ''
         },
         'urls'    : [],
@@ -3234,12 +3234,12 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'opera': ['8.x', '9.x', '10.x', '11.0', 'mobile'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.x'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0','5.0']
         },
-        'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfscation', 'closing tag'],
+        'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfuscation', 'closing tag'],
         'reporter'   : 'LeverOne, wpulog'
     },
     { /* ID 92 - Breaking the functional notation on IE (1) */
@@ -3333,7 +3333,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera'  : ['10.x', '10.5', '10.6', '11.0', 'mobile']
+            'opera'  : ['10.0', '11.0', '12.0' 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
@@ -3365,7 +3365,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera'  : ['10.x', '10.5', '10.6', '11.0', 'mobile']
+            'opera'  : ['10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'filter effects', 'feimage'],
         'reporter'   : '.mario'
@@ -4544,7 +4544,7 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'urls'      : ['http://www.w3.org/Math/', 'https://bugzilla.mozilla.org/show_bug.cgi?id=534968'],
+        'urls'      : ['http://www.w3.org/Math/', 'https://bugzilla.mozilla.org/show_bug.cgi?id=534968' , '#87'],
         'howtofix'  : {
             'en'    : 'Do not allow users to submit unfiltered MathML content.',
             'ja'    : '',
