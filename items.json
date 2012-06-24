@@ -3333,7 +3333,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-            'opera'  : ['10.0', '11.0', '12.0' 'mobile']
+            'opera'  : ['10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'svg', 'opera', 'XML-events'],
         'reporter'   : 'LeverOne'
