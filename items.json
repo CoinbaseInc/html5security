@@ -1516,11 +1516,11 @@ var items =
             'cs' : 'Hijacking odkazu skrz tag <BASE> a JavaScript URI',
             'de' : ''
         },
-        'data'       : '<head><base href="javascript://"/></head><body><a href="/. /,%js_alert%//#">XXX</a>\r\n<!-- if Opera\r\n<base href="data:javascript://"><a href="?%0D%js_alert%">XXX</a>\r\n-->\r\n</body>',
+        'data'       : '<head><base href="javascript://"/></head><body><a href="/. /,%js_alert%//#">XXX</a></body>',
         'description': {
-            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents. Opera 11 ships a more or less working fix. Note that the last Opera example will only work if the same script via the protocol "javascript" was executed regardless of domain before.',
+            'en' : '<BASE> link hijacking with JavaScript URIs works on Internet Explorer, Opera (O8-10.5 in case the link URL starts with #) and Safari. User interaction is required to execute the JavaScript. The vector sometimes has to be changed slightly to work for all mentioned user agents. Opera 11 ships a more or less working fix, but this problem continues to exist in difficult to exploit forms though.',
             'ja' : '',
-            'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах. В O11 условно исправлена первая проблема. Последний приведенный пример для Opera работает, только если идентичный скрипт был раньше выполнен через псевдопротокол "javascript", причем вне зависимости от домена.',
+            'ru' : 'Этот вектор работает в Internet Explorer, Opera (O8-10.5 в случае, если URL ссылки начинается с #) и Safari. Для выполнения JavaScript необходимо взаимодействие с пользователем. Вектор иногда приходится слегка изменять для работоспособности во всех заявленных браузерах. В O11 условно исправлена данная проблема, однако остаются еще трудноэксплуатируемые варианты данного вектора, не имеющие практического значения.',
             'cs' : 'Hijacking odkazu v tagu <BASE> s JavaScriptovými URI pracuje v Internet Exploreru, Opeře (O8-10.5 v případě, že URL odkazu začíná na #) a v Safari. Ke spuštění kódu je vyžadována spoluúčast uživatele. Navíc je pro správnou funkci v jednotlivých prohlížečích potřeba použít mírně upravený zápis.',
             'de' : ''
         },
@@ -3173,7 +3173,7 @@ var items =
         'name'       : {
             'en' : 'SVG images containing XML data - with disabled JavaScript',
             'ja' : '',
-            'ru' : 'SVG-изображение это такой же XML-документ, но с выключенным javascript',
+            'ru' : 'SVG-изображение как XML-документ с выключенным javascript',
             'cs' : 'SVG obrázky obsahující XML data - s vypnutým JavaScriptem',
             'de' : ''
         },
@@ -3415,7 +3415,7 @@ var items =
         'name'       : {
             'en' : 'XSS using "xmlns" attribute in custom tag when copying innerHTML (2)',
             'ja' : '',
-            'ru' : 'XSS с использованием атрибута xmlns в сочетании с пользовательским (custom) тегом при копировании с помощью innerHTML (2)',
+            'ru' : 'XSS с использованием атрибута xmlns в сочетании с пользовательским тегом при копировании с помощью innerHTML (2)',
             'cs' : 'XSS použitím atributu "xmlns" ve vlastním tagu při kopírování innerHTML (2)',
             'de' : ''
         },
