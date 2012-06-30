@@ -4697,7 +4697,7 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<%\']{}\r\n</style>\r\n%>{}\r\n*{color:red}\r\n</style>',
+        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<%\']{}\r\n</style>\r\n%>{}\r\n*{color:red}',
         'description' : {
             'en'    : 'The structure "<%" allows the IE parser to consider closing tag as part of the plaintext until it finds the structure "%>". Note that in the tags, which take its own syntax, such as <style>, <script>, the syntax within the section <% ...%> should be valid, otherwise throws an exception. For example, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. These delimiters can also be used in an inline svg along with the SGML delimiters.',
             'ja'    : '',
