@@ -1,4 +1,4 @@
-/* Items - the set of available items and vectors */
+﻿/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -3499,7 +3499,7 @@ var items =
             'cs' : 'použití komentářů z zamlžení stylů',
             'de' : ''
         },
-        'data'       : 'XXX<style>\r\n\r\n*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */\r\n\r\n<!--\r\n--><!--*{color:red}   /* all UA */\r\n\r\n*{background:url(xx:x //**/\red/*)} /* IE 6-7 Standards mode */\r\n\r\n</style>',
+        'data'       : 'XXX<style>\r\n\r\n*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */\r\n\r\n<!--\r\n--><!--*{color:red}   /* all UA */\r\n\r\n*{background:url(xx:x //**/\\red/*)} /* IE 6-7 Standards mode */\r\n\r\n</style>',
         'description': {
 	    'en' : 'As noted in CSS2.1 specification (and repeated in CSS3), comments may occur anywhere outside other tokens. The cases that are exceptions to this rule are a subject to special attention. First of all the CSS2.1 specification is inconsistent, since, for example,  the "!important" token in his definition allows comments. Despite the exclusion this feature in CSS3,  IE (8-9 standards mode) and Firefox 13 still support "!/**/important". You can find more obvious mistakes, for example, the same Firefox 13 allows "font-family: Ar/**/ial".\r\nSpecial interest are exceptions to this rule in IE. The first example shows the possibility for comments in the value of the property. The third example, in addition to demonstrating a similar possibility inside the "url()" function, is also an interesting case, when a comment can not be replaced by any other structure (another space or encoded space "\\000020" will not give necessary effect). Typically these cases occur when the token does not match your precise definition. In this example token "url" can not contain a space character.\r\nInside the <STYLE> tag, there are rules for parsing the SGML comment delimiters, that are allowed before and after statements regardless of the form (opening/closing) and nesting.',
             'ja' : '',
@@ -4701,7 +4701,7 @@ var items =
         'description' : {
             'en'    : 'The structure "<%" allows the IE parser to consider closing tag as part of the plaintext until it finds the structure "%>". Note that in the tags, which take its own syntax, such as <style>, <script>, the syntax within the section <% ...%> should be valid, otherwise throws an exception. For example, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. These delimiters can also be used in an inline svg along with the SGML delimiters.',
             'ja'    : '',
-            'ru'    : 'Структура "<%" позволяет IE анализатору рассматривать закрывающий тег как часть текста, пока не найдет структуру "%>". Обратите внимание, что в тегах, которые имеют свой ​​собственный синтаксис, таких как <style>, <script>, синтаксис внутри секции <% ...%> должен быть правильным под угрозой возникновения ошибки. Например, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" начало регуляного выражения. Эти разделители также могут быть использованы во встроенном SVG наряду с SGML-разделителями.',
+            'ru'    : 'Структура "<%" позволяет IE анализатору рассматривать закрывающий тег как часть текста, пока не найдет структуру "%>". Обратите внимание, что в тегах, которые имеют свой ​​собственный синтаксис, таких как <style>, <script>, синтаксис внутри секции <% ...%> должен быть правильным под угрозой возникновения ошибки. Например, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. Эти разделители также могут быть использованы во встроенном SVG наряду с SGML-разделителями.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
