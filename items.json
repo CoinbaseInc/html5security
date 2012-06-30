@@ -1,4 +1,4 @@
-﻿/* Items - the set of available items and vectors */
+/* Items - the set of available items and vectors */
 var items = 
 [
     { /* ID 1 - XSS via formaction - requiring user interaction (1) */
@@ -4699,9 +4699,9 @@ var items =
         },
         'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<%\']{}\r\n</style>\r\n%>{}\r\n*{color:red}',
         'description' : {
-            'en'    : 'The structure "<%" allows the IE parser to consider closing tag as part of the plaintext until it finds the structure "%>". Note that in the tags, which take its own syntax, such as <style>, <script>, the syntax within the section <% ...%> should be valid, otherwise throws an exception. For example, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. These delimiters can also be used in an inline svg along with the SGML delimiters.',
+            'en'    : 'The structure "<%" allows the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>". Note that in the tags, which take its own syntax, such as <style>, <script>, the syntax within the section <% ...%> should be valid, otherwise throws an exception. For example, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. These delimiters can also be used in an inline svg along with the SGML delimiters.',
             'ja'    : '',
-            'ru'    : 'Структура "<%" позволяет IE анализатору рассматривать закрывающий тег как часть текста, пока не найдет структуру "%>". Обратите внимание, что в тегах, которые имеют свой ​​собственный синтаксис, таких как <style>, <script>, синтаксис внутри секции <% ...%> должен быть правильным под угрозой возникновения ошибки. Например, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. Эти разделители также могут быть использованы во встроенном SVG наряду с SGML-разделителями.',
+            'ru'    : 'Структура "<%" позволяет IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока не найдет структуру "%>". Обратите внимание, что в тегах, которые имеют свой ​​собственный синтаксис, таких как <style>, <script>, синтаксис внутри секции <% ...%> должен быть правильным под угрозой возникновения ошибки. Например, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. Эти разделители также могут быть использованы во встроенном SVG наряду с SGML-разделителями.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
