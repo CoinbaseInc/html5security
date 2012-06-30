@@ -3190,7 +3190,7 @@ var items =
             'cs' : 'SVG obrázky obsahující XML data - s vypnutým JavaScriptem',
             'de' : ''
         },
-        'data'       : '<!-- Up to Opera 10.63 -->\r\n<div style=content:url(%svg_path_2%)></div>\r\n\r\n<!-- Up to Opera 11.61 - see link below -->\r\n\r\n<!-- Up to Opera 12.x -->\r\n<div style="background:url(%svg_path_3%)">PRESS ENTER</div>',
+        'data'       : '<!-- Up to Opera 10.63 -->\r\n<div style=content:url(%svg_path_2%)></div>\r\n\r\n<!-- Up to Opera 11.64 - see link below -->\r\n\r\n<!-- Up to Opera 12.x -->\r\n<div style="background:url(%svg_path_3%)">PRESS ENTER</div>',
         'attachment' : {
             'required_mime' : 'image/svg+xml',
             'crossdomain'    : '0',            
@@ -3237,7 +3237,7 @@ var items =
             'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari: Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera (až do 11.52): Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari: Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['http://sla.ckers.org/forum/read.php?2,15812,28148#msg-28148', '#134'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3499,15 +3499,15 @@ var items =
             'cs' : 'použití komentářů z zamlžení stylů',
             'de' : ''
         },
-        'data'       : 'XXX<style>*{/*all*/color/*all*/:/*all*/red/*all*/;/[0]*IE,Safari*[0]/color:green;color:bl/*IE*/ue;}</style>',
+        'data'       : 'XXX<style>\r\n\r\n*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */\r\n\r\n<!--\r\n--><!--*{color:red}   /* all UA */\r\n\r\n*{background:url(xx:x //**/\red/*)} /* IE 6-7 Standards mode */\r\n\r\n</style>',
         'description': {
-	    'en' : 'All browsers allow to use CSS-comments before and after the properties and values. In addition, Internet Explorer allows to use comments in values. Also it\'s possible for Internet Explorer and Safari to obfuscate comment inside the tag <STYLE> via unencoded null character.',
+	    'en' : 'As noted in CSS2.1 specification (and repeated in CSS3), comments may occur anywhere outside other tokens. The cases that are exceptions to this rule are a subject to special attention. First of all the CSS2.1 specification is inconsistent, since, for example,  the "!important" token in his definition allows comments. Despite the exclusion this feature in CSS3,  IE (8-9 standards mode) and Firefox 13 still support "!/**/important". You can find more obvious mistakes, for example, the same Firefox 13 allows "font-family: Ar/**/ial".\r\nSpecial interest are exceptions to this rule in IE. The first example shows the possibility for comments in the value of the property. The third example, in addition to demonstrating a similar possibility inside the "url()" function, is also an interesting case, when a comment can not be replaced by any other structure (another space or encoded space "\\000020" will not give necessary effect). Typically these cases occur when the token does not match your precise definition. In this example token "url" can not contain a space character.\r\nInside the <STYLE> tag, there are rules for parsing the SGML comment delimiters, that are allowed before and after statements regardless of the form (opening/closing) and nesting.',
             'ja' : '',
-            'ru' : 'Все браузеры позволяют использовать CSS-комментарии до и после свойств и их значений. Кроме того, Internet Explorer позволяет использовать комментарии в значениях свойств. Также в Internet Explorer и Safari в теге <STYLE> воспринимается комментарий, обфусцированный с помощью незакодированного нулевого символа.',
+            'ru' : 'Как указано в спецификации CSS2.1 (и повторено в CSS3), комментарии могут содержаться в любом месте вне границ других лексем. Случаи, которые являются исключением из этого правила, являются предметом особого внимания. Прежде всего спецификация CSS2.1 является непоследовательной, так как, например, такая лексема, как !important , в своем определении содержит возможность комментариев. Несмотря на исключение этой возможности в CSS3, браузеры IE (в режиме стандартов для IE 8-9) и Firefox 13 до сих пор поддерживают форму !/**/important. Можно найти и другие ошибки подобного рода, так, например, тот же Firefox 13 допускает font-family:Ar/**/ial.\r\nНо особый интерес представляют исключения из этого правила для IE. Первый пример показывает допустимость комментариев в значении свойства. А третий помимо того, что демонстрирует аналогичную возможность внутри функции url() для IE (в режиме стандартов для IE 6-7), ещё является интересным случаем, когда комментарий не может быть заменен никакой другой конструкцией (ни еще один пробел, ни кодированный пробел "\\000020" не будут давать нужный эффект). Как правило, такие случаи появляются тогда, когда лексема не соответствует своему точному определению. Так, данном случае лексема url не может содержать пробельный символ.\r\nВнутри тегов <style> существуют правила парсинга ограничителей SGML-комментариев. Они допускаются до и после грамматической структуры statements вне зависимости от вида (открывающий/закрывающий) и вложенности.',
             'cs' : 'Všechny webové prohlížeče umožňují použít CSS komentáře před a po uvedené vlastnosti nebo hodnotě. Kromě toho umožňuje Internet Explorer i použití komentářů uvnitř samotné hodnoty.V Internet Exploreru a Safari je také možné použitím nekódovaného nulového znaku vložit komentáře uvnitř tagu <STYLE>.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['http://www.w3.org/TR/css3-syntax/#comments', 'http://www.w3.org/TR/CSS2/syndata.html#uri', 'http://www.w3.org/TR/css3-syntax/#grammar0', 'http://www.w3.org/TR/CSS2/grammar.html'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3516,11 +3516,11 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0'],
-            'firefox': ['3.x', '4.0'],
-            'opera'  : ['9.x', '10.x', '11.0', 'mobile'],
-            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari' : ['3.0', '4.0', '5.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'firefox': ['3.x', '4.0', '13.0'],
+            'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
+            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'safari' : ['3.0', '4.0', '5.0', '5.1.7'],
         },
         'tags'       : ['trick', 'css', 'obfuscation', 'internet explorer', 'firefox', 'opera', 'chrome', 'safari', 'comment'],
         'reporter'   : 'Roman Ivanov, LeverOne'
@@ -4651,7 +4651,7 @@ var items =
         'tags'      : [ 'svg', 'html5', 'noscript', 'keylogger', 'firefox', 'thunderbird'],
         'reporter'  : '.mario'
     },
-    { /* ID 133 -  */
+    { /* ID 133 - Ending HTML comments with a backtick character */
         'id'        : 133,
         'category'  : 'html',
         'name'      : {
@@ -4685,5 +4685,40 @@ var items =
         },
         'tags'      : ['xss', 'comments', 'internet explorer','backtick'],
         'reporter'  : 'jackmasa'
+    },
+        { /* ID 134 - "<%" inside plaintext tags */
+        'id'        : 134,
+        'category'  : 'html',
+        'name'      : {
+            'en'    : '"<%" inside plaintext tags',
+            'ja'    : '',
+            'ru'    : '"<%" внутри тегов с текстовым содержимым',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<%\']{}\r\n</style>\r\n%>{}\r\n*{color:red}\r\n</style>',
+        'description' : {
+            'en'    : 'The structure "<%" allows the IE parser to consider closing tag as part of the plaintext until it finds the structure "%>". Note that in the tags, which take its own syntax, such as <style>, <script>, the syntax within the section <% ...%> should be valid, otherwise throws an exception. For example, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. These delimiters can also be used in an inline svg along with the SGML delimiters.',
+            'ja'    : '',
+            'ru'    : 'Структура "<%" позволяет IE анализатору рассматривать закрывающий тег как часть текста, пока не найдет структуру "%>". Обратите внимание, что в тегах, которые имеют свой ​​собственный синтаксис, таких как <style>, <script>, синтаксис внутри секции <% ...%> должен быть правильным под угрозой возникновения ошибки. Например, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" начало регуляного выражения. Эти разделители также могут быть использованы во встроенном SVG наряду с SGML-разделителями.',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : ['#91', '#38', '#40'],
+        'howtofix'  : {
+            'en'    : 'Encode all opening brakets inside plaintext tags. Escape for the closing tags ("<\\/script>") is not sufficient.',
+            'ja'    : '',
+            'ru'    : 'Кодируйте все открывающие скобки внутри тегов с текстовым содержимым. Эскейпирование закрывающих тегов ("<\\/script>") не является достаточной мерой.',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.7']
+        },
+        'tags'      : ['xss', 'plaintext', 'internet explorer', 'comment', 'SGML', 'escape'],
+        'reporter'  : 'LeverOne , wpulog'
     }
 ]
