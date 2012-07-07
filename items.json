@@ -3535,16 +3535,16 @@ var items =
             'cs' : 'Oddělovače v HTML a ignorované znaky',
             'de' : ''
         },
-        'data'       : '<img[a][b][c]src=x[e]onerror[d]=[f]"%js_alert%">',
-        'trigger': 'fuzz(document.body, "innerHTML", ["[a]","[b]","[c]","[d]","[e]","[f]"]);',
+        'data'       : '<img[a][b]src=x[d]onerror[c]=[e]"%js_alert%">',
+        'trigger': 'fuzz(document.body, "innerHTML", ["[a]","[b]","[c]","[d]","[e]"]);',
         'description': {
-	    'en' : '[a] Characters* ignored after tag names (and not accepted as tag name/attribute separators).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* These are given in decimal codes.\n** Null character in Safari is a divider (only the left part of the tag name or attribute name still valid).',
+	    'en' : '[a] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nSafari, Internet Explorer : 0,11\n\n* Characters are given as decimal ASCII table index.\n** There is a common rule that the unencoded null character does not exist for IE HTML parser.',
             'ja' : '',
-            'ru' : '[a] Символы*, игнорируемые после имени тега (и не являющиеся при этом разделителями имени тега и атрибута).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Симолы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* Приведены в десятичных кодах.\n** Нулевой символ в Safari - это символ-отсекатель (остаётся действительной только левая часть имени тега или параметра).',
-            'cs' : '[a] Znaky* ignorované za názvam tagu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nInternet Explorer, Safari** : 0\nSafari : 47\nFirefox 3.x : 11,12\n\n[b] Znaky akceptované jako oddělovače mezi názvem tagu a atributu.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nFirefox, Internet Explorer, Google Chrome, Opera : 47\nInternet Explorer, Safari: 11\n\n[c] Znaky ignorované před názvem atributu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nFirefox 3.x, Safari : 34,39\nInternet Explorer : 0\n\n[d] Znaky ignorované mezi názvem atributu a rovnítkem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 0,11\nSafari : 47\n\n[e] Znaky akceptované jako oddělovače atributu a parametru.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\n\n[f] Znaky ignorované mezi rovnítkem a parametrem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,13,32\nFirefox 4.x, Internet Explorer, Safari, Google Chrome, Opera : 12\nSafari, Internet Explorer : 11\nInternet Explorer : 0\n\n* Kódy jsou uvedeny v desítkové soustavě.\n** V Safari je nulový znak považován za oddělovač (Za validní se považuje pouze levá část názvu tagu nebo atributu uvedená před tímto znakem).',
+            'ru' : '[a] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Символы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Приведены в десятичных кодах таблицы ASCII.\n** Существует общее правило, согласно которому для HTML-парсера IE как бы не существует незакодированного нулевого символа.',
+            'cs' : '[a] Znaky akceptované jako oddělovače mezi názvem tagu a atributu.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Znaky ignorované před názvem atributu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0\n\n[c] Znaky ignorované mezi názvem atributu a rovnítkem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Znaky akceptované jako oddělovače atributu a parametru.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Znaky ignorované mezi rovnítkem a parametrem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Kódy jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
-        'urls'    : ['http://docs.google.com/Doc?docid=0ASCeV1AnDNdWZGQ3eDVzbXdfMTZoZGQzNGdneg', '#106'],
+        'urls'    : ['http://shazzer.co.uk/vector/Characters-allowed-after-script', 'http://shazzer.co.uk/vector/Attribute-separators', 'http://shazzer.co.uk/vector/Characters-allowed-before-attribute-name', 'http://shazzer.co.uk/vector/Characters-allowed-after-attribute-name', 'http://shazzer.co.uk/vector/Quoteless-attributes-breaker', 'http://docs.google.com/Doc?docid=0ASCeV1AnDNdWZGQ3eDVzbXdfMTZoZGQzNGdneg', '#106'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3554,13 +3554,13 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'firefox': ['2.x', '3.x', '4.0'],
-            'opera'  : ['9.x', '10.x', '11.0', 'mobile'],
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari' : ['4.0', '5.0'],
+            'firefox': ['4.0', '13.0'],
+            'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'safari' : ['4.0', '5.0', '5.1.7'],
         },
         'tags'       : ['xss', 'internet explorer', 'firefox','opera', 'chrome', 'safari', 'separator'],
-        'reporter'   : 'hasegawayosuke, LeverOne, .mario, RSnake, '
+        'reporter'   : 'hasegawayosuke, .mario, RSnake, '
     },
     { /* ID 101 -  Characters ignored in the URI (Safari and Google Chrome) */
         'id'         : 101,
@@ -3689,7 +3689,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', '11.0', 'mobile']
+            'opera' : ['10.x', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'tinysvg', 'listener', 'xml', 'events'],
         'reporter'   : '.mario'
@@ -3721,7 +3721,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', '11.0', 'mobile']
+            'opera' : ['10.x', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'svgz', 'gzip', 'xml', 'compression'],
         'reporter'   : '.mario'
@@ -3856,7 +3856,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', '11.60', 'mobile']
+            'opera' : ['10.x', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'css', 'xml', 'style'],
         'reporter'   : 'LeverOne'
@@ -3895,7 +3895,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'opera' : ['10.x', 'mobile']
+            'opera' : ['10.x', '11.0', '11.52', 'end', 'mobile 10.0', 'mobile 11.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'svg', 'css', 'xml', 'style'],
         'reporter'   : 'LeverOne'
@@ -3996,7 +3996,7 @@ var items =
         },                        
         'browsers'   : {
             'firefox' : ['2.x', '3.x', '4.0'],
-            'opera'   : ['9.x','10.x', '11.0', 'mobile']
+            'opera'   : ['9.x','10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'css', 'firefox', 'opera', 'trick', 'selector', 'attribute'],
        'reporter'   : 'LeverOne'
@@ -4470,7 +4470,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'opera': ['9.0', '10.0', '11.0']
+            'opera': ['9.0', '10.0', '11.0', '12.0']
         },
         'tags'      : [ 'svg', 'opera', 'xml', 'events', 'listener', 'handler', 'xss'],
         'reporter'  : '.mario'
@@ -4540,7 +4540,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'opera': ['11.60']
+            'opera': ['11.0', '12.0']
         },
         'tags'      : [ 'svg', 'xss', 'inline', 'opera', 'css', 'style'],
         'reporter'  : 'LeverOne'
