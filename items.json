@@ -433,9 +433,10 @@ var items =
             'opera': ['10.0', '11.0', '12.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.7'],
-			'safari' : ['5.0']          
+            'safari' : ['5.0'],
+            'internet explorer': ['9.0']      
         },
-        'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome'],
+        'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome', 'internet explorer'],
         'reporter'   : '.mario'
     },
     { /* ID 12 - Self-executing JavaScript via <BODY> onscroll autofocus */
@@ -624,7 +625,7 @@ var items =
             'zh' : '不允许用户在提交的标签或CSS中含有behavior属性,HTML+TIME API提供了很多方法来执行Javascript,如果有可能,不用使用黑名单的方式处理HTML危险标签.'
         },            
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'onbegin'],
         'reporter'   : '.mario'
@@ -703,9 +704,10 @@ var items =
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
             'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-			'safari' : ['5.0']
+			      'safari' : ['5.0'],
+			      'internet explorer': ['9.0']
         },
-        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'firefox', 'chrome', 'safari', 'xml', 'entity'],
         'reporter'   : '.mario'
     },
     { /* ID 19 - XSS via &#188 and &#190 in MacFarsi, MacArabic and MacHebrew */
@@ -926,7 +928,7 @@ var items =
             'tr' : 'Kullanıcı destekli CSS ve "markup"larda "behavior" özelliklerine izin vermeyin ve söz konusu tehlikeli HTML etiketleri için "blacklist"lere güvenmeyin. Çok bilinmeyen HTML+TIME API\'si Javascript çalıştırmak için kullanıcı etkileşimi gerektiren veya gerektirmeyen birçok egzotik yöntem sağlamaktadır. Mümkün olduğunca blacklist kullanımından kaçının.'
         },            
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'ie', 'behavior', 'html+time', 'attributename', 'to', 'proprietary'],
         'reporter'   : '.mario'
@@ -1066,7 +1068,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'behavior', 'style', 'html+time', 'attributename', 'values', 'proprietary'],
         'reporter'   : 'LeverOne'
@@ -1100,7 +1102,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['8.0', '9.0']
         },
-        'tags'       : ['xss', 'javascript', 'ie', 'css', 'style', 'expression', 'datauri', 'proprietary'],
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'css', 'style', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 30 - JavaScript execution via <STYLE> @import and data URI  */
@@ -1132,7 +1134,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['8.0', '9.0']
         },
-        'tags'       : ['xss', 'javascript', 'ie', 'css', 'style', 'expression', 'datauri', 'proprietary'],
+        'tags'       : ['xss', 'javascript', 'internet explorer', 'css', 'style', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
     },
     { /* ID 31 - JavaScript execution via <FRAMESET> and onload  */
@@ -1198,7 +1200,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['6.0'],
+            'internet explorer': ['6.0', 'end'],
             'opera': ['8.x', '9.0', '10.0', '11.01', 'end', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'background', 'classic', 'html', 'table'],
@@ -1219,7 +1221,7 @@ var items =
         'description': {
             'en' : 'Firefox 3.6+ allows using CSS "pointer-events"  with value "none" to make sure an element will not react on any mouse/pointer based event. This feature enables for example placing a DIV over another DIV without blocking the click events addressed to the underlying DIV.',
             'ja' : '',
-            'ru' : 'Firefox 3.6+ позволяет использовать CSS-свойство pointer-events со значением none, чтобы элемент не реагировал на какие-либо события указателей. Это свойство позволяет, например, позиционировать элемент DIV поверх другого DIV без блокировки событий нажатия, адресованных первому.',
+            'ru' : 'Firefox 3.6+ позволяет использовать CSS-свойство pointer-events со значением none, чтобы элемент не реагировал на какие-либо события указателей. Это свойство позволяет, например, позиционировать элемент DIV поверх другого DIV без блокировки событий нажатия, адресованных нижнему. Измените вложенный тег <a> на какой-либо другой контейнерный тег, чтобы увидеть ожидаемое поведение pointer-events:none .',
             'cs' : 'Firefox 3.6+ umožňuje použít CSS vlastnost "pointer-events" s hodnotou "none" k tomu, aby element nereagoval na události vyvolané myší nebo kurzorem. Tato funkce umožňuje např. překrýt DIVem jiný DIV, aniž by překrývající blokoval události, adresované překrytému.',
             'de' : ''
         },
@@ -1233,10 +1235,10 @@ var items =
         },            
         'browsers'   : {
             'firefox': ['3.6', '3.7', '4.0'], 
-			'safari' : ['5.0'],
-			'chrome' : ['7.0', '8.0', '9.0', '10.0']
+            'safari' : ['5.0'],
+            'chrome' : ['7.0', '8.0', '9.0', '10.0']
         },
-        'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox'],
+        'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox', 'safari', 'chrome'],
         'reporter'   : '.mario'
     },
     { /* ID 34 - VML frame with embedded VML object plus onmouseover  */
@@ -1249,7 +1251,7 @@ var items =
             'cs' : 'VML rámec s vloženým VML objektem plus onmouseover',
             'de' : ''
         },
-        'data'       : '<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=%vml_path%#xss></vmlframe>',
+        'data'       : '1<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=%vml_path%#xss></vmlframe>',
         'attachment' : {
             'required_mime' : '',
             'crossdomain'    : '1',            
@@ -1338,7 +1340,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0'] 
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0'] 
         },
         'tags'       : ['xss', 'javascript', 'style', 'behavior', 'anchorclick', 'internet explorer', 'proprietary'],
         'reporter'   : '.mario'
@@ -1494,7 +1496,7 @@ var items =
         'description': {
             'en' : 'Opera 10.5+ and earlier versions fire an error event for <LI> tags in case the background URL via style attribute cannot be loaded. The same works with "list-style-image" too. On Opera 10.10 and earlier more tag/style combinations like background:url() and background-image:url() work as well. Also works combination like content:url(svg), but at the moment it is sensitive to events and <script> tags before and after.',
             'ja' : '',
-            'ru' : 'Opera 10.5+ и ниже генерирует событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload, однако на данный момент этот способ, хотя и остается работоспособным, однако уже зависит от отсутствия некоторых обработчиков и тегов <script> до и после него.',
+            'ru' : 'Opera 10.5+ и ниже генерирует событие error для тега <LI> в случае, если URL свойства background не может быть загружен. То же самое действительно для свойства list-style-image. На Opera 10.10 и ниже этот прицип имел универсальный характер, то есть мог быть использован в любом теге. Универсальный характер в Opera 10 и выше имеет комбинация content плюс обработчик onload, однако на данный момент этот способ, хотя и остается работоспособным, однако уже зависит от отсутствия некоторых обработчиков и тегов <script> до и после кода.',
             'cs' : 'Opera 10.5+ a starší verze spustí událost error pro tag <LI> v případě, že není možné pomocí atrinutu stylu načíst background URL. Stejně se chová i "list-style-image". V Opeře 10.10 a starších verzích fungují stejně dobře i jiné kombinace stylů jako například background:url() nebo background-image:url(). Funguje také kompinace jako content:url(svg).',
             'de' : ''
         },
@@ -1540,12 +1542,12 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'],
+            'opera': ['8.x', '9.0', '10.0', '10.63', 'end'],
             'safari': ['3.0', '4.0', '5.0'],
-            'internet explorer': ['5.5', '6.0', '7.0', '9.0'] 
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', 'end'] 
         },
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
-        'reporter'   : 'brainpillow, Gareth, LeverOne, .mario'
+        'reporter'   : 'brainpillow, Gareth, .mario'
     },
     { /* ID 43 - Opera 10 SVG font XSS  */
         'id'         : 43,
@@ -1900,7 +1902,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['5.5', '6.0', '7.0', '8.0']
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'behavior', 'scriptlet', 'internet explorer', 'style', 'css', 'sct'],
         'reporter'   : '.mario'
@@ -2137,7 +2139,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0']
+            'internet explorer': ['6.0', '7.0', '8.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'hasegawayosuke'
@@ -2192,9 +2194,9 @@ var items =
         'data'       : '<div  style="\\63&#9\\06f&#10\\0006c&#12\\00006F&#13\\R:\\000072 Ed;color\\0\\bla:yellow\\0\\bla;col\\0\\00 \\&#xA0or:blue;">XXX</div>',
         'trigger'    : 'document.getElementsByTagName("div")[0].style.color=="red"?pass():fail();',
         'description': {
-            'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (IE7-): 11,160,8192-8203,12288,65279\n\nProperties in IE7- may contain encoded null-character (\\0).\nOn Opera encoded null-character cuts off the right side of a CSS structure.\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character.\nOption of writing a null-character in Internet Explorer 7- is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \nIn IE quirks mode inside the url() function a backslash can be treated as equivalent of a slash and thus will not have the escape role.\n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
+            'en' : '[a] Encoding.\n\nThere are only three tricks to encode characters.\n[1] You can change the number of zeros: \\0A -> \\00000A \n[2] You can change the capital letter: \\0A -> \\0a \n[3] You can change the whitespace* accepted as delimiters after the encoded character.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (IE7↓ Standards mode): 11,160,8192-8203,12288,65279\n\nProperties in IE7↓ Standards mode may contain encoded null-character (\\0).\nOn Opera and in IE8+ Standards mode encoded null-character cuts off the right side of a CSS structure.\nThe volume of possible encoding is different in the browsers. For example, FF can not encode parentheses, which is part of the functional notation.\n\n[b] Escaping.\n\nIn addition, you can put a backslash before the character.\nOption of writing a null-character in Internet Explorer 7↓ Standards mode is escaping of any whitespace-character accepted as delimiters: col\\&#160or:red \nIn IE quirks mode inside the url() function a backslash can be treated as equivalent of a slash and thus will not have the escape role.\n\nOf course, these methods can be combined with other encoding and obfuscation (for example, change case of original characters).\n\n* These are given in decimal codes.',
             'ja' : '',
-            'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (IE7-): 11,160,8192-8203,12288,65279\n\n Свойства в IE 7- могут содержать закодированный нулевой символ (\\0).\nТакой же нулевой символ, поставленный в Opera в конце CSS-структуры (напр., свойства или значения), отсекает её правую часть.\nВажно также помнить, что объем возможного CSS-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши.\n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для IE : col\\&#160or:red \nВ IE, который находится в quirks mode, обратные слеши в функции url() могут рассматриваться в качестве обычных слешей (т.е. являться как бы частью пути), и поэтому не будут выполнять роль эскейпа.\n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
+            'ru' : '[a] Кодирование.\n\nСуществуют всего три приёма, которые можно использовать при CSS-кодировании.\n[1] Вы можете изменять число нулей: \\0A -> \\00000A \n [2] Вы можете менять регистр символов: \\0A -> \\0a \n [3] Вы можете менять пробельный символ*, рассматриваемый в качестве разделителя, после закодированного символа.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (режим стандартов IE7↓): 11,160,8192-8203,12288,65279\n\n Свойства в режиме стандартов IE 7↓  могут содержать закодированный нулевой символ (\\0).\nТакой же нулевой символ, поставленный в Opera и в режиме стандартов IE8+ в конце CSS-структуры (напр., свойства или значения), отсекает её правую часть.\nВажно также помнить, что объем возможного CSS-кодирования в разных браузерах отличается. Например, в FF не допускается кодировать круглые скобки, выступающие частью функциональной нотации.\n\n[b] Эскейпинг.\n\nКроме того, вы можете добавлять перед символами обратные слеши.\n Эскейпирование любого пробельного символа, рассматриваемого в качестве разделителя при CSS-кодировании, является вариантом написания нулевого символа для режима стандартов IE7↓: col\\&#160or:red \nВ IE, который находится в quirks mode, обратные слеши в функции url() могут рассматриваться в качестве обычных слешей (т.е. являться как бы частью пути), и поэтому не будут выполнять роль эскейпа.\n\nРазумеется, можно сочетать эти приемы с другим кодированием и обфускацией (например, с изменением регистра первоначальных символов).\n\n* Ниже они приведены в десятичных кодах.',
             'cs' : '[a] Kódování.\n\nJsou pouze tři triky pro kódování znaků.\n[1] Je možné měnit počet nul: \\0A -> \\00000A \n[2] Je možné měnit velikost písmen: \\0A -> \\0a \n[3] Je možné změnit bílý znak* akceptovaný jako oddělovač po zakódovaném znaku.\n\nFirefox, Google Chrome, Internet Explorer, Opera, Safari: 9,10,12,13,32\nInternet Explorer (IE 7-): 11,160,8192-8203,12288,65279\n\nVlastnosti v IE 7- mohou obsahovat zakódovaný nulový znak (\\0).\nMnožství použitelných kódování se liší od použitého prohlížeče. Například, FF nemůže kódovat závorky, které jsou součástí zápisu funkce.\n\n[b] Escapování.\n\nKromě toho můžete dát zpětné lomítko i před písmeno.\nMožnost zápisu nulového znaku v Internet Exploreru je escapování nějakého jiného bílého znaku, který je akceptován jako oddělovač: col\\&#160or:red \n\nSamozřejmě je možné tyto metody kombinovat i s jinými způsoby kódování (například změnou velikosti originálních znaků).\n\n* Hodnoty jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
@@ -2234,7 +2236,7 @@ var items =
             'cs' : 'Tento vektor předstírá v IE vložení atributu užitím apostrofů. Používá se pro oklamaní bezpečnostních filtrů.',
             'de' : ''
         },
-        'urls'    : ['#102', '#108'],
+        'urls'    : ['#102', '#108', '#133'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
