@@ -18,13 +18,15 @@
                 payloads = store.payloads;
                 $('#offline').show();
             }; 
-            if(navigator.onLine) {
-                localStorage[location.hostname]=JSON.stringify(
-                    {'items':items,'payloads':payloads,'categories':categories}
-                );
-                $(window).bind('offline', offline);
-                $(window).bind('online', function(){$('#offline').hide()})
-                $('#offline').hide();
+            if(navigator.onLine || typeof navigator.onLine === 'undefined') {
+            	try {
+	                localStorage[location.hostname]=JSON.stringify(
+	                    {'items':items,'payloads':payloads,'categories':categories}
+	                );
+	                $(window).bind('offline', offline);
+	                $(window).bind('online', function(){$('#offline').hide()})
+	                $('#offline').hide();
+	            } catch(e){}
             } else {
                 offline();
             }   
