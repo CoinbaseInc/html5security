@@ -35,7 +35,7 @@ var items =
             'zh' : '不要让用户提交包含 "form" 和 "formaction"属性的标签.避免在form中出现id属性及提交按钮.'
         },
         'browsers'   : {
-		    'firefox' : ['4.0'],
+		    'firefox' : ['4.0', '14.0'],
             'opera': ['10.5', '11.0', '12.0', 'mobile'], 
 			'chrome': ['10.0']
         },
@@ -76,7 +76,7 @@ var items =
         },
         'browsers'   : {
             'firefox': [
-                '2.x', '3.5', '3.6', '3.7'
+                '2.x', '3.5', '3.6', '3.6.28', 'end'
             ]
         },
         'tags'       : ['xss', 'utf7', 'firefox', 'charset'],
@@ -115,7 +115,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '2.x', '3.5', '3.6', '3.7'
+                '2.x', '3.5', '3.6', '3.6.28', 'end'
             ]
         },
         'tags'       : ['xss', 'utf7', 'firefox', 'charset'],
@@ -154,10 +154,10 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '3.5', '3.6', '3.7'
+                '3.5', '3.6', '3.7', '14.0'
             ]
         },
-        'tags'       : ['xss', 'dom', 'firefox', 'worker', 'self-inclusion'],
+        'tags'       : ['xss', 'dom', 'firefox', 'worker', 'self-inclusion', 'e4x'],
         'reporter'   : '.mario'
     },
     { /* ID 5 - Firefox crypto object - hidden eval() */
@@ -193,7 +193,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '2.x', '3.x', '4.0'
+                '2.x', '3.x', '4.0', '14.0'
             ]
         },
         'tags'       : ['xss', 'dom', 'firefox', 'crypto', 'eval', 'csp', 'proprietary'],
@@ -232,7 +232,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '1.x', '2.x', '3.x', '3.5', '3.6', '3.7'
+                '1.x', '2.x', '3.x', '3.5', '3.6', '3.6.28', 'end'
             ]
         },
         'tags'       : ['xss', 'dom', 'firefox', 'setter', 'proprietary'],
@@ -271,8 +271,8 @@ var items =
             'zh' : '检测用户提交的内容中是否含有"autofocus"属性'
         },          
         'browsers'   : {
-		    'firefox' : ['4.0'],
-            'opera': ['10.5', '11.0', '12.0'],
+		    'firefox' : ['4.0', '14.0'],
+            'opera': ['9.0', '10.0', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
@@ -312,11 +312,10 @@ var items =
             'zh' : '检测用户提交的内容中是否含有"autofocus"属性'
         },    
         'browsers'   : {
-		    'firefox' : ['4.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
-        'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'safari', 'firefox'],
+        'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'safari'],
         'reporter'   : '.mario'
     },
     { /* ID 9 - Opera link-source JavaScript execution via CSS */
@@ -431,9 +430,9 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.0', '11.0', '12.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'firefox': ['3.0', '3.5', '3.6', '3.7'],
-            'safari' : ['5.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '22.0'],
+            'firefox': ['3.0', '3.5', '3.6', '3.6.28', 'end'],
+            'safari' : ['5.0', '5.1.7'],
             'internet explorer': ['9.0']      
         },
         'tags'       : ['xss', 'svg', 'onload', 'opera', 'firefox', 'chrome', 'internet explorer'],
@@ -471,8 +470,8 @@ var items =
             'tr' : ''
         },          
         'browsers'   : {
-		    'firefox' : ['4.0'],
-            'opera': ['10.5', '11.0', '12.0'],
+		    'firefox' : ['4.0', '14.0'],
+            'opera': ['9.0', '10.0', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
@@ -587,7 +586,7 @@ var items =
             'tr' : ''
         },          
         'browsers'   : {
-            'firefox': ['2.x', '3.x', '4.0']
+            'firefox': ['2.x', '3.0', '4.0', '11.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'sharp', 'proprietary'],
         'reporter'   : '.mario'
@@ -702,7 +701,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
-            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
 			      'safari' : ['5.0'],
 			      'internet explorer': ['9.0']
@@ -722,7 +721,7 @@ var items =
             'tr' : 'MacFarsi, MacArabic ve MacHebrew karakter kodlamalarında, &#188 ve &#190 ile XSS',
             'zh' : ''
         },
-        'data'       : '<meta charset="mac-farsi">\xBCscript\xBE%js_alert%\xBC/script\xBE',
+        'data'       : '<meta charset="x-mac-farsi">\xBCscript \xBE%js_alert%//\xBC/script \xBE',
         'description': {
             'en' : 'Buggy charset implementations in Firefox allow to craft HTML structures without using the usual characters such as < and >. Most affected charsets are from the Mac charset family - such as mac-farsi, mac-arabic and mac-hebrew.',
             'ja' : '',
@@ -741,9 +740,9 @@ var items =
             'tr' : 'Kullanıcı girdisinde asla <META> taglarına karakter setlerinin tekrar ayarlarlanmalarını sağlaması için izin verilmemelidir. Bu durumda etkilenen karakter setleri ile çözümleme yapan web sitelerinin filtreleri Firefox için geçerli olan bu durumdan haberdar olmalıdır - &#60; (<) ve &#188; denktir. - aynı zamanda diğer karakterlerde.'
         },            
         'browsers'   : {
-            'firefox' : ['2.x', '3.x', '3.5', '3.6', '3.7']
+            'firefox' : ['2.x', '3.0', '3.5', '3.6', '3.6.28', 'end']
         },
-        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'tags'       : ['x-mac-arabic', 'x-mac-farsi', 'x-mac-hebrew', 'firefox', 'charset'],
         'reporter'   : 'hasegawayosuke'
     },
     { /* ID 20 - JavaScript execution via overwritten ReferenceError object */
@@ -780,11 +779,11 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0'], 
-            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0'],
             'safari': ['4.0', '5.0']
         },
-        'tags'       : ['xss', 'javascript', 'opera', 'xml', 'css'],
+        'tags'       : ['javascript', 'opera', 'firefox', 'chrome', 'safari', 'ReferenceError', 'overwrite'],
         'reporter'   : '.mario'
     },
     { /* ID 21 - JavaScript execution via proprietary __noSuchMethod__  */
@@ -819,7 +818,7 @@ var items =
             'tr' : ''
         },          
         'browsers'   : {
-            'firefox' : ['3.5', '3.6', '3.7', '4.0'] 
+            'firefox' : ['3.5', '3.6', '4.0', '14.0'] 
         },
         'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__', 'proprietary'],
         'reporter'   : 'Gareth, .mario'
@@ -854,12 +853,11 @@ var items =
             'tr' : 'Kullanıcı tanımlı markup\'lar "autofocus" özelliğini içermemelidir.'
         },            
         'browsers'   : {
-		    'firefox' : ['4.0'],
-            'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-			'safari' : ['5.0']
+            'opera': ['9.0', '10.0', '11.0', '12.0'], 
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '22.0'],
+            'safari' : ['5.0', '5.1.7']
         },
-        'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'autofocus', 'onblur', 'html5'],
+        'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'safari', 'autofocus', 'onblur', 'html5'],
         'reporter'   : 'Skyphire, Gareth, .mario'
     },
     { /* ID 23 - Form surveillance with onformchange, onforminput and form attributes  */
@@ -963,7 +961,7 @@ var items =
             'tr' : 'E4X geçerli XML ve sözü edilen noktalı vigül ayraçı içeren herhangi bir sayfa dahil edildiğinde tamamen tehlikeli olabilmekte. İşe yarar bir korunma için websiteleri mutlaka DOCTYPE ile uygulanmalıdır. Bitirici ayraçların birçok varyasyonları var - ki herbiri geçerli birer JavaScript olup belirtilen XML sayfa sayfası değil belirteç çalışacaktır (;1, ,1, ._, etc..)'
         },            
         'browsers'   : {
-            'firefox' : ['1.5', '2.x', '3.x', '4.0']
+            'firefox' : ['1.5', '2.0', '3.0', '4.0', '14.0']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion', 'proprietary'],
         'reporter'   : '.mario'
@@ -979,7 +977,7 @@ var items =
             'de' : '',
             'tr' : 'E4X tabanlı UTF-7 JavaScript/HTML kod parçası ile "cross-domain" etiket çalma'
         },
-        'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);',
+        'data'       : '+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),%js_alert_only%(RegExp.input);',
         'description': {
             'en' : 'In case an attacker can inject the character sequence beginning with .toXMLString() it\'s possible to include the victimized website in a <SCRIPT> tag loaded from an arbitrary page and steal the markup of the included page - across domain and protocol borders. Note that the whole vector is encoded in UTF-7. This is possible since the including <SCRIPT> tag can decide via charset attribute what charset to use.',
             'ja' : '',
@@ -998,7 +996,7 @@ var items =
             'tr' : 'Tüm sitelere tanımlanmış karakter setlerinin (UTF-8 gibi mesela) uygulandığından emin olun. Ayrıca gelen veri htmlentities() veya benzeri metotlar ile denetlenmeden önce UTF-7\'den mevcut karakter setine dönüştürülmelidir. Ayrıca önemli veriler içeren tüm web sitelerine DOCTYPE uygulanmalıdır.'
         },            
         'browsers'   : {
-            'firefox' : ['1.5', '2.x', '3.x', '4.0']
+            'firefox' : ['1.5', '2.0', '3.0', '4.0', '4.0.1', 'end']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'stealing', 'utf7', 'proprietary'],
         'reporter'   : '.mario'
@@ -1166,7 +1164,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -1234,7 +1232,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox': ['3.6', '3.7', '4.0'], 
+            'firefox': ['3.6', '4.0', '14.0'], 
             'safari' : ['5.0'],
             'chrome' : ['7.0', '8.0', '9.0', '10.0']
         },
@@ -1374,7 +1372,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.0', '2.0', '3.0', '4.0'], 
+            'firefox' : ['1.0', '2.0', '3.0', '4.0', '14.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -1423,11 +1421,11 @@ var items =
             'cs' : 'Problém s parsováním CDATA',
             'de' : ''
         },
-        'data'       : '<![><img src="]><img src=x onerror=%js_alert%//">',
+        'data'       : '<!-- up to Opera 11.52, FF 3.6.28 -->\r\n<![><img src="]><img src=x onerror=%js_alert%//">\r\n\r\n<!-- IE9+, FF4+, Opera11.60+, Saf x, GC x  -->\r\n<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=%js_alert_2%//">',
         'description': {
-            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation. Firefox 4 has fixed the issue.',
+            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation. Firefox 4 and Opera 11.60 have fixed the issue. However, modern browsers have a separate XML parsers for inline SVG or MathML, which allow to use of the CDATA sections.',
             'ja' : '',
-            'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации.',
+            'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации. Это свойство было исправлено в Firefox 4 и Opera 11.60. Тем не менее, современные браузеры имеют отдельные XML-парсеры для встроенного SVG или MathML, которые позволяют использовать CDATA-секции.',
             'cs' : 'Firefox a Opera umožňují oddělovače sekce CDATA v HTML - ve zkrácené formě "<![" stejně jako v té plné "<![CDATA[" Může to způsobit řadu problémů u filtrů, pokud budou použityt jako masivní obfuskace.',
             'de' : ''
         },
@@ -1440,10 +1438,13 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'opera': ['8.0', '9.0', '10.0', '11.0', '11.52', 'end', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x']
+            'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'],
+            'internet explorer': ['9.0'],
+            'chrome': ['21.0', '22.0'],
+            'safari': ['5.1.7']
         },
-        'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes'],
+        'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes', 'math', 'svg', 'inline'],
         'reporter'   : 'LeverOne'
     },
     { /* ID 40 - Plaintext tags used for markup obfuscation  */
@@ -1475,7 +1476,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x', '4.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -3078,7 +3079,7 @@ var items =
             'firefox' : ['3.6', '3.7', '4.0'], 
             'safari' : ['4.0', '5.0'], 
             'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile']
+            'opera': ['9.0', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
         'reporter'   : 'Skyphire'
@@ -3409,7 +3410,7 @@ var items =
         'description': {
             'en' : 'This example used the ability to convert the file with any conent type into a web archive using mhtml URI scheme to run JavaScript. For the first time this feature was discovered by Stepanishchev E. in 2006 and became known among web developers as an alternative to data URI for IE6-7. In 2007, Hasegawa Y. independently proposed a way to use this mhtml feature for XSS. Followed fix was incomplete because it doesn\'t take into account the possibility of addressing to the contents of the archive using "!value". This possibility as well as the possibility to access from the archive contents to a host domain are used in the example below.\r\n\r\nUsing this vector all sites that do not contain two new lines in the source code and allows users to insert new line were vulnerable - as well as all sites that allow users to upload images without post-upload conversion etc. A link to this web archives could be specified via <IFRAME> or location.href and comparable.\r\n\r\nThis example was published in June 2010, fix released in April 2011. The mhtml URI scheme doesn\'t determine the content type now, but archive contents still has access to the host domain.',
             'ja' : '',
-            'ru' : 'Данный пример для запуска JavaScript использовал возможность превратить файл с любым типом содержимого в веб-архив, используя mhtml-схему доступа. Впервые эта особенность была открыта Степанищевым Е. в 2006 году и получила известность среди вебных разработчиков как альтернатива data URI для IE6-7. В 2007 Хасегава Й. независимо предложил способ использования этого свойства mhtml для целей XSS. Исправление, последовавшее за этим, было неполным, так как не учитывало возможности адресации к содержимому архива с помощью "!value". Эта возможность, а также возможность доступа из содержимого архива к домену, в который он внедрен, использована в нижеприведенном примере.\r\n\r\nТаким образом, были уязвимы все сайты, которые не содержат пустых строк в исходном коде, обычно добавляемых для читабельности, и позволяют пользователю вставлять символы перевода строки, а также все сайты, которые позволяют пользователям загружать неконвертируемые изображения (пример веб-архива, встроенного в изображение, можно взять из папки attachments : изображение при этом остается действительным, с точки зрения IE) и т.п. Ссылка на архив могла быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.\r\n\r\nДанный пример был опубликован в июне 2010 г., исправление выпущено в апреле 2011 г. Теперь тип содержимого не детерминирован mhtml-схемой, содержание архива по-прежнему имеет доступ к хостовому домену.',
+            'ru' : 'Данный пример для запуска JavaScript использовал возможность превратить файл с любым типом содержимого в веб-архив, используя mhtml-схему доступа. Впервые эта особенность была открыта Степанищевым Е. в 2006 году и получила известность среди вебных разработчиков как альтернатива data URI для IE6-7. В 2007 Хасегава Й. независимо предложил способ использования этого свойства mhtml для целей XSS. Исправление, последовавшее за этим, было неполным, так как не учитывало возможности адресации к содержимому архива с помощью "!value". Эта возможность, а также возможность доступа из содержимого архива к домену, в который он внедрен, использована в нижеприведенном примере.\r\n\r\nТаким образом, были уязвимы все сайты, которые не содержали пустых строк в исходном коде, обычно добавляемых для читабельности, и позволяли пользователю вставлять символы перевода строки, а также все сайты, которые позволяли пользователям загружать неконвертируемые изображения (пример веб-архива, встроенного в изображение, можно взять из папки attachments) и т.п. Ссылка на архив могла быть указана в теге <IFRAME> или с помощью location, или как-либо ещё.\r\n\r\nДанный пример был опубликован в июне 2010 г., исправление выпущено в апреле 2011 г. Теперь тип содержимого не детерминирован mhtml-схемой, содержание архива по-прежнему имеет доступ к хостовому домену.',
             'cs' : '',
             'de' : ''
         },
@@ -4546,7 +4547,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'opera': ['11.0', '12.0']
+            'opera': ['11.60', '12.0']
         },
         'tags'      : [ 'svg', 'xss', 'inline', 'opera', 'css', 'style'],
         'reporter'  : 'LeverOne'
