@@ -35,7 +35,7 @@ var items =
             'zh' : '不要让用户提交包含 "form" 和 "formaction"属性的标签.避免在form中出现id属性及提交按钮.'
         },
         'browsers'   : {
-		    'firefox' : ['4.0', '14.0'],
+		    'firefox' : ['4.0', '15.0'],
             'opera': ['10.5', '11.0', '12.0', 'mobile'], 
 			'chrome': ['10.0']
         },
@@ -154,7 +154,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '3.5', '3.6', '3.7', '14.0'
+                '3.5', '3.6', '3.7', '15.0'
             ]
         },
         'tags'       : ['xss', 'dom', 'firefox', 'worker', 'self-inclusion', 'e4x'],
@@ -193,7 +193,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '2.x', '3.x', '4.0', '14.0'
+                '2.x', '3.x', '4.0', '15.0'
             ]
         },
         'tags'       : ['xss', 'dom', 'firefox', 'crypto', 'eval', 'csp', 'proprietary'],
@@ -271,7 +271,7 @@ var items =
             'zh' : '检测用户提交的内容中是否含有"autofocus"属性'
         },          
         'browsers'   : {
-		    'firefox' : ['4.0', '14.0'],
+		    'firefox' : ['4.0', '15.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
@@ -470,7 +470,7 @@ var items =
             'tr' : ''
         },          
         'browsers'   : {
-		    'firefox' : ['4.0', '14.0'],
+		    'firefox' : ['4.0', '15.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0'],
             'safari' : ['4.0', '5.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
@@ -701,7 +701,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
-            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
 			      'safari' : ['5.0'],
 			      'internet explorer': ['9.0']
@@ -779,7 +779,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0'], 
-            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0'],
             'safari': ['4.0', '5.0']
         },
@@ -818,7 +818,7 @@ var items =
             'tr' : ''
         },          
         'browsers'   : {
-            'firefox' : ['3.5', '3.6', '4.0', '14.0'] 
+            'firefox' : ['3.5', '3.6', '4.0', '15.0'] 
         },
         'tags'       : ['xss', 'javascript', 'firefox', '__noSuchMethod__', 'proprietary'],
         'reporter'   : 'Gareth, .mario'
@@ -961,7 +961,7 @@ var items =
             'tr' : 'E4X geçerli XML ve sözü edilen noktalı vigül ayraçı içeren herhangi bir sayfa dahil edildiğinde tamamen tehlikeli olabilmekte. İşe yarar bir korunma için websiteleri mutlaka DOCTYPE ile uygulanmalıdır. Bitirici ayraçların birçok varyasyonları var - ki herbiri geçerli birer JavaScript olup belirtilen XML sayfa sayfası değil belirteç çalışacaktır (;1, ,1, ._, etc..)'
         },            
         'browsers'   : {
-            'firefox' : ['1.5', '2.0', '3.0', '4.0', '14.0']
+            'firefox' : ['1.5', '2.0', '3.0', '4.0', '15.0']
         },
         'tags'       : ['xss', 'javascript', 'firefox', 'e4x', 'self-inclusion', 'proprietary'],
         'reporter'   : '.mario'
@@ -1164,7 +1164,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -1232,7 +1232,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'firefox': ['3.6', '4.0', '14.0'], 
+            'firefox': ['3.6', '4.0', '15.0'], 
             'safari' : ['5.0'],
             'chrome' : ['7.0', '8.0', '9.0', '10.0']
         },
@@ -1372,7 +1372,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.0', '2.0', '3.0', '4.0', '14.0'], 
+            'firefox' : ['1.0', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -1421,9 +1421,9 @@ var items =
             'cs' : 'Problém s parsováním CDATA',
             'de' : ''
         },
-        'data'       : '<!-- up to Opera 11.52, FF 3.6.28 -->\r\n<![><img src="]><img src=x onerror=%js_alert%//">\r\n\r\n<!-- IE9+, FF4+, Opera11.60+, Saf x, GC x  -->\r\n<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=%js_alert_2%//">',
+        'data'       : '<!-- up to Opera 11.52, FF 3.6.28 -->\r\n<![><img src="]><img src=x onerror=%js_alert%//">\r\n\r\n<!-- IE9+, FF4+, Opera11.60+, Saf x, GC x  -->\r\n<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=%js_alert_2%//"></svg>',
         'description': {
-            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation. Firefox 4 and Opera 11.60 have fixed the issue. However, modern browsers have a separate XML parsers for inline SVG or MathML, which allow to use of the CDATA sections (including a little irregular shape).',
+            'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation. Firefox 4 and Opera 11.60 have fixed the issue. However, modern browsers have a separate XML parsers for inline SVG or MathML, which allow to use the CDATA sections (including a little irregular shape).',
             'ja' : '',
             'ru' : 'Firefox и Opera разрешают использовать разделители CDATA-секций в HTML. В сокращенной форме "<![" то же самое, что и "<![CDATA[". Это может породить проблемы для механизма фильтрации, поскольку эти разделители могут быть использованы для обфускации. Это свойство было исправлено в Firefox 4 и Opera 11.60. Тем не менее, современные браузеры имеют отдельные XML-парсеры для встроенного SVG или MathML, которые позволяют использовать CDATA-секции (в том числе в немного неправильной форме).',
             'cs' : 'Firefox a Opera umožňují oddělovače sekce CDATA v HTML - ve zkrácené formě "<![" stejně jako v té plné "<![CDATA[" Může to způsobit řadu problémů u filtrů, pokud budou použityt jako masivní obfuskace.',
@@ -1439,7 +1439,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'],
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'],
             'internet explorer': ['9.0'],
             'chrome': ['21.0', '22.0'],
             'safari': ['5.1.7']
@@ -1476,7 +1476,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.x', '2.0', '3.0', '4.0', '14.0'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -1642,10 +1642,10 @@ var items =
         'data'       : '<div style="font-family:\'foo&#10;;color:red;\';">XXX</div>',
         'trigger'    : 'document.getElementsByTagName("div")[0].style.color=="red"?pass():fail();',
         'description': {
-            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* These are given in decimal codes.',
+            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (IE8+ standards mode), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome (?)↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n* Characters are given as decimal ASCII table index.',
             'ja' : '',
-            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей. Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим совместимости с IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n* В десятичных кодах.',
-            'cs' : 'Opera, Firefox a ostatní webové prohlížeče umožní přerušení textového řetězce v css použitím symbolu pro nový řádek. V CSS2+ nemohou řetězce obsahovat přímo vložený přechod na nový řádek.\n\nZnaky* akceptované pro přerušení řetězců v css:\n\nFirefox, Internet Explorer (compatibility mode with IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera, Google Chrome, Safari: 1-8,11,14-31,127\nOpera: 0\n\n*Uvedeno v desítkové soustavě.',
+            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей. Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим стандартов IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome (?)↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n* В десятичных кодах.',
+            'cs' : 'Opera, Firefox a ostatní webové prohlížeče umožní přerušení textového řetězce v css použitím symbolu pro nový řádek. V CSS2+ nemohou řetězce obsahovat přímo vložený přechod na nový řádek.\n\nZnaky* akceptované pro přerušení řetězců v css:\n\nFirefox, Internet Explorer (IE8+ standards mode), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome (?)↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n*Uvedeno v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : [],
@@ -1658,9 +1658,9 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'],
-            'firefox' : ['1.x', '2.x', '3.x', '4.0'],
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.0', '4.0', '5.0'],
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7'],
             'internet explorer': ['8.0', '9.0']
         },
         'tags'       : ['trick', 'opera', 'firefox', 'chrome', 'firefox', 'internet explorer', 'css'],
@@ -1709,7 +1709,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu v SVG užitím tagu <SCRIPT>',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>',
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg"><script>%js_alert%</script></svg>',
         'description': {
             'en' : 'SVG files can force the user agent to execute JavaScript via plain <SCRIPT> tags inside any SVG element without user interaction',
             'ja' : '',
@@ -1728,7 +1728,7 @@ var items =
         'browsers'   : {
             'opera': ['10.x', '11.0', '12.0'],
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0'],
-            'firefox': ['3.x', '4.0'],
+            'firefox': ['3.x', '4.0', '15.0'],
             'internet explorer': ['9.0'],
 			'safari' : ['5.0']
         },
@@ -1828,7 +1828,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox': ['1.x', '2.x', '3.x', '4.0'], 
+            'firefox': ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['4.0', '5.0']
         },
@@ -1976,7 +1976,7 @@ var items =
         'browsers'   : {
             'opera': ['10.0', '10.10', 'end', 'mobile'],
             'chrome': ['4.0', '5.0', '6.0'],
-            'firefox': ['1.x', '2.x', '3.0']
+            'firefox': ['1.x', '2.0', '3.0', '3.0.19', 'end']
         },
         'tags'       : ['xss', 'javascript', 'json', '__definesetter__', 'object', 'prototype'],
         'reporter'   : '.mario'
@@ -2009,7 +2009,8 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.5', '11.0', '12.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
+            'firefox': ['4.0', '15.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome', 'audio'],
         'reporter'   : '.mario'
@@ -2026,9 +2027,9 @@ var items =
         },
         'data'       : '<video onerror="%js_uri_alert%"><source></source></video>',
         'description': {
-            'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags',
+            'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags.\r\n\r\nOn Firefox 4+ the <SOURCE> tag is irrelevant to trigger the error event. This happens because of the implicit "src" attribute in <VIDEO> tag when the page has a number sign (#) in the URL.',
             'ja' : '',
-            'ru' : 'Firefox 3.5+ запускает обработчик события в теге <VIDEO>, используемом совместно с тегом <SOURCE>. То же самое для тега <AUDIO>.',
+            'ru' : 'Firefox 3.5+ запускает обработчик события в теге <video>, используемом совместно с тегом <source>. То же самое для тега <audio>.\r\n\r\nВ Firefox 4+ тег <source> не имеет значения для срабатывания onerror, который происходит из-за значения подразумеваемого атрибута src в теге <video>. Для срабабывания обработчика необходим знак номера (#) в адресе страницы.',
             'cs' : 'Firefox 3.5+ umožňuje definovat obsluhu události error v tagu <VIDEO>, pokud je aplikován společně s tagem <SOURCE>. Uvedené platí i pro tag <AUDIO>.',
             'de' : ''
         },
@@ -2041,8 +2042,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['3.5', '3.6', '3.7', '4.0'], 
-			'internet explorer' :  ['9.0']
+            'firefox': ['3.5', '3.6', '3.7', '4.0', '15.0'], 
+            'internet explorer' :  ['9.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'firefox', 'audio'],
         'reporter'   : '.mario'
@@ -2074,7 +2075,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['3.5', '3.6', '3.7'],
+            'firefox': ['3.5', '3.6', '3.6.28', 'end'],
             'chrome': ['4.0', '5.0'],
             'safari': ['3.0', '4.0', '5.0']
         },
@@ -2091,7 +2092,7 @@ var items =
             'cs' : 'E4X použitý k uzavření otevřeného tagu <SCRIPT> vytvořením nového E4X objektu.',
             'de' : ''
         },
-        'data'       : '<b><script<b></b><alert(1)</script </b></b>',
+        'data'       : '<b><script<b></b><%js_alert%</script </b></b>',
         'description': {
             'en' : 'This one is tricky. Firefox allows to end an opening <SCRIPT> tag with a new E4X object (<b/>) - already being created in the JavaScript scope at the same time. The alert can happen due to the fact that the additional < introduces a size comparison (<b/> < alert(1)).',
             'ja' : '',
@@ -2108,7 +2109,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x']
+            'firefox': ['1.5', '2.0', '3.0', '3.6.28', 'end']
         },
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario'
@@ -2173,7 +2174,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['2.x', '3.0', '4.0'],
+            'firefox': ['2.x', '3.0', '4.0', '15.0'],
             'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
@@ -2261,7 +2262,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu prostřednictvím atributu src',
             'de' : ''
         },
-        'data'       : '<embed src="%js_uri_alert%"></embed>\r\n<img src="%js_uri_alert%">\r\n<image src="%js_uri_alert%">\r\n<script src="%js_uri_alert%"></script>',
+        'data'       : '<embed src="%js_uri_alert%"></embed>\r\n<img src="%js_uri_alert_2%">\r\n<image src="%js_uri_alert_2%">\r\n<script src="%js_uri_alert_3%"></script>',
         'description': {
             'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
             'ja' : '',
@@ -2278,11 +2279,11 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x', '4.0'],
-			'chrome': ['4.0', '5.0', '6.0'],
+            'firefox': ['3.0', '4.0', '15.0'],
+            'chrome': ['4.0', '5.0', '6.0'],
             'opera': ['8.x', '9.0', '10.0', '11.01', 'end', 'mobile 10.00', 'mobile 10.10', 'end'],
             'internet explorer': ['6.0', '7.0', 'end'],
-			'safari': ['3.0', '4.0']
+            'safari': ['3.0', '4.0']
         },
         'tags'       : ['xss', 'javascript', 'src', 'safari', 'chrome', 'opera', 'firefox', 'internet explorer'],
         'reporter'   : '.mario'
@@ -2356,7 +2357,7 @@ var items =
         'browsers'   : {
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.4', '4.0', '5.0'],
-			'firefox': ['3.x', '4.0'],
+			'firefox': ['2.0', '3.0', '4.0', '15.0'],
 			'opera': ['9.x', '10.0', '11.0', '12.0'],
 			'internet explorer': ['9.0']
         },
@@ -2426,7 +2427,7 @@ var items =
         'browsers'   : {
             'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
             'safari': ['3.0', '4.0', '5.0', '5.1.7'],
-            'firefox': ['3.0', '4.0', '13.0'],        
+            'firefox': ['3.0', '4.0', '15.0'],        
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'attlist', 'doctype', 'chrome', 'firefox', 'safari'],
@@ -2459,7 +2460,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['3.0', '3.5', '3.6', '3.7']
+            'firefox': ['3.0', '3.5', '3.6', '3.6.28', 'end']
         },
         'tags'       : ['xss', 'javascript', 'xlink', 'firefox', 'xml'],
         'reporter'   : '.mario'
@@ -2588,7 +2589,7 @@ var items =
             'de' : ''
         },
         'browsers'   : {
-		    'firefox': ['4.0'],
+            'firefox': ['4.0', '15.0'],
             'opera': ['10.5', '11.0', '12.0', 'mobile'], 
 			'chrome': ['10.0']
         },
@@ -2676,7 +2677,7 @@ var items =
             'cs' : 'E4X užito k zavření otevřeného tagu <SCRIPT> a použití {}',
             'de' : ''
         },
-        'data'       : '<script<{alert(1)}/></script </>',
+        'data'       : '<script<{%js_alert%}/></script </>',
         'description': {
             'en' : 'In this example an E4X object is being used to close a half-open <SCRIPT> tag and evaluate code in the global scope afterwards via the E4X curly bracket delimiters. This technique will not work anymore as soon Firefox uses the already integrated HTML5 parser (html5.enable=true)',
             'ja' : '',
@@ -2693,7 +2694,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['1.5', '2.x', '3.x']
+            'firefox': ['1.5', '2.0', '3.0', '3.6.28', 'end']
         },
         'tags'       : ['xss', 'javascript', 'e4x', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Gareth'
@@ -2843,7 +2844,7 @@ var items =
         },                        
         'browsers'   : {
             'safari': ['3.0', '4.0', '5.0'],
-            'firefox': ['1.5', '2.x', '3.x', '4.0'],        
+            'firefox': ['1.5', '2.0', '3.0', '4.0', '15.0'],        
             'opera': ['10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
@@ -2909,7 +2910,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['3.0', '3.5', '3.6', '3.7']
+            'firefox': ['3.0', '3.6', '3.6.28', 'end']
         },
         'tags'       : ['xss', 'javascript', 'xlink', 'firefox', 'xml'],
         'reporter'   : 'LeverOne, .mario'
@@ -3076,7 +3077,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['3.6', '3.7', '4.0'], 
+            'firefox' : ['3.6', '3.7', '4.0', '15.0'], 
             'safari' : ['4.0', '5.0'], 
             'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0', 'mobile']
@@ -3113,7 +3114,7 @@ var items =
         'browsers'   : {
            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
            'safari' : ['3.4', '4.0', '5.0'],
-	       'firefox': ['3.x', '4.0'],
+	       'firefox': ['3.0', '4.0', '15.0'],
 	       'opera'  : ['9.x', '10.0', '11.0', '12.0'],
 	       'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
@@ -3253,7 +3254,7 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'firefox' : ['1.x', '2.x', '3.x', '4.x'], 
+            'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['3.0', '4.0','5.0']
         },
@@ -3489,7 +3490,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.8'],
-            'firefox': ['2.x', '3.x', '4.0'] 
+            'firefox': ['2.x', '3.0', '3.6.28', 'end'] 
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
         'reporter'   : 'sirdarckcat'
@@ -3522,7 +3523,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'firefox': ['3.x', '4.0', '13.0'],
+            'firefox': ['3.x', '4.0', '15.0'],
             'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
             'safari' : ['3.0', '4.0', '5.0', '5.1.7'],
@@ -3543,7 +3544,7 @@ var items =
         'data'       : '<img[a][b]src=x[d]onerror[c]=[e]"%js_alert%">',
         'trigger': 'fuzz(document.body, "innerHTML", ["[a]","[b]","[c]","[d]","[e]"]);',
         'description': {
-	    'en' : '[a] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nSafari, Internet Explorer : 0,11\n\n* Characters are given as decimal ASCII table index.\n** There is a common rule that the unencoded null character does not exist for IE HTML parser.',
+	    'en' : '[a] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Characters are given as decimal ASCII table index.\n** There is a common rule that the unencoded null character does not exist for IE HTML parser.',
             'ja' : '',
             'ru' : '[a] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Символы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Приведены в десятичных кодах таблицы ASCII.\n** Существует общее правило, согласно которому для HTML-парсера IE как бы не существует незакодированного нулевого символа.',
             'cs' : '[a] Znaky akceptované jako oddělovače mezi názvem tagu a atributu.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Znaky ignorované před názvem atributu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0\n\n[c] Znaky ignorované mezi názvem atributu a rovnítkem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Znaky akceptované jako oddělovače atributu a parametru.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Znaky ignorované mezi rovnítkem a parametrem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Kódy jsou uvedeny v desítkové soustavě.',
@@ -3559,7 +3560,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'firefox': ['4.0', '13.0'],
+            'firefox': ['4.0', '15.0'],
             'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
             'safari' : ['4.0', '5.0', '5.1.7'],
@@ -3660,9 +3661,10 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['4.0'],
-            'chrome' : ['6.0', '7.0', '8.0', '9.0', '10.0'],
-			'safari' : ['5.0']
+            'firefox' : ['4.0', '15.0'],
+            'chrome' : ['6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari' : ['5.0', '5.1.7'],
+            'opera' : ['11.50', '12.0', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'spoofing', 'history', 'phishing'],
         'reporter'   : '.mario'
@@ -3773,7 +3775,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu skrz tag <TITLE> v Internet Exploreru 9',
             'de' : ''
         },
-        'data'       : '<title onpropertychange=alert(1)></title><title title=></title>',
+        'data'       : '<title onpropertychange=%js_alert%></title><title title=></title>',
         'description': {
             'en' : 'Internet Explorer 9 allows execution of JavaScript via onpropertychange event handler on <title> tags if another <title> tag follows up - having at least one valid attribute.\r\nThis vector works in IE6-8 Standards mode and in IE9 quirks mode.',
             'ja' : '',
@@ -3843,7 +3845,7 @@ var items =
             'crossdomain'    : '1',            
             'path'          : 'http://html5sec.org/test3.svg',
             'name'          : 'test3.svg',
-            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="javascript:alert(1)" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="javascript:alert(2)" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="javascript:alert(3)" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="javascript:alert(4)" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="javascript:alert(5)" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="javascript:alert(6)" />\n</linearGradient>\n\n</svg>'
+            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<clipPath id="a" >\n<set xlink:href="#x" attributeName="xlink:href" begin="1s" to="%js_uri_alert%" />\n</clipPath>\n\n<pattern id="b">\n<set xlink:href="#x" attributeName="xlink:href" begin="2s" to="%js_uri_alert_2%" />\n</pattern>\n\n<filter id="c">\n<set xlink:href="#x" attributeName="xlink:href" begin="3s" to="%js_uri_alert_3%" />\n</filter>\n\n<marker id="d">\n<set xlink:href="#x" attributeName="xlink:href" begin="4s" to="%js_uri_alert%" />\n</marker>\n\n<mask id="e">\n<set xlink:href="#x" attributeName="xlink:href" begin="5s" to="%js_uri_alert_2%" />\n</mask>\n\n<linearGradient id="f">\n<set xlink:href="#x" attributeName="xlink:href" begin="6s" to="%js_uri_alert_3%" />\n</linearGradient>\n\n</svg>'
         },
         'description': {
             'en' : 'SVG supports several new CSS properties (clip-path, fill, filter, marker, marker-end, marker-mid, marker-start, mask, stroke), which can refer to external SVG-resources. These properties can also act as separate attributes. Within the external SVG can contain information to animate the current SVG-document. Example shows an animation links, but the possibilities of animation and other elements. Note that Opera does not show the user the change of links address, if the cursor does not go beyond it.',
@@ -3882,7 +3884,7 @@ var items =
             'crossdomain'    : '1',            
             'path'          : 'http://html5sec.org/test4.svg',
             'name'          : 'test4.svg',
-            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<marker id="a"  markerWidth="1000" markerHeight="1000" refX="0" refY="0">\n<a xlink:href="http://google.com">\n<set attributeName="xlink:href" to="javascript:alert(1)" begin="1s" />\n<rect width="1000" height="1000" fill="white"/>\n</a>\n</marker>\n</svg>'
+            'raw'           : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<marker id="a"  markerWidth="1000" markerHeight="1000" refX="0" refY="0">\n<a xlink:href="http://google.com">\n<set attributeName="xlink:href" to="%js_uri_alert%" begin="1s" />\n<rect width="1000" height="1000" fill="white"/>\n</a>\n</marker>\n</svg>'
         },
         'description': {
             'en' : 'This example shows how SVG markers allow insertion of external links with JavaScript URI into the current document.',
@@ -4000,7 +4002,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['2.x', '3.x', '4.0'],
+            'firefox' : ['2.x', '3.0', '4.0', '15.0'],
             'opera'   : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'internet explorer' : ['8.0', '9.0']
         },
@@ -4165,8 +4167,9 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['3.x'],
-			'safari' : ['5.0']
+            'opera'   : ['12.0'],
+            'firefox' : ['3.x', '4.0', '15.0'],
+	          'safari' : ['5.0', '5.1.7']
         },
         'tags'       : ['clickjacking', 'firefox', 'drag-and-drop', 'setData', 'ondragstart', 'draggable'],
         'reporter'   : 'mniemietz'
@@ -4199,7 +4202,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-			'firefox': ['2.x', '3.x', '4.0']
+			'firefox': ['2.x', '3.0', '4.0', '13.0', 'end']
         },
         'tags'       : ['clickjacking', 'firefox', 'content extraction', 'view-source'],
         'reporter'   : 'mniemietz'
@@ -4233,7 +4236,7 @@ var items =
         },                        
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
-            'firefox' : ['2.x', '3.x', '4.0'], 
+            'firefox' : ['2.x', '3.0', '4.0', '15.0'], 
             'chrome': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': ['5.0']
         },
@@ -4267,7 +4270,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['3.x', '4.0']
+            'firefox' : ['3.x', '4.0', '15.0']
         },
         'tags'       : ['clickjacking', 'firefox', 'svg', 'masking'],
         'reporter'   : 'mniemietz'
@@ -4299,7 +4302,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['8.0', '21.0'],
+            'chrome' : ['8.0', '23.0'],
             'safari' : ['5.1.7']
         },
         'tags'       : ['clickjacking', 'chrome', 'iframe', 'sandbox'],
@@ -4333,8 +4336,8 @@ var items =
         },                        
         'browsers'   : {
 		    'internet explorer': ['8.0'],
-            'opera': ['10.x', '11.0'], 
-            'firefox' : ['2.x', '3.x', '4.0'], 
+            'opera': ['10.x', '11.0', '12.0'], 
+            'firefox' : ['2.x', '3.0', '4.0', '15.0'], 
             'chrome': ['8.0', '9.0', '10.0'],
             'safari': ['5.0']
         },
@@ -4407,7 +4410,7 @@ var items =
         },
         'browsers'  : {
             'internet explorer': ['9.0'],
-            'firefox': [ '3.x', '4.0' ]
+            'firefox': [ '3.x', '4.0', '15.0']
         },
         'tags'      : [ 'svg', 'html', 'chameleon', 'xslt', 'embedded', 'xss'],
         'reporter'  : '.mario'
@@ -4458,7 +4461,7 @@ var items =
             'de'    : '',
             'zh'    : 'Opera中通过listener执行JavaScript代码'
         },
-        'data'      : '<svg xmlns="http://www.w3.org/2000/svg" id="x">\r\n<listener event="load" handler="#y" xmlns="http://www.w3.org/2001/xml-events" observer="x"/>\r\n<handler id="y">alert(1)</handler>\r\n</svg>',
+        'data'      : '<svg xmlns="http://www.w3.org/2000/svg" id="x">\r\n<listener event="load" handler="#y" xmlns="http://www.w3.org/2001/xml-events" observer="x"/>\r\n<handler id="y">%js_alert%</handler>\r\n</svg>',
         'description' : {
             'en'    : 'The example vector - relating to #94 - shows how a combination of listener and hander tags can be used to delegate a load event from the SVG element to trigger actual JavaScript execution. So far only Opera supports the usage of XML events and related elements in this context. No user interaction is required to execute the JavaScript.',
             'ja'    : '',
@@ -4512,7 +4515,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'firefox': ['4.0']
+            'firefox': ['4.0', 'end']
         },
         'tags'      : [ 'svg', 'xss', 'inline', 'entities', 'firefox', 'css', 'xml', 'innerhtml'],
         'reporter'  : '.mario'
@@ -4563,7 +4566,7 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'data'      : '<math href="%js_uri_alert%">CLICKME</math>\r\n\r\n<math>\r\n<maction actiontype="statusline#http://google.com" xlink:href="%js_uri_alert%">CLICKME</maction>\r\n</math>',
+        'data'      : '<math href="%js_uri_alert%">CLICKME</math>\r\n\r\n<math>\r\n<!-- up to FF 13 -->\r\n<maction actiontype="statusline#http://google.com" xlink:href="%js_uri_alert_2%">CLICKME</maction>\r\n\r\n<!-- FF 14+ -->\r\n<maction actiontype="statusline" xlink:href="%js_uri_alert_3%">CLICKME<mtext>http://http://google.com</mtext></maction>\r\n</math>',
         'trigger'   : 'document.getElementsByTagName("math")[0].click()',
         'description' : {
             'en'    : 'Modern Firefox versions allow usage of inline MathML. While other user agents don\'t support the href attribute for MathML elements (yet), Firefox does and thereby enables passive JavaScript execution. Note that supporting href for MathML elements is a feature - introduced with MathML 3. The same effect can be observed by using xlink:href. The statusline action further enables obfuscation of the actual link target - and in this example hides the JavaScript URI.',
@@ -4583,7 +4586,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'firefox': ['6', '7', '8', '9', '10', '11']
+            'firefox': ['6', '7', '8', '9', '10', '11', '14']
         },
         'tags'      : [ 'mathml', 'xss', 'inline', 'firefox'],
         'reporter'  : '.mario'
@@ -4618,7 +4621,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'firefox': ['6', '7', '8', '9']
+            'firefox': ['6', '7', '8', '9', '10.0.2', 'end']
         },
         'tags'      : [ 'drag&drop', 'html5', 'iframe', 'feed', 'firefox'],
         'reporter'  : 'irsdl'
@@ -4638,7 +4641,7 @@ var items =
         'description' : {
             'en'    : 'It is possible to achieve an injection capable to exfiltrate keyboard events without any JavaScript execution via SVG and set/animate timing attributes. In essence, an access key can be specified to trigger events inside an SVG. In case an inline SVG is being used, the listener for these keys observes the whole document - and not just the SVG itself. This means that even keystrokes into a form input trigger the SVG access key handler.\r\n\r\nOnce this access key handler is being combined with adding a new keystroke-depending image source to an existing image, the form input will be filled, and the SVG will reset a hidden image source according to the key being pressed and thereby silently exfiltrate the data.\r\n\r\nSince all this works without using any JavaScript, it was also possible to execute this attack in latest Thunderbird versions - with the vector invisibly wrapped inside the mail-body.\r\n\r\nThe problem has been reported and fixed, CVE-2011-3663 has been assigned. Current stable versions of Firefox still allow to observe the problem - using a network traffic monitor/Firebug is recommended.',
             'ja'    : '',
-            'ru'    : 'С помощью атрибута условий begin SVG-элементов <set> и <animate> можно осуществить инъекцию, позволяющую отследить клавиатурные (и не только) события без использования JavaScript. Язык SVG позволяет обусловить срабатывание события нажатием определенных клавиш. В случае со встроенным SVG слушатель этих нажатий наблюдает за всем документом, а не только за SVG-частью. Это означает, что каждое нажатие клавиши, например, в форме ввода вызовет соответствующий SVG-обработчик.\r\n\r\nПосле того как обработчик нажатия отдельной клавиши будет связан с переопределением характерного для него адреса изображения, заполнение формы приведет к изменению адреса скрытой картинки в соотвествии с нажатой клавишей и тем самым к утечке данных.\r\n\r\nПоскольку все это работало без использования JavaScript, было возможно провести данную атаку в Thunderbird через вектор, незаметно внедренный в тело сообщения.\r\n\r\nПроблема была обозначена в CVE-2011-3663 и исправлена.\r\n\r\nМожно также отметить, что ранее известные способы обрабатывать нажатия клавиш (атрибут accesskey или CSS-свойство -wap-accesskey, реализованное в Opera) позволяют это сделать только при дополнительном нажатии некой управляющей клавиши, чего не было в SVG от Firefox.',
+            'ru'    : 'С помощью атрибута условий begin SVG-элементов <set> и <animate> можно осуществить инъекцию, позволяющую отследить клавиатурные (и не только) события без использования JavaScript. Язык SVG позволяет обусловить срабатывание события нажатием определенных клавиш. В случае со встроенным SVG слушатель этих нажатий наблюдает за всем документом, а не только за SVG-частью. Это означает, что каждое нажатие клавиши, например, в форме ввода вызовет соответствующий SVG-обработчик.\r\n\r\nПосле того как обработчик нажатия отдельной клавиши будет связан с переопределением характерного для него адреса изображения, заполнение формы приведет к изменению адреса скрытой картинки в соотвествии с нажатой клавишей и тем самым к утечке данных.\r\n\r\nПоскольку все это работало без использования JavaScript, было возможно провести данную атаку в Thunderbird через вектор, незаметно внедренный в тело сообщения.\r\n\r\nПроблема была обозначена в CVE-2011-3663 и исправлена.\r\n\r\nМожно также отметить, что ранее известные способы обрабатывать нажатия клавиш (атрибут accesskey или CSS-свойство -wap-accesskey, реализованное в Opera) позволяют это сделать только при дополнительном нажатии некого сочетания управляющих клавиш, чего не было в SVG от Firefox.',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4653,7 +4656,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'firefox': ['4', '5', '6', '7', '8', '9']
+            'firefox': ['4', '5', '6', '7', '8', '9', '15']
         },
         'tags'      : [ 'svg', 'html5', 'noscript', 'keylogger', 'firefox', 'thunderbird'],
         'reporter'  : '.mario'
@@ -4690,25 +4693,25 @@ var items =
         'browsers'  : {
             'internet explorer': ['6.0', '7.0', '8.0']
         },
-        'tags'      : ['xss', 'comments', 'internet explorer','backtick'],
+        'tags'      : ['xss', 'comments', 'internet explorer', 'backtick'],
         'reporter'  : 'jackmasa'
     },
-        { /* ID 134 - "<%" inside plaintext tags */
+        { /* ID 134 - "<% %>" and "<!-- -->" inside plaintext tags */
         'id'        : 134,
         'category'  : 'html',
         'name'      : {
-            'en'    : '"<%" inside plaintext tags',
+            'en'    : '"<% %>" and "<!-- -->" inside plaintext tags',
             'ja'    : '',
-            'ru'    : '"<%" внутри тегов с текстовым содержимым',
+            'ru'    : '"<% %>" и "<!-- -->" внутри тегов с текстовым содержимым',
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
         },
-        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<%\']{}\r\n</style>\r\n%>{}\r\n*{color:red}',
+        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<!--\']{}\r\n</style>\r\n-->{}\r\n*{color:red}',
         'description' : {
-            'en'    : 'The structure "<%" allows the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>". The syntax within the section <% ...%> in the tags such as <style>, <script> should be valid, otherwise throws an exception. For example, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. These delimiters can also be used in an inline svg along with the SGML comment delimiters.',
+            'en'    : 'Structures "<%" и "<!--" allow the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>" or "-->". The syntax in the tags such as <style>, <script> should be valid taking into account these sections, otherwise throws an exception. So, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start.',
             'ja'    : '',
-            'ru'    : 'Структура "<%" позволяет IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока не найдет структуру "%>". Обратите внимание, что в тегах, которые имеют свой ​​собственный синтаксис, таких как <style>, <script>, синтаксис внутри секции <% ...%> должен быть правильным под угрозой возникновения ошибки. Например, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. Эти разделители также могут быть использованы во встроенном SVG наряду с SGML-ограничителями комментариев.', 
+            'ru'    : 'Структуры "<%" и "<!--" позволяют IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока он не найдет структуры "%>" или "-->". Обратите внимание, что в тегах, которые имеют свой собственный синтаксис, таких как <style>, <script>, синтаксис должен быть верным с учетом данных структур под угрозой возникновения ошибки. Так, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения.', 
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4723,9 +4726,9 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.8']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.9']
         },
         'tags'      : ['xss', 'plaintext', 'internet explorer', 'comment', 'SGML', 'escape'],
-        'reporter'  : 'LeverOne , wpulog'
+        'reporter'  : 'sirdarckcat, wpulog'
     }
 ]

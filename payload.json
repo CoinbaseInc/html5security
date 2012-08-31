@@ -3,6 +3,7 @@ var payloads =
 {
     'js_uri_alert'      : 'javascript:alert(1)',
     'js_uri_alert_2'    : 'javascript:alert(2)',
+    'js_uri_alert_3'    : 'javascript:alert(3)',
     'js_alert'          : 'alert(1)',
     'js_alert_2'        : 'alert(2)',
     'js_alert_3'        : 'alert(3)',
