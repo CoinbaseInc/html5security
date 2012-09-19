@@ -3632,21 +3632,21 @@ var items =
             'internet explorer' : ['6.0', '7.0', '8.0', 'end'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'parser', 'backtick', 'plaintext'],
-        'reporter'   : '.mario, hasegawayosuke'
+        'reporter'   : '.mario, hasegawayosuke, freddy'
     },
-    { /* ID 103 - Spoofing the address bar information with history.pushState() */
+    { /* ID 103 - Spoofing the address bar information with history.replaceState() */
         'id'         : 103,
         'category'   : 'javascript', 
         'name'       : {
-            'en' : 'Spoofing the address bar information with history.pushState()',
+            'en' : 'Spoofing the address bar information with history.replaceState()',
             'ja' : '',
-            'ru' : 'Спуфинг информации в адрессной строке с помощью history.pushState()',
-            'cs' : 'Zfalšování informací v address baru pomocí history.pushState()',
+            'ru' : 'Спуфинг информации в адрессной строке с помощью history.replaceState()',
+            'cs' : 'Zfalšování informací v address baru pomocí history.replaceState()',
             'de' : ''
         },
         'data'       : '<script>history.pushState(0,0,\'/i/am/somewhere_else\');</script>',
         'description': {
-            'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the user\'s history. An attacker can use this feature to change the information displayed in the address bar as well as the location DOM object and thus initiate phishing attacks or obfuscate bad intentions. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
+            'en' : 'The history.pushState() and history.replaceState() API allows to create and modify the user\'s history. An attacker can use this feature to change the information displayed in the address bar as well as the location DOM object and thus initiate phishing attacks or obfuscate bad intentions. While pushState adds a new history entry, replaceState modifies the current one. This removes nearly all traces of the actual location from the browsing history giving no possibility to navigate back. The information shown in the address bar cannot be trusted anymore as soon as an attacker or a malicious website execute JavaScript.',
             'ja' : '',
             'ru' : 'Методы history.pushState() и history.replaceState() позволяют создавать и модифицировать историю посещений пользователя. Атакующий может использовать эти возможности для изменения информации, отображаемой в адресной строке, а также DOM-объекта location. Это может быть использовано в частности в фишинг-атаках. Информация, отраженная в адресной строке, больше не сможет рассматриваться в качестве верной, как только атакующий получит возможность исполнить JavaScript.',
             'cs' : 'API funkce history.pushState() a history.replaceState() umožňují vytvořit a změnit uživatelovu historii. Útočník může použít tuto funkci ke změně informací zobrazených v address baru, ale také i umístění DOM objektu. Toho může být zneužito k phishingovému útoku nebo ke zmatení uživatele. Ve chvíli kdy útočník spustí na napadených webových stránkách JavaScript, není již možné informacím v adress baru věřit.',
@@ -3667,7 +3667,7 @@ var items =
             'opera' : ['11.50', '12.0', 'mobile'] 
         },
         'tags'       : ['xss', 'javascript', 'spoofing', 'history', 'phishing'],
-        'reporter'   : '.mario'
+        'reporter'   : '.mario, freddyb'
     },
     { /* ID 104 - Executing JavaScript in SVG Tiny 1.2 without user interaction */
         'id'         : 104,
