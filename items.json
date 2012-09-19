@@ -3632,7 +3632,7 @@ var items =
             'internet explorer' : ['6.0', '7.0', '8.0', 'end'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'parser', 'backtick', 'plaintext'],
-        'reporter'   : '.mario, hasegawayosuke, freddy'
+        'reporter'   : '.mario, hasegawayosuke'
     },
     { /* ID 103 - Spoofing the address bar information with history.replaceState() */
         'id'         : 103,
