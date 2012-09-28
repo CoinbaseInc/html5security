@@ -35,9 +35,10 @@ var items =
             'zh' : '不要让用户提交包含 "form" 和 "formaction"属性的标签.避免在form中出现id属性及提交按钮.'
         },
         'browsers'   : {
-		    'firefox' : ['4.0', '15.0'],
+            'firefox' : ['4.0', '15.0'],
             'opera': ['10.5', '11.0', '12.0', 'mobile'], 
-			'chrome': ['10.0']
+            'chrome': ['10.0', '23.0'],
+            'safari' : ['4.0.4', '5.1.7']
         },
         'tags'       : ['xss', 'html5', 'opera', 'chrome', 'firefox', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -154,7 +155,7 @@ var items =
         },          
         'browsers'   : {
             'firefox': [
-                '3.5', '3.6', '3.7', '15.0'
+                '3.5', '3.6', '15.0'
             ]
         },
         'tags'       : ['xss', 'dom', 'firefox', 'worker', 'self-inclusion', 'e4x'],
@@ -273,8 +274,8 @@ var items =
         'browsers'   : {
 		    'firefox' : ['4.0', '15.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0'],
-            'safari' : ['4.0', '5.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
+            'safari' : ['4.0', '5.0', '5.1.7'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0']
         },
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
         'reporter'   : 'Gareth'
@@ -312,8 +313,8 @@ var items =
             'zh' : '检测用户提交的内容中是否含有"autofocus"属性'
         },    
         'browsers'   : {
-            'safari' : ['4.0', '5.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
+            'safari' : ['4.0', '5.0', '5.1.7'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0']
         },
         'tags'       : ['xss', 'autofocus', 'blur', 'chrome', 'safari'],
         'reporter'   : '.mario'
@@ -430,7 +431,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.0', '11.0', '12.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '22.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'firefox': ['3.0', '3.5', '3.6', '3.6.28', 'end'],
             'safari' : ['5.0', '5.1.7'],
             'internet explorer': ['9.0']      
@@ -472,8 +473,8 @@ var items =
         'browsers'   : {
 		    'firefox' : ['4.0', '15.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0'],
-            'safari' : ['4.0', '5.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
+            'safari' : ['4.0', '5.0', '5.1.7'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0']
         },
         'tags'       : ['xss', 'autofocus', 'scroll', 'chrome', 'opera'],
         'reporter'   : '.mario'
@@ -702,8 +703,8 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-			      'safari' : ['5.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+			      'safari' : ['5.0', '5.1.7'],
 			      'internet explorer': ['9.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'firefox', 'chrome', 'safari', 'xml', 'entity'],
@@ -778,10 +779,10 @@ var items =
             'zh' : '在用户可以注入脚本的情况下不要相信DOM,即便是DOM属性的访问.'
         },            
         'browsers'   : {
-            'opera': ['8.x', '9.0', '10.0', '11.0'], 
+            'opera': ['8.x', '9.0', '10.0', '11.0', '11.01', 'end'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0'],
-            'safari': ['4.0', '5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '9.0', 'end'],
+            'safari': ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['javascript', 'opera', 'firefox', 'chrome', 'safari', 'ReferenceError', 'overwrite'],
         'reporter'   : '.mario'
@@ -854,7 +855,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['9.0', '10.0', '11.0', '12.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '22.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari' : ['5.0', '5.1.7']
         },
         'tags'       : ['dos', 'javascript', 'opera', 'chrome', 'safari', 'autofocus', 'onblur', 'html5'],
@@ -1033,8 +1034,8 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '11.64', 'end', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'chrome': ['21.0'],
-            'safari': ['5.1.7']  
+            'chrome': ['7.0', '23.0'],
+            'safari': ['4.0', '5.0', '5.1.7']  
         },
         'tags'       : ['xss', 'javascript', 'css', 'opera', 'attribute selectors', 'proprietary'],
         'reporter'   : '.mario'
@@ -1165,8 +1166,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.0', '4.0', '5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'frames', 'classic', 'html', 'onload'],
         'reporter'   : '.mario'
@@ -1233,8 +1234,8 @@ var items =
         },            
         'browsers'   : {
             'firefox': ['3.6', '4.0', '15.0'], 
-            'safari' : ['5.0'],
-            'chrome' : ['7.0', '8.0', '9.0', '10.0']
+            'safari' : ['5.0', '5.1.7'],
+            'chrome' : ['7.0', '8.0', '9.0', '10.0', '23.0']
         },
         'tags'       : ['xss', 'hijacking', 'css', 'pointer-events', 'firefox', 'safari', 'chrome'],
         'reporter'   : '.mario'
@@ -1373,8 +1374,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.0', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.0', '4.0', '5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
         'reporter'   : 'sirdarckcat, .mario'
@@ -1421,7 +1422,7 @@ var items =
             'cs' : 'Problém s parsováním CDATA',
             'de' : ''
         },
-        'data'       : '<!-- up to Opera 11.52, FF 3.6.28 -->\r\n<![><img src="]><img src=x onerror=%js_alert%//">\r\n\r\n<!-- IE9+, FF4+, Opera11.60+, Saf x, GC x  -->\r\n<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=%js_alert_2%//"></svg>',
+        'data'       : '<!-- up to Opera 11.52, FF 3.6.28 -->\r\n<![><img src="]><img src=x onerror=%js_alert%//">\r\n\r\n<!-- IE9+, FF4+, Opera 11.60+, Safari 4.0.4+, GC7+  -->\r\n<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=%js_alert_2%//"></svg>',
         'description': {
             'en' : 'Firefox and Opera allow using CDATA section delimiters in HTML - in the stripped form "<![" as well as including padding like "<![CDATA[". This can cause problems for filter mechanisms since those delimiters can be used for massive obfuscation. Firefox 4 and Opera 11.60 have fixed the issue. However, modern browsers have a separate XML parsers for inline SVG or MathML, which allow to use the CDATA sections (including a little irregular shape).',
             'ja' : '',
@@ -1441,8 +1442,8 @@ var items =
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'],
             'internet explorer': ['9.0'],
-            'chrome': ['21.0', '22.0'],
-            'safari': ['5.1.7']
+            'chrome': ['7.0', '23.0'],
+            'safari': ['4.0.4', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'cdata', 'parsing', 'attributes', 'math', 'svg', 'inline'],
         'reporter'   : 'LeverOne'
@@ -1477,8 +1478,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.0', '4.0', '5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'plaintext', 'tags', 'parsing', 'attributes'],
         'reporter'   : 'LeverOne'
@@ -1544,7 +1545,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '10.63', 'end'],
-            'safari': ['3.0', '4.0', '5.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7'],
             'internet explorer': ['5.5', '6.0', '7.0', '8.0', 'end'] 
         },
         'tags'       : ['xss', 'javascript', 'opera', 'internet explorer', 'base', 'hijacking'],
@@ -1639,13 +1640,13 @@ var items =
             'cs' : 'Přerušení textového řetězce v CSS',
             'de' : ''
         },
-        'data'       : '<div style="font-family:\'foo&#10;;color:red;\';">XXX</div>',
+        'data'       : '<div style="font-family:\'foo[a];color:red;\';">XXX</div>',
         'trigger'    : 'document.getElementsByTagName("div")[0].style.color=="red"?pass():fail();',
         'description': {
-            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\nCharacters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (IE8+ standards mode), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome (?)↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n* Characters are given as decimal ASCII table index.',
+            'en' : 'Opera, Firefox and other browsers allow breaking out an css-string with newline symbols. A string cannot directly contain a newline in CSS2+.\n\n[a] Characters*, accepted as CCS-strings breakers:\n\nFirefox, Internet Explorer (IE8+ standards mode), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome 16↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n* Characters are given as decimal ASCII table index.',
             'ja' : '',
-            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей. Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим стандартов IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome (?)↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n* В десятичных кодах.',
-            'cs' : 'Opera, Firefox a ostatní webové prohlížeče umožní přerušení textového řetězce v css použitím symbolu pro nový řádek. V CSS2+ nemohou řetězce obsahovat přímo vložený přechod na nový řádek.\n\nZnaky* akceptované pro přerušení řetězců v css:\n\nFirefox, Internet Explorer (IE8+ standards mode), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome (?)↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n*Uvedeno v desítkové soustavě.',
+            'ru' : 'Оpera, Firefox, а также другие браузеры позволяют прервать css-строку с помощью символов новой строки. Строка не может непосредственно содержать символ новой строки согласно стандартам CSS уровня 2 и выше. Фильтры, которые не учитывают эту особенность, будут неправильно определять опасные свойства стилей.\r\n\r\n[a]Далее приведены символы*, воспринимаемые в качестве прерывателей CSS-строк.\n\nFirefox, Internet Explorer (режим стандартов IE8+), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome 16↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n* В десятичных кодах.',
+            'cs' : 'Opera, Firefox a ostatní webové prohlížeče umožní přerušení textového řetězce v css použitím symbolu pro nový řádek. V CSS2+ nemohou řetězce obsahovat přímo vložený přechod na nový řádek.\n\n[a] Znaky* akceptované pro přerušení řetězců v css:\n\nFirefox, Internet Explorer (IE8+ standards mode), Opera, Google Chrome, Safari: 10,12,13\nOpera 11.01↓, Google Chrome 16↓, Safari: 1-8,11,14-31,127\nOpera 11.01↓: 0\n\n*Uvedeno v desítkové soustavě.',
             'de' : ''
         },
         'urls'    : [],
@@ -1727,10 +1728,10 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.x', '11.0', '12.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '23.0'],
             'firefox': ['3.x', '4.0', '15.0'],
             'internet explorer': ['9.0'],
-			'safari' : ['5.0']
+            'safari' : ['5.0', '5.1.7']
         },
         'tags'       : ['xss', 'svg', 'script', 'opera', 'firefox', 'chrome', 'internet explorer'],
         'reporter'   : 'Romain'
@@ -1829,8 +1830,8 @@ var items =
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox': ['1.x', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['4.0', '5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'firefox', 'base64'],
         'reporter'   : '.mario'
@@ -1863,8 +1864,8 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['4.0', '5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'chrome', 'embed', 'safari', 'src', 'base64'],
         'reporter'   : '.mario'
@@ -1975,7 +1976,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.0', '10.10', 'end', 'mobile'],
-            'chrome': ['4.0', '5.0', '6.0'],
+            'chrome': ['4.0', '5.0', '6.0', 'end'],
             'firefox': ['1.x', '2.0', '3.0', '3.0.19', 'end']
         },
         'tags'       : ['xss', 'javascript', 'json', '__definesetter__', 'object', 'prototype'],
@@ -1991,7 +1992,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu prostřednictvím tagů <VIDEO> a <SOURCE> (1)',
             'de' : ''
         },
-        'data'       : '<video><source onerror="%js_uri_alert%">',
+        'data'       : '<video><source onerror="%js_alert%">',
         'description': {
             'en' : 'Opera 10.5+ and Chrome allow error handlers in <SOURCE> tags if encapsulated by a <VIDEO> tag. The same works for <AUDIO> tags',
             'ja' : '',
@@ -2025,7 +2026,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu prostřednictvím tagů <VIDEO> a <SOURCE> (2)',
             'de' : ''
         },
-        'data'       : '<video onerror="%js_uri_alert%"><source></source></video>',
+        'data'       : '<video onerror="%js_alert%"><source></source></video>',
         'description': {
             'en' : 'Firefox 3.5+ allows error handlers in <VIDEO> tags when applied with a <SOURCE> tag. The same works for <AUDIO> tags.\r\n\r\nOn Firefox 4+ the <SOURCE> tag is irrelevant to trigger the error event. This happens because of the implicit "src" attribute in <VIDEO> tag when the page has a number sign (#) in the URL.',
             'ja' : '',
@@ -2042,7 +2043,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox': ['3.5', '3.6', '3.7', '4.0', '15.0'], 
+            'firefox': ['3.5', '3.6', '4.0', '15.0'], 
             'internet explorer' :  ['9.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'firefox', 'audio'],
@@ -2076,8 +2077,8 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['3.5', '3.6', '3.6.28', 'end'],
-            'chrome': ['4.0', '5.0'],
-            'safari': ['3.0', '4.0', '5.0']
+            'chrome': ['4.0', '5.0', 'end'],
+            'safari': ['3.0', '4.0', '4.0.3', 'end']
         },
         'tags'       : ['xss', 'javascript', 'nesting', 'script', 'parser', 'regex'],
         'reporter'   : '.mario, Kyo, sirdarckcat'
@@ -2177,8 +2178,8 @@ var items =
             'firefox': ['2.x', '3.0', '4.0', '15.0'],
             'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari' : ['4.0', '5.0']
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari' : ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['trick', 'css', 'quirks mode', 'obfuscation', 'opera', 'firefox', 'internet explorer', 'chrome', 'safari', 'fuzzing', 'quirks mode'],
         'reporter'   : 'Gareth, hasegawayosuke, LeverOne, .mario, RSnake, sirdarckcat'
@@ -2214,8 +2215,8 @@ var items =
             'firefox': ['1.5', '2.0', '3.0', '4.0', '13.0'],
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
-            'chrome': ['21.0'],
-            'safari': ['5.1.7']
+            'chrome': ['7.0', '23.0'],
+            'safari': ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'css', 'encoding', 'escape', 'backslash', 'opera', 'firefox', 'internet explorer'],
         'reporter'   : 'Gareth, LeverOne, Renaud Lifchitz, .mario'
@@ -2247,7 +2248,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'javascript', 'attribute', 'simulating', 'parser', 'regex'],
         'reporter'   : 'Algol, jackmasa, LeverOne, White Jordan'
@@ -2262,7 +2263,7 @@ var items =
             'cs' : 'Spuštění JavaScriptu prostřednictvím atributu src',
             'de' : ''
         },
-        'data'       : '<embed src="%js_uri_alert%"></embed>\r\n<img src="%js_uri_alert_2%">\r\n<image src="%js_uri_alert_2%">\r\n<script src="%js_uri_alert_3%"></script>',
+        'data'       : '<embed src="%js_uri_alert%"></embed> // O10.10↓, OM10.0↓, GC6↓, FF\r\n<img src="%js_uri_alert_2%">\r\n<image src="%js_uri_alert_2%"> // IE6, O10.10↓, OM10.0↓\r\n<script src="%js_uri_alert_3%"></script> // IE6, O11.01↓, OM10.1↓',
         'description': {
             'en' : 'Most browsers allow executing JavaScript via <IFRAME> "src" attributes - this is expected behavior. Interesting is though that this can be extended to other tags too. Opera 10, Chrome and Firefox execute JavaScript by using the <EMBED> tag while Opera 10 and Opera Mobile even execute JavaScript with <SCRIPT>, <IMG> and <IMAGE> and a matching "src" attribute as well as early Internet Explorer versions.',
             'ja' : '',
@@ -2280,10 +2281,9 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['3.0', '4.0', '15.0'],
-            'chrome': ['4.0', '5.0', '6.0'],
+            'chrome': ['4.0', '5.0', '6.0', 'end'],
             'opera': ['8.x', '9.0', '10.0', '11.01', 'end', 'mobile 10.00', 'mobile 10.10', 'end'],
-            'internet explorer': ['6.0', '7.0', 'end'],
-            'safari': ['3.0', '4.0']
+            'internet explorer': ['6.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'src', 'safari', 'chrome', 'opera', 'firefox', 'internet explorer'],
         'reporter'   : '.mario'
@@ -2322,7 +2322,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari': ['3.0', '4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'javascript', 'xxe', 'safari', 'chrome', 'xml', 'entities', 'doctype'],
@@ -2355,11 +2355,11 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.4', '4.0', '5.0'],
-			'firefox': ['2.0', '3.0', '4.0', '15.0'],
-			'opera': ['9.x', '10.0', '11.0', '12.0'],
-			'internet explorer': ['9.0']
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['3.4', '4.0', '5.0', '5.1.7'],
+            'firefox': ['2.0', '3.0', '4.0', '15.0'],
+            'opera': ['9.x', '10.0', '11.0', '12.0'],
+            'internet explorer': ['9.0']
         },
         'tags'       : ['xss', 'svg', 'onload','chrome','firefox','safari','opera'],
         'reporter'   : 'gareth'
@@ -2425,7 +2425,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari': ['3.0', '4.0', '5.0', '5.1.7'],
             'firefox': ['3.0', '4.0', '15.0'],        
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile']
@@ -2591,7 +2591,8 @@ var items =
         'browsers'   : {
             'firefox': ['4.0', '15.0'],
             'opera': ['10.5', '11.0', '12.0', 'mobile'], 
-			'chrome': ['10.0']
+            'chrome': ['10.0', '23.0'],
+            'safari': ['4.0.4', '5.1.7']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -2843,7 +2844,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'safari': ['3.0', '4.0', '5.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7'],
             'firefox': ['1.5', '2.0', '3.0', '4.0', '15.0'],        
             'opera': ['10.0', '11.0', '12.0', 'mobile'],
             'internet explorer': ['6.0', '7.0', '8.0', '9.0']
@@ -3077,9 +3078,9 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'firefox' : ['3.6', '3.7', '4.0', '15.0'], 
-            'safari' : ['4.0', '5.0'], 
-            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
+            'firefox' : ['3.6', '4.0', '15.0'], 
+            'safari' : ['4.0', '5.0', '5.1.7'], 
+            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0', 'mobile']
         },
         'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
@@ -3112,11 +3113,11 @@ var items =
             'de' : ''
         }, 
         'browsers'   : {
-           'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-           'safari' : ['3.4', '4.0', '5.0'],
-	       'firefox': ['3.0', '4.0', '15.0'],
-	       'opera'  : ['9.x', '10.0', '11.0', '12.0'],
-	       'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+           'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+           'safari' : ['3.4', '4.0', '5.0', '5.1.7'],
+           'firefox': ['3.0', '4.0', '15.0'],
+           'opera'  : ['9.x', '10.0', '11.0', '12.0'],
+           'internet explorer': ['6.0', '7.0', '8.0', '9.0']
         },
         'tags'       : ['xss', 'svg', 'passive', 'xlink', 'chrome', 'firefox', 'safari', 'opera'],
         'reporter'   : 'LeverOne'
@@ -3131,7 +3132,7 @@ var items =
             'cs' : 'SVG spuštění aktivního JavaScriptu skrz XLink v Opeře',
             'de' : ''
         },
-        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns=\'http://www.w3.org/1999/xhtml\'%3E%js_alert%%3C/script%3E"/>\n</svg>',        
+        'data'       : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n\n<animation xlink:href="%js_uri_alert%"/>\n<animation xlink:href="data:text/xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n\n<image xlink:href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' onload=\'%js_alert%\'%3E%3C/svg%3E"/>\n\n<foreignObject xlink:href="%js_uri_alert%"/>\n<foreignObject xlink:href="data:text/xml,%3Cscript xmlns=\'http://www.w3.org/1999/xhtml\'%3E%js_alert%%3C/script%3E"/>\n\n</svg>',        
         'description': {
             'en' : 'The content of the xml-links will be automatically included in the current document. The combination of "onLoad" (value of xlink:actuate) and "embed" (value of xlink:show) forms of potentially unsafe SVG-elements.',
             'ja' : '',
@@ -3180,8 +3181,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['4.0', '5.0', '6.0'],
-            'safari' : ['3.4', '4.0', '5.0'],
+            'chrome' : ['4.0', '5.0', '6.0', '10.0', 'end'],
+            'safari' : ['3.4', '4.0', '4.0.3', 'end'],
         },
         'tags'       : ['xss', 'svg', 'event', 'safari', 'chrome'],
         'reporter'   : 'LeverOne'
@@ -3237,10 +3238,10 @@ var items =
         },
         'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[Inception]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
         'description': {
-            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari: Parameter of the special tags can be broken only via "?>".\n\n[C] Opera (up to 11.52): Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari: A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
+            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑): Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari (up to 4.0.3): Parameter of the special tags can be broken only via "?>".\n\n[C] Opera (up to 11.52): Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari (up to 4.0.3): A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
-            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari: Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera (вплоть до 11.52): Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari: Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <фуфел foo=...>).',
-            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari: Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera (až do 11.52): Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari: Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
+            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑): Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari (вплоть до 4.0.3): Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera (вплоть до 11.52): Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari (вплоть до 4.0.3): Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <È foo=...>).',
+            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑): Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari (až do 4.0.3): Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera (až do 11.52): Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari (až do 4.0.3): Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
             'de' : ''
         },
         'urls'    : ['http://sla.ckers.org/forum/read.php?2,15812,28148#msg-28148', '#134'],
@@ -3255,8 +3256,8 @@ var items =
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
-            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['3.0', '4.0','5.0']
+            'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['3.0', '4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'tagname', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'parsing', 'breaking', 'obfuscation', 'closing tag'],
         'reporter'   : 'LeverOne, wpulog'
@@ -3525,7 +3526,7 @@ var items =
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'firefox': ['3.x', '4.0', '15.0'],
             'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
-            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari' : ['3.0', '4.0', '5.0', '5.1.7'],
         },
         'tags'       : ['trick', 'css', 'obfuscation', 'internet explorer', 'firefox', 'opera', 'chrome', 'safari', 'comment'],
@@ -3562,32 +3563,32 @@ var items =
             'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
             'firefox': ['4.0', '15.0'],
             'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari' : ['4.0', '5.0', '5.1.7'],
         },
         'tags'       : ['xss', 'internet explorer', 'firefox','opera', 'chrome', 'safari', 'separator'],
         'reporter'   : 'hasegawayosuke, .mario, RSnake, '
     },
-    { /* ID 101 -  Characters ignored in the URI (Safari and Google Chrome) */
+    { /* ID 101 -  Characters ignored in the URI scheme */
         'id'         : 101,
         'category'   : 'html', 
         'name'       : {
-            'en' : 'Characters ignored in the URI (Safari and Google Chrome)',
+            'en' : 'Characters ignored in the URI scheme',
             'ja' : '',
-            'ru' : 'Символы, игнорируемые в URI (Safari and Google Chrome)',
-            'cs' : 'Znaky ignorované v URI (Safari a Google Chrome)',
+            'ru' : 'Символы, игнорируемые в cхеме URI',
+            'cs' : 'Znaky ignorované v URI schema',
             'de' : ''
         },
-        'data'       : '<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:%js_alert%>XXX</a>',
+        'data'       : '<a href="[a]java[b]script[c]:%js_alert%">XXX</a>',
         'trigger'    : 'document.links[0].click()',
         'description': {
-	    'en' : 'This example shows that Google Chrome and Safari ignore the following characters in the URI (excluding 9,10,13) : 1-8,11,12. Also Safari ignores in the URI unencoded null character. The problem has been fixed in recent Chrome versions.',
+            'en' : 'The following characters* are ignored in the URI sheme:\r\n[a]\r\nAll mentioned browsers: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE: 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE: 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: nothing\r\n* Characters are given as decimal ASCII table index.',
             'ja' : '',
-            'ru' : 'Пример как бы намекает, что Google Chrome и Safari помимо символов с десятичным кодом 9,10,13, игнорируемых в URI всеми браузерами, также игнорирует символы 1-8,11,12. Кроме того, Safari игнорирует в URI незакодированный нулевой символ.',
-            'cs' : 'Tento příklad ukazuje že Google Chrome a Safari ignorují následující znaky v URI (mimo 9,10,13) : 1-8,11,12. Safari ignoruje v URI nekódovaný nulový znak.',
+            'ru' : 'Следующие символы* игнорируются в схеме URI:\r\n[a]\r\nВсе обозначенные браузеры: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE: 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE: 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: ничего\r\n* В десятичных кодах ASCII-таблицы.',
+            'cs' : 'Následující znaky* jsou ignorovány v URI schema:\r\n[a]\r\nAll mentioned browsers: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE: 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE: 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: nic\r\n* ASCII kódy uvedené v desítkové soustavě.',
             'de' : ''
         },
-        'urls'    : [],
+        'urls'    : ['http://shazzer.co.uk/vectors?search=protocol'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -3596,11 +3597,14 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari' : ['4.0', '5.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'firefox': ['4.0', '15.0'],
+            'opera'  : ['10.0', '11.0', '12.0', 'mobile'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari' : ['4.0', '5.0', '5.1.7'],
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'chrome', 'safari'],
-        'reporter'   : 'LeverOne, .mario'
+        'reporter'   : 'Gareth, .mario, RSnake'
     },
     { /* ID 102 - Forced plaintext via unbalanced quotes in Internet Explorer */
         'id'         : 102,
@@ -3760,7 +3764,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'safari' : ['4.0', '5.0']
+            'safari' : ['4.0', '4.0.3', 'end']
         },
         'tags'       : ['xss', 'javascript', 'safari', 'attributes', 'delimiter', 'parser'],
         'reporter'   : 'Superhei, .mario'
@@ -3935,8 +3939,8 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari' : ['4.0', '5.0']
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari' : ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
         'reporter'   : 'LeverOne, .mario'
@@ -4022,10 +4026,10 @@ var items =
         'data'       : '<x style="background:url(\'x[a];color:red;/*\')">XXX</x>',     
         'trigger': 'fuzz(document.getElementsByTagName("x")[0], "style", ["[a]"], function(e, v){if(e.style.color=="red"){pass(v)}else{fail(v)});',
         'description': {
-            'en' : 'The functional notation breaker shown in #111 also works with quoted strings for several CSS properties. The following characters can be used to break the string and create a new property-value pair: [a] Safari, Chrome (up to 10.0): 1-8,10-31 and 127\r\nChrome 21.0: 10,12,13 (decimal ASCII table index)',
+            'en' : 'The functional notation breaker shown in #111 also works with quoted strings for several CSS properties. The following characters can be used to break the string and create a new property-value pair: [a] Safari, Chrome 16↓: 1-8,10-31 and 127\r\nChrome 17↑: 10,12,13 (decimal ASCII table index)',
             'ja' : '',
-            'ru' : 'Как бы иллюстрация к сказанному в #111: разрыв строки, который в указанных браузерах влечет разрыв функции. Как следствие, использование закрывающей круглой скобки ")" необязательно. Символы, рвущие строку и функцию: [a] Safari, Chrome (до 10.0): 1-8, 10-31 и 127\r\nChrome 21.0: 10,12,13 (в десятичных кодах).',
-            'cs' : 'Přerušení funkčního zápisu ukázané v #111 pracuje také s uvozenými řetězci několika CSS vlastností. Následující znaky mohou být použity k přerušení řetězce a vytvoření nového páru vlastnosti a hodnoty: [a] Safari, Chrome (až do 10.0): 1-8,10-31 a 127\r\nChrome 21.0: 10,12,13 (uvedeno v desítkové soustavě)',
+            'ru' : 'Как бы иллюстрация к сказанному в #111: разрыв строки, который в указанных браузерах влечет разрыв функции. Как следствие, использование закрывающей круглой скобки ")" необязательно. Символы, рвущие строку и функцию: [a] Safari, Chrome 16↓: 1-8, 10-31 и 127\r\nChrome 17↑: 10,12,13 (в десятичных кодах).',
+            'cs' : 'Přerušení funkčního zápisu ukázané v #111 pracuje také s uvozenými řetězci několika CSS vlastností. Následující znaky mohou být použity k přerušení řetězce a vytvoření nového páru vlastnosti a hodnoty: [a] Safari, Chrome 16↓: 1-8,10-31 a 127\r\nChrome 17↑: 10,12,13 (uvedeno v desítkové soustavě)',
             'de' : ''
         },
         'urls'    : ['#45', '#92', '#111', '#112'],
@@ -4037,7 +4041,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '21.0'],
+            'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari' : ['4.0', '5.0', '5.1.7']
         },
         'tags'       : ['xss', 'css', 'google chrome', 'safari', 'trick', 'notation'],
@@ -4237,8 +4241,8 @@ var items =
         'browsers'   : {
             'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
             'firefox' : ['2.x', '3.0', '4.0', '15.0'], 
-            'chrome': ['6.0', '7.0', '8.0', '9.0', '10.0'],
-            'safari': ['5.0']
+            'chrome': ['6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'safari': ['5.0', '5.1.7']
         },
         'tags'       : ['clickjacking', 'internet explorer', 'opera', 'firefox', 'chrome', 'safari', 'pop-up'],
         'reporter'   : 'mniemietz'
@@ -4338,8 +4342,8 @@ var items =
 		    'internet explorer': ['8.0'],
             'opera': ['10.x', '11.0', '12.0'], 
             'firefox' : ['2.x', '3.0', '4.0', '15.0'], 
-            'chrome': ['8.0', '9.0', '10.0'],
-            'safari': ['5.0']
+            'chrome': ['8.0', '9.0', '10.0', '23.0'],
+            'safari': ['5.0', '5.1.7']
         },
         'tags'       : ['clickjacking', 'classjacking', 'jQuery', 'class'],
         'reporter'   : 'mniemietz'
@@ -4374,8 +4378,8 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'chrome': [ '9.0', '10.0' ],
-            'safari': [ '5.0' ]
+            'chrome': ['9.0', '10.0', '23.0'],
+            'safari': [ '5.0', '5.1.7']
         },
         'tags'      : [ 'html', 'dom' ],
         'reporter'  : 'hasegawayosuke'
@@ -4586,7 +4590,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'firefox': ['6', '7', '8', '9', '10', '11', '14']
+            'firefox': ['6', '7', '8', '9', '10', '11', '15']
         },
         'tags'      : [ 'mathml', 'xss', 'inline', 'firefox'],
         'reporter'  : '.mario'
@@ -4707,11 +4711,11 @@ var items =
             'de'    : '',
             'zh'    : ''
         },
-        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<!--\']{}\r\n</style>\r\n-->{}\r\n*{color:red}',
+        'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<!--\']{}\r\n</style>\r\n-->{}\r\n*{color:red}</style>',
         'description' : {
-            'en'    : 'Structures "<%" и "<!--" allow the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>" or "-->". The syntax in the tags such as <style>, <script> should be valid taking into account these sections, otherwise throws an exception. So, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start.',
+            'en'    : 'Structures "<%" и "<!--" allow the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>" or "-->". The syntax in the tags such as <style>, <script> should be valid taking into account these sections, otherwise throws an exception. So, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. SGML-like comment delimiters is similarly parsed in older versions of Safari.',
             'ja'    : '',
-            'ru'    : 'Структуры "<%" и "<!--" позволяют IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока он не найдет структуры "%>" или "-->". Обратите внимание, что в тегах, которые имеют свой собственный синтаксис, таких как <style>, <script>, синтаксис должен быть верным с учетом данных структур под угрозой возникновения ошибки. Так, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения.', 
+            'ru'    : 'Структуры "<%" и "<!--" позволяют IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока он не найдет структуры "%>" или "-->". Обратите внимание, что в тегах, которые имеют свой собственный синтаксис, таких как <style>, <script>, синтаксис должен быть верным с учетом данных структур под угрозой возникновения ошибки. Так, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. SGML-подобные ограничители комментариев похожим образом разбирались в более ранних версиях Safari.', 
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4726,9 +4730,10 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.9']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.9'],
+            'safari': [ '3.0', '4.0', '4.0.3', 'end']
         },
-        'tags'      : ['xss', 'plaintext', 'internet explorer', 'comment', 'SGML', 'escape'],
+        'tags'      : ['xss', 'plaintext', 'internet explorer', 'safari', 'comment', 'SGML', 'escape'],
         'reporter'  : 'sirdarckcat, wpulog'
     },
     { /* ID 135 - Executing JavaScript with WD-XSL, <eval> elements and "expr" attributes */
