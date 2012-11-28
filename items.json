@@ -4773,5 +4773,44 @@ var items =
         },
         'tags'      : ['xss', 'xslt', 'internet explorer', 'xml', 'wdxsl', 'legacy'],
         'reporter'  : '.mario'
+    },
+    { /* ID 136 - Transparent overwriting of request-data using HTML5 "dirname" attributes */
+        'id'        : 136,
+        'category'  : 'html5',
+        'name'      : {
+            'en'    : 'Transparent overwriting of request-data using HTML5 "dirname" attributes',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<form action="" method="post">\r\n<input name="username" value="admin" />\r\n<input name="password" type="password" value="secret" />\r\n<input name="injected" value="injected" dirname="password" />\r\n<input type="submit">\r\n</form>',
+        'description' : {
+            'en'    : 'Opera and Chrome support the HTML5 attribute "dirname", that can be used to have the browser communicate the text-flow direction of another input element by adding it to the server-sent request body. By injecting a "dirname" attribute in an existing form, an attacker can overwrite user input and thereby make it guessable for malicious purposes. The overwritten value would then be "ltr" or "rtl" - depending on the actual text-flow direction. The "dirname" attribute is not yet supported by Internet Explorer or Firefox.',
+            'ja'    : '',
+            'ru'    : '', 
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : [
+        				'http://dev.w3.org/html5/spec/common-input-element-attributes.html#the-dirname-attribute', 
+        				'http://html5sec.org/dirname/'
+        			],
+        'howtofix'  : {
+            'en'    : 'Avoid white-listing the "dirname" attribute in user generated content. The effects on existing forms are hard to predict and might cause privacy problems and information leaks.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+            'opera': ['12.0'],
+            'chrome': ['22.0', '23.0', '24.0', '25.0']
+        },
+        'tags'      : ['html5', 'dirname', 'privacy', 'http', 'form', 'infoleak'],
+        'reporter'  : '.mario'
     }
 ]
