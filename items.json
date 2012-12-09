@@ -275,7 +275,8 @@ var items =
 		    'firefox' : ['4.0', '15.0'],
             'opera': ['9.0', '10.0', '11.0', '12.0'],
             'safari' : ['4.0', '5.0', '5.1.7'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0']
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
+            'internet explorer': ['10.0']
         },
         'tags'       : ['xss', 'autofocus', 'chrome', 'opera'],
         'reporter'   : 'Gareth'
@@ -1033,7 +1034,7 @@ var items =
         },            
         'browsers'   : {
             'opera': ['8.x', '9.0', '10.0', '11.0', '11.64', 'end', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'chrome': ['7.0', '23.0'],
             'safari': ['4.0', '5.0', '5.1.7']  
         },
@@ -1084,9 +1085,9 @@ var items =
         },
         'data'       : '<link rel=stylesheet href=data:,*%7bx:expression(%js_write%)%7d',
         'description': {
-            'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag.',
+            'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <LINK> tag. The example works up to IE 7 standards mode.',
             'ja' : '',
-            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript в теге <LINK>.',
+            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript в теге <LINK>. Пример будет работать вплоть до режима стандартов IE 7.',
             'cs' : 'Podle existující dokumentace k IE8 jsou datová URI podporována nejen pro zobrazení obrázků, ale i pro stylopis. To může být zneužito pro vložení expression() do datového URI a k vykonání skriptu v tagu LINK.',
             'de' : ''
         },
@@ -1099,7 +1100,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['8.0', '9.0']
+            'internet explorer': ['8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'css', 'style', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
@@ -1116,9 +1117,9 @@ var items =
         },
         'data'       : '<style>@import "data:,*%7bx:expression(%js_write%)%7D";</style>',
         'description': {
-            'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive.',
+            'en' : 'Despite the existing documentation Internet Explorer 8 supports data URIs not only for displaying images but also supplying stylesheet information. This can be used to wrap expression() CSS into a data URI and execute JavaScript with a <STYLE> @import directive. The example works up to IE 7 standards mode.',
             'ja' : '',
-            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript c помощью директивы @import тега <STYLE>.',
+            'ru' : 'Несмотря на имеющуюся документацию Internet Explorer 8 поддерживает схему data URI не только для вывода изображений, но также и для представления стилевой информации. Это может быть использовано для сокрытия expression() внутри data URI и вызова JavaScript c помощью директивы @import тега <STYLE>. Пример будет работать вплоть до режима стандартов IE 7.',
             'cs' : 'Podle existující dokumentace k IE8 jsou datová URI podporována nejen pro zobrazení obrázků, ale i pro stylopis. To může být zneužito pro vložení expression() do datového URI a k vykonání skriptu ve stylopisu pomocí @import.',
             'de' : ''
         },
@@ -1131,7 +1132,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['8.0', '9.0']
+            'internet explorer': ['8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'css', 'style', 'expression', 'datauri', 'proprietary'],
         'reporter'   : '.mario'
@@ -1163,7 +1164,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
@@ -1371,7 +1372,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.0', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
@@ -1390,11 +1391,11 @@ var items =
             'cs' : 'Problém s parsováním HTML komentářů (2)',
             'de' : ''
         },
-        'data'       : '<comment><img src="</comment><img src=x onerror=%js_alert%)//">',
+        'data'       : '<comment><img src="</comment><img src=x onerror=%js_alert%//">',
         'description': {
-            'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments.',
+            'en' : 'Besides <!---> the Internet Explorer allows to use <COMMENT> tags. The vector shows how comments are being parsed and what problems can arise in case user submitted HTML is allowed to contain comments. This example works up to IE 8 standards mode.',
             'ja' : '',
-            'ru' : 'Вместо <!---> Internet Explorer разрешает использовать тег <COMMENT>. Этот пример также показывает, как разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может их содержать.',
+            'ru' : 'Вместо <!---> Internet Explorer разрешает использовать тег <COMMENT>. Этот пример также показывает, как разбираются комментарии, и какие проблемы могут возникнуть в случае, если пользовательская разметка может их содержать. Пример будет работать вплоть до режима стандартов IE 8.',
             'cs' : 'Kromě <!---> umožňuje IE zapsat komentáře i do tagu <comment>. Výše zmíněný příklad dělá totéž do příklad 1',
             'de' : ''
         },
@@ -1407,7 +1408,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'comment', 'parsing', 'attributes'],
         'reporter'   : '.mario'
@@ -1441,7 +1442,7 @@ var items =
         'browsers'   : {
             'opera': ['8.0', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'],
-            'internet explorer': ['9.0'],
+            'internet explorer': ['9.0', '10.0'],
             'chrome': ['7.0', '23.0'],
             'safari': ['4.0.4', '5.1.7']
         },
@@ -1475,7 +1476,7 @@ var items =
             'de' : ''
         },            
         'browsers'   : {
-            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
@@ -1662,7 +1663,7 @@ var items =
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'],
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari': ['3.0', '4.0', '5.0', '5.1.7'],
-            'internet explorer': ['8.0', '9.0']
+            'internet explorer': ['8.0', '9.0', '10.0']
         },
         'tags'       : ['trick', 'opera', 'firefox', 'chrome', 'firefox', 'internet explorer', 'css'],
         'reporter'   : 'LeverOne, Michal Zalewski'
@@ -1680,9 +1681,9 @@ var items =
         'data'       : '<div style="font-family:foo}color=red;">XXX</div>',
         'trigger'    : 'document.getElementsByTagName("div")[0].style.color=="red"?pass():fail();',
         'description': {
-            'en' : 'Internet Explorer allows to use right curly brace (}) as a group separator. A CSS declaration in quirks mode may consist of a property name, followed by a symbol of equality (=).',
+            'en' : 'Internet Explorer allows to use right curly brace (}) as a group separator (up to IE 7 standards mode). A CSS declaration in quirks mode (IE 5 standards mode) may consist of a property name, followed by a symbol of equality (=).',
             'ja' : '',
-            'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя. В режиме совместимости css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
+            'ru' : 'Internet Explorer разрешает использовать правую фигурную скобку (}) в качестве группового разделителя (вплоть до режима стандартов IE7). В режиме совместимости (режим стандартов IE5) css-декларация также может содержать имя свойства, за которым следует знак равенства (=).',
             'cs' : 'Internet Explorer umožňuje použít pravou složenou závorku (}) jako oddělovače skupin. Deklarace CSS se může v quirk režimu skládat z názvu vlastnosti, která je následována znakem rovná se (=).',
             'de' : ''
         },
@@ -1764,7 +1765,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.0', '11.0', '12.0', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'opera', 'for', 'event', 'internet explorer'],
         'reporter'   : '.mario'
@@ -2010,7 +2011,7 @@ var items =
         },                        
         'browsers'   : {
             'opera': ['10.5', '11.0', '12.0'],
-            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
+            'chrome': ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '25.0'],
             'firefox': ['4.0', '15.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'opera', 'chrome', 'audio'],
@@ -2044,7 +2045,7 @@ var items =
         },                        
         'browsers'   : {
             'firefox': ['3.5', '3.6', '4.0', '15.0'], 
-            'internet explorer' :  ['9.0']
+            'internet explorer' :  ['9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'video', 'source', 'html5', 'firefox', 'audio'],
         'reporter'   : '.mario'
@@ -2160,9 +2161,9 @@ var items =
         'data'       : '<div style="[a]color[b]:[c]red">XXX</div>',
         'trigger': 'fuzz(document.getElementsByTagName("div")[0], "style", ["[a]","[b]","[c]"], function(e, v){if(e.style.color=="red"){pass(v)}else{fail(v)});',
         'description': {
-            'en' : '[a] Extra characters* ignored before property names (excluding backslash (92) and null character (0))\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Except compatibility mode with IE8+.\n*** Ignored only before first property names.',
+            'en' : '[a] Extra characters* ignored before property names (excluding backslash (92) and null character (0))\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-strings\n\n[b] Extra characters ignored between property names and colon.\n\nFirefox, Internet Explorer (any modes), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-strings, alnum sequences after non-alnum characters (color,foo:red)\n\n[c] Extra characters ignored before values\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* These are given in decimal codes.\n** Up to IE 7 standards mode.\n*** Ignored only before first property names.',
             'ja' : '',
-            'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92) и нулевого символа (0))\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (режим совместимости (quirks)): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости (quirks)): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11,160,8192-8203,12288,65279\n\n* Приведены десятичные коды соответствующих символов.\n** За исключением режима совместимости с IE8+.\n*** Игнорируется только перед первым именем свойства.',
+            'ru' : '[a] Дополнительные символы*, игнорируемые до имени свойства (за исключением обратного слеша (92) и нулевого символа (0))\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-строки\n\n[b] Дополнительные символы, игнорируемые между именем свойства и двоеточием.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (режим совместимости (quirks)): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (режим совместимости (quirks)): CSS-строки, буквенно-цифровые последовательности после небуквенно-цифровых символов (color,foo:red)\n\n[c] Дополнительные символы, игнорируемые перед значениями.\n\nFirefox, Internet Explorer (любые режимы), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11,160,8192-8203,12288,65279\n\n* Приведены десятичные коды соответствующих символов.\n** Вплоть до режима стандартов IE 7.\n*** Игнорируется только перед первым именем свойства.',
             'cs' : '[a] Speciální znaky* ignorované před názvem vlastnosti (s výjimkou zpětného lomítka (92) a nulového znaku (0))\n\nFirefox, Internet Explorer (některé verze), Safari, Google Chrome, Opera: 9,10,12,13,32\nFirefox, Internet Explorer**, Opera: 123***\nFirefox 3.x, Internet Explorer**: 8\nInternet Explorer**: 1-7,11,14-31,33,35-38,40-44,46-47,58,60-64,91,93-96,124-127,160,8192-8203,12288,65279\nInternet Explorer**: CSS-řetězce\n\n[b] Speciální znaky ignorované mezi názvem vlastnosti a dvojtečkou.\n\nFirefox, Internet Explorer (některé verze), Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer**: 11\nInternet Explorer (quirks mode): 1-8,14-31,33,35-38,40-44,46-47,60,62-64,91,93,94,96,123,124,126,127\nInternet Explorer (quirks mode): CSS-řetězce, alfanumerické znaky po nealfanumerických znacích (color,foo:red)\n\n[c] Speciální znaky ignorovné před hodnotou\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer: 0,11,160,8192-8203,12288,65279\n\n* Uvedeno v desítkové soustavě.\n** S vyjímkou režimu kompatibility s IE8+.\n*** Ignorovány pouze před prvním výskytem názvu vlastnosti.',
             'de' : ''
         },
@@ -2177,7 +2178,7 @@ var items =
         'browsers'   : {
             'firefox': ['2.x', '3.0', '4.0', '15.0'],
             'opera': ['9.x', '10.0', '11.0', '12.0', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
             'safari' : ['4.0', '5.0', '5.1.7']
         },
@@ -2233,9 +2234,9 @@ var items =
         },
         'data'       : '<!-- IE 6-8 -->\r\n<x \'="foo"><x foo=\'><img src=x onerror=%js_alert%//\'>\r\n\r\n<!-- IE 6-9 -->\r\n<! \'="foo"><x foo=\'><img src=x onerror=%js_alert_2%//\'>\r\n<? \'="foo"><x foo=\'><img src=x onerror=%js_alert_3%//\'>',
         'description': {
-            'en' : 'This vector is simulated using in IE a single quote as an attribute to trick filters',
+            'en' : 'This vector is simulated using in IE a single quote as an attribute to trick filters, works up to IE 9 standards mode.',
             'ja' : '',
-            'ru' : 'Этот вектор симулирует использование в IE одиночной кавычки в качестве атрибута, чтобы обмануть фильтры.',
+            'ru' : 'Этот вектор симулирует использование в IE одиночной кавычки в качестве атрибута, чтобы обмануть фильтры. Работает вплоть до режима стандартов IE 9.',
             'cs' : 'Tento vektor předstírá v IE vložení atributu užitím apostrofů. Používá se pro oklamaní bezpečnostních filtrů.',
             'de' : ''
         },
@@ -2248,7 +2249,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'attribute', 'simulating', 'parser', 'regex'],
         'reporter'   : 'Algol, jackmasa, LeverOne, White Jordan'
@@ -2515,7 +2516,7 @@ var items =
             'cs' : 'Jak ukazuje příklad, je někdy možné spustit událost filterchange pomocí pouze jednoho filtru. také je použit krátký zápis filtru, který je podporován všemi verzemi IE. V režimu kompatibility pro IE8 + můžete použít vlastnost "-ms-filter".',
             'de' : ''
         },
-        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms532847%28VS.85%29.aspx'],
+        'urls'    : ['http://msdn.microsoft.com/en-us/library/ms532847%28VS.85%29.aspx' , 'http://msdn.microsoft.com/en-us/library/ie/hh801215(v=vs.85).aspx'],
         'howtofix'   : {
             'en' : '',
             'ja' : '',
@@ -2524,7 +2525,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', 'end']
         },
         'tags'       : ['xss', 'javascript', 'filter', 'css', 'style', 'onfilterchange', 'internet explorer'],
         'reporter'   : '.mario'
@@ -2592,7 +2593,8 @@ var items =
             'firefox': ['4.0', '15.0'],
             'opera': ['10.5', '11.0', '12.0', 'mobile'], 
             'chrome': ['10.0', '23.0'],
-            'safari': ['4.0.4', '5.1.7']
+            'safari': ['4.0.4', '5.1.7'],
+            'internet explorer': ['10.0']
         },
         'tags'       : ['xss', 'html5', 'opera', 'formaction', 'javascript', 'button'],
         'reporter'   : '.mario'
@@ -2847,7 +2849,7 @@ var items =
             'safari': ['3.0', '4.0', '5.0', '5.1.7'],
             'firefox': ['1.5', '2.0', '3.0', '4.0', '15.0'],        
             'opera': ['10.0', '11.0', '12.0', 'mobile'],
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'object', 'flash', 'swf', 'safari', 'firefox', 'opera'],
         'reporter'   : '.mario'
@@ -3063,10 +3065,10 @@ var items =
         },
         'data'       : '<body oninput=%js_alert%><input autofocus>',
         'description': {
-            'en' : 'All browsers besides Internet Explorer support the "oninput" event handler around form elements like the given <INPUT>. The event works for the form elements itself, the surrounding form and <BODY> as well as <HTML> tags.', 
+            'en' : 'All browsers besides Internet Explorer 9↓ support the "oninput" event handler around form elements like the given <INPUT>. The event works for the form elements itself, the surrounding form and <BODY> as well as <HTML> tags.', 
             'ja' : '',
-            'ru' : 'Все браузеры за исключением Internet Explorer поддерживают обработчик oninput, который может быть внедрен в любой тег, обрамляющий любую область пользовательского ввода (не только в тегах форм, но и в тегах с атрибутом contenteditable).',
-            'cs' : 'Všechny prohlížeče kromě Internet Exploreru podporují zpracování událostí "oninput" u formulářových prvků, jako například uvedený <input>. Událost pracuje se samotnými prvky formuláře, mimo formulář, ale také v tagu <BODY> nebo <HTML>',
+            'ru' : 'Все браузеры за исключением Internet Explorer 9↓ поддерживают обработчик oninput, который может быть внедрен в любой тег, обрамляющий любую область пользовательского ввода (не только в тегах форм, но и в тегах с атрибутом contenteditable).',
+            'cs' : 'Všechny prohlížeče kromě Internet Exploreru 9↓ podporují zpracování událostí "oninput" u formulářových prvků, jako například uvedený <input>. Událost pracuje se samotnými prvky formuláře, mimo formulář, ale také v tagu <BODY> nebo <HTML>',
             'de' : ''
         },
         'urls'    : [],
@@ -3081,7 +3083,8 @@ var items =
             'firefox' : ['3.6', '4.0', '15.0'], 
             'safari' : ['4.0', '5.0', '5.1.7'], 
             'chrome' : ['4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
-            'opera': ['9.0', '10.0', '11.0', '12.0', 'mobile']
+            'opera': ['9.0', '10.0', '11.0', '12.0', 'mobile'],
+            'internet explorer': ['10.0']
         },
         'tags'       : ['xss', 'javascript', 'html5', 'oninput', 'form', 'passive', 'event'],
         'reporter'   : 'Skyphire'
@@ -3236,12 +3239,12 @@ var items =
             'cs' : 'Problémy při parsování speciálních tagů',
             'de' : ''
         },
-        'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[Inception]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
+        'data'       : '[A]\n<? foo="><script>%js_alert%</script>">\n<! foo="><script>%js_alert%</script>">\n</ foo="><script>%js_alert%</script>">\n[B]\n<? foo="><x foo=\'?><script>%js_alert%</script>\'>">\n[C]\n<! foo="[[[x]]"><x foo="]foo><script>%js_alert%</script>">\n[D]\n<% foo><x foo="%><script>%js_alert%</script>">',        
         'description': {
-            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑): Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari (up to 4.0.3): Parameter of the special tags can be broken only via "?>".\n\n[C] Opera (up to 11.52): Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] Internet Explorer, Safari (up to 4.0.3): A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
+            'en' : 'The HTML tagnames start with a-zA-Z (abstracting from ignoring null byte from IE). In addition, there are other structures, parsed as a tag (special tags). They begin with the following characters: !,?, /,%. This has its reasons:  DTD, comments, xml-declaration, import-instruction in Internet Explorer, closing tags etc. starts by these characters. These examples show that such tags will inherit some properties of their standard models.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑), IE 10↑ Standards mode: Parameters of the special tags can not contain a closing parenthesis ">".\n\n[B] Safari (up to 4.0.3): Parameter of the special tags can be broken only via "?>".\n\n[C] Opera (up to 11.52): Special tag inherits the properties of DTD: inside it you can create a section that starts with "[" and ends with "]".\n\n[D] IE 9↓ Standards mode, Safari (up to 4.0.3): A sequence like "<% ... %>" is an alternative to comments.\n\nThese features can be used for obfuscation and bypassing filters. And remember, do not parse as a tag in HTML structure like "<È foo=...>".',
             'ja' : '',
-            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑): Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari (вплоть до 4.0.3): Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera (вплоть до 11.52): Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] Internet Explorer, Safari (вплоть до 4.0.3): Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <È foo=...>).',
-            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑): Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari (až do 4.0.3): Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera (až do 11.52): Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] Internet Explorer, Safari (až do 4.0.3): Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
+            'ru' : 'В HTML имена тегов начинаются с a-zA-Z (если при этом абстрагироваться от игнорирования нулевого символа со стороны IE). Помимо этого существуют другие конструкции, распознающиеся в качестве тегов (спецтеги). Они начинаются со следующих символов : !, ?, /, % . Этому есть очевидные причины : с этих символов начинаются DTD, комментарии, xml-декларации, инструкции импорта в Internet Explorer, закрывающие теги и т.д. В приведенных ниже примерах мы видим, что спецтеги, несмотря на явные синтаксические отличия от своих стандартных моделей, сохраняют некоторые их свойства.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑), режим стандартов IE 10↑: Параметр специального тега не может содержать закрывающую скобку (>).\n\n[B] Safari (вплоть до 4.0.3): Параметр может быть прерван только последовательностью ?> .\n\n[C] Opera (вплоть до 11.52): Спецтег унаследовал свойсвтво DTD: внутри него можно открыть особую секцию, начинающуюся с [ и оканчивающуюся на ].\n\n[D] режим стандартов IE 9↓, Safari (вплоть до 4.0.3): Последовательность <% ... %> может быть использована в качестве альтернативы комментариям.\n\nЭти особенности могут быть использованы для обфускации и обхода фильтров. И помните: не следует воспринимать в качестве тегов конструкции, ими в HTML не являющиеся (наподобие <È foo=...>).',
+            'cs' : 'HTML tagy začínají znaky a-z A-Z. Kromě toho existují ještě jiné struktury, které jsou také parsovány jako tagy (speciální tagy). Ty začínají některým ze znaků !, ?, /, %. Jejich použití je u: DTD, komentářů, xml-deklarací, instrukcí importu v Internet Exploreru, u uzavíracích tagů, apd. Tyto příklady ukazují, že tyto tagy zdědí některé vlastnosti jejich standardních modelů.\n\n[A] Firefox, Opera, Google Chrome, Safari (4.0.4↑), IE 10↑ Standards mode: Parametry speciálních tagů nemohou obsahovat uzavírací lomenou závorku ">".\n\n[B] Safari (až do 4.0.3): Parametry speciálních znaků mohou být rozbity jen s "?>".\n\n[C] Opera (až do 11.52): Speciální tag dědí vlastnosti DTD: uvnitř může vytvořit oddíl, který začíná znakem "[" a končí znakem "]".\n\n[D] IE 9↓ Standards mode, Safari (až do 4.0.3): Sekvence znaků jako "<% ... %>" je alternativa komentářů.\n\nTěchto zápisů se používá k oklamání a obcházení bezpečnostních filterů. Pamatujte si, že tyto zápisy nejsou v HTML parsovány jako tag se strukturou jako "<È foo=...>".',
             'de' : ''
         },
         'urls'    : ['http://sla.ckers.org/forum/read.php?2,15812,28148#msg-28148', '#134'],
@@ -3253,7 +3256,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0'],
             'opera': ['8.x', '9.0', '10.0', '11.0', '12.0', 'mobile'], 
             'firefox' : ['1.x', '2.0', '3.0', '4.0', '15.0'], 
             'chrome': ['3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
@@ -3440,7 +3443,7 @@ var items =
             'cs' : 'XSS použitím atributu "xmlns" ve vlastním tagu při kopírování innerHTML (2)',
             'de' : ''
         },
-        'data'       : '<div id=d><x xmlns="><iframe onload=%js_alert%"></div>\n<script>d.innerHTML=d.innerHTML</script>',
+        'data'       : '<!-- IE 5-9 -->\r\n<div id=d><x xmlns="><iframe onload=%js_alert%"></div>\n<script>d.innerHTML+=\'\';</script>\r\n\r\n<!-- IE 10 in IE5-9 Standards mode -->\r\n<div id=d><x xmlns=\'"><iframe onload=%js_alert_2%//\'></div>\n<script>d.innerHTML+=\'\';</script>',
         'description': {
 	    'en' : 'Internet Explorer incorrectly analyzes the attribute "xmlns" in custom tags when copying innerHTML - its value is being added to the tag <?XML:NAMESPACE> without any delimiters.',
             'ja' : '',
@@ -3457,7 +3460,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml'],
         'reporter'   : 'LeverOne'
@@ -3490,7 +3493,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.8'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'firefox': ['2.x', '3.0', '3.6.28', 'end'] 
         },
         'tags'       : ['xss', 'javascript', 'internet explorer', 'script', 'dom', 'innerhtml', 'css'],
@@ -3545,9 +3548,9 @@ var items =
         'data'       : '<img[a][b]src=x[d]onerror[c]=[e]"%js_alert%">',
         'trigger': 'fuzz(document.body, "innerHTML", ["[a]","[b]","[c]","[d]","[e]"]);',
         'description': {
-	    'en' : '[a] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Characters are given as decimal ASCII table index.\n** There is a common rule that the unencoded null character does not exist for IE HTML parser.',
+	    'en' : '[a] Characters accepted as tag name/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer (5-9 SM): 11\n\n[b] Characters ignored before attributes (and not accepted as parameter/attribute separators).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer (5-9 SM): 0**\n\n[c] Characters ignored between attribute name and equals sign.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer (5-9 SM): 0,11\n\n[d] Characters accepted as parameter/attribute separators.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer (5-9 SM): 11\n\n[e] Characters ignored between equals sign and parameter.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer (5-9 SM): 0,11\n\n* Characters are given as decimal ASCII table index.\n** There is a common rule that the unencoded null character does not exist for IE HTML parser.',
             'ja' : '',
-            'ru' : '[a] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0**\n\n[c] Символы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Приведены в десятичных кодах таблицы ASCII.\n** Существует общее правило, согласно которому для HTML-парсера IE как бы не существует незакодированного нулевого символа.',
+            'ru' : '[a] Символы, воспринимаемые в качестве разделителей имени тега и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer (РС 5-9): 11\n\n[b] Символы, игнорируемые перед атрибутом (и не являющиеся при этом разделителями параметра и атрибута).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer (РС 5-9): 0**\n\n[c] Символы, игнорируемые между именем атрибута и знаком равенства.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer (РС 5-9): 0,11\n\n[d] Символы, воспринимаемые в качестве разделителей параметра и атрибута.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer (РС 5-9): 11\n\n[e] Символы, игнорируемые между знаком равенства и параметром.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer (РС 5-9): 0,11\n\n* Приведены в десятичных кодах таблицы ASCII.\n** Существует общее правило, согласно которому для HTML-парсера IE как бы не существует незакодированного нулевого символа.',
             'cs' : '[a] Znaky akceptované jako oddělovače mezi názvem tagu a atributu.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32,47\nInternet Explorer: 11\n\n[b] Znaky ignorované před názvem atributu (ale neakceptované jako oddělovače mezi tagem a atributem).\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 47\nInternet Explorer : 0\n\n[c] Znaky ignorované mezi názvem atributu a rovnítkem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n[d] Znaky akceptované jako oddělovače atributu a parametru.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 11\n\n[e] Znaky ignorované mezi rovnítkem a parametrem.\n\nFirefox, Internet Explorer, Safari, Google Chrome, Opera : 9,10,12,13,32\nInternet Explorer : 0,11\n\n* Kódy jsou uvedeny v desítkové soustavě.',
             'de' : ''
         },
@@ -3560,7 +3563,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'firefox': ['4.0', '15.0'],
             'opera'  : ['9.x', '10.0', '11.0', '12.0', 'mobile'],
             'chrome' : ['5.0', '6.0', '7.0', '8.0', '9.0', '10.0', '23.0'],
@@ -3582,9 +3585,9 @@ var items =
         'data'       : '<a href="[a]java[b]script[c]:%js_alert%">XXX</a>',
         'trigger'    : 'document.links[0].click()',
         'description': {
-            'en' : 'The following characters* are ignored in the URI sheme:\r\n[a]\r\nAll mentioned browsers: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE: 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE: 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: nothing\r\n* Characters are given as decimal ASCII table index.',
+            'en' : 'The following characters* are ignored in the URI sheme:\r\n[a]\r\nAll mentioned browsers: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE (5-9 SM): 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE (5-9 SM): 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: nothing\r\n* Characters are given as decimal ASCII table index.',
             'ja' : '',
-            'ru' : 'Следующие символы* игнорируются в схеме URI:\r\n[a]\r\nВсе обозначенные браузеры: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE: 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE: 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: ничего\r\n* В десятичных кодах ASCII-таблицы.',
+            'ru' : 'Следующие символы* игнорируются в схеме URI:\r\n[a]\r\nВсе обозначенные браузеры: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE (РС 5-9): 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE (РС 5-9): 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: ничего\r\n* В десятичных кодах ASCII-таблицы.',
             'cs' : 'Následující znaky* jsou ignorovány v URI schema:\r\n[a]\r\nAll mentioned browsers: 9,10,13,32\r\nIE, GC, Safari, Opera: 11,12\r\nIE, GC, Safari, FF 3.6.28↓: 8\r\nIE, GC, Safari: 1-7,14-31\r\nOpera: 160,5760,6158,8192-8202,8232,8233,8239,8287,12288\r\nOpera 11.52↓: 6159\r\nIE: 0\r\n\r\n[b],[c]\r\nIE, GC, Safari 4.0.3↓, FF 4-6, Opera 10.63↓: 9,10,13\r\nGC 7↓, Safari 4.0.3↓: 1-8,11,12\r\nIE: 0\r\nSafari 4.0.4↑, Opera 11↑, FF 7↑: nic\r\n* ASCII kódy uvedené v desítkové soustavě.',
             'de' : ''
         },
@@ -3796,7 +3799,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer' : ['6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'javascript', 'title', 'onpropertychange', 'internet explorer'],
         'reporter'   : '.mario'
@@ -3811,7 +3814,7 @@ var items =
             'cs' : 'Problémy s parsováním parametrů v Internet Exploreru',
             'de' : ''
         },
-        'data'       : '<!-- IE 6-8 -->\r\n<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=%js_alert%></a>">\r\n\r\n<!-- IE 6-9 -->\r\n<!a foo=x=`y><img alt="`><img src=x:x onerror=%js_alert_2%//">\r\n<?a foo=x=`y><img alt="`><img src=x:x onerror=%js_alert_3%//"> ',
+        'data'       : '<!-- IE 5-8 standards mode -->\r\n<a href=http://foo.bar/#x=`y></a><img alt="`><img src=xx:x onerror=%js_alert%></a>">\r\n\r\n<!-- IE 5-9 standards mode -->\r\n<!a foo=x=`y><img alt="`><img src=xx:x onerror=%js_alert_2%//">\r\n<?a foo=x=`y><img alt="`><img src=xx:x onerror=%js_alert_3%//">',
         'description': {
             'en' : 'Internet Explorer treats the sequence of any quotes that follows the equal sign in a parameter without delimiters as the beginning of some semblance of new parameter.',
             'ja' : '',
@@ -4059,9 +4062,9 @@ var items =
         },
         'data'       : '<!--[if]><script>%js_alert%</script -->\r\n<!--[if<img src=x onerror=%js_alert_2%//]> -->',        
         'description': {
-            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attacker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well.',
+            'en' : 'Conditional comments on Internet Explorer can cause trouble as soon as an attacker is able to inject rectangular brackets wrapping the words if and endif with almost arbitrary suffixes. A condition always being true will lead to immediate parsing of the enclosed markup on all tested Internet Explorer versions. The second example injects an <img> tag into the comment condition leading to immediate JavaScript execution as well. The examples are worked up to IE 9 standards mode.',
             'ja' : '',
-            'ru' : 'Условные комментарии могут стать проблемой, если атакующий может внедрять секции [...], содержащие условия if или endif с произвольными суффиксами. Как правило нарушение синтаксиса внутри прямоугольных скобок (условной секции) приводит к тому, что браузер начинает рассматривать такие структуры как простой текст и интерпретировать содержащуюся внутри разметку. Различные способы вызвать ошибку в условной секции показаны в этих двух примерах. Отметим, что символ закрытия тега ">" внутри условной секции повлечет парсинг такой конструкции как простого HTML-комментария, и превращения в простой текст не произойдет.',
+            'ru' : 'Условные комментарии могут стать проблемой, если атакующий может внедрять секции [...], содержащие условия if или endif с произвольными суффиксами. Как правило нарушение синтаксиса внутри прямоугольных скобок (условной секции) приводит к тому, что браузер начинает рассматривать такие структуры как простой текст и интерпретировать содержащуюся внутри разметку. Различные способы вызвать ошибку в условной секции показаны в этих двух примерах. Отметим, что символ закрытия тега ">" внутри условной секции повлечет парсинг такой конструкции как простого HTML-комментария, и превращения в простой текст не произойдет. Примеры работают вплоть до режима стандартов IE 9 .',
             'cs' : 'Komentáře v Internet Exploreru mohou způsobit problémy, pokud v nich může uživatel použít hranatých závorek. Tyto komentáře mohou být vyhodnoceny jako podmíněné a v případě splnění podmínky vedou ke spuštění vloženého skriptu. První uvedený příklad ve ve všech verzích IE vždy vyhodnocen pozitivně a dojde tak k okamžitému spuštění kódu. Druhý příklad ukazuje injektáž tagu <img> přímo mezi hranaté závorky a stejně jako v prvním příkladu vede k automatickému spuštění skriptu.',
             'de' : ''
         },
@@ -4074,7 +4077,7 @@ var items =
             'de' : ''
         },                        
         'browsers'   : {
-            'internet explorer' : ['6.0', '7.0', '8.0', '9.0']
+            'internet explorer' : ['6.0', '7.0', '8.0', '9.0', '10.0']
         },
         'tags'       : ['xss', 'conditional', 'comments', 'internet explorer', 'rectangular'],
         'reporter'   : '.mario'
@@ -4713,9 +4716,9 @@ var items =
         },
         'data'      : '<xmp>\r\n<%\r\n</xmp>\r\n<img alt=\'%></xmp><img src=xx:x onerror=%js_alert%//\'>\r\n\r\n<script>\r\nx=\'<%\'\r\n</script> %>/\r\n%js_alert_2%\r\n</script>\r\n\r\nXXX\r\n<style>\r\n*[\'<!--\']{}\r\n</style>\r\n-->{}\r\n*{color:red}</style>',
         'description' : {
-            'en'    : 'Structures "<%" и "<!--" allow the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>" or "-->". The syntax in the tags such as <style>, <script> should be valid taking into account these sections, otherwise throws an exception. So, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. SGML-like comment delimiters is similarly parsed in older versions of Safari.',
+            'en'    : 'Structures "<%" и "<!--" allow the IE parser to consider closing tag in plaintext tags such as <textarea>, <comment>, <xmp> and others as a part of the plaintext until it finds the structure "%>" or "-->". The syntax in the tags such as <style>, <script> should be valid taking into account these sections, otherwise throws an exception. So, the second example shows that closing <\/script> tag will be considered as an operator "less" and the regular expression start. The examples are worked up to IE 9 standards mode. SGML-like comment delimiters is similarly parsed in older versions of Safari.',
             'ja'    : '',
-            'ru'    : 'Структуры "<%" и "<!--" позволяют IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока он не найдет структуры "%>" или "-->". Обратите внимание, что в тегах, которые имеют свой собственный синтаксис, таких как <style>, <script>, синтаксис должен быть верным с учетом данных структур под угрозой возникновения ошибки. Так, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. SGML-подобные ограничители комментариев похожим образом разбирались в более ранних версиях Safari.', 
+            'ru'    : 'Структуры "<%" и "<!--" позволяют IE анализатору рассматривать закрывающий тег в тегах с текстовым содержимым, таких как <textarea>, <comment>, <xmp> и других, как часть текста, пока он не найдет структуры "%>" или "-->". Обратите внимание, что в тегах, которые имеют свой собственный синтаксис, таких как <style>, <script>, синтаксис должен быть верным с учетом данных структур под угрозой возникновения ошибки. Так, второй пример показывает, что закрывающий тег <\/script> будет рассматриваться как оператор "меньше" и начало регулярного выражения. Примеры будут работать вплоть до режима стандартов IE 9. SGML-подобные ограничители комментариев похожим образом разбирались в более ранних версиях Safari.', 
             'cs'    : '',
             'de'    : '',
             'zh'    : ''
@@ -4730,7 +4733,7 @@ var items =
             'zh'    : ''
         },
         'browsers'  : {
-            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '9.0.9'],
+            'internet explorer': ['6.0', '7.0', '8.0', '9.0', '10.0'],
             'safari': [ '3.0', '4.0', '4.0.3', 'end']
         },
         'tags'      : ['xss', 'plaintext', 'internet explorer', 'safari', 'comment', 'SGML', 'escape'],
