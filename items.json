@@ -4815,5 +4815,46 @@ var items =
         },
         'tags'      : ['html5', 'dirname', 'privacy', 'http', 'form', 'infoleak'],
         'reporter'  : '.mario'
-    }
+    },
+    { /* ID 137 - Executing JavaScript via "from" attribute in SVG and inline-SVG */
+        'id'        : 137,
+        'category'  : 'svg',
+        'name'      : {
+            'en'    : 'Executing JavaScript via "from" attribute in SVG and inline-SVG',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'data'      : '<svg>\r\n<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="?">\r\n<circle r="400"></circle>\r\n<animate attributeName="xlink:href" begin="0" from="javascript&colon;alert(1)" to="&" />\r\n</a>',
+        'description' : {
+            'en'    : 'It is commonly known, that the <animate> element in combination with the "to" parameter can be used to change existing attributes to potentially active values and cause arbitrary script execution. It is nevertheless also possible to use the "from" attribute for the very same purpose - albeit this being rather counter-intuitive. The given example code snippet describes an SVG containing a circle that encapsulates an <animate> element. This uses the "from" attribute to set the "href" attribute of the link encapsulating the circle to a JavaScript URI. Clicking the circle will execute the JavaScript.',
+            'ja'    : '',
+            'ru'    : '', 
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'urls'      : [
+        				'http://jsbin.com/uxadon/3',
+        				'http://www.w3.org/TR/SVG/animate.html#FromAttribute'
+        			],
+        'howtofix'  : {
+            'en'    : 'Avoid inline-SVG in combination with user-generated content. In case SVG needs to be used, avoid potentially harmful content for "to", "from", "values" and "by" attributes.',
+            'ja'    : '',
+            'ru'    : '',
+            'cs'    : '',
+            'de'    : '',
+            'zh'    : ''
+        },
+        'browsers'  : {
+        	'firefox' : ['25.0', '27.0'],
+            'opera':  	['15.0'],
+            'chrome': 	['30.0', '32.0'],
+            'safari': 	[ '5.0', '6.0']
+        },
+        'tags'      : ['html5', 'dirname', 'privacy', 'http', 'form', 'infoleak'],
+        'reporter'  : '.mario'
+    }    
 ]
